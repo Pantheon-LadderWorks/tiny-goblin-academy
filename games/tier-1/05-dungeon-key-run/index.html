@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Key Run</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <small>TINY GOBLIN ACADEMY • LEVEL 05</small>
+      <h1>Dungeon Key Run</h1>
+      <p>Move tile-by-tile. Grab the key. Avoid the goblin.</p>
+    </header>
+    
+    <section id="layout">
+      <aside id="stats">
+        <h2>Legend</h2>
+        <div id="hud">
+          <div class="hud-entry">
+            <div class="hud-label">Player</div>
+            <div class="hud-value">🧙</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Enemy</div>
+            <div class="hud-value">👺</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Key</div>
+            <div class="hud-value" id="key-status">🔑 (Not Found)</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Exit</div>
+            <div class="hud-value">🚪</div>
+          </div>
+        </div>
+      </aside>
+      
+      <section id="play">
+        <div id="canvas"></div>
+        <div id="banner"></div>
+        <div id="controls">
+          <button id="btn-up" class="action-btn">Up</button>
+          <div class="control-row">
+            <button id="btn-left" class="action-btn">Left</button>
+            <button id="btn-down" class="action-btn">Down</button>
+            <button id="btn-right" class="action-btn">Right</button>
+          </div>
+          <button id="btn-reset" class="action-btn reset-btn">Reset</button>
+        </div>
+      </section>
+      
+      <aside id="ledger">
+        <h2>Action Ledger</h2>
+        <ol id="log"></ol>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

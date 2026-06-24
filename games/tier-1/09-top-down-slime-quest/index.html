@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="academy-header">
+        <div class="subtitle">TINY GOBLIN ACADEMY • LEVEL 09</div>
+        <h1>Top-Down Slime Quest</h1>
+        <div class="subtitle" style="margin-top:5px;">You are the slime. Pounce, absorb, escape.</div>
+      </header>
+
+      <div class="academy-layout">
+        <aside class="status-panel">
+          <h2>Slime Status</h2>
+          <div class="status-row">
+            <span>Pos (x, y):</span>
+            <span id="ui-slime-pos">0, 0</span>
+          </div>
+          <div class="status-row">
+            <span>Facing:</span>
+            <span id="ui-slime-facing">right</span>
+          </div>
+          <div class="status-row">
+            <span>State:</span>
+            <span id="ui-slime-state">Normal</span>
+          </div>
+          <div class="status-row" style="margin-top:15px;">
+            <span>Essence:</span>
+            <span id="ui-essence" class="badge">Inactive</span>
+          </div>
+          <div class="status-row">
+            <span>Exit:</span>
+            <span id="ui-exit" class="badge">Locked</span>
+          </div>
+          <div class="status-row">
+            <span>Run Status:</span>
+            <span id="ui-run-status" class="badge active">Active</span>
+          </div>
+          <div class="controls-info">
+            <p>Controls:</p>
+            <p>Arrows / WASD: Move</p>
+            <p>Space: Pounce</p>
+          </div>
+        </aside>
+
+        <main class="game-center">
+          <div id="game-container"></div>
+          <div class="on-screen-controls">
+             <button id="btn-up">Up</button>
+             <button id="btn-down">Down</button>
+             <button id="btn-left">Left</button>
+             <button id="btn-right">Right</button>
+             <button id="btn-pounce">Pounce</button>
+             <button id="btn-reset">Reset</button>
+          </div>
+        </main>
+
+        <aside class="ledger-panel">
+          <h2>Action Ledger</h2>
+          <ul id="ledger-list"></ul>
+        </aside>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

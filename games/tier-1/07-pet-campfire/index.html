@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Campfire</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <small>TINY GOBLIN ACADEMY • LEVEL 07</small>
+      <h1>Pet Campfire</h1>
+      <p>Keep your goblin pet fed and happy for 60 seconds.</p>
+    </header>
+    
+    <section id="layout">
+      <aside id="stats">
+        <h2>Campfire Status</h2>
+        <div id="hud">
+          <div class="hud-entry">
+            <div class="hud-label">Day Status</div>
+            <div class="hud-value" id="hud-day">Active</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Survival Time</div>
+            <div class="hud-value" id="hud-time">0s / 60s</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Pet Status</div>
+            <div class="hud-value" id="hud-pet-status">Idle</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Hunger</div>
+            <div class="hud-value">
+              <span id="hud-hunger">100</span>/100
+            </div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Happiness</div>
+            <div class="hud-value">
+              <span id="hud-happiness">100</span>/100
+            </div>
+          </div>
+        </div>
+      </aside>
+      
+      <section id="play">
+        <div id="canvas"></div>
+        <div id="banner"></div>
+        <div id="controls">
+          <div class="control-row">
+            <button id="btn-feed" class="action-btn">🍖 Feed</button>
+            <button id="btn-play" class="action-btn">🪀 Play</button>
+          </div>
+          <button id="btn-reset" class="action-btn reset-btn">Reset</button>
+        </div>
+      </section>
+      
+      <aside id="ledger">
+        <h2>Action Ledger</h2>
+        <ol id="log"></ol>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Goblin Academy - Level 10</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="academy-header">
+        <div class="subtitle">TINY GOBLIN ACADEMY • LEVEL 10</div>
+        <h1>Mini Settlement Sim</h1>
+        <div class="status-subtitle">Survive 10 Days</div>
+      </header>
+
+      <main class="academy-layout">
+        <!-- Left Panel: Status -->
+        <aside class="panel status-panel">
+          <h2>Settlement Status</h2>
+          <div class="status-grid">
+            <div class="status-label">Run Status</div>
+            <div id="ui-run-status" class="status-value highlight">Active</div>
+
+            <div class="status-label">Day</div>
+            <div id="ui-day" class="status-value">1 / 10</div>
+
+            <div class="status-label">Citizens</div>
+            <div id="ui-citizens" class="status-value">3</div>
+
+            <div class="status-label">Food</div>
+            <div id="ui-food" class="status-value">6</div>
+
+            <div class="status-label">Wood</div>
+            <div id="ui-wood" class="status-value">3</div>
+
+            <div class="status-label">Shelter</div>
+            <div id="ui-shelter" class="status-value">1</div>
+
+            <div class="status-label">Priority</div>
+            <div id="ui-priority" class="status-value highlight-blue">Forage</div>
+          </div>
+          
+          <div class="controls">
+            <h3>Set Priority</h3>
+            <button id="btn-forage" class="active">Forage</button>
+            <button id="btn-chop">Chop</button>
+            <button id="btn-build">Build</button>
+            
+            <div class="action-divider"></div>
+            <button id="btn-advance" class="action-btn">Advance Day</button>
+            <button id="btn-reset" class="danger-btn">Reset</button>
+          </div>
+        </aside>
+
+        <!-- Center Panel: Playfield -->
+        <section class="panel center-panel">
+          <div id="playfield-container">
+            <div id="storm-overlay" class="hidden">STORM</div>
+            <div id="playfield-content">
+               <!-- Render citizens, shelters, and resources visually here -->
+               <div class="playfield-row">
+                 <div class="playfield-label">Citizens:</div>
+                 <div id="vis-citizens" class="vis-container"></div>
+               </div>
+               <div class="playfield-row">
+                 <div class="playfield-label">Shelters:</div>
+                 <div id="vis-shelters" class="vis-container"></div>
+               </div>
+               <div class="playfield-row">
+                 <div class="playfield-label">Stockpile:</div>
+                 <div id="vis-stockpile" class="vis-container"></div>
+               </div>
+            </div>
+            <div id="run-overlay" class="hidden"></div>
+          </div>
+        </section>
+
+        <!-- Right Panel: Ledger -->
+        <aside class="panel ledger-panel">
+          <h2>Action Ledger</h2>
+          <div id="ledger-list" class="ledger-content">
+            <!-- ledger items go here -->
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

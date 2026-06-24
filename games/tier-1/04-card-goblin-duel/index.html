@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Goblin Duel</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <small>TINY GOBLIN ACADEMY • LEVEL 04</small>
+      <h1>Card Goblin Duel</h1>
+      <p>Read the hand. Plan the cycle. Bonk the Card Goblin.</p>
+    </header>
+    
+    <section id="layout">
+      <aside id="stats">
+        <h2>Player Status</h2>
+        <div id="hud"></div>
+      </aside>
+      
+      <section id="play">
+        <div id="canvas"></div>
+        <div id="banner"></div>
+        <div id="hand"></div>
+      </section>
+      
+      <aside id="ledger">
+        <h2>Action Ledger</h2>
+        <ol id="log"></ol>
+        
+        <div class="deck-preview">
+          <h2>Next Card</h2>
+          <div id="next"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

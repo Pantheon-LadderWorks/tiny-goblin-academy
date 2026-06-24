@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Goblin Academy - Level 8</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="academy-header">
+        <div class="subtitle">Tiny Goblin Academy</div>
+        <h1>Level 8: One-Room Platformer</h1>
+      </header>
+
+      <div class="academy-layout">
+        <aside class="status-panel">
+          <h2>Player Status</h2>
+          <div class="status-row">
+            <span>Pos (x, y):</span>
+            <span id="pos-display">0, 0</span>
+          </div>
+          <div class="status-row">
+            <span>Vel (vx, vy):</span>
+            <span id="vel-display">0, 0</span>
+          </div>
+          <div class="status-row">
+            <span>Grounded:</span>
+            <span id="grounded-display">true</span>
+          </div>
+          <div class="status-row">
+            <span>Run Status:</span>
+            <span id="run-status-display" class="badge">Active</span>
+          </div>
+          <div class="controls-info">
+            <p>Controls:</p>
+            <p>Left / Right Arrows: Move</p>
+            <p>Spacebar / Up: Jump</p>
+          </div>
+        </aside>
+
+        <main class="game-center">
+          <div id="game-container"></div>
+          <div class="on-screen-controls">
+             <button id="btn-left">Left</button>
+             <button id="btn-right">Right</button>
+             <button id="btn-jump">Jump</button>
+             <button id="btn-reset">Reset</button>
+          </div>
+        </main>
+
+        <aside class="ledger-panel">
+          <h2>Action Ledger</h2>
+          <ul id="ledger-list"></ul>
+        </aside>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

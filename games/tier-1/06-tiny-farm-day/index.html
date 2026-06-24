@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Farm Day</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <small>TINY GOBLIN ACADEMY • LEVEL 06</small>
+      <h1>Tiny Farm Day</h1>
+      <p>Plant, water, and harvest. Buy the upgrade before the day ends.</p>
+    </header>
+    
+    <section id="layout">
+      <aside id="stats">
+        <h2>Farm Status</h2>
+        <div id="hud">
+          <div class="hud-entry">
+            <div class="hud-label">Time</div>
+            <div class="hud-value" id="hud-tick">Tick 0</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Day Status</div>
+            <div class="hud-value" id="hud-day">Active</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Seeds</div>
+            <div class="hud-value" id="hud-seeds">3</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Crops</div>
+            <div class="hud-value" id="hud-crops">0</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Coins</div>
+            <div class="hud-value" id="hud-coins">0</div>
+          </div>
+          <div class="hud-entry">
+            <div class="hud-label">Upgrade</div>
+            <div class="hud-value" id="hud-upgrade">Unpurchased</div>
+          </div>
+        </div>
+      </aside>
+      
+      <section id="play">
+        <div id="canvas"></div>
+        <div id="banner"></div>
+        <div id="controls">
+          <div class="control-row">
+            <button id="btn-left" class="action-btn">◀ Prev</button>
+            <button id="btn-interact" class="action-btn" style="width: 140px;">Interact</button>
+            <button id="btn-right" class="action-btn">Next ▶</button>
+          </div>
+          <div class="control-row" style="margin-top: 8px;">
+            <button id="btn-sell" class="action-btn">Sell Crops</button>
+            <button id="btn-upgrade" class="action-btn">Buy Upgrade</button>
+            <button id="btn-end" class="action-btn">End Day</button>
+          </div>
+          <button id="btn-reset" class="action-btn reset-btn">Reset</button>
+        </div>
+      </section>
+      
+      <aside id="ledger">
+        <h2>Action Ledger</h2>
+        <ol id="log"></ol>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
