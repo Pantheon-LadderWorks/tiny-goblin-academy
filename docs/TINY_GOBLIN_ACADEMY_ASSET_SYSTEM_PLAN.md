@@ -82,13 +82,24 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Status: concept / v0.1 / needs manifest.
   * Notes: Candidate generated through Antigravity image generation and approved for concept intake. Good grid/sliceability and no obvious text labels. Needs manifest before implementation.
 
+* **Card Goblin Duel card frames sheet**
+  * Path: `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png`
+  * Intended Use: Game 04 card shells, card backs, slots, highlighted/disabled card states, and blank overlay-ready card surfaces.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Split-sheet strategy produced stronger reusable blank card frames than the first mixed concept sheet.
+
+* **Card Goblin Duel UI/tokens sheet**
+  * Path: `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png`
+  * Intended Use: Game 04 action icons, status badges, portrait tokens, feedback effects, and duel UI markers.
+  * Status: concept / v0.1 / needs textless cleanup / needs manifest.
+  * Notes: Useful concept sheet, but includes baked “ACTIVE TURN” text on one token, so it should not be treated as production-ready until cleaned or regenerated.
+
 ## Missing Asset Groups
 
 **High priority:**
-1. Card Goblin Duel dedicated asset sheet
-2. Pet Campfire dedicated asset sheet
-3. Dedicated backgrounds/playfields for 05, 08, and 09
-4. Shared FX / feedback sheet
+1. Pet Campfire dedicated asset sheet
+2. Dedicated backgrounds/playfields for 05, 08, and 09
+3. Shared FX / feedback sheet
 
 **Medium priority:**
 6. Potion lab background
@@ -148,7 +159,6 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Card Goblin Duel sheet
-2. Pet Campfire sheet
-3. Shared FX sheet
-4. Background/playfield pack for 05 / 08 / 09
+1. Pet Campfire sheet
+2. Shared FX sheet
+3. Background/playfield pack for 05 / 08 / 09
