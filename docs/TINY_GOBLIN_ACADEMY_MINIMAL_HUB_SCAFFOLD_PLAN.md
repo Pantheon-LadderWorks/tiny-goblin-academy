@@ -66,6 +66,8 @@ The first scaffold should prove UI/data model first. Tauri/process launching com
 
 ## First Manifest Data Strategy
 
+*Implementation Note: The first scaffold now reads roster data from the draft Academy Game Manifest located at `manifests/academy.games.json`.*
+
 For the first scaffold, use a draft local data file or draft JSON-like structure containing the Tier 1 roster. It should follow the Manifest Strategy fields but does not need to be the final runtime manifest yet.
 
 Recommended first fields:

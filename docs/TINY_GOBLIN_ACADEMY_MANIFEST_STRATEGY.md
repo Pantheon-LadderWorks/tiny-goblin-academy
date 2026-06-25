@@ -17,6 +17,8 @@ Manifests will become the source of truth for the Hub and future visual integrat
 
 ## Academy Game Manifest
 
+*Implementation Note: The first draft Academy Game Manifest now exists at `manifests/academy.games.json`. It is a draft/read-only manifest that currently powers the Hub roster. It does not define launch behavior. Runtime and build manifests remain future work.*
+
 Fields:
 * id
 * tier
