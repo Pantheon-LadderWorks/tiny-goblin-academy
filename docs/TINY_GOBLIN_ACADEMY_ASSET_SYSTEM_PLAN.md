@@ -13,6 +13,15 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 * Use source rectangles / manifest data to pull sprites from sheets.
 * Do not wire assets into games until manifests and implementation plans exist.
 
+## Asset Pantry Doctrine
+
+* Generated asset sheets are source pantries, not mandatory usage contracts.
+* Games should only use sprites that are explicitly mapped in future manifests.
+* Unused sprites may remain in sheets as future options.
+* Duplicate, imperfect, or unused sprites do not block intake as long as the sheet is clearly marked concept/v0.1.
+* Production implementation should rely on named manifest entries, not manual visual guessing.
+* Manifests should include `used`, `unused`, or `reserved` notes where helpful.
+
 ## Asset Categories
 
 1. Shared Academy Core
@@ -106,17 +115,40 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Status: concept / v0.1 / needs manifest.
   * Notes: Useful cross-game shared feedback sheet. Includes a mix of pure FX and object-linked effect/event sprites. Accepted for v0.1 because it is highly reusable, but a future v0.2 pass may generate a stricter pure-FX sheet.
 
+* **Top-down terrain/floor construction sheet**
+  * Path: `assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png`
+  * Intended Use: Shared top-down terrain and floor tile pantry for Dungeon Key Run and Top-Down Slime Quest.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Contains center, edge, corner, water, path, slime, and special floor tiles. Future manifests will select only the tiles actually used.
+
+* **Top-down wall/boundary construction sheet**
+  * Path: `assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png`
+  * Intended Use: Shared top-down wall, boundary, gate, doorway, and obstacle pantry for map construction.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Intended to support inward-facing room boundaries and collision edges. Future manifests must verify which wall/corner pieces align cleanly.
+
+* **Top-down environment objects sheet**
+  * Path: `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
+  * Intended Use: Shared top-down placed props and interactables for Dungeon Key Run and Top-Down Slime Quest.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Object pantry only; games should use manifest-approved objects and ignore duplicates or unused extras.
+
+* **Top-Down Slime Quest playfield candidate**
+  * Path: `assets/academy/games/top-down-slime-quest/tga-top-down-slime-quest-playfield-pack-concept-v0.1.png`
+  * Intended Use: Game 09-specific top-down playfield parts and outdoor/map props.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Useful as a game-specific pantry alongside shared top-down terrain/walls/objects.
+
 ## Missing Asset Groups
 
 **High priority:**
-1. Dedicated backgrounds/playfields for 05, 08, and 09
+1. Side-view platformer construction kit for Level 08
 
-**Medium priority:**
-6. Potion lab background
-7. Farm background
-8. Settlement board/background
-9. Cleaner top-down dungeon environment sheet
-10. Cleaner side-view platformer tile/environment sheet
+**Medium/Optional priority:**
+2. Individual full backgrounds/backdrops (Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement)
+
+**Concept-ingested:**
+* Top-down shared terrain/wall/object construction
 
 ## Future Pet Candidates
 
@@ -179,5 +211,5 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Background/playfield pack for 05 / 08 / 09
-2. Remaining individual game backgrounds
+1. Side-view platformer-only construction kit for Level 08
+2. Optional individual backgrounds/backdrops for Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement
