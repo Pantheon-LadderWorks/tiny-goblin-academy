@@ -94,12 +94,17 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Status: concept / v0.1 / needs textless cleanup / needs manifest.
   * Notes: Useful concept sheet, but includes baked “ACTIVE TURN” text on one token, so it should not be treated as production-ready until cleaned or regenerated.
 
+* **Pet Campfire Ember Pup sheet**
+  * Path: `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`
+  * Intended Use: Game 07 Ember Pup pet poses, care props, campfire props, need/status icons, and pet feedback markers.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Ember Pup is the canonical first Pet Campfire companion. Sheet is cleaner and more slice-friendly than the alternate reference, but future polish should strengthen the ember identity with dim/glow/smoke/fire-tail states.
+
 ## Missing Asset Groups
 
 **High priority:**
-1. Pet Campfire dedicated asset sheet
-2. Dedicated backgrounds/playfields for 05, 08, and 09
-3. Shared FX / feedback sheet
+1. Dedicated backgrounds/playfields for 05, 08, and 09
+2. Shared FX / feedback sheet
 
 **Medium priority:**
 6. Potion lab background
@@ -107,6 +112,16 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 8. Settlement board/background
 9. Cleaner top-down dungeon environment sheet
 10. Cleaner side-view platformer tile/environment sheet
+
+## Future Pet Candidates
+
+Future optional pet concepts:
+* **Lantern Toad** — glowing belly camp companion.
+* **Moss Ferret** — sneaky cozy academy pet.
+* **Root Pup** — plant-like dog companion with twig/leaf traits.
+* **Pebble Boarlet** — stubborn tiny boar with stone-like hide.
+* **Ash-Cat** — soot-colored familiar with ember eyes.
+* **Button Bat** — tiny cave/academy bat companion.
 
 ## Background Needs
 
@@ -159,6 +174,6 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Pet Campfire sheet
-2. Shared FX sheet
-3. Background/playfield pack for 05 / 08 / 09
+1. Shared FX sheet
+2. Background/playfield pack for 05 / 08 / 09
+3. Remaining individual game backgrounds
