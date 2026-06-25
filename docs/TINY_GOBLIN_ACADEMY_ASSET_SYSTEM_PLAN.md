@@ -22,6 +22,13 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 * Production implementation should rely on named manifest entries, not manual visual guessing.
 * Manifests should include `used`, `unused`, or `reserved` notes where helpful.
 
+## Platformer Background / Anchor Doctrine
+
+* Side-view platformer backgrounds should not be treated like top-down tilemaps.
+* A one-room platformer background should provide negative space for gameplay.
+* Foreground platforms should have visual justification: shelves, ledges, brackets, beams, stone lips, training apparatus, or other anchor points.
+* Background detail must not fight gameplay readability.
+* Platformer construction pieces and background stage plates are separate asset families.
 ## Asset Categories
 
 1. Shared Academy Core
@@ -139,16 +146,30 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Status: concept / v0.1 / needs manifest.
   * Notes: Useful as a game-specific pantry alongside shared top-down terrain/walls/objects.
 
+* **One-Room Platformer side-view construction pieces**
+  * Path: `assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.1.png`
+  * Intended Use: Level 08 side-view construction pantry: platforms, ledges, supports, lava, hazards, traversal props, exit/goal objects, and background-compatible props.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Primary side-view construction sheet for One-Room Platformer. Distinct from top-down sheets. Includes platform anchor/support pieces so foreground platforms can visually make sense.
+
+* **One-Room Platformer background/stage plate**
+  * Path: `assets/academy/games/one-room-platformer/tga-one-room-platformer-background-stage-concept-v0.1.png`
+  * Intended Use: Level 08 fixed-screen side-view academy training room backdrop.
+  * Status: concept / v0.1 / needs layout integration plan.
+  * Notes: Designed with central negative space and platform anchor logic so floating platforms do not look like random stickers. Not a tile sheet. Not top-down. Not parallax yet.
+
 ## Missing Asset Groups
 
-**High priority:**
-1. Side-view platformer construction kit for Level 08
+**Future Work:**
+* Full implementation/layout integration of concept assets
 
 **Medium/Optional priority:**
-2. Individual full backgrounds/backdrops (Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement)
+* Individual full backgrounds/backdrops (Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement)
 
 **Concept-ingested:**
 * Top-down shared terrain/wall/object construction
+* Side-view platformer construction kit
+* Side-view platformer background/stage plate
 
 ## Future Pet Candidates
 
@@ -211,5 +232,5 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Side-view platformer-only construction kit for Level 08
-2. Optional individual backgrounds/backdrops for Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement
+* Optional individual backgrounds/backdrops for Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement
+* Next architecture task: Hub Contract / manifest strategy
