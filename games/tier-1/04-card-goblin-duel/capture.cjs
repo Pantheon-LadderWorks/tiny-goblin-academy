@@ -13,7 +13,9 @@ const path = require('path');
   // Wait for the game to load
   await page.waitForTimeout(1000);
   
-  const destDir = 'C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/scratch';
+  const fs = require('fs');
+  const destDir = path.join(__dirname, 'evidence', 'screenshots');
+  fs.mkdirSync(destDir, { recursive: true });
 
   // Initial State Screenshot
   console.log('Capturing initial state...');

@@ -11,13 +11,13 @@ The goal was to correct the Card Goblin Duel mini-game to a "First Playable" sta
 ## Evidence
 
 ### Initial Playable State
-![Initial Playable State](C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/scratch/initial.png)
+*Original local sandbox screenshot links were removed during public repo cleanup. Evidence status remains historical; future capture should write to repo-relative evidence paths.*
 
 ### Spark Choice State
-![Spark Choice State](C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/scratch/spark.png)
+*Original local sandbox screenshot links were removed during public repo cleanup. Evidence status remains historical; future capture should write to repo-relative evidence paths.*
 
 ### Terminal State
-![Terminal State](C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/scratch/terminal.png)
+*Original local sandbox screenshot links were removed during public repo cleanup. Evidence status remains historical; future capture should write to repo-relative evidence paths.*
 
 ## Conclusion
 The game loop executes deterministically and visually meets the standard established in Levels 1 and 2. The level is now awaiting Human Review.

@@ -356,7 +356,7 @@ The projects below stay outside the ladder. Their placement is only a complexity
 
 The plan belongs under its own future meta-repository container, not directly in the game-development root:
 
-`C:\Users\kryst\Workspace\game-development\ai-game-studio-ladder`
+`ai-game-studio-ladder/`
 
 **Current filesystem state:** only this container and `AI_GAME_STUDIO_PLAN.md` are authorized/created. Everything below is a proposed structure for a later approved scaffold step.
 

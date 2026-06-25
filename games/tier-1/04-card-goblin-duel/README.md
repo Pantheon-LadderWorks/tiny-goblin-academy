@@ -4,7 +4,7 @@
  
  Draw a tiny hand, play one card against one goblin, read the enemy response, and reach win/loss.
  
- **Lesson:** Game 3 proved causal turn clarity. Level 4 tests hand state, deterministic card effects, redraw/replace behavior, enemy response, and a visible ledger without becoming a TCG or Six Souls system.
+ **Lesson:** Game 3 proved causal turn clarity. Level 4 tests hand state, deterministic card effects, redraw/replace behavior, enemy response, and a visible ledger without becoming a TCG or future tactical RPG system.
  
  ## Final Correction Notes
  The final correction to achieve First Playable included:

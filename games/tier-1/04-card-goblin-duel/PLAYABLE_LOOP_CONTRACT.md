@@ -42,7 +42,7 @@ Rules are deterministic and testable. No random card effects.
 
 ## Explicit exclusions
 
-No persistent party, XP, rarity, UUIDs, scars/injuries, revives, support repertoire, orbit/lane momentum, deckbuilder, collection, campaign, equipment, backend/accounts/save, release work, or Six Souls TCRPG mechanics. No mana economy unless separately approved as one tiny resource.
+No persistent party, XP, rarity, UUIDs, scars/injuries, revives, support repertoire, orbit/lane momentum, deckbuilder, collection, campaign, equipment, backend/accounts/save, release work, or future tactical RPG mechanics. No mana economy unless separately approved as one tiny resource.
 
 ## State law
 
