@@ -1,6 +1,6 @@
 # Content License
 
-The Tiny Goblin Academy is a split-license repository designed to keep code open while protecting the project's unique identity, curriculum, and creative assets.
+Tiny Goblin Academy is a split-license repository designed to keep code open while protecting the project's unique identity, curriculum, and creative assets.
 
 * **Source Code:** All gameplay logic, architectural source code, and build configuration files are licensed under the MIT License, as detailed in the `LICENSE` file.
 * **Curriculum and Documentation:** All educational curriculum text, documentation, planning notes, incident reports, and written project materials are licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license unless explicitly noted otherwise.
