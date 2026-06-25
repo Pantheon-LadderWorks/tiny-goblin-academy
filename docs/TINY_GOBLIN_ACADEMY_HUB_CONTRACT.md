@@ -29,6 +29,22 @@ The Hub is the future unified launcher/interface for Tiny Goblin Academy. It sho
 7. User can return to Hub.
 8. Hub preserves clear status and avoids ghost processes.
 
+## First Implementation Target
+
+The first Hub implementation should be a minimal read-only dashboard shell:
+
+* boot / entry screen;
+* manifest-loaded game roster;
+* truthful status cards;
+* game detail panel;
+* no process launching yet;
+* no package/build orchestration yet;
+* no asset implementation yet;
+* no gameplay contract rewrites.
+
+Purpose:
+This prevents the first scaffold from jumping directly into Tauri process management, dev server launching, package orchestration, or visual asset integration before the manifest/display layer exists.
+
 ## Required Hub Views
 
 * Boot / entry view

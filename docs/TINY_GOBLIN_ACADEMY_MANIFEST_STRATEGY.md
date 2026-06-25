@@ -27,8 +27,10 @@ Fields:
 * status
 * historicallyPassed
 * sourceAvailable
+* devRunnable
 * buildAvailable
 * playableAvailable
+* playableMode
 * restorationDeferred
 * coreLesson
 * shortDescription
@@ -37,6 +39,13 @@ Fields:
 * evidence
 * assetRefs
 * notes
+
+State Definitions:
+* `sourceAvailable`: source folder exists in the repo.
+* `devRunnable`: source can be launched in development mode once dependencies/runtime are available.
+* `buildAvailable`: a static/distribution build exists.
+* `playableAvailable`: the Hub can launch the game in the currently expected runtime mode.
+* `playableMode`: optional field such as `none`, `dev`, `static`, or `bundled`.
 
 Sample JSON object for Level 1 showing source missing/restoration deferred:
 ```json
@@ -50,8 +59,10 @@ Sample JSON object for Level 1 showing source missing/restoration deferred:
   "status": "restoration deferred",
   "historicallyPassed": true,
   "sourceAvailable": false,
+  "devRunnable": false,
   "buildAvailable": false,
   "playableAvailable": false,
+  "playableMode": "none",
   "restorationDeferred": true,
   "coreLesson": "State management and basic interactivity.",
   "shortDescription": "A simple clicker game about an overly enthusiastic goblin.",
@@ -71,12 +82,14 @@ Sample JSON object for a normal source-available game:
   "level": 9,
   "title": "Top-Down Slime Quest",
   "slug": "top-down-slime-quest",
-  "sourcePath": "games/09-top-down-slime-quest",
+  "sourcePath": "games/tier-1/09-top-down-slime-quest",
   "status": "pass",
   "historicallyPassed": true,
   "sourceAvailable": true,
+  "devRunnable": true,
   "buildAvailable": false,
   "playableAvailable": true,
+  "playableMode": "dev",
   "restorationDeferred": false,
   "coreLesson": "Top-down movement and collision.",
   "shortDescription": "Navigate a slime through a top-down outdoor environment.",
@@ -84,9 +97,11 @@ Sample JSON object for a normal source-available game:
   "docs": ["docs/games/level-09-slime-quest.md"],
   "evidence": ["evidence/level-09-review.md"],
   "assetRefs": ["assets/academy/games/top-down-slime-quest/tga-top-down-slime-quest-playfield-pack-concept-v0.1.png"],
-  "notes": "Ready for future asset integration."
+  "notes": "Ready for future asset integration. Note: playableAvailable true here means dev-mode playable, not packaged distribution-ready."
 }
 ```
+
+*Note: Sample docs/evidence paths are illustrative unless verified against the repository. Runtime manifests must use repo-relative paths that actually exist.*
 
 ## Asset Sheet Manifest
 
