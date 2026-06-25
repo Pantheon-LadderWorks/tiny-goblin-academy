@@ -62,6 +62,15 @@ body {
   100% { opacity: 0.6; }
 }
 
+.boot-skip-button {
+  margin-top: 2rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
 /* Hub Shell */
 .hub-shell {
   display: flex;

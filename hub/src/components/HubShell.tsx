@@ -5,7 +5,7 @@ import { GameDetailPanel } from './GameDetailPanel'
 import { CreditsPanel } from './CreditsPanel'
 
 export const HubShell: React.FC = () => {
-  const [selectedGame, setSelectedGame] = useState<GameManifest | null>(null)
+  const [selectedGame, setSelectedGame] = useState<GameManifest | null>(tier1Roster[0])
 
   return (
     <div className="hub-shell">

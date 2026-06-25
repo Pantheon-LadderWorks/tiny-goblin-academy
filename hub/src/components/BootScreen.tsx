@@ -13,7 +13,7 @@ export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
       
       {/* Optional manual button if they don't want to wait for the timer in App.tsx */}
       <button 
-        style={{ marginTop: '2rem', background: 'transparent', color: 'var(--text-muted)', border: '1px solid var(--border-color)', padding: '0.5rem 1rem', cursor: 'pointer' }}
+        className="boot-skip-button"
         onClick={onComplete}
       >
         Skip
