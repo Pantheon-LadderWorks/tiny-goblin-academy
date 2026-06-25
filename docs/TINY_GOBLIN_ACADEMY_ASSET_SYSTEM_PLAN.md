@@ -76,14 +76,19 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Intended Use: Mixed parts bin for Game 05 and Game 08 environments. Dungeon/platformer sheet is a mixed-perspective parts bin, useful for v0.1 planning but may later split into dedicated top-down dungeon and side-view platformer sheets.
   * Status: concept / needs textless cleanup / needs manifest.
 
+* **Dice Duel Tavern sheet**
+  * Path: `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png`
+  * Intended Use: Game 03 dice faces, roll effects, duel tokens, tavern props, and feedback icons.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Candidate generated through Antigravity image generation and approved for concept intake. Good grid/sliceability and no obvious text labels. Needs manifest before implementation.
+
 ## Missing Asset Groups
 
 **High priority:**
-1. Dice Duel Tavern dedicated asset sheet
-2. Card Goblin Duel dedicated asset sheet
-3. Pet Campfire dedicated asset sheet
-4. Dedicated backgrounds/playfields for 05, 08, and 09
-5. Shared FX / feedback sheet
+1. Card Goblin Duel dedicated asset sheet
+2. Pet Campfire dedicated asset sheet
+3. Dedicated backgrounds/playfields for 05, 08, and 09
+4. Shared FX / feedback sheet
 
 **Medium priority:**
 6. Potion lab background
@@ -143,8 +148,7 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Dice Duel Tavern sheet
-2. Card Goblin Duel sheet
-3. Pet Campfire sheet
-4. Shared FX sheet
-5. Background/playfield pack for 05 / 08 / 09
+1. Card Goblin Duel sheet
+2. Pet Campfire sheet
+3. Shared FX sheet
+4. Background/playfield pack for 05 / 08 / 09
