@@ -100,11 +100,16 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
   * Status: concept / v0.1 / needs manifest.
   * Notes: Ember Pup is the canonical first Pet Campfire companion. Sheet is cleaner and more slice-friendly than the alternate reference, but future polish should strengthen the ember identity with dim/glow/smoke/fire-tail states.
 
+* **Shared FX / Feedback utility sheet**
+  * Path: `assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png`
+  * Intended Use: Cross-game shared feedback, event-linked, and object-linked utility sprites.
+  * Status: concept / v0.1 / needs manifest.
+  * Notes: Useful cross-game shared feedback sheet. Includes a mix of pure FX and object-linked effect/event sprites. Accepted for v0.1 because it is highly reusable, but a future v0.2 pass may generate a stricter pure-FX sheet.
+
 ## Missing Asset Groups
 
 **High priority:**
 1. Dedicated backgrounds/playfields for 05, 08, and 09
-2. Shared FX / feedback sheet
 
 **Medium priority:**
 6. Potion lab background
@@ -174,6 +179,5 @@ Manifests should define:
 
 ## Next Recommended Asset Generation
 
-1. Shared FX sheet
-2. Background/playfield pack for 05 / 08 / 09
-3. Remaining individual game backgrounds
+1. Background/playfield pack for 05 / 08 / 09
+2. Remaining individual game backgrounds
