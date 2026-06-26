@@ -5,3 +5,6 @@ build/
 coverage/
 package-lock.json
 *.log
+
+# Local review/quarantine assets not yet ingested
+assets/academy_review/
