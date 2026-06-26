@@ -2,7 +2,12 @@
 
 ## Status
 
-Implementation Plan / Not Started
+Implemented Scaffold / Read-Only Hub Active
+
+* The first read-only Hub scaffold has been implemented under `hub/`.
+* The Hub now reads Tier 1 roster data from `manifests/academy.games.json`.
+* The Hub remains read-only.
+* No game launching, process management, Tauri shell, runtime build orchestration, or asset slicing has been implemented.
 
 ## Purpose
 
@@ -66,9 +71,10 @@ The first scaffold should prove UI/data model first. Tauri/process launching com
 
 ## First Manifest Data Strategy
 
-*Implementation Note: The first scaffold now reads roster data from the draft Academy Game Manifest located at `manifests/academy.games.json`.*
-
-For the first scaffold, use a draft local data file or draft JSON-like structure containing the Tier 1 roster. It should follow the Manifest Strategy fields but does not need to be the final runtime manifest yet.
+* The first scaffold now uses `manifests/academy.games.json` as the draft repo-level Academy Game Manifest.
+* `hub/src/data/tier1Roster.ts` imports the manifest and exports the `games` array for UI consumption.
+* This is still not a runtime/build manifest.
+* It does not scan the filesystem or launch games.
 
 Recommended first fields:
 * id
@@ -187,16 +193,16 @@ Use existing public branding:
 
 ## Acceptance Checklist
 
-* [ ] Plan reviewed and approved before implementation.
-* [ ] Hub location decided.
-* [ ] Stack decided.
-* [ ] First data shape matches Manifest Strategy.
-* [ ] Boot view included.
-* [ ] Dashboard view included.
-* [ ] Level 1 deferred state displayed truthfully.
-* [ ] No launch/process behavior included in first scaffold.
-* [ ] No game code modified.
-* [ ] No asset implementation performed.
+* [x] Plan reviewed and approved before implementation.
+* [x] Hub location decided.
+* [x] Stack decided.
+* [x] First data shape matches Manifest Strategy.
+* [x] Boot view included.
+* [x] Dashboard view included.
+* [x] Level 1 deferred state displayed truthfully.
+* [x] No launch/process behavior included in first scaffold.
+* [x] No game code modified.
+* [x] No asset implementation performed.
 
 ## Next Implementation Prompt Outline
 
