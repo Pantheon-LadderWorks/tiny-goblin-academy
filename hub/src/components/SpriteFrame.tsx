@@ -28,7 +28,6 @@ export function SpriteFrame({ sourceRect, alt, className = '', style = {} }: Spr
       style={{ 
         position: 'relative', 
         overflow: 'hidden', 
-        width: '100%', 
         aspectRatio: `${w} / ${h}`,
         ...style 
       }}

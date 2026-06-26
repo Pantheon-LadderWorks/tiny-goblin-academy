@@ -164,21 +164,37 @@ body {
   border-style: dashed;
 }
 
-.game-card-title-group {
+.game-card-frame {
+  width: 100%;
+  height: 160px;
+  background-color: #1a1a24;
+  border: 2px solid var(--accent-gold);
+  border-radius: 6px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+  margin-bottom: 0.5rem;
+}
+
+.game-card-frame::before {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px dashed rgba(254, 202, 87, 0.3);
+  pointer-events: none;
+  z-index: 10;
 }
 
 .game-icon {
-  width: 100%;
+  height: 100%;
+  width: auto !important;
+  max-width: 100%;
+  max-height: 100%;
   image-rendering: pixelated;
-  border-radius: 6px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
-  background-color: rgba(0,0,0,0.2);
 }
 
 .game-card:hover .game-icon {
@@ -193,12 +209,21 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   image-rendering: pixelated;
+  background-color: #1a1a24;
 }
 
-.game-card-title {
-  margin: 0;
-  font-size: 1.25rem;
-  color: var(--text-main);
+.modal-game-icon {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .game-level {
@@ -211,7 +236,6 @@ body {
   gap: 0.25rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 0.5rem;
 }
 
 /* Status Badge */

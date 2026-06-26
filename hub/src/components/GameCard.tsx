@@ -17,28 +17,27 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
   
   return (
     <div className={cardClass} onClick={onClick}>
-      <div className="game-card-header">
-        <div className="game-card-title-group">
-          {iconRegion && (
-            <SpriteFrame 
-              sourceRect={iconRegion.sourceRect} 
-              alt={iconRegion.label}
-              className="game-icon"
-            />
-          )}
-          <h3 className="game-card-title">{game.title}</h3>
-        </div>
-        <span className="game-level">Level {game.level}</span>
-      </div>
-      <div className="status-badges">
-        {game.restorationDeferred ? (
-          <StatusBadge type="missing" label="Restoration Deferred" />
-        ) : (
-          <>
-            {game.sourceAvailable && <StatusBadge type="source" label="Source Available" />}
-            {game.devRunnable && <StatusBadge type="dev" label="Dev Runnable" />}
-          </>
+      <div className="game-card-frame" title={game.title}>
+        {iconRegion && (
+          <SpriteFrame 
+            sourceRect={iconRegion.sourceRect} 
+            alt={iconRegion.label}
+            className="game-icon"
+          />
         )}
+      </div>
+      <div className="game-card-meta">
+        <span className="game-level">Level {game.level}</span>
+        <div className="status-badges">
+          {game.restorationDeferred ? (
+            <StatusBadge type="missing" label="Restoration Deferred" />
+          ) : (
+            <>
+              {game.sourceAvailable && <StatusBadge type="source" label="Source Available" />}
+              {game.devRunnable && <StatusBadge type="dev" label="Dev Runnable" />}
+            </>
+          )}
+        </div>
       </div>
     </div>
   )
