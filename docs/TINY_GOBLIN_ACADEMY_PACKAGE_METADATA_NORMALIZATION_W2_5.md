@@ -178,3 +178,11 @@ Recommend:
 4. Run validators only.
 5. Still do not run install.
 6. Then decide whether Game 02 reconstruction plan is needed before W3.
+
+## Implementation Note
+
+* W2.6 surgical metadata patch applied.
+* Package names, versions, and private flags were normalized for Hub and games 03-10.
+* No dependencies/scripts/lockfiles were changed.
+* Game 02 remains excluded and needs a separate reconstruction plan.
+* W3 controlled root install remains blocked until W2.6 is reviewed.
