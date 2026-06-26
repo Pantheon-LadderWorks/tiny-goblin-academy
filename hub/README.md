@@ -5,6 +5,7 @@ This is the read-only dashboard scaffold for the Tiny Goblin Academy hub.
 ## Status
 Minimal Read-Only Scaffold.
 *Explicit Note*: There is no game launching, process management, or Tauri behavior implemented yet.
+* Hub game cards may display icons using `manifests/hub.icons.json`. This is still read-only and does not launch games.
 
 ## Commands
 

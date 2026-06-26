@@ -146,6 +146,22 @@ body {
   margin-bottom: 1rem;
 }
 
+.game-card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-icon {
+  width: 48px;
+  height: 48px;
+  background-size: calc(var(--icon-columns) * 100%) calc(var(--icon-rows) * 100%);
+  background-position: calc((var(--icon-col) - 1) * (100% / (var(--icon-columns) - 1))) calc((var(--icon-row) - 1) * (100% / (var(--icon-rows) - 1)));
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
 .game-card-title {
   margin: 0;
   font-size: 1.25rem;

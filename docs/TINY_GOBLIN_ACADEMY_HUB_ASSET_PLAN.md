@@ -28,14 +28,10 @@ We will skip these for now to avoid scope bloat. These are future-state polish i
 2. **Selective Usage**: Not every sprite or icon on a generated sheet must be used.
 3. **Manifest Slicing Strategy**: The UI will not hardcode pixel coordinates. Later slicing should be driven by a manifest mapping. The Hub UI should not care if the source is one giant sheet or many files.
 
-### Suggested Future Implementation
-We will eventually use a manifest mapping to drive icon slicing, for example:
-```json
-{
-  "hub-icon-manifest": {
-    "button-click": { "sheet": "tga-hub-game-icons-sheet-concept-v0.1.png", "x": 0, "y": 0, "w": 256, "h": 256 },
-    "potion-sorter": { "sheet": "tga-hub-game-icons-sheet-concept-v0.1.png", "x": 256, "y": 0, "w": 256, "h": 256 }
-  }
-}
-```
-*(Do not implement this in the Hub yet. This is an architectural target.)*
+### Hub Icon Manifest Implementation
+
+* `manifests/hub.icons.json` now exists as the draft Hub Icon Manifest.
+* It maps game IDs to row/column cells in the hub icon sheet.
+* It does not crop images.
+* It does not create a full asset pipeline.
+* It is currently for read-only Hub game card display.

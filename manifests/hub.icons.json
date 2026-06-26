@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "0.1.0",
+  "manifestType": "hub-icon-map",
+  "project": "Tiny Goblin Academy",
+  "status": "draft",
+  "sheet": {
+    "id": "tga-hub-game-icons-v0.1",
+    "imagePath": "assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png",
+    "columns": 5,
+    "rows": 2,
+    "notes": "Concept/v0.1 hub game icon sheet for game cards/buttons."
+  },
+  "icons": [
+    {
+      "gameId": "tga-01",
+      "slug": "button-goblin-clicker",
+      "row": 1,
+      "col": 1,
+      "label": "Button Goblin Clicker",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-02",
+      "slug": "potion-sorter",
+      "row": 1,
+      "col": 2,
+      "label": "Potion Sorter",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-03",
+      "slug": "dice-duel-tavern",
+      "row": 1,
+      "col": 3,
+      "label": "Dice Duel Tavern",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-04",
+      "slug": "card-goblin-duel",
+      "row": 1,
+      "col": 4,
+      "label": "Card Goblin Duel",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-05",
+      "slug": "dungeon-key-run",
+      "row": 1,
+      "col": 5,
+      "label": "Dungeon Key Run",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-06",
+      "slug": "tiny-farm-day",
+      "row": 2,
+      "col": 1,
+      "label": "Tiny Farm Day",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-07",
+      "slug": "pet-campfire",
+      "row": 2,
+      "col": 2,
+      "label": "Pet Campfire",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-08",
+      "slug": "one-room-platformer",
+      "row": 2,
+      "col": 3,
+      "label": "One Room Platformer",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-09",
+      "slug": "top-down-slime-quest",
+      "row": 2,
+      "col": 4,
+      "label": "Top-Down Slime Quest",
+      "used": true,
+      "notes": ""
+    },
+    {
+      "gameId": "tga-10",
+      "slug": "mini-settlement-sim",
+      "row": 2,
+      "col": 5,
+      "label": "Mini Settlement Sim",
+      "used": true,
+      "notes": ""
+    }
+  ]
+}
