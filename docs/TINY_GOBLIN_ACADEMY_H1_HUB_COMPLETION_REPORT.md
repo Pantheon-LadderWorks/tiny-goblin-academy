@@ -43,3 +43,8 @@ The current codebase establishes a hard read-only boundary:
 * **Production Packaging:** Wrapping the Hub in a Tauri shell for a compiled desktop executable experience.
 * **Level 1 Restoration:** Rebuilding Level 1's source and integrating it properly into the workspace.
 * **Asset Ingestion:** Finalizing and moving visual assets from the `assets/academy_review/` directory into production locations.
+* **Boot Experience Integration:**
+  * Hub currently implements an initial boot screen (hub-entry only).
+  * Game launch boot screens are deferred until launcher implementation.
+  * In-game preload scenes are deferred until game curriculum phase.
+  * Glyphforge boot splash concept is a reference asset, not final trademark-cleared branding.

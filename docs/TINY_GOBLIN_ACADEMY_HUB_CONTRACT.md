@@ -101,8 +101,14 @@ Required fields/concepts:
 ## Boot Experience Requirement
 
 Reference: `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
+Reference: `docs/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
 
 The Hub must not start with a raw dashboard. It must implement a product-entry flow before showing the game roster.
+
+* Hub has an existing boot screen (hub-entry only).
+* Game launch boot is future runtime work.
+* In-game preload scenes are future curriculum/game refinement work.
+* Glyphforge boot splash concept exists as a reference asset, not final trademark-cleared branding.
 
 ## Asset Relationship
 

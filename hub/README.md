@@ -9,6 +9,12 @@ Minimal Read-Only Scaffold.
 ## Architecture Notes
 * Game dependencies are managed by the root pnpm workspace. Do not run `npm install` inside the individual games.
 
+## Boot Experience Notes
+* Hub has an existing boot screen (hub-entry only).
+* Game launch boot is future runtime work.
+* In-game preload scenes are future curriculum/game refinement work.
+* Glyphforge boot splash concept exists as a reference asset, not final trademark-cleared branding.
+
 ## Commands
 
 Run the following inside the repo root:
