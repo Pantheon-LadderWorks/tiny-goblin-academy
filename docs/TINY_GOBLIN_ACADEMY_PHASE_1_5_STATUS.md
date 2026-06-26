@@ -40,4 +40,4 @@ With the read-only foundation locked in and the asset pantry stocked, the follow
 7. **Packaging / Playable Builds**: Package the upgraded games into final playable builds and manage release structures.
 8. **Tier 2 Planning**: Begin planning the next educational tier based on what Tier 1 has taught us and what the hub supports.
 
-*(Note: Hub/launcher eventually includes installer/update concerns. Launcher/runtime behavior does not yet exist. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*
+*(Note: Workspace / Install Architecture Plan is now the active next blocker. Level 1 remains blocked until the workspace/install architecture is approved. Hub/launcher eventually includes installer/update concerns. Launcher/runtime behavior does not yet exist. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*
