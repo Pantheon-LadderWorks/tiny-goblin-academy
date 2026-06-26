@@ -31,3 +31,7 @@ With the read-only foundation locked in and the asset pantry stocked, the follow
 1. **Launcher / Runtime Planning**: Design the architectural answer to how games are actually built, served, and launched from this hub (e.g., static vs. dev servers, Tauri vs. browser-only).
 2. **Level 1 Rebuild**: Rebuild Level 1 from scratch using the new asset doctrine as the primary integration test case.
 3. **Levels 2-10 Asset Upgrades**: Systematically update the surviving games to consume their respective assets from the pantry.
+4. **Packaging / Playable Builds**: Package the upgraded games into final playable builds and manage release structures.
+5. **Tier 2 Planning**: Begin planning the next educational tier based on what Tier 1 has taught us and what the hub supports.
+
+*(Note: Launcher/runtime behavior does not yet exist. Game asset integration has not started. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*
