@@ -232,9 +232,17 @@ No changes.
 
 ### Phase W5 — Cleanup
 
-* cleanup inventory created;
-* no deletions applied;
-* W5.1 cleanup strategy pending review.
+**State: COMPLETED** (Completed in W5.0 / W5.1)
+
+* **Goal:** Enforce single source of truth for dependencies.
+* **Problem:** Leftover `package-lock.json` files and old non-hoisted `.ignored` folders cause duplicate lockfile drift.
+* **Resolution (W5.1):** 
+  * Removed all 11 package-level `node_modules` folders (including `.ignored` quarantines).
+  * Removed obsolete `pnpm-lock.yaml` files from package directories.
+  * Removed `package-lock.json` drift from Games 08 and 09.
+  * Removed generated `dist/` outputs.
+  * Executed a canonical `pnpm install --ignore-scripts` from root.
+  * Restored the workspace strictly through the root `pnpm-lock.yaml` and verified with a full recursive build, test, and typecheck suite.
 
 ### Phase W6 — Level 1 Rebuild
 
