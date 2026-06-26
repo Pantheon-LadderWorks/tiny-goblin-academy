@@ -36,7 +36,7 @@ It acts as a doctrine to prevent:
 * **`sourceAvailable`**: The raw source code exists in the repository. This does *not* mean a playable build exists.
 * **`devRunnable`**: The source can be run in a dev environment (e.g., via a Vite dev server), but is not necessarily packaged.
 * **`buildAvailable`**: A compiled, static artifact of the game exists.
-* **`playableAvailable`**: The game can be launched and played by an end-user from the Hub without dev tools.
+* **`playableAvailable`**: The game has a known playable access mode according to `playableMode`. In the current manifest, `playableMode: dev` means developer/dev-mode playability only. It does not mean Hub-launchable, packaged, static-build-ready, or distribution-ready. True end-user Hub launchability requires later runtime/build manifest work.
 * **`playableMode`**: The context in which the game is running (e.g., Dev, Static Build, Packaged App). Note that playable in dev mode is *not* the same as shipped/distribution-ready.
 * **`runtimeManaged`**: A process (like a dev server or Tauri backend) is actively being managed, tracked, and cleaned up by the Hub.
 * **`distributionReady`**: The game and its assets are finalized, verified, packaged, and ready for public release.
@@ -68,10 +68,10 @@ Requires app packaging policy, runtime manifests, process lifecycle rules, and r
 1. Keep current Hub read-only.
 2. Add runtime/build planning docs (this document).
 3. Rebuild Level 1 as the first restored game.
-4. Create static build expectations for Level 1.
-5. Define build artifact location policy.
-6. Add a draft runtime/build manifest.
-7. Validate runtime/build manifest.
+4. Update `academy.games.json` for Level 1 source/restoration state.
+5. Design the runtime/build manifest and define build artifact location policy.
+6. Create a draft runtime/build manifest only after the design is approved.
+7. Validate the draft runtime/build manifest.
 8. Only then consider Hub static-build launch behavior.
 9. Delay managed dev server launching until much later, if ever.
 
@@ -156,4 +156,6 @@ The following are strictly out of scope for this phase:
 2. create Level 1 rebuild plan;
 3. rebuild Level 1;
 4. update `academy.games.json`;
-5. only then approach runtime/build manifest design.
+5. design runtime/build manifest;
+6. create draft runtime/build manifest only after design is approved;
+7. consider static build launch behavior only after manifest is validated.
