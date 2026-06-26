@@ -1,7 +1,8 @@
 import React from 'react'
 import { GameManifest } from '../data/tier1Roster'
-import { getIconForGame, hubIconSheetImage, hubIconManifest } from '../data/hubIcons'
+import { hubIconRegions } from '../data/hubIconRegions'
 import { StatusBadge } from './StatusBadge'
+import { SpriteFrame } from './SpriteFrame'
 
 interface GameCardProps {
   game: GameManifest;
@@ -11,21 +12,20 @@ interface GameCardProps {
 
 export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected }) => {
   const cardClass = `game-card ${game.restorationDeferred ? 'deferred' : ''} ${isSelected ? 'selected' : ''}`
-  const iconData = getIconForGame(game.id)
   
-  const iconStyle = iconData ? {
-    '--icon-row': iconData.row,
-    '--icon-col': iconData.col,
-    '--icon-columns': hubIconManifest.sheet.columns,
-    '--icon-rows': hubIconManifest.sheet.rows,
-    backgroundImage: `url(${hubIconSheetImage})`
-  } as React.CSSProperties : {}
+  const iconRegion = hubIconRegions.find(r => r.gameId === game.id)
   
   return (
     <div className={cardClass} onClick={onClick}>
       <div className="game-card-header">
         <div className="game-card-title-group">
-          {iconData && <div className="game-icon" style={iconStyle}></div>}
+          {iconRegion && (
+            <SpriteFrame 
+              sourceRect={iconRegion.sourceRect} 
+              alt={iconRegion.label}
+              className="game-icon"
+            />
+          )}
           <h3 className="game-card-title">{game.title}</h3>
         </div>
         <span className="game-level">Level {game.level}</span>

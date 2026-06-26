@@ -173,19 +173,26 @@ body {
 
 .game-icon {
   width: 100%;
-  aspect-ratio: 1536 / 6880;
-  background-size: calc(var(--icon-columns) * 100%) calc(var(--icon-rows) * 100%);
-  background-position: calc((var(--icon-col) - 1) * (100% / (var(--icon-columns) - 1))) calc((var(--icon-row) - 1) * (100% / (var(--icon-rows) - 1)));
-  background-repeat: no-repeat;
   image-rendering: pixelated;
   border-radius: 6px;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
+  background-color: rgba(0,0,0,0.2);
 }
 
 .game-card:hover .game-icon {
   transform: scale(1.05) rotate(-1deg);
+}
+
+.modal-icon-container {
+  width: 120px;
+  margin: 0 0 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  image-rendering: pixelated;
 }
 
 .game-card-title {

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { GameManifest } from '../data/tier1Roster'
+import { hubIconRegions } from '../data/hubIconRegions'
+import { SpriteFrame } from './SpriteFrame'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
@@ -19,10 +21,21 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
     return null;
   }
 
+  const iconRegion = hubIconRegions.find(r => r.gameId === game.id)
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">&times;</button>
+        {iconRegion && (
+          <div className="modal-icon-container">
+            <SpriteFrame 
+              sourceRect={iconRegion.sourceRect} 
+              alt={iconRegion.label}
+              className="modal-game-icon"
+            />
+          </div>
+        )}
         <h2 className="detail-title">{game.title}</h2>
       
       <div className="detail-section">
