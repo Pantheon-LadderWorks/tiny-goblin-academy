@@ -199,10 +199,13 @@ No changes.
 
 * W2 package census has been created at `docs/TINY_GOBLIN_ACADEMY_PACKAGE_CENSUS_W2.md`.
 * W2.5 Package metadata normalization plan created.
-* W2.6 package identity metadata normalized; no installs run; no lockfiles/node_modules deleted; next review determines whether Game 02 reconstruction plan or W3 controlled install comes next.
+* W2.6 package metadata normalization is complete.
+* Game 02 reconstruction plan exists.
 * No installs were run.
 * No node_modules or lockfiles were deleted.
-* W3 controlled install remains blocked until metadata normalization is approved and applied.
+* W3 controlled root install is blocked until Game 02 is either:
+  1. reconstructed and added to workspace in W2.7, or
+  2. explicitly deferred with approval.
 
 ### Phase W3 — Controlled Root Install
 

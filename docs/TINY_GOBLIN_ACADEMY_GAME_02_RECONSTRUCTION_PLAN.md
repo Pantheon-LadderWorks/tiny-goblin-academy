@@ -4,7 +4,7 @@
 
 Investigation / No Reconstruction Applied
 
-State:
+No reconstruction has been applied. The investigation confirmed:
 
 * no package.json was created;
 * no dependencies were installed;
@@ -14,7 +14,7 @@ State:
 
 ## Purpose
 
-Explain:
+This plan exists because:
 
 * Game 02 has source/test evidence but no package/config skeleton;
 * it currently has `node_modules`, which suggests prior dependency installation;
@@ -91,7 +91,7 @@ Cons:
 
 ## Recommended Path
 
-Recommendation:
+The recommended path is:
 
 * create a W2.7 Game 02 package/config reconstruction patch before W3;
 * include only the minimal files needed to make Game 02 a workspace package;
