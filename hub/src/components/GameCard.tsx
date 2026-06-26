@@ -1,6 +1,6 @@
 import React from 'react'
 import { GameManifest } from '../data/tier1Roster'
-import { getIconForGame, hubIconSheetImage } from '../data/hubIcons'
+import { getIconForGame, hubIconSheetImage, hubIconManifest } from '../data/hubIcons'
 import { StatusBadge } from './StatusBadge'
 
 interface GameCardProps {
@@ -16,8 +16,8 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
   const iconStyle = iconData ? {
     '--icon-row': iconData.row,
     '--icon-col': iconData.col,
-    '--icon-columns': 5,
-    '--icon-rows': 2,
+    '--icon-columns': hubIconManifest.sheet.columns,
+    '--icon-rows': hubIconManifest.sheet.rows,
     backgroundImage: `url(${hubIconSheetImage})`
   } as React.CSSProperties : {}
   
