@@ -4,6 +4,13 @@
 
 **Planning / No Runtime Implementation Yet**
 
+* The Hub is also expected to act as an installer/catalog surface, not merely a launcher.
+* Installation state is separate from roster visibility.
+* Games may be visible in the Hub while not installed locally.
+* Butler/itch distribution strategy affects launcher/runtime planning.
+* Dependency/storage policy must be planned before Level 1 rebuild.
+* Level 1 rebuild should wait until installer/dependency/Butler architecture is reviewed.
+
 * The Hub is currently read-only.
 * No game launching exists yet.
 * No process management exists yet.
@@ -152,10 +159,10 @@ The following are strictly out of scope for this phase:
 
 ## Proposed Next Step
 
-1. review/approve runtime plan;
-2. create Level 1 rebuild plan;
-3. rebuild Level 1;
-4. update `academy.games.json`;
-5. design runtime/build manifest;
-6. create draft runtime/build manifest only after design is approved;
-7. consider static build launch behavior only after manifest is validated.
+1. dependency/storage/installer/Butler audit;
+2. workspace/install architecture plan;
+3. itch/Butler packaging decision later, after research/testing;
+4. launcher/runtime plan update if needed;
+5. Level 1 rebuild plan;
+6. Level 1 rebuild;
+7. update manifests.
