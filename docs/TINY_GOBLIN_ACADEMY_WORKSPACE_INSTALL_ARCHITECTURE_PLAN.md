@@ -188,9 +188,12 @@ No changes.
 
 ### Phase W1 — Workspace Skeleton
 
-Create root `package.json` and `pnpm-workspace.yaml`.
-Do not delete anything yet.
-No installs until reviewed.
+* W1 workspace skeleton has been created.
+* Root package.json and pnpm-workspace.yaml exist.
+* No install has been run.
+* No dependencies were added.
+* No node_modules or lockfiles were deleted.
+* Game 02 remains excluded pending investigation.
 
 ### Phase W2 — Package Census / Normalize Metadata
 

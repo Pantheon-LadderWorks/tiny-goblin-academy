@@ -1,0 +1,11 @@
+{
+  "name": "tiny-goblin-academy-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Workspace root for Tiny Goblin Academy.",
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "validate:academy-manifest": "node scripts/validate-academy-manifest.mjs",
+    "validate:hub-icons": "node scripts/validate-hub-icons.mjs"
+  }
+}

@@ -1,0 +1,10 @@
+packages:
+  - "hub"
+  - "games/tier-1/03-dice-duel-tavern"
+  - "games/tier-1/04-card-goblin-duel"
+  - "games/tier-1/05-dungeon-key-run"
+  - "games/tier-1/06-tiny-farm-day"
+  - "games/tier-1/07-pet-campfire"
+  - "games/tier-1/08-one-room-platformer"
+  - "games/tier-1/09-top-down-slime-quest"
+  - "games/tier-1/10-mini-settlement-sim"
