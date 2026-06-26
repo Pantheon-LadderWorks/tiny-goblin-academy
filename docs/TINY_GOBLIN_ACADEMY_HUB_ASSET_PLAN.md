@@ -35,3 +35,10 @@ We will skip these for now to avoid scope bloat. These are future-state polish i
 * It does not crop images.
 * It does not create a full asset pipeline.
 * It is currently for read-only Hub game card display.
+
+## Hub Icon Validation
+
+`scripts/validate-hub-icons.mjs` validates the Hub Icon Manifest.
+* It checks the icon sheet path, grid bounds, duplicate cells, and gameId/slug alignment with `academy.games.json`.
+* It does not crop or export icons.
+* It does not create a full asset pipeline.
