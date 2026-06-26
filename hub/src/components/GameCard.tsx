@@ -22,7 +22,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
   } as React.CSSProperties : {}
   
   return (
-    <div className={cardClass} onClick={onClick} style={isSelected ? { borderColor: 'var(--accent-teal)' } : {}}>
+    <div className={cardClass} onClick={onClick}>
       <div className="game-card-header">
         <div className="game-card-title-group">
           {iconData && <div className="game-icon" style={iconStyle}></div>}

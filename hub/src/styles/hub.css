@@ -16,6 +16,8 @@
 body {
   margin: 0;
   background-color: var(--bg-color);
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 20px 20px;
   color: var(--text-main);
 }
 
@@ -132,6 +134,13 @@ body {
 .game-card:hover {
   border-color: var(--accent-teal);
   transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 210, 211, 0.08);
+}
+
+.game-card.selected {
+  border-color: var(--accent-gold);
+  background-color: rgba(254, 202, 87, 0.03);
+  box-shadow: 0 0 0 1px var(--accent-gold);
 }
 
 .game-card.deferred {
@@ -159,7 +168,14 @@ body {
   background-position: calc((var(--icon-col) - 1) * (100% / (var(--icon-columns) - 1))) calc((var(--icon-row) - 1) * (100% / (var(--icon-rows) - 1)));
   background-repeat: no-repeat;
   image-rendering: pixelated;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.game-card:hover .game-icon {
+  transform: scale(1.05) rotate(-1deg);
 }
 
 .game-card-title {
