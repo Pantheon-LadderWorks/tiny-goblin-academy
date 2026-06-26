@@ -22,6 +22,15 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 * Production implementation should rely on named manifest entries, not manual visual guessing.
 * Manifests should include `used`, `unused`, or `reserved` notes where helpful.
 
+## Transparency Cleanup Doctrine
+
+* **Fake-transparent sheets require alpha/background audit:** Never assume gray checkerboard patterns are true alpha transparency. Inspect before wiring.
+* **Cleanup Mode Selection:** 
+  * *Region-edge cleanup* is safe but may leave hard gray crumbs inside complex bounds.
+  * *Full-sheet border-connected cleanup* is strongly preferred when the fake checkerboard touches the sheet perimeter, producing perfect alpha.
+* **Animation Sheet Pilot Testing:** Sprite animation sheets require extra care (e.g., pilot tests, frame manifests, contact-sheet evidence) before full-sheet flood-fill, to prevent "transparent kneecaps" incidents.
+* **No Direct Sheet Wiring:** Do not wire a raw asset sheet directly into a game or hub without this pipeline: `Inspect → Map → Clean/Derive (if needed) → Validate → Screenshot Evidence`.
+
 ## Platformer Background / Anchor Doctrine
 
 * Side-view platformer backgrounds should not be treated like top-down tilemaps.

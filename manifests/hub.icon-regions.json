@@ -10,11 +10,11 @@
     "notes": "Irregular concept sheet. Regions are named source rectangles, not uniform grid cells."
   },
   "derivedSheet": {
-    "id": "tga-hub-game-icons-cleaned-v0.1",
-    "imagePath": "assets/academy/hub/derived/tga-hub-game-icons-cleaned-v0.1.png",
+    "id": "tga-hub-game-icons-transparent-v0.1",
+    "imagePath": "assets/academy/hub/derived/tga-hub-game-icons-transparent-v0.1.png",
     "sourceImagePath": "assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png",
-    "cleanupMethod": "edge-connected checkerboard color-key to alpha",
-    "notes": "Derived sheet generated programmatically from the original irregular source pantry. Original source sheet remains untouched."
+    "cleanupMethod": "full-sheet border-connected low-saturation gray flood fill to alpha",
+    "notes": "Derived sheet generated programmatically from the original irregular source pantry using a full-sheet algorithm. Supersedes the earlier region-edge cleanup."
   },
   "regions": [
     {
