@@ -24,6 +24,13 @@ Manifests will become the source of truth for the Hub and future visual integrat
 * It does not define launch behavior, runtime process behavior, build availability verification, asset slicing, or release packaging.
 * Runtime/build/release manifests remain future work.
 
+## Validation
+
+* `scripts/validate-academy-manifest.mjs` validates `manifests/academy.games.json`;
+* it is zero-dependency;
+* it checks roster shape, path hygiene, Level 1 deferred invariant, and source folder existence for Levels 2-10;
+* it does not launch games or validate runtime/build readiness.
+
 Fields:
 * id
 * tier

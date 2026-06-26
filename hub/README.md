@@ -16,4 +16,9 @@ pnpm build
 pnpm dev
 ```
 
+To validate the Academy Game Manifest, run the following from the repo root:
+```bash
+node scripts/validate-academy-manifest.mjs
+```
+
 *Note: `pnpm dev` only runs the Hub UI in your browser. It does not run the individual games.*
