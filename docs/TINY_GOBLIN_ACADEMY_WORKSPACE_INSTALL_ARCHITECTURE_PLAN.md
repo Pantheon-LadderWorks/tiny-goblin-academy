@@ -232,14 +232,9 @@ Only after workspace/install architecture is working and approved.
 
 ## Game 02 Special Investigation
 
-* 02 Potion Sorter has source files and node_modules but no package.json.
-* Determine whether package.json was lost, intentionally absent, or never created.
-* Do not guess dependencies blindly.
-* Before adding it to workspace, inspect imports and existing source structure.
-* Possible outcomes:
-  1. reconstruct minimal package.json from source and common Tier 1 patterns;
-  2. fold into a shared/common package later;
-  3. defer until Level 1 or asset upgrade phase.
+* Game 02 reconstruction plan has been created.
+* W3 controlled root install remains blocked until Game 02 decision is reviewed.
+* Game 02 is still excluded unless/until W2.7 creates a package skeleton and updates workspace membership.
 
 ## Butler / itch Relationship
 
