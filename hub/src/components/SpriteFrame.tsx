@@ -1,5 +1,5 @@
 import React from 'react';
-import sheetUrl from '../../../assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png';
+import sheetUrl from '../../../assets/academy/hub/derived/tga-hub-game-icons-cleaned-v0.1.png';
 
 export interface SourceRect {
   x: number;

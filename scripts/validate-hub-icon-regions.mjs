@@ -24,6 +24,14 @@ async function run() {
     process.exit(1);
   }
 
+  if (manifest.derivedSheet) {
+    const derivedImagePath = path.resolve(manifest.derivedSheet.imagePath);
+    if (!fs.existsSync(derivedImagePath)) {
+      console.error(`❌ Derived sheet image not found at ${derivedImagePath}`);
+      process.exit(1);
+    }
+  }
+
   // Dimensions
   const width = manifest.sheet.width;
   const height = manifest.sheet.height;

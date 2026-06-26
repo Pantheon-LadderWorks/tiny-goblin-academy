@@ -9,6 +9,13 @@
     "height": 1376,
     "notes": "Irregular concept sheet. Regions are named source rectangles, not uniform grid cells."
   },
+  "derivedSheet": {
+    "id": "tga-hub-game-icons-cleaned-v0.1",
+    "imagePath": "assets/academy/hub/derived/tga-hub-game-icons-cleaned-v0.1.png",
+    "sourceImagePath": "assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png",
+    "cleanupMethod": "edge-connected checkerboard color-key to alpha",
+    "notes": "Derived sheet generated programmatically from the original irregular source pantry. Original source sheet remains untouched."
+  },
   "regions": [
     {
       "gameId": "tga-01",
