@@ -1,5 +1,6 @@
 packages:
   - "hub"
+  - "games/tier-1/02-potion-sorter"
   - "games/tier-1/03-dice-duel-tavern"
   - "games/tier-1/04-card-goblin-duel"
   - "games/tier-1/05-dungeon-key-run"

@@ -153,3 +153,13 @@ Proposed dependencies/devDependencies (based on neighbor packages & imports):
 4. Add Game 02 to workspace only as part of W2.7 if package skeleton is created.
 5. Review W2.7.
 6. Then proceed to W3 controlled root install.
+
+## Implementation Note
+
+* W2.7 package/config skeleton created;
+* package.json, tsconfig.json, index.html created;
+* Game 02 added to pnpm workspace;
+* no install was run;
+* source/tests unchanged;
+* node_modules preserved for now;
+* W3 controlled root install remains next after review.

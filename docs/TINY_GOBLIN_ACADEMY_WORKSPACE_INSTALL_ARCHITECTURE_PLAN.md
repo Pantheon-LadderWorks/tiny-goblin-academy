@@ -207,6 +207,13 @@ No changes.
   1. reconstructed and added to workspace in W2.7, or
   2. explicitly deferred with approval.
 
+### Phase W2.7 — Game 02 Package / Config Skeleton
+
+* Game 02 package/config skeleton created;
+* Game 02 added to workspace membership;
+* W3 controlled root install is now unblocked pending review;
+* node_modules and lockfiles cleanup still deferred.
+
 ### Phase W3 — Controlled Root Install
 
 Run one root `pnpm install`.
