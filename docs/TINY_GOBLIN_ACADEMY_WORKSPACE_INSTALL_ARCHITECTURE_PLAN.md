@@ -232,12 +232,9 @@ No changes.
 
 ### Phase W5 — Cleanup
 
-Only after validation:
-
-* remove obsolete per-game node_modules;
-* remove obsolete npm package-lock files if confirmed unnecessary;
-* decide what to do with per-game pnpm-lock.yaml files;
-* update docs.
+* cleanup inventory created;
+* no deletions applied;
+* W5.1 cleanup strategy pending review.
 
 ### Phase W6 — Level 1 Rebuild
 
