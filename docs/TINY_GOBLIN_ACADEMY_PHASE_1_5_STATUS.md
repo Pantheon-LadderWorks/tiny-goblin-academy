@@ -3,7 +3,10 @@
 ## Overview
 The goal of Phase 1.5 was to establish a functional, structurally sound, read-only Hub scaffold and generate the required initial visual assets (the pantry) before integrating them into actual game runtimes.
 
-This phase is **virtually complete**.
+* Asset pantry generation is virtually complete.
+* Read-only Hub foundation is virtually complete.
+* Phase 1.5 overall remains active because dependency/storage/installer/Butler architecture must be resolved before Level 1 rebuild.
+* Level 1 rebuild is intentionally blocked until that architecture is reviewed.
 
 ## Completed Milestones
 
@@ -28,7 +31,7 @@ The asset generation phase is effectively complete. The repository now holds eno
 
 With the read-only foundation locked in and the asset pantry stocked, the following sequential steps are recommended:
 
-1. **Dependency / Storage / Installer / Butler Audit**
+1. ~~**Dependency / Storage / Installer / Butler Audit**~~ (Completed)
 2. **Workspace / Install Architecture Plan**
 3. **Launcher / Runtime Plan** update if needed
 4. **Level 1 Rebuild Plan**

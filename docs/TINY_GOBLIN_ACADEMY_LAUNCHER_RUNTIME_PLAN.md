@@ -73,14 +73,17 @@ Requires app packaging policy, runtime manifests, process lifecycle rules, and r
 ## Recommended Path
 
 1. Keep current Hub read-only.
-2. Add runtime/build planning docs (this document).
-3. Rebuild Level 1 as the first restored game.
-4. Update `academy.games.json` for Level 1 source/restoration state.
-5. Design the runtime/build manifest and define build artifact location policy.
-6. Create a draft runtime/build manifest only after the design is approved.
-7. Validate the draft runtime/build manifest.
-8. Only then consider Hub static-build launch behavior.
-9. Delay managed dev server launching until much later, if ever.
+2. Complete dependency/storage/installer/Butler audit.
+3. Create workspace/install architecture plan.
+4. Update launcher/runtime plan if the workspace/install plan changes assumptions.
+5. Create Level 1 rebuild plan.
+6. Rebuild Level 1 only after dependency/install architecture is approved.
+7. Update `academy.games.json` for Level 1 source/restoration state.
+8. Design runtime/build manifest and build artifact location policy.
+9. Create draft runtime/build manifest only after design approval.
+10. Validate runtime/build manifest.
+11. Only then consider Hub static-build launch behavior.
+12. Delay managed dev server launching until much later, if ever.
 
 ## Ghost Process Prevention Rules
 
@@ -159,10 +162,4 @@ The following are strictly out of scope for this phase:
 
 ## Proposed Next Step
 
-1. dependency/storage/installer/Butler audit;
-2. workspace/install architecture plan;
-3. itch/Butler packaging decision later, after research/testing;
-4. launcher/runtime plan update if needed;
-5. Level 1 rebuild plan;
-6. Level 1 rebuild;
-7. update manifests.
+1. Workspace / Install Architecture Plan

@@ -52,7 +52,7 @@ This document defines the storage and dependency architecture for the Academy.
 * **Shared pnpm store**: Yes (deduplicates packages automatically across the repo).
 * **Workspace scripts**: For validating/building games centrally.
 * **No per-game npm install**: Unless explicitly needed.
-* **No package-lock files**: Since pnpm is the chosen package manager, npm lockfiles should be eradicated.
+* **No package-lock files**: package-lock files should be removed only as part of an approved pnpm workspace migration; first confirm they are obsolete; do not delete them during audit/planning; preserve history and avoid losing the only package-state clue for a game.
 * **Careful handling of existing lockfiles**: Existing per-game lockfiles must be cleaned up carefully when setting up the workspace.
 
 *(Note: Do not implement this yet. This is planning only.)*
@@ -97,16 +97,13 @@ The Hub is not only a launcher. It is expected to become:
 
 ## Butler / itch Distribution Questions
 
+*(Note: The current Butler claims are based on official Butler documentation. While Option C remains theoretically possible, it still requires hands-on testing before relying on it for the “3 installed / 7 uninstalled” model.)*
+
 Known from official Butler docs:
-* `butler push` uploads a build to a project/channel.
-* Pushing to the same channel updates that file/build.
-* Butler/Wharf uses patching/diffing so updates usually transfer changed data instead of the full build.
+* `butler push` updates a project/channel and uses patching/diffing.
 * Direct web downloads do not auto-update.
-* The itch app and Butlerd can use Butler/Wharf update behavior.
-* Butlerd represents installed games as “caves.”
-* Butlerd can check updates for specific cave IDs.
-* Butlerd update flow uses install queue/perform with `reason: update`.
-* Butlerd is the supported path for custom launchers that install, update, and launch itch games.
+* Butlerd represents installs as caves and supports cave-scoped update checks.
+* Butlerd is the supported path for custom launchers that install/update/launch itch games.
 
 ### Distribution Design Options
 
