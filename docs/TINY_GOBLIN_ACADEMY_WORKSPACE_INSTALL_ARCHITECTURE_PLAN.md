@@ -91,6 +91,66 @@ Recommend a likely direction:
 * central build export is likely better for Hub installer/static launcher state;
 * final decision should happen after workspace migration and Level 1 rebuild plan.
 
+## Developer Mode vs Production Mode
+
+### Developer Mode
+
+Developer mode assumes source files are present in the repo.
+
+In developer mode, “installing” a game usually means:
+
+* dependencies are installed or linked through the workspace;
+* the game can be built or run in a dev environment;
+* the game may become `devRunnable`.
+
+Developer mode install state should use terms like:
+
+* `workspaceMember`
+* `dependenciesInstalled`
+* `devRunnable`
+* `sourceAvailable`
+
+Important:
+
+* Developer dependency installation is not the same as a player-facing game install.
+* `dependenciesInstalled: true` does not mean `installed: true`.
+* `playableMode: dev` does not mean production-ready or distribution-ready.
+* The Hub must not silently run `pnpm install`.
+* The Hub must not silently spawn dev servers.
+
+### Production Mode
+
+Production mode assumes players should not need source dependencies, Node, pnpm, Vite, TypeScript, or dev servers.
+
+In production mode, “installing” a game means:
+
+* a prebuilt playable artifact exists locally;
+* or later, a Butler/itch cave exists locally;
+* the game can be launched without developer tools.
+
+Production mode install state should use terms like:
+
+* `installed`
+* `buildAvailable`
+* `playableAvailable`
+* `playableMode: static | bundled | itch-cave`
+* `updateAvailable`
+* `distributionReady`
+
+Important:
+
+* Production install is about playable artifacts, not source dependencies.
+* Butler/butlerd belongs to future production install/update behavior.
+* Static builds are the preferred first real production launch target.
+
+| Concept       | Developer Mode                | Production Mode                  |
+| ------------- | ----------------------------- | -------------------------------- |
+| Source files  | Present                       | Usually hidden or bundled away   |
+| Dependencies  | Workspace/dev dependencies    | Not user-facing                  |
+| Install means | Dependencies linked/available | Playable artifact/cave installed |
+| Play mode     | dev                           | static/bundled/itch-cave         |
+| User type     | developer/maintainer          | player/end-user                  |
+
 ## Hub Install State Model
 
 * all 10 games listed;
@@ -114,8 +174,9 @@ States:
 * distributionReady
 
 * `workspaceMember` is a developer/source state.
-* `installed` is a player/local runtime state.
-* `dependenciesInstalled` is not the same as `installed`.
+* `dependenciesInstalled` is explicitly developer-mode.
+* `installed` is explicitly production/player-mode.
+* The Hub may display both while developing, but must not conflate them.
 * Butler cave install state is future-only.
 
 ## Proposed Migration Phases
