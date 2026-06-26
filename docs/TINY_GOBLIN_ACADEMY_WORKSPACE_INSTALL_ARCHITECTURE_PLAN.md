@@ -198,10 +198,11 @@ No changes.
 ### Phase W2 — Package Census / Normalize Metadata
 
 * W2 package census has been created at `docs/TINY_GOBLIN_ACADEMY_PACKAGE_CENSUS_W2.md`.
+* W2.5 Package metadata normalization plan created.
+* No package files changed yet.
 * No installs were run.
-* No package files were modified.
 * No node_modules or lockfiles were deleted.
-* W3 remains blocked until the W2 census is reviewed and any package normalization plan is approved.
+* W3 controlled install remains blocked until metadata normalization is approved and applied.
 
 ### Phase W3 — Controlled Root Install
 
