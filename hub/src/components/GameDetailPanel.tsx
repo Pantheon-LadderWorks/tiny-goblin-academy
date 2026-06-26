@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { GameManifest } from '../data/tier1Roster'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
+  onClose: () => void;
 }
 
-export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game }) => {
+export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose }) => {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   if (!game) {
-    return (
-      <div className="detail-placeholder">
-        Select a game from the roster to view details.
-      </div>
-    )
+    return null;
   }
 
   return (
-    <div className="game-detail">
-      <h2 className="detail-title">{game.title}</h2>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">&times;</button>
+        <h2 className="detail-title">{game.title}</h2>
       
       <div className="detail-section">
         <h4>Level {game.level} • Tier {game.tier}</h4>
@@ -69,6 +76,7 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game }) => {
         <button className="launch-btn" disabled>
           Launch (Not Implemented)
         </button>
+      </div>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import bootSplash from '../../../assets/studio/glyphforge-games/glyphforge-games-boot-splash-concept.png'
 
 interface BootScreenProps {
   onComplete: () => void;
@@ -7,7 +8,8 @@ interface BootScreenProps {
 export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
   return (
     <div className="boot-screen">
-      <div className="studio-mark">Pantheon LadderWorks / Glyphforge Games (Draft)</div>
+      <img src={bootSplash} alt="Glyphforge Games Concept Splash" style={{ maxWidth: '400px', marginBottom: '2rem' }} />
+      <div className="studio-mark">Glyphforge Games (Draft)</div>
       <div className="academy-identity">Tiny Goblin Academy</div>
       <div className="loading-phrase">Opening the Academy...</div>
       

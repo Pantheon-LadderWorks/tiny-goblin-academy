@@ -5,7 +5,7 @@ import { GameDetailPanel } from './GameDetailPanel'
 import { CreditsPanel } from './CreditsPanel'
 
 export const HubShell: React.FC = () => {
-  const [selectedGame, setSelectedGame] = useState<GameManifest | null>(tier1Roster[0])
+  const [selectedGame, setSelectedGame] = useState<GameManifest | null>(null)
 
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
   const sourceAvailableCount = tier1Roster.filter(g => g.sourceAvailable).length;
@@ -25,17 +25,16 @@ export const HubShell: React.FC = () => {
       </header>
       
       <main className="hub-main">
-        <section className="roster-panel">
-          <GameRoster 
-            games={tier1Roster} 
-            onSelect={setSelectedGame}
-            selectedId={selectedGame?.id}
-          />
-        </section>
+        <GameRoster 
+          games={tier1Roster} 
+          onSelect={setSelectedGame}
+          selectedId={selectedGame?.id}
+        />
         
-        <section className="detail-panel">
-          <GameDetailPanel game={selectedGame} />
-        </section>
+        <GameDetailPanel 
+          game={selectedGame} 
+          onClose={() => setSelectedGame(null)} 
+        />
       </main>
     </div>
   )
