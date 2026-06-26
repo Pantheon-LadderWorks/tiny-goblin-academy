@@ -220,7 +220,7 @@ class Level9Scene extends Phaser.Scene {
     this.uiEssence.innerText = this.gameState.essence.status;
     this.uiExit.innerText = this.gameState.essence.status === 'Collected' ? 'Unlocked' : 'Locked';
     
-    let runStr = this.gameState.runStatus;
+    let runStr: string = this.gameState.runStatus;
     if (runStr === 'Defeat') runStr = 'Defeat (Red)';
     if (runStr === 'Victory') runStr = 'Victory (Green)';
     this.uiRunStatus.innerText = runStr;

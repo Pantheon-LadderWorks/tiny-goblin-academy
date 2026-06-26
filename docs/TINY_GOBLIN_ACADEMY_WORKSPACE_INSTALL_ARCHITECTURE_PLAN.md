@@ -224,8 +224,11 @@ No changes.
 ### Phase W4 — Validation
 
 * workspace validation report created;
-* cleanup remains blocked until validation blockers are patched and validation passes;
-* W5 is not approved yet.
+* W4.1 validation fix patch applied;
+* TypeScript version drift addressed;
+* CSS import declarations addressed;
+* Game 09 typing issue addressed;
+* W5 cleanup remains blocked until W4.1 validation passes.
 
 ### Phase W5 — Cleanup
 

@@ -4,12 +4,7 @@
 
 Validation / No Cleanup Applied
 
-State:
-
-* root workspace install already completed in W3;
-* W4 validates tests/build/typecheck;
-* no cleanup was performed;
-* no node_modules or lockfiles were deleted.
+The root workspace install was already completed in W3. W4 validates tests, build, and typecheck. No cleanup was performed, and no node_modules or lockfiles were deleted.
 
 ## Purpose
 
@@ -50,7 +45,8 @@ State:
 * **Command:** `pnpm -r --no-bail exec tsc --noEmit`
 * **Failures:** 4 packages failed (05, 06, 07, 09) with `Command "tsc" not found`.
 * **Observations:** 
-  * The `tsc` missing error is due to `pnpm` not linking `tsc` properly for these games, likely because they list `typescript: ^6.0.3` (which doesn't exist) in their `devDependencies`, preventing pnpm from resolving and linking it.
+  * The `tsc` missing error is due to dependency version drift. Games 02–09 use `typescript: ^6.0.3` while Game 10 uses `^5.4.2`, preventing pnpm from correctly linking `tsc` for those games during the workspace install.
+  * W4.1 normalizes this dependency version drift. It's important to note that TypeScript version drift alone did not cause every build failure (some packages with `^6.0.3` still passed builds if they had residual dependencies), but normalizing it is required before continuing validation.
   * Before failing, TypeScript output several typing errors that are elaborated on in the build results below.
 
 ## Build Results
