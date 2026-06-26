@@ -223,10 +223,9 @@ No changes.
 
 ### Phase W4 — Validation
 
-Run existing validators.
-Run hub build.
-Run selected game builds/tests only after approval.
-Do not run dev servers.
+* workspace validation report created;
+* cleanup remains blocked until validation blockers are patched and validation passes;
+* W5 is not approved yet.
 
 ### Phase W5 — Cleanup
 
