@@ -1,30 +1,40 @@
 # Tiny Goblin Academy Hub
 
-This is the read-only dashboard scaffold for the Tiny Goblin Academy hub.
+This is the read-only dashboard catalog for the Tiny Goblin Academy Tier 1.
 
 ## Status
 Minimal Read-Only Scaffold.
-*Explicit Note*: There is no game launching, process management, or Tauri behavior implemented yet.
-* Hub game cards may display icons using `manifests/hub.icons.json`. This is still read-only and does not launch games.
+*Explicit Note*: There is no game launching, installer behavior, Butler integration, or Tauri shell implemented yet.
+
+## Architecture Notes
+* Game dependencies are managed by the root pnpm workspace. Do not run `npm install` inside the individual games.
 
 ## Commands
 
-Run the following inside the `hub/` directory:
+Run the following inside the repo root:
 
 ```bash
+# Install workspace dependencies
 pnpm install
-pnpm build
-pnpm dev
+
+# Build the Hub
+pnpm --filter tiny-goblin-academy-hub build
 ```
 
-To validate the Academy Game Manifest, run the following from the repo root:
+To run the Hub locally in dev mode:
+```bash
+# from the repo root
+pnpm --filter tiny-goblin-academy-hub dev
+```
+*Note: `pnpm dev` only runs the Hub UI in your browser. It does not run the individual games.*
+
+## Validation
+To validate the Academy Game Manifest:
 ```bash
 node scripts/validate-academy-manifest.mjs
 ```
 
-To validate the Hub Icon Manifest (icon mapping only), run the following from the repo root:
+To validate the Hub Icon Manifest:
 ```bash
 node scripts/validate-hub-icons.mjs
 ```
-
-*Note: `pnpm dev` only runs the Hub UI in your browser. It does not run the individual games.*

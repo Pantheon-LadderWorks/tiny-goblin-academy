@@ -100,6 +100,20 @@ body {
   margin-top: 0.25rem;
 }
 
+.tier-summary {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent-teal);
+  background-color: rgba(0, 210, 211, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.tier-summary span {
+  margin: 0 0.25rem;
+}
+
 .hub-main {
   display: flex;
   flex: 1;
@@ -245,6 +259,14 @@ body {
   border-top: 1px solid var(--border-color);
 }
 
+.launch-warning {
+  color: #ff9800;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
 .launch-btn {
   background-color: var(--accent-teal);
   color: var(--bg-color);
@@ -257,6 +279,14 @@ body {
   cursor: not-allowed;
 }
 
+.source-path {
+  background-color: rgba(0,0,0,0.3);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  color: var(--text-muted);
+}
+
 /* Credits */
 .credits-panel {
   display: flex;
@@ -266,7 +296,16 @@ body {
 }
 
 .credits-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin: 0 0 0.5rem 0;
+}
+
+.credits-notes {
+  font-size: 0.75rem;
   color: var(--text-muted);
-  margin: 0;
+}
+
+.credits-notes p {
+  margin: 0.15rem 0;
 }

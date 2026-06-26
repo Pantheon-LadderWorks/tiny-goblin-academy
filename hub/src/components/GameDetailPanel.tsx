@@ -44,6 +44,13 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game }) => {
         </ul>
       </div>
 
+      {game.sourcePath && (
+        <div className="detail-section">
+          <h4>Source Path</h4>
+          <p><code className="source-path">{game.sourcePath}</code></p>
+        </div>
+      )}
+
       {game.restorationDeferred && (
         <div className="deferred-note">
           <strong>Restoration Deferred:</strong> Source restoration deferred until Hub/package model is ready.
@@ -58,6 +65,7 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game }) => {
       )}
       
       <div className="action-bar">
+        <p className="launch-warning">Launch not implemented in this hub build.</p>
         <button className="launch-btn" disabled>
           Launch (Not Implemented)
         </button>
