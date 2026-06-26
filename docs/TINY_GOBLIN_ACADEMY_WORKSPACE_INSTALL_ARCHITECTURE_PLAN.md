@@ -216,9 +216,10 @@ No changes.
 
 ### Phase W3 — Controlled Root Install
 
-Run one root `pnpm install`.
-Observe generated root lockfile and workspace linking.
-Measure node_modules impact.
+* controlled root install completed;
+* no cleanup applied;
+* W4 validation is next;
+* W5 cleanup remains blocked until validation passes.
 
 ### Phase W4 — Validation
 
