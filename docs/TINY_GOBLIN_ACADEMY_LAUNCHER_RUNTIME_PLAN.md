@@ -157,7 +157,8 @@ The following are strictly out of scope for this phase:
 ### H3.0 — Runtime Docs Reconciliation
 Current phase. Docs only.
 
-### H3.1 — Tauri Shell Spike
+### H3.1 — Tauri Shell Spike (BLOCKED)
+**BLOCKED**: Requires Rust environment stabilization before Tauri scaffolding. The Rust/Cargo preflight must respect the user's D: dev cache and C: junction setup. Do not run rustup repair/update automatically.
 Future explicit approval required. Minimal shell only. Prove Hub frontend can call one safe backend diagnostic command, such as `pnpm --version`. No game launch yet. *No game launch boot screen.*
 
 ### H3.2 — Workspace Dependency Status
