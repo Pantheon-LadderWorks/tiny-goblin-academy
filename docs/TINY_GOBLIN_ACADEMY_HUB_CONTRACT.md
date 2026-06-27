@@ -4,7 +4,7 @@
 
 * H2 Visual Dashboard Pass: Completed
 * Hub Mode: Read-Only
-* Launcher/Install/Runtime Architecture: Future Work
+* Launcher/Install/Runtime Architecture: Entering H3 runtime/control-surface reconciliation
 
 ## Purpose
 
@@ -45,7 +45,7 @@ The first Hub implementation should be a minimal read-only dashboard shell:
 * no gameplay contract rewrites.
 
 Purpose:
-This prevents the first scaffold from jumping directly into Tauri process management, dev server launching, package orchestration, or visual asset integration before the manifest/display layer exists.
+This prevented the first scaffold from jumping directly into Tauri process management, dev server launching, package orchestration, or visual asset integration before the manifest/display layer existed. With H2 complete, the Hub remains read-only but is ready for H3 control-surface reconciliation.
 
 ## Required Hub Views
 
@@ -73,17 +73,9 @@ Each game card should be able to show:
 * asset/status notes
 * docs/evidence links where appropriate
 
-## Level 1 Restoration Deferred Rule
+## Level 1 Restoration (Resolved)
 
-Level 1 Button Goblin Clicker historically passed Human Review, but its source is currently missing and restoration is deferred until the hub/package model is designed. The Hub must represent this honestly.
-
-Required fields/concepts:
-* historicallyPassed: true
-* sourceAvailable: false
-* restorationDeferred: true
-* playableBuildAvailable: false unless a build is later restored
-* display status should not pretend source exists
-* this is a manifest/state test case
+Level 1 Button Goblin Clicker historically passed Human Review, but its source was missing during early hub development. It has now been successfully rebuilt and restored to the workspace. The Hub manifest reflects this updated state (`restored v0.1`).
 
 ## Source vs Build vs Installed State
 
@@ -120,7 +112,6 @@ The Hub may display asset-driven previews later, but asset ingestion does not me
 
 ## Non-Goals
 
-* Do not rebuild Level 1 as part of Hub contract.
 * Do not upgrade gameplay loops as part of Hub contract.
 * Do not implement visual asset swaps yet.
 * Do not create itch release builds yet.

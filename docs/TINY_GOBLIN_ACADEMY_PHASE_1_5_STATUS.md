@@ -5,8 +5,8 @@ The goal of Phase 1.5 was to establish a functional, structurally sound, read-on
 
 * Asset pantry generation is virtually complete.
 * Read-only Hub foundation is virtually complete.
-* Phase 1.5 overall remains active because dependency/storage/installer/Butler architecture must be resolved before Level 1 rebuild.
-* Level 1 rebuild is intentionally blocked until that architecture is reviewed.
+* Phase 1.5 achieved its foundational goals. The dependency/storage architecture (pnpm workspace) was resolved.
+* Level 1 rebuild is complete and has passed Human Review.
 
 ## Completed Milestones
 
@@ -35,12 +35,12 @@ The asset generation phase is effectively complete. The repository now holds eno
 With the read-only foundation locked in and the asset pantry stocked and structured via the H2 intake pipeline, the following sequential steps are recommended:
 
 1. ~~**Dependency / Storage / Installer / Butler Audit**~~ (Completed)
-2. **Level 1 Restoration Contract / Plan** (Active Blocker)
-3. **Workspace / Install Architecture Plan**
-4. **Launcher / Runtime Plan** update if needed
-5. **Level 1 Rebuild**: Rebuild Level 1 from scratch using the new asset doctrine as the primary integration test case. (Waiting on restoration plan).
+2. ~~**Level 1 Restoration Contract / Plan**~~ (Completed)
+3. ~~**Workspace / Install Architecture Plan**~~ (Completed)
+4. ~~**Level 1 Rebuild**~~ (Completed - Restored v0.1)
+5. **Launcher / Runtime Control-Surface Reconciliation**: (Active - H3.0) Reconciling docs to establish the Tauri shell as the next foundation spike.
 6. **Levels 2-10 Asset Upgrades**: Systematically update the surviving games to consume their respective assets from the pantry. (Asset integration has not started).
 7. **Packaging / Playable Builds**: Package the upgraded games into final playable builds and manage release structures.
 8. **Tier 2 Planning**: Begin planning the next educational tier based on what Tier 1 has taught us and what the hub supports.
 
-*(Note: Level 1 Restoration Contract is now the active next blocker. Workspace / Install Architecture Plan is also pending. Hub/launcher eventually includes installer/update concerns. Launcher/runtime behavior does not yet exist. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*
+*(Note: The active next blocker is the Hub runtime/control-surface architecture. A minimal Tauri spike (H3.1) is required before implementing any launch capabilities.)*

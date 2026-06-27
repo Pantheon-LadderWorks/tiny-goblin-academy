@@ -8,8 +8,8 @@
 * Installation state is separate from roster visibility.
 * Games may be visible in the Hub while not installed locally.
 * Butler/itch distribution strategy affects launcher/runtime planning.
-* Dependency/storage policy must be planned before Level 1 rebuild.
-* Level 1 rebuild should wait until installer/dependency/Butler architecture is reviewed.
+* Dependency/storage policy (pnpm workspace) is now established.
+* Level 1 has been restored.
 
 * The Hub is currently read-only.
 * No game launching exists yet.
@@ -67,23 +67,21 @@ Hub opens/embeds/links to prebuilt static builds. This is the preferred first re
 Hub starts/stops dev servers. Requires strict port assignment, process tracking, cleanup, timeout handling, and ghost-process prevention. Not allowed until explicitly approved.
 
 ### Mode 4 — Packaged App / Tauri Launcher
-**Future final state.**
-Requires app packaging policy, runtime manifests, process lifecycle rules, and release planning. Not part of current implementation.
+**Next foundation spike.**
+Tauri is the correct foundation for a real install/launch/quit control surface because it provides a native command boundary. The initial Tauri spike (H3.1) should only prove basic backend diagnostic capabilities. Full app packaging policy, runtime manifests, process lifecycle rules, and release planning will follow in later stages.
 
 ## Recommended Path
 
-1. Keep current Hub read-only.
-2. Complete dependency/storage/installer/Butler audit.
-3. Create workspace/install architecture plan.
-4. Update launcher/runtime plan if the workspace/install plan changes assumptions.
-5. Create Level 1 rebuild plan.
-6. Rebuild Level 1 only after dependency/install architecture is approved.
-7. Update `academy.games.json` for Level 1 source/restoration state.
-8. Design runtime/build manifest and build artifact location policy.
-9. Create draft runtime/build manifest only after design approval.
-10. Validate runtime/build manifest.
-11. Only then consider Hub static-build launch behavior.
-12. Delay managed dev server launching until much later, if ever.
+1. Keep current Hub read-only (H2 complete).
+2. Complete dependency/storage audit and adopt pnpm workspace (Completed).
+3. Rebuild Level 1 and update `academy.games.json` (Completed).
+4. Reconcile runtime docs (H3.0 - Current).
+5. Initiate Tauri shell spike (H3.1) to establish native command boundary.
+6. Verify workspace dependency status from Hub (H3.2).
+7. Implement single-game dev launch (H3.3) and clean quit (H3.4).
+8. Generalize launch/quit to all games using manifest truth (H3.5).
+9. Design runtime/build manifest and static build policies for player mode (H3.6).
+10. Delay unmanaged dev server launching permanently. Only managed dev servers behind Tauri are permitted.
 
 ## Ghost Process Prevention Rules
 
@@ -121,16 +119,10 @@ Possible fields:
 * `lastVerified`
 * `notes`
 
-## Level 1 Rebuild Relationship
+## Level 1 Rebuild Relationship (Resolved)
 
-* Level 1 rebuild should happen *after* this planning phase.
-* Level 1 should become the first clean test case for:
-  * restored source;
-  * new asset doctrine;
-  * manifest truth;
-  * eventual build/playable state.
-* Level 1 should not require launcher implementation to be rebuilt.
-* Its rebuilt state should later update `academy.games.json`.
+* Level 1 has been successfully rebuilt and acts as the clean test case for restored source and manifest truth.
+* Its rebuilt state correctly updates `academy.games.json` (Restored v0.1).
 
 ## Levels 2-10 Asset Upgrade Relationship
 
@@ -160,6 +152,25 @@ The following are strictly out of scope for this phase:
 * How should builds be validated?
 * Should Level 1 rebuild define the first build artifact policy?
 
-## Proposed Next Step
+## Proposed Next Steps (H3 Ladder)
 
-1. Workspace / Install Architecture Plan
+### H3.0 — Runtime Docs Reconciliation
+Current phase. Docs only.
+
+### H3.1 — Tauri Shell Spike
+Future explicit approval required. Minimal shell only. Prove Hub frontend can call one safe backend diagnostic command, such as `pnpm --version`. No game launch yet.
+
+### H3.2 — Workspace Dependency Status
+Future explicit approval required. Check, but do not silently install. Show dependency state. Approved command allowlist only.
+
+### H3.3 — Launch One Game in Dev Mode
+Future explicit approval required. Launch exactly one selected game through Tauri-managed process handling. Track port, PID/process handle, status, logs. No ghost Vite servers.
+
+### H3.4 — Quit Game / Return to Dashboard
+Future explicit approval required. Stop process cleanly. Verify port cleanup. Return to dashboard.
+
+### H3.5 — Generalize All 10
+Future explicit approval required. Use manifest/package metadata. Prevent concurrent unmanaged sessions.
+
+### H3.6 — Static Build / Production Launch Planning
+Future explicit approval required. Revisit static builds, Butler/itch, installed artifacts, and player mode. No raw pnpm for players.

@@ -10,22 +10,22 @@ Source game folders are development artifacts.
 Built/installed game bundles are playable runtime artifacts.
 The hub should know the difference between “source exists,” “built,” “installed/playable,” and “missing/pending restoration.”
 
-## Current Incident Context
+## Current Status
 
-* Level 1 source folder was lost during tier normalization.
-* Docs and historical Human Review status survived.
-* Level 1 should be restored only after the hub/package architecture is defined.
+* All 10 Tier 1 games are fully restored and present in the source folder.
+* Level 1 has been restored and passed Human Review.
+* The Hub Visual Pass (H2) is complete.
+* The pnpm workspace migration is complete, with all games utilizing the root lockfile.
 
-## Package Management Problem
+## Package Management (Resolved)
 
-* Tier 1 currently contains repeated per-game dependency folders and package files.
-* That was acceptable for rapid v0.1 prototyping.
-* It is not ideal for a hub/distribution product.
-* Node dependency bloat should be reduced before adding more games.
+* The previous dependency bloat issue was resolved by adopting a root pnpm workspace.
+* All Tier 1 games now share dependencies efficiently.
+* The Hub must now mature into a control surface capable of managing these workspace dependencies.
 
-## Candidate Architecture
+## Current Architecture
 
-Possible future layout:
+The established layout:
 
 ```text
 ai-game-studio-ladder/
@@ -34,8 +34,8 @@ ai-game-studio-ladder/
 ├── pnpm-lock.yaml
 ├── games/tier-1/
 ├── hub/
-├── packages/academy-shared/
 ├── scripts/
+├── evidence/
 ├── builds/ or dist/ ignored by git
 └── installed-games/ ignored by git if generated
 ```
@@ -71,10 +71,10 @@ Define a future manifest concept:
 * `coreLesson`
 * `evidencePath`
 
-Level 1 serves as the example of a game with:
+Level 1 previously served as the example of a deferred game. It has now been restored:
 * `historicalStatus`: Human Review Passed
-* `sourceAvailable`: false
-* `restorationStatus`: Deferred until package architecture
+* `sourceAvailable`: true
+* `restorationStatus`: Restored v0.1
 
 ## Works-On-My-Machine Prevention
 
@@ -93,11 +93,15 @@ Level 1 serves as the example of a game with:
 * Butler should push the built hub/package artifact, not raw dev folders.
 * Tauri hub should launch built games in player mode and only use dev servers in dev mode.
 
-## Open Decisions
+## H3 Control-Surface Direction
 
-* Adopt pnpm workspace now or later?
+The Hub should become the control surface, not merely a tracker. 
+Install/launch/quit workflows require a native command boundary. Fake browser-only launch buttons should not be built.
+Tauri should be started as the next foundation spike (H3.1) before attempting managed dev server launching.
+
+## Remaining Open Decisions
+
 * Build all games every release, or allow installed subset?
 * Bundle all Tier 1 games into hub, or allow optional install state?
-* Restore Level 1 before or after hub MVP?
 * Use embedded WebView vs external browser for game launch?
 * Where should built game artifacts live?
