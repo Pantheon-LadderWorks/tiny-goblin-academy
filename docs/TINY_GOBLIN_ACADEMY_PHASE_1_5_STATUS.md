@@ -32,6 +32,11 @@ The asset generation phase is effectively complete. The repository now holds eno
 
 ## Next Steps
 
+- **H3.1 Tauri Shell Spike**: Currently **BLOCKED** pending Rust environment safety verification and a repo hygiene sweep.
+- **H3.2 Workspace Dependency Status**: Check dependencies from the hub (requires H3.1).
+- **H3.3 Launch One Game in Dev Mode**: Launch a single game safely (requires H3.1).
+- **H3.4 Quit Game / Return to Dashboard**: Stop processes cleanly and avoid dashboard spawns (requires H3.1).
+
 With the read-only foundation locked in and the asset pantry stocked and structured via the H2 intake pipeline, the following sequential steps are recommended:
 
 1. ~~**Dependency / Storage / Installer / Butler Audit**~~ (Completed)
