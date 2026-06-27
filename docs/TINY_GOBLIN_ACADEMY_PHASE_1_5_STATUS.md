@@ -27,8 +27,8 @@ The asset generation phase is effectively complete. The repository now holds eno
   - **H2 Visual Pass Complete**: The hub now utilizes a 2x5 grid, reads icons from a true-transparent derived asset via source rectangles, and formalized the intake pipeline. The hub remains strictly read-only.
 
 ### 3. Safety Guardrails
-- **No Launching**: The Hub does not yet manage processes, invoke dev servers, or use Tauri.
-- **Truthful Tracking**: Level 1 remains correctly categorized as `restorationDeferred`, recognizing its lack of original source without pretending it doesn't exist.
+- **No Launching**: The Hub still does not launch games. It does not yet manage processes, invoke dev servers, or use Tauri.
+- **Truthful Tracking**: Level 1 has been restored and passed Human Review. Source/build/playable/runtime states must remain distinct in the Hub's tracking system.
 
 ## Next Steps
 

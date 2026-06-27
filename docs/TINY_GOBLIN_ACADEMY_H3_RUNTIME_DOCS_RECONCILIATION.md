@@ -10,6 +10,8 @@ It confirms the direction for the Hub's control-surface architecture without imp
 * `docs/TINY_GOBLIN_ACADEMY_LAUNCHER_RUNTIME_PLAN.md`
 * `docs/TINY_GOBLIN_ACADEMY_HUB_CONTRACT.md`
 * `docs/TINY_GOBLIN_ACADEMY_PHASE_1_5_STATUS.md`
+* `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
+* `docs/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
 
 ## Stale Statements Found and Resolved
 During the audit, the following stale concepts were identified and updated across the doctrine:
@@ -21,6 +23,13 @@ During the audit, the following stale concepts were identified and updated acros
 ## Tauri / Control-Surface Decision
 **Should Tauri be started now or integrated later?**
 Tauri should be started as the next foundation spike before building real launch buttons. Install/launch/quit workflows require a native command boundary. We must not build fake browser-only launch buttons or rely on a React-only frontend spawning unmanaged background processes. 
+
+## Boot Doctrine Reconciliation
+
+The boot experience is a foundational requirement, not just visual polish, and consists of three distinct layers:
+1. **Hub Boot**: Already exists and remains the required read-only doorway into the academy dashboard.
+2. **Game Launch Boot**: Future runtime work. This covers the transition from Hub to a launched game, providing a trust handshake (status/loading/maker mark). It should **not** be implemented until actual game launch behavior exists. The H3.1 Tauri shell spike must *not* add game-launch boot yet. H3.3 and H3.4 (launch/quit phases) must account for this transition later.
+3. **In-game Boot / Preload Scenes**: Future curriculum and game refinement work inside the individual Phaser games.
 
 ## Proposed Next Phases (H3 Implementation Ladder)
 

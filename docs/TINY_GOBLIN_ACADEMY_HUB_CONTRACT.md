@@ -99,8 +99,8 @@ Reference: `docs/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
 
 The Hub must not start with a raw dashboard. It must implement a product-entry flow before showing the game roster.
 
-* Hub has an existing boot screen (hub-entry only).
-* Game launch boot is future runtime work.
+* Hub has an existing boot screen (hub-entry only) which is complete for the read-only Hub.
+* Game launch boot is future runtime work and should not be implemented until actual game launch behavior exists.
 * In-game preload scenes are future curriculum/game refinement work.
 * Glyphforge boot splash concept exists as a reference asset, not final trademark-cleared branding.
 
@@ -122,7 +122,7 @@ The Hub may display asset-driven previews later, but asset ingestion does not me
 
 * [ ] Hub has boot/entry flow.
 * [ ] Hub reads game roster from manifest data.
-* [ ] Level 1 deferred state is represented truthfully.
+* [ ] Level 1 restored state is represented truthfully.
 * [ ] Source/build/playable states are distinct.
 * [ ] Game launch/return flow is defined.
 * [ ] Ghost process prevention is defined.

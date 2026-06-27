@@ -158,16 +158,16 @@ The following are strictly out of scope for this phase:
 Current phase. Docs only.
 
 ### H3.1 — Tauri Shell Spike
-Future explicit approval required. Minimal shell only. Prove Hub frontend can call one safe backend diagnostic command, such as `pnpm --version`. No game launch yet.
+Future explicit approval required. Minimal shell only. Prove Hub frontend can call one safe backend diagnostic command, such as `pnpm --version`. No game launch yet. *No game launch boot screen.*
 
 ### H3.2 — Workspace Dependency Status
 Future explicit approval required. Check, but do not silently install. Show dependency state. Approved command allowlist only.
 
 ### H3.3 — Launch One Game in Dev Mode
-Future explicit approval required. Launch exactly one selected game through Tauri-managed process handling. Track port, PID/process handle, status, logs. No ghost Vite servers.
+Future explicit approval required. Launch exactly one selected game through Tauri-managed process handling. Track port, PID/process handle, status, logs. No ghost Vite servers. *Launching a game may later introduce a game-launch boot screen (trust handshake), but do not implement it before process launch exists.*
 
 ### H3.4 — Quit Game / Return to Dashboard
-Future explicit approval required. Stop process cleanly. Verify port cleanup. Return to dashboard.
+Future explicit approval required. Stop process cleanly. Verify port cleanup. Return to dashboard. *Returning to the dashboard must transition cleanly and avoid a raw dashboard spawn if a game is closing.*
 
 ### H3.5 — Generalize All 10
 Future explicit approval required. Use manifest/package metadata. Prevent concurrent unmanaged sessions.
