@@ -4,6 +4,20 @@ import numpy as np
 from collections import deque
 from pathlib import Path
 
+"""
+Fake Transparency Cleanup Tool
+------------------------------
+Converts fake-transparent checkerboard background into true PNG alpha transparency.
+It works by seeding a flood fill from the image borders and targeting low-saturation gray-like pixels.
+
+WARNING:
+- This is designed for static icon/UI sheets where the checkerboard connects to the borders.
+- DO NOT use this blindly on animation sprite sheets (e.g., characters). 
+  It may result in "transparent kneecaps", hollow outlines, or corrupted shadows if character 
+  features match the checkerboard gray threshold.
+- Animation sheets require pilot testing, frame manifests, and contact-sheet evidence first!
+"""
+
 def main():
     parser = argparse.ArgumentParser(description="Convert fake-transparent checkerboard background into true PNG alpha transparency.")
     parser.add_argument('--input', type=str, required=True, help="Path to original source sheet")

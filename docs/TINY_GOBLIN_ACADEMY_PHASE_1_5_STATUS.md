@@ -12,6 +12,8 @@ The goal of Phase 1.5 was to establish a functional, structurally sound, read-on
 
 ### 1. Asset Pantry Creation
 The asset generation phase is effectively complete. The repository now holds enough shared core assets, UI elements, FX, and game-specific art to stop focusing on asset creation and begin focusing on asset consumption.
+- **Intake Pipeline Proven**: Phases H2.1–H2.5b proved the first full intake path for one hub sheet, establishing inspection, mapping, cleanup, validation, and visual review protocols.
+- **Quarantine Required**: Future asset work must strictly follow the intake pipeline. Asset pantry stocked does not mean assets are ready for runtime use.
 
 ### 2. Hub Foundation
 - **Hub Scaffold**: Built and verified as a read-only React/Vite shell.

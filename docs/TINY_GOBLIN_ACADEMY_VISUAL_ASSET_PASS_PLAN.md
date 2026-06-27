@@ -38,6 +38,9 @@ Capture the planned learning pass for sprite sheets, animation, visual consisten
 * Do not generate assets without approved visual direction.
 * Do not replace simulation truth with animation state.
 * Animation must display state, not own state.
+* **Intake Pipeline Mandatory:** Future game asset upgrades must start with the intake checklist.
+* No asset sheet goes directly into a game.
+* Sprite sheets need pilot cleanup and contact-sheet review before bulk processing.
 
 ## Open Questions
 * Which game gets the first asset pass?

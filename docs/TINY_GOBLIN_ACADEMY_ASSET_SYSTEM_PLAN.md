@@ -13,6 +13,29 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 * Use source rectangles / manifest data to pull sprites from sheets.
 * Do not wire assets into games until manifests and implementation plans exist.
 
+## Asset Sheet Intake Pipeline
+
+Required sequence before any sheet is wired into hub/game code:
+
+1. **Register Sheet**: Place original asset in appropriate `assets/academy/` location.
+2. **Inspect Sheet**: Check dimensions, content, and visual artifacts.
+3. **Transparency / Background Audit**: Check if checkerboard is true alpha or baked.
+4. **Layout Classification**: Note if it is a uniform grid or irregular pantry.
+5. **Region or Frame Mapping**: Map all required sprites in a JSON manifest.
+6. **Derived Cleanup Decision**: Apply cleanup tool (e.g., full-sheet flood fill) if fake transparency is found, generating a derived sheet.
+7. **Validator Creation**: Add bounds and sanity checking to `scripts/validate-*`.
+8. **Wiring**: Update frontend or game code to pull from the mapped/derived asset.
+9. **Screenshot / Contact Sheet Evidence**: Capture visual evidence of the integration.
+10. **Human Review**: Visually review the evidence to catch artifacts that bypass tests.
+11. **Promotion Status**: Mark the asset as wired/passed in the intake checklist.
+
+**Explicit Reminders:**
+* Asset pantry generation is not the same as asset readiness.
+* No direct sheet-to-game wiring.
+* No direct sheet-to-hub wiring.
+* Screenshots are required because visual artifacts (like baked backgrounds) can pass build/tests.
+* Human review decides whether the pixels are acceptable.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
@@ -22,14 +45,29 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 * Production implementation should rely on named manifest entries, not manual visual guessing.
 * Manifests should include `used`, `unused`, or `reserved` notes where helpful.
 
-## Transparency Cleanup Doctrine
+## Fake Transparency Cleanup Doctrine
 
-* **Fake-transparent sheets require alpha/background audit:** Never assume gray checkerboard patterns are true alpha transparency. Inspect before wiring.
-* **Cleanup Mode Selection:** 
-  * *Region-edge cleanup* is safe but may leave hard gray crumbs inside complex bounds.
-  * *Full-sheet border-connected cleanup* is strongly preferred when the fake checkerboard touches the sheet perimeter, producing perfect alpha.
-* **Animation Sheet Pilot Testing:** Sprite animation sheets require extra care (e.g., pilot tests, frame manifests, contact-sheet evidence) before full-sheet flood-fill, to prevent "transparent kneecaps" incidents.
-* **No Direct Sheet Wiring:** Do not wire a raw asset sheet directly into a game or hub without this pipeline: `Inspect → Map → Clean/Derive (if needed) → Validate → Screenshot Evidence`.
+* Some generated images visually show a checkerboard background but do not contain real alpha.
+* RGBA mode alone does not prove transparency. Alpha distribution must be inspected.
+* If alpha is 255 for every pixel, the checkerboard is baked. CSS cannot remove opaque baked checkerboard pixels.
+* The preferred static-sheet cleanup shape is **full-sheet border-connected low-saturation gray flood fill to alpha**.
+* Keep the original source sheet untouched.
+* Write cleaned output as a derived sheet.
+* Do not manually cut individual PNGs.
+* Do not globally remove all gray pixels.
+* **H2.5b Example**: The hub icon source sheet was preserved, a transparent derived sheet was generated and accepted, manifest/source-rectangle rendering was preserved, and no manual icon cutouts were made.
+
+## Static Sheet vs Animation Sheet Warning
+
+* Static icon/UI sheets are safer candidates for full-sheet fake-transparency cleanup.
+* Animation sheets are more dangerous. Do not run the same cleanup blindly on sprite animation sheets.
+* Animation sheets require:
+  * A frame manifest
+  * Contact sheet evidence
+  * Baseline/anchor review
+  * One pilot row/animation cleanup
+  * Human review before bulk processing
+* The failure mode for animation sheets is corrupted limbs, shadows, outlines, motion smear, or "transparent kneecaps."
 
 ## Platformer Background / Anchor Doctrine
 
