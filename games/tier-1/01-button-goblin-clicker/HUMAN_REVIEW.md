@@ -2,7 +2,7 @@
 
 ## Status
 
-First Playable / Awaiting Kryssie Human Review
+Human Review Passed / Level 1 Source Restored
 
 ## How to Run
 
@@ -21,17 +21,17 @@ Open the local URL provided by the Vite output (usually `http://localhost:5173` 
 ## What Kryssie Should Verify
 
 Checklist:
-- [ ] game visibly boots into an actionable screen;
-- [ ] goblin is visible;
-- [ ] clicking/bonking goblin visibly decreases HP;
-- [ ] goblin defeat increases coins;
-- [ ] buy Bonk Stick upgrade when enough coins exist;
-- [ ] upgrade changes damage from 1 to 2;
-- [ ] later goblins have more HP;
-- [ ] victory appears after 10 goblins;
-- [ ] loop stays on one screen;
-- [ ] no v0.2 systems appear;
-- [ ] visual style feels like a game face, not a generic dashboard.
+- [x] game visibly boots into an actionable screen;
+- [x] goblin is visible;
+- [x] clicking/bonking goblin visibly decreases HP;
+- [x] goblin defeat increases coins;
+- [x] buy Bonk Stick upgrade when enough coins exist;
+- [x] upgrade changes damage from 1 to 2;
+- [x] later goblins have more HP;
+- [x] victory appears after 10 goblins;
+- [x] loop stays on one screen;
+- [x] no v0.2 systems appear;
+- [x] visual style feels like a game face, not a generic dashboard.
 
 ## Evidence To Capture
 
@@ -53,8 +53,8 @@ To capture evidence, use your standard OS screenshot tools (e.g., Snipping Tool 
 ## Human Review Decision
 
 Options:
-* Accepted / Counts as restored v0.1
+* **Accepted / Counts as restored v0.1**
 * Needs Fixes / Does Not Count Yet
 
 State:
-Only Kryssie can pass the Human Review Gate.
+Kryssie has passed the Human Review Gate.
