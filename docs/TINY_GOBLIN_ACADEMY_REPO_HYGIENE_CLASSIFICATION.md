@@ -8,9 +8,9 @@ This document classifies the dirty state of the working tree identified during t
 ## Working Tree Dirty Items
 
 ### 1. `pnpm-lock.yaml`
-* **Classification**: Unauthorized dependency drift.
-* **Origin**: The diff reveals that `playwright`, `vite`, `vitest`, `typescript`, and `phaser` were added to the dependencies/devDependencies of `games/tier-1/01-button-goblin-clicker`. This confirms it is the remnant of the unauthorized Playwright installation and evidence tooling previously flagged during the Level 1 restoration.
-* **Recommended Action**: Revert the lockfile changes, or explicitly remove the unauthorized packages via `pnpm remove playwright -F tiny-goblin-academy-game-01` (and related devDependencies) in a future approved cleanup pass.
+* **Classification**: Mixed (Legitimate workspace changes + Questionable evidence tooling).
+* **Origin**: Since Level 1 was restored and added back into the workspace, dependencies for `tga-01-button-goblin-clicker` such as `phaser`, `vite`, `vitest`, and `typescript` are expected and legitimate. The only questionable entry is `playwright` and whether its scoping as evidence/dev tooling should remain.
+* **Recommended Action**: **DO NOT** revert the entire lockfile blindly. **DO NOT** remove valid Level 1 dependency lock entries. Inspect `package.json` vs lockfile scope to determine if `playwright` should remain as an evidence workflow dependency or be moved elsewhere before any cleanup.
 
 ### 2. `assets/academy/hub/tga-hub-game-icons-transparent.png`
 * **Classification**: Duplicate asset.
@@ -24,9 +24,9 @@ This document classifies the dirty state of the working tree identified during t
 * **Recommended Action**: Delete.
 
 ### 4. `game_studio_tree.md`
-* **Classification**: Temporary research artifact.
-* **Origin**: A directory listing (`dir /AL` or similar) dumped to a markdown file for agent context/research.
-* **Recommended Action**: Delete.
+* **Classification**: User-created Game Studio plugin tree snapshot / local reference artifact.
+* **Origin**: Created intentionally by the user (`tree /F /A > "game_studio_tree.md"`) to inspect the plugin shape.
+* **Recommended Action**: Kryssie decision. Keep local only, move to docs/reference if useful, or delete later if obsolete. Do not treat as accidental junk.
 
 ### 5. Temporary Evidence Scripts
 * `scripts/capture-h1-screenshots.cjs`
