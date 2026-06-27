@@ -2,7 +2,9 @@
 
 ## Status
 
-Architecture Contract / Implementation Not Started
+* H2 Visual Dashboard Pass: Completed
+* Hub Mode: Read-Only
+* Launcher/Install/Runtime Architecture: Future Work
 
 ## Purpose
 

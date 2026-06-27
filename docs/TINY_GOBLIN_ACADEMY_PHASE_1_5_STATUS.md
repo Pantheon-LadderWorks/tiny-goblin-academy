@@ -23,7 +23,8 @@ The asset generation phase is effectively complete. The repository now holds eno
 - **Validation Guards**: 
   - Zero-dependency node scripts continuously validate the integrity of both manifests to prevent silent drift.
 - **Visual Polish**: 
-  - Applied subtle background textures, game card hover states, and dynamic CSS-based icon loading. 
+  - Applied subtle background textures, game card hover states, and dynamic CSS-based icon loading.
+  - **H2 Visual Pass Complete**: The hub now utilizes a 2x5 grid, reads icons from a true-transparent derived asset via source rectangles, and formalized the intake pipeline. The hub remains strictly read-only.
 
 ### 3. Safety Guardrails
 - **No Launching**: The Hub does not yet manage processes, invoke dev servers, or use Tauri.
@@ -31,15 +32,15 @@ The asset generation phase is effectively complete. The repository now holds eno
 
 ## Next Steps
 
-With the read-only foundation locked in and the asset pantry stocked, the following sequential steps are recommended:
+With the read-only foundation locked in and the asset pantry stocked and structured via the H2 intake pipeline, the following sequential steps are recommended:
 
 1. ~~**Dependency / Storage / Installer / Butler Audit**~~ (Completed)
-2. **Workspace / Install Architecture Plan**
-3. **Launcher / Runtime Plan** update if needed
-4. **Level 1 Rebuild Plan**
-5. **Level 1 Rebuild**: Rebuild Level 1 from scratch using the new asset doctrine as the primary integration test case. (Waiting on dependency/install architecture).
+2. **Level 1 Restoration Contract / Plan** (Active Blocker)
+3. **Workspace / Install Architecture Plan**
+4. **Launcher / Runtime Plan** update if needed
+5. **Level 1 Rebuild**: Rebuild Level 1 from scratch using the new asset doctrine as the primary integration test case. (Waiting on restoration plan).
 6. **Levels 2-10 Asset Upgrades**: Systematically update the surviving games to consume their respective assets from the pantry. (Asset integration has not started).
 7. **Packaging / Playable Builds**: Package the upgraded games into final playable builds and manage release structures.
 8. **Tier 2 Planning**: Begin planning the next educational tier based on what Tier 1 has taught us and what the hub supports.
 
-*(Note: Workspace / Install Architecture Plan is now the active next blocker. Level 1 remains blocked until the workspace/install architecture is approved. Hub/launcher eventually includes installer/update concerns. Launcher/runtime behavior does not yet exist. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*
+*(Note: Level 1 Restoration Contract is now the active next blocker. Workspace / Install Architecture Plan is also pending. Hub/launcher eventually includes installer/update concerns. Launcher/runtime behavior does not yet exist. Packaging/playable builds are not complete, and Tier 2 planning has not yet begun.)*

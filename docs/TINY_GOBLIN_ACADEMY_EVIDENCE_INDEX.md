@@ -1,4 +1,4 @@
-﻿# Evidence Index
+# Evidence Index
 
 | Level | Title | Folder Path | Playtest Report | Evidence Folder | Summary of What Evidence Proves |
 |---|---|---|---|---|---|
@@ -12,3 +12,14 @@
 | 8 | One-Room Platformer | `games/tier-1/08-one-room-platformer` | `PLAYTEST_REPORT.md` | `evidence/screenshots/` (intended) | Proves top-left origin coordinates match rendering, successful fixed-timestep jumping and physics collisions. *(Note: Intended evidence listed in report but marked as "Pending" at archive time)* |
 | 9 | Top-Down Slime Quest | `games/tier-1/09-top-down-slime-quest` | `PLAYTEST_REPORT.md` | `evidence/screenshots/` | Proves 2D movement bounds, pounce collision box distinct from normal contact, and visual shell compliance. |
 | 10 | Mini Settlement Sim | `games/tier-1/10-mini-settlement-sim` | `PLAYTEST_REPORT.md` | `evidence/screenshots/` | Proves strict starvation short-circuits, Day 5 storm failure/survival paths, ledger truthfulness, and Day 10 victory bounds. |
+
+## Hub Visual / Icon Pipeline Evidence (Phase H2)
+
+* `hub/evidence/screenshots/h1-current-dashboard/` - Captures the deprecated scrollable list layout.
+* `hub/evidence/screenshots/h2-grid-dashboard/` - Proves the 2x5 grid implementation and structural redesign.
+* `hub/evidence/screenshots/h2-1-icon-region-mapping/` - Proves the initial python-based irregular mapping overlay.
+* `hub/evidence/screenshots/h2-2-source-region-icons/` - Proves the hub successfully cropping raw irregular icons using manifest rects.
+* `hub/evidence/screenshots/h2-3-icon-tile-polish/` - Proves normalized display within UI frames but exposes the baked checkerboard background.
+* `hub/evidence/screenshots/h2-4-checkerboard-cleanup-audit/` - Analyzes and proves the checkerboard was baked as opaque RGB pixels.
+* `hub/evidence/screenshots/h2-5-checkerboard-cleanup/` - Captures the conservative, edge-connected derived cleanup.
+* `hub/evidence/screenshots/h2-5b-transparent-cleanup/` - Captures the superior, full-sheet border-connected derived transparency cleanup success.
