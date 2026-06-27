@@ -1,12 +1,33 @@
-# Playtest Report
+# Playtest Report: Button Goblin Clicker
 
-## Status
-Awaiting Kryssie Human Review.
-Mechanical loop and visual/game-face pass completed.
+**Date**: 2026-06-27
+**Review Status**: Awaiting Kryssie Human Review
 
-## Verification Status
-- Tests Pass: Yes
-- Build Passes: Yes
-- Browser Evidence Captured: Yes ([01-initial-state.png](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/games/tier-1/01-button-goblin-clicker/evidence/screenshots/01-initial-state.png), [02-hit-reaction.png](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/games/tier-1/01-button-goblin-clicker/evidence/screenshots/02-hit-reaction.png), [03-coins-earned.png](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/games/tier-1/01-button-goblin-clicker/evidence/screenshots/03-coins-earned.png))
+## Validation Results
+- `pnpm test`: **PASS** (7/7 tests passed in 10ms)
+- `pnpm build`: **PASS** (Vite build completed, dist/ generated successfully)
+
+## Restoration Notes (Visual Pass 2)
+The previous visual pass was rejected because it lacked the full Tiny Goblin Academy page shell, appearing as a cropped widget rather than a cohesive page.
+
+In this pass:
+- **Restored the full academy page shell**, matching the composition of Levels 02–10.
+- Implemented the three-column layout: left stat stack, central playfield, right upgrade card.
+- Kept the improved goblin face, X-eyes defeat state, hit reactions, and floating damage text from the previous pass.
+- Maintained strict architectural boundaries: state is owned by the simulation, rendered by Phaser (playfield) and the DOM (HUD).
+
+## Evidence
+
+Automated evidence was captured using Playwright (which was kept as a dev dependency per user clarification).
+
+### 1. Boot / Full Page State
+![Initial State](/C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/01-initial-state.png)
+
+### 2. Hit Reaction
+![Hit Reaction](/C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/02-hit-reaction.png)
+
+### 3. Coin Earned
+![Coins Earned](/C:/Users/kryst/.gemini/antigravity/brain/284692b5-3d65-4fec-aebb-254a4edd625f/03-coins-earned.png)
+
 - Playtested: Not Yet (Awaiting Human Review)
 - Released: No
