@@ -1,0 +1,19 @@
+{
+  "name": "tga-01-button-goblin-clicker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "phaser": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9"
+  }
+}
