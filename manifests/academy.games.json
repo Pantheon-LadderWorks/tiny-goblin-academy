@@ -22,14 +22,14 @@
       "historicallyPassed": true,
       "sourceAvailable": true,
       "devRunnable": true,
-      "buildAvailable": false,
+      "buildAvailable": true,
       "playableAvailable": true,
       "playableMode": "dev",
       "restorationDeferred": false,
       "coreLesson": "State management and basic interactivity.",
       "shortDescription": "A simple clicker game about an overly enthusiastic goblin.",
       "controls": "Mouse click",
-      "notes": "Source restoration deferred until Hub/package model is ready."
+      "notes": "Restored. Visual pass completed. Awaiting Human Review."
     },
     {
       "id": "tga-02",

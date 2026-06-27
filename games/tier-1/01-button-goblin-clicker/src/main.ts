@@ -13,17 +13,19 @@ if (app) {
   app.innerHTML = `
     <div id="game-container"></div>
     <div id="ui-layer">
-      <div class="hud-bar">
-        <div class="stats">Coins: <span id="coins-display" class="coins">0</span></div>
-        <div class="stats">Damage: <span id="damage-display">1</span></div>
+      <div class="hud-panel hud-top">
+        <div class="stats">Treasury: <span id="coins-display" class="coins">0</span></div>
+        <div class="stats">Bonk Power: <span id="damage-display">1</span></div>
       </div>
-      <div class="shop-panel">
-        <button id="shop-btn" disabled>Buy Bonk Stick (3 Coins)</button>
+      <div class="hud-panel hud-bottom">
+        <button id="shop-btn" disabled>Equip Bonk Stick (3 Coins)</button>
       </div>
     </div>
     <div id="victory-overlay" class="victory-overlay">
-      <div>VICTORY!</div>
-      <div style="font-size: 1.5rem; color: #fff; margin-top: 20px;">You defeated 10 goblins.</div>
+      <div class="victory-panel">
+        <h1 class="victory-title">Academy Graduate!</h1>
+        <div class="victory-text">You survived 10 overly enthusiastic goblins.</div>
+      </div>
     </div>
   `;
 
