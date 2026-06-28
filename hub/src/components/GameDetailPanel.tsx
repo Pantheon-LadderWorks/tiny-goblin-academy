@@ -1,14 +1,50 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GameManifest } from '../data/tier1Roster'
 import { hubIconRegions } from '../data/hubIconRegions'
 import { SpriteFrame } from './SpriteFrame'
+import { invoke } from '@tauri-apps/api/core'
+import { InstallDevDependenciesResult } from '../types/RuntimeStatus'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
   onClose: () => void;
+  onGameUpdate?: (gameId: string) => void;
 }
 
-export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose }) => {
+export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate }) => {
+  const [installing, setInstalling] = useState(false);
+  const [installResult, setInstallResult] = useState<InstallDevDependenciesResult | null>(null);
+
+  const handleInstallDeps = async () => {
+    if (!game) return;
+    const confirmed = window.confirm(`Are you sure you want to install dev dependencies for ${game.title}?`);
+    if (!confirmed) return;
+
+    setInstalling(true);
+    setInstallResult(null);
+    try {
+      const result = await invoke<InstallDevDependenciesResult>('install_dev_dependencies', { gameId: game.id });
+      setInstallResult(result);
+      if (onGameUpdate) onGameUpdate(game.id);
+    } catch (e) {
+      console.error(e);
+      setInstallResult({
+        gameId: game.id,
+        ok: false,
+        commandLabel: 'Unknown',
+        startedAt: '',
+        finishedAt: '',
+        exitCode: null,
+        stdoutTail: '',
+        stderrTail: String(e),
+        dependenciesInstalledAfter: false,
+        errorState: String(e)
+      });
+    } finally {
+      setInstalling(false);
+    }
+  };
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -97,8 +133,8 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
         <h4>Developer Actions</h4>
         {game.sourceDirectoryExists ? (
           <div className="dev-button-group" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
-            <button className="btn" disabled={!game.devInstallDepsAvailable}>
-              {game.devInstallDepsAvailable ? "Install Deps (Coming H3.7)" : "Deps Installed"}
+            <button className="btn" disabled={!game.devInstallDepsAvailable || installing} onClick={handleInstallDeps}>
+              {installing ? "Installing..." : (game.devInstallDepsAvailable ? "Install Dev Deps" : "Deps Installed")}
             </button>
             <button className="btn" disabled={!game.devUninstallDepsAvailable}>
               Uninstall Deps (Coming H3.7)
@@ -110,6 +146,32 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
               <p className="launch-warning" style={{ width: '100%', margin: '0.5rem 0 0 0', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 Reason: {game.devLaunchBlockedReason}
               </p>
+            )}
+            
+            {installResult && (
+              <div className="install-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: installResult.ok ? '1px solid #2e7d32' : '1px solid #c62828' }}>
+                <h5 style={{ margin: '0 0 0.5rem 0', color: installResult.ok ? '#4caf50' : '#f44336' }}>
+                  {installResult.ok ? "Install Successful" : "Install Failed"}
+                </h5>
+                <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#aaa' }}>
+                  Command: <code>{installResult.commandLabel}</code>
+                </p>
+                {installResult.errorState && (
+                  <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ff8a80' }}>
+                    Error: {installResult.errorState}
+                  </p>
+                )}
+                {installResult.stdoutTail && (
+                  <pre style={{ margin: '0.5rem 0 0 0', fontSize: '0.75rem', overflowX: 'auto', backgroundColor: '#000', padding: '0.5rem', borderRadius: '4px', maxHeight: '150px' }}>
+                    {installResult.stdoutTail}
+                  </pre>
+                )}
+                {installResult.stderrTail && (
+                  <pre style={{ margin: '0.5rem 0 0 0', fontSize: '0.75rem', overflowX: 'auto', backgroundColor: '#2b0000', color: '#ffb3b3', padding: '0.5rem', borderRadius: '4px', maxHeight: '150px' }}>
+                    {installResult.stderrTail}
+                  </pre>
+                )}
+              </div>
             )}
           </div>
         ) : (

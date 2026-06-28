@@ -55,3 +55,16 @@ export interface GameStatus {
 export interface HubRuntimeStatus {
   runtimeMode: RuntimeMode;
 }
+
+export interface InstallDevDependenciesResult {
+  gameId: string;
+  ok: boolean;
+  commandLabel: string;
+  startedAt: string;
+  finishedAt: string;
+  exitCode: number | null;
+  stdoutTail: string;
+  stderrTail: string;
+  dependenciesInstalledAfter: boolean;
+  errorState: string | null;
+}

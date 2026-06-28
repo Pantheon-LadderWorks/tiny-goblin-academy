@@ -52,6 +52,21 @@ pub struct GameStatus {
     pub error_state: Option<String>,
 }
 
+#[derive(Debug, Serialize, Deserialize, Clone)]
+#[serde(rename_all = "camelCase")]
+pub struct InstallDevDependenciesResult {
+    pub game_id: String,
+    pub ok: bool,
+    pub command_label: String,
+    pub started_at: String,
+    pub finished_at: String,
+    pub exit_code: Option<i32>,
+    pub stdout_tail: String,
+    pub stderr_tail: String,
+    pub dependencies_installed_after: bool,
+    pub error_state: Option<String>,
+}
+
 #[derive(Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct HubRuntimeStatus {

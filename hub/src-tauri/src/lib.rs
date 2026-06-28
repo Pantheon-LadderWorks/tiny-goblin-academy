@@ -1,10 +1,11 @@
 pub mod runtime_status;
 pub mod manifest;
 
-use runtime_status::{GameStatus, HubRuntimeStatus};
+use runtime_status::{GameStatus, HubRuntimeStatus, InstallDevDependenciesResult};
 use manifest::{AcademyManifest, GameManifestEntry};
 use std::path::{Path, PathBuf};
 use std::fs;
+use std::process::Command;
 
 fn get_workspace_root() -> Option<PathBuf> {
     // If running in dev mode via Tauri, current_dir is likely hub/src-tauri
@@ -46,7 +47,6 @@ fn compute_game_status(root: &Path, entry: &GameManifestEntry) -> GameStatus {
     let mut dist_exists = false;
     let mut dist_has_index_html = false;
     let mut dist_asset_count = 0;
-    let mut build_status = "not-applicable".to_string();
 
     if let Some(source_path) = &entry.source_path {
         let full_path = root.join(source_path);
@@ -90,17 +90,17 @@ fn compute_game_status(root: &Path, entry: &GameManifestEntry) -> GameStatus {
         }
     }
 
-    if package_json_exists {
+    let build_status = if package_json_exists {
         if dist_has_index_html {
-            build_status = "built".to_string();
+            "built".to_string()
         } else if dist_exists {
-            build_status = "incomplete".to_string();
+            "incomplete".to_string()
         } else {
-            build_status = "not-built".to_string();
+            "not-built".to_string()
         }
     } else {
-        build_status = "not-applicable".to_string();
-    }
+        "not-applicable".to_string()
+    };
 
     // Compatibility variables
     let source_available = source_directory_exists;
@@ -210,6 +210,70 @@ fn get_diagnostic_info() -> String {
     )
 }
 
+#[tauri::command]
+fn install_dev_dependencies(game_id: String) -> Result<InstallDevDependenciesResult, String> {
+    let manifest = load_manifest().ok_or_else(|| "Failed to load manifest".to_string())?;
+    let entry = manifest.games.iter().find(|g| g.id == game_id).ok_or_else(|| "Game not found".to_string())?;
+    let root = get_workspace_root().unwrap();
+    let status = compute_game_status(&root, entry);
+
+    if !status.dev_install_deps_available {
+        return Err("Dependencies are already installed or source is missing".to_string());
+    }
+
+    let package_json_path = root.join(entry.source_path.as_ref().unwrap()).join("package.json");
+    let content = fs::read_to_string(&package_json_path).map_err(|_| "Failed to read package.json".to_string())?;
+    let pkg: serde_json::Value = serde_json::from_str(&content).map_err(|_| "Failed to parse package.json".to_string())?;
+    let package_name = pkg.get("name").and_then(|n| n.as_str()).ok_or_else(|| "No name in package.json".to_string())?;
+
+    let started_at = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_secs()
+        .to_string();
+
+    #[cfg(target_os = "windows")]
+    let mut cmd = Command::new("cmd");
+    #[cfg(target_os = "windows")]
+    cmd.args(["/C", "pnpm", "--filter", package_name, "install"]);
+
+    #[cfg(not(target_os = "windows"))]
+    let mut cmd = Command::new("pnpm");
+    #[cfg(not(target_os = "windows"))]
+    cmd.args(["--filter", package_name, "install"]);
+
+    cmd.current_dir(&root);
+
+    let output = cmd.output().map_err(|e| format!("Failed to spawn pnpm: {}", e))?;
+
+    let finished_at = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_secs()
+        .to_string();
+
+    let stdout_full = String::from_utf8_lossy(&output.stdout);
+    let stderr_full = String::from_utf8_lossy(&output.stderr);
+
+    let stdout_tail = stdout_full.chars().rev().take(2000).collect::<String>().chars().rev().collect::<String>();
+    let stderr_tail = stderr_full.chars().rev().take(2000).collect::<String>().chars().rev().collect::<String>();
+
+    let new_status = compute_game_status(&root, entry);
+
+    Ok(InstallDevDependenciesResult {
+        game_id,
+        ok: output.status.success(),
+        command_label: format!("pnpm --filter {} install", package_name),
+        started_at,
+        finished_at,
+        exit_code: output.status.code(),
+        stdout_tail,
+        stderr_tail,
+        dependencies_installed_after: new_status.dependencies_installed,
+        error_state: if output.status.success() { None } else { Some("pnpm install failed".to_string()) },
+    })
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
@@ -217,7 +281,8 @@ pub fn run() {
         get_diagnostic_info,
         get_runtime_status,
         get_game_status,
-        list_game_statuses
+        list_game_statuses,
+        install_dev_dependencies
     ])
     .setup(|app| {
       if cfg!(debug_assertions) {

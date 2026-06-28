@@ -41,6 +41,16 @@ export const HubShell: React.FC = () => {
     }
   });
 
+  const refreshGameStatus = async (gameId: string) => {
+    try {
+      const { invoke } = await import('@tauri-apps/api/core');
+      const status = await invoke<GameStatus>('get_game_status', { gameId });
+      setGameStatuses(prev => ({ ...prev, [gameId]: status }));
+    } catch (e) {
+      console.error(`Failed to refresh status for ${gameId}`, e);
+    }
+  };
+
   const selectedGameMerged = selectedGame ? mergedRoster.find(g => g.id === selectedGame.id) || selectedGame : null;
 
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
@@ -105,6 +115,7 @@ export const HubShell: React.FC = () => {
         <GameDetailPanel 
           game={selectedGameMerged} 
           onClose={() => setSelectedGame(null)} 
+          onGameUpdate={refreshGameStatus}
         />
       </main>
     </div>
