@@ -54,7 +54,11 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
     setLaunchResult(null);
     setStopResult(null);
     try {
-      const result = await invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
+      const invokePromise = invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
+      const timeoutPromise = new Promise<LaunchDevGameResult>((_, reject) => {
+        setTimeout(() => reject(new Error("Frontend timeout: backend took longer than 20 seconds to respond. App is still responsive.")), 20000);
+      });
+      const result = await Promise.race([invokePromise, timeoutPromise]);
       setLaunchResult(result);
       if (onGameUpdate) onGameUpdate(game.id);
       refreshProcessStatus();

@@ -486,14 +486,16 @@ fn launch_dev_game(
         }
     };
 
-    let mut processes = state.processes.lock().unwrap();
+    {
+        let mut processes = state.processes.lock().unwrap();
 
-    if let Some(tracked) = processes.get_mut(&game_id) {
-        if let Ok(Some(_)) = tracked.child.try_wait() {
-            // exited
-        } else {
-            result.blocked_reason = Some("Game dev server is already running".to_string());
-            return Ok(result);
+        if let Some(tracked) = processes.get_mut(&game_id) {
+            if let Ok(Some(_)) = tracked.child.try_wait() {
+                // exited
+            } else {
+                result.blocked_reason = Some("Game dev server is already running".to_string());
+                return Ok(result);
+            }
         }
     }
 
@@ -562,6 +564,7 @@ fn launch_dev_game(
                 result.url = Some(format!("http://127.0.0.1:{}", port));
                 result.started_at = Some(started_at.clone());
                 
+                let mut processes = state.processes.lock().unwrap();
                 processes.insert(game_id.clone(), TrackedProcess {
                     child,
                     port,
