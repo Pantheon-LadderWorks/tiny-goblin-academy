@@ -6,6 +6,7 @@ import { CreditsPanel } from './CreditsPanel'
 
 export const HubShell: React.FC = () => {
   const [selectedGame, setSelectedGame] = useState<GameManifest | null>(null)
+  const [diagnostic, setDiagnostic] = useState<string | null>(null)
 
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
   const sourceAvailableCount = tier1Roster.filter(g => g.sourceAvailable).length;
@@ -20,6 +21,17 @@ export const HubShell: React.FC = () => {
           <div className="tier-summary">
             <span>Progress: {historicalPassCount}/10 Passed</span> &bull; <span>{sourceAvailableCount}/10 Source Available</span> &bull; <span>{deferredCount} Deferred</span>
           </div>
+        </div>
+        <div className="tauri-diagnostic" style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.5rem' }}>
+          {diagnostic || <button onClick={async () => {
+            try {
+              const { invoke } = await import('@tauri-apps/api/core');
+              const res = await invoke<string>('get_diagnostic_info');
+              setDiagnostic(res);
+            } catch (e) {
+              setDiagnostic('Tauri bridge offline/error');
+            }
+          }}>Check Tauri Bridge</button>}
         </div>
         <CreditsPanel />
       </header>
