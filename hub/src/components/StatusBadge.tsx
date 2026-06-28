@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface StatusBadgeProps {
-  type: 'source' | 'dev' | 'missing';
+  type: 'source' | 'dev' | 'missing' | 'info' | 'build';
   label: string;
 }
 

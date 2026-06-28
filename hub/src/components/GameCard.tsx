@@ -33,8 +33,15 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
             <StatusBadge type="missing" label="Restoration Deferred" />
           ) : (
             <>
+              <StatusBadge type="info" label="Listed" />
               {game.sourceAvailable && <StatusBadge type="source" label="Source Available" />}
-              {game.devRunnable && <StatusBadge type="dev" label="Dev Runnable" />}
+              {game.sourceAvailable && <StatusBadge type="info" label="Workspace Member" />}
+              {game.buildAvailable ? (
+                <StatusBadge type="build" label="Static Build Available" />
+              ) : (
+                <StatusBadge type="missing" label="Not Built" />
+              )}
+              <StatusBadge type="dev" label="Production Install: Future" />
             </>
           )}
         </div>

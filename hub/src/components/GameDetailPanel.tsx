@@ -55,12 +55,16 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
 
       <div className="detail-section">
         <h4>Status: {game.displayStatus}</h4>
-        <ul>
-          <li>Source Available: {game.sourceAvailable ? 'Yes' : 'No'}</li>
-          <li>Dev Runnable: {game.devRunnable ? 'Yes' : 'No'}</li>
-          <li>Build Available: {game.buildAvailable ? 'Yes' : 'No'}</li>
-          <li>Playable Available: {game.playableAvailable ? 'Yes' : 'No'}</li>
-          <li>Playable Mode: {game.playableMode}</li>
+        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', listStyle: 'none', padding: 0 }}>
+          <li><strong>Listed:</strong> {game.listed ? 'Yes' : 'No'}</li>
+          <li><strong>Workspace Member:</strong> {game.workspaceMember ? 'Yes' : 'No'}</li>
+          <li><strong>Source Available:</strong> {game.sourceAvailable ? 'Yes' : 'No'}</li>
+          <li><strong>Dependencies Installed:</strong> {game.dependenciesInstalled ? 'Yes' : 'No'}</li>
+          <li><strong>Dev Runnable:</strong> {game.devRunnable ? 'Yes' : 'No'}</li>
+          <li><strong>Build Available:</strong> {game.buildAvailable ? 'Yes' : 'No'}</li>
+          <li><strong>Playable Available:</strong> {game.playableAvailable ? 'Yes' : 'No'}</li>
+          <li><strong>Playable Mode:</strong> {game.playableMode}</li>
+          <li><strong>Installed:</strong> {game.installed ? 'Yes' : 'No'}</li>
         </ul>
       </div>
 
