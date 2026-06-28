@@ -23,15 +23,26 @@ export const HubShell: React.FC = () => {
           </div>
         </div>
         <div className="tauri-diagnostic" style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.5rem' }}>
-          {diagnostic || <button onClick={async () => {
-            try {
-              const { invoke } = await import('@tauri-apps/api/core');
-              const res = await invoke<string>('get_diagnostic_info');
-              setDiagnostic(res);
-            } catch (e) {
-              setDiagnostic('Tauri bridge offline/error');
-            }
-          }}>Check Tauri Bridge</button>}
+          {diagnostic ? (
+            <span style={{ backgroundColor: '#2a2a2a', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid #444' }}>
+              ✓ {diagnostic}
+            </span>
+          ) : (
+            <button 
+              style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', background: 'transparent', border: '1px solid #666', color: '#888', cursor: 'pointer', borderRadius: '4px' }}
+              onClick={async () => {
+                try {
+                  const { invoke } = await import('@tauri-apps/api/core');
+                  const res = await invoke<string>('get_diagnostic_info');
+                  setDiagnostic(res);
+                } catch (e) {
+                  setDiagnostic('Tauri bridge offline/error');
+                }
+              }}
+            >
+              Diagnostic: Ping Tauri Bridge
+            </button>
+          )}
         </div>
         <CreditsPanel />
       </header>

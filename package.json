@@ -6,6 +6,8 @@
   "packageManager": "pnpm@10.20.0",
   "scripts": {
     "validate:academy-manifest": "node scripts/validate-academy-manifest.mjs",
-    "validate:hub-icons": "node scripts/validate-hub-icons.mjs"
+    "validate:hub-icons": "node scripts/validate-hub-icons.mjs",
+    "hub:tauri:dev": "pnpm --filter tiny-goblin-academy-hub tauri dev",
+    "hub:tauri:build": "pnpm --filter tiny-goblin-academy-hub tauri build"
   }
 }

@@ -190,6 +190,9 @@ importers:
 
   hub:
     dependencies:
+      '@tauri-apps/api':
+        specifier: ^2.11.1
+        version: 2.11.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -197,9 +200,6 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      '@tauri-apps/api':
-        specifier: ^2.11.1
-        version: 2.11.1
       '@tauri-apps/cli':
         specifier: ^2.11.3
         version: 2.11.3
