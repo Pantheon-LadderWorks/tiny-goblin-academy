@@ -3,7 +3,7 @@ import { GameManifest } from '../data/tier1Roster'
 import { hubIconRegions } from '../data/hubIconRegions'
 import { SpriteFrame } from './SpriteFrame'
 import { invoke } from '@tauri-apps/api/core'
-import { InstallDevDependenciesResult, UninstallDevDependenciesResult } from '../types/RuntimeStatus'
+import { InstallDevDependenciesResult, UninstallDevDependenciesResult, DevGameProcessStatus, LaunchDevGameResult, StopDevGameResult } from '../types/RuntimeStatus'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
@@ -17,6 +17,93 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
   
   const [uninstalling, setUninstalling] = useState(false);
   const [uninstallResult, setUninstallResult] = useState<UninstallDevDependenciesResult | null>(null);
+
+  const [launching, setLaunching] = useState(false);
+  const [launchResult, setLaunchResult] = useState<LaunchDevGameResult | null>(null);
+  
+  const [stopping, setStopping] = useState(false);
+  const [stopResult, setStopResult] = useState<StopDevGameResult | null>(null);
+
+  const [processStatus, setProcessStatus] = useState<DevGameProcessStatus | null>(null);
+
+  const refreshProcessStatus = async () => {
+    if (!game) return;
+    try {
+      const processes = await invoke<DevGameProcessStatus[]>('list_dev_game_processes');
+      const mine = processes.find(p => p.gameId === game.id);
+      setProcessStatus(mine || null);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    refreshProcessStatus();
+    const interval = setInterval(refreshProcessStatus, 2000);
+    return () => clearInterval(interval);
+  }, [game?.id]);
+
+  const handleLaunchDevGame = async () => {
+    if (!game) return;
+    const confirmed = window.confirm(`Are you sure you want to launch the dev server for ${game.title}?`);
+    if (!confirmed) return;
+
+    setLaunching(true);
+    setLaunchResult(null);
+    setStopResult(null);
+    try {
+      const result = await invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
+      setLaunchResult(result);
+      if (onGameUpdate) onGameUpdate(game.id);
+      refreshProcessStatus();
+    } catch (e) {
+      console.error(e);
+      setLaunchResult({
+        gameId: game.id,
+        ok: false,
+        launchAttempted: false,
+        commandLabel: 'Unknown',
+        pid: null,
+        url: null,
+        port: null,
+        startedAt: null,
+        stdoutTail: '',
+        stderrTail: '',
+        blockedReason: String(e),
+        errorState: String(e)
+      });
+    } finally {
+      setLaunching(false);
+    }
+  };
+
+  const handleStopDevGame = async () => {
+    if (!game) return;
+    const confirmed = window.confirm(`Are you sure you want to stop the dev server for ${game.title}?`);
+    if (!confirmed) return;
+
+    setStopping(true);
+    setStopResult(null);
+    try {
+      const result = await invoke<StopDevGameResult>('stop_dev_game', { gameId: game.id });
+      setStopResult(result);
+      if (onGameUpdate) onGameUpdate(game.id);
+      refreshProcessStatus();
+    } catch (e) {
+      console.error(e);
+      setStopResult({
+        gameId: game.id,
+        ok: false,
+        stopAttempted: false,
+        pid: null,
+        stoppedAt: null,
+        blockedReason: String(e),
+        errorState: String(e)
+      });
+    } finally {
+      setStopping(false);
+    }
+  };
 
   const handleInstallDeps = async () => {
     if (!game) return;
@@ -173,13 +260,43 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
             <button className="btn" disabled={!game.devUninstallDepsAvailable || uninstalling} onClick={handleUninstallDeps}>
               {uninstalling ? "Uninstalling..." : "Uninstall Dev Deps"}
             </button>
-            <button className="btn launch-btn" disabled={!game.devLaunchAvailable}>
-              {game.devLaunchAvailable ? "Launch Dev Server (Coming H3.7)" : `Launch Blocked`}
-            </button>
-            {!game.devLaunchAvailable && game.devLaunchBlockedReason && (
+            {processStatus?.running ? (
+              <button className="btn stop-btn" disabled={stopping} onClick={handleStopDevGame}>
+                {stopping ? "Stopping..." : "Stop Dev Server"}
+              </button>
+            ) : (
+              <button className="btn launch-btn" disabled={!game.devLaunchAvailable || launching} onClick={handleLaunchDevGame}>
+                {launching ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Server" : "Launch Blocked")}
+              </button>
+            )}
+            {!game.devLaunchAvailable && game.devLaunchBlockedReason && !processStatus?.running && (
               <p className="launch-warning" style={{ width: '100%', margin: '0.5rem 0 0 0', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                 Reason: {game.devLaunchBlockedReason}
               </p>
+            )}
+
+            {processStatus?.running && (
+              <div className="process-status" style={{ width: '100%', marginTop: '0.5rem', padding: '0.75rem', backgroundColor: '#1e3a1e', borderRadius: '4px', border: '1px solid #4caf50' }}>
+                <h5 style={{ margin: '0 0 0.5rem 0', color: '#81c784' }}>Dev Server Running</h5>
+                <p style={{ margin: '0 0 0.25rem 0', fontSize: '0.85rem' }}>URL: <a href={processStatus.url || '#'} target="_blank" rel="noreferrer" style={{ color: '#81c784' }}>{processStatus.url}</a></p>
+                <p style={{ margin: '0', fontSize: '0.85rem', color: '#aaa' }}>PID: {processStatus.pid} | Port: {processStatus.port}</p>
+              </div>
+            )}
+
+            {launchResult && !launchResult.ok && (
+              <div className="launch-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: '1px solid #c62828' }}>
+                <h5 style={{ margin: '0 0 0.5rem 0', color: '#f44336' }}>Launch Failed</h5>
+                {launchResult.blockedReason && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ffb3b3' }}>Reason: {launchResult.blockedReason}</p>}
+                {launchResult.errorState && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ff8a80' }}>Error: {launchResult.errorState}</p>}
+              </div>
+            )}
+
+            {stopResult && !stopResult.ok && (
+              <div className="stop-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: '1px solid #c62828' }}>
+                <h5 style={{ margin: '0 0 0.5rem 0', color: '#f44336' }}>Stop Failed</h5>
+                {stopResult.blockedReason && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ffb3b3' }}>Reason: {stopResult.blockedReason}</p>}
+                {stopResult.errorState && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ff8a80' }}>Error: {stopResult.errorState}</p>}
+              </div>
             )}
             
             {installResult && (

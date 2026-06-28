@@ -82,3 +82,39 @@ export interface UninstallDevDependenciesResult {
   blockedReason: string | null;
   errorState: string | null;
 }
+
+export interface DevGameProcessStatus {
+  gameId: string;
+  running: boolean;
+  pid: number | null;
+  url: string | null;
+  port: number | null;
+  startedAt: string | null;
+  packageName: string | null;
+  errorState: string | null;
+}
+
+export interface LaunchDevGameResult {
+  gameId: string;
+  ok: boolean;
+  launchAttempted: boolean;
+  commandLabel: string;
+  pid: number | null;
+  url: string | null;
+  port: number | null;
+  startedAt: string | null;
+  stdoutTail: string;
+  stderrTail: string;
+  blockedReason: string | null;
+  errorState: string | null;
+}
+
+export interface StopDevGameResult {
+  gameId: string;
+  ok: boolean;
+  stopAttempted: boolean;
+  pid: number | null;
+  stoppedAt: string | null;
+  blockedReason: string | null;
+  errorState: string | null;
+}

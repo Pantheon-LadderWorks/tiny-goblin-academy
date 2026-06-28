@@ -1,11 +1,25 @@
 pub mod runtime_status;
 pub mod manifest;
 
-use runtime_status::{GameStatus, HubRuntimeStatus, InstallDevDependenciesResult, UninstallDevDependenciesResult};
+use runtime_status::{GameStatus, HubRuntimeStatus, InstallDevDependenciesResult, UninstallDevDependenciesResult, DevGameProcessStatus, LaunchDevGameResult, StopDevGameResult};
 use manifest::{AcademyManifest, GameManifestEntry};
 use std::path::{Path, PathBuf};
 use std::fs;
-use std::process::Command;
+use std::process::{Command, Child, Stdio};
+use std::sync::Mutex;
+use std::collections::HashMap;
+use tauri::{State, Manager};
+
+pub struct TrackedProcess {
+    pub child: Child,
+    pub port: u16,
+    pub started_at: String,
+    pub package_name: String,
+}
+
+pub struct DevProcessManager {
+    pub processes: Mutex<HashMap<String, TrackedProcess>>,
+}
 
 fn get_workspace_root() -> Option<PathBuf> {
     // If running in dev mode via Tauri, current_dir is likely hub/src-tauri
@@ -384,6 +398,236 @@ fn uninstall_dev_dependencies(game_id: String) -> Result<UninstallDevDependencie
     Ok(result)
 }
 
+#[tauri::command]
+fn launch_dev_game(
+    game_id: String,
+    state: State<'_, DevProcessManager>,
+) -> Result<LaunchDevGameResult, String> {
+    let mut result = LaunchDevGameResult {
+        game_id: game_id.clone(),
+        ok: false,
+        launch_attempted: false,
+        command_label: "".to_string(),
+        pid: None,
+        url: None,
+        port: None,
+        started_at: None,
+        stdout_tail: "".to_string(),
+        stderr_tail: "".to_string(),
+        blocked_reason: None,
+        error_state: None,
+    };
+
+    let manifest = match load_manifest() {
+        Some(m) => m,
+        None => {
+            result.blocked_reason = Some("Failed to load manifest".to_string());
+            return Ok(result);
+        }
+    };
+
+    let entry = match manifest.games.iter().find(|g| g.id == game_id) {
+        Some(g) => g,
+        None => {
+            result.blocked_reason = Some("Game not found in manifest".to_string());
+            return Ok(result);
+        }
+    };
+
+    let root = match get_workspace_root() {
+        Some(r) => r,
+        None => {
+            result.blocked_reason = Some("Failed to find workspace root".to_string());
+            return Ok(result);
+        }
+    };
+
+    let status = compute_game_status(&root, entry);
+    if !status.dev_launch_available {
+        result.blocked_reason = status.dev_launch_blocked_reason.or(Some("Launch not available".to_string()));
+        return Ok(result);
+    }
+
+    let source_path_str = entry.source_path.as_ref().unwrap();
+    if !source_path_str.starts_with("games/tier-1/") {
+        result.blocked_reason = Some("Source path is outside trusted tier-1 sandbox".to_string());
+        return Ok(result);
+    }
+
+    let package_json_path = root.join(source_path_str).join("package.json");
+    let content = match fs::read_to_string(&package_json_path) {
+        Ok(c) => c,
+        Err(_) => {
+            result.blocked_reason = Some("Failed to read package.json".to_string());
+            return Ok(result);
+        }
+    };
+    
+    let pkg: serde_json::Value = match serde_json::from_str(&content) {
+        Ok(p) => p,
+        Err(_) => {
+            result.blocked_reason = Some("Failed to parse package.json".to_string());
+            return Ok(result);
+        }
+    };
+
+    let package_name = match pkg.get("name").and_then(|n| n.as_str()) {
+        Some(n) => n.to_string(),
+        None => {
+            result.blocked_reason = Some("No name in package.json".to_string());
+            return Ok(result);
+        }
+    };
+
+    let mut processes = state.processes.lock().unwrap();
+
+    if let Some(tracked) = processes.get_mut(&game_id) {
+        if let Ok(Some(_)) = tracked.child.try_wait() {
+            // exited
+        } else {
+            result.blocked_reason = Some("Game dev server is already running".to_string());
+            return Ok(result);
+        }
+    }
+
+    let port = if game_id.starts_with("level-") {
+        if let Ok(num) = game_id["level-".len()..].parse::<u16>() {
+            5100 + num
+        } else {
+            5100
+        }
+    } else {
+        5100
+    };
+
+    let started_at = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_secs()
+        .to_string();
+
+    #[cfg(target_os = "windows")]
+    let mut cmd = Command::new("cmd");
+    #[cfg(target_os = "windows")]
+    cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+
+    #[cfg(not(target_os = "windows"))]
+    let mut cmd = Command::new("pnpm");
+    #[cfg(not(target_os = "windows"))]
+    cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+
+    cmd.current_dir(&root);
+    cmd.stdout(Stdio::null());
+    cmd.stderr(Stdio::null());
+
+    result.command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {}", package_name, port);
+    result.launch_attempted = true;
+
+    match cmd.spawn() {
+        Ok(child) => {
+            result.ok = true;
+            result.pid = Some(child.id());
+            result.port = Some(port);
+            result.url = Some(format!("http://127.0.0.1:{}", port));
+            result.started_at = Some(started_at.clone());
+            
+            processes.insert(game_id.clone(), TrackedProcess {
+                child,
+                port,
+                started_at,
+                package_name,
+            });
+        }
+        Err(e) => {
+            result.error_state = Some(format!("Failed to spawn process: {}", e));
+        }
+    }
+
+    Ok(result)
+}
+
+#[tauri::command]
+fn stop_dev_game(
+    game_id: String,
+    state: State<'_, DevProcessManager>,
+) -> Result<StopDevGameResult, String> {
+    let mut result = StopDevGameResult {
+        game_id: game_id.clone(),
+        ok: false,
+        stop_attempted: false,
+        pid: None,
+        stopped_at: None,
+        blocked_reason: None,
+        error_state: None,
+    };
+
+    let mut processes = state.processes.lock().unwrap();
+    if let Some(mut tracked) = processes.remove(&game_id) {
+        result.pid = Some(tracked.child.id());
+        result.stop_attempted = true;
+
+        #[cfg(target_os = "windows")]
+        let _ = Command::new("taskkill").args(["/PID", &tracked.child.id().to_string(), "/T", "/F"]).output();
+
+        match tracked.child.kill() {
+            Ok(_) => {
+                let _ = tracked.child.wait(); // reap
+                result.ok = true;
+                result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
+            }
+            Err(e) => {
+                // Ignore if it's already dead, especially since taskkill might have worked
+                if tracked.child.try_wait().map(|v| v.is_some()).unwrap_or(false) {
+                    result.ok = true;
+                    result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
+                } else {
+                    result.error_state = Some(format!("Failed to kill process: {}", e));
+                    processes.insert(game_id, tracked);
+                }
+            }
+        }
+    } else {
+        result.blocked_reason = Some("No tracked process running for this game".to_string());
+    }
+
+    Ok(result)
+}
+
+#[tauri::command]
+fn list_dev_game_processes(state: State<'_, DevProcessManager>) -> Result<Vec<DevGameProcessStatus>, String> {
+    let mut processes = state.processes.lock().unwrap();
+    let mut statuses = Vec::new();
+    let mut dead = Vec::new();
+
+    for (game_id, tracked) in processes.iter_mut() {
+        let running = match tracked.child.try_wait() {
+            Ok(Some(_)) => false,
+            Ok(None) => true,
+            Err(_) => false,
+        };
+
+        if !running {
+            dead.push(game_id.clone());
+        } else {
+            statuses.push(DevGameProcessStatus {
+                game_id: game_id.clone(),
+                running: true,
+                pid: Some(tracked.child.id()),
+                url: Some(format!("http://127.0.0.1:{}", tracked.port)),
+                port: Some(tracked.port),
+                started_at: Some(tracked.started_at.clone()),
+                package_name: Some(tracked.package_name.clone()),
+                error_state: None,
+            });
+        }
+    }
+
+    for d in dead {
+        processes.remove(&d);
+    }
+
+    Ok(statuses)
+}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -394,9 +638,15 @@ pub fn run() {
         get_game_status,
         list_game_statuses,
         install_dev_dependencies,
-        uninstall_dev_dependencies
+        uninstall_dev_dependencies,
+        launch_dev_game,
+        stop_dev_game,
+        list_dev_game_processes
     ])
     .setup(|app| {
+      app.manage(DevProcessManager {
+          processes: Mutex::new(HashMap::new()),
+      });
       if cfg!(debug_assertions) {
         app.handle().plugin(
           tauri_plugin_log::Builder::default()

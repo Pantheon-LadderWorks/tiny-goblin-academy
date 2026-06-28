@@ -83,6 +83,48 @@ pub struct UninstallDevDependenciesResult {
     pub error_state: Option<String>,
 }
 
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct DevGameProcessStatus {
+    pub game_id: String,
+    pub running: bool,
+    pub pid: Option<u32>,
+    pub url: Option<String>,
+    pub port: Option<u16>,
+    pub started_at: Option<String>,
+    pub package_name: Option<String>,
+    pub error_state: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LaunchDevGameResult {
+    pub game_id: String,
+    pub ok: bool,
+    pub launch_attempted: bool,
+    pub command_label: String,
+    pub pid: Option<u32>,
+    pub url: Option<String>,
+    pub port: Option<u16>,
+    pub started_at: Option<String>,
+    pub stdout_tail: String,
+    pub stderr_tail: String,
+    pub blocked_reason: Option<String>,
+    pub error_state: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct StopDevGameResult {
+    pub game_id: String,
+    pub ok: bool,
+    pub stop_attempted: bool,
+    pub pid: Option<u32>,
+    pub stopped_at: Option<String>,
+    pub blocked_reason: Option<String>,
+    pub error_state: Option<String>,
+}
+
 #[derive(Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct HubRuntimeStatus {
