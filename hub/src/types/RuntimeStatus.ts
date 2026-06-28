@@ -68,3 +68,17 @@ export interface InstallDevDependenciesResult {
   dependenciesInstalledAfter: boolean;
   errorState: string | null;
 }
+
+export interface UninstallDevDependenciesResult {
+  gameId: string;
+  ok: boolean;
+  uninstallAttempted: boolean;
+  startedAt: string;
+  finishedAt: string;
+  targetLabel: string;
+  dependencyPathWasPresent: boolean;
+  dependencyPathRemoved: boolean;
+  dependenciesInstalledAfter: boolean;
+  blockedReason: string | null;
+  errorState: string | null;
+}

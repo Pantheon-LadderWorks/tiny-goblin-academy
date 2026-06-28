@@ -3,7 +3,7 @@ import { GameManifest } from '../data/tier1Roster'
 import { hubIconRegions } from '../data/hubIconRegions'
 import { SpriteFrame } from './SpriteFrame'
 import { invoke } from '@tauri-apps/api/core'
-import { InstallDevDependenciesResult } from '../types/RuntimeStatus'
+import { InstallDevDependenciesResult, UninstallDevDependenciesResult } from '../types/RuntimeStatus'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
@@ -14,6 +14,9 @@ interface GameDetailPanelProps {
 export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate }) => {
   const [installing, setInstalling] = useState(false);
   const [installResult, setInstallResult] = useState<InstallDevDependenciesResult | null>(null);
+  
+  const [uninstalling, setUninstalling] = useState(false);
+  const [uninstallResult, setUninstallResult] = useState<UninstallDevDependenciesResult | null>(null);
 
   const handleInstallDeps = async () => {
     if (!game) return;
@@ -42,6 +45,37 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
       });
     } finally {
       setInstalling(false);
+    }
+  };
+
+  const handleUninstallDeps = async () => {
+    if (!game) return;
+    const confirmed = window.confirm(`Are you sure you want to completely remove dev dependencies for ${game.title}?`);
+    if (!confirmed) return;
+
+    setUninstalling(true);
+    setUninstallResult(null);
+    try {
+      const result = await invoke<UninstallDevDependenciesResult>('uninstall_dev_dependencies', { gameId: game.id });
+      setUninstallResult(result);
+      if (onGameUpdate) onGameUpdate(game.id);
+    } catch (e) {
+      console.error(e);
+      setUninstallResult({
+        gameId: game.id,
+        ok: false,
+        uninstallAttempted: false,
+        startedAt: '',
+        finishedAt: '',
+        targetLabel: 'Unknown',
+        dependencyPathWasPresent: false,
+        dependencyPathRemoved: false,
+        dependenciesInstalledAfter: game.dependenciesInstalled ?? false,
+        blockedReason: String(e),
+        errorState: String(e)
+      });
+    } finally {
+      setUninstalling(false);
     }
   };
 
@@ -136,8 +170,8 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
             <button className="btn" disabled={!game.devInstallDepsAvailable || installing} onClick={handleInstallDeps}>
               {installing ? "Installing..." : (game.devInstallDepsAvailable ? "Install Dev Deps" : "Deps Installed")}
             </button>
-            <button className="btn" disabled={!game.devUninstallDepsAvailable}>
-              Uninstall Deps (Coming H3.7)
+            <button className="btn" disabled={!game.devUninstallDepsAvailable || uninstalling} onClick={handleUninstallDeps}>
+              {uninstalling ? "Uninstalling..." : "Uninstall Dev Deps"}
             </button>
             <button className="btn launch-btn" disabled={!game.devLaunchAvailable}>
               {game.devLaunchAvailable ? "Launch Dev Server (Coming H3.7)" : `Launch Blocked`}
@@ -170,6 +204,27 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
                   <pre style={{ margin: '0.5rem 0 0 0', fontSize: '0.75rem', overflowX: 'auto', backgroundColor: '#2b0000', color: '#ffb3b3', padding: '0.5rem', borderRadius: '4px', maxHeight: '150px' }}>
                     {installResult.stderrTail}
                   </pre>
+                )}
+              </div>
+            )}
+            
+            {uninstallResult && (
+              <div className="uninstall-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: uninstallResult.ok ? '1px solid #2e7d32' : '1px solid #c62828' }}>
+                <h5 style={{ margin: '0 0 0.5rem 0', color: uninstallResult.ok ? '#4caf50' : '#f44336' }}>
+                  {uninstallResult.ok ? "Uninstall Successful" : "Uninstall Failed/Blocked"}
+                </h5>
+                <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#aaa' }}>
+                  Target: <code>{uninstallResult.targetLabel}</code>
+                </p>
+                {uninstallResult.blockedReason && (
+                  <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ffb3b3' }}>
+                    Reason: {uninstallResult.blockedReason}
+                  </p>
+                )}
+                {uninstallResult.errorState && (
+                  <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ff8a80' }}>
+                    Error: {uninstallResult.errorState}
+                  </p>
                 )}
               </div>
             )}

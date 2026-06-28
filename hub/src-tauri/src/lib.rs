@@ -1,7 +1,7 @@
 pub mod runtime_status;
 pub mod manifest;
 
-use runtime_status::{GameStatus, HubRuntimeStatus, InstallDevDependenciesResult};
+use runtime_status::{GameStatus, HubRuntimeStatus, InstallDevDependenciesResult, UninstallDevDependenciesResult};
 use manifest::{AcademyManifest, GameManifestEntry};
 use std::path::{Path, PathBuf};
 use std::fs;
@@ -273,6 +273,117 @@ fn install_dev_dependencies(game_id: String) -> Result<InstallDevDependenciesRes
         error_state: if output.status.success() { None } else { Some("pnpm install failed".to_string()) },
     })
 }
+#[tauri::command]
+fn uninstall_dev_dependencies(game_id: String) -> Result<UninstallDevDependenciesResult, String> {
+    let started_at = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_secs()
+        .to_string();
+
+    let mut result = UninstallDevDependenciesResult {
+        game_id: game_id.clone(),
+        ok: false,
+        uninstall_attempted: false,
+        started_at,
+        finished_at: "".to_string(),
+        target_label: "".to_string(),
+        dependency_path_was_present: false,
+        dependency_path_removed: false,
+        dependencies_installed_after: false,
+        blocked_reason: None,
+        error_state: None,
+    };
+
+    let manifest = match load_manifest() {
+        Some(m) => m,
+        None => {
+            result.blocked_reason = Some("Failed to load manifest".to_string());
+            result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+            return Ok(result);
+        }
+    };
+
+    let entry = match manifest.games.iter().find(|g| g.id == game_id) {
+        Some(g) => g,
+        None => {
+            result.blocked_reason = Some("Game not found in manifest".to_string());
+            result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+            return Ok(result);
+        }
+    };
+
+    let root = match get_workspace_root() {
+        Some(r) => r,
+        None => {
+            result.blocked_reason = Some("Failed to find workspace root".to_string());
+            result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+            return Ok(result);
+        }
+    };
+
+    let source_path_str = match &entry.source_path {
+        Some(p) => p,
+        None => {
+            result.blocked_reason = Some("Game has no source path defined".to_string());
+            result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+            return Ok(result);
+        }
+    };
+
+    // Verify it's within games/tier-1/
+    if !source_path_str.starts_with("games/tier-1/") {
+        result.blocked_reason = Some("Source path is outside trusted tier-1 sandbox".to_string());
+        result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+        return Ok(result);
+    }
+
+    let full_source_path = root.join(source_path_str);
+    if !full_source_path.exists() {
+        result.blocked_reason = Some("Source directory does not exist".to_string());
+        result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+        return Ok(result);
+    }
+
+    let node_modules_path = full_source_path.join("node_modules");
+    result.target_label = format!("{}/node_modules", source_path_str);
+
+    if !node_modules_path.exists() {
+        result.blocked_reason = Some("Dependencies are not currently installed".to_string());
+        result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+        return Ok(result);
+    }
+    
+    result.dependency_path_was_present = true;
+
+    // Verify it's a directory and not a symlink/junction outside.
+    if let Ok(meta) = fs::symlink_metadata(&node_modules_path) {
+        if meta.file_type().is_symlink() {
+            result.blocked_reason = Some("node_modules is a symlink. Unsafe to delete.".to_string());
+            result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+            return Ok(result);
+        }
+    }
+
+    result.uninstall_attempted = true;
+    match fs::remove_dir_all(&node_modules_path) {
+        Ok(_) => {
+            result.ok = true;
+            result.dependency_path_removed = true;
+        }
+        Err(e) => {
+            result.error_state = Some(format!("Failed to delete node_modules: {}", e));
+        }
+    }
+
+    result.finished_at = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string();
+
+    let new_status = compute_game_status(&root, entry);
+    result.dependencies_installed_after = new_status.dependencies_installed;
+
+    Ok(result)
+}
+
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -282,7 +393,8 @@ pub fn run() {
         get_runtime_status,
         get_game_status,
         list_game_statuses,
-        install_dev_dependencies
+        install_dev_dependencies,
+        uninstall_dev_dependencies
     ])
     .setup(|app| {
       if cfg!(debug_assertions) {

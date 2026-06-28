@@ -52,7 +52,7 @@ pub struct GameStatus {
     pub error_state: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct InstallDevDependenciesResult {
     pub game_id: String,
@@ -64,6 +64,22 @@ pub struct InstallDevDependenciesResult {
     pub stdout_tail: String,
     pub stderr_tail: String,
     pub dependencies_installed_after: bool,
+    pub error_state: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct UninstallDevDependenciesResult {
+    pub game_id: String,
+    pub ok: bool,
+    pub uninstall_attempted: bool,
+    pub started_at: String,
+    pub finished_at: String,
+    pub target_label: String,
+    pub dependency_path_was_present: bool,
+    pub dependency_path_removed: bool,
+    pub dependencies_installed_after: bool,
+    pub blocked_reason: Option<String>,
     pub error_state: Option<String>,
 }
 
