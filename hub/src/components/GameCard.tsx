@@ -44,7 +44,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
               )}
               {game.hasDevScript && <StatusBadge type="info" label="Dev Script" />}
               {game.distHasIndexHtml && <StatusBadge type="build" label="Static Entry Found" />}
-              <StatusBadge type="dev" label="Production Install: Future" />
+              <StatusBadge type="dev" label="View Runtime Status" />
             </>
           )}
         </div>

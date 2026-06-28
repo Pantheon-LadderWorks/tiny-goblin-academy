@@ -22,24 +22,31 @@ pub struct DevProcessManager {
 }
 
 fn get_workspace_root() -> Option<PathBuf> {
-    // If running in dev mode via Tauri, current_dir is likely hub/src-tauri
-    // The workspace root is two levels up.
+    // 1. Try resolving from current_dir
     if let Ok(mut current) = std::env::current_dir() {
-        // Try current_dir
-        if current.join("manifests/academy.games.json").exists() {
-            return Some(current);
-        }
-        // Try 1 level up (if running from hub)
-        current.pop();
-        if current.join("manifests/academy.games.json").exists() {
-            return Some(current);
-        }
-        // Try 2 levels up (if running from hub/src-tauri)
-        current.pop();
-        if current.join("manifests/academy.games.json").exists() {
-            return Some(current);
+        for _ in 0..6 {
+            if current.join("manifests/academy.games.json").exists() {
+                return Some(current);
+            }
+            if !current.pop() {
+                break;
+            }
         }
     }
+    
+    // 2. Fallback to current_exe() path
+    if let Ok(mut exe_path) = std::env::current_exe() {
+        exe_path.pop(); // remove executable name
+        for _ in 0..6 {
+            if exe_path.join("manifests/academy.games.json").exists() {
+                return Some(exe_path);
+            }
+            if !exe_path.pop() {
+                break;
+            }
+        }
+    }
+    
     None
 }
 
