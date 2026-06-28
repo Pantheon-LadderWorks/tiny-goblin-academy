@@ -18,6 +18,19 @@ pub struct GameStatus {
     pub dist_asset_count: u32,
     pub build_status: String,
     
+    // Dev Action Model
+    pub dev_launch_available: bool,
+    pub dev_install_deps_available: bool,
+    pub dev_uninstall_deps_available: bool,
+    pub dev_launch_blocked_reason: Option<String>,
+
+    // Prod Action Model
+    pub production_install_available: bool,
+    pub production_uninstall_available: bool,
+    pub production_launch_available: bool,
+    pub production_update_available: bool,
+    pub production_action_blocked_reason: Option<String>,
+
     // H3.4 Compatibility fields
     pub source_available: bool,
     pub dependencies_installed: bool,

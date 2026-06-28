@@ -19,6 +19,19 @@ export interface GameStatus {
   distAssetCount: number;
   buildStatus: BuildStatus;
 
+  // Dev Action Model
+  devLaunchAvailable: boolean;
+  devInstallDepsAvailable: boolean;
+  devUninstallDepsAvailable: boolean;
+  devLaunchBlockedReason: string | null;
+
+  // Prod Action Model
+  productionInstallAvailable: boolean;
+  productionUninstallAvailable: boolean;
+  productionLaunchAvailable: boolean;
+  productionUpdateAvailable: boolean;
+  productionActionBlockedReason: string | null;
+
   // H3.4 Compatibility fields
   sourceAvailable: boolean;
   dependenciesInstalled: boolean;

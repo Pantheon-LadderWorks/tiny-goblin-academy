@@ -108,6 +108,22 @@ fn compute_game_status(root: &Path, entry: &GameManifestEntry) -> GameStatus {
     let dev_runnable = has_dev_script;
     let build_available = build_status == "built";
 
+    // Action Model Computation
+    let dev_install_deps_available = source_directory_exists && !node_modules_exists;
+    let dev_uninstall_deps_available = node_modules_exists;
+    
+    let mut dev_launch_available = false;
+    let mut dev_launch_blocked_reason = None;
+    if !source_directory_exists {
+        dev_launch_blocked_reason = Some("Source code missing".to_string());
+    } else if !node_modules_exists {
+        dev_launch_blocked_reason = Some("Dependencies not installed".to_string());
+    } else if !has_dev_script {
+        dev_launch_blocked_reason = Some("No dev script found in package.json".to_string());
+    } else {
+        dev_launch_available = true;
+    }
+
     GameStatus {
         game_id: entry.id.clone(),
         slug: entry.slug.clone(),
@@ -123,6 +139,19 @@ fn compute_game_status(root: &Path, entry: &GameManifestEntry) -> GameStatus {
         dist_has_index_html,
         dist_asset_count,
         build_status,
+
+        // Dev Action Model
+        dev_launch_available,
+        dev_install_deps_available,
+        dev_uninstall_deps_available,
+        dev_launch_blocked_reason,
+
+        // Prod Action Model
+        production_install_available: false,
+        production_uninstall_available: false,
+        production_launch_available: false,
+        production_update_available: false,
+        production_action_blocked_reason: Some("Production mode not implemented".to_string()),
         
         // H3.4 Compatibility fields
         source_available,

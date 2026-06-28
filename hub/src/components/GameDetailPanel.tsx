@@ -93,11 +93,44 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
         </div>
       )}
       
-      <div className="action-bar">
-        <p className="launch-warning">Launch not implemented in this hub build.</p>
-        <button className="launch-btn" disabled>
-          Launch (Not Implemented)
-        </button>
+      <div className="action-bar dev-actions">
+        <h4>Developer Actions</h4>
+        {game.sourceDirectoryExists ? (
+          <div className="dev-button-group" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+            <button className="btn" disabled={!game.devInstallDepsAvailable}>
+              {game.devInstallDepsAvailable ? "Install Deps (Coming H3.7)" : "Deps Installed"}
+            </button>
+            <button className="btn" disabled={!game.devUninstallDepsAvailable}>
+              Uninstall Deps (Coming H3.7)
+            </button>
+            <button className="btn launch-btn" disabled={!game.devLaunchAvailable}>
+              {game.devLaunchAvailable ? "Launch Dev Server (Coming H3.7)" : `Launch Blocked`}
+            </button>
+            {!game.devLaunchAvailable && game.devLaunchBlockedReason && (
+              <p className="launch-warning" style={{ width: '100%', margin: '0.5rem 0 0 0', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                Reason: {game.devLaunchBlockedReason}
+              </p>
+            )}
+          </div>
+        ) : (
+          <p className="launch-warning" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+            Source missing. Dev actions unavailable.
+          </p>
+        )}
+      </div>
+
+      <div className="action-bar prod-actions" style={{ marginTop: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
+        <h4>Production Actions</h4>
+        <div className="dev-button-group" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+          <button className="btn" disabled>Install (Future)</button>
+          <button className="btn" disabled>Update (Future)</button>
+          <button className="btn launch-btn" disabled>Launch (Future)</button>
+        </div>
+        {game.productionActionBlockedReason && (
+          <p className="launch-warning" style={{ width: '100%', margin: '0.5rem 0 0 0', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+            {game.productionActionBlockedReason}
+          </p>
+        )}
       </div>
       </div>
     </div>
