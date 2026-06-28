@@ -516,7 +516,11 @@ fn launch_dev_game(
     #[cfg(target_os = "windows")]
     let mut cmd = Command::new("cmd");
     #[cfg(target_os = "windows")]
-    cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+    {
+        use std::os::windows::process::CommandExt;
+        cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+        cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+    }
 
     #[cfg(not(target_os = "windows"))]
     let mut cmd = Command::new("pnpm");

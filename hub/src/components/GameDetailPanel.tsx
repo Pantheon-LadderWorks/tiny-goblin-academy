@@ -4,14 +4,16 @@ import { hubIconRegions } from '../data/hubIconRegions'
 import { SpriteFrame } from './SpriteFrame'
 import { invoke } from '@tauri-apps/api/core'
 import { InstallDevDependenciesResult, UninstallDevDependenciesResult, DevGameProcessStatus, LaunchDevGameResult, StopDevGameResult } from '../types/RuntimeStatus'
+import { ActiveDevGameRuntime } from './DevGameRuntimeView'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
   onClose: () => void;
   onGameUpdate?: (gameId: string) => void;
+  onLaunchSuccess?: (runtime: ActiveDevGameRuntime) => void;
 }
 
-export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate }) => {
+export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate, onLaunchSuccess }) => {
   const [installing, setInstalling] = useState(false);
   const [installResult, setInstallResult] = useState<InstallDevDependenciesResult | null>(null);
   
@@ -56,6 +58,16 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
       setLaunchResult(result);
       if (onGameUpdate) onGameUpdate(game.id);
       refreshProcessStatus();
+      if (result.ok && result.url && onLaunchSuccess) {
+        onLaunchSuccess({
+          gameId: game.id,
+          title: game.title,
+          url: result.url,
+          port: result.port || 5100,
+          pid: result.pid,
+          startedAt: result.startedAt,
+        });
+      }
     } catch (e) {
       console.error(e);
       setLaunchResult({
@@ -266,7 +278,7 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
               </button>
             ) : (
               <button className="btn launch-btn" disabled={!game.devLaunchAvailable || launching} onClick={handleLaunchDevGame}>
-                {launching ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Server" : "Launch Blocked")}
+                {launching ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Game" : "Launch Blocked")}
               </button>
             )}
             {!game.devLaunchAvailable && game.devLaunchBlockedReason && !processStatus?.running && (

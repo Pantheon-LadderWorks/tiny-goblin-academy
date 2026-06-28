@@ -4,12 +4,16 @@ import { GameRoster } from './GameRoster'
 import { GameDetailPanel } from './GameDetailPanel'
 import { CreditsPanel } from './CreditsPanel'
 import { GameStatus, HubRuntimeStatus } from '../types/RuntimeStatus'
+import { DevGameRuntimeView, ActiveDevGameRuntime } from './DevGameRuntimeView'
+import { invoke } from '@tauri-apps/api/core'
 
 export const HubShell: React.FC = () => {
   const [selectedGame, setSelectedGame] = useState<GameManifest | null>(null)
   const [diagnostic, setDiagnostic] = useState<string | null>(null)
   const [runtimeStatus, setRuntimeStatus] = useState<HubRuntimeStatus | null>(null)
   const [gameStatuses, setGameStatuses] = useState<Record<string, GameStatus>>({})
+  const [activeRuntime, setActiveRuntime] = useState<ActiveDevGameRuntime | null>(null)
+  const [isStoppingRuntime, setIsStoppingRuntime] = useState(false)
 
   useEffect(() => {
     async function initTauri() {
@@ -56,6 +60,32 @@ export const HubShell: React.FC = () => {
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
   const sourceAvailableCount = mergedRoster.filter(g => g.sourceAvailable).length;
   const deferredCount = tier1Roster.filter(g => g.restorationDeferred).length;
+
+  const handleCloseRuntime = async () => {
+    if (!activeRuntime) return;
+    setIsStoppingRuntime(true);
+    try {
+      await invoke('stop_dev_game', { gameId: activeRuntime.gameId });
+    } catch (e) {
+      console.error("Failed to stop dev game on close", e);
+      alert(`Failed to stop dev server: ${e}`);
+    } finally {
+      setIsStoppingRuntime(false);
+      const gid = activeRuntime.gameId;
+      setActiveRuntime(null);
+      refreshGameStatus(gid);
+    }
+  };
+
+  if (activeRuntime) {
+    return (
+      <DevGameRuntimeView 
+        runtime={activeRuntime} 
+        onClose={handleCloseRuntime} 
+        isStopping={isStoppingRuntime} 
+      />
+    );
+  }
 
   return (
     <div className="hub-shell">
@@ -116,6 +146,7 @@ export const HubShell: React.FC = () => {
           game={selectedGameMerged} 
           onClose={() => setSelectedGame(null)} 
           onGameUpdate={refreshGameStatus}
+          onLaunchSuccess={(runtime) => setActiveRuntime(runtime)}
         />
       </main>
     </div>
