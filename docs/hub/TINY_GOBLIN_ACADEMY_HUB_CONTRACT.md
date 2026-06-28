@@ -16,7 +16,7 @@ The Hub is the future unified launcher/interface for Tiny Goblin Academy. It sho
 * The Hub launches, describes, and organizes games.
 * The Hub must not silently hide missing or deferred states.
 * The Hub reads truth from manifests, not hardcoded assumptions.
-* The Hub must follow `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`.
+* The Hub must follow `docs/boot/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`.
 * No raw dashboard spawn.
 * Every Pantheon product needs a door.
 
@@ -94,8 +94,8 @@ Level 1 Button Goblin Clicker historically passed Human Review, but its source w
 
 ## Boot Experience Requirement
 
-Reference: `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
-Reference: `docs/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
+Reference: `docs/boot/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
+Reference: `docs/boot/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
 
 The Hub must not start with a raw dashboard. It must implement a product-entry flow before showing the game roster.
 
@@ -106,7 +106,7 @@ The Hub must not start with a raw dashboard. It must implement a product-entry f
 
 ## Asset Relationship
 
-Reference: `docs/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md`
+Reference: `docs/assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md`
 
 The Hub may display asset-driven previews later, but asset ingestion does not mean implementation. Sprites are asset pantries; manifests decide what is used.
 
@@ -129,3 +129,4 @@ The Hub may display asset-driven previews later, but asset ingestion does not me
 * [ ] No gameplay contract is rewritten.
 * [ ] No asset sheet is used without manifest mapping.
 * [ ] Itch/distribution assumptions are documented but not implemented.
+

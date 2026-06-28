@@ -6,12 +6,12 @@ This document summarizes the audit and reconciliation pass (Phase H3.0) performe
 It confirms the direction for the Hub's control-surface architecture without implementing new logic.
 
 ## Docs Read and Audited
-* `docs/TINY_GOBLIN_ACADEMY_HUB_RUNTIME_AND_PACKAGING_NOTES.md`
-* `docs/TINY_GOBLIN_ACADEMY_LAUNCHER_RUNTIME_PLAN.md`
-* `docs/TINY_GOBLIN_ACADEMY_HUB_CONTRACT.md`
-* `docs/TINY_GOBLIN_ACADEMY_PHASE_1_5_STATUS.md`
-* `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
-* `docs/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
+* `docs/hub/runtime/TINY_GOBLIN_ACADEMY_HUB_RUNTIME_AND_PACKAGING_NOTES.md`
+* `docs/hub/runtime/TINY_GOBLIN_ACADEMY_LAUNCHER_RUNTIME_PLAN.md`
+* `docs/hub/TINY_GOBLIN_ACADEMY_HUB_CONTRACT.md`
+* `docs/roadmap/TINY_GOBLIN_ACADEMY_PHASE_1_5_STATUS.md`
+* `docs/boot/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
+* `docs/boot/TINY_GOBLIN_ACADEMY_BOOT_EXPERIENCE_INTEGRATION.md`
 
 ## Stale Statements Found and Resolved
 During the audit, the following stale concepts were identified and updated across the doctrine:
@@ -46,3 +46,4 @@ The boot experience is a foundational requirement, not just visual polish, and c
 * Bundle all Tier 1 games into hub, or allow optional install state?
 * Use embedded WebView vs external browser for game launch?
 * Where should built static game artifacts live for player mode?
+

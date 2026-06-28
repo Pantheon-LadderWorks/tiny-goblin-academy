@@ -18,7 +18,7 @@ Explain:
 
 Reference:
 
-* `docs/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
+* `docs/boot/PANTHEON_PRODUCT_BOOT_EXPERIENCE_STANDARD.md`
 * `assets/studio/glyphforge-games/glyphforge-games-boot-splash-concept.png`
 
 Glyphforge Games is a draft/internal studio identity until legally finalized.
@@ -108,3 +108,4 @@ Tiny Goblin Academy should eventually teach:
 2. Later H2 may polish the hub boot screen visually.
 3. Later launcher phase may implement game launch boot.
 4. Later game curriculum phase may add BootScene/PreloadScene patterns.
+

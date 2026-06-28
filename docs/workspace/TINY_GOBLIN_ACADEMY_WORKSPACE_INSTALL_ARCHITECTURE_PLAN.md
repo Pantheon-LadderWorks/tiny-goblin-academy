@@ -197,7 +197,7 @@ No changes.
 
 ### Phase W2 — Package Census / Normalize Metadata
 
-* W2 package census has been created at `docs/TINY_GOBLIN_ACADEMY_PACKAGE_CENSUS_W2.md`.
+* W2 package census has been created at `docs/workspace/TINY_GOBLIN_ACADEMY_PACKAGE_CENSUS_W2.md`.
 * W2.5 Package metadata normalization plan created.
 * W2.6 package metadata normalization is complete.
 * Game 02 reconstruction plan exists.
@@ -290,3 +290,4 @@ Only after workspace/install architecture is working and approved.
 3. Add root package.json and pnpm-workspace.yaml only.
 4. Review before running install.
 5. Only then decide controlled root install.
+

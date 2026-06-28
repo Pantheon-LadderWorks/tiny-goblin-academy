@@ -19,7 +19,7 @@ The core issue was combining a cleanup script (`Remove-Item -Recurse -Force`) wi
 ## What Survived
 * `AI_GAME_STUDIO_PLAN.md` Level 1 definitions.
 * `README.md` and `meta/progress-tracker.md` references.
-* `docs/TINY_GOBLIN_ACADEMY_LESSONS_SYNTHESIS.md` and `docs/TINY_GOBLIN_ACADEMY_EVIDENCE_INDEX.md` context.
+* `docs/methodology/TINY_GOBLIN_ACADEMY_LESSONS_SYNTHESIS.md` and `docs/evidence/TINY_GOBLIN_ACADEMY_EVIDENCE_INDEX.md` context.
 * Transcripts containing the contract and workflow.
 * The remaining 9 games (Levels 2-10) were successfully moved to `tier-1` without data loss.
 
@@ -40,3 +40,4 @@ This is an incident report covering a tooling and orchestration failure, not a p
 * Never combine move/copy cleanup with destructive deletion in the same pass.
 * Never perform large structural moves without git or a backup snapshot.
 * Refactors must be transactional: Plan → Copy → Verify → Patch → Delete Source.
+
