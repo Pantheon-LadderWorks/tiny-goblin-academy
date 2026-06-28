@@ -17,7 +17,7 @@ interface DevGameRuntimeViewProps {
 
 export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime, onClose, isStopping }) => {
   return (
-    <div className="dev-game-runtime-view" style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', backgroundColor: '#0a0a0c' }}>
+    <div className="dev-game-runtime-view" style={{ display: 'flex', flexDirection: 'column', flex: 1, width: '100%', backgroundColor: '#0a0a0c' }}>
       <header className="runtime-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 1.5rem', backgroundColor: '#1a1a24', borderBottom: '1px solid #333' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
           <h2 style={{ margin: 0, fontSize: '1.2rem', color: '#e0e0e0' }}>Tiny Goblin Academy</h2>

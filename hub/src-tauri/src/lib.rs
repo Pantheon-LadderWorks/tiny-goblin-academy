@@ -507,6 +507,12 @@ fn launch_dev_game(
         5100
     };
 
+    // Pre-check if port is already in use
+    if std::net::TcpStream::connect(("127.0.0.1", port)).is_ok() {
+        result.blocked_reason = Some(format!("Port {} is already in use", port));
+        return Ok(result);
+    }
+
     let started_at = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
@@ -518,36 +524,64 @@ fn launch_dev_game(
     #[cfg(target_os = "windows")]
     {
         use std::os::windows::process::CommandExt;
-        cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+        cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
         cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
     }
 
     #[cfg(not(target_os = "windows"))]
     let mut cmd = Command::new("pnpm");
     #[cfg(not(target_os = "windows"))]
-    cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string()]);
+    cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
 
     cmd.current_dir(&root);
     cmd.stdout(Stdio::null());
     cmd.stderr(Stdio::null());
 
-    result.command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {}", package_name, port);
+    result.command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {} --strictPort", package_name, port);
     result.launch_attempted = true;
 
     match cmd.spawn() {
-        Ok(child) => {
-            result.ok = true;
-            result.pid = Some(child.id());
-            result.port = Some(port);
-            result.url = Some(format!("http://127.0.0.1:{}", port));
-            result.started_at = Some(started_at.clone());
-            
-            processes.insert(game_id.clone(), TrackedProcess {
-                child,
-                port,
-                started_at,
-                package_name,
-            });
+        Ok(mut child) => {
+            // Wait for server to become ready via TCP connect
+            let mut ready = false;
+            for _ in 0..30 {
+                std::thread::sleep(std::time::Duration::from_millis(500));
+                if std::net::TcpStream::connect(("127.0.0.1", port)).is_ok() {
+                    ready = true;
+                    break;
+                }
+                if let Ok(Some(_)) = child.try_wait() {
+                    break; // Process died
+                }
+            }
+
+            if ready {
+                result.ok = true;
+                result.pid = Some(child.id());
+                result.port = Some(port);
+                result.url = Some(format!("http://127.0.0.1:{}", port));
+                result.started_at = Some(started_at.clone());
+                
+                processes.insert(game_id.clone(), TrackedProcess {
+                    child,
+                    port,
+                    started_at,
+                    package_name,
+                });
+            } else {
+                // Not ready, kill it
+                #[cfg(target_os = "windows")]
+                {
+                    use std::os::windows::process::CommandExt;
+                    let _ = Command::new("taskkill")
+                        .args(["/PID", &child.id().to_string(), "/T", "/F"])
+                        .creation_flags(0x08000000)
+                        .output();
+                }
+                let _ = child.kill();
+                let _ = child.wait();
+                result.error_state = Some("Dev server failed to become ready on expected port within 15 seconds".to_string());
+            }
         }
         Err(e) => {
             result.error_state = Some(format!("Failed to spawn process: {}", e));
@@ -578,7 +612,13 @@ fn stop_dev_game(
         result.stop_attempted = true;
 
         #[cfg(target_os = "windows")]
-        let _ = Command::new("taskkill").args(["/PID", &tracked.child.id().to_string(), "/T", "/F"]).output();
+        {
+            use std::os::windows::process::CommandExt;
+            let _ = Command::new("taskkill")
+                .args(["/PID", &tracked.child.id().to_string(), "/T", "/F"])
+                .creation_flags(0x08000000)
+                .output();
+        }
 
         match tracked.child.kill() {
             Ok(_) => {
