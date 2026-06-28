@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **Dev Mode Launcher Controls**: Added UI skeleton and robust backend status detection for developer launcher buttons.
+* **Dev Dependency Management**: Implemented explicit backend commands and UI wiring for installing and safely uninstalling package-local dev dependencies within the trusted sandbox.
 * **Read-Only Runtime Status Model**: Implemented Tauri shell and Rust backend for real-time, read-only inspection of game build and dev states.
 * **Tauri Shell Foundation**: Scaffolded and hardened the desktop Tauri shell for the Academy Hub.
 * **Level 1 Restoration**: Restored Button Goblin Clicker v0.1 game loop.
