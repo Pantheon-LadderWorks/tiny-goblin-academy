@@ -1,11 +1,26 @@
 export type RuntimeMode = "developer" | "production";
 export type PlayableMode = "none" | "dev" | "static" | "bundled" | "itch-cave";
 
+export type BuildStatus = "not-applicable" | "not-built" | "built" | "incomplete" | "unknown";
+
 export interface GameStatus {
   gameId: string;
+  slug: string;
   listed: boolean;
-  sourceAvailable: boolean;
+  sourceDirectoryExists: boolean;
+  packageJsonExists: boolean;
   workspaceMember: boolean;
+  nodeModulesExists: boolean;
+  hasDevScript: boolean;
+  hasBuildScript: boolean;
+  hasPreviewScript: boolean;
+  distExists: boolean;
+  distHasIndexHtml: boolean;
+  distAssetCount: number;
+  buildStatus: BuildStatus;
+
+  // H3.4 Compatibility fields
+  sourceAvailable: boolean;
   dependenciesInstalled: boolean;
   devRunnable: boolean;
   buildAvailable: boolean;

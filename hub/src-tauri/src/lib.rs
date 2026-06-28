@@ -36,50 +36,104 @@ fn load_manifest() -> Option<AcademyManifest> {
 }
 
 fn compute_game_status(root: &Path, entry: &GameManifestEntry) -> GameStatus {
-    let mut source_available = false;
+    let mut source_directory_exists = false;
+    let mut package_json_exists = false;
     let mut workspace_member = false;
-    let mut dependencies_installed = false;
-    let mut dev_runnable = false;
-    let mut build_available = false;
+    let mut node_modules_exists = false;
+    let mut has_dev_script = false;
+    let mut has_build_script = false;
+    let mut has_preview_script = false;
+    let mut dist_exists = false;
+    let mut dist_has_index_html = false;
+    let mut dist_asset_count = 0;
+    let mut build_status = "not-applicable".to_string();
 
     if let Some(source_path) = &entry.source_path {
         let full_path = root.join(source_path);
-        source_available = full_path.exists();
+        source_directory_exists = full_path.exists();
         
         let package_json_path = full_path.join("package.json");
-        workspace_member = package_json_path.exists();
+        package_json_exists = package_json_path.exists();
+        workspace_member = package_json_exists;
         
         if full_path.join("node_modules").exists() {
-            dependencies_installed = true;
+            node_modules_exists = true;
         }
         
         if let Ok(content) = fs::read_to_string(&package_json_path) {
             if let Ok(pkg) = serde_json::from_str::<serde_json::Value>(&content) {
                 if let Some(scripts) = pkg.get("scripts") {
                     if scripts.get("dev").is_some() {
-                        dev_runnable = true;
+                        has_dev_script = true;
+                    }
+                    if scripts.get("build").is_some() {
+                        has_build_script = true;
+                    }
+                    if scripts.get("preview").is_some() {
+                        has_preview_script = true;
                     }
                 }
             }
         }
         
-        if full_path.join("dist").exists() {
-            build_available = true;
+        let dist_path = full_path.join("dist");
+        if dist_path.exists() {
+            dist_exists = true;
+            if dist_path.join("index.html").exists() {
+                dist_has_index_html = true;
+            }
+            if let Ok(entries) = fs::read_dir(&dist_path) {
+                for _ in entries {
+                    dist_asset_count += 1;
+                }
+            }
         }
     }
 
+    if package_json_exists {
+        if dist_has_index_html {
+            build_status = "built".to_string();
+        } else if dist_exists {
+            build_status = "incomplete".to_string();
+        } else {
+            build_status = "not-built".to_string();
+        }
+    } else {
+        build_status = "not-applicable".to_string();
+    }
+
+    // Compatibility variables
+    let source_available = source_directory_exists;
+    let dependencies_installed = node_modules_exists;
+    let dev_runnable = has_dev_script;
+    let build_available = build_status == "built";
+
     GameStatus {
         game_id: entry.id.clone(),
+        slug: entry.slug.clone(),
         listed: true,
-        source_available,
+        source_directory_exists,
+        package_json_exists,
         workspace_member,
+        node_modules_exists,
+        has_dev_script,
+        has_build_script,
+        has_preview_script,
+        dist_exists,
+        dist_has_index_html,
+        dist_asset_count,
+        build_status,
+        
+        // H3.4 Compatibility fields
+        source_available,
         dependencies_installed,
         dev_runnable,
         build_available,
+
         installed: false,
         installable: false,
         playable_available: build_available,
-        playable_mode: if build_available { "dev".to_string() } else { "none".to_string() },
+        playable_mode: if build_available { "static".to_string() } else { "none".to_string() },
         runtime_managed: false,
         distribution_ready: false,
         update_available: false,

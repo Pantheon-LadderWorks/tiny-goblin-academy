@@ -58,13 +58,18 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose 
         <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', listStyle: 'none', padding: 0 }}>
           <li><strong>Listed:</strong> {game.listed ? 'Yes' : 'No'}</li>
           <li><strong>Workspace Member:</strong> {game.workspaceMember ? 'Yes' : 'No'}</li>
-          <li><strong>Source Available:</strong> {game.sourceAvailable ? 'Yes' : 'No'}</li>
-          <li><strong>Dependencies Installed:</strong> {game.dependenciesInstalled ? 'Yes' : 'No'}</li>
-          <li><strong>Dev Runnable:</strong> {game.devRunnable ? 'Yes' : 'No'}</li>
-          <li><strong>Build Available:</strong> {game.buildAvailable ? 'Yes' : 'No'}</li>
+          <li><strong>Source Directory:</strong> {game.sourceDirectoryExists ? 'Found' : 'Missing'}</li>
+          <li><strong>Package.json:</strong> {game.packageJsonExists ? 'Found' : 'Missing'}</li>
+          <li><strong>Node Modules:</strong> {game.nodeModulesExists ? 'Installed' : 'Missing'}</li>
+          <li><strong>Dev Script:</strong> {game.hasDevScript ? 'Yes' : 'No'}</li>
+          <li><strong>Build Script:</strong> {game.hasBuildScript ? 'Yes' : 'No'}</li>
+          <li><strong>Dist Exists:</strong> {game.distExists ? 'Yes' : 'No'}</li>
+          <li><strong>Static Entry (index.html):</strong> {game.distHasIndexHtml ? 'Found' : 'Missing'}</li>
+          <li><strong>Dist Asset Count:</strong> {game.distAssetCount ?? 0}</li>
+          <li><strong>Build Status:</strong> {game.buildStatus}</li>
           <li><strong>Playable Available:</strong> {game.playableAvailable ? 'Yes' : 'No'}</li>
           <li><strong>Playable Mode:</strong> {game.playableMode}</li>
-          <li><strong>Installed:</strong> {game.installed ? 'Yes' : 'No'}</li>
+          <li><strong>Production Installed:</strong> {game.installed ? 'Yes' : 'No'} (Future)</li>
         </ul>
       </div>
 

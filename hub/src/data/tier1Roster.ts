@@ -18,8 +18,20 @@ export interface GameManifest {
   
   // Dynamic fields from runtime status
   listed?: boolean;
-  sourceAvailable?: boolean;
+  sourceDirectoryExists?: boolean;
+  packageJsonExists?: boolean;
   workspaceMember?: boolean;
+  nodeModulesExists?: boolean;
+  hasDevScript?: boolean;
+  hasBuildScript?: boolean;
+  hasPreviewScript?: boolean;
+  distExists?: boolean;
+  distHasIndexHtml?: boolean;
+  distAssetCount?: number;
+  buildStatus?: string;
+  
+  // H3.4 Compatibility fields
+  sourceAvailable?: boolean;
   dependenciesInstalled?: boolean;
   devRunnable?: boolean;
   buildAvailable?: boolean;

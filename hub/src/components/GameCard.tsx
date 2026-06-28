@@ -34,13 +34,16 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
           ) : (
             <>
               <StatusBadge type="info" label="Listed" />
-              {game.sourceAvailable && <StatusBadge type="source" label="Source Available" />}
-              {game.sourceAvailable && <StatusBadge type="info" label="Workspace Member" />}
-              {game.buildAvailable ? (
-                <StatusBadge type="build" label="Static Build Available" />
-              ) : (
-                <StatusBadge type="missing" label="Not Built" />
+              {game.sourceDirectoryExists && <StatusBadge type="source" label="Source Available" />}
+              {game.workspaceMember && <StatusBadge type="info" label="Workspace Member" />}
+              {game.buildStatus && (
+                <StatusBadge 
+                  type={game.buildStatus === 'built' ? 'build' : (game.buildStatus === 'incomplete' ? 'dev' : 'missing')} 
+                  label={`Build: ${game.buildStatus.charAt(0).toUpperCase() + game.buildStatus.slice(1)}`} 
+                />
               )}
+              {game.hasDevScript && <StatusBadge type="info" label="Dev Script" />}
+              {game.distHasIndexHtml && <StatusBadge type="build" label="Static Entry Found" />}
               <StatusBadge type="dev" label="Production Install: Future" />
             </>
           )}
