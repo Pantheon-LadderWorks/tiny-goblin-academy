@@ -129,6 +129,18 @@ Created lanes:
 - Backgrounds: metadata sheet, scaled preview, anchor overlay, gameplay-readability review.
 - Tiles/terrain: tile-grid overlay, adjacency preview, bounds validation, contact sheet.
 
+### H5.2B Region Evidence Standard
+
+Region manifests require a synchronized evidence trio before they are reviewable:
+
+1. bbox overlay over the source sheet;
+2. numbered contact sheet of mapped crops;
+3. region table preview showing id, category, sourceRect, usage, and reviewStatus.
+
+Index numbers must match across all evidence files. SourceRects must be checked visually against the overlay. Labels, categories, and descriptions must be semantically checked against the contact sheet. Visually distinct assets should be separate regions unless intentionally grouped, and grouped regions must say so in notes.
+
+The reusable generator is `scripts/asset-pipeline/make-region-evidence.py`.
+
 ## 11. Cleanup Policy
 
 Fake-checkerboard cleanup is not a generic background remover.
@@ -173,6 +185,8 @@ Source pantry sheets are not runtime truth. Derived cleaned previews are not run
 ## 19. Initial Scaffold Created
 
 H5.1 creates the initial toolkit directory, shared library modules, lane help stubs, command index, smoke check, and asset manifest validator.
+
+H5.2B adds the reusable Python/Pillow region evidence generator and ingests the old H4 root-level census scripts under `scripts/asset-pipeline/legacy/` as reference-only tooling.
 
 Validation commands:
 

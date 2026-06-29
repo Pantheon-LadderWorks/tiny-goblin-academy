@@ -51,6 +51,7 @@ for (const file of requiredLaneFiles) {
 
 for (const file of [
   'scripts/asset-pipeline/pipeline-index.mjs',
+  'scripts/asset-pipeline/make-region-evidence.py',
   'scripts/validate-academy-asset-manifests.mjs',
   'scripts/clean-fake-transparent-sheet.py'
 ]) {
@@ -68,3 +69,4 @@ console.log('✅ Asset pipeline smoke check passed');
 console.log(` - Taxonomy operational types: ${operationalAssetTypes.length}`);
 console.log(` - Lane scripts: ${requiredLaneFiles.length}`);
 console.log(' - Cleanup script reference found');
+console.log(' - Region evidence generator found');

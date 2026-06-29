@@ -16,3 +16,23 @@ Current external cleanup reference:
 - `scripts/clean-fake-transparent-sheet.py`
 
 Use `node scripts/asset-pipeline/pipeline-index.mjs --list` to list supported lane profiles.
+
+## Region Evidence Standard
+
+Every reviewable region manifest must have synchronized evidence:
+
+1. bbox overlay over the source sheet;
+2. numbered contact sheet of mapped crops;
+3. region table preview with id, category, sourceRect, usage, and reviewStatus.
+
+Indexes must match across all three outputs. SourceRects must not be trusted without overlay review, and labels/categories/descriptions must be semantically checked against the contact sheet.
+
+Use:
+
+```powershell
+python scripts/asset-pipeline/make-region-evidence.py --manifest manifests/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
+```
+
+The generated evidence is draft-review evidence only. It is not runtime approval.
+
+Legacy H4 census/cartography tools are retained under `scripts/asset-pipeline/legacy/` for reference only.

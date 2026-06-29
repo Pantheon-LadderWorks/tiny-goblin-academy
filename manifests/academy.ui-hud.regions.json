@@ -12,6 +12,11 @@
     "cleanupStatus": "preview-generated",
     "humanReviewRequired": true
   },
+  "reviewNotes": [
+    "H5.2B: labels/categories/descriptions require semantic verification against the numbered contact sheet.",
+    "H5.2B: visually distinct assets should be separate regions unless intentionally grouped.",
+    "H5.2B: star-rating.three-gold may need to be split into individual star regions before runtime approval."
+  ],
   "regions": [
     {
       "id": "ui-hud.pill-panel.long-teal",

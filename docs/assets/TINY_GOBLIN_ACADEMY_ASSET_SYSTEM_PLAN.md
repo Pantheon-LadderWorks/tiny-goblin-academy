@@ -325,3 +325,13 @@ Manifests should define:
 * Mapping remains draft-review with `usage: "draft-review"` and `reviewStatus: "needs-human-review"`.
 * Evidence includes a bbox overlay, numbered contact sheet, and region table preview.
 * No runtime wiring occurred in this pass.
+
+## H5.2B Note (Region Evidence Canonization)
+* H5.2B canonizes bbox overlay + numbered contact sheet + region table preview as the required evidence trio for region manifests.
+* Index numbers must match across all evidence files.
+* SourceRects must not be trusted without overlay review.
+* Labels, categories, and descriptions must be semantically checked against the contact sheet.
+* Visually distinct assets should be separate regions unless intentionally grouped.
+* Draft-review evidence is not runtime approval.
+* `scripts/asset-pipeline/make-region-evidence.py` provides the reusable generator.
+* Old root-level census scripts were ingested under `scripts/asset-pipeline/legacy/` as reference-only tooling.
