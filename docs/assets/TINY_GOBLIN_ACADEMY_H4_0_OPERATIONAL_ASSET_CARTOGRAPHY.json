@@ -1,0 +1,1153 @@
+{
+  "schemaVersion": "0.1.0",
+  "censusScope": "assets/",
+  "assets": [
+    {
+      "repo_path": "assets\\itch-cover.png",
+      "asset_family": "Readme / Public Branding Art",
+      "operational_asset_type": "readme-branding-art",
+      "lifecycle_state": "integrated",
+      "readiness_state": [
+        "runtime-ready"
+      ],
+      "width": 1536,
+      "height": 2752,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "none-yet",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "none-yet"
+      ],
+      "runtime_eligibility": "eligible",
+      "next_safe_action": "none",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\readme-banner.png",
+      "asset_family": "Readme / Public Branding Art",
+      "operational_asset_type": "readme-branding-art",
+      "lifecycle_state": "integrated",
+      "readiness_state": [
+        "runtime-ready"
+      ],
+      "width": 3584,
+      "height": 1184,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "none-yet",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "none-yet"
+      ],
+      "runtime_eligibility": "eligible",
+      "next_safe_action": "none",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\branding\\icon-source\\tga-icon-source-v0.1.png",
+      "asset_family": "Branding / Icon Source",
+      "operational_asset_type": "branding-icon-source",
+      "lifecycle_state": "registered",
+      "readiness_state": [
+        "source-only"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "favicon-export-manifest",
+      "required_evidence": [
+        "favicon-size-preview-sheet"
+      ],
+      "required_human_review_type": [
+        "favicon-legibility-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "favicon/app icon export pipeline plan",
+      "risk_level": "low",
+      "notes": "No favicon outputs yet"
+    },
+    {
+      "repo_path": "assets\\academy\\creatures\\goblin\\tga-goblin-expression-action-sheet-v0.1.png",
+      "asset_family": "Goblin Creature Sheets",
+      "operational_asset_type": "character-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\creatures\\goblin\\tga-platformer-goblin-player-v0.1.png",
+      "asset_family": "Goblin Creature Sheets",
+      "operational_asset_type": "character-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\creatures\\slime\\tga-topdown-slime-player-v0.1.png",
+      "asset_family": "Slime Creature Sheets",
+      "operational_asset_type": "character-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 2752,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\creatures\\soldier\\tga-topdown-soldier-enemy-v0.1.png",
+      "asset_family": "Soldier / Enemy Sheets",
+      "operational_asset_type": "enemy-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\creatures\\training-dummy\\tga-platformer-training-dummy-enemy-concept-v0.1.png",
+      "asset_family": "Training Dummy Sheets",
+      "operational_asset_type": "enemy-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 2752,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\card-goblin-duel\\tga-card-goblin-duel-card-frames-concept-v0.1.png",
+      "asset_family": "Game 04 Card Goblin Duel",
+      "operational_asset_type": "ui-icon-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\card-goblin-duel\\tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
+      "asset_family": "Game 04 Card Goblin Duel",
+      "operational_asset_type": "ui-icon-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\dice-duel-tavern\\tga-dice-duel-tavern-sheet-concept-v0.1.png",
+      "asset_family": "Game 03 Dice Duel Tavern",
+      "operational_asset_type": "static-prop-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\dungeon-platformer\\tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
+      "asset_family": "Game 05 Dungeon / Platformer Mixed",
+      "operational_asset_type": "mixed-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1376,
+      "height": 768,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\farm-settlement\\tga-farm-settlement-sheet-v0.1.png",
+      "asset_family": "Game 06 / Game 10 Farm Settlement",
+      "operational_asset_type": "tile-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1408,
+      "height": 768,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "tile-terrain-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "tile-alignment-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "tile-alignment-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\one-room-platformer\\tga-one-room-platformer-background-stage-concept-v0.1.png",
+      "asset_family": "Game 08 One-Room Platformer",
+      "operational_asset_type": "scene-anchor-background",
+      "lifecycle_state": "registered",
+      "readiness_state": [
+        "source-only",
+        "needs-anchors",
+        "needs-evidence",
+        "needs-human-review"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "scene-anchor-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "scene-anchor-overlay",
+        "runtime-integration-screenshot"
+      ],
+      "required_human_review_type": [
+        "scene-anchor-placement-review",
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "background prep + anchor manifest planning",
+      "risk_level": "low",
+      "notes": "No sprite detection"
+    },
+    {
+      "repo_path": "assets\\academy\\games\\one-room-platformer\\tga-one-room-platformer-sideview-construction-pieces-concept-v0.1.png",
+      "asset_family": "Game 08 One-Room Platformer",
+      "operational_asset_type": "platform-construction-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-anchors"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "platform-construction-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "tile-alignment-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "tile-alignment-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\pet-campfire\\tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "asset_family": "Game 07 Pet Campfire",
+      "operational_asset_type": "pet-animation-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "high",
+      "required_manifest_contract": "animation-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "animation-contact-sheet",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "animation cleanup pilot",
+      "risk_level": "high",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\pet-campfire\\backgrounds\\tga-pet-campfire-background-source-v0.1.png",
+      "asset_family": "Game 07 Pet Campfire",
+      "operational_asset_type": "background-stage",
+      "lifecycle_state": "registered",
+      "readiness_state": [
+        "source-only",
+        "needs-anchors",
+        "needs-evidence",
+        "needs-human-review"
+      ],
+      "width": 2048,
+      "height": 2048,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "scene-anchor-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "scene-anchor-overlay",
+        "runtime-integration-screenshot"
+      ],
+      "required_human_review_type": [
+        "scene-anchor-placement-review",
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "background prep + anchor manifest planning",
+      "risk_level": "low",
+      "notes": "No sprite detection"
+    },
+    {
+      "repo_path": "assets\\academy\\games\\potion-sorter\\tga-potion-sorter-sheet-concept-v0.1.png",
+      "asset_family": "Game 02 Potion Sorter",
+      "operational_asset_type": "static-prop-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1408,
+      "height": 768,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\games\\top-down-slime-quest\\tga-top-down-slime-quest-playfield-pack-concept-v0.1.png",
+      "asset_family": "Game 09 Top-Down Slime Quest",
+      "operational_asset_type": "tile-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "tile-terrain-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "tile-alignment-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "tile-alignment-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\hub\\tga-hub-game-icons-sheet-concept-v0.1.png",
+      "asset_family": "Hub Icons",
+      "operational_asset_type": "hub-icon-sheet",
+      "lifecycle_state": "reviewed",
+      "readiness_state": [
+        "mapped-only"
+      ],
+      "width": 768,
+      "height": 1376,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "hub-icon-source-region-manifest",
+      "required_evidence": [
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "none",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\hub\\tga-hub-game-icons-transparent.png",
+      "asset_family": "Hub Icons",
+      "operational_asset_type": "hub-icon-sheet",
+      "lifecycle_state": "reviewed",
+      "readiness_state": [
+        "mapped-only"
+      ],
+      "width": 768,
+      "height": 1376,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "real-alpha-needs-review",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "hub-icon-source-region-manifest",
+      "required_evidence": [
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "none",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\hub\\banner\\tga-hub-banner-source-v0.1.png",
+      "asset_family": "Hub Banner",
+      "operational_asset_type": "hub-banner-source",
+      "lifecycle_state": "registered",
+      "readiness_state": [
+        "source-only"
+      ],
+      "width": 555,
+      "height": 257,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "boot-asset-manifest",
+      "required_evidence": [
+        "banner-responsive-preview"
+      ],
+      "required_human_review_type": [
+        "banner-responsive-review",
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "hub banner cleanup + responsive integration plan",
+      "risk_level": "low",
+      "notes": "no hub wiring yet"
+    },
+    {
+      "repo_path": "assets\\academy\\hub\\derived\\tga-hub-game-icons-cleaned-v0.1.png",
+      "asset_family": "Hub Icons",
+      "operational_asset_type": "derived-cleaned-sheet",
+      "lifecycle_state": "derived-candidate",
+      "readiness_state": [
+        "needs-human-review"
+      ],
+      "width": 768,
+      "height": 1376,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "real-alpha-needs-review",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "hub-icon-source-region-manifest",
+      "required_evidence": [
+        "cleaned-candidate-preview"
+      ],
+      "required_human_review_type": [
+        "transparency-cleanup-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "human review",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\hub\\derived\\tga-hub-game-icons-transparent-v0.1.png",
+      "asset_family": "Hub Icons",
+      "operational_asset_type": "derived-cleaned-sheet",
+      "lifecycle_state": "integrated",
+      "readiness_state": [
+        "runtime-ready"
+      ],
+      "width": 768,
+      "height": 1376,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "real-alpha-needs-review",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "hub-icon-source-region-manifest",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "none-yet"
+      ],
+      "runtime_eligibility": "eligible",
+      "next_safe_action": "none",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\shared-core\\tga-shared-core-sheet-v0.1.png",
+      "asset_family": "Shared Academy Core",
+      "operational_asset_type": "static-prop-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\shared-fx\\tga-shared-fx-feedback-sheet-concept-v0.1.png",
+      "asset_family": "Shared FX / Feedback",
+      "operational_asset_type": "fx-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-animation-arrays"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json",
+        "animation-sequence-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "animation-sequence-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\topdown\\objects\\tga-topdown-environment-objects-concept-v0.1.png",
+      "asset_family": "Top-down Terrain / Walls / Objects",
+      "operational_asset_type": "static-prop-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling",
+        "needs-pivots",
+        "needs-hitboxes"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "regions-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "pivot-hitbox-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\topdown\\terrain\\tga-topdown-terrain-floor-construction-concept-v0.1.png",
+      "asset_family": "Top-down Terrain / Walls / Objects",
+      "operational_asset_type": "terrain-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "tile-terrain-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "tile-alignment-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "tile-alignment-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\topdown\\walls\\tga-topdown-wall-boundary-construction-concept-v0.1.png",
+      "asset_family": "Top-down Terrain / Walls / Objects",
+      "operational_asset_type": "wall-boundary-sheet",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review",
+        "needs-semantic-labeling"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "wall-boundary-manifest",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview",
+        "tile-alignment-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review",
+        "semantic-label-review",
+        "tile-alignment-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "cleanup and region detection pilot",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy\\ui\\tga-ui-hud-sheet-v0.1.png",
+      "asset_family": "Unknown",
+      "operational_asset_type": "uncertain-operational-type",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "alpha-inspected",
+        "needs-cleanup",
+        "needs-manifest",
+        "needs-evidence",
+        "needs-human-review"
+      ],
+      "width": 2816,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "medium",
+      "required_manifest_contract": "uncertain",
+      "required_evidence": [
+        "source-metadata-json",
+        "alpha-preview",
+        "dark-background-preview"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "transparency-cleanup-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "planning",
+      "risk_level": "medium",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy_review\\card-goblin-duel-candidate-v0.1.png",
+      "asset_family": "Academy Review Candidates",
+      "operational_asset_type": "review-candidate",
+      "lifecycle_state": "review-candidate",
+      "readiness_state": [
+        "needs-human-review"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "uncertain",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "human review",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy_review\\dungeon-key-run-playfield-pack-candidate-v0.1.png",
+      "asset_family": "Academy Review Candidates",
+      "operational_asset_type": "review-candidate",
+      "lifecycle_state": "review-candidate",
+      "readiness_state": [
+        "needs-human-review"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "uncertain",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "human review",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\academy_review\\one-room-platformer-playfield-pack-candidate-v0.1.png",
+      "asset_family": "Academy Review Candidates",
+      "operational_asset_type": "review-candidate",
+      "lifecycle_state": "review-candidate",
+      "readiness_state": [
+        "needs-human-review"
+      ],
+      "width": 1024,
+      "height": 1024,
+      "image_mode": "RGB",
+      "alpha_transparency_state": "opaque-illustration-background",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "uncertain",
+      "required_evidence": [
+        "none-yet"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "human review",
+      "risk_level": "low",
+      "notes": ""
+    },
+    {
+      "repo_path": "assets\\studio\\glyphforge-games\\glyphforge-games-boot-splash-concept.png",
+      "asset_family": "Studio / Boot Assets",
+      "operational_asset_type": "boot-studio-art",
+      "lifecycle_state": "concept",
+      "readiness_state": [
+        "metadata-inspected",
+        "needs-evidence",
+        "needs-human-review"
+      ],
+      "width": 2752,
+      "height": 1536,
+      "image_mode": "RGBA",
+      "alpha_transparency_state": "alpha-channel-all-opaque",
+      "fake_transparency_risk": "low",
+      "required_manifest_contract": "boot-asset-manifest",
+      "required_evidence": [
+        "runtime-integration-screenshot"
+      ],
+      "required_human_review_type": [
+        "visual-quality-review",
+        "runtime-integration-review"
+      ],
+      "runtime_eligibility": "not eligible",
+      "next_safe_action": "integration planning",
+      "risk_level": "low",
+      "notes": ""
+    }
+  ]
+}

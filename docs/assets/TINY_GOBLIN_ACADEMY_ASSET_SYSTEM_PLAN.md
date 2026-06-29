@@ -44,6 +44,7 @@ Required sequence before any sheet is wired into hub/game code:
 * Duplicate, imperfect, or unused sprites do not block intake as long as the sheet is clearly marked concept/v0.1.
 * Production implementation should rely on named manifest entries, not manual visual guessing.
 * Manifests should include `used`, `unused`, or `reserved` notes where helpful.
+* **H4.0 Update:** The operational classification for all assets is tracked in the [Operational Asset Cartography](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/docs/assets/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.md).
 
 ## Fake Transparency Cleanup Doctrine
 

@@ -15,4 +15,5 @@ All notable changes to this project will be documented in this file.
 * **Architecture & Contracts**: Documented and reconciled boot doctrine, launcher runtime semantics, workspace validation, and H3.3 runtime contracts.
 * **Asset Ingestion**: Formalized asset sheet intake and ingested core concept sheets across multiple games.
 * **Manifest Validation**: Reconciled the academy manifest validator to recognize the restored state of Level 1.
+* **Asset Operations**: Completed H4.0 Operational Asset Cartography Census, classifying all academy assets by taxonomy and pipeline readiness.
 * Public repo preparation, branding assets added, and legacy private concepts scrubbed.
