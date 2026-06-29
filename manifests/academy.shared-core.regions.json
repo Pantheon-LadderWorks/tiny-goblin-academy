@@ -12,38 +12,299 @@
     "cleanupStatus": "preview-generated",
     "humanReviewRequired": true
   },
+  "reviewNotes": [
+    "H5.3: labels/categories/descriptions require semantic verification against the numbered contact sheet.",
+    "H5.3: visually distinct assets should be separate regions unless intentionally grouped.",
+    "H5.3: cleaned preview is derived review evidence only and is not runtime-approved."
+  ],
   "regions": [
     {
-      "id": "shared-core.academy_mark",
-      "label": "Academy Mark",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "utility",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "shared-core.academy-mark.goblin-book",
+      "label": "Academy mark with goblin and book",
+      "sourceRect": { "x": 43, "y": 41, "w": 280, "h": 300 },
+      "category": "academy-mark",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review shared academy identity mark. Verify crop padding around cap, shield, and open book."
     },
     {
-      "id": "shared-core.goblin_head",
-      "label": "Goblin Head",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "icon",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "shared-core.goblin-head.graduate",
+      "label": "Graduate goblin head",
+      "sourceRect": { "x": 376, "y": 73, "w": 308, "h": 240 },
+      "category": "goblin-head",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review goblin mascot head with graduation cap."
     },
     {
-      "id": "shared-core.book",
-      "label": "Book",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "icon",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "shared-core.book.rune-open",
+      "label": "Open rune book",
+      "sourceRect": { "x": 727, "y": 67, "w": 310, "h": 248 },
+      "category": "book",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review open book with unreadable rune-like markings; do not infer text semantics."
     },
     {
-      "id": "shared-core.coin",
+      "id": "shared-core.chalkboard.lesson",
+      "label": "Lesson chalkboard",
+      "sourceRect": { "x": 1078, "y": 66, "w": 309, "h": 256 },
+      "category": "chalkboard",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review chalkboard prop with chalk marks; markings are decorative, not OCR text."
+    },
+    {
+      "id": "shared-core.scroll.sealed",
+      "label": "Sealed scroll",
+      "sourceRect": { "x": 1450, "y": 52, "w": 268, "h": 280 },
+      "category": "scroll",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review sealed parchment scroll."
+    },
+    {
+      "id": "shared-core.medal.gold-ribbon",
+      "label": "Gold medal with blue ribbon",
+      "sourceRect": { "x": 1817, "y": 40, "w": 237, "h": 302 },
+      "category": "medal",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review gold star medal with ribbon."
+    },
+    {
+      "id": "shared-core.candle.lit",
+      "label": "Lit candle",
+      "sourceRect": { "x": 2184, "y": 28, "w": 226, "h": 308 },
+      "category": "candle",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review lit candle and holder. Flame glow should be checked before runtime promotion."
+    },
+    {
+      "id": "shared-core.door.closed-arched",
+      "label": "Closed arched door",
+      "sourceRect": { "x": 2504, "y": 32, "w": 259, "h": 324 },
+      "category": "door",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review closed stone-framed arched door."
+    },
+    {
+      "id": "shared-core.button-prop.bonk",
+      "label": "Red bonk button",
+      "sourceRect": { "x": 84, "y": 435, "w": 198, "h": 287 },
+      "category": "button-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review red bonk button prop. Contains readable decorative text."
+    },
+    {
+      "id": "shared-core.training-dummy.helmet",
+      "label": "Helmet training dummy",
+      "sourceRect": { "x": 404, "y": 408, "w": 255, "h": 340 },
+      "category": "training-dummy",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review straw training dummy with helmet and side arm."
+    },
+    {
+      "id": "shared-core.currency-icon.goblin-coin",
       "label": "Goblin coin",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "currency",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "sourceRect": { "x": 783, "y": 473, "w": 199, "h": 209 },
+      "category": "currency-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review gold coin with goblin face."
+    },
+    {
+      "id": "shared-core.key.gold",
+      "label": "Gold key",
+      "sourceRect": { "x": 1113, "y": 446, "w": 242, "h": 270 },
+      "category": "key",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review gold key prop."
+    },
+    {
+      "id": "shared-core.chest.locked",
+      "label": "Locked chest",
+      "sourceRect": { "x": 1439, "y": 445, "w": 289, "h": 269 },
+      "category": "chest",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review closed locked treasure chest."
+    },
+    {
+      "id": "shared-core.door.open-glowing",
+      "label": "Open glowing door",
+      "sourceRect": { "x": 1821, "y": 424, "w": 286, "h": 366 },
+      "category": "door",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review open door with strong light spill. Glow edge needs human review before runtime use."
+    },
+    {
+      "id": "shared-core.heart.red",
+      "label": "Red heart",
+      "sourceRect": { "x": 2168, "y": 476, "w": 228, "h": 208 },
+      "category": "heart",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review red heart icon."
+    },
+    {
+      "id": "shared-core.banner.crossed-swords",
+      "label": "Crossed-swords banner",
+      "sourceRect": { "x": 2508, "y": 416, "w": 252, "h": 326 },
+      "category": "banner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review green hanging banner with crossed-swords emblem."
+    },
+    {
+      "id": "shared-core.potion.green",
+      "label": "Green potion",
+      "sourceRect": { "x": 62, "y": 803, "w": 236, "h": 318 },
+      "category": "potion",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review green potion bottle. Glow should be checked before runtime promotion."
+    },
+    {
+      "id": "shared-core.dice.pair",
+      "label": "Pair of dice",
+      "sourceRect": { "x": 382, "y": 834, "w": 300, "h": 266 },
+      "category": "dice",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Intentionally grouped as a dice-pair prop for draft review."
+    },
+    {
+      "id": "shared-core.card-stack.moon",
+      "label": "Moon card stack",
+      "sourceRect": { "x": 759, "y": 823, "w": 248, "h": 282 },
+      "category": "card-stack",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review stacked cards with moon emblem."
+    },
+    {
+      "id": "shared-core.plant.sprout-pot",
+      "label": "Sprout in pot",
+      "sourceRect": { "x": 1139, "y": 826, "w": 208, "h": 280 },
+      "category": "plant",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review small potted sprout."
+    },
+    {
+      "id": "shared-core.campfire.logs",
+      "label": "Campfire with logs",
+      "sourceRect": { "x": 1459, "y": 812, "w": 244, "h": 300 },
+      "category": "campfire",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review campfire prop. Flame transparency/glow needs review."
+    },
+    {
+      "id": "shared-core.water-orb.blue",
+      "label": "Blue water orb",
+      "sourceRect": { "x": 1808, "y": 842, "w": 252, "h": 247 },
+      "category": "water-orb",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review blue water orb icon."
+    },
+    {
+      "id": "shared-core.crate.wood",
+      "label": "Wood crate",
+      "sourceRect": { "x": 2144, "y": 820, "w": 277, "h": 292 },
+      "category": "crate",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review wooden crate."
+    },
+    {
+      "id": "shared-core.gear.gold",
+      "label": "Gold gear",
+      "sourceRect": { "x": 2499, "y": 831, "w": 268, "h": 270 },
+      "category": "gear",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review gold gear/cog icon."
+    },
+    {
+      "id": "shared-core.sparkle.gold",
+      "label": "Gold sparkle cluster",
+      "sourceRect": { "x": 59, "y": 1214, "w": 251, "h": 252 },
+      "category": "sparkle",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Intentionally grouped as one sparkle-cluster prop for draft review; split later if needed."
+    },
+    {
+      "id": "shared-core.alert-marker.red",
+      "label": "Red alert marker",
+      "sourceRect": { "x": 432, "y": 1210, "w": 201, "h": 263 },
+      "category": "alert-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review red exclamation marker."
+    },
+    {
+      "id": "shared-core.skull-marker.bow",
+      "label": "Skull marker with bow",
+      "sourceRect": { "x": 763, "y": 1211, "w": 253, "h": 257 },
+      "category": "skull-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review skull marker with bow."
+    },
+    {
+      "id": "shared-core.question-marker.blue",
+      "label": "Blue question marker",
+      "sourceRect": { "x": 1154, "y": 1218, "w": 166, "h": 234 },
+      "category": "question-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review blue question mark; sourceRect intentionally includes separated dot."
+    },
+    {
+      "id": "shared-core.hourglass.wood",
+      "label": "Wood hourglass",
+      "sourceRect": { "x": 1481, "y": 1195, "w": 205, "h": 290 },
+      "category": "hourglass",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review wood-framed hourglass."
+    },
+    {
+      "id": "shared-core.shield.gold",
+      "label": "Gold shield",
+      "sourceRect": { "x": 1814, "y": 1199, "w": 240, "h": 280 },
+      "category": "shield",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review gold shield badge."
+    },
+    {
+      "id": "shared-core.weapon.wooden-sword",
+      "label": "Wooden sword",
+      "sourceRect": { "x": 2148, "y": 1200, "w": 266, "h": 282 },
+      "category": "weapon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review wooden sword prop."
+    },
+    {
+      "id": "shared-core.journal.quill",
+      "label": "Journal with quill",
+      "sourceRect": { "x": 2494, "y": 1229, "w": 278, "h": 221 },
+      "category": "journal",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review open journal with quill; checklist marks are decorative, not OCR semantics."
     }
   ]
 }

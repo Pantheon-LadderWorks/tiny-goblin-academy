@@ -36,6 +36,18 @@ Required sequence before any sheet is wired into hub/game code:
 * Screenshots are required because visual artifacts (like baked backgrounds) can pass build/tests.
 * Human review decides whether the pixels are acceptable.
 
+## H5.3 Shared Core Region Mapping Note
+
+H5.3 performs Shared Core lane region mapping for `assets/academy/shared-core/tga-shared-core-sheet-v0.1.png`. The mapping remains `draft-review`, and no runtime wiring occurred.
+
+H5.3 evidence follows the H5.2B standard:
+
+1. bbox overlay over the source sheet;
+2. numbered contact sheet of mapped crops;
+3. region table preview showing id, category, sourceRect, usage, and reviewStatus.
+
+The cleaned Shared Core preview remains derived review evidence only and is not runtime truth. Shared FX remains deferred/high-risk and out of scope for this lane.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
