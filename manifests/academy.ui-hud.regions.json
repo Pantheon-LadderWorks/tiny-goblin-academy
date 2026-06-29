@@ -14,28 +14,310 @@
   },
   "regions": [
     {
-      "id": "ui-hud.button",
-      "label": "Button",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "ui",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "ui-hud.pill-panel.long-teal",
+      "label": "Long teal pill panel",
+      "sourceRect": { "x": 67, "y": 124, "w": 541, "h": 174 },
+      "category": "pill-panel",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
     },
     {
-      "id": "ui-hud.progress_bar",
-      "label": "Progress Bar",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "ui",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "ui-hud.round-button.teal-star",
+      "label": "Round teal star button",
+      "sourceRect": { "x": 662, "y": 106, "w": 207, "h": 213 },
+      "category": "round-button",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
     },
     {
-      "id": "ui-hud.frame_medium",
-      "label": "Medium Frame",
-      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
-      "category": "ui",
-      "usage": "draft-placeholder",
-      "notes": "Draft region pending exact mapping."
+      "id": "ui-hud.pill-panel.long-gold",
+      "label": "Long gold pill panel",
+      "sourceRect": { "x": 975, "y": 96, "w": 597, "h": 226 },
+      "category": "pill-panel",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.round-button.gold-star",
+      "label": "Round gold star button",
+      "sourceRect": { "x": 1570, "y": 84, "w": 257, "h": 256 },
+      "category": "round-button",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.dark-panel.long",
+      "label": "Long dark panel",
+      "sourceRect": { "x": 1925, "y": 124, "w": 574, "h": 174 },
+      "category": "dark-panel",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.icon-button.dark-star-square",
+      "label": "Dark square star button",
+      "sourceRect": { "x": 2555, "y": 114, "w": 195, "h": 197 },
+      "category": "icon-button",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.currency-icon.goblin-coin",
+      "label": "Goblin coin currency icon",
+      "sourceRect": { "x": 80, "y": 412, "w": 245, "h": 238 },
+      "category": "currency-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.time-icon.clock",
+      "label": "Clock time icon",
+      "sourceRect": { "x": 437, "y": 409, "w": 231, "h": 232 },
+      "category": "time-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.shield-icon.blue",
+      "label": "Blue shield badge",
+      "sourceRect": { "x": 801, "y": 401, "w": 210, "h": 244 },
+      "category": "shield-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.lock-badge.shield",
+      "label": "Lock shield badge",
+      "sourceRect": { "x": 1152, "y": 401, "w": 211, "h": 244 },
+      "category": "lock-badge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.check-badge.green-laurel",
+      "label": "Green check laurel badge",
+      "sourceRect": { "x": 1468, "y": 414, "w": 258, "h": 221 },
+      "category": "check-badge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.check-badge.gold-laurel",
+      "label": "Gold check laurel badge",
+      "sourceRect": { "x": 1814, "y": 414, "w": 259, "h": 221 },
+      "category": "check-badge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.crystal-icon.teal-shard",
+      "label": "Teal crystal shard icon",
+      "sourceRect": { "x": 2163, "y": 397, "w": 220, "h": 251 },
+      "category": "crystal-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Combined nearby alpha components into one review rectangle for the crystal/shard icon and loose shards."
+    },
+    {
+      "id": "ui-hud.damage-tile.red-cracked",
+      "label": "Red cracked damage tile",
+      "sourceRect": { "x": 2505, "y": 412, "w": 222, "h": 223 },
+      "category": "damage-tile",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.progress-bar.green",
+      "label": "Green progress bar",
+      "sourceRect": { "x": 69, "y": 707, "w": 629, "h": 123 },
+      "category": "progress-bar",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.progress-bar.orange",
+      "label": "Orange progress bar",
+      "sourceRect": { "x": 742, "y": 707, "w": 628, "h": 123 },
+      "category": "progress-bar",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.star-rating.three-gold",
+      "label": "Three gold star rating group",
+      "sourceRect": { "x": 1425, "y": 711, "w": 391, "h": 116 },
+      "category": "star-rating",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Grouped three adjacent star components into one review rectangle."
+    },
+    {
+      "id": "ui-hud.frame-small.teal",
+      "label": "Small teal frame",
+      "sourceRect": { "x": 68, "y": 882, "w": 308, "h": 256 },
+      "category": "frame-small",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.frame-medium.teal",
+      "label": "Medium teal frame",
+      "sourceRect": { "x": 437, "y": 881, "w": 458, "h": 267 },
+      "category": "frame-medium",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.frame-large.teal",
+      "label": "Large teal frame",
+      "sourceRect": { "x": 960, "y": 881, "w": 665, "h": 401 },
+      "category": "frame-large",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.speech-bubble.small",
+      "label": "Small speech bubble",
+      "sourceRect": { "x": 1688, "y": 881, "w": 466, "h": 215 },
+      "category": "speech-bubble",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.dialogue-panel.feather-scroll",
+      "label": "Feather dialogue panel",
+      "sourceRect": { "x": 2216, "y": 755, "w": 541, "h": 326 },
+      "category": "dialogue-panel",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.play-control.triangle",
+      "label": "Play button",
+      "sourceRect": { "x": 68, "y": 1194, "w": 127, "h": 125 },
+      "category": "play-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.play-control.pause",
+      "label": "Pause button",
+      "sourceRect": { "x": 228, "y": 1194, "w": 126, "h": 125 },
+      "category": "play-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.navigation-control.back",
+      "label": "Back button",
+      "sourceRect": { "x": 388, "y": 1193, "w": 126, "h": 126 },
+      "category": "navigation-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.settings-control.gear",
+      "label": "Settings button",
+      "sourceRect": { "x": 559, "y": 1193, "w": 126, "h": 126 },
+      "category": "settings-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.info-control.circle",
+      "label": "Info button",
+      "sourceRect": { "x": 68, "y": 1347, "w": 127, "h": 125 },
+      "category": "info-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.close-control.red-x",
+      "label": "Close button",
+      "sourceRect": { "x": 228, "y": 1347, "w": 126, "h": 125 },
+      "category": "close-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.reset-control.green-loop",
+      "label": "Reset button",
+      "sourceRect": { "x": 388, "y": 1347, "w": 126, "h": 125 },
+      "category": "reset-control",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.paper-label.small",
+      "label": "Small paper label",
+      "sourceRect": { "x": 1075, "y": 1338, "w": 289, "h": 132 },
+      "category": "paper-label",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.divider.thin-left",
+      "label": "Thin decorative divider",
+      "sourceRect": { "x": 1690, "y": 1254, "w": 174, "h": 34 },
+      "category": "divider",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.divider.flourish-right",
+      "label": "Flourish decorative divider",
+      "sourceRect": { "x": 1866, "y": 1254, "w": 207, "h": 34 },
+      "category": "divider",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Combined adjacent flourish alpha components into one review rectangle."
+    },
+    {
+      "id": "ui-hud.speech-bubble.small-tag",
+      "label": "Small speech tag",
+      "sourceRect": { "x": 2121, "y": 1222, "w": 317, "h": 196 },
+      "category": "speech-bubble",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
+    },
+    {
+      "id": "ui-hud.status-panel.vertical",
+      "label": "Vertical status panel",
+      "sourceRect": { "x": 2504, "y": 1141, "w": 246, "h": 329 },
+      "category": "status-panel",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review bounding rectangle from H5.2 UI/HUD mapping."
     }
   ]
 }

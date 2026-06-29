@@ -319,3 +319,9 @@ Manifests should define:
 * Asset processing is type-specific: static UI/icon sheets, animation sheets, backgrounds, tiles, and FX do not share the same pipeline.
 * Cleanup scripts are derived-output only and must produce reviewable evidence.
 * Lane scripts are help-only stubs in this pass; no runtime wiring occurred.
+
+## H5.2 Note (UI/HUD Region Mapping)
+* H5.2 performs the first real UI/HUD lane region mapping.
+* Mapping remains draft-review with `usage: "draft-review"` and `reviewStatus: "needs-human-review"`.
+* Evidence includes a bbox overlay, numbered contact sheet, and region table preview.
+* No runtime wiring occurred in this pass.
