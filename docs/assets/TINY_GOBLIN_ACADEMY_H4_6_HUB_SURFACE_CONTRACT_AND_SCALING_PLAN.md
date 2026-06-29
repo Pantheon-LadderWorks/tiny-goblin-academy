@@ -258,3 +258,6 @@ The recommended next implementation prompt is: **H4.7 — Console-Style Launcher
 
 ## 20. Human Review Gate
 Review this layout model and the future layers scaling plan. If acceptable, proceed to H4.7 to generate mockups of the Candidate C layout.
+
+> [!NOTE]
+> **H4.7 Update:** Static evidence and mockups for Candidate C have been generated in the ssets/academy/hub/evidence/h4-7/ directory to validate this contract visually across viewports.
