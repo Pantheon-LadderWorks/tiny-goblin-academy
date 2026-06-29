@@ -1,8 +1,10 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
 ## Unreleased
+
+* **H4.7B Mock Correction**: Generated corrected console launcher layout candidates (A: polished 5x2 grid, B: multi-row console shelves, C: hybrid feature panel + tier shelves) using manifest-mapped icon regions from `hub.icon-regions.json`. Includes global options placement study. All mocks are evidence only — no runtime changes. Human review required before H4.8 implementation.
 
 * **Dev Launcher Runtime**: Successfully orchestrated non-blocking dev servers and embedded games inside the Tauri app with a dedicated boot screen and graceful process termination.
 * **Dev Mode Launcher Controls**: Added UI skeleton and robust backend status detection for developer launcher buttons.
