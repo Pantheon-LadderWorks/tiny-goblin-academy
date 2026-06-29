@@ -130,8 +130,8 @@ Inspected `assets/` including `academy`, `studio`, and `academy_review` director
 | Contract Type | Count | Assets |
 | --- | --- | --- |
 | `hub-icon-source-region-manifest` | 4 | Hub icon sheets (source + derived) |
-| `animation-manifest` | 7 | Goblin, slime, soldier, dummy, ember pup |
-| `regions-manifest` | 7 | Shared core, card duel, dice tavern, potion sorter, FX, topdown objects |
+| `animation-manifest` | 6 | Goblin expression, Goblin platformer player, Slime player, Soldier enemy, Training dummy, Ember Pup |
+| `regions-manifest` | 9 | Card duel frames, Card duel UI/tokens, Dice tavern, Dungeon/platformer mixed, Potion sorter, Shared core, Shared FX, Topdown objects, UI/HUD |
 | `scene-anchor-manifest` | 2 | Pet campfire bg, one-room platformer bg |
 | `tile-terrain-manifest` | 3 | Farm settlement, top-down slime quest, topdown terrain |
 | `boot-asset-manifest` | 2 | Hub banner, glyphforge boot splash |
@@ -160,13 +160,13 @@ All three are `registered`, `source-only`, not eligible for runtime, and must no
 | `source-only` | 3 | A0 registered assets (banner, bg, icon source) |
 | `needs-human-review` | 4 | Derived hub sheets + academy review candidates |
 | `needs-manifest` + `needs-semantic-labeling` | 14 | All creature, game, terrain, and shared sheets |
-| `needs-animation-arrays` + `needs-pivots` | 7 | All animation/character/pet sheets |
+| `needs-animation-arrays` + `needs-pivots` | 6 | Goblin x2, Slime player, Soldier, Training dummy, Ember Pup |
 | `needs-anchors` | 3 | Background stages + construction pieces |
 
 ## Risk Matrix
 | Risk Level | Asset Count | Families |
 | --- | --- | --- |
-| High | 7 | Goblin (x2), Slime, Soldier, Training Dummy, Ember Pup, Pet (future sheets) |
+| High | 6 | Goblin expression, Goblin platformer player, Slime player, Soldier enemy, Training dummy, Ember Pup |
 | Medium | 10 | Dungeon/Platformer mixed, Farm, One-Room pieces, Top-Down Slime Quest playfield, FX sheet, Terrain, Walls, UI/HUD |
 | Low | 17 | All hub assets, A0 registered assets, card/dice/potion static sheets, shared core, review candidates, readme art, boot art |
 
