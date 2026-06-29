@@ -1015,8 +1015,8 @@
     },
     {
       "repo_path": "assets\\academy\\ui\\tga-ui-hud-sheet-v0.1.png",
-      "asset_family": "Unknown",
-      "operational_asset_type": "uncertain-operational-type",
+      "asset_family": "UI / HUD",
+      "operational_asset_type": "ui-icon-sheet",
       "lifecycle_state": "concept",
       "readiness_state": [
         "metadata-inspected",
@@ -1024,27 +1024,32 @@
         "needs-cleanup",
         "needs-manifest",
         "needs-evidence",
-        "needs-human-review"
+        "needs-human-review",
+        "needs-semantic-labeling"
       ],
       "width": 2816,
       "height": 1536,
       "image_mode": "RGBA",
       "alpha_transparency_state": "alpha-channel-all-opaque",
       "fake_transparency_risk": "medium",
-      "required_manifest_contract": "uncertain",
+      "required_manifest_contract": "regions-manifest",
       "required_evidence": [
         "source-metadata-json",
         "alpha-preview",
-        "dark-background-preview"
+        "dark-background-preview",
+        "bbox-overlay",
+        "numbered-contact-sheet",
+        "candidate-regions-json"
       ],
       "required_human_review_type": [
         "visual-quality-review",
-        "transparency-cleanup-review"
+        "transparency-cleanup-review",
+        "semantic-label-review"
       ],
       "runtime_eligibility": "not eligible",
-      "next_safe_action": "planning",
+      "next_safe_action": "cleanup and region detection pilot",
       "risk_level": "medium",
-      "notes": ""
+      "notes": "UI/HUD pantry: buttons, panels, frames, icons, typography blocks"
     },
     {
       "repo_path": "assets\\academy_review\\card-goblin-duel-candidate-v0.1.png",
