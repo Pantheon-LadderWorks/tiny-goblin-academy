@@ -205,6 +205,24 @@ Required sequence before any sheet is wired into hub/game code:
   * Status: concept / v0.1 / needs layout integration plan.
   * Notes: Designed with central negative space and platform anchor logic so floating platforms do not look like random stickers. Not a tile sheet. Not top-down. Not parallax yet.
 
+* **Pet Campfire background source**
+  * Path: `assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png`
+  * Intended Use: Pet Campfire background / playfield source reference.
+  * Status: source / registered / needs intake audit / needs future cleanup-prep plan
+  * Notes: This is a full scene background, not a sprite sheet. Treat it as `background-stage`. Do not wire until prep is done.
+
+* **Tiny Goblin Academy icon/favicon source**
+  * Path: `assets/academy/branding/icon-source/tga-icon-source-v0.1.png`
+  * Intended Use: Full-size Tiny Goblin Academy icon/crest source intended for future favicon/app icon export.
+  * Status: source / registered / needs intake audit / needs future cleanup-prep plan
+  * Notes: This is not the favicon yet. It is the high-resolution source for a future icon export pipeline. Treat it as `branding-icon-source`. Do not wire yet.
+
+* **Tiny Goblin Academy hub/launcher banner source**
+  * Path: `assets/academy/hub/banner/tga-hub-banner-source-v0.1.png`
+  * Intended Use: Tiny Goblin Academy hub / launcher banner source.
+  * Status: source / registered / needs intake audit / needs future cleanup-prep plan
+  * Notes: Preferred banner direction for the Hub / Launcher visual shell. Treat as `hub-banner-source`. Do not wire, crop, or upscale yet.
+
 ## Missing Asset Groups
 
 **Future Work:**
