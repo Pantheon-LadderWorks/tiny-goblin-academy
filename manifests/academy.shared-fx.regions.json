@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "sourceSheet": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
+  "derivedSheet": null,
+  "domain": "shared-fx",
+  "transparency": {
+    "sourceHasAlpha": false,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard-jpeg",
+    "cleanupRequired": true,
+    "cleanupStatus": "planned"
+  },
+  "regions": [
+    {
+      "id": "shared-fx.sparkle",
+      "label": "Sparkle",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "effect",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "shared-fx.starburst",
+      "label": "Starburst",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "effect",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "shared-fx.coin_flash",
+      "label": "Coin Flash",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "effect",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    }
+  ]
+}

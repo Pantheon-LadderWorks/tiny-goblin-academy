@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "sourceSheet": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
+  "derivedSheet": null,
+  "domain": "ui-hud",
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "planned"
+  },
+  "regions": [
+    {
+      "id": "ui-hud.button",
+      "label": "Button",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "ui",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "ui-hud.progress_bar",
+      "label": "Progress Bar",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "ui",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "ui-hud.frame_medium",
+      "label": "Medium Frame",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "ui",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    }
+  ]
+}

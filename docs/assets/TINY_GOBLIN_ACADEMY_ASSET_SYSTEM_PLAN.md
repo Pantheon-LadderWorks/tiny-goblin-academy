@@ -300,3 +300,9 @@ Manifests should define:
 
 * Optional individual backgrounds/backdrops for Potion Sorter, Dice Duel Tavern, Card Goblin Duel, Pet Campfire, Farm/Settlement
 * Next architecture task: Hub Contract / manifest strategy
+
+## H5.0 Note (Shared Asset Domains)
+* `shared-core`, `shared-fx`, and `ui` domains are the first shared asset manifest targets.
+* Fake checkerboard cleanup requires derived outputs and evidence.
+* Manifests are draft until human review.
+* No runtime wiring occurred in this pass.

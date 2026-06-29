@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "sourceSheet": "assets/academy/shared-core/tga-shared-core-sheet-v0.1.png",
+  "derivedSheet": null,
+  "domain": "shared-core",
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "planned"
+  },
+  "regions": [
+    {
+      "id": "shared-core.academy_mark",
+      "label": "Academy Mark",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "utility",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "shared-core.goblin_head",
+      "label": "Goblin Head",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "icon",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "shared-core.book",
+      "label": "Book",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "icon",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    },
+    {
+      "id": "shared-core.coin",
+      "label": "Goblin coin",
+      "sourceRect": { "x": 0, "y": 0, "w": 0, "h": 0 },
+      "category": "currency",
+      "usage": "draft-placeholder",
+      "notes": "Draft region pending exact mapping."
+    }
+  ]
+}
