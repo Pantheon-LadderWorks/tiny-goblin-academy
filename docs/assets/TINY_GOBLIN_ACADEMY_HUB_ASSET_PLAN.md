@@ -56,3 +56,7 @@ Key decisions captured:
 * App icon / favicon export pipeline is H4.2.
 * Per-game loading screens are future-scope, not part of H4.1.
 
+## H4.2 Favicon / App Icon Export Pipeline
+
+Candidate PNG exports (16-512px) and visual evidence have been generated from the TGA icon source, along with a draft `favicon.exports.json`. These are currently candidates and must pass human review before being wired into Tauri or web platforms.
+
