@@ -48,7 +48,7 @@
                         "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-512.png"
                     }
                 ],
-    "icoCandidate":  null,
+    "icoCandidate":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-candidate.ico",
     "notes":  [
                   "Generated via C# System.Drawing.Image HighQualityBicubic interpolation."
               ],
@@ -57,5 +57,23 @@
                         "Approved for current Windows/Tauri app icon integration.",
                         "16x16 preserves identity but is not fully letter-legible.",
                         "Future optional polish may create a simplified micro-favicon for tiny web-tab sizes."
-                    ]
+                    ],
+    "webIconSurfaces":  [
+                            {
+                                "path":  "hub/public/favicon.svg",
+                                "source":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-256.png",
+                                "status":  "replaced-with-approved-tga-identity",
+                                "notes":  [
+
+                                          ]
+                            },
+                            {
+                                "path":  "hub/public/icons.svg",
+                                "source":  null,
+                                "status":  "audited",
+                                "notes":  [
+                                              "Not referenced anywhere in the hub frontend code. Left untouched as obsolete."
+                                          ]
+                            }
+                        ]
 }

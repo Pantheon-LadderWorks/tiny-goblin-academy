@@ -64,6 +64,8 @@ Generated files:
 `ICO candidate not generated in H4.2 because no safe local tool was available without adding dependencies.`
 Building a multi-size `.ico` file accurately requires dedicated libraries (like ImageMagick or a custom binary structure builder). The PNG candidates will serve as the source material for any automated bundler (like Tauri) or can be assembled into an `.ico` later once an approved path is established.
 
+**[UPDATE: H4.2C]** A subsequent tooling audit found Python and Pillow already available locally. A multi-size `.ico` candidate was generated using Pillow in H4.2C.
+
 ---
 
 ## Preview Evidence

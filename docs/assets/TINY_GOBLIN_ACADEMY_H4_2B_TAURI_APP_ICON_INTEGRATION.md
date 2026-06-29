@@ -1,4 +1,4 @@
-﻿# Tiny Goblin Academy — H4.2B Tauri App Icon Integration
+# Tiny Goblin Academy — H4.2B Tauri App Icon Integration
 
 ## Task Name
 
@@ -50,6 +50,8 @@ The `hub/src-tauri/icons/` directory was inspected. The following approved PNG c
 ## ICO Status
 
 `.ico` handling remains pending. No safe, dependency-free local tooling was available to reliably multiplex the new `.ico` file. The existing placeholder `icon.ico` and `icon.icns` in the Tauri directory have been left untouched so as not to break the build system. Tauri is capable of falling back to the PNG targets for many OS-level functions.
+
+**[UPDATE: H4.2C]** A tooling audit found Python/Pillow available. A multi-size `.ico` candidate was generated and integrated into Tauri's `icon.ico` in H4.2C.
 
 ---
 

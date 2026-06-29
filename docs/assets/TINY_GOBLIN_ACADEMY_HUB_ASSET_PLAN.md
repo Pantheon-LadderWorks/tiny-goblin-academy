@@ -64,3 +64,7 @@ Candidate PNG exports (16-512px) and visual evidence have been generated from th
 
 The H4.2 candidate PNG exports were approved by human review and integrated directly into the `hub/src-tauri/icons/` directory. The `.ico` configuration was left untouched because no safe dependency-free tool was available to regenerate it locally, but Tauri natively handles the PNG fallbacks gracefully.
 
+## H4.2C Web / ICO / SVG Icon Surface Audit
+
+A local tooling audit confirmed Python and Pillow were available, so a multi-size `.ico` candidate was generated and integrated into Tauri's `icon.ico`. The basic web placeholder `hub/public/favicon.svg` was replaced with an SVG embedding the approved PNG icon as base64. The unreferenced placeholder `icons.svg` was documented as obsolete.
+
