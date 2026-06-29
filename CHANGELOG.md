@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.1 Asset Pipeline Toolkit**: Added H5.1 reusable asset-pipeline script toolkit scaffold, including taxonomy constants, manifest validation helpers, lane-script stubs, and pipeline command index for asset-type-specific handling.
+
 * **H5.0B Shared Asset Evidence Repair**: Repaired H5.0 shared asset evidence with labeled metadata sheets, cleanup pilot previews, and derived-output transparency documentation. Human/Codex review rejected the original H5.0 evidence images as insufficient. H5.0B repairs the evidence layer and pilots checkerboard cleanup on derived copies only.
 
 * **H5.0 Shared Asset Domain Mapping**: Mapped shared-core, shared-fx, and ui domains as first shared asset manifest targets. Fake checkerboard cleanup requires derived outputs and evidence. Manifests are draft until human review. No runtime wiring occurred in this pass.

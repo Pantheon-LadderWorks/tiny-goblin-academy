@@ -313,3 +313,9 @@ Manifests should define:
 * Checkerboard cleanup was piloted on derived copies only for static shared-core and UI/HUD sheets.
 * `shared-fx` cleanup is deferred because the source is RGB/JPEG-format with no alpha and requires a separate high-risk strategy.
 * No runtime wiring occurred in this pass.
+
+## H5.1 Note (Reusable Asset Pipeline Toolkit)
+* H5.1 adds reusable script toolkit doctrine and an initial `scripts/asset-pipeline/` scaffold.
+* Asset processing is type-specific: static UI/icon sheets, animation sheets, backgrounds, tiles, and FX do not share the same pipeline.
+* Cleanup scripts are derived-output only and must produce reviewable evidence.
+* Lane scripts are help-only stubs in this pass; no runtime wiring occurred.
