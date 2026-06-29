@@ -32,7 +32,7 @@ body {
   flex-direction: column;
 }
 
-/* Boot Screen */
+/* Boot Screen - Modern Hero (H4.5) */
 .boot-screen {
   flex: 1;
   display: flex;
@@ -42,25 +42,49 @@ body {
   text-align: center;
 }
 
-.studio-mark {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+.hero-boot {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.academy-identity {
-  font-size: 3rem;
+.boot-overlay-c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* subtle darkening if needed, though relying on image mostly */
+  background: radial-gradient(circle at center, transparent 30%, rgba(10, 10, 15, 0.4) 100%);
+}
+
+.boot-title-hero {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: bold;
   color: var(--accent-gold);
-  margin-bottom: 1rem;
+  margin-top: calc(50vh - 8rem);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(254, 202, 87, 0.2);
+  font-family: 'Georgia', serif;
 }
 
-.loading-phrase {
-  font-size: 1.2rem;
+.boot-lower-status {
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.boot-loading-phrase {
+  font-size: 1.3rem;
   color: var(--accent-teal);
   animation: pulse 1.5s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
 }
 
 @keyframes pulse {
@@ -70,12 +94,19 @@ body {
 }
 
 .boot-skip-button {
-  margin-top: 2rem;
-  background: transparent;
+  background: rgba(20, 20, 30, 0.8);
   color: var(--text-muted);
   border: 1px solid var(--border-color);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.boot-skip-button:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
 }
 
 /* Hub Shell */
@@ -94,10 +125,27 @@ body {
   align-items: center;
 }
 
-.hub-title {
-  margin: 0;
-  color: var(--accent-gold);
-  font-size: 1.8rem;
+.hub-title-banner-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: min(360px, 38vw);
+  padding: 6px 10px;
+  border: 1px solid rgba(254, 202, 87, 0.45);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.96), rgba(9, 11, 18, 0.96));
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(90, 65, 35, 0.45),
+    0 0 18px rgba(254, 202, 87, 0.08);
+}
+
+.hub-title-banner {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
 }
 
 .hub-tagline {

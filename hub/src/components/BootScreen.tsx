@@ -7,19 +7,30 @@ interface BootScreenProps {
 
 export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
   return (
-    <div className="boot-screen">
-      <img src={bootSplash} alt="Glyphforge Games Concept Splash" style={{ maxWidth: '400px', marginBottom: '2rem' }} />
-      <div className="studio-mark">Glyphforge Games (Draft)</div>
-      <div className="academy-identity">Tiny Goblin Academy</div>
-      <div className="loading-phrase">Opening the Academy...</div>
-      
-      {/* Optional manual button if they don't want to wait for the timer in App.tsx */}
-      <button 
-        className="boot-skip-button"
-        onClick={onComplete}
-      >
-        Skip
-      </button>
+    <div 
+      className="boot-screen hero-boot"
+      style={{
+        backgroundImage: `url(${bootSplash})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="boot-overlay-c">
+        <h1 className="boot-title-hero">Tiny Goblin Academy</h1>
+        
+        <div className="boot-lower-status">
+          <div className="boot-loading-phrase">Opening the Academy...</div>
+          
+          {/* Optional manual button if they don't want to wait for the timer in App.tsx */}
+          <button 
+            className="boot-skip-button modern"
+            onClick={onComplete}
+          >
+            Skip
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

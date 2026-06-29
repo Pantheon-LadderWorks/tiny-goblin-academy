@@ -75,3 +75,7 @@ Responsive placement mockups (1280, 1600, 1920) and standalone preview sheets we
 ## H4.4 Main Glyphforge Boot Surface Modernization Evidence
 
 Created full-screen hero responsive mockups and overlay variation sheets based on `glyphforge-games-boot-splash-concept.png` to modernize the main application boot experience. Boot assets were documented in `manifests/boot.identity-assets.json`. Pending human review before runtime wiring in a combined H4.5 pass.
+
+## H4.5 Hub Banner & Main Boot Runtime Integration
+
+Performed the combined runtime wiring of both the H4.3 Hub Banner and the H4.4 Boot Screen. The banner was integrated into the hub header inside a CSS plaque/frame treatment to elegantly contrast the dark artwork with the app background. The boot screen was modernized into a full-screen hero image using Layout C (Centered Title + Lower Status). Both integrations were validated successfully via a packaged Tauri build.

@@ -7,7 +7,7 @@ import { GameStatus, HubRuntimeStatus } from '../types/RuntimeStatus'
 import { DevGameRuntimeView, ActiveDevGameRuntime } from './DevGameRuntimeView'
 import { GameLaunchBootScreen } from './GameLaunchBootScreen'
 import { invoke } from '@tauri-apps/api/core'
-
+import tgaBanner from '../../../assets/academy/hub/banner/tga-hub-banner-source-v0.1.png'
 export const HubShell: React.FC = () => {
   const [selectedGame, setSelectedGame] = useState<GameManifest | null>(null)
   const [diagnostic, setDiagnostic] = useState<string | null>(null)
@@ -120,7 +120,9 @@ export const HubShell: React.FC = () => {
     <div className="hub-shell">
       <header className="hub-header">
         <div>
-          <h1 className="hub-title">Tiny Goblin Academy</h1>
+          <div className="hub-title-banner-frame">
+            <img src={tgaBanner} alt="Tiny Goblin Academy" className="hub-title-banner" />
+          </div>
           <div className="hub-tagline">Tier 1 Dashboard Catalog (Read-Only)</div>
           <div className="tier-summary">
             <span>Progress: {historicalPassCount}/10 Passed</span> &bull; <span>{sourceAvailableCount}/10 Source Available</span> &bull; <span>{deferredCount} Deferred</span>
