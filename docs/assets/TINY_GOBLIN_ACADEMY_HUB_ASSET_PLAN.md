@@ -42,3 +42,17 @@ We will skip these for now to avoid scope bloat. These are future-state polish i
 * It checks the icon sheet path, grid bounds, duplicate cells, and gameId/slug alignment with `academy.games.json`.
 * It does not crop or export icons.
 * It does not create a full asset pipeline.
+
+## H4.1 Hub Visual Identity + Main Boot Asset Plan
+
+Full surface-by-surface hub identity contracts, boot design direction, proposed manifest strategy, evidence stack, and H4.2–H4.9 next prompt sequence are documented in:
+
+`docs/assets/TINY_GOBLIN_ACADEMY_H4_1_HUB_VISUAL_IDENTITY_AND_BOOT_PLAN.md`
+
+Key decisions captured:
+* The TGA banner source replaces the top-left DOM title text (not yet wired).
+* The main Glyphforge boot screen should use a full-screen hero treatment (image fills window, text overlaid).
+* The hub game icon sheet is the only fully live hub identity surface as of H4.1.
+* App icon / favicon export pipeline is H4.2.
+* Per-game loading screens are future-scope, not part of H4.1.
+
