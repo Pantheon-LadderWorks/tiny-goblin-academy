@@ -71,3 +71,7 @@ A local tooling audit confirmed Python and Pillow were available, so a multi-siz
 ## H4.3 Main Hub Banner Placement Evidence
 
 Responsive placement mockups (1280, 1600, 1920) and standalone preview sheets were generated for the `tga-hub-banner-source-v0.1.png` banner to visualize its integration into the hub header zone. A draft hub identity manifest was created to track it. The asset is pending human review before runtime wiring.
+
+## H4.4 Main Glyphforge Boot Surface Modernization Evidence
+
+Created full-screen hero responsive mockups and overlay variation sheets based on `glyphforge-games-boot-splash-concept.png` to modernize the main application boot experience. Boot assets were documented in `manifests/boot.identity-assets.json`. Pending human review before runtime wiring in a combined H4.5 pass.

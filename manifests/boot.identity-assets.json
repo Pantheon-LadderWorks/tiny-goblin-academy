@@ -1,0 +1,33 @@
+﻿{
+  "schemaVersion": "0.1",
+  "status": "draft-candidate",
+  "assets": [
+    {
+      "assetId": "glyphforge-games-boot-splash-concept",
+      "role": "main-app-boot-hero",
+      "sourcePath": "assets/studio/glyphforge-games/glyphforge-games-boot-splash-concept.png",
+      "derivedPath": null,
+      "lifecycleState": "concept-source",
+      "readinessState": [
+        "metadata-inspected",
+        "evidence-generated",
+        "pending-human-review"
+      ],
+      "usageSurface": "main-app-boot",
+      "requiredEvidence": [
+        "full-window-boot-mock",
+        "text-status-overlay-mock",
+        "responsive-viewport-preview"
+      ],
+      "evidenceDirectory": "assets/studio/glyphforge-games/evidence/h4-4",
+      "reviewStatus": "pending-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Main app boot surface only.",
+        "Per-game loading screens are deferred.",
+        "Desired final direction is full-screen hero treatment with overlay text/status.",
+        "Do not use as a small inset image above text."
+      ]
+    }
+  ]
+}
