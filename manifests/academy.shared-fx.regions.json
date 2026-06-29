@@ -7,9 +7,10 @@
   "transparency": {
     "sourceHasAlpha": false,
     "sourceAlphaUsable": false,
-    "background": "baked-checkerboard-jpeg",
+    "background": "baked-checkerboard-jpeg-rgb",
     "cleanupRequired": true,
-    "cleanupStatus": "planned"
+    "cleanupStatus": "deferred-high-risk",
+    "humanReviewRequired": true
   },
   "regions": [
     {

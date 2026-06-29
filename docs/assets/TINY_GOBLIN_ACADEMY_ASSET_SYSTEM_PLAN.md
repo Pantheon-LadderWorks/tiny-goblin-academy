@@ -306,3 +306,10 @@ Manifests should define:
 * Fake checkerboard cleanup requires derived outputs and evidence.
 * Manifests are draft until human review.
 * No runtime wiring occurred in this pass.
+
+## H5.0B Note (Evidence Repair + Cleanup Pilot)
+* Human/Codex review rejected the original H5.0 evidence images as insufficient.
+* H5.0B repairs the evidence layer with labeled metadata sheets and before/after cleanup evidence.
+* Checkerboard cleanup was piloted on derived copies only for static shared-core and UI/HUD sheets.
+* `shared-fx` cleanup is deferred because the source is RGB/JPEG-format with no alpha and requires a separate high-risk strategy.
+* No runtime wiring occurred in this pass.

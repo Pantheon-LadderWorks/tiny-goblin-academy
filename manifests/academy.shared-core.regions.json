@@ -2,14 +2,15 @@
   "schemaVersion": "0.1",
   "status": "draft",
   "sourceSheet": "assets/academy/shared-core/tga-shared-core-sheet-v0.1.png",
-  "derivedSheet": null,
+  "derivedSheet": "assets/academy/derived-cleaned/shared-core/tga-shared-core-sheet-cleaned-preview-v0.1.png",
   "domain": "shared-core",
   "transparency": {
     "sourceHasAlpha": true,
     "sourceAlphaUsable": false,
     "background": "baked-checkerboard",
     "cleanupRequired": true,
-    "cleanupStatus": "planned"
+    "cleanupStatus": "preview-generated",
+    "humanReviewRequired": true
   },
   "regions": [
     {

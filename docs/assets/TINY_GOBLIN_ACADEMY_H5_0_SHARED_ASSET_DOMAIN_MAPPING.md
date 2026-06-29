@@ -6,6 +6,8 @@ This pass establishes the initial mapping and analysis pipeline for three shared
 ## 2. Human Review Context
 H4.8 stabilized the Tiny Goblin Academy hub layout (grid preservation). H5.0 shifts focus back to the core asset pipeline, beginning with the shared domains that must serve as foundation before animation logic.
 
+> **H5.0B Review Update:** Human/Codex review rejected the original H5.0 evidence images as insufficient. H5.0B repairs the evidence layer and pilots checkerboard cleanup on derived copies only.
+
 ## 3. Source Sheets
 - `assets/academy/shared-core/tga-shared-core-sheet-v0.1.png` (2816x1536, RGBA, Fully opaque baked checkerboard)
 - `assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png` (1024x1024, JPEG, RGB, No alpha channel)
@@ -72,10 +74,11 @@ A dedicated validator (`scripts/validate-academy-shared-asset-regions.mjs`) has 
 - Wiring assets to game code or hub runtime.
 
 ## 15. Human Review Checklist
-- [ ] Review risk assessment for `shared-fx` being a JPEG.
-- [ ] Review inspection images in `assets/academy/evidence/h5-0/`.
+- [ ] Treat original `assets/academy/evidence/h5-0/` images as retained but insufficient evidence.
+- [ ] Review H5.0B replacement evidence under `assets/academy/evidence/h5-0b/`.
+- [ ] Review risk assessment for `shared-fx` being a JPEG/RGB source with no alpha.
 - [ ] Confirm derived asset directory structure (`assets/academy/derived-cleaned/`).
 - [ ] Confirm draft placeholders in manifests.
 
 ## 16. Recommended Next Step
-- **H5.1 — Derived Transparency Preview + Human Review Contact Sheets**: Safely run `clean-fake-transparent-sheet.py` on `shared-core` and `ui` to generate preview derivatives, and address the `shared-fx` JPEG problem. Generate contact sheets for human review.
+- **H5.1 — Reusable Asset Pipeline Script Toolkit Plan + Initial Scaffold**: Turn the cleanup/evidence pattern into reusable type-specific asset pipeline scripts before deeper region mapping.
