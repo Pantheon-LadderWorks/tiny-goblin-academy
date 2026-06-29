@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { tier1Roster, GameManifest } from '../data/tier1Roster'
 import { GameRoster } from './GameRoster'
 import { GameDetailPanel } from './GameDetailPanel'
-import { CreditsPanel } from './CreditsPanel'
 import { GameStatus, HubRuntimeStatus } from '../types/RuntimeStatus'
 import { DevGameRuntimeView, ActiveDevGameRuntime } from './DevGameRuntimeView'
 import { GameLaunchBootScreen } from './GameLaunchBootScreen'
@@ -61,7 +60,6 @@ export const HubShell: React.FC = () => {
 
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
   const sourceAvailableCount = mergedRoster.filter(g => g.sourceAvailable).length;
-  const deferredCount = tier1Roster.filter(g => g.restorationDeferred).length;
 
   const handleCloseRuntime = async () => {
     if (!activeRuntime) return;
@@ -119,33 +117,32 @@ export const HubShell: React.FC = () => {
   return (
     <div className="hub-shell">
       <header className="hub-header">
-        <div>
+        <div className="hub-header-left">
           <div className="hub-title-banner-frame">
             <img src={tgaBanner} alt="Tiny Goblin Academy" className="hub-title-banner" />
           </div>
-          <div className="hub-tagline">Tier 1 Dashboard Catalog (Read-Only)</div>
           <div className="tier-summary">
-            <span>Progress: {historicalPassCount}/10 Passed</span> &bull; <span>{sourceAvailableCount}/10 Source Available</span> &bull; <span>{deferredCount} Deferred</span>
-            {runtimeStatus && (
-              <span style={{ marginLeft: '1rem', backgroundColor: '#334466', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
-                Mode: {runtimeStatus.runtimeMode}
-              </span>
-            )}
+            <span>Level 1-10</span> &bull; <span>{historicalPassCount}/10 Passed</span> &bull; <span>{sourceAvailableCount}/10 Source</span>
           </div>
         </div>
-        <div className="tauri-diagnostic" style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.5rem' }}>
-          {diagnostic ? (
-            <span style={{ backgroundColor: '#2a2a2a', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid #444' }}>
-              ✓ {diagnostic}
-            </span>
-          ) : (
+        
+        <div className="hub-header-right">
+          <div className="hub-status-pills">
+            {runtimeStatus && (
+              <span className="status-pill mode-pill">
+                {runtimeStatus.runtimeMode}
+              </span>
+            )}
+            
             <button 
-              style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', background: 'transparent', border: '1px solid #666', color: '#888', cursor: 'pointer', borderRadius: '4px' }}
+              className={`status-pill ping-btn ${diagnostic ? 'connected' : ''}`}
               onClick={async () => {
+                if (diagnostic) return; // already connected
                 try {
                   const { invoke } = await import('@tauri-apps/api/core');
-                  const res = await invoke<string>('get_diagnostic_info');
-                  setDiagnostic(res);
+                  await invoke<string>('get_diagnostic_info');
+                  // Instead of showing full rust response, just show connected
+                  setDiagnostic('Connected');
                   
                   // Also refresh statuses on ping
                   const gStatuses = await invoke<GameStatus[]>('list_game_statuses');
@@ -155,15 +152,14 @@ export const HubShell: React.FC = () => {
                   }
                   setGameStatuses(statusMap);
                 } catch (e) {
-                  setDiagnostic('Tauri bridge offline/error');
+                  setDiagnostic('Offline');
                 }
               }}
             >
-              Diagnostic: Ping Tauri Bridge
+              Backend: {diagnostic || 'Ping'}
             </button>
-          )}
+          </div>
         </div>
-        <CreditsPanel />
       </header>
       
       <main className="hub-main">
