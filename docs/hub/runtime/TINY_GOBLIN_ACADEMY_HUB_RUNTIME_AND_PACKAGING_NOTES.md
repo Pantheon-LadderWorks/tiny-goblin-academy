@@ -105,3 +105,6 @@ Tauri should be started as the next foundation spike (H3.1) before attempting ma
 * Bundle all Tier 1 games into hub, or allow optional install state?
 * Use embedded WebView vs external browser for game launch?
 * Where should built game artifacts live?
+
+> [!NOTE]
+> **H4.6 Hub Surface Contract Update:** The initial assumption that the hub must not spawn dev servers has been corrected. The hub now acts as a dev-mode launcher capable of explicitly starting trusted local dev servers when a dev game is launched. Additionally, the hub UI is migrating from a fixed web dashboard to a full-screen launcher surface with layered identity, tier-aware horizontal shelves, and future provisions for production/installed mode, Butler integration, account context, and a cross-game ledger (defined in docs/assets/TINY_GOBLIN_ACADEMY_H4_6_HUB_SURFACE_CONTRACT_AND_SCALING_PLAN.md).

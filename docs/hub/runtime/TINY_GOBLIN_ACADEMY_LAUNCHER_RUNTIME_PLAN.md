@@ -175,3 +175,6 @@ Future explicit approval required. Use manifest/package metadata. Prevent concur
 
 ### H3.6 — Static Build / Production Launch Planning
 Future explicit approval required. Revisit static builds, Butler/itch, installed artifacts, and player mode. No raw pnpm for players.
+
+> [!NOTE]
+> **H4.6 Hub Surface Contract Update:** The initial assumption that the hub must not spawn dev servers has been corrected. The hub now acts as a dev-mode launcher capable of explicitly starting trusted local dev servers when a dev game is launched. Additionally, the hub UI is migrating from a fixed web dashboard to a full-screen launcher surface with layered identity, tier-aware horizontal shelves, and future provisions for production/installed mode, Butler integration, account context, and a cross-game ledger (defined in docs/assets/TINY_GOBLIN_ACADEMY_H4_6_HUB_SURFACE_CONTRACT_AND_SCALING_PLAN.md).

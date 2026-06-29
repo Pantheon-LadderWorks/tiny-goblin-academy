@@ -45,3 +45,6 @@ Tier 2 should teach:
 * v0.2 requires a fresh contract.
 * Level 11 requires a fresh contract.
 * Hub and visual pass may happen before Tier 2.
+
+> [!NOTE]
+> **H4.6 Hub Surface Contract Update:** The initial assumption that the hub must not spawn dev servers has been corrected. The hub now acts as a dev-mode launcher capable of explicitly starting trusted local dev servers when a dev game is launched. Additionally, the hub UI is migrating from a fixed web dashboard to a full-screen launcher surface with layered identity, tier-aware horizontal shelves, and future provisions for production/installed mode, Butler integration, account context, and a cross-game ledger (defined in docs/assets/TINY_GOBLIN_ACADEMY_H4_6_HUB_SURFACE_CONTRACT_AND_SCALING_PLAN.md).
