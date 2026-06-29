@@ -1,0 +1,33 @@
+﻿{
+  "schemaVersion": "0.1",
+  "status": "draft-candidate",
+  "assets": [
+    {
+      "assetId": "tga-hub-banner-source-v0.1",
+      "role": "hub-header-banner",
+      "sourcePath": "assets/academy/hub/banner/tga-hub-banner-source-v0.1.png",
+      "derivedPath": null,
+      "lifecycleState": "registered-source",
+      "readinessState": [
+        "metadata-inspected",
+        "evidence-generated",
+        "pending-human-review"
+      ],
+      "usageSurface": "hub-header",
+      "requiredEvidence": [
+        "header-placement-mock",
+        "banner-responsive-preview",
+        "dark-background-preview",
+        "light-background-preview"
+      ],
+      "evidenceDirectory": "assets/academy/hub/banner/evidence/h4-3",
+      "reviewStatus": "pending-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Target placement is the current top-left hub title zone.",
+        "Subtitle/status DOM text should remain DOM text.",
+        "Do not use as a giant baked hub background."
+      ]
+    }
+  ]
+}

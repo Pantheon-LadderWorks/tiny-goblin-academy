@@ -68,3 +68,6 @@ The H4.2 candidate PNG exports were approved by human review and integrated dire
 
 A local tooling audit confirmed Python and Pillow were available, so a multi-size `.ico` candidate was generated and integrated into Tauri's `icon.ico`. The basic web placeholder `hub/public/favicon.svg` was replaced with an SVG embedding the approved PNG icon as base64. The unreferenced placeholder `icons.svg` was documented as obsolete.
 
+## H4.3 Main Hub Banner Placement Evidence
+
+Responsive placement mockups (1280, 1600, 1920) and standalone preview sheets were generated for the `tga-hub-banner-source-v0.1.png` banner to visualize its integration into the hub header zone. A draft hub identity manifest was created to track it. The asset is pending human review before runtime wiring.
