@@ -60,3 +60,7 @@ Key decisions captured:
 
 Candidate PNG exports (16-512px) and visual evidence have been generated from the TGA icon source, along with a draft `favicon.exports.json`. These are currently candidates and must pass human review before being wired into Tauri or web platforms.
 
+## H4.2B Tauri App Icon Integration
+
+The H4.2 candidate PNG exports were approved by human review and integrated directly into the `hub/src-tauri/icons/` directory. The `.ico` configuration was left untouched because no safe dependency-free tool was available to regenerate it locally, but Tauri natively handles the PNG fallbacks gracefully.
+

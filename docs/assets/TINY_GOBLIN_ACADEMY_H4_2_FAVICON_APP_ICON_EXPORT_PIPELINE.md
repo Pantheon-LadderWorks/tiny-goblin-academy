@@ -1,4 +1,4 @@
-﻿# Tiny Goblin Academy — H4.2 Favicon / App Icon Export Pipeline
+# Tiny Goblin Academy — H4.2 Favicon / App Icon Export Pipeline
 
 ## Task Name
 
@@ -107,6 +107,8 @@ A draft manifest was generated to formally map the candidate exports. It is curr
 ---
 
 ## Runtime Eligibility Status
+
+**[UPDATE: H4.2B]** The H4.2 icon exports have been APPROVED by human review and integrated into Tauri targets.
 
 > [!WARNING]
 > The H4.2 icon exports are candidate assets only. They must not be wired into Tauri or web favicon targets until Kryssie approves the evidence.

@@ -1,27 +1,61 @@
 ﻿{
-  "schemaVersion": "0.1",
-  "status": "draft-candidate",
-  "sourcePath": "assets/academy/branding/icon-source/tga-icon-source-v0.1.png",
-  "exportSetId": "tga-icon-h4-2-candidate",
-  "outputDirectory": "assets/academy/branding/icon-exports/candidate/h4-2",
-  "evidenceDirectory": "assets/academy/branding/icon-exports/evidence/h4-2",
-  "reviewStatus": "pending-human-review",
-  "platformTargets": [
-    "windows",
-    "tauri",
-    "web-favicon"
-  ],
-  "exports": [
-    { "size": 16, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-16.png" },
-    { "size": 32, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-32.png" },
-    { "size": 48, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-48.png" },
-    { "size": 64, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-64.png" },
-    { "size": 128, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-128.png" },
-    { "size": 256, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-256.png" },
-    { "size": 512, "format": "png", "path": "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-512.png" }
-  ],
-  "icoCandidate": null,
-  "notes": [
-    "Generated via C# System.Drawing.Image HighQualityBicubic interpolation."
-  ]
+    "schemaVersion":  "0.1",
+    "status":  "approved-for-tauri-integration",
+    "sourcePath":  "assets/academy/branding/icon-source/tga-icon-source-v0.1.png",
+    "exportSetId":  "tga-icon-h4-2-candidate",
+    "outputDirectory":  "assets/academy/branding/icon-exports/candidate/h4-2",
+    "evidenceDirectory":  "assets/academy/branding/icon-exports/evidence/h4-2",
+    "reviewStatus":  "approved-by-human-review",
+    "platformTargets":  [
+                            "windows",
+                            "tauri",
+                            "web-favicon"
+                        ],
+    "exports":  [
+                    {
+                        "size":  16,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-16.png"
+                    },
+                    {
+                        "size":  32,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-32.png"
+                    },
+                    {
+                        "size":  48,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-48.png"
+                    },
+                    {
+                        "size":  64,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-64.png"
+                    },
+                    {
+                        "size":  128,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-128.png"
+                    },
+                    {
+                        "size":  256,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-256.png"
+                    },
+                    {
+                        "size":  512,
+                        "format":  "png",
+                        "path":  "assets/academy/branding/icon-exports/candidate/h4-2/tga-icon-512.png"
+                    }
+                ],
+    "icoCandidate":  null,
+    "notes":  [
+                  "Generated via C# System.Drawing.Image HighQualityBicubic interpolation."
+              ],
+    "reviewedBy":  "Kryssie + Mega",
+    "reviewNotes":  [
+                        "Approved for current Windows/Tauri app icon integration.",
+                        "16x16 preserves identity but is not fully letter-legible.",
+                        "Future optional polish may create a simplified micro-favicon for tiny web-tab sizes."
+                    ]
 }
