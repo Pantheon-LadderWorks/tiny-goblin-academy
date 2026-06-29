@@ -93,6 +93,17 @@ export interface DevGameProcessStatus {
   startedAt: string | null;
   packageName: string | null;
   errorState: string | null;
+  updatedAt: string | null;
+  commandLabel: string | null;
+  workspaceRoot: string | null;
+  cwdUsed: string | null;
+  spawnAttempted: boolean;
+  spawnSucceeded: boolean;
+  readinessAttempts: number;
+  lastReadinessError: string | null;
+  stdoutTail: string;
+  stderrTail: string;
+  blockedReason: string | null;
 }
 
 export interface LaunchDevGameResult {

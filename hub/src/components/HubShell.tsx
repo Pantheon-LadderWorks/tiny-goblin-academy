@@ -5,6 +5,7 @@ import { GameDetailPanel } from './GameDetailPanel'
 import { CreditsPanel } from './CreditsPanel'
 import { GameStatus, HubRuntimeStatus } from '../types/RuntimeStatus'
 import { DevGameRuntimeView, ActiveDevGameRuntime } from './DevGameRuntimeView'
+import { GameLaunchBootScreen } from './GameLaunchBootScreen'
 import { invoke } from '@tauri-apps/api/core'
 
 export const HubShell: React.FC = () => {
@@ -14,6 +15,7 @@ export const HubShell: React.FC = () => {
   const [gameStatuses, setGameStatuses] = useState<Record<string, GameStatus>>({})
   const [activeRuntime, setActiveRuntime] = useState<ActiveDevGameRuntime | null>(null)
   const [isStoppingRuntime, setIsStoppingRuntime] = useState(false)
+  const [bootingGame, setBootingGame] = useState<GameManifest | null>(null)
 
   useEffect(() => {
     async function initTauri() {
@@ -76,6 +78,33 @@ export const HubShell: React.FC = () => {
       refreshGameStatus(gid);
     }
   };
+
+  if (bootingGame) {
+    return (
+      <GameLaunchBootScreen 
+        game={bootingGame} 
+        onCancel={async () => {
+          try {
+            await invoke('stop_dev_game', { gameId: bootingGame.id });
+          } catch(e) {
+            console.error("Failed to stop dev game on boot cancel", e);
+          }
+          setBootingGame(null);
+        }} 
+        onReady={(status) => {
+          setBootingGame(null);
+          setActiveRuntime({ 
+            gameId: bootingGame.id, 
+            title: bootingGame.title,
+            url: status.url || `http://127.0.0.1:${status.port}`,
+            port: status.port || 5100,
+            pid: status.pid,
+            startedAt: status.startedAt
+          });
+        }} 
+      />
+    );
+  }
 
   if (activeRuntime) {
     return (
@@ -146,7 +175,11 @@ export const HubShell: React.FC = () => {
           game={selectedGameMerged} 
           onClose={() => setSelectedGame(null)} 
           onGameUpdate={refreshGameStatus}
-          onLaunchSuccess={(runtime) => setActiveRuntime(runtime)}
+          onLaunchDevBoot={(game) => {
+            invoke('launch_dev_game', { gameId: game.id })
+              .catch(e => console.error("Failed to invoke launch_dev_game on boot start", e));
+            setBootingGame(game);
+          }}
         />
       </main>
     </div>

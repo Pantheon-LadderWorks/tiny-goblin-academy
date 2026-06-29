@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { GameManifest } from '../data/tier1Roster'
+import type { GameManifest } from '../data/tier1Roster'
 import { hubIconRegions } from '../data/hubIconRegions'
 import { SpriteFrame } from './SpriteFrame'
 import { invoke } from '@tauri-apps/api/core'
-import { InstallDevDependenciesResult, UninstallDevDependenciesResult, DevGameProcessStatus, LaunchDevGameResult, StopDevGameResult } from '../types/RuntimeStatus'
-import { ActiveDevGameRuntime } from './DevGameRuntimeView'
+import type { InstallDevDependenciesResult, UninstallDevDependenciesResult, DevGameProcessStatus, StopDevGameResult } from '../types/RuntimeStatus'
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
   onClose: () => void;
   onGameUpdate?: (gameId: string) => void;
-  onLaunchSuccess?: (runtime: ActiveDevGameRuntime) => void;
+  onLaunchDevBoot?: (game: GameManifest) => void;
 }
 
-export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate, onLaunchSuccess }) => {
+export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate, onLaunchDevBoot }) => {
   const [installing, setInstalling] = useState(false);
   const [installResult, setInstallResult] = useState<InstallDevDependenciesResult | null>(null);
   
   const [uninstalling, setUninstalling] = useState(false);
   const [uninstallResult, setUninstallResult] = useState<UninstallDevDependenciesResult | null>(null);
-
-  const [launching, setLaunching] = useState(false);
-  const [launchResult, setLaunchResult] = useState<LaunchDevGameResult | null>(null);
   
   const [stopping, setStopping] = useState(false);
   const [stopResult, setStopResult] = useState<StopDevGameResult | null>(null);
@@ -45,60 +41,10 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
     return () => clearInterval(interval);
   }, [game?.id]);
 
-  const [pendingAutoJump, setPendingAutoJump] = useState(false);
-
-  useEffect(() => {
-    if (pendingAutoJump && processStatus?.status === 'running' && onLaunchSuccess && game) {
-      setPendingAutoJump(false);
-      setLaunching(false);
-      onLaunchSuccess({
-        gameId: game.id,
-        title: game.title,
-        url: processStatus.url || `http://127.0.0.1:${processStatus.port}`,
-        port: processStatus.port || 5100,
-        pid: processStatus.pid,
-        startedAt: processStatus.startedAt,
-      });
-    }
-    if (pendingAutoJump && processStatus?.status === 'failed') {
-      setPendingAutoJump(false);
-      setLaunching(false);
-    }
-  }, [processStatus, pendingAutoJump, onLaunchSuccess, game]);
-
-  const handleLaunchDevGame = async () => {
+  const handleLaunchDevGame = () => {
     if (!game) return;
-    const confirmed = window.confirm(`Are you sure you want to launch the dev server for ${game.title}?`);
-    if (!confirmed) return;
-
-    setLaunching(true);
-    setLaunchResult(null);
-    setStopResult(null);
-    setPendingAutoJump(true);
-    
-    try {
-      const result = await invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
-      setLaunchResult(result);
-      if (onGameUpdate) onGameUpdate(game.id);
-      refreshProcessStatus();
-    } catch (e) {
-      console.error(e);
-      setPendingAutoJump(false);
-      setLaunchResult({
-        gameId: game.id,
-        ok: false,
-        launchAttempted: false,
-        commandLabel: 'Unknown',
-        pid: null,
-        url: null,
-        port: null,
-        startedAt: null,
-        stdoutTail: '',
-        stderrTail: '',
-        blockedReason: String(e),
-        errorState: String(e)
-      });
-      setLaunching(false);
+    if (onLaunchDevBoot) {
+      onLaunchDevBoot(game);
     }
   };
 
@@ -285,29 +231,13 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
             <button className="btn" disabled={!game.devUninstallDepsAvailable || uninstalling} onClick={handleUninstallDeps}>
               {uninstalling ? "Uninstalling..." : "Uninstall Dev Deps"}
             </button>
-            {processStatus?.running ? (
-              <>
-                <button className="btn stop-btn" disabled={stopping} onClick={handleStopDevGame}>
-                  {stopping ? "Stopping..." : "Stop Dev Server"}
-                </button>
-                <button className="btn launch-btn" onClick={() => {
-                  if (onLaunchSuccess) {
-                    onLaunchSuccess({
-                      gameId: game.id,
-                      title: game.title,
-                      url: processStatus.url || `http://127.0.0.1:${processStatus.port}`,
-                      port: processStatus.port || 5100,
-                      pid: processStatus.pid,
-                      startedAt: processStatus.startedAt,
-                    });
-                  }
-                }}>
-                  Jump to Game
-                </button>
-              </>
-            ) : (
-              <button className="btn launch-btn" disabled={!game.devLaunchAvailable || launching || processStatus?.status === 'launching'} onClick={handleLaunchDevGame}>
-                {launching || processStatus?.status === 'launching' ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Game" : "Launch Blocked")}
+            <div style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <button className="btn launch-btn" disabled={!game.devLaunchAvailable || processStatus?.status === 'launching'} onClick={handleLaunchDevGame}>
+              {processStatus?.status === 'running' ? "Resume Game" : processStatus?.status === 'launching' ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Game" : "Launch Blocked")}
+            </button>
+            {processStatus?.running && (
+              <button className="btn stop-btn" disabled={stopping} onClick={handleStopDevGame}>
+                {stopping ? "Stopping..." : "Stop Dev Server"}
               </button>
             )}
             {!game.devLaunchAvailable && game.devLaunchBlockedReason && !processStatus?.running && (
@@ -315,22 +245,7 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
                 Reason: {game.devLaunchBlockedReason}
               </p>
             )}
-
-            {processStatus?.running && (
-              <div className="process-status" style={{ width: '100%', marginTop: '0.5rem', padding: '0.75rem', backgroundColor: '#1e3a1e', borderRadius: '4px', border: '1px solid #4caf50' }}>
-                <h5 style={{ margin: '0 0 0.5rem 0', color: '#81c784' }}>Dev Server Running</h5>
-                <p style={{ margin: '0 0 0.25rem 0', fontSize: '0.85rem' }}>URL: <a href={processStatus.url || '#'} target="_blank" rel="noreferrer" style={{ color: '#81c784' }}>{processStatus.url}</a></p>
-                <p style={{ margin: '0', fontSize: '0.85rem', color: '#aaa' }}>PID: {processStatus.pid} | Port: {processStatus.port}</p>
-              </div>
-            )}
-
-            {launchResult && !launchResult.ok && (
-              <div className="launch-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: '1px solid #c62828' }}>
-                <h5 style={{ margin: '0 0 0.5rem 0', color: '#f44336' }}>Launch Failed</h5>
-                {launchResult.blockedReason && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ffb3b3' }}>Reason: {launchResult.blockedReason}</p>}
-                {launchResult.errorState && <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#ff8a80' }}>Error: {launchResult.errorState}</p>}
-              </div>
-            )}
+            </div>
 
             {stopResult && !stopResult.ok && (
               <div className="stop-result" style={{ width: '100%', marginTop: '1rem', padding: '1rem', backgroundColor: '#1e1e1e', borderRadius: '4px', border: '1px solid #c62828' }}>

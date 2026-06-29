@@ -17,6 +17,17 @@ pub struct TrackedProcess {
     pub started_at: String,
     pub package_name: String,
     pub error_state: Option<String>,
+    pub updated_at: Option<String>,
+    pub command_label: Option<String>,
+    pub workspace_root: Option<String>,
+    pub cwd_used: Option<String>,
+    pub spawn_attempted: bool,
+    pub spawn_succeeded: bool,
+    pub readiness_attempts: u32,
+    pub last_readiness_error: Option<String>,
+    pub stdout_tail: String,
+    pub stderr_tail: String,
+    pub blocked_reason: Option<String>,
 }
 
 pub struct DevProcessManager {
@@ -511,14 +522,22 @@ fn launch_dev_game(
         }
     }
 
-    let port = if game_id.starts_with("level-") {
-        if let Ok(num) = game_id["level-".len()..].parse::<u16>() {
-            5100 + num
+    let port = if game_id.starts_with("tga-") {
+        let parts: Vec<&str> = game_id.split('-').collect();
+        if parts.len() >= 2 {
+            if let Ok(num) = parts[1].parse::<u16>() {
+                5100 + num
+            } else {
+                result.blocked_reason = Some(format!("Failed to parse level number from game ID '{}'", game_id));
+                return Ok(result);
+            }
         } else {
-            5100
+            result.blocked_reason = Some(format!("Invalid game ID format '{}'", game_id));
+            return Ok(result);
         }
     } else {
-        5100
+        result.blocked_reason = Some(format!("Unrecognized game ID prefix '{}'", game_id));
+        return Ok(result);
     };
 
     // Pre-check if port is already in use
@@ -533,6 +552,11 @@ fn launch_dev_game(
         .as_secs()
         .to_string();
 
+    let command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {} --strictPort", package_name, port);
+    result.command_label = command_label.clone();
+    result.launch_attempted = true;
+    result.ok = true; // Indicates job was accepted
+
     {
         let mut processes = state.processes.lock().unwrap();
         processes.insert(game_id.clone(), TrackedProcess {
@@ -542,46 +566,104 @@ fn launch_dev_game(
             started_at: started_at.clone(),
             package_name: package_name.clone(),
             error_state: None,
+            updated_at: Some(started_at.clone()),
+            command_label: Some(command_label),
+            workspace_root: Some(root.to_string_lossy().to_string()),
+            cwd_used: Some(root.to_string_lossy().to_string()),
+            spawn_attempted: false,
+            spawn_succeeded: false,
+            readiness_attempts: 0,
+            last_readiness_error: None,
+            stdout_tail: "".to_string(),
+            stderr_tail: "".to_string(),
+            blocked_reason: None,
         });
     }
-
-    result.command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {} --strictPort", package_name, port);
-    result.launch_attempted = true;
-    result.ok = true; // Indicates job was accepted
 
     let g_id = game_id.clone();
     
     std::thread::spawn(move || {
         let state = app_handle.state::<DevProcessManager>();
         
+        {
+            let mut processes = state.processes.lock().unwrap();
+            if let Some(tracked) = processes.get_mut(&g_id) {
+                tracked.spawn_attempted = true;
+            }
+        }
+
         #[cfg(target_os = "windows")]
         let mut cmd = Command::new("cmd");
         #[cfg(target_os = "windows")]
+        cmd.args(["/C", "pnpm"]);
+        #[cfg(not(target_os = "windows"))]
+        let mut cmd = Command::new("pnpm");
+
+        cmd.args(["--filter", &package_name, "exec", "vite", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
+
+        #[cfg(target_os = "windows")]
         {
             use std::os::windows::process::CommandExt;
-            cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
             cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
         }
 
-        #[cfg(not(target_os = "windows"))]
-        let mut cmd = Command::new("pnpm");
-        #[cfg(not(target_os = "windows"))]
-        cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
-
         cmd.current_dir(&root);
-        cmd.stdout(Stdio::null());
-        cmd.stderr(Stdio::null());
+        let log_dir = root.join("hub/src-tauri/.dev-runtime-logs");
+        let _ = std::fs::create_dir_all(&log_dir);
+        let log_out_path = log_dir.join(format!("{}_out.log", g_id));
+        let log_err_path = log_dir.join(format!("{}_err.log", g_id));
+
+        if let Ok(f) = std::fs::File::create(&log_out_path) {
+            cmd.stdout(Stdio::from(f));
+        } else {
+            cmd.stdout(Stdio::null());
+        }
+
+        if let Ok(f) = std::fs::File::create(&log_err_path) {
+            cmd.stderr(Stdio::from(f));
+        } else {
+            cmd.stderr(Stdio::null());
+        }
+
+        fn read_tail(path: &PathBuf) -> String {
+            if let Ok(content) = std::fs::read_to_string(path) {
+                let limit = 2000;
+                if content.len() > limit {
+                    format!("...{}", &content[content.len() - limit..])
+                } else {
+                    content
+                }
+            } else {
+                "".to_string()
+            }
+        }
 
         match cmd.spawn() {
             Ok(mut child) => {
+                {
+                    let mut processes = state.processes.lock().unwrap();
+                    if let Some(tracked) = processes.get_mut(&g_id) {
+                        tracked.spawn_succeeded = true;
+                    }
+                }
+
                 let mut ready = false;
-                for _ in 0..30 {
+                let mut exit_status = None;
+                for i in 1..=30 {
+                    {
+                        let mut processes = state.processes.lock().unwrap();
+                        if let Some(tracked) = processes.get_mut(&g_id) {
+                            tracked.readiness_attempts = i;
+                        }
+                    }
+
                     std::thread::sleep(std::time::Duration::from_millis(500));
                     if std::net::TcpStream::connect(("127.0.0.1", port)).is_ok() {
                         ready = true;
                         break;
                     }
-                    if let Ok(Some(_)) = child.try_wait() {
+                    if let Ok(Some(status)) = child.try_wait() {
+                        exit_status = Some(status);
                         break;
                     }
                 }
@@ -604,10 +686,21 @@ fn launch_dev_game(
                     let _ = child.kill();
                     let _ = child.wait();
                     
+                    let out_tail = read_tail(&log_out_path);
+                    let err_tail = read_tail(&log_err_path);
+
                     let mut processes = state.processes.lock().unwrap();
                     if let Some(tracked) = processes.get_mut(&g_id) {
                         tracked.status = "failed".to_string();
-                        tracked.error_state = Some("Dev server failed to become ready on expected port within 15 seconds".to_string());
+                        tracked.stdout_tail = out_tail;
+                        tracked.stderr_tail = err_tail;
+                        if let Some(status) = exit_status {
+                            tracked.error_state = Some(format!("Process exited early with status: {}", status));
+                            tracked.last_readiness_error = Some("Process exited instead of binding to port".to_string());
+                        } else {
+                            tracked.error_state = Some("Dev server failed to become ready on expected port within 15 seconds".to_string());
+                            tracked.last_readiness_error = Some("Timeout waiting for TCP port".to_string());
+                        }
                     }
                 }
             }
@@ -616,6 +709,7 @@ fn launch_dev_game(
                 if let Some(tracked) = processes.get_mut(&g_id) {
                     tracked.status = "failed".to_string();
                     tracked.error_state = Some(format!("Failed to spawn process: {}", e));
+                    tracked.last_readiness_error = Some(e.to_string());
                 }
             }
         }
@@ -715,6 +809,17 @@ fn list_dev_game_processes(state: State<'_, DevProcessManager>) -> Result<Vec<De
             started_at: Some(tracked.started_at.clone()),
             package_name: Some(tracked.package_name.clone()),
             error_state: tracked.error_state.clone(),
+            updated_at: tracked.updated_at.clone(),
+            command_label: tracked.command_label.clone(),
+            workspace_root: tracked.workspace_root.clone(),
+            cwd_used: tracked.cwd_used.clone(),
+            spawn_attempted: tracked.spawn_attempted,
+            spawn_succeeded: tracked.spawn_succeeded,
+            readiness_attempts: tracked.readiness_attempts,
+            last_readiness_error: tracked.last_readiness_error.clone(),
+            stdout_tail: tracked.stdout_tail.clone(),
+            stderr_tail: tracked.stderr_tail.clone(),
+            blocked_reason: tracked.blocked_reason.clone(),
         });
 
         if tracked.status == "stopped" || (tracked.status == "failed" && child_exited) {

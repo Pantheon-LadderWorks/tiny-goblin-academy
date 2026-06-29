@@ -95,6 +95,19 @@ pub struct DevGameProcessStatus {
     pub started_at: Option<String>,
     pub package_name: Option<String>,
     pub error_state: Option<String>,
+    
+    // Diagnostic fields
+    pub updated_at: Option<String>,
+    pub command_label: Option<String>,
+    pub workspace_root: Option<String>,
+    pub cwd_used: Option<String>,
+    pub spawn_attempted: bool,
+    pub spawn_succeeded: bool,
+    pub readiness_attempts: u32,
+    pub last_readiness_error: Option<String>,
+    pub stdout_tail: String,
+    pub stderr_tail: String,
+    pub blocked_reason: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

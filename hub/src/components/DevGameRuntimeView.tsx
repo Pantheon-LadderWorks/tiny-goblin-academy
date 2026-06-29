@@ -40,7 +40,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
         </button>
       </header>
       
-      <main className="runtime-content" style={{ flex: 1, position: 'relative' }}>
+      <main className="runtime-content" style={{ flex: 1, position: 'relative', overflow: 'hidden', minHeight: 0 }}>
         <iframe 
           src={runtime.url} 
           title={`Dev Game Runtime: ${runtime.title}`}
