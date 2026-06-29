@@ -102,13 +102,13 @@ manifest.games.forEach((game, index) => {
   if (game.id === 'tga-01') {
     assert(game.level === 1, `tga-01 level must be 1`);
     assert(game.historicallyPassed === true, `tga-01 historicallyPassed must be true`);
-    assert(game.sourceAvailable === false, `tga-01 sourceAvailable must be false`);
-    assert(game.devRunnable === false, `tga-01 devRunnable must be false`);
-    assert(game.buildAvailable === false, `tga-01 buildAvailable must be false`);
-    assert(game.playableAvailable === false, `tga-01 playableAvailable must be false`);
-    assert(game.playableMode === 'none', `tga-01 playableMode must be none`);
-    assert(game.restorationDeferred === true, `tga-01 restorationDeferred must be true`);
-    assert(game.sourcePath === null, `tga-01 sourcePath must be null`);
+    assert(game.sourceAvailable === true, `tga-01 sourceAvailable must be true`);
+    assert(game.devRunnable === true, `tga-01 devRunnable must be true`);
+    assert(game.buildAvailable === true, `tga-01 buildAvailable must be true`);
+    assert(game.playableAvailable === true, `tga-01 playableAvailable must be true`);
+    assert(game.playableMode === 'dev', `tga-01 playableMode must be dev`);
+    assert(game.restorationDeferred === false, `tga-01 restorationDeferred must be false`);
+    assert(game.sourcePath === 'games/tier-1/01-button-goblin-clicker', `tga-01 sourcePath must be games/tier-1/01-button-goblin-clicker`);
   } else {
     // 8. Validate Levels 2-10 expectations
     assert(game.historicallyPassed === true, `Game ${game.id} historicallyPassed must be true`);
@@ -134,6 +134,6 @@ if (errors.length > 0) {
   console.log(` - Path: ${MANIFEST_PATH}`);
   console.log(` - Games count: ${manifest.games.length}`);
   console.log(` - Verified source folders: ${verifiedSourceFolders}`);
-  console.log(` - Level 1 deferred invariant verified`);
+  console.log(` - Level 1 restored invariant verified`);
   process.exit(0);
 }
