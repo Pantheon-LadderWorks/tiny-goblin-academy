@@ -85,6 +85,7 @@ export interface UninstallDevDependenciesResult {
 
 export interface DevGameProcessStatus {
   gameId: string;
+  status: string;
   running: boolean;
   pid: number | null;
   url: string | null;

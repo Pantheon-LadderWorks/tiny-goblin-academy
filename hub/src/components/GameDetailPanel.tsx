@@ -45,6 +45,27 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
     return () => clearInterval(interval);
   }, [game?.id]);
 
+  const [pendingAutoJump, setPendingAutoJump] = useState(false);
+
+  useEffect(() => {
+    if (pendingAutoJump && processStatus?.status === 'running' && onLaunchSuccess && game) {
+      setPendingAutoJump(false);
+      setLaunching(false);
+      onLaunchSuccess({
+        gameId: game.id,
+        title: game.title,
+        url: processStatus.url || `http://127.0.0.1:${processStatus.port}`,
+        port: processStatus.port || 5100,
+        pid: processStatus.pid,
+        startedAt: processStatus.startedAt,
+      });
+    }
+    if (pendingAutoJump && processStatus?.status === 'failed') {
+      setPendingAutoJump(false);
+      setLaunching(false);
+    }
+  }, [processStatus, pendingAutoJump, onLaunchSuccess, game]);
+
   const handleLaunchDevGame = async () => {
     if (!game) return;
     const confirmed = window.confirm(`Are you sure you want to launch the dev server for ${game.title}?`);
@@ -53,27 +74,16 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
     setLaunching(true);
     setLaunchResult(null);
     setStopResult(null);
+    setPendingAutoJump(true);
+    
     try {
-      const invokePromise = invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
-      const timeoutPromise = new Promise<LaunchDevGameResult>((_, reject) => {
-        setTimeout(() => reject(new Error("Frontend timeout: backend took longer than 20 seconds to respond. App is still responsive.")), 20000);
-      });
-      const result = await Promise.race([invokePromise, timeoutPromise]);
+      const result = await invoke<LaunchDevGameResult>('launch_dev_game', { gameId: game.id });
       setLaunchResult(result);
       if (onGameUpdate) onGameUpdate(game.id);
       refreshProcessStatus();
-      if (result.ok && result.url && onLaunchSuccess) {
-        onLaunchSuccess({
-          gameId: game.id,
-          title: game.title,
-          url: result.url,
-          port: result.port || 5100,
-          pid: result.pid,
-          startedAt: result.startedAt,
-        });
-      }
     } catch (e) {
       console.error(e);
+      setPendingAutoJump(false);
       setLaunchResult({
         gameId: game.id,
         ok: false,
@@ -88,7 +98,6 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
         blockedReason: String(e),
         errorState: String(e)
       });
-    } finally {
       setLaunching(false);
     }
   };
@@ -277,12 +286,28 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
               {uninstalling ? "Uninstalling..." : "Uninstall Dev Deps"}
             </button>
             {processStatus?.running ? (
-              <button className="btn stop-btn" disabled={stopping} onClick={handleStopDevGame}>
-                {stopping ? "Stopping..." : "Stop Dev Server"}
-              </button>
+              <>
+                <button className="btn stop-btn" disabled={stopping} onClick={handleStopDevGame}>
+                  {stopping ? "Stopping..." : "Stop Dev Server"}
+                </button>
+                <button className="btn launch-btn" onClick={() => {
+                  if (onLaunchSuccess) {
+                    onLaunchSuccess({
+                      gameId: game.id,
+                      title: game.title,
+                      url: processStatus.url || `http://127.0.0.1:${processStatus.port}`,
+                      port: processStatus.port || 5100,
+                      pid: processStatus.pid,
+                      startedAt: processStatus.startedAt,
+                    });
+                  }
+                }}>
+                  Jump to Game
+                </button>
+              </>
             ) : (
-              <button className="btn launch-btn" disabled={!game.devLaunchAvailable || launching} onClick={handleLaunchDevGame}>
-                {launching ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Game" : "Launch Blocked")}
+              <button className="btn launch-btn" disabled={!game.devLaunchAvailable || launching || processStatus?.status === 'launching'} onClick={handleLaunchDevGame}>
+                {launching || processStatus?.status === 'launching' ? "Launching..." : (game.devLaunchAvailable ? "Launch Dev Game" : "Launch Blocked")}
               </button>
             )}
             {!game.devLaunchAvailable && game.devLaunchBlockedReason && !processStatus?.running && (

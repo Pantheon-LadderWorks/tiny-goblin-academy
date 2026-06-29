@@ -87,6 +87,7 @@ pub struct UninstallDevDependenciesResult {
 #[serde(rename_all = "camelCase")]
 pub struct DevGameProcessStatus {
     pub game_id: String,
+    pub status: String, // "idle", "launching", "running", "failed", "stopping", "stopped"
     pub running: bool,
     pub pid: Option<u32>,
     pub url: Option<String>,

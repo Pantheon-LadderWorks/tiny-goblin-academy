@@ -11,10 +11,12 @@ use std::collections::HashMap;
 use tauri::{State, Manager};
 
 pub struct TrackedProcess {
-    pub child: Child,
+    pub status: String,
+    pub child: Option<Child>,
     pub port: u16,
     pub started_at: String,
     pub package_name: String,
+    pub error_state: Option<String>,
 }
 
 pub struct DevProcessManager {
@@ -409,6 +411,7 @@ fn uninstall_dev_dependencies(game_id: String) -> Result<UninstallDevDependencie
 fn launch_dev_game(
     game_id: String,
     state: State<'_, DevProcessManager>,
+    app_handle: tauri::AppHandle,
 ) -> Result<LaunchDevGameResult, String> {
     let mut result = LaunchDevGameResult {
         game_id: game_id.clone(),
@@ -490,11 +493,20 @@ fn launch_dev_game(
         let mut processes = state.processes.lock().unwrap();
 
         if let Some(tracked) = processes.get_mut(&game_id) {
-            if let Ok(Some(_)) = tracked.child.try_wait() {
-                // exited
-            } else {
-                result.blocked_reason = Some("Game dev server is already running".to_string());
-                return Ok(result);
+            if tracked.status == "launching" || tracked.status == "running" {
+                let mut is_running = true;
+                if let Some(child) = &mut tracked.child {
+                    if let Ok(Some(_)) = child.try_wait() {
+                        is_running = false;
+                    }
+                } else if tracked.status != "launching" {
+                    is_running = false;
+                }
+                
+                if is_running {
+                    result.blocked_reason = Some(format!("Game dev server is already {}", tracked.status));
+                    return Ok(result);
+                }
             }
         }
     }
@@ -521,75 +533,93 @@ fn launch_dev_game(
         .as_secs()
         .to_string();
 
-    #[cfg(target_os = "windows")]
-    let mut cmd = Command::new("cmd");
-    #[cfg(target_os = "windows")]
     {
-        use std::os::windows::process::CommandExt;
-        cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
-        cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+        let mut processes = state.processes.lock().unwrap();
+        processes.insert(game_id.clone(), TrackedProcess {
+            status: "launching".to_string(),
+            child: None,
+            port,
+            started_at: started_at.clone(),
+            package_name: package_name.clone(),
+            error_state: None,
+        });
     }
-
-    #[cfg(not(target_os = "windows"))]
-    let mut cmd = Command::new("pnpm");
-    #[cfg(not(target_os = "windows"))]
-    cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
-
-    cmd.current_dir(&root);
-    cmd.stdout(Stdio::null());
-    cmd.stderr(Stdio::null());
 
     result.command_label = format!("pnpm --filter {} dev -- --host 127.0.0.1 --port {} --strictPort", package_name, port);
     result.launch_attempted = true;
+    result.ok = true; // Indicates job was accepted
 
-    match cmd.spawn() {
-        Ok(mut child) => {
-            // Wait for server to become ready via TCP connect
-            let mut ready = false;
-            for _ in 0..30 {
-                std::thread::sleep(std::time::Duration::from_millis(500));
-                if std::net::TcpStream::connect(("127.0.0.1", port)).is_ok() {
-                    ready = true;
-                    break;
+    let g_id = game_id.clone();
+    
+    std::thread::spawn(move || {
+        let state = app_handle.state::<DevProcessManager>();
+        
+        #[cfg(target_os = "windows")]
+        let mut cmd = Command::new("cmd");
+        #[cfg(target_os = "windows")]
+        {
+            use std::os::windows::process::CommandExt;
+            cmd.args(["/C", "pnpm", "--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
+            cmd.creation_flags(0x08000000); // CREATE_NO_WINDOW
+        }
+
+        #[cfg(not(target_os = "windows"))]
+        let mut cmd = Command::new("pnpm");
+        #[cfg(not(target_os = "windows"))]
+        cmd.args(["--filter", &package_name, "dev", "--", "--host", "127.0.0.1", "--port", &port.to_string(), "--strictPort"]);
+
+        cmd.current_dir(&root);
+        cmd.stdout(Stdio::null());
+        cmd.stderr(Stdio::null());
+
+        match cmd.spawn() {
+            Ok(mut child) => {
+                let mut ready = false;
+                for _ in 0..30 {
+                    std::thread::sleep(std::time::Duration::from_millis(500));
+                    if std::net::TcpStream::connect(("127.0.0.1", port)).is_ok() {
+                        ready = true;
+                        break;
+                    }
+                    if let Ok(Some(_)) = child.try_wait() {
+                        break;
+                    }
                 }
-                if let Ok(Some(_)) = child.try_wait() {
-                    break; // Process died
+
+                if ready {
+                    let mut processes = state.processes.lock().unwrap();
+                    if let Some(tracked) = processes.get_mut(&g_id) {
+                        tracked.child = Some(child);
+                        tracked.status = "running".to_string();
+                    }
+                } else {
+                    #[cfg(target_os = "windows")]
+                    {
+                        use std::os::windows::process::CommandExt;
+                        let _ = Command::new("taskkill")
+                            .args(["/PID", &child.id().to_string(), "/T", "/F"])
+                            .creation_flags(0x08000000)
+                            .output();
+                    }
+                    let _ = child.kill();
+                    let _ = child.wait();
+                    
+                    let mut processes = state.processes.lock().unwrap();
+                    if let Some(tracked) = processes.get_mut(&g_id) {
+                        tracked.status = "failed".to_string();
+                        tracked.error_state = Some("Dev server failed to become ready on expected port within 15 seconds".to_string());
+                    }
                 }
             }
-
-            if ready {
-                result.ok = true;
-                result.pid = Some(child.id());
-                result.port = Some(port);
-                result.url = Some(format!("http://127.0.0.1:{}", port));
-                result.started_at = Some(started_at.clone());
-                
+            Err(e) => {
                 let mut processes = state.processes.lock().unwrap();
-                processes.insert(game_id.clone(), TrackedProcess {
-                    child,
-                    port,
-                    started_at,
-                    package_name,
-                });
-            } else {
-                // Not ready, kill it
-                #[cfg(target_os = "windows")]
-                {
-                    use std::os::windows::process::CommandExt;
-                    let _ = Command::new("taskkill")
-                        .args(["/PID", &child.id().to_string(), "/T", "/F"])
-                        .creation_flags(0x08000000)
-                        .output();
+                if let Some(tracked) = processes.get_mut(&g_id) {
+                    tracked.status = "failed".to_string();
+                    tracked.error_state = Some(format!("Failed to spawn process: {}", e));
                 }
-                let _ = child.kill();
-                let _ = child.wait();
-                result.error_state = Some("Dev server failed to become ready on expected port within 15 seconds".to_string());
             }
         }
-        Err(e) => {
-            result.error_state = Some(format!("Failed to spawn process: {}", e));
-        }
-    }
+    });
 
     Ok(result)
 }
@@ -611,34 +641,41 @@ fn stop_dev_game(
 
     let mut processes = state.processes.lock().unwrap();
     if let Some(mut tracked) = processes.remove(&game_id) {
-        result.pid = Some(tracked.child.id());
-        result.stop_attempted = true;
+        if let Some(mut child) = tracked.child {
+            result.pid = Some(child.id());
+            result.stop_attempted = true;
 
-        #[cfg(target_os = "windows")]
-        {
-            use std::os::windows::process::CommandExt;
-            let _ = Command::new("taskkill")
-                .args(["/PID", &tracked.child.id().to_string(), "/T", "/F"])
-                .creation_flags(0x08000000)
-                .output();
-        }
-
-        match tracked.child.kill() {
-            Ok(_) => {
-                let _ = tracked.child.wait(); // reap
-                result.ok = true;
-                result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
+            #[cfg(target_os = "windows")]
+            {
+                use std::os::windows::process::CommandExt;
+                let _ = Command::new("taskkill")
+                    .args(["/PID", &child.id().to_string(), "/T", "/F"])
+                    .creation_flags(0x08000000)
+                    .output();
             }
-            Err(e) => {
-                // Ignore if it's already dead, especially since taskkill might have worked
-                if tracked.child.try_wait().map(|v| v.is_some()).unwrap_or(false) {
+
+            match child.kill() {
+                Ok(_) => {
+                    let _ = child.wait(); // reap
                     result.ok = true;
                     result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
-                } else {
-                    result.error_state = Some(format!("Failed to kill process: {}", e));
-                    processes.insert(game_id, tracked);
+                }
+                Err(e) => {
+                    if child.try_wait().map(|v| v.is_some()).unwrap_or(false) {
+                        result.ok = true;
+                        result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
+                    } else {
+                        result.error_state = Some(format!("Failed to kill process: {}", e));
+                        tracked.child = Some(child);
+                        tracked.status = "failed".to_string();
+                        processes.insert(game_id, tracked);
+                    }
                 }
             }
+        } else {
+            // It was launching or failed, just remove it
+            result.stop_attempted = true;
+            result.ok = true;
         }
     } else {
         result.blocked_reason = Some("No tracked process running for this game".to_string());
@@ -654,25 +691,42 @@ fn list_dev_game_processes(state: State<'_, DevProcessManager>) -> Result<Vec<De
     let mut dead = Vec::new();
 
     for (game_id, tracked) in processes.iter_mut() {
-        let running = match tracked.child.try_wait() {
-            Ok(Some(_)) => false,
-            Ok(None) => true,
-            Err(_) => false,
-        };
+        let mut child_exited = false;
+        if let Some(child) = &mut tracked.child {
+            if let Ok(Some(_)) = child.try_wait() {
+                child_exited = true;
+            }
+        }
 
-        if !running {
-            dead.push(game_id.clone());
-        } else {
-            statuses.push(DevGameProcessStatus {
-                game_id: game_id.clone(),
-                running: true,
-                pid: Some(tracked.child.id()),
-                url: Some(format!("http://127.0.0.1:{}", tracked.port)),
-                port: Some(tracked.port),
-                started_at: Some(tracked.started_at.clone()),
-                package_name: Some(tracked.package_name.clone()),
-                error_state: None,
-            });
+        if child_exited && tracked.status == "running" {
+            tracked.status = "failed".to_string();
+            tracked.error_state = Some("Process exited unexpectedly".to_string());
+        }
+
+        let pid = tracked.child.as_ref().map(|c| c.id());
+
+        statuses.push(DevGameProcessStatus {
+            game_id: game_id.clone(),
+            status: tracked.status.clone(),
+            running: tracked.status == "running",
+            pid,
+            url: Some(format!("http://127.0.0.1:{}", tracked.port)),
+            port: Some(tracked.port),
+            started_at: Some(tracked.started_at.clone()),
+            package_name: Some(tracked.package_name.clone()),
+            error_state: tracked.error_state.clone(),
+        });
+
+        if tracked.status == "stopped" || (tracked.status == "failed" && child_exited) {
+            // For now, let's keep failed states around so the UI can see them.
+            // But if the user navigates away and comes back, they might get stuck.
+            // To ensure cleanup, if the frontend sees a failed state, it should ideally ack it.
+            // Without an ack, we'll leave it here. 
+            // Wait, actually, let's auto-clean failed processes if they have no child to avoid infinite list growth.
+            // On second thought, let's remove dead children from our tracked list if they are failed.
+            if child_exited {
+                dead.push(game_id.clone());
+            }
         }
     }
 
