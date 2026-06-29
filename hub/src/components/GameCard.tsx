@@ -12,15 +12,31 @@ interface GameCardProps {
 
 export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected }) => {
   const cardClass = `game-card ${game.restorationDeferred ? 'deferred' : ''} ${isSelected ? 'selected' : ''}`
-  
+
   const iconRegion = hubIconRegions.find(r => r.gameId === game.id)
-  
+
+  // Single compact readiness signal on card face.
+  // All verbose metadata (Listed, Workspace Member, Build, Dev Script, etc.)
+  // lives in the GameDetailPanel modal — not here.
+  let readinessType: 'missing' | 'source' | 'build' | 'dev' | 'info' = 'info'
+  let readinessLabel = 'Needs Setup'
+  if (game.restorationDeferred) {
+    readinessType = 'missing'
+    readinessLabel = 'Restoration Deferred'
+  } else if (game.devLaunchAvailable || game.playableMode === 'dev') {
+    readinessType = 'dev'
+    readinessLabel = 'Dev Ready'
+  } else if (game.sourceDirectoryExists || game.sourceAvailable) {
+    readinessType = 'source'
+    readinessLabel = 'Source Ready'
+  }
+
   return (
     <div className={cardClass} onClick={onClick}>
       <div className="game-card-frame" title={game.title}>
         {iconRegion && (
-          <SpriteFrame 
-            sourceRect={iconRegion.sourceRect} 
+          <SpriteFrame
+            sourceRect={iconRegion.sourceRect}
             alt={iconRegion.label}
             className="game-icon"
           />
@@ -28,26 +44,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
       </div>
       <div className="game-card-meta">
         <span className="game-level">Level {game.level}</span>
-        <div className="status-badges">
-          {game.restorationDeferred ? (
-            <StatusBadge type="missing" label="Restoration Deferred" />
-          ) : (
-            <>
-              <StatusBadge type="info" label="Listed" />
-              {game.sourceDirectoryExists && <StatusBadge type="source" label="Source Available" />}
-              {game.workspaceMember && <StatusBadge type="info" label="Workspace Member" />}
-              {game.buildStatus && (
-                <StatusBadge 
-                  type={game.buildStatus === 'built' ? 'build' : (game.buildStatus === 'incomplete' ? 'dev' : 'missing')} 
-                  label={`Build: ${game.buildStatus.charAt(0).toUpperCase() + game.buildStatus.slice(1)}`} 
-                />
-              )}
-              {game.hasDevScript && <StatusBadge type="info" label="Dev Script" />}
-              {game.distHasIndexHtml && <StatusBadge type="build" label="Static Entry Found" />}
-              <StatusBadge type="dev" label="View Runtime Status" />
-            </>
-          )}
-        </div>
+        <StatusBadge type={readinessType} label={readinessLabel} />
       </div>
     </div>
   )

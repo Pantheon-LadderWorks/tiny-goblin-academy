@@ -127,6 +127,7 @@ export const HubShell: React.FC = () => {
         </div>
         
         <div className="hub-header-right">
+          <span className="hub-studio-label">Glyphforge Games</span>
           <div className="hub-status-pills">
             {runtimeStatus && (
               <span className="status-pill mode-pill">

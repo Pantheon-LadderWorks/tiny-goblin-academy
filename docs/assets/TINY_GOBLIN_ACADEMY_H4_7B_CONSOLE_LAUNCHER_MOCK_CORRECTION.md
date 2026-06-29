@@ -1,9 +1,12 @@
 # Tiny Goblin Academy — H4.7B: Console Launcher Mock Correction / Evidence Pass
 
-**Status:** EVIDENCE COMPLETE — Human review required before any implementation  
+**Status:** EVIDENCE ARCHIVED — Human review chose not to implement any candidate immediately  
 **Date:** 2026-06-29  
 **Follows:** H4.7 (Candidate C horizontal shelf — REJECTED as programmer wireframe/placeholder)  
-**Precedes:** H4.8 (Implementation of approved direction)
+**Precedes:** H4.8 (Grid preservation + practical header/card compression — NOT a candidate implementation)
+
+> **H4.8 Review Note:** Human review chose not to implement any H4.7B candidate immediately. H4.8 preserves the current grid and focuses on practical header/card compression.
+
 
 ---
 

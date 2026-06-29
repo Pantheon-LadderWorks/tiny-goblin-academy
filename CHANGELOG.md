@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
-* **H4.7B Mock Correction**: Generated corrected console launcher layout candidates (A: polished 5x2 grid, B: multi-row console shelves, C: hybrid feature panel + tier shelves) using manifest-mapped icon regions from `hub.icon-regions.json`. Includes global options placement study. All mocks are evidence only — no runtime changes. Human review required before H4.8 implementation.
+* **H4.8 Hub Compression**: Compressed the current Tiny Goblin Academy hub header and game cards while preserving the existing grid layout. Reduced header footprint (banner 340px→200px, padding halved). Removed repeated audit metadata from card faces — each card now shows only icon art, level, and one compact readiness signal (Dev Ready / Source Ready / Restoration Deferred / Needs Setup). All verbose metadata remains in the details modal. Grid gap tightened (1.5rem→0.75rem). Hub main padding reduced (2rem→1rem). Added compact Glyphforge Games studio identity to header right.
 
 * **Dev Launcher Runtime**: Successfully orchestrated non-blocking dev servers and embedded games inside the Tauri app with a dedicated boot screen and graceful process termination.
 * **Dev Mode Launcher Controls**: Added UI skeleton and robust backend status detection for developer launcher buttons.
