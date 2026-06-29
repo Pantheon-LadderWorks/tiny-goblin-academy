@@ -60,8 +60,8 @@
       "readiness_state": [
         "source-only"
       ],
-      "width": 2816,
-      "height": 1536,
+      "width": 2048,
+      "height": 2048,
       "image_mode": "RGBA",
       "alpha_transparency_state": "alpha-channel-all-opaque",
       "fake_transparency_risk": "low",
@@ -75,7 +75,7 @@
       "runtime_eligibility": "not eligible",
       "next_safe_action": "favicon/app icon export pipeline plan",
       "risk_level": "low",
-      "notes": "No favicon outputs yet"
+      "notes": "No favicon outputs yet. H4.0E: file contents corrected (were swapped with campfire bg)."
     },
     {
       "repo_path": "assets\\academy\\creatures\\goblin\\tga-goblin-expression-action-sheet-v0.1.png",
@@ -598,8 +598,8 @@
         "needs-evidence",
         "needs-human-review"
       ],
-      "width": 2048,
-      "height": 2048,
+      "width": 2816,
+      "height": 1536,
       "image_mode": "RGBA",
       "alpha_transparency_state": "alpha-channel-all-opaque",
       "fake_transparency_risk": "low",
@@ -616,7 +616,7 @@
       "runtime_eligibility": "not eligible",
       "next_safe_action": "background prep + anchor manifest planning",
       "risk_level": "low",
-      "notes": "No sprite detection"
+      "notes": "No sprite detection. H4.0E: file contents corrected (were swapped with icon source)."
     },
     {
       "repo_path": "assets\\academy\\games\\potion-sorter\\tga-potion-sorter-sheet-concept-v0.1.png",

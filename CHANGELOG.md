@@ -16,4 +16,5 @@ All notable changes to this project will be documented in this file.
 * **Asset Ingestion**: Formalized asset sheet intake and ingested core concept sheets across multiple games.
 * **Manifest Validation**: Reconciled the academy manifest validator to recognize the restored state of Level 1.
 * **Asset Operations**: Completed H4.0 Operational Asset Cartography Census, classifying all academy assets by taxonomy and pipeline readiness.
+* **Asset Operations**: Corrected swapped A0 source asset file contents — `tga-icon-source-v0.1.png` and `tga-pet-campfire-background-source-v0.1.png` were swapped at intake; file paths are now correct.
 * Public repo preparation, branding assets added, and legacy private concepts scrubbed.
