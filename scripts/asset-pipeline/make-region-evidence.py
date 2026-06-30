@@ -56,6 +56,36 @@ def load_manifest(path: Path) -> dict:
         fail(f"Manifest JSON parse failed: {exc}")
 
 
+def normalized_manifest(manifest: dict) -> dict:
+    """Return the standard region-evidence view of supported manifest shapes."""
+    if manifest.get("manifestType") != "hub-icon-source-regions":
+        return manifest
+
+    sheet = manifest.get("sheet") or {}
+    derived_sheet = manifest.get("derivedSheet") or {}
+    normalized_regions: list[dict] = []
+    for region in manifest.get("regions", []):
+        game_id = region.get("gameId", "unknown-game")
+        slug = region.get("slug", game_id)
+        normalized_regions.append(
+            {
+                **region,
+                "id": f"hub-icons.{game_id}.{slug}",
+                "category": "hub-game-icon",
+                "usage": "runtime-review",
+                "reviewStatus": region.get("status", "mapped"),
+            }
+        )
+
+    return {
+        **manifest,
+        "domain": "hub-icons",
+        "sourceSheet": sheet.get("imagePath"),
+        "derivedSheet": derived_sheet.get("imagePath"),
+        "regions": normalized_regions,
+    }
+
+
 def validate_regions(manifest: dict, source_size: tuple[int, int]) -> list[dict]:
     regions = manifest.get("regions")
     if not isinstance(regions, list):
@@ -140,7 +170,8 @@ def generate_bbox_overlay(regions: list[dict], source_sheet: Image.Image, out_pa
     sw, sh = int(source_sheet.width * scale), int(source_sheet.height * scale)
     base = Image.new("RGBA", (sw, sh), (30, 30, 34, 255))
     base.alpha_composite(source_sheet.resize((sw, sh), Image.Resampling.LANCZOS))
-    canvas = Image.new("RGB", (sw + 40, sh + 150), (18, 20, 24))
+    canvas_w = max(sw + 40, 1100)
+    canvas = Image.new("RGB", (canvas_w, sh + 150), (18, 20, 24))
     draw = ImageDraw.Draw(canvas)
     draw.text((24, 18), "Region BBox Overlay — Draft Review", font=F_TITLE, fill=(255, 244, 204))
     draw.text((24, 66), "Visible sourceRect boxes over source sheet. Indexes match contact sheet/table. Not runtime-approved.", font=F_BODY, fill=(225, 230, 240))
@@ -217,7 +248,7 @@ def main() -> None:
 
     root = repo_root()
     manifest_path = root / args.manifest
-    manifest = load_manifest(manifest_path)
+    manifest = normalized_manifest(load_manifest(manifest_path))
     domain = manifest.get("domain")
     if not domain:
         fail("Manifest missing domain.")

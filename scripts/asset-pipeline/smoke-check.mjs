@@ -53,6 +53,7 @@ for (const file of [
   'scripts/asset-pipeline/pipeline-index.mjs',
   'scripts/asset-pipeline/make-region-evidence.py',
   'scripts/validate-academy-asset-manifests.mjs',
+  'manifests/hub.icon-regions.json',
   'scripts/clean-fake-transparent-sheet.py'
 ]) {
   if (!fs.existsSync(path.join(repoRoot, file))) {
@@ -70,3 +71,4 @@ console.log(` - Taxonomy operational types: ${operationalAssetTypes.length}`);
 console.log(` - Lane scripts: ${requiredLaneFiles.length}`);
 console.log(' - Cleanup script reference found');
 console.log(' - Region evidence generator found');
+console.log(' - Hub icon source-region manifest reference found');
