@@ -52,7 +52,7 @@ Runtime icon rendering uses:
 
 H5.5 did not change runtime hub UI, game cards, `SpriteFrame`, game launch behavior, or Tauri configuration.
 
-The JSON manifest and the TypeScript mirror currently match in the reviewed fields. The TS mirror is a drift-watch item for future maintenance because runtime does not import `manifests/hub.icon-regions.json` directly.
+The JSON manifest and the TypeScript mirror currently match in the reviewed fields. H5.5B adds a validator guard so `scripts/validate-hub-icon-regions.mjs` fails if the runtime mirror drifts from `manifests/hub.icon-regions.json`.
 
 ## 6. Region Alignment Review
 
@@ -114,7 +114,7 @@ Findings:
 
 - The prompt guessed `manifests/academy.hub-icons.regions.json`, but the actual active region manifest is `manifests/hub.icon-regions.json`.
 - The reusable H5 evidence generator did not initially support the older hub icon manifest shape.
-- The runtime uses a TypeScript mirror of the region manifest, which is acceptable for this pass but should be watched for JSON/TS drift in future hub work.
+- The runtime uses a TypeScript mirror of the region manifest. H5.5B closes the immediate drift trap by checking the mirror against the JSON manifest in the hub icon region validator.
 
 No sourceRect, label, duplicate-id, missing-game, or crop-alignment blocker was found.
 
