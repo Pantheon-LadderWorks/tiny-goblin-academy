@@ -1,0 +1,383 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "sourceSheet": "assets/academy/creatures/goblin/tga-goblin-expression-action-sheet-v0.1.png",
+  "derivedSheet": null,
+  "domain": "goblin-expression-action",
+  "operationalType": "review-candidate",
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "not-run",
+    "humanReviewRequired": true
+  },
+  "reviewNotes": [
+    "H5.6: expression/action labels are semantic discovery candidates and require review against the contact sheet.",
+    "H5.6: this pass maps regions only; it does not create animation sequences, pivots, hitboxes, or runtime character behavior.",
+    "H5.6: cleanup is deferred unless a future pilot proves safe for this sheet."
+  ],
+  "regions": [
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-glance-left",
+      "label": "Idle goblin glancing left",
+      "sourceRect": { "x": 20, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose. Not an animation frame assignment."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-glance-right",
+      "label": "Idle goblin glancing right",
+      "sourceRect": { "x": 372, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose. Similar to neighboring idle pose but mapped separately for review."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.eyes-closed-calm",
+      "label": "Calm eyes-closed goblin",
+      "sourceRect": { "x": 724, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery, not runtime emotion approval."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-smile-left",
+      "label": "Idle smiling goblin left glance",
+      "sourceRect": { "x": 1076, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-smile-right",
+      "label": "Idle smiling goblin right glance",
+      "sourceRect": { "x": 1428, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-small-smile",
+      "label": "Idle small-smile goblin",
+      "sourceRect": { "x": 1780, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.confident",
+      "label": "Confident goblin pose",
+      "sourceRect": { "x": 2132, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Pose label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.wink",
+      "label": "Winking goblin",
+      "sourceRect": { "x": 2484, "y": 40, "w": 300, "h": 250 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.walk-left",
+      "label": "Walking goblin left pose",
+      "sourceRect": { "x": 20, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped as an action pose only; not assigned to an animation sequence."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.walk-left-alt",
+      "label": "Alternate walking goblin left pose",
+      "sourceRect": { "x": 372, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Similar walking pose mapped separately; no sequence semantics implied."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.walk-fist",
+      "label": "Walking goblin with fist",
+      "sourceRect": { "x": 724, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped as an action pose only."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.club-ready",
+      "label": "Goblin holding club ready",
+      "sourceRect": { "x": 1076, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus club pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.club-grin",
+      "label": "Grinning goblin with club",
+      "sourceRect": { "x": 1428, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus club pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.surprised-stars",
+      "label": "Surprised goblin with stars",
+      "sourceRect": { "x": 1780, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Stars are intentionally grouped with the goblin emote."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.worried",
+      "label": "Worried goblin",
+      "sourceRect": { "x": 2132, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.stressed-head",
+      "label": "Stressed goblin holding head",
+      "sourceRect": { "x": 2484, "y": 350, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote label is tentative; hand-on-head pose is visually clear."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.dizzy-squat",
+      "label": "Dizzy squatting goblin",
+      "sourceRect": { "x": 20, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Dizzy swirl is intentionally grouped with the goblin emote."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.star-surprised",
+      "label": "Star-surprised standing goblin",
+      "sourceRect": { "x": 372, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Stars are intentionally grouped with the goblin emote."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.tired",
+      "label": "Tired goblin",
+      "sourceRect": { "x": 724, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.anxious-head",
+      "label": "Anxious goblin holding head",
+      "sourceRect": { "x": 1076, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote label is tentative; hand-on-head pose is visually clear."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.bat-ready",
+      "label": "Goblin holding bat ready",
+      "sourceRect": { "x": 1428, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus bat pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.bat-swing",
+      "label": "Goblin bat swing with arc",
+      "sourceRect": { "x": 1780, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Swing arc is intentionally grouped with the action pose; no animation timing implied."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.bat-point",
+      "label": "Goblin pointing bat",
+      "sourceRect": { "x": 2132, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus bat pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-forward",
+      "label": "Forward idle goblin",
+      "sourceRect": { "x": 2484, "y": 660, "w": 300, "h": 275 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.club-ready-side",
+      "label": "Side goblin club ready",
+      "sourceRect": { "x": 20, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus club pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.club-swing-side",
+      "label": "Side goblin club swing",
+      "sourceRect": { "x": 372, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Swing arc is intentionally grouped with the action pose; no animation timing implied."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.bat-point-run",
+      "label": "Running goblin pointing bat",
+      "sourceRect": { "x": 724, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Composite goblin plus bat pose; intentionally grouped as one action crop."
+    },
+    {
+      "id": "goblin-expression-action.goblin-pose.idle-happy",
+      "label": "Happy idle goblin",
+      "sourceRect": { "x": 1076, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-pose",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review single goblin pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.running-grin",
+      "label": "Running grinning goblin",
+      "sourceRect": { "x": 1428, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped as an action pose only; not assigned to an animation sequence."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.jump-sparkles",
+      "label": "Jumping goblin with sparkles",
+      "sourceRect": { "x": 1780, "y": 900, "w": 300, "h": 345 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Sparkles and shadow are intentionally grouped with the celebratory jump pose."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.jump-cheer",
+      "label": "Jumping cheering goblin",
+      "sourceRect": { "x": 2132, "y": 900, "w": 300, "h": 345 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped as an action pose only; not assigned to an animation sequence."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.thumbs-up",
+      "label": "Thumbs-up smiling goblin",
+      "sourceRect": { "x": 2484, "y": 970, "w": 300, "h": 275 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.annoyed",
+      "label": "Annoyed goblin",
+      "sourceRect": { "x": 20, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-action.running-fist",
+      "label": "Running goblin with raised fist",
+      "sourceRect": { "x": 372, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-action",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped as an action pose only; shadow is intentionally included."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.worried-stand",
+      "label": "Worried standing goblin",
+      "sourceRect": { "x": 724, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.sad",
+      "label": "Sad goblin",
+      "sourceRect": { "x": 1076, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.spiral-dizzy",
+      "label": "Spiral-eyed dizzy goblin",
+      "sourceRect": { "x": 1428, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote label is tentative; spiral eyes are visually clear."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.dizzy-fall",
+      "label": "Dizzy falling goblin",
+      "sourceRect": { "x": 1780, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote/action boundary is tentative; mapped as an emote candidate."
+    },
+    {
+      "id": "goblin-expression-action.goblin-emote.exhausted-lean",
+      "label": "Exhausted leaning goblin",
+      "sourceRect": { "x": 2132, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-emote",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Emote/action boundary is tentative; mapped as an emote candidate."
+    },
+    {
+      "id": "goblin-expression-action.goblin-expression.sleepy",
+      "label": "Sleepy goblin",
+      "sourceRect": { "x": 2484, "y": 1220, "w": 300, "h": 300 },
+      "category": "goblin-expression",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Expression label is tentative semantic discovery."
+    }
+  ]
+}

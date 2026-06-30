@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.6 Goblin Expression/Action Mapping**: Added Goblin Expression/Action region mapping evidence as the first creature expression/action semantic discovery lane, without creating animation sequences or runtime wiring.
+
 * **H5.5B Hub Icon Drift Guard**: Added validator coverage to catch drift between `manifests/hub.icon-regions.json` and the runtime TypeScript hub icon region mirror.
 
 * **H5.5 Hub Icon Manifest QA**: Reviewed the already-integrated hub icon source-region lane, regenerated H5-style bbox/contact/table evidence, and added generator compatibility for the hub icon manifest shape.

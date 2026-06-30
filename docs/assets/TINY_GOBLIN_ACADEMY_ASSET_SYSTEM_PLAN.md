@@ -54,6 +54,12 @@ Manifests are semantic discovery records, not final usage plans. Region mapping 
 
 The full asset capability matrix comes after broad mapping coverage across shared sheets, UI/HUD, characters, terrain, FX, and game-specific sheets. Do not use the future matrix as a reason to wire assets early. Unused mapped assets remain pantry ingredients until a later review and runtime promotion gate.
 
+## H5.6 Goblin Expression/Action Mapping Note
+
+H5.6 opens the first goblin expression/action semantic discovery lane for `assets/academy/creatures/goblin/tga-goblin-expression-action-sheet-v0.1.png`.
+
+This is not full animation mapping. It does not create animation sequences, pivots, hitboxes, or runtime character behavior. Evidence includes bbox overlay, numbered contact sheet, and region table preview. No runtime wiring occurred, and Shared FX remains deferred/high-risk.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
