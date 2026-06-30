@@ -48,6 +48,12 @@ H5.3 evidence follows the H5.2B standard:
 
 The cleaned Shared Core preview remains derived review evidence only and is not runtime truth. Shared FX remains deferred/high-risk and out of scope for this lane.
 
+## Semantic Discovery and Future Capability Matrix
+
+Manifests are semantic discovery records, not final usage plans. Region mapping records what the pantry appears to contain: sourceRects, labels, categories, grouping choices, uncertainty, and review status.
+
+The full asset capability matrix comes after broad mapping coverage across shared sheets, UI/HUD, characters, terrain, FX, and game-specific sheets. Do not use the future matrix as a reason to wire assets early. Unused mapped assets remain pantry ingredients until a later review and runtime promotion gate.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

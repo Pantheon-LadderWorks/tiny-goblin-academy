@@ -35,4 +35,8 @@ python scripts/asset-pipeline/make-region-evidence.py --manifest manifests/acade
 
 The generated evidence is draft-review evidence only. It is not runtime approval.
 
+`make-region-evidence.py` supports evidence review, but semantic correctness is still agent/human review work. A valid rectangle can still have a weak label, unclear category, unsafe grouping, or cleanup risk.
+
+The future asset capability matrix is deferred until multiple domains are mapped. The current pipeline should keep mapping and evidence disciplined without pretending the complete pantry inventory is already known.
+
 Legacy H4 census/cartography tools are retained under `scripts/asset-pipeline/legacy/` for reference only.

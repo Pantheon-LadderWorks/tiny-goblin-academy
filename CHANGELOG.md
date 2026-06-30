@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.4 Semantic Discovery Doctrine**: Documented asset region mapping as semantic discovery, deferred the full capability matrix until broader sheet coverage exists, and added a next-lane mapping queue for future H5 asset passes.
+
 * **H5.3 Shared Core Region Mapping**: Added H5.3 Shared Core region mapping evidence, including draft-review sourceRect regions, numbered contact sheet, bbox overlay, and region table preview.
 
 * **H5.2B Region Evidence Canonization**: Canonized the H5.2 region evidence method as a reusable asset-pipeline standard, added semantic verification rules, created a Python/Pillow region evidence generator, and formally ingested legacy asset census scripts.
