@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "platformer-goblin-player",
+  "operationalType": "character-animation-sheet",
+  "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
+  "derivedSheet": null,
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "not-run",
+    "humanReviewRequired": true
+  },
+  "animations": [],
+  "reviewNotes": [
+    "H5.7 creates an animation manifest contract/skeleton only.",
+    "No animation frames are approved.",
+    "No pivots, hitboxes, hurtboxes, or runtime behavior are defined.",
+    "Cleanup is deferred."
+  ]
+}

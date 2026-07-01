@@ -60,6 +60,14 @@ H5.6 opens the first goblin expression/action semantic discovery lane for `asset
 
 This is not full animation mapping. It does not create animation sequences, pivots, hitboxes, or runtime character behavior. Evidence includes bbox overlay, numbered contact sheet, and region table preview. No runtime wiring occurred, and Shared FX remains deferred/high-risk.
 
+## H5.7 Platformer Goblin Animation Contract Note
+
+H5.7 opens the first animation-sheet contract lane for `assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png`.
+
+The platformer goblin player sheet is separate from the H5.6 expression/action pantry. H5.7 records metadata, transparency findings, visual layout risks, a draft skeleton animation manifest, and a dedicated animation validator. It does not map full sequences, assign frame order, define pivots/hitboxes/hurtboxes, run cleanup, create runtime animation behavior, or wire the sheet into any game.
+
+Cleanup remains deferred because the source is RGBA but fully opaque with a baked checkerboard. Future sequence mapping requires sequence evidence, frame-order review, pivot/baseline review, and later hitbox/hurtbox gates before runtime use.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
