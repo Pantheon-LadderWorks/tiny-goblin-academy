@@ -113,7 +113,7 @@
       "type": "animation-sequence",
       "rowIndex": 0,
       "rowY": 0,
-      "frameCount": 10,
+      "frameCount": 6,
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
@@ -180,50 +180,6 @@
             "x": 1406,
             "y": 0,
             "w": 282,
-            "h": 254
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 6,
-          "sourceRect": {
-            "x": 1688,
-            "y": 0,
-            "w": 282,
-            "h": 254
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 7,
-          "sourceRect": {
-            "x": 1970,
-            "y": 0,
-            "w": 281,
-            "h": 254
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 8,
-          "sourceRect": {
-            "x": 2251,
-            "y": 0,
-            "w": 281,
-            "h": 254
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 9,
-          "sourceRect": {
-            "x": 2532,
-            "y": 0,
-            "w": 284,
             "h": 254
           },
           "durationMs": null,
