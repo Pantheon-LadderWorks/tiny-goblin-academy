@@ -7,63 +7,58 @@
   "derivedSheet": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
   "frameGrid": {
     "note": "Uniform 250x256 grid derived from visual inspection of the 2752x1536 sheet.",
-    "columns": 11,
+    "columns": 10,
     "rows": 6,
     "columnRects": [
       {
         "col": 0,
         "x": 0,
-        "w": 250
+        "w": 275
       },
       {
         "col": 1,
-        "x": 250,
-        "w": 250
+        "x": 275,
+        "w": 275
       },
       {
         "col": 2,
-        "x": 500,
-        "w": 250
+        "x": 550,
+        "w": 275
       },
       {
         "col": 3,
-        "x": 750,
-        "w": 250
+        "x": 825,
+        "w": 275
       },
       {
         "col": 4,
-        "x": 1000,
-        "w": 250
+        "x": 1100,
+        "w": 275
       },
       {
         "col": 5,
-        "x": 1250,
-        "w": 250
+        "x": 1375,
+        "w": 275
       },
       {
         "col": 6,
-        "x": 1500,
-        "w": 250
+        "x": 1650,
+        "w": 275
       },
       {
         "col": 7,
-        "x": 1750,
-        "w": 250
+        "x": 1925,
+        "w": 275
       },
       {
         "col": 8,
-        "x": 2000,
-        "w": 250
+        "x": 2200,
+        "w": 275
       },
       {
         "col": 9,
-        "x": 2250,
-        "w": 250
-      },
-      {
-        "col": 10,
-        "x": 2500,
-        "w": 250
+        "x": 2475,
+        "w": 275
       }
     ],
     "rowRects": [
@@ -134,7 +129,7 @@
           "sourceRect": {
             "x": 0,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -143,9 +138,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 250,
+            "x": 275,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -154,9 +149,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 500,
+            "x": 550,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -165,9 +160,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 750,
+            "x": 825,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -176,9 +171,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1000,
+            "x": 1100,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -187,9 +182,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1250,
+            "x": 1375,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -198,9 +193,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1500,
+            "x": 1650,
             "y": 0,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -214,7 +209,7 @@
       "type": "animation-sequence",
       "rowIndex": 1,
       "rowY": 256,
-      "frameCount": 11,
+      "frameCount": 10,
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
@@ -225,7 +220,7 @@
           "sourceRect": {
             "x": 0,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -234,9 +229,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 250,
+            "x": 275,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -245,9 +240,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 500,
+            "x": 550,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -256,9 +251,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 750,
+            "x": 825,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -267,9 +262,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1000,
+            "x": 1100,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -278,9 +273,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1250,
+            "x": 1375,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -289,9 +284,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1500,
+            "x": 1650,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -300,9 +295,9 @@
         {
           "index": 7,
           "sourceRect": {
-            "x": 1750,
+            "x": 1925,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -311,9 +306,9 @@
         {
           "index": 8,
           "sourceRect": {
-            "x": 2000,
+            "x": 2200,
             "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -322,20 +317,9 @@
         {
           "index": 9,
           "sourceRect": {
-            "x": 2250,
+            "x": 2475,
             "y": 256,
-            "w": 250,
-            "h": 256
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 10,
-          "sourceRect": {
-            "x": 2500,
-            "y": 256,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -360,7 +344,7 @@
           "sourceRect": {
             "x": 0,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -369,9 +353,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 250,
+            "x": 275,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -380,9 +364,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 500,
+            "x": 550,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -391,9 +375,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 750,
+            "x": 825,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -402,9 +386,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1000,
+            "x": 1100,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -413,9 +397,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1250,
+            "x": 1375,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -424,9 +408,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1500,
+            "x": 1650,
             "y": 512,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -451,7 +435,7 @@
           "sourceRect": {
             "x": 0,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -460,9 +444,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 250,
+            "x": 275,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -471,9 +455,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 500,
+            "x": 550,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -482,9 +466,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 750,
+            "x": 825,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -493,9 +477,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1000,
+            "x": 1100,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -504,9 +488,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1250,
+            "x": 1375,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -515,9 +499,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1500,
+            "x": 1650,
             "y": 768,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -542,7 +526,7 @@
           "sourceRect": {
             "x": 0,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -551,9 +535,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 250,
+            "x": 275,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -562,9 +546,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 500,
+            "x": 550,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -573,9 +557,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 750,
+            "x": 825,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -584,9 +568,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1000,
+            "x": 1100,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -595,9 +579,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1250,
+            "x": 1375,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -606,9 +590,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1500,
+            "x": 1650,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -617,9 +601,9 @@
         {
           "index": 7,
           "sourceRect": {
-            "x": 1750,
+            "x": 1925,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
@@ -628,9 +612,9 @@
         {
           "index": 8,
           "sourceRect": {
-            "x": 2000,
+            "x": 2200,
             "y": 1024,
-            "w": 250,
+            "w": 275,
             "h": 256
           },
           "durationMs": null,
