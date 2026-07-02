@@ -463,8 +463,8 @@
       "id": "platformer-training-dummy.die",
       "label": "Die",
       "type": "animation-sequence",
-      "rowIndex": 4,
-      "rowY": 1024,
+      "rowIndex": 5,
+      "rowY": 1280,
       "frameCount": 9,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -475,7 +475,7 @@
           "index": 0,
           "sourceRect": {
             "x": 275,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -486,7 +486,7 @@
           "index": 1,
           "sourceRect": {
             "x": 550,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -497,7 +497,7 @@
           "index": 2,
           "sourceRect": {
             "x": 825,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -508,7 +508,7 @@
           "index": 3,
           "sourceRect": {
             "x": 1100,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -519,7 +519,7 @@
           "index": 4,
           "sourceRect": {
             "x": 1375,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -530,7 +530,7 @@
           "index": 5,
           "sourceRect": {
             "x": 1650,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -541,7 +541,7 @@
           "index": 6,
           "sourceRect": {
             "x": 1925,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -552,7 +552,7 @@
           "index": 7,
           "sourceRect": {
             "x": 2200,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
@@ -563,7 +563,7 @@
           "index": 8,
           "sourceRect": {
             "x": 2475,
-            "y": 1024,
+            "y": 1280,
             "w": 275,
             "h": 256
           },
