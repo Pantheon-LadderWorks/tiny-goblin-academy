@@ -6,14 +6,30 @@
   "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
   "derivedSheet": null,
   "frameGrid": {
-    "cellWidth": 256,
-    "cellHeight": 256,
-    "columns": 11,
+    "note": "Grid derived from numpy separator-column and separator-row detection (H5.8). NOT a uniform 256px grid. Column widths are 277-280px with 3-4px vertical separators. Row heights are 235-254px with 4-22px horizontal separators (ground lines / shadow bands).",
+    "columns": 10,
     "rows": 6,
-    "frameHeightCropped": 237,
-    "shadowBandHeightPx": 16,
-    "hardLinePx": 3,
-    "cropNote": "sourceRect.h is 237 for all frames (drops 16px shadow band + 3px hard separator). Goblin art is unaffected. Ground contact shadow should be handled by engine, not sprite."
+    "columnRects": [
+      { "col": 0, "x": 0,    "w": 280 },
+      { "col": 1, "x": 284,  "w": 278 },
+      { "col": 2, "x": 565,  "w": 278 },
+      { "col": 3, "x": 847,  "w": 277 },
+      { "col": 4, "x": 1128, "w": 278 },
+      { "col": 5, "x": 1410, "w": 278 },
+      { "col": 6, "x": 1692, "w": 277 },
+      { "col": 7, "x": 1973, "w": 278 },
+      { "col": 8, "x": 2254, "w": 278 },
+      { "col": 9, "x": 2536, "w": 280 }
+    ],
+    "rowRects": [
+      { "row": 0, "y": 0,    "h": 254, "sepBelow": { "y": 254, "h": 4  } },
+      { "row": 1, "y": 258,  "h": 235, "sepBelow": { "y": 493, "h": 22 } },
+      { "row": 2, "y": 515,  "h": 237, "sepBelow": { "y": 752, "h": 19 } },
+      { "row": 3, "y": 771,  "h": 238, "sepBelow": { "y": 1009,"h": 19 } },
+      { "row": 4, "y": 1028, "h": 239, "sepBelow": { "y": 1267,"h": 16 } },
+      { "row": 5, "y": 1283, "h": 253, "sepBelow": null }
+    ],
+    "groundLineNote": "Horizontal separators are the baked ground lines. Row heights already EXCLUDE the separator — they represent clean sprite content only. No shadow-band crop needed; the separator probe already isolates content boundaries."
   },
   "transparency": {
     "sourceHasAlpha": true,
@@ -22,7 +38,8 @@
     "cleanupRequired": true,
     "cleanupStatus": "not-run",
     "humanReviewRequired": true,
-    "cleanupNote": "Do not batch-clean this sheet without a pilot frame test first. Silhouette outlines are close to checkerboard pixels."
+    "cleanupNote": "dark_composite() will show dark backgrounds once a derived clean sheet exists. Until then crops show baked checkerboard — expected and correct.",
+    "pilotFrameSuggested": "platformer-goblin.walk frame 0 (x:0 y:258 w:280 h:235)"
   },
   "animations": [
     {
@@ -31,150 +48,152 @@
       "type": "animation-sequence",
       "rowIndex": 0,
       "rowY": 0,
-      "frameCount": 6,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Idle standing pose 1." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 0, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Remaining columns in row appear blank — confirm in evidence." }
-      ],
+      "frameCount": 10,
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 1. Idle/standing animation. Frame count estimated from visual inspection — confirm with contact sheet."
+      "notes": "Row 1 (y=0, h=254). 10 columns available — confirm actual frame count from contact sheet (some rightmost cells may be blank).",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 0, "w": 280, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 0, "w": 277, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 0, "w": 277, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 0, "w": 280, "h": 254 }, "durationMs": null, "pivot": null }
+      ]
     },
     {
       "id": "platformer-goblin.walk",
       "label": "Walk / Run",
       "type": "animation-sequence",
       "rowIndex": 1,
-      "rowY": 256,
+      "rowY": 258,
       "frameCount": 10,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 6, "sourceRect": { "x": 1536, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 7, "sourceRect": { "x": 1792, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 8, "sourceRect": { "x": 2048, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 9, "sourceRect": { "x": 2304, "y": 256, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." }
-      ],
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 2. Walk/run cycle. Full row appears populated — confirm with contact sheet."
+      "notes": "Row 2 (y=258, h=235). Full row expected. Largest separator below (22px) — largest ground band on sheet.",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 258, "w": 280, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 258, "w": 277, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 258, "w": 277, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 258, "w": 280, "h": 235 }, "durationMs": null, "pivot": null }
+      ]
     },
     {
       "id": "platformer-goblin.jump",
       "label": "Jump / Airborne",
       "type": "animation-sequence",
       "rowIndex": 2,
-      "rowY": 512,
-      "frameCount": 8,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Jump anticipation / crouch." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 6, "sourceRect": { "x": 1536, "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 7, "sourceRect": { "x": 1792, "y": 512, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Remaining columns may be blank — confirm in evidence." }
-      ],
+      "rowY": 515,
+      "frameCount": 10,
       "loop": false,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 3. Jump/airborne. Shadow band cropped — no ground line in airborne frames. Frame count TBC from contact sheet."
+      "notes": "Row 3 (y=515, h=237). Ground separator is cleanly excluded by row rect. No shadow-band crop needed — separator probe already isolates content.",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 515, "w": 280, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 515, "w": 277, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 515, "w": 277, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 515, "w": 280, "h": 237 }, "durationMs": null, "pivot": null }
+      ]
     },
     {
       "id": "platformer-goblin.attack",
       "label": "Attack / Club Swing",
       "type": "animation-sequence",
       "rowIndex": 3,
-      "rowY": 768,
-      "frameCount": 8,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Wind-up pose." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 6, "sourceRect": { "x": 1536, "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 7, "sourceRect": { "x": 1792, "y": 768, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Club/weapon extends beyond body — hitbox is future gate, not defined here." }
-      ],
+      "rowY": 771,
+      "frameCount": 10,
       "loop": false,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 4. Attack / club swing. Hitbox/hurtbox are separate future review gates. Weapon extension visible in source."
+      "notes": "Row 4 (y=771, h=238). Club/weapon may extend into adjacent cell boundaries — future hitbox review gate.",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 771, "w": 280, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 771, "w": 277, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 771, "w": 277, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 771, "w": 280, "h": 238 }, "durationMs": null, "pivot": null }
+      ]
     },
     {
       "id": "platformer-goblin.hurt",
       "label": "Hurt / Fall / Knocked Down",
       "type": "animation-sequence",
       "rowIndex": 4,
-      "rowY": 1024,
-      "frameCount": 8,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Hurt reaction / wince." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Star/dizzy effect visible." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Star effect." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Falling / knocked down." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Lying down." },
-        { "index": 6, "sourceRect": { "x": 1536, "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 7, "sourceRect": { "x": 1792, "y": 1024, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Confirm blank columns in contact sheet." }
-      ],
+      "rowY": 1028,
+      "frameCount": 10,
       "loop": false,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 5. Hurt/fall/knocked-down sequence. Star effects extend beyond body bounds — future hitbox/hurtbox gate."
+      "notes": "Row 5 (y=1028, h=239). Star/dizzy effects and horizontal knocked-down pose — may need non-standard frame handling in future hitbox gate.",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 1028, "w": 280, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 1028, "w": 277, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 1028, "w": 277, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 1028, "w": 280, "h": 239 }, "durationMs": null, "pivot": null }
+      ]
     },
     {
       "id": "platformer-goblin.celebrate",
       "label": "Celebrate / Success",
       "type": "animation-sequence",
       "rowIndex": 5,
-      "rowY": 1280,
-      "frameCount": 6,
-      "frameWidth": 256,
-      "frameHeight": 237,
-      "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Celebration pose 1." },
-        { "index": 1, "sourceRect": { "x": 256,  "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 2, "sourceRect": { "x": 512,  "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Sparkle effect visible." },
-        { "index": 3, "sourceRect": { "x": 768,  "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Sparkle." },
-        { "index": 4, "sourceRect": { "x": 1024, "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft." },
-        { "index": 5, "sourceRect": { "x": 1280, "y": 1280, "w": 256, "h": 237 }, "durationMs": null, "pivot": null, "hitbox": null, "hurtbox": null, "notes": "Draft. Confirm remaining columns blank." }
-      ],
+      "rowY": 1283,
+      "frameCount": 10,
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Row 6. Celebrate/success sequence. Sparkle effects visible. Loop candidate."
+      "notes": "Row 6 (y=1283, h=253). Tallest row — sparkle effects may extend upward. Confirm actual frame count from contact sheet.",
+      "frames": [
+        { "index": 0, "sourceRect": { "x": 0,    "y": 1283, "w": 280, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 1, "sourceRect": { "x": 284,  "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 2, "sourceRect": { "x": 565,  "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 3, "sourceRect": { "x": 847,  "y": 1283, "w": 277, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 4, "sourceRect": { "x": 1128, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 5, "sourceRect": { "x": 1410, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 6, "sourceRect": { "x": 1692, "y": 1283, "w": 277, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 7, "sourceRect": { "x": 1973, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 8, "sourceRect": { "x": 2254, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
+        { "index": 9, "sourceRect": { "x": 2536, "y": 1283, "w": 280, "h": 253 }, "durationMs": null, "pivot": null }
+      ]
     }
   ],
   "reviewNotes": [
-    "H5.8 maps animation sequences from visual row inspection. All entries are draft-review.",
-    "Frame counts are estimated — human contact-sheet review required to confirm blank columns.",
-    "No pivots, hitboxes, or hurtboxes are defined.",
-    "Cleanup is deferred — checkerboard is baked, requires pilot test before derived sheet.",
-    "Shadow band (16px) + hard separator (3px) cropped from sourceRect.h on all frames.",
-    "Engine handles ground contact shadow separately (drop shadow, particle, or none).",
-    "No runtime animation controller created in this pass."
+    "H5.8 (corrected): Frame grid derived from numpy separator-column/row probing — NOT assumed 256px uniform.",
+    "Actual cell width: 277-280px (10 columns). Actual row height: 235-254px (6 rows).",
+    "All frame sourceRects use probe-derived pixel boundaries. Vertical separators are 3-4px. Horizontal separators are 4-22px.",
+    "Ground lines are the horizontal separators — already excluded from rowRects. No additional shadow-band crop needed.",
+    "Frame counts are maximums (10 per row) — human review of contact sheet required to confirm blank trailing cells.",
+    "No pivots, hitboxes, or hurtboxes defined. Cleanup not run — derived sheet does not exist.",
+    "dark_composite() will show dark frame backgrounds once cleanup produces a derived sheet (expected behavior)."
   ]
 }
