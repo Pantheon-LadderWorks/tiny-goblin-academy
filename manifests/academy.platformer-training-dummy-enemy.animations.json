@@ -1,0 +1,647 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "platformer-training-dummy-enemy",
+  "operationalType": "character-animation-sheet",
+  "sourceSheet": "assets/academy/creatures/training-dummy/tga-platformer-training-dummy-enemy-concept-v0.1.png",
+  "derivedSheet": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
+  "frameGrid": {
+    "note": "Uniform 250x256 grid derived from visual inspection of the 2752x1536 sheet.",
+    "columns": 11,
+    "rows": 6,
+    "columnRects": [
+      {
+        "col": 0,
+        "x": 0,
+        "w": 250
+      },
+      {
+        "col": 1,
+        "x": 250,
+        "w": 250
+      },
+      {
+        "col": 2,
+        "x": 500,
+        "w": 250
+      },
+      {
+        "col": 3,
+        "x": 750,
+        "w": 250
+      },
+      {
+        "col": 4,
+        "x": 1000,
+        "w": 250
+      },
+      {
+        "col": 5,
+        "x": 1250,
+        "w": 250
+      },
+      {
+        "col": 6,
+        "x": 1500,
+        "w": 250
+      },
+      {
+        "col": 7,
+        "x": 1750,
+        "w": 250
+      },
+      {
+        "col": 8,
+        "x": 2000,
+        "w": 250
+      },
+      {
+        "col": 9,
+        "x": 2250,
+        "w": 250
+      },
+      {
+        "col": 10,
+        "x": 2500,
+        "w": 250
+      }
+    ],
+    "rowRects": [
+      {
+        "row": 0,
+        "y": 0,
+        "h": 256,
+        "sepBelow": null
+      },
+      {
+        "row": 1,
+        "y": 256,
+        "h": 256,
+        "sepBelow": null
+      },
+      {
+        "row": 2,
+        "y": 512,
+        "h": 256,
+        "sepBelow": null
+      },
+      {
+        "row": 3,
+        "y": 768,
+        "h": 256,
+        "sepBelow": null
+      },
+      {
+        "row": 4,
+        "y": 1024,
+        "h": 256,
+        "sepBelow": null
+      },
+      {
+        "row": 5,
+        "y": 1280,
+        "h": 256,
+        "sepBelow": null
+      }
+    ],
+    "groundLineNote": "Has shadow on ground. Has text overlays in col 0."
+  },
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "completed",
+    "humanReviewRequired": true,
+    "cleanupNote": "dark_composite() will show dark backgrounds once a derived clean sheet exists.",
+    "pilotFrameSuggested": "platformer-training-dummy.idle frame 0 (x:0 y:0 w:250 h:256)"
+  },
+  "animations": [
+    {
+      "id": "platformer-training-dummy.idle",
+      "label": "Idle",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 7,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Contains text 'Idle' in frame 0.",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 0,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "platformer-training-dummy.patrol",
+      "label": "Patrol / Hop",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 256,
+      "frameCount": 11,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Contains text 'Patrol / Hop' in frame 0.",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1750,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2000,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2250,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 10,
+          "sourceRect": {
+            "x": 2500,
+            "y": 256,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "platformer-training-dummy.attack",
+      "label": "Attack",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 512,
+      "frameCount": 7,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Contains text 'Attack' in frame 0.",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 512,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "platformer-training-dummy.hit",
+      "label": "Hit",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 768,
+      "frameCount": 7,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 768,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "platformer-training-dummy.die",
+      "label": "Die",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 1024,
+      "frameCount": 9,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1750,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2000,
+            "y": 1024,
+            "w": 250,
+            "h": 256
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "Uniform 250x256 grid from visual inspection.",
+    "Row 5 is empty and omitted from animations.",
+    "Frame counts extracted from visual inspection."
+  ]
+}
