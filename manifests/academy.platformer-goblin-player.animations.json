@@ -6,104 +6,93 @@
   "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
   "derivedSheet": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png",
   "frameGrid": {
-    "note": "Perfect 256px cell width grid per architectural law. Shadow/separator cropped at 237px height.",
-    "columns": 11,
+    "note": "Restored dynamic 10-col grid (H5.10C) using empirical numpy probe data.",
+    "columns": 10,
     "rows": 6,
-    "cellWidth": 256,
-    "frameHeightCropped": 237,
+    "cellWidth": 281,
+    "frameHeightCropped": null,
     "columnRects": [
       {
         "col": 0,
         "x": 0,
-        "w": 256
+        "w": 280
       },
       {
         "col": 1,
-        "x": 256,
-        "w": 256
+        "x": 280,
+        "w": 282
       },
       {
         "col": 2,
-        "x": 512,
-        "w": 256
+        "x": 562,
+        "w": 281
       },
       {
         "col": 3,
-        "x": 768,
-        "w": 256
+        "x": 843,
+        "w": 281
       },
       {
         "col": 4,
-        "x": 1024,
-        "w": 256
+        "x": 1124,
+        "w": 282
       },
       {
         "col": 5,
-        "x": 1280,
-        "w": 256
+        "x": 1406,
+        "w": 282
       },
       {
         "col": 6,
-        "x": 1536,
-        "w": 256
+        "x": 1688,
+        "w": 282
       },
       {
         "col": 7,
-        "x": 1792,
-        "w": 256
+        "x": 1970,
+        "w": 281
       },
       {
         "col": 8,
-        "x": 2048,
-        "w": 256
+        "x": 2251,
+        "w": 281
       },
       {
         "col": 9,
-        "x": 2304,
-        "w": 256
-      },
-      {
-        "col": 10,
-        "x": 2560,
-        "w": 256
+        "x": 2532,
+        "w": 284
       }
     ],
     "rowRects": [
       {
         "row": 0,
         "y": 0,
-        "h": 237,
-        "sepBelow": 19
+        "h": 254
       },
       {
         "row": 1,
-        "y": 256,
-        "h": 237,
-        "sepBelow": 19
+        "y": 254,
+        "h": 257
       },
       {
         "row": 2,
-        "y": 512,
-        "h": 237,
-        "sepBelow": 19
+        "y": 511,
+        "h": 257
       },
       {
         "row": 3,
         "y": 768,
-        "h": 237,
-        "sepBelow": 19
+        "h": 257
       },
       {
         "row": 4,
-        "y": 1024,
-        "h": 237,
-        "sepBelow": 19
+        "y": 1025,
+        "h": 255
       },
       {
         "row": 5,
         "y": 1280,
-        "h": 237,
-        "sepBelow": 19
+        "h": 256
       }
     ]
   },
@@ -114,8 +103,8 @@
     "cleanupRequired": true,
     "cleanupStatus": "preview-generated",
     "humanReviewRequired": true,
-    "cleanupNote": "Requires proper color-keying script to reach enclosed pixels between legs.",
-    "pilotFrameSuggested": "platformer-goblin.walk frame 0 (x:0 y:256 w:256 h:237)"
+    "cleanupNote": "Canyon strategy applied.",
+    "pilotFrameSuggested": "platformer-goblin.walk frame 0"
   },
   "animations": [
     {
@@ -124,7 +113,7 @@
       "type": "animation-sequence",
       "rowIndex": 0,
       "rowY": 0,
-      "frameCount": 6,
+      "frameCount": 10,
       "loop": true,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
@@ -135,8 +124,8 @@
           "sourceRect": {
             "x": 0,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 280,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -144,10 +133,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
+            "x": 280,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -155,10 +144,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
+            "x": 562,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -166,10 +155,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
+            "x": 843,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -177,10 +166,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
+            "x": 1124,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -188,10 +177,54 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
+            "x": 1406,
             "y": 0,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1688,
+            "y": 0,
+            "w": 282,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1970,
+            "y": 0,
+            "w": 281,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2251,
+            "y": 0,
+            "w": 281,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2532,
+            "y": 0,
+            "w": 284,
+            "h": 254
           },
           "durationMs": null,
           "pivot": null
@@ -203,7 +236,7 @@
       "label": "Walk / Run",
       "type": "animation-sequence",
       "rowIndex": 1,
-      "rowY": 256,
+      "rowY": 254,
       "frameCount": 10,
       "loop": true,
       "reviewStatus": "needs-human-review",
@@ -214,9 +247,9 @@
           "index": 0,
           "sourceRect": {
             "x": 0,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "y": 254,
+            "w": 280,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -224,10 +257,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 280,
+            "y": 254,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -235,10 +268,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 562,
+            "y": 254,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -246,10 +279,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 843,
+            "y": 254,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -257,10 +290,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 1124,
+            "y": 254,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -268,10 +301,10 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 1406,
+            "y": 254,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -279,10 +312,10 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1536,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 1688,
+            "y": 254,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -290,10 +323,10 @@
         {
           "index": 7,
           "sourceRect": {
-            "x": 1792,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 1970,
+            "y": 254,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -301,10 +334,10 @@
         {
           "index": 8,
           "sourceRect": {
-            "x": 2048,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 2251,
+            "y": 254,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -312,10 +345,10 @@
         {
           "index": 9,
           "sourceRect": {
-            "x": 2304,
-            "y": 256,
-            "w": 256,
-            "h": 237
+            "x": 2532,
+            "y": 254,
+            "w": 284,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -327,7 +360,7 @@
       "label": "Jump / Airborne",
       "type": "animation-sequence",
       "rowIndex": 2,
-      "rowY": 512,
+      "rowY": 511,
       "frameCount": 7,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -338,9 +371,9 @@
           "index": 0,
           "sourceRect": {
             "x": 0,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "y": 511,
+            "w": 280,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -348,10 +381,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 280,
+            "y": 511,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -359,10 +392,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 562,
+            "y": 511,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -370,10 +403,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 843,
+            "y": 511,
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -381,10 +414,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 1124,
+            "y": 511,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -392,10 +425,10 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 1406,
+            "y": 511,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -403,10 +436,10 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1536,
-            "y": 512,
-            "w": 256,
-            "h": 237
+            "x": 1688,
+            "y": 511,
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -430,8 +463,8 @@
           "sourceRect": {
             "x": 0,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 280,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -439,10 +472,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
+            "x": 280,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -450,10 +483,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
+            "x": 562,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -461,10 +494,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
+            "x": 843,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -472,10 +505,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
+            "x": 1124,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -483,10 +516,10 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
+            "x": 1406,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -494,10 +527,10 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1536,
+            "x": 1688,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -505,10 +538,10 @@
         {
           "index": 7,
           "sourceRect": {
-            "x": 1792,
+            "x": 1970,
             "y": 768,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 257
           },
           "durationMs": null,
           "pivot": null
@@ -520,7 +553,7 @@
       "label": "Hurt / Fall / Knocked",
       "type": "animation-sequence",
       "rowIndex": 4,
-      "rowY": 1024,
+      "rowY": 1025,
       "frameCount": 7,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -531,9 +564,9 @@
           "index": 0,
           "sourceRect": {
             "x": 0,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "y": 1025,
+            "w": 280,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -541,10 +574,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 280,
+            "y": 1025,
+            "w": 282,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -552,10 +585,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 562,
+            "y": 1025,
+            "w": 281,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -563,10 +596,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 843,
+            "y": 1025,
+            "w": 281,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -574,10 +607,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 1124,
+            "y": 1025,
+            "w": 282,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -585,10 +618,10 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 1406,
+            "y": 1025,
+            "w": 282,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -596,10 +629,10 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1536,
-            "y": 1024,
-            "w": 256,
-            "h": 237
+            "x": 1688,
+            "y": 1025,
+            "w": 282,
+            "h": 255
           },
           "durationMs": null,
           "pivot": null
@@ -623,8 +656,8 @@
           "sourceRect": {
             "x": 0,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 280,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
@@ -632,10 +665,10 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 256,
+            "x": 280,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
@@ -643,10 +676,10 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 512,
+            "x": 562,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
@@ -654,10 +687,10 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 768,
+            "x": 843,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 281,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
@@ -665,10 +698,10 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1024,
+            "x": 1124,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
@@ -676,10 +709,10 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1280,
+            "x": 1406,
             "y": 1280,
-            "w": 256,
-            "h": 237
+            "w": 282,
+            "h": 256
           },
           "durationMs": null,
           "pivot": null
