@@ -412,7 +412,7 @@
       "loop": false,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "Removed original frames 2 and 3 to improve animation pacing.",
+      "notes": "Custom mapped sequence from original columns: 0, 1, 4, 5, 7, 0",
       "frames": [
         {
           "index": 0,
@@ -461,9 +461,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1688,
+            "x": 1970,
             "y": 768,
-            "w": 282,
+            "w": 281,
             "h": 257
           },
           "durationMs": null,
@@ -472,9 +472,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1970,
+            "x": 0,
             "y": 768,
-            "w": 281,
+            "w": 280,
             "h": 257
           },
           "durationMs": null,
