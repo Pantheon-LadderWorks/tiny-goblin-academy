@@ -7,7 +7,7 @@
   "derivedSheet": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
   "frameGrid": {
     "columns": 10,
-    "rows": 6,
+    "rows": 5,
     "cellWidth": 275,
     "frameHeightCropped": null,
     "columnRects": [
@@ -66,32 +66,27 @@
       {
         "row": 0,
         "y": 0,
-        "h": 256
+        "h": 307
       },
       {
         "row": 1,
-        "y": 256,
-        "h": 256
+        "y": 307,
+        "h": 307
       },
       {
         "row": 2,
-        "y": 512,
-        "h": 256
+        "y": 614,
+        "h": 308
       },
       {
         "row": 3,
-        "y": 768,
-        "h": 256
+        "y": 922,
+        "h": 307
       },
       {
         "row": 4,
-        "y": 1024,
-        "h": 256
-      },
-      {
-        "row": 5,
-        "y": 1280,
-        "h": 256
+        "y": 1229,
+        "h": 307
       }
     ]
   },
@@ -124,7 +119,7 @@
             "x": 275,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -135,7 +130,7 @@
             "x": 550,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -146,7 +141,7 @@
             "x": 825,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -157,7 +152,7 @@
             "x": 1100,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -168,7 +163,7 @@
             "x": 1375,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -179,7 +174,7 @@
             "x": 1650,
             "y": 0,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -191,7 +186,7 @@
       "label": "Patrol / Hop",
       "type": "animation-sequence",
       "rowIndex": 1,
-      "rowY": 256,
+      "rowY": 307,
       "frameCount": 9,
       "loop": true,
       "reviewStatus": "needs-human-review",
@@ -202,9 +197,9 @@
           "index": 0,
           "sourceRect": {
             "x": 275,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -213,9 +208,9 @@
           "index": 1,
           "sourceRect": {
             "x": 550,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -224,9 +219,9 @@
           "index": 2,
           "sourceRect": {
             "x": 825,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -235,9 +230,9 @@
           "index": 3,
           "sourceRect": {
             "x": 1100,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -246,9 +241,9 @@
           "index": 4,
           "sourceRect": {
             "x": 1375,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -257,9 +252,9 @@
           "index": 5,
           "sourceRect": {
             "x": 1650,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -268,9 +263,9 @@
           "index": 6,
           "sourceRect": {
             "x": 1925,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -279,9 +274,9 @@
           "index": 7,
           "sourceRect": {
             "x": 2200,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -290,9 +285,9 @@
           "index": 8,
           "sourceRect": {
             "x": 2475,
-            "y": 256,
+            "y": 307,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -304,7 +299,7 @@
       "label": "Attack",
       "type": "animation-sequence",
       "rowIndex": 2,
-      "rowY": 512,
+      "rowY": 614,
       "frameCount": 6,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -315,9 +310,9 @@
           "index": 0,
           "sourceRect": {
             "x": 275,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -326,9 +321,9 @@
           "index": 1,
           "sourceRect": {
             "x": 550,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -337,9 +332,9 @@
           "index": 2,
           "sourceRect": {
             "x": 825,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -348,9 +343,9 @@
           "index": 3,
           "sourceRect": {
             "x": 1100,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -359,9 +354,9 @@
           "index": 4,
           "sourceRect": {
             "x": 1375,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -370,9 +365,9 @@
           "index": 5,
           "sourceRect": {
             "x": 1650,
-            "y": 512,
+            "y": 614,
             "w": 275,
-            "h": 256
+            "h": 308
           },
           "durationMs": null,
           "pivot": null
@@ -384,7 +379,7 @@
       "label": "Hit",
       "type": "animation-sequence",
       "rowIndex": 3,
-      "rowY": 768,
+      "rowY": 922,
       "frameCount": 6,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -395,9 +390,9 @@
           "index": 0,
           "sourceRect": {
             "x": 275,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -406,9 +401,9 @@
           "index": 1,
           "sourceRect": {
             "x": 550,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -417,9 +412,9 @@
           "index": 2,
           "sourceRect": {
             "x": 825,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -428,9 +423,9 @@
           "index": 3,
           "sourceRect": {
             "x": 1100,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -439,9 +434,9 @@
           "index": 4,
           "sourceRect": {
             "x": 1375,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -450,9 +445,9 @@
           "index": 5,
           "sourceRect": {
             "x": 1650,
-            "y": 768,
+            "y": 922,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -463,8 +458,8 @@
       "id": "platformer-training-dummy.die",
       "label": "Die",
       "type": "animation-sequence",
-      "rowIndex": 5,
-      "rowY": 1280,
+      "rowIndex": 4,
+      "rowY": 1229,
       "frameCount": 9,
       "loop": false,
       "reviewStatus": "needs-human-review",
@@ -475,9 +470,9 @@
           "index": 0,
           "sourceRect": {
             "x": 275,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -486,9 +481,9 @@
           "index": 1,
           "sourceRect": {
             "x": 550,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -497,9 +492,9 @@
           "index": 2,
           "sourceRect": {
             "x": 825,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -508,9 +503,9 @@
           "index": 3,
           "sourceRect": {
             "x": 1100,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -519,9 +514,9 @@
           "index": 4,
           "sourceRect": {
             "x": 1375,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -530,9 +525,9 @@
           "index": 5,
           "sourceRect": {
             "x": 1650,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -541,9 +536,9 @@
           "index": 6,
           "sourceRect": {
             "x": 1925,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -552,9 +547,9 @@
           "index": 7,
           "sourceRect": {
             "x": 2200,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
@@ -563,9 +558,9 @@
           "index": 8,
           "sourceRect": {
             "x": 2475,
-            "y": 1280,
+            "y": 1229,
             "w": 275,
-            "h": 256
+            "h": 307
           },
           "durationMs": null,
           "pivot": null
