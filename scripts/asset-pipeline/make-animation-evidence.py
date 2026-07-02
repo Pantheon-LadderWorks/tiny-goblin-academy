@@ -364,6 +364,7 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
     
     <div class="controls">
         <select id="seq-select"></select>
+        <div id="action-buttons" style="display: flex; gap: 8px; border-left: 1px solid #404859; padding-left: 16px; border-right: 1px solid #404859; padding-right: 16px;"></div>
         <button id="play-btn">Pause</button>
         <div class="fps-control">
             <label for="fps-slider">FPS:</label>
@@ -379,6 +380,7 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
         const canvas = document.getElementById('viewer');
         const ctx = canvas.getContext('2d');
         const select = document.getElementById('seq-select');
+        const actionButtons = document.getElementById('action-buttons');
         const playBtn = document.getElementById('play-btn');
         const fpsSlider = document.getElementById('fps-slider');
         const fpsValue = document.getElementById('fps-value');
@@ -387,17 +389,25 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
         let isPlaying = true;
         let fps = 10;
         let currentSeq = null;
+        let baseLoopSeq = null;
+        let isPlayingOneShot = false;
         let currentFrameIdx = 0;
         let lastFrameTime = 0;
         let animationId = null;
         
-        // Populate select
         if (manifest.animations) {{
             manifest.animations.forEach((anim, idx) => {{
-                const opt = document.createElement('option');
-                opt.value = idx;
-                opt.textContent = anim.label || anim.id;
-                select.appendChild(opt);
+                if (anim.loop) {{
+                    const opt = document.createElement('option');
+                    opt.value = idx;
+                    opt.textContent = anim.label || anim.id;
+                    select.appendChild(opt);
+                }} else {{
+                    const btn = document.createElement('button');
+                    btn.textContent = anim.label || anim.id;
+                    btn.addEventListener('click', () => playOneShot(idx));
+                    actionButtons.appendChild(btn);
+                }}
             }});
         }}
         
@@ -414,11 +424,20 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
             canvas.height = maxH || 256;
         }}
         
-        function setSequence(idx) {{
+        function setSequence(idx, isOneShot=false) {{
             currentSeq = manifest.animations[idx];
+            if (!isOneShot) {{
+                baseLoopSeq = currentSeq;
+            }}
             currentFrameIdx = 0;
             updateCanvasSize();
             drawFrame();
+        }}
+        
+        function playOneShot(idx) {{
+            isPlayingOneShot = true;
+            setSequence(idx, true);
+            lastFrameTime = performance.now();
         }}
         
         function drawFrame() {{
@@ -444,7 +463,14 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
                 if (elapsed >= msPerFrame) {{
                     currentFrameIdx++;
                     if (currentFrameIdx >= currentSeq.frames.length) {{
-                        currentFrameIdx = currentSeq.loop ? 0 : currentSeq.frames.length - 1;
+                        if (isPlayingOneShot) {{
+                            isPlayingOneShot = false;
+                            currentSeq = baseLoopSeq;
+                            currentFrameIdx = 0;
+                            updateCanvasSize();
+                        }} else {{
+                            currentFrameIdx = currentSeq.loop ? 0 : currentSeq.frames.length - 1;
+                        }}
                     }}
                     drawFrame();
                     lastFrameTime = time;
@@ -454,8 +480,12 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
         }}
         
         select.addEventListener('change', (e) => {{
-            setSequence(e.target.value);
-            lastFrameTime = performance.now();
+            if (!isPlayingOneShot) {{
+                setSequence(e.target.value);
+                lastFrameTime = performance.now();
+            }} else {{
+                baseLoopSeq = manifest.animations[e.target.value];
+            }}
         }});
         
         playBtn.addEventListener('click', () => {{
@@ -471,7 +501,15 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
         
         img.onload = () => {{
             if (manifest.animations && manifest.animations.length > 0) {{
-                setSequence(0);
+                let firstLoopIdx = manifest.animations.findIndex(a => a.loop);
+                if (firstLoopIdx === -1) firstLoopIdx = 0;
+                setSequence(firstLoopIdx);
+                
+                // Keep select value in sync if a loop exists
+                if (select.options.length > 0) {{
+                    select.value = firstLoopIdx;
+                }}
+                
                 lastFrameTime = performance.now();
                 animationId = requestAnimationFrame(loop);
             }}
