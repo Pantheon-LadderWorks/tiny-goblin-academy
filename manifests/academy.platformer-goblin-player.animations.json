@@ -4,7 +4,7 @@
   "domain": "platformer-goblin-player",
   "operationalType": "character-animation-sheet",
   "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
-  "derivedSheet": null,
+  "derivedSheet": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png",
   "frameGrid": {
     "note": "Perfect 256px cell width grid per architectural law. Shadow/separator cropped at 237px height.",
     "columns": 11,
@@ -112,7 +112,7 @@
     "sourceAlphaUsable": false,
     "background": "baked-checkerboard",
     "cleanupRequired": true,
-    "cleanupStatus": "not-run",
+    "cleanupStatus": "preview-generated",
     "humanReviewRequired": true,
     "cleanupNote": "Requires proper color-keying script to reach enclosed pixels between legs.",
     "pilotFrameSuggested": "platformer-goblin.walk frame 0 (x:0 y:256 w:256 h:237)"
