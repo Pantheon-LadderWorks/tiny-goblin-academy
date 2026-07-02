@@ -4,30 +4,115 @@
   "domain": "platformer-goblin-player",
   "operationalType": "character-animation-sheet",
   "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
-  "derivedSheet": null,
+  "derivedSheet": "assets/academy/derived/tga-platformer-goblin-player-v0.1-clean.png",
   "frameGrid": {
     "note": "Grid derived from numpy separator-column and separator-row detection (H5.8). NOT a uniform 256px grid. Column widths are 277-280px with 3-4px vertical separators. Row heights are 235-254px with 4-22px horizontal separators (ground lines / shadow bands).",
     "columns": 10,
     "rows": 6,
     "columnRects": [
-      { "col": 0, "x": 0,    "w": 280 },
-      { "col": 1, "x": 284,  "w": 278 },
-      { "col": 2, "x": 565,  "w": 278 },
-      { "col": 3, "x": 847,  "w": 277 },
-      { "col": 4, "x": 1128, "w": 278 },
-      { "col": 5, "x": 1410, "w": 278 },
-      { "col": 6, "x": 1692, "w": 277 },
-      { "col": 7, "x": 1973, "w": 278 },
-      { "col": 8, "x": 2254, "w": 278 },
-      { "col": 9, "x": 2536, "w": 280 }
+      {
+        "col": 0,
+        "x": 0,
+        "w": 280
+      },
+      {
+        "col": 1,
+        "x": 284,
+        "w": 278
+      },
+      {
+        "col": 2,
+        "x": 565,
+        "w": 278
+      },
+      {
+        "col": 3,
+        "x": 847,
+        "w": 277
+      },
+      {
+        "col": 4,
+        "x": 1128,
+        "w": 278
+      },
+      {
+        "col": 5,
+        "x": 1410,
+        "w": 278
+      },
+      {
+        "col": 6,
+        "x": 1692,
+        "w": 277
+      },
+      {
+        "col": 7,
+        "x": 1973,
+        "w": 278
+      },
+      {
+        "col": 8,
+        "x": 2254,
+        "w": 278
+      },
+      {
+        "col": 9,
+        "x": 2536,
+        "w": 280
+      }
     ],
     "rowRects": [
-      { "row": 0, "y": 0,    "h": 254, "sepBelow": { "y": 254, "h": 4  } },
-      { "row": 1, "y": 258,  "h": 235, "sepBelow": { "y": 493, "h": 22 } },
-      { "row": 2, "y": 515,  "h": 237, "sepBelow": { "y": 752, "h": 19 } },
-      { "row": 3, "y": 771,  "h": 238, "sepBelow": { "y": 1009,"h": 19 } },
-      { "row": 4, "y": 1028, "h": 239, "sepBelow": { "y": 1267,"h": 16 } },
-      { "row": 5, "y": 1283, "h": 253, "sepBelow": null }
+      {
+        "row": 0,
+        "y": 0,
+        "h": 254,
+        "sepBelow": {
+          "y": 254,
+          "h": 4
+        }
+      },
+      {
+        "row": 1,
+        "y": 258,
+        "h": 235,
+        "sepBelow": {
+          "y": 493,
+          "h": 22
+        }
+      },
+      {
+        "row": 2,
+        "y": 515,
+        "h": 237,
+        "sepBelow": {
+          "y": 752,
+          "h": 19
+        }
+      },
+      {
+        "row": 3,
+        "y": 771,
+        "h": 238,
+        "sepBelow": {
+          "y": 1009,
+          "h": 19
+        }
+      },
+      {
+        "row": 4,
+        "y": 1028,
+        "h": 239,
+        "sepBelow": {
+          "y": 1267,
+          "h": 16
+        }
+      },
+      {
+        "row": 5,
+        "y": 1283,
+        "h": 253,
+        "sepBelow": null
+      }
     ],
     "groundLineNote": "Horizontal separators are the baked ground lines. Row heights already EXCLUDE the separator — they represent clean sprite content only. No shadow-band crop needed; the separator probe already isolates content boundaries."
   },
@@ -36,7 +121,7 @@
     "sourceAlphaUsable": false,
     "background": "baked-checkerboard",
     "cleanupRequired": true,
-    "cleanupStatus": "not-run",
+    "cleanupStatus": "completed",
     "humanReviewRequired": true,
     "cleanupNote": "dark_composite() will show dark backgrounds once a derived clean sheet exists. Until then crops show baked checkerboard — expected and correct.",
     "pilotFrameSuggested": "platformer-goblin.walk frame 0 (x:0 y:258 w:280 h:235)"
@@ -54,16 +139,116 @@
       "usage": "draft-review",
       "notes": "Row 1 (y=0, h=254). 10 columns available — confirm actual frame count from contact sheet (some rightmost cells may be blank).",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 0, "w": 280, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 0, "w": 277, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 0, "w": 277, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 0, "w": 278, "h": 254 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 0, "w": 280, "h": 254 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 280,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 0,
+            "w": 277,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 0,
+            "w": 277,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 0,
+            "w": 278,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 0,
+            "w": 280,
+            "h": 254
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     },
     {
@@ -78,16 +263,116 @@
       "usage": "draft-review",
       "notes": "Row 2 (y=258, h=235). Full row expected. Largest separator below (22px) — largest ground band on sheet.",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 258, "w": 280, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 258, "w": 277, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 258, "w": 277, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 258, "w": 278, "h": 235 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 258, "w": 280, "h": 235 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 258,
+            "w": 280,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 258,
+            "w": 277,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 258,
+            "w": 277,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 258,
+            "w": 278,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 258,
+            "w": 280,
+            "h": 235
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     },
     {
@@ -102,16 +387,116 @@
       "usage": "draft-review",
       "notes": "Row 3 (y=515, h=237). Ground separator is cleanly excluded by row rect. No shadow-band crop needed — separator probe already isolates content.",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 515, "w": 280, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 515, "w": 277, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 515, "w": 277, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 515, "w": 278, "h": 237 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 515, "w": 280, "h": 237 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 515,
+            "w": 280,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 515,
+            "w": 277,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 515,
+            "w": 277,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 515,
+            "w": 278,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 515,
+            "w": 280,
+            "h": 237
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     },
     {
@@ -126,16 +511,116 @@
       "usage": "draft-review",
       "notes": "Row 4 (y=771, h=238). Club/weapon may extend into adjacent cell boundaries — future hitbox review gate.",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 771, "w": 280, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 771, "w": 277, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 771, "w": 277, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 771, "w": 278, "h": 238 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 771, "w": 280, "h": 238 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 771,
+            "w": 280,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 771,
+            "w": 277,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 771,
+            "w": 277,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 771,
+            "w": 278,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 771,
+            "w": 280,
+            "h": 238
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     },
     {
@@ -150,16 +635,116 @@
       "usage": "draft-review",
       "notes": "Row 5 (y=1028, h=239). Star/dizzy effects and horizontal knocked-down pose — may need non-standard frame handling in future hitbox gate.",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 1028, "w": 280, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 1028, "w": 277, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 1028, "w": 277, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 1028, "w": 278, "h": 239 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 1028, "w": 280, "h": 239 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1028,
+            "w": 280,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 1028,
+            "w": 277,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 1028,
+            "w": 277,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 1028,
+            "w": 278,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 1028,
+            "w": 280,
+            "h": 239
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     },
     {
@@ -174,16 +759,116 @@
       "usage": "draft-review",
       "notes": "Row 6 (y=1283, h=253). Tallest row — sparkle effects may extend upward. Confirm actual frame count from contact sheet.",
       "frames": [
-        { "index": 0, "sourceRect": { "x": 0,    "y": 1283, "w": 280, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 1, "sourceRect": { "x": 284,  "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 2, "sourceRect": { "x": 565,  "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 3, "sourceRect": { "x": 847,  "y": 1283, "w": 277, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 4, "sourceRect": { "x": 1128, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 5, "sourceRect": { "x": 1410, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 6, "sourceRect": { "x": 1692, "y": 1283, "w": 277, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 7, "sourceRect": { "x": 1973, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 8, "sourceRect": { "x": 2254, "y": 1283, "w": 278, "h": 253 }, "durationMs": null, "pivot": null },
-        { "index": 9, "sourceRect": { "x": 2536, "y": 1283, "w": 280, "h": 253 }, "durationMs": null, "pivot": null }
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1283,
+            "w": 280,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 284,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 565,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 847,
+            "y": 1283,
+            "w": 277,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1128,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1410,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1692,
+            "y": 1283,
+            "w": 277,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1973,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2254,
+            "y": 1283,
+            "w": 278,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2536,
+            "y": 1283,
+            "w": 280,
+            "h": 253
+          },
+          "durationMs": null,
+          "pivot": null
+        }
       ]
     }
   ],
