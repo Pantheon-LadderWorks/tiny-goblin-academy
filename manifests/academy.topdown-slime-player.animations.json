@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "topdown-slime-player",
+  "operationalType": "character-animation-sheet",
+  "sourceSheet": "assets/academy/creatures/slime/tga-topdown-slime-player-v0.1.png",
+  "derivedSheet": "assets/academy/derived/tga-topdown-slime-player-v0.1-clean.png",
+  "frameGrid": {
+    "note": "Columns are uniformly 250px. Rows are variable height derived from numpy row separator probe.",
+    "columns": 11,
+    "rows": 7,
+    "columnRects": [
+      {
+        "col": 0,
+        "x": 0,
+        "w": 250
+      },
+      {
+        "col": 1,
+        "x": 250,
+        "w": 250
+      },
+      {
+        "col": 2,
+        "x": 500,
+        "w": 250
+      },
+      {
+        "col": 3,
+        "x": 750,
+        "w": 250
+      },
+      {
+        "col": 4,
+        "x": 1000,
+        "w": 250
+      },
+      {
+        "col": 5,
+        "x": 1250,
+        "w": 250
+      },
+      {
+        "col": 6,
+        "x": 1500,
+        "w": 250
+      },
+      {
+        "col": 7,
+        "x": 1750,
+        "w": 250
+      },
+      {
+        "col": 8,
+        "x": 2000,
+        "w": 250
+      },
+      {
+        "col": 9,
+        "x": 2250,
+        "w": 250
+      },
+      {
+        "col": 10,
+        "x": 2500,
+        "w": 250
+      }
+    ],
+    "rowRects": [
+      {
+        "row": 0,
+        "y": 0,
+        "h": 187,
+        "sepBelow": null
+      },
+      {
+        "row": 1,
+        "y": 188,
+        "h": 191,
+        "sepBelow": null
+      },
+      {
+        "row": 2,
+        "y": 381,
+        "h": 191,
+        "sepBelow": null
+      },
+      {
+        "row": 3,
+        "y": 574,
+        "h": 192,
+        "sepBelow": null
+      },
+      {
+        "row": 4,
+        "y": 770,
+        "h": 214,
+        "sepBelow": null
+      },
+      {
+        "row": 5,
+        "y": 986,
+        "h": 273,
+        "sepBelow": null
+      },
+      {
+        "row": 6,
+        "y": 1261,
+        "h": 275,
+        "sepBelow": null
+      }
+    ]
+  },
+  "transparency": {
+    "sourceHasAlpha": true,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "completed",
+    "humanReviewRequired": true,
+    "cleanupNote": "dark_composite() will show dark backgrounds once a derived clean sheet exists.",
+    "pilotFrameSuggested": "topdown-slime.idle-front frame 0 (x:0 y:0 w:250 h:187)"
+  },
+  "animations": [
+    {
+      "id": "topdown-slime.idle-front",
+      "label": "Idle Front",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "First 4 frames of row 0",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 250,
+            "h": 187
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 0,
+            "w": 250,
+            "h": 187
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 0,
+            "w": 250,
+            "h": 187
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 0,
+            "w": 250,
+            "h": 187
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "topdown-slime.idle-back",
+      "label": "Idle Back",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 188,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "First 4 frames of row 1",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 188,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 188,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 188,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 188,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "topdown-slime.move-right",
+      "label": "Move Right",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 381,
+      "frameCount": 7,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Frames 4 to 10 of row 2 (offset in sequence)",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1000,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1250,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1500,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1750,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 2000,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 2250,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 2500,
+            "y": 381,
+            "w": 250,
+            "h": 191
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "topdown-slime.move-left",
+      "label": "Move Left",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 574,
+      "frameCount": 7,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Frames 4 to 10 of row 3",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1000,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1250,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1500,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1750,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 2000,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 2250,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 2500,
+            "y": 574,
+            "w": 250,
+            "h": 192
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "topdown-slime.attack-dash",
+      "label": "Attack Dash",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 770,
+      "frameCount": 11,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "Row 4 whole sequence",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 500,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 750,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 4,
+          "sourceRect": {
+            "x": 1000,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 5,
+          "sourceRect": {
+            "x": 1250,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 6,
+          "sourceRect": {
+            "x": 1500,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 7,
+          "sourceRect": {
+            "x": 1750,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 8,
+          "sourceRect": {
+            "x": 2000,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 9,
+          "sourceRect": {
+            "x": 2250,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 10,
+          "sourceRect": {
+            "x": 2500,
+            "y": 770,
+            "w": 250,
+            "h": 214
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    },
+    {
+      "id": "topdown-slime.splat",
+      "label": "Die Splat",
+      "type": "animation-sequence",
+      "rowIndex": 6,
+      "rowY": 1261,
+      "frameCount": 2,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "notes": "First 2 frames of row 6",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1261,
+            "w": 250,
+            "h": 275
+          },
+          "durationMs": null,
+          "pivot": null
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 250,
+            "y": 1261,
+            "w": 250,
+            "h": 275
+          },
+          "durationMs": null,
+          "pivot": null
+        }
+      ]
+    }
+  ]
+}
