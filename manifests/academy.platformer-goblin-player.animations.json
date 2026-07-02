@@ -408,11 +408,11 @@
       "type": "animation-sequence",
       "rowIndex": 3,
       "rowY": 768,
-      "frameCount": 8,
+      "frameCount": 6,
       "loop": false,
       "reviewStatus": "needs-human-review",
       "usage": "draft-review",
-      "notes": "",
+      "notes": "Removed original frames 2 and 3 to improve animation pacing.",
       "frames": [
         {
           "index": 0,
@@ -439,28 +439,6 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 562,
-            "y": 768,
-            "w": 281,
-            "h": 257
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 3,
-          "sourceRect": {
-            "x": 843,
-            "y": 768,
-            "w": 281,
-            "h": 257
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 4,
-          "sourceRect": {
             "x": 1124,
             "y": 768,
             "w": 282,
@@ -470,7 +448,7 @@
           "pivot": null
         },
         {
-          "index": 5,
+          "index": 3,
           "sourceRect": {
             "x": 1406,
             "y": 768,
@@ -481,7 +459,7 @@
           "pivot": null
         },
         {
-          "index": 6,
+          "index": 4,
           "sourceRect": {
             "x": 1688,
             "y": 768,
@@ -492,7 +470,7 @@
           "pivot": null
         },
         {
-          "index": 7,
+          "index": 5,
           "sourceRect": {
             "x": 1970,
             "y": 768,
