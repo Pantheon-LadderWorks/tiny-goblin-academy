@@ -259,6 +259,238 @@ def generate_sequences_table_preview(animations: list[dict], out_path: Path) -> 
     canvas.save(out_path)
 
 
+def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> None:
+    import os
+    
+    # Target image to load: derivedSheet if exists, else sourceSheet
+    image_rel_path = manifest.get("derivedSheet") or manifest.get("sourceSheet", "")
+    image_abs_path = root_dir / image_rel_path
+    
+    # Calculate relative path from the HTML file's directory to the image
+    html_to_image = os.path.relpath(image_abs_path, out_path.parent).replace('\\', '/')
+    
+    html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{manifest.get('domain', 'Animation')} Flipbook</title>
+    <style>
+        body {{
+            background-color: #121418;
+            color: #e1e6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }}
+        h1 {{
+            color: #fff4cc;
+            margin-bottom: 8px;
+        }}
+        p {{
+            color: #b4c8dc;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }}
+        .canvas-container {{
+            background-color: #181a20;
+            border: 2px solid #2d3340;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            min-width: 300px;
+        }}
+        canvas {{
+            background-color: #181a20;
+            image-rendering: pixelated;
+            max-width: 100%;
+        }}
+        .controls {{
+            display: flex;
+            gap: 16px;
+            background-color: #1f222a;
+            padding: 16px 24px;
+            border-radius: 8px;
+            border: 1px solid #2d3340;
+            align-items: center;
+        }}
+        select, button, input {{
+            background-color: #2d3340;
+            color: #e1e6f0;
+            border: 1px solid #404859;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }}
+        select:focus, button:hover, input:focus {{
+            border-color: #78b4ff;
+        }}
+        button {{
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #3b4252;
+        }}
+        button:hover {{
+            background-color: #4c566a;
+        }}
+        .fps-control {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        #fps-value {{
+            width: 24px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }}
+    </style>
+</head>
+<body>
+    <h1>{manifest.get('domain', 'Animation')} Flipbook</h1>
+    <p>Interactive sequence viewer &mdash; Draft Review</p>
+    
+    <div class="canvas-container">
+        <canvas id="viewer"></canvas>
+    </div>
+    
+    <div class="controls">
+        <select id="seq-select"></select>
+        <button id="play-btn">Pause</button>
+        <div class="fps-control">
+            <label for="fps-slider">FPS:</label>
+            <input type="range" id="fps-slider" min="1" max="30" value="10">
+            <span id="fps-value">10</span>
+        </div>
+    </div>
+
+    <script>
+        const manifest = {json.dumps(manifest)};
+        const imgPath = "{html_to_image}";
+        
+        const canvas = document.getElementById('viewer');
+        const ctx = canvas.getContext('2d');
+        const select = document.getElementById('seq-select');
+        const playBtn = document.getElementById('play-btn');
+        const fpsSlider = document.getElementById('fps-slider');
+        const fpsValue = document.getElementById('fps-value');
+        
+        let img = new Image();
+        let isPlaying = true;
+        let fps = 10;
+        let currentSeq = null;
+        let currentFrameIdx = 0;
+        let lastFrameTime = 0;
+        let animationId = null;
+        
+        // Populate select
+        if (manifest.animations) {{
+            manifest.animations.forEach((anim, idx) => {{
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = anim.label || anim.id;
+                select.appendChild(opt);
+            }});
+        }}
+        
+        function updateCanvasSize() {{
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0) return;
+            let maxW = 0, maxH = 0;
+            currentSeq.frames.forEach(f => {{
+                if (f.sourceRect) {{
+                    maxW = Math.max(maxW, f.sourceRect.w);
+                    maxH = Math.max(maxH, f.sourceRect.h);
+                }}
+            }});
+            canvas.width = maxW || 256;
+            canvas.height = maxH || 256;
+        }}
+        
+        function setSequence(idx) {{
+            currentSeq = manifest.animations[idx];
+            currentFrameIdx = 0;
+            updateCanvasSize();
+            drawFrame();
+        }}
+        
+        function drawFrame() {{
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0 || !img.complete) return;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const frame = currentSeq.frames[currentFrameIdx];
+            if (!frame || !frame.sourceRect) return;
+            const rect = frame.sourceRect;
+            
+            const dx = (canvas.width - rect.w) / 2;
+            const dy = (canvas.height - rect.h) / 2;
+            
+            ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h, dx, dy, rect.w, rect.h);
+        }}
+        
+        function loop(time) {{
+            if (isPlaying && currentSeq && currentSeq.frames.length > 0) {{
+                const elapsed = time - lastFrameTime;
+                const msPerFrame = 1000 / fps;
+                
+                if (elapsed >= msPerFrame) {{
+                    currentFrameIdx++;
+                    if (currentFrameIdx >= currentSeq.frames.length) {{
+                        currentFrameIdx = currentSeq.loop ? 0 : currentSeq.frames.length - 1;
+                    }}
+                    drawFrame();
+                    lastFrameTime = time;
+                }}
+            }}
+            animationId = requestAnimationFrame(loop);
+        }}
+        
+        select.addEventListener('change', (e) => {{
+            setSequence(e.target.value);
+            lastFrameTime = performance.now();
+        }});
+        
+        playBtn.addEventListener('click', () => {{
+            isPlaying = !isPlaying;
+            playBtn.textContent = isPlaying ? 'Pause' : 'Play';
+            if (isPlaying) lastFrameTime = performance.now();
+        }});
+        
+        fpsSlider.addEventListener('input', (e) => {{
+            fps = parseInt(e.target.value);
+            fpsValue.textContent = fps;
+        }});
+        
+        img.onload = () => {{
+            if (manifest.animations && manifest.animations.length > 0) {{
+                setSequence(0);
+                lastFrameTime = performance.now();
+                animationId = requestAnimationFrame(loop);
+            }}
+        }};
+        img.onerror = () => {{
+            ctx.fillStyle = '#ff6e6e';
+            ctx.font = '16px Arial';
+            ctx.fillText('Failed to load sprite sheet', 20, 40);
+            ctx.fillText(imgPath, 20, 60);
+        }};
+        img.src = imgPath;
+        
+    </script>
+</body>
+</html>
+"""
+    out_path.write_text(html_content, encoding="utf-8")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate synchronized animation-sequence evidence from an animation manifest.")
     parser.add_argument("--manifest", required=True, help="Repo-relative path to animation manifest JSON.")
@@ -311,6 +543,10 @@ def main() -> None:
 
     generate_sequences_table_preview(animations, out_dir / f"{domain}-sequences-table-preview.png")
     print(f"  wrote {domain}-sequences-table-preview.png")
+
+    flipbook_path = out_dir / f"{domain}-flipbook.html"
+    generate_flipbook_html(manifest, flipbook_path, root)
+    print(f"  wrote {domain}-flipbook.html")
 
     print(f"\nGenerated animation evidence for {domain}")
     print(f"Sequences: {len(animations)}")

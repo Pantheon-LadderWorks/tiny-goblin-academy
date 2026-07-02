@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>platformer-goblin-player Flipbook</title>
+    <style>
+        body {
+            background-color: #121418;
+            color: #e1e6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #fff4cc;
+            margin-bottom: 8px;
+        }
+        p {
+            color: #b4c8dc;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        .canvas-container {
+            background-color: #181a20;
+            border: 2px solid #2d3340;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            min-width: 300px;
+        }
+        canvas {
+            background-color: #181a20;
+            image-rendering: pixelated;
+            max-width: 100%;
+        }
+        .controls {
+            display: flex;
+            gap: 16px;
+            background-color: #1f222a;
+            padding: 16px 24px;
+            border-radius: 8px;
+            border: 1px solid #2d3340;
+            align-items: center;
+        }
+        select, button, input {
+            background-color: #2d3340;
+            color: #e1e6f0;
+            border: 1px solid #404859;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+        select:focus, button:hover, input:focus {
+            border-color: #78b4ff;
+        }
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #3b4252;
+        }
+        button:hover {
+            background-color: #4c566a;
+        }
+        .fps-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #fps-value {
+            width: 24px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body>
+    <h1>platformer-goblin-player Flipbook</h1>
+    <p>Interactive sequence viewer &mdash; Draft Review</p>
+    
+    <div class="canvas-container">
+        <canvas id="viewer"></canvas>
+    </div>
+    
+    <div class="controls">
+        <select id="seq-select"></select>
+        <button id="play-btn">Pause</button>
+        <div class="fps-control">
+            <label for="fps-slider">FPS:</label>
+            <input type="range" id="fps-slider" min="1" max="30" value="10">
+            <span id="fps-value">10</span>
+        </div>
+    </div>
+
+    <script>
+        const manifest = {"schemaVersion": "0.1", "status": "draft", "domain": "platformer-goblin-player", "operationalType": "character-animation-sheet", "sourceSheet": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png", "derivedSheet": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png", "frameGrid": {"note": "Restored dynamic 10-col grid (H5.10C) using empirical numpy probe data.", "columns": 10, "rows": 6, "cellWidth": 281, "frameHeightCropped": null, "columnRects": [{"col": 0, "x": 0, "w": 280}, {"col": 1, "x": 280, "w": 282}, {"col": 2, "x": 562, "w": 281}, {"col": 3, "x": 843, "w": 281}, {"col": 4, "x": 1124, "w": 282}, {"col": 5, "x": 1406, "w": 282}, {"col": 6, "x": 1688, "w": 282}, {"col": 7, "x": 1970, "w": 281}, {"col": 8, "x": 2251, "w": 281}, {"col": 9, "x": 2532, "w": 284}], "rowRects": [{"row": 0, "y": 0, "h": 254}, {"row": 1, "y": 254, "h": 257}, {"row": 2, "y": 511, "h": 257}, {"row": 3, "y": 768, "h": 257}, {"row": 4, "y": 1025, "h": 255}, {"row": 5, "y": 1280, "h": 256}]}, "transparency": {"sourceHasAlpha": true, "sourceAlphaUsable": false, "background": "baked-checkerboard", "cleanupRequired": true, "cleanupStatus": "preview-generated", "humanReviewRequired": true, "cleanupNote": "Canyon strategy applied.", "pilotFrameSuggested": "platformer-goblin.walk frame 0"}, "animations": [{"id": "platformer-goblin.idle", "label": "Idle", "type": "animation-sequence", "rowIndex": 0, "rowY": 0, "frameCount": 10, "loop": true, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 0, "w": 280, "h": 254}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 0, "w": 282, "h": 254}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 0, "w": 281, "h": 254}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 0, "w": 281, "h": 254}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 0, "w": 282, "h": 254}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 0, "w": 282, "h": 254}, "durationMs": null, "pivot": null}, {"index": 6, "sourceRect": {"x": 1688, "y": 0, "w": 282, "h": 254}, "durationMs": null, "pivot": null}, {"index": 7, "sourceRect": {"x": 1970, "y": 0, "w": 281, "h": 254}, "durationMs": null, "pivot": null}, {"index": 8, "sourceRect": {"x": 2251, "y": 0, "w": 281, "h": 254}, "durationMs": null, "pivot": null}, {"index": 9, "sourceRect": {"x": 2532, "y": 0, "w": 284, "h": 254}, "durationMs": null, "pivot": null}]}, {"id": "platformer-goblin.walk", "label": "Walk / Run", "type": "animation-sequence", "rowIndex": 1, "rowY": 254, "frameCount": 10, "loop": true, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 254, "w": 280, "h": 257}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 254, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 254, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 254, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 254, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 254, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 6, "sourceRect": {"x": 1688, "y": 254, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 7, "sourceRect": {"x": 1970, "y": 254, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 8, "sourceRect": {"x": 2251, "y": 254, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 9, "sourceRect": {"x": 2532, "y": 254, "w": 284, "h": 257}, "durationMs": null, "pivot": null}]}, {"id": "platformer-goblin.jump", "label": "Jump / Airborne", "type": "animation-sequence", "rowIndex": 2, "rowY": 511, "frameCount": 7, "loop": false, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 511, "w": 280, "h": 257}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 511, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 511, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 511, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 511, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 511, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 6, "sourceRect": {"x": 1688, "y": 511, "w": 282, "h": 257}, "durationMs": null, "pivot": null}]}, {"id": "platformer-goblin.attack", "label": "Attack / Club Swing", "type": "animation-sequence", "rowIndex": 3, "rowY": 768, "frameCount": 8, "loop": false, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 768, "w": 280, "h": 257}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 768, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 768, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 768, "w": 281, "h": 257}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 768, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 768, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 6, "sourceRect": {"x": 1688, "y": 768, "w": 282, "h": 257}, "durationMs": null, "pivot": null}, {"index": 7, "sourceRect": {"x": 1970, "y": 768, "w": 281, "h": 257}, "durationMs": null, "pivot": null}]}, {"id": "platformer-goblin.hurt", "label": "Hurt / Fall / Knocked", "type": "animation-sequence", "rowIndex": 4, "rowY": 1025, "frameCount": 7, "loop": false, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 1025, "w": 280, "h": 255}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 1025, "w": 282, "h": 255}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 1025, "w": 281, "h": 255}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 1025, "w": 281, "h": 255}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 1025, "w": 282, "h": 255}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 1025, "w": 282, "h": 255}, "durationMs": null, "pivot": null}, {"index": 6, "sourceRect": {"x": 1688, "y": 1025, "w": 282, "h": 255}, "durationMs": null, "pivot": null}]}, {"id": "platformer-goblin.celebrate", "label": "Celebrate / Success", "type": "animation-sequence", "rowIndex": 5, "rowY": 1280, "frameCount": 6, "loop": true, "reviewStatus": "needs-human-review", "usage": "draft-review", "notes": "", "frames": [{"index": 0, "sourceRect": {"x": 0, "y": 1280, "w": 280, "h": 256}, "durationMs": null, "pivot": null}, {"index": 1, "sourceRect": {"x": 280, "y": 1280, "w": 282, "h": 256}, "durationMs": null, "pivot": null}, {"index": 2, "sourceRect": {"x": 562, "y": 1280, "w": 281, "h": 256}, "durationMs": null, "pivot": null}, {"index": 3, "sourceRect": {"x": 843, "y": 1280, "w": 281, "h": 256}, "durationMs": null, "pivot": null}, {"index": 4, "sourceRect": {"x": 1124, "y": 1280, "w": 282, "h": 256}, "durationMs": null, "pivot": null}, {"index": 5, "sourceRect": {"x": 1406, "y": 1280, "w": 282, "h": 256}, "durationMs": null, "pivot": null}]}]};
+        const imgPath = "../../derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png";
+        
+        const canvas = document.getElementById('viewer');
+        const ctx = canvas.getContext('2d');
+        const select = document.getElementById('seq-select');
+        const playBtn = document.getElementById('play-btn');
+        const fpsSlider = document.getElementById('fps-slider');
+        const fpsValue = document.getElementById('fps-value');
+        
+        let img = new Image();
+        let isPlaying = true;
+        let fps = 10;
+        let currentSeq = null;
+        let currentFrameIdx = 0;
+        let lastFrameTime = 0;
+        let animationId = null;
+        
+        // Populate select
+        if (manifest.animations) {
+            manifest.animations.forEach((anim, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = anim.label || anim.id;
+                select.appendChild(opt);
+            });
+        }
+        
+        function updateCanvasSize() {
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0) return;
+            let maxW = 0, maxH = 0;
+            currentSeq.frames.forEach(f => {
+                if (f.sourceRect) {
+                    maxW = Math.max(maxW, f.sourceRect.w);
+                    maxH = Math.max(maxH, f.sourceRect.h);
+                }
+            });
+            canvas.width = maxW || 256;
+            canvas.height = maxH || 256;
+        }
+        
+        function setSequence(idx) {
+            currentSeq = manifest.animations[idx];
+            currentFrameIdx = 0;
+            updateCanvasSize();
+            drawFrame();
+        }
+        
+        function drawFrame() {
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0 || !img.complete) return;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const frame = currentSeq.frames[currentFrameIdx];
+            if (!frame || !frame.sourceRect) return;
+            const rect = frame.sourceRect;
+            
+            const dx = (canvas.width - rect.w) / 2;
+            const dy = (canvas.height - rect.h) / 2;
+            
+            ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h, dx, dy, rect.w, rect.h);
+        }
+        
+        function loop(time) {
+            if (isPlaying && currentSeq && currentSeq.frames.length > 0) {
+                const elapsed = time - lastFrameTime;
+                const msPerFrame = 1000 / fps;
+                
+                if (elapsed >= msPerFrame) {
+                    currentFrameIdx++;
+                    if (currentFrameIdx >= currentSeq.frames.length) {
+                        currentFrameIdx = currentSeq.loop ? 0 : currentSeq.frames.length - 1;
+                    }
+                    drawFrame();
+                    lastFrameTime = time;
+                }
+            }
+            animationId = requestAnimationFrame(loop);
+        }
+        
+        select.addEventListener('change', (e) => {
+            setSequence(e.target.value);
+            lastFrameTime = performance.now();
+        });
+        
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playBtn.textContent = isPlaying ? 'Pause' : 'Play';
+            if (isPlaying) lastFrameTime = performance.now();
+        });
+        
+        fpsSlider.addEventListener('input', (e) => {
+            fps = parseInt(e.target.value);
+            fpsValue.textContent = fps;
+        });
+        
+        img.onload = () => {
+            if (manifest.animations && manifest.animations.length > 0) {
+                setSequence(0);
+                lastFrameTime = performance.now();
+                animationId = requestAnimationFrame(loop);
+            }
+        };
+        img.onerror = () => {
+            ctx.fillStyle = '#ff6e6e';
+            ctx.font = '16px Arial';
+            ctx.fillText('Failed to load sprite sheet', 20, 40);
+            ctx.fillText(imgPath, 20, 60);
+        };
+        img.src = imgPath;
+        
+    </script>
+</body>
+</html>
