@@ -134,7 +134,7 @@
           "sourceRect": {
             "x": 0,
             "y": 0,
-            "w": 275,
+            "w": 260,
             "h": 187
           },
           "durationMs": null,
@@ -143,9 +143,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 275,
+            "x": 201,
             "y": 0,
-            "w": 275,
+            "w": 260,
             "h": 187
           },
           "durationMs": null,
@@ -154,9 +154,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 550,
+            "x": 627,
             "y": 0,
-            "w": 275,
+            "w": 260,
             "h": 187
           },
           "durationMs": null,
@@ -165,9 +165,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 825,
+            "x": 833,
             "y": 0,
-            "w": 275,
+            "w": 260,
             "h": 187
           },
           "durationMs": null,
@@ -192,7 +192,7 @@
           "sourceRect": {
             "x": 0,
             "y": 188,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -201,9 +201,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 275,
+            "x": 201,
             "y": 188,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -212,9 +212,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 550,
+            "x": 627,
             "y": 188,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -223,9 +223,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 825,
+            "x": 833,
             "y": 188,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -248,9 +248,9 @@
         {
           "index": 0,
           "sourceRect": {
-            "x": 1100,
+            "x": 1149,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -259,9 +259,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 1375,
+            "x": 1343,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -270,9 +270,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 1650,
+            "x": 1590,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -281,9 +281,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 1925,
+            "x": 1811,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -292,9 +292,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 2200,
+            "x": 2292,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -303,9 +303,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 2475,
+            "x": 2499,
             "y": 381,
-            "w": 275,
+            "w": 260,
             "h": 191
           },
           "durationMs": null,
@@ -328,9 +328,9 @@
         {
           "index": 0,
           "sourceRect": {
-            "x": 1100,
+            "x": 1135,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -339,9 +339,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 1375,
+            "x": 1357,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -350,9 +350,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 1650,
+            "x": 1577,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -361,9 +361,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 1925,
+            "x": 2059,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -372,9 +372,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 2200,
+            "x": 2292,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -383,9 +383,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 2475,
+            "x": 2512,
             "y": 574,
-            "w": 275,
+            "w": 260,
             "h": 192
           },
           "durationMs": null,
@@ -410,7 +410,7 @@
           "sourceRect": {
             "x": 0,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -419,9 +419,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 275,
+            "x": 201,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -430,9 +430,9 @@
         {
           "index": 2,
           "sourceRect": {
-            "x": 550,
+            "x": 668,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -441,9 +441,9 @@
         {
           "index": 3,
           "sourceRect": {
-            "x": 825,
+            "x": 916,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -452,9 +452,9 @@
         {
           "index": 4,
           "sourceRect": {
-            "x": 1100,
+            "x": 1135,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -463,9 +463,9 @@
         {
           "index": 5,
           "sourceRect": {
-            "x": 1375,
+            "x": 1357,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -474,9 +474,9 @@
         {
           "index": 6,
           "sourceRect": {
-            "x": 1650,
+            "x": 1590,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -485,9 +485,9 @@
         {
           "index": 7,
           "sourceRect": {
-            "x": 1925,
+            "x": 1934,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -496,9 +496,9 @@
         {
           "index": 8,
           "sourceRect": {
-            "x": 2200,
+            "x": 2292,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -507,9 +507,9 @@
         {
           "index": 9,
           "sourceRect": {
-            "x": 2475,
+            "x": 2512,
             "y": 770,
-            "w": 275,
+            "w": 260,
             "h": 214
           },
           "durationMs": null,
@@ -532,9 +532,9 @@
         {
           "index": 0,
           "sourceRect": {
-            "x": 0,
+            "x": 8,
             "y": 1261,
-            "w": 275,
+            "w": 260,
             "h": 275
           },
           "durationMs": null,
@@ -543,9 +543,9 @@
         {
           "index": 1,
           "sourceRect": {
-            "x": 275,
+            "x": 310,
             "y": 1261,
-            "w": 275,
+            "w": 260,
             "h": 275
           },
           "durationMs": null,
