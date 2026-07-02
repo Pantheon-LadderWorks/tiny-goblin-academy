@@ -1,0 +1,6 @@
+row_index,line_above_y,center_y,bot_y,line_thickness_px,line_color_rgb,note
+1,253,254,255,3,"(78,79,69)",solid dark-olive; separates row1/row2
+2,511,512,513,3,"(60,60,54)",solid near-black; separates row2/row3
+3,767,768,769,3,"(59,60,53)",solid near-black; separates row3/row4
+4,1024,1025,1026,3,"(57,57,52)",solid near-black; separates row4/row5
+5,1279,1280,1281,3,"(59,59,53)",solid near-black; separates row5/row6
