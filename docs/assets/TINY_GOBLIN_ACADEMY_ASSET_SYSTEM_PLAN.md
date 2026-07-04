@@ -84,6 +84,14 @@ The resulting draft manifest is `manifests/academy.pet-campfire.static-props-ico
 
 This pass intentionally excludes Ember Pup character poses and animation/state decisions. It also keeps cleanup deferred: the source is RGB with baked checkerboard, no production cleaned sheet was created, and no runtime wiring occurred.
 
+## H5.18 Pet Campfire Static Props + Icons Cleanup Candidate Note
+
+H5.18 creates a derived transparent cleanup candidate for the 25 Pet Campfire static prop/icon regions mapped in H5.17.
+
+The source sheet remains untouched. The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png`, with cleanup evidence under `assets/academy/evidence/h5-18-pet-campfire-static-props-icons-cleanup/` and cleanup metadata in `manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json`.
+
+Cleanup remains draft-review. Runtime wiring did not occur, Ember Pup poses were not cleaned, and the background was used only for overlay preview evidence.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
