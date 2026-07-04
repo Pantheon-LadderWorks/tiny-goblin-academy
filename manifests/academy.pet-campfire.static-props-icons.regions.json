@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+  "derivedSheet": null,
+  "domain": "pet-campfire-static-props-icons",
+  "operationalType": "split-lane-region-manifest",
+  "transparency": {
+    "sourceHasAlpha": false,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "not-run",
+    "humanReviewRequired": true
+  },
+  "reviewNotes": [
+    "H5.17 maps only static care props, environment props, reward tokens, and status/mood icons from the Ember Pup source sheet.",
+    "Ember Pup character poses remain deferred to a future pet character/animation lane.",
+    "The source sheet is RGB with no alpha; checkerboard is baked into the image.",
+    "No production cleaned sheet was created for this manifest.",
+    "Rightmost sunrise/sunset-style icons are vertically stacked and were mapped as separate sourceRects rather than assumed from an 8x5 grid."
+  ],
+  "regions": [
+    {
+      "id": "pet-campfire.care-prop.food-bowl",
+      "label": "Food bowl",
+      "sourceRect": { "x": 12, "y": 462, "w": 104, "h": 80 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care prop candidate. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.care-prop.water-bowl",
+      "label": "Water bowl",
+      "sourceRect": { "x": 138, "y": 468, "w": 110, "h": 74 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care prop candidate. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.care-prop.stick-and-ball",
+      "label": "Fetch stick and small ball",
+      "sourceRect": { "x": 272, "y": 451, "w": 96, "h": 102 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Intentionally grouped because the stick and small ball sit too close together for clean independent rectangle crops on the source sheet."
+    },
+    {
+      "id": "pet-campfire.care-prop.rolling-ball",
+      "label": "Rolling tennis ball",
+      "sourceRect": { "x": 394, "y": 453, "w": 96, "h": 102 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Includes motion marks. Future use should decide whether the marks are desirable for runtime."
+    },
+    {
+      "id": "pet-campfire.care-prop.blanket-bedroll",
+      "label": "Blanket or bedroll",
+      "sourceRect": { "x": 512, "y": 460, "w": 128, "h": 90 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care/rest prop candidate."
+    },
+    {
+      "id": "pet-campfire.environment-prop.campfire",
+      "label": "Campfire",
+      "sourceRect": { "x": 655, "y": 444, "w": 100, "h": 120 },
+      "category": "campfire-environment-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Flame edges require cleanup review before runtime use."
+    },
+    {
+      "id": "pet-campfire.environment-prop.tent",
+      "label": "Small tent",
+      "sourceRect": { "x": 770, "y": 443, "w": 128, "h": 110 },
+      "category": "campfire-environment-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static camp environment prop candidate."
+    },
+    {
+      "id": "pet-campfire.reward-token.paw-badge",
+      "label": "Paw badge ribbon",
+      "sourceRect": { "x": 904, "y": 439, "w": 112, "h": 127 },
+      "category": "reward-badge-or-token",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Could become reward marker or pet-status badge later."
+    },
+    {
+      "id": "pet-campfire.status-icon.upset-face",
+      "label": "Upset face icon",
+      "sourceRect": { "x": 18, "y": 656, "w": 94, "h": 96 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mood/status icon candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.water-need",
+      "label": "Water need droplet",
+      "sourceRect": { "x": 152, "y": 654, "w": 80, "h": 101 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Need/status icon candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.happy-face",
+      "label": "Happy face icon",
+      "sourceRect": { "x": 270, "y": 654, "w": 100, "h": 100 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mood/status icon candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.sleep-zzz",
+      "label": "Sleep ZZZ icon",
+      "sourceRect": { "x": 394, "y": 656, "w": 108, "h": 96 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Sleep/rest status icon candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.fire-warmth",
+      "label": "Fire or warmth icon",
+      "sourceRect": { "x": 529, "y": 652, "w": 94, "h": 110 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Could represent warmth, fire need, or campfire status. Needs semantic review."
+    },
+    {
+      "id": "pet-campfire.status-icon.warning",
+      "label": "Warning icon",
+      "sourceRect": { "x": 653, "y": 656, "w": 106, "h": 99 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "General warning/status icon candidate."
+    },
+    {
+      "id": "pet-campfire.feedback-icon.sparkles",
+      "label": "Sparkles feedback icon",
+      "sourceRect": { "x": 786, "y": 655, "w": 96, "h": 100 },
+      "category": "ui-feedback-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Thin sparkle edges require cleanup review."
+    },
+    {
+      "id": "pet-campfire.status-icon.thought-cloud",
+      "label": "Thought cloud icon",
+      "sourceRect": { "x": 906, "y": 656, "w": 110, "h": 112 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Mapped separately from the sunrise/sunset-style icons stacked below it in the same source column."
+    },
+    {
+      "id": "pet-campfire.status-icon.sunrise-check",
+      "label": "Sunrise check icon",
+      "sourceRect": { "x": 910, "y": 785, "w": 104, "h": 70 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "One of the vertically stacked sunrise/sunset-style icons. Mapped separately from the thought cloud and lower sunrise icon."
+    },
+    {
+      "id": "pet-campfire.reward-token.paw-coin",
+      "label": "Paw coin token",
+      "sourceRect": { "x": 12, "y": 906, "w": 106, "h": 106 },
+      "category": "reward-badge-or-token",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Reward/currency token candidate."
+    },
+    {
+      "id": "pet-campfire.care-prop.treat-biscuit",
+      "label": "Treat biscuit",
+      "sourceRect": { "x": 140, "y": 910, "w": 104, "h": 98 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care prop candidate."
+    },
+    {
+      "id": "pet-campfire.care-prop.brush",
+      "label": "Pet brush",
+      "sourceRect": { "x": 273, "y": 908, "w": 98, "h": 100 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care prop candidate."
+    },
+    {
+      "id": "pet-campfire.care-prop.leash",
+      "label": "Pet leash",
+      "sourceRect": { "x": 398, "y": 907, "w": 106, "h": 102 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care prop candidate."
+    },
+    {
+      "id": "pet-campfire.care-prop.crate",
+      "label": "Pet crate",
+      "sourceRect": { "x": 518, "y": 905, "w": 116, "h": 108 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care/storage prop candidate."
+    },
+    {
+      "id": "pet-campfire.care-prop.bone",
+      "label": "Bone",
+      "sourceRect": { "x": 652, "y": 907, "w": 104, "h": 102 },
+      "category": "pet-care-prop",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Static care/reward prop candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.moon-night",
+      "label": "Moon night icon",
+      "sourceRect": { "x": 784, "y": 910, "w": 96, "h": 96 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Day/night or rest-state icon candidate."
+    },
+    {
+      "id": "pet-campfire.status-icon.sunrise-sunset",
+      "label": "Sunrise or sunset icon",
+      "sourceRect": { "x": 910, "y": 912, "w": 104, "h": 74 },
+      "category": "status-mood-icon",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Lower sunrise/sunset-style icon. Mapped separately from the upper sunrise-check icon."
+    }
+  ]
+}

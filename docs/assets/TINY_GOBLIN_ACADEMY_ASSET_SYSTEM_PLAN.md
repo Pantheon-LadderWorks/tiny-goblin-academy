@@ -76,6 +76,14 @@ Pet Campfire is not a single standard static-prop sheet. Ember Pup is treated as
 
 H5.16 creates intake metadata, split-lane classification, and cleanup-risk evidence only. No runtime wiring occurred, no source PNGs were modified, and no production cleaned sheet was created.
 
+## H5.17 Pet Campfire Static Props + Icons Mapping Note
+
+H5.17 maps the static prop, environment prop, reward token, and status/mood icon lane from `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`.
+
+The resulting draft manifest is `manifests/academy.pet-campfire.static-props-icons.regions.json`, with synchronized bbox overlay, numbered contact sheet, and table preview evidence under `assets/academy/evidence/h5-17-pet-campfire-static-props-icons/`.
+
+This pass intentionally excludes Ember Pup character poses and animation/state decisions. It also keeps cleanup deferred: the source is RGB with baked checkerboard, no production cleaned sheet was created, and no runtime wiring occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
