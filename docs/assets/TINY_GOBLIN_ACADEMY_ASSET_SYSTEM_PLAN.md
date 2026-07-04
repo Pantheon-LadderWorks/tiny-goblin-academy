@@ -100,6 +100,14 @@ The cleanup candidate is accepted for draft pipeline use and recorded in `manife
 
 This does not mark the asset runtime-approved. Source PNGs remain untouched, runtime wiring did not occur, and Ember Pup poses remain deferred to a future character/state or animation candidate lane.
 
+## H5.20 Ember Pup Pose / Animation Candidate Mapping Note
+
+H5.20 maps 16 Ember Pup pose/state candidates from `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`.
+
+The draft manifest is `manifests/academy.pet-campfire.ember-pup.pose-candidates.json`, with evidence under `assets/academy/evidence/h5-20-ember-pup-pose-candidates/`.
+
+This is a character/state lane, not a static prop lane. No cleanup occurred, no runtime animation timing was assigned, no pivots or hitboxes were created, and no gameplay/runtime wiring occurred. The human-accepted static props/icons cleanup candidate remains separate.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

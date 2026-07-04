@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "pet-campfire",
+  "operationalType": "pet-pose-candidates",
+  "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+  "transparency": {
+    "sourceHasAlpha": false,
+    "sourceAlphaUsable": false,
+    "background": "baked-checkerboard",
+    "cleanupRequired": true,
+    "cleanupStatus": "not-run",
+    "humanReviewRequired": true
+  },
+  "reviewNotes": [
+    "H5.20 maps Ember Pup pose/state candidates only.",
+    "Ember Pup is a character/state asset, not a static prop.",
+    "This manifest does not create runtime animation sequences, frame timing, pivots, hitboxes, or gameplay states.",
+    "Source PNG remains untouched and no cleanup was performed in this pass.",
+    "Static props/icons remain handled by the separate H5.17-H5.19 lane."
+  ],
+  "possibleFutureSequenceGroups": [
+    {
+      "id": "ember-pup.future-group.idle-sitting",
+      "label": "Idle / sitting candidates",
+      "regionIds": [
+        "pet-campfire.ember-pup.pose.idle-neutral",
+        "pet-campfire.ember-pup.pose.happy-sitting",
+        "pet-campfire.ember-pup.pose.alert-sitting",
+        "pet-campfire.ember-pup.pose.profile-sitting"
+      ],
+      "notes": "Possible future idle/state group only. Not a runtime sequence."
+    },
+    {
+      "id": "ember-pup.future-group.walk-run",
+      "label": "Walk/run candidates",
+      "regionIds": [
+        "pet-campfire.ember-pup.pose.walk-run-left-1",
+        "pet-campfire.ember-pup.pose.walk-run-left-2"
+      ],
+      "notes": "Possible future movement group only. Needs frame-order, anchor, and scale review."
+    },
+    {
+      "id": "ember-pup.future-group.eat-drink",
+      "label": "Eating / drinking candidates",
+      "regionIds": [
+        "pet-campfire.ember-pup.pose.eating-play-bow",
+        "pet-campfire.ember-pup.pose.eating-food",
+        "pet-campfire.ember-pup.pose.drinking-water"
+      ],
+      "notes": "Possible future care-state group only. Not a gameplay behavior assignment."
+    },
+    {
+      "id": "ember-pup.future-group.mood-states",
+      "label": "Mood/state candidates",
+      "regionIds": [
+        "pet-campfire.ember-pup.pose.sad-sitting",
+        "pet-campfire.ember-pup.pose.sad-floppy",
+        "pet-campfire.ember-pup.pose.muddy-sick",
+        "pet-campfire.ember-pup.pose.sad-tired"
+      ],
+      "notes": "Possible future mood/state group only. Human review should decide if labels are semantically right."
+    },
+    {
+      "id": "ember-pup.future-group.rest-sleep",
+      "label": "Rest / sleep candidates",
+      "regionIds": [
+        "pet-campfire.ember-pup.pose.sleeping"
+      ],
+      "notes": "Single sleep/rest candidate for now."
+    }
+  ],
+  "regions": [
+    {
+      "id": "pet-campfire.ember-pup.pose.idle-neutral",
+      "label": "Idle neutral sitting Ember Pup",
+      "category": "ember-pup-pose-candidate",
+      "poseType": "sitting",
+      "candidateState": "idle-neutral",
+      "sourceRect": { "x": 24, "y": 44, "w": 96, "h": 120 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.happy-sitting",
+      "label": "Happy sitting Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "sitting",
+      "candidateState": "happy",
+      "sourceRect": { "x": 138, "y": 44, "w": 99, "h": 120 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft happy state candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.sad-sitting",
+      "label": "Sad sitting Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "sitting",
+      "candidateState": "sad",
+      "sourceRect": { "x": 262, "y": 59, "w": 114, "h": 104 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft sad state candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.alert-sitting",
+      "label": "Alert sitting Ember Pup",
+      "category": "ember-pup-pose-candidate",
+      "poseType": "sitting",
+      "candidateState": "alert",
+      "sourceRect": { "x": 392, "y": 39, "w": 103, "h": 125 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft alert pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.sad-floppy",
+      "label": "Sad floppy-eared Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "sitting",
+      "candidateState": "sad-floppy",
+      "sourceRect": { "x": 523, "y": 57, "w": 100, "h": 107 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft mood/state candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.happy-wave",
+      "label": "Happy waving Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "sitting-action",
+      "candidateState": "happy-wave",
+      "sourceRect": { "x": 644, "y": 37, "w": 119, "h": 127 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft happy/action pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.profile-sitting",
+      "label": "Profile sitting Ember Pup",
+      "category": "ember-pup-pose-candidate",
+      "poseType": "sitting-profile",
+      "candidateState": "profile-neutral",
+      "sourceRect": { "x": 789, "y": 34, "w": 108, "h": 129 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft profile pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.sleeping",
+      "label": "Sleeping curled Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "resting",
+      "candidateState": "sleeping",
+      "sourceRect": { "x": 894, "y": 66, "w": 128, "h": 95 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft sleep/rest state candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.walk-run-left-1",
+      "label": "Walk/run left candidate 1",
+      "category": "ember-pup-animation-candidate",
+      "poseType": "movement",
+      "candidateState": "walk-run",
+      "sourceRect": { "x": 0, "y": 243, "w": 130, "h": 120 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Potential movement frame. Frame order, anchor, and runtime animation timing are not approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.walk-run-left-2",
+      "label": "Walk/run left candidate 2",
+      "category": "ember-pup-animation-candidate",
+      "poseType": "movement",
+      "candidateState": "walk-run",
+      "sourceRect": { "x": 124, "y": 244, "w": 135, "h": 119 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Potential movement frame. Frame order, anchor, and runtime animation timing are not approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.eating-play-bow",
+      "label": "Eating or play-bow Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "care-action",
+      "candidateState": "eating-or-play-bow",
+      "sourceRect": { "x": 258, "y": 252, "w": 125, "h": 111 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Semantic label is uncertain. Could be eating, sniffing, or play-bow."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.eating-food",
+      "label": "Eating from food bowl Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "care-action",
+      "candidateState": "eating-food",
+      "sourceRect": { "x": 383, "y": 255, "w": 130, "h": 108 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft care-state pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.drinking-water",
+      "label": "Drinking water Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "care-action",
+      "candidateState": "drinking-water",
+      "sourceRect": { "x": 514, "y": 256, "w": 128, "h": 107 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft care-state pose candidate only. Not runtime-approved."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.jump-happy",
+      "label": "Jumping happy Ember Pup",
+      "category": "ember-pup-animation-candidate",
+      "poseType": "action",
+      "candidateState": "jump-happy",
+      "sourceRect": { "x": 642, "y": 224, "w": 124, "h": 139 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Potential action/reaction frame. Not a runtime jump animation."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.muddy-sick",
+      "label": "Muddy or sick Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "mood-state",
+      "candidateState": "muddy-or-sick",
+      "sourceRect": { "x": 778, "y": 253, "w": 103, "h": 110 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Semantic label needs human review. Could indicate muddy, sick, tired, or unhappy."
+    },
+    {
+      "id": "pet-campfire.ember-pup.pose.sad-tired",
+      "label": "Sad or tired Ember Pup",
+      "category": "ember-pup-state-candidate",
+      "poseType": "mood-state",
+      "candidateState": "sad-or-tired",
+      "sourceRect": { "x": 906, "y": 257, "w": 103, "h": 106 },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Semantic label needs human review. Could indicate sad, tired, or worried."
+    }
+  ]
+}
