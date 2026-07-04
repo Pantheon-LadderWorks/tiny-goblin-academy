@@ -1,0 +1,1686 @@
+{
+  "domain": "topdown-soldier-enemy",
+  "operationalType": "character-animation-sheet",
+  "sourceSheet": "assets/academy/creatures/soldier/tga-topdown-soldier-enemy-v0.1.png",
+  "derivedSheet": "assets/academy/creatures/soldier/tga-topdown-soldier-enemy-cleaned-v0.1.png",
+  "frameGrid": {
+    "cols": 16,
+    "rows": 8,
+    "cellWidth": 176,
+    "cellHeight": 192,
+    "columnRects": [
+      {
+        "x": 0,
+        "w": 176
+      },
+      {
+        "x": 176,
+        "w": 176
+      },
+      {
+        "x": 352,
+        "w": 176
+      },
+      {
+        "x": 528,
+        "w": 176
+      },
+      {
+        "x": 704,
+        "w": 176
+      },
+      {
+        "x": 880,
+        "w": 176
+      },
+      {
+        "x": 1056,
+        "w": 176
+      },
+      {
+        "x": 1232,
+        "w": 176
+      },
+      {
+        "x": 1408,
+        "w": 176
+      },
+      {
+        "x": 1584,
+        "w": 176
+      },
+      {
+        "x": 1760,
+        "w": 176
+      },
+      {
+        "x": 1936,
+        "w": 176
+      },
+      {
+        "x": 2112,
+        "w": 176
+      },
+      {
+        "x": 2288,
+        "w": 176
+      },
+      {
+        "x": 2464,
+        "w": 176
+      },
+      {
+        "x": 2640,
+        "w": 176
+      }
+    ],
+    "rowRects": [
+      {
+        "y": 0,
+        "h": 192
+      },
+      {
+        "y": 192,
+        "h": 192
+      },
+      {
+        "y": 384,
+        "h": 192
+      },
+      {
+        "y": 576,
+        "h": 192
+      },
+      {
+        "y": 768,
+        "h": 192
+      },
+      {
+        "y": 960,
+        "h": 192
+      },
+      {
+        "y": 1152,
+        "h": 192
+      },
+      {
+        "y": 1344,
+        "h": 192
+      }
+    ]
+  },
+  "animations": [
+    {
+      "id": "soldier.walk.down",
+      "label": "Soldier Walk Down",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk.up",
+      "label": "Soldier Walk Up",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk.right",
+      "label": "Soldier Walk Right",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk.left",
+      "label": "Soldier Walk Left",
+      "type": "animation-sequence",
+      "rowIndex": 0,
+      "rowY": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 0,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack1.down",
+      "label": "Soldier Attack1 Down",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 192,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack1.up",
+      "label": "Soldier Attack1 Up",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 192,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack1.right",
+      "label": "Soldier Attack1 Right",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 192,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack1.left",
+      "label": "Soldier Attack1 Left",
+      "type": "animation-sequence",
+      "rowIndex": 1,
+      "rowY": 192,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 192,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_shield_up.down",
+      "label": "Soldier Walk_Shield_Up Down",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 384,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_shield_up.up",
+      "label": "Soldier Walk_Shield_Up Up",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 384,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_shield_up.right",
+      "label": "Soldier Walk_Shield_Up Right",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 384,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_shield_up.left",
+      "label": "Soldier Walk_Shield_Up Left",
+      "type": "animation-sequence",
+      "rowIndex": 2,
+      "rowY": 384,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 384,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack2.down",
+      "label": "Soldier Attack2 Down",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 576,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack2.up",
+      "label": "Soldier Attack2 Up",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 576,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack2.right",
+      "label": "Soldier Attack2 Right",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 576,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.attack2.left",
+      "label": "Soldier Attack2 Left",
+      "type": "animation-sequence",
+      "rowIndex": 3,
+      "rowY": 576,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 576,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_hurt.down",
+      "label": "Soldier Walk_Hurt Down",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 768,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_hurt.up",
+      "label": "Soldier Walk_Hurt Up",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 768,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_hurt.right",
+      "label": "Soldier Walk_Hurt Right",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 768,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_hurt.left",
+      "label": "Soldier Walk_Hurt Left",
+      "type": "animation-sequence",
+      "rowIndex": 4,
+      "rowY": 768,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 768,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_dizzy.down",
+      "label": "Soldier Walk_Dizzy Down",
+      "type": "animation-sequence",
+      "rowIndex": 5,
+      "rowY": 960,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_dizzy.up",
+      "label": "Soldier Walk_Dizzy Up",
+      "type": "animation-sequence",
+      "rowIndex": 5,
+      "rowY": 960,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_dizzy.right",
+      "label": "Soldier Walk_Dizzy Right",
+      "type": "animation-sequence",
+      "rowIndex": 5,
+      "rowY": 960,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.walk_dizzy.left",
+      "label": "Soldier Walk_Dizzy Left",
+      "type": "animation-sequence",
+      "rowIndex": 5,
+      "rowY": 960,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2112,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2288,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2464,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 2640,
+            "y": 960,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.hurt.down",
+      "label": "Soldier Hurt Down",
+      "type": "animation-sequence",
+      "rowIndex": 6,
+      "rowY": 1152,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.hurt.up",
+      "label": "Soldier Hurt Up",
+      "type": "animation-sequence",
+      "rowIndex": 6,
+      "rowY": 1152,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.hurt.right",
+      "label": "Soldier Hurt Right",
+      "type": "animation-sequence",
+      "rowIndex": 6,
+      "rowY": 1152,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.hurt.left",
+      "label": "Soldier Hurt Left",
+      "type": "animation-sequence",
+      "rowIndex": 6,
+      "rowY": 1152,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 1152,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ],
+      "flipX": true,
+      "symmetry_warning": true
+    },
+    {
+      "id": "soldier.die.down",
+      "label": "Soldier Die Down",
+      "type": "animation-sequence",
+      "rowIndex": 7,
+      "rowY": 1344,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 176,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 352,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 528,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.die.up",
+      "label": "Soldier Die Up",
+      "type": "animation-sequence",
+      "rowIndex": 7,
+      "rowY": 1344,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 704,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 880,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1056,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1232,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.die.right",
+      "label": "Soldier Die Right",
+      "type": "animation-sequence",
+      "rowIndex": 7,
+      "rowY": 1344,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldier.die.left",
+      "label": "Soldier Die Left",
+      "type": "animation-sequence",
+      "rowIndex": 7,
+      "rowY": 1344,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "needs-human-review",
+      "usage": "draft-review",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1408,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1584,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1760,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1936,
+            "y": 1344,
+            "w": 176,
+            "h": 192
+          }
+        }
+      ],
+      "flipX": true,
+      "symmetry_warning": true
+    }
+  ]
+}

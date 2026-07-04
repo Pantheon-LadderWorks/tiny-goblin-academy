@@ -1,0 +1,125 @@
+{
+  "player": {
+    "x": 64,
+    "y": 448,
+    "w": 64,
+    "h": 64
+  },
+  "props": [
+    {
+      "id": "goal.door.open",
+      "x": 652,
+      "y": 395
+    },
+    {
+      "id": "platform.stone.flat.1",
+      "x": 0,
+      "y": 512
+    },
+    {
+      "id": "platform.stone.flat.3",
+      "x": 672,
+      "y": 512
+    },
+    {
+      "id": "hazard.spikes.metal",
+      "x": 390,
+      "y": 515
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 0,
+      "y": 351
+    },
+    {
+      "id": "platform.stone.slab.1",
+      "x": 257,
+      "y": 389
+    },
+    {
+      "id": "platform.stone.slab.2",
+      "x": 422,
+      "y": 297
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 604,
+      "y": 356
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 736,
+      "y": 353
+    },
+    {
+      "id": "platform.stone.shelf",
+      "x": 356.5,
+      "y": 137.5
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 0,
+      "y": 214
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 0,
+      "y": 74
+    },
+    {
+      "id": "pillar.stone.short",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 736,
+      "y": 214
+    },
+    {
+      "id": "pillar.stone.tall",
+      "x": 736,
+      "y": 78
+    },
+    {
+      "id": "pillar.stone.short",
+      "x": 739,
+      "y": 0
+    },
+    {
+      "id": "platform.wood.supported",
+      "x": 67,
+      "y": 216
+    },
+    {
+      "id": "platform.wood.flat",
+      "x": 639.5,
+      "y": 176
+    },
+    {
+      "id": "hazard.spikes.metal",
+      "x": 484,
+      "y": 515
+    },
+    {
+      "id": "platform.stone.flat.4",
+      "x": 96,
+      "y": 512
+    },
+    {
+      "id": "platform.stone.flat.4",
+      "x": 192,
+      "y": 512
+    },
+    {
+      "id": "platform.stone.flat.4",
+      "x": 288,
+      "y": 512
+    },
+    {
+      "id": "platform.stone.flat.4",
+      "x": 576,
+      "y": 512
+    }
+  ]
+}

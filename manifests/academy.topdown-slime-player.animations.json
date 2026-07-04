@@ -1,555 +1,991 @@
 {
-  "schemaVersion": "0.1",
-  "status": "draft",
   "domain": "topdown-slime-player",
   "operationalType": "character-animation-sheet",
   "sourceSheet": "assets/academy/creatures/slime/tga-topdown-slime-player-v0.1.png",
-  "derivedSheet": "assets/academy/derived/tga-topdown-slime-player-v0.1-clean.png",
-  "frameGrid": {
-    "note": "Columns are uniformly 250px. Rows are variable height derived from numpy row separator probe.",
-    "columns": 10,
-    "rows": 7,
-    "columnRects": [
-      {
-        "col": 0,
-        "x": 0,
-        "w": 275
-      },
-      {
-        "col": 1,
-        "x": 275,
-        "w": 275
-      },
-      {
-        "col": 2,
-        "x": 550,
-        "w": 275
-      },
-      {
-        "col": 3,
-        "x": 825,
-        "w": 275
-      },
-      {
-        "col": 4,
-        "x": 1100,
-        "w": 275
-      },
-      {
-        "col": 5,
-        "x": 1375,
-        "w": 275
-      },
-      {
-        "col": 6,
-        "x": 1650,
-        "w": 275
-      },
-      {
-        "col": 7,
-        "x": 1925,
-        "w": 275
-      },
-      {
-        "col": 8,
-        "x": 2200,
-        "w": 275
-      },
-      {
-        "col": 9,
-        "x": 2475,
-        "w": 275
-      }
-    ],
-    "rowRects": [
-      {
-        "row": 0,
-        "y": 0,
-        "h": 187,
-        "sepBelow": null
-      },
-      {
-        "row": 1,
-        "y": 188,
-        "h": 191,
-        "sepBelow": null
-      },
-      {
-        "row": 2,
-        "y": 381,
-        "h": 191,
-        "sepBelow": null
-      },
-      {
-        "row": 3,
-        "y": 574,
-        "h": 192,
-        "sepBelow": null
-      },
-      {
-        "row": 4,
-        "y": 770,
-        "h": 214,
-        "sepBelow": null
-      },
-      {
-        "row": 5,
-        "y": 986,
-        "h": 273,
-        "sepBelow": null
-      },
-      {
-        "row": 6,
-        "y": 1261,
-        "h": 275,
-        "sepBelow": null
-      }
-    ]
-  },
-  "transparency": {
-    "sourceHasAlpha": true,
-    "sourceAlphaUsable": false,
-    "background": "baked-checkerboard",
-    "cleanupRequired": true,
-    "cleanupStatus": "completed",
-    "humanReviewRequired": true,
-    "cleanupNote": "dark_composite() will show dark backgrounds once a derived clean sheet exists.",
-    "pilotFrameSuggested": "topdown-slime.idle-front frame 0 (x:0 y:0 w:250 h:187)"
-  },
+  "derivedSheet": "assets/academy/creatures/slime/tga-topdown-slime-player-cleaned-v0.1.png",
   "animations": [
     {
-      "id": "topdown-slime.idle-front",
-      "label": "Idle Front",
-      "type": "animation-sequence",
+      "id": "idle.down",
+      "label": "Idle (Down)",
       "rowIndex": 0,
-      "rowY": 0,
       "frameCount": 4,
       "loop": true,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "First 4 frames of row 0",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 0,
-            "y": 0,
-            "w": 260,
-            "h": 187
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 34,
+            "y": 65,
+            "w": 154,
+            "h": 121
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 201,
-            "y": 0,
-            "w": 260,
-            "h": 187
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 254,
+            "y": 66,
+            "w": 154,
+            "h": 121
+          }
         },
         {
           "index": 2,
           "sourceRect": {
-            "x": 627,
-            "y": 0,
-            "w": 260,
-            "h": 187
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 476,
+            "y": 65,
+            "w": 154,
+            "h": 121
+          }
         },
         {
           "index": 3,
           "sourceRect": {
-            "x": 833,
-            "y": 0,
-            "w": 260,
-            "h": 187
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 698,
+            "y": 66,
+            "w": 154,
+            "h": 120
+          }
         }
       ]
     },
     {
-      "id": "topdown-slime.idle-back",
-      "label": "Idle Back",
-      "type": "animation-sequence",
+      "id": "idle.up",
+      "label": "Idle (Up)",
+      "rowIndex": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1189,
+            "y": 75,
+            "w": 154,
+            "h": 111
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1410,
+            "y": 78,
+            "w": 154,
+            "h": 108
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1632,
+            "y": 66,
+            "w": 154,
+            "h": 120
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1866,
+            "y": 49,
+            "w": 151,
+            "h": 129
+          }
+        }
+      ]
+    },
+    {
+      "id": "idle.right",
+      "label": "Idle (Right)",
+      "rowIndex": 0,
+      "frameCount": 2,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2110,
+            "y": 71,
+            "w": 154,
+            "h": 116
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2340,
+            "y": 76,
+            "w": 154,
+            "h": 110
+          }
+        }
+      ]
+    },
+    {
+      "id": "idle.left",
+      "label": "Idle (Left)",
+      "rowIndex": 0,
+      "frameCount": 2,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2110,
+            "y": 71,
+            "w": 154,
+            "h": 116
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2340,
+            "y": 76,
+            "w": 154,
+            "h": 110
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.down",
+      "label": "Walk (Down)",
       "rowIndex": 1,
-      "rowY": 188,
       "frameCount": 4,
       "loop": true,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "First 4 frames of row 1",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 0,
-            "y": 188,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 36,
+            "y": 243,
+            "w": 150,
+            "h": 135
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 201,
-            "y": 188,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 256,
+            "y": 242,
+            "w": 150,
+            "h": 137
+          }
         },
         {
           "index": 2,
           "sourceRect": {
-            "x": 627,
-            "y": 188,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 478,
+            "y": 243,
+            "w": 150,
+            "h": 136
+          }
         },
         {
           "index": 3,
           "sourceRect": {
-            "x": 833,
-            "y": 188,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 700,
+            "y": 243,
+            "w": 150,
+            "h": 136
+          }
         }
       ]
     },
     {
-      "id": "topdown-slime.move-right",
-      "label": "Move Right",
-      "type": "animation-sequence",
+      "id": "walk.up",
+      "label": "Walk (Up)",
+      "rowIndex": 1,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1192,
+            "y": 250,
+            "w": 148,
+            "h": 123
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1412,
+            "y": 249,
+            "w": 148,
+            "h": 123
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1634,
+            "y": 230,
+            "w": 148,
+            "h": 136
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1867,
+            "y": 207,
+            "w": 149,
+            "h": 139
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.right",
+      "label": "Walk (Right)",
+      "rowIndex": 1,
+      "frameCount": 2,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2115,
+            "y": 230,
+            "w": 148,
+            "h": 136
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2342,
+            "y": 250,
+            "w": 149,
+            "h": 123
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.left",
+      "label": "Walk (Left)",
+      "rowIndex": 1,
+      "frameCount": 2,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2115,
+            "y": 230,
+            "w": 148,
+            "h": 136
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2342,
+            "y": 250,
+            "w": 149,
+            "h": 123
+          }
+        }
+      ]
+    },
+    {
+      "id": "hop.down",
+      "label": "Hop (Down)",
       "rowIndex": 2,
-      "rowY": 381,
-      "frameCount": 6,
+      "frameCount": 4,
       "loop": true,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "Frames 4 to 10 of row 2 (offset in sequence)",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 1149,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 41,
+            "y": 436,
+            "w": 142,
+            "h": 126
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 1343,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 261,
+            "y": 436,
+            "w": 142,
+            "h": 126
+          }
         },
         {
           "index": 2,
           "sourceRect": {
-            "x": 1590,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 482,
+            "y": 436,
+            "w": 142,
+            "h": 126
+          }
         },
         {
           "index": 3,
           "sourceRect": {
-            "x": 1811,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 4,
-          "sourceRect": {
-            "x": 2292,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 5,
-          "sourceRect": {
-            "x": 2499,
-            "y": 381,
-            "w": 260,
-            "h": 191
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 704,
+            "y": 436,
+            "w": 140,
+            "h": 126
+          }
         }
       ]
     },
     {
-      "id": "topdown-slime.move-left",
-      "label": "Move Left",
-      "type": "animation-sequence",
+      "id": "hop.up",
+      "label": "Hop (Up)",
+      "rowIndex": 2,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1191,
+            "y": 437,
+            "w": 149,
+            "h": 125
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1412,
+            "y": 440,
+            "w": 155,
+            "h": 124
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1626,
+            "y": 437,
+            "w": 160,
+            "h": 127
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1851,
+            "y": 424,
+            "w": 177,
+            "h": 139
+          }
+        }
+      ]
+    },
+    {
+      "id": "hop.right",
+      "label": "Hop (Right)",
+      "rowIndex": 2,
+      "frameCount": 3,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2101,
+            "y": 422,
+            "w": 179,
+            "h": 139
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2340,
+            "y": 438,
+            "w": 161,
+            "h": 127
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2562,
+            "y": 440,
+            "w": 155,
+            "h": 124
+          }
+        }
+      ]
+    },
+    {
+      "id": "hop.left",
+      "label": "Hop (Left)",
+      "rowIndex": 2,
+      "frameCount": 3,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2101,
+            "y": 422,
+            "w": 179,
+            "h": 139
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2340,
+            "y": 438,
+            "w": 161,
+            "h": 127
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2562,
+            "y": 440,
+            "w": 155,
+            "h": 124
+          }
+        }
+      ]
+    },
+    {
+      "id": "dash.down",
+      "label": "Dash (Down)",
       "rowIndex": 3,
-      "rowY": 574,
-      "frameCount": 6,
+      "frameCount": 4,
       "loop": true,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "Frames 4 to 10 of row 3",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 1135,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 42,
+            "y": 626,
+            "w": 141,
+            "h": 127
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 1357,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 261,
+            "y": 626,
+            "w": 141,
+            "h": 126
+          }
         },
         {
           "index": 2,
           "sourceRect": {
-            "x": 1577,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 483,
+            "y": 626,
+            "w": 140,
+            "h": 126
+          }
         },
         {
           "index": 3,
           "sourceRect": {
-            "x": 2059,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 4,
-          "sourceRect": {
-            "x": 2292,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 5,
-          "sourceRect": {
-            "x": 2512,
-            "y": 574,
-            "w": 260,
-            "h": 192
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 704,
+            "y": 626,
+            "w": 140,
+            "h": 126
+          }
         }
       ]
     },
     {
-      "id": "topdown-slime.attack-dash",
-      "label": "Attack Dash",
-      "type": "animation-sequence",
+      "id": "dash.up",
+      "label": "Dash (Up)",
+      "rowIndex": 3,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1192,
+            "y": 632,
+            "w": 150,
+            "h": 121
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1413,
+            "y": 633,
+            "w": 154,
+            "h": 121
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1626,
+            "y": 632,
+            "w": 160,
+            "h": 122
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1846,
+            "y": 622,
+            "w": 180,
+            "h": 132
+          }
+        }
+      ]
+    },
+    {
+      "id": "dash.right",
+      "label": "Dash (Right)",
+      "rowIndex": 3,
+      "frameCount": 3,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2104,
+            "y": 622,
+            "w": 181,
+            "h": 134
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2342,
+            "y": 633,
+            "w": 159,
+            "h": 121
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2563,
+            "y": 634,
+            "w": 153,
+            "h": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "dash.left",
+      "label": "Dash (Left)",
+      "rowIndex": 3,
+      "frameCount": 3,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2104,
+            "y": 622,
+            "w": 181,
+            "h": 134
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2342,
+            "y": 633,
+            "w": 159,
+            "h": 121
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2563,
+            "y": 634,
+            "w": 153,
+            "h": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "attack.down",
+      "label": "Attack (Down)",
       "rowIndex": 4,
-      "rowY": 770,
-      "frameCount": 10,
+      "frameCount": 5,
       "loop": false,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "Row 4 whole sequence",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 0,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 39,
+            "y": 838,
+            "w": 148,
+            "h": 120
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 201,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 255,
+            "y": 835,
+            "w": 150,
+            "h": 126
+          }
         },
         {
           "index": 2,
           "sourceRect": {
-            "x": 668,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 477,
+            "y": 845,
+            "w": 152,
+            "h": 115
+          }
         },
         {
           "index": 3,
           "sourceRect": {
-            "x": 916,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 698,
+            "y": 836,
+            "w": 210,
+            "h": 126
+          }
         },
         {
           "index": 4,
           "sourceRect": {
-            "x": 1135,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 5,
-          "sourceRect": {
-            "x": 1357,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 6,
-          "sourceRect": {
-            "x": 1590,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 7,
-          "sourceRect": {
-            "x": 1934,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 8,
-          "sourceRect": {
-            "x": 2292,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
-        },
-        {
-          "index": 9,
-          "sourceRect": {
-            "x": 2512,
-            "y": 770,
-            "w": 260,
-            "h": 214
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 971,
+            "y": 835,
+            "w": 153,
+            "h": 127
+          }
         }
       ]
     },
     {
-      "id": "topdown-slime.splat",
-      "label": "Die Splat",
-      "type": "animation-sequence",
-      "rowIndex": 6,
-      "rowY": 1261,
+      "id": "attack.up",
+      "label": "Attack (Up)",
+      "rowIndex": 4,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 1190,
+            "y": 843,
+            "w": 147,
+            "h": 116
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1416,
+            "y": 845,
+            "w": 148,
+            "h": 117
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1636,
+            "y": 840,
+            "w": 150,
+            "h": 121
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1860,
+            "y": 828,
+            "w": 155,
+            "h": 132
+          }
+        }
+      ]
+    },
+    {
+      "id": "attack.right",
+      "label": "Attack (Right)",
+      "rowIndex": 4,
+      "frameCount": 3,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2116,
+            "y": 828,
+            "w": 156,
+            "h": 131
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2343,
+            "y": 841,
+            "w": 149,
+            "h": 120
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2566,
+            "y": 845,
+            "w": 147,
+            "h": 117
+          }
+        }
+      ]
+    },
+    {
+      "id": "attack.left",
+      "label": "Attack (Left)",
+      "rowIndex": 4,
+      "frameCount": 3,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2116,
+            "y": 828,
+            "w": 156,
+            "h": 131
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2343,
+            "y": 841,
+            "w": 149,
+            "h": 120
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 2566,
+            "y": 845,
+            "w": 147,
+            "h": 117
+          }
+        }
+      ]
+    },
+    {
+      "id": "hit.down",
+      "label": "Hit (Down)",
+      "rowIndex": 5,
+      "frameCount": 3,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 41,
+            "y": 1052,
+            "w": 145,
+            "h": 97
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 246,
+            "y": 1051,
+            "w": 169,
+            "h": 118
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 479,
+            "y": 1046,
+            "w": 171,
+            "h": 196
+          }
+        }
+      ]
+    },
+    {
+      "id": "hit.up",
+      "label": "Hit (Up)",
+      "rowIndex": 5,
+      "frameCount": 3,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 726,
+            "y": 1034,
+            "w": 142,
+            "h": 207
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1407,
+            "y": 1095,
+            "w": 275,
+            "h": 113
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1771,
+            "y": 1096,
+            "w": 290,
+            "h": 113
+          }
+        }
+      ]
+    },
+    {
+      "id": "hit.right",
+      "label": "Hit (Right)",
+      "rowIndex": 5,
       "frameCount": 2,
       "loop": false,
-      "reviewStatus": "needs-human-review",
-      "usage": "draft-review",
-      "notes": "First 2 frames of row 6",
+      "reviewStatus": "Draft",
       "frames": [
         {
           "index": 0,
           "sourceRect": {
-            "x": 8,
-            "y": 1261,
-            "w": 260,
-            "h": 275
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 2158,
+            "y": 1104,
+            "w": 196,
+            "h": 103
+          }
         },
         {
           "index": 1,
           "sourceRect": {
-            "x": 310,
-            "y": 1261,
-            "w": 260,
-            "h": 275
-          },
-          "durationMs": null,
-          "pivot": null
+            "x": 2432,
+            "y": 1096,
+            "w": 238,
+            "h": 112
+          }
+        }
+      ]
+    },
+    {
+      "id": "hit.left",
+      "label": "Hit (Left)",
+      "rowIndex": 5,
+      "frameCount": 2,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 2158,
+            "y": 1104,
+            "w": 196,
+            "h": 103
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 2432,
+            "y": 1096,
+            "w": 238,
+            "h": 112
+          }
+        }
+      ]
+    },
+    {
+      "id": "die",
+      "label": "Die",
+      "rowIndex": 6,
+      "frameCount": 4,
+      "loop": false,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 806,
+            "y": 1329,
+            "w": 181,
+            "h": 196
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 1137,
+            "y": 1288,
+            "w": 192,
+            "h": 169
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 1458,
+            "y": 1287,
+            "w": 188,
+            "h": 237
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1786,
+            "y": 1275,
+            "w": 226,
+            "h": 165
+          }
         }
       ]
     }

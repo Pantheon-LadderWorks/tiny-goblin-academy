@@ -186,11 +186,18 @@ def generate_sequences_contact_sheet(
             fx, fy = rect.get("x", 0), rect.get("y", 0)
             fw, fh = rect.get("w", 256), rect.get("h", 237)
             crop = crop_sheet.crop((fx, fy, fx + fw, fy + fh))
+            if anim.get("flipX"):
+                crop = crop.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
             preview = dark_composite(crop, (thumb_w, thumb_h))
             cx = strip_label_w + frame_idx * (thumb_w + pad) + pad
             cy = row_y_canvas + 4
             draw.rounded_rectangle([cx - 4, cy - 4, cx + thumb_w + 4, cy + thumb_h + 34], radius=8, fill=(28, 32, 40), outline=(*color, 120), width=1)
             canvas.paste(preview, (cx, cy))
+            
+            if anim.get("symmetry_warning"):
+                draw.rectangle([cx, cy, cx + thumb_w - 1, cy + thumb_h - 1], outline=(255, 60, 60), width=2)
+                draw.text((cx + 4, cy + thumb_h - 18), "ASYMMETRY", font=F_SMALL, fill=(255, 60, 60))
+                
             # frame number
             draw.ellipse([cx, cy, cx + 22, cy + 22], fill=color)
             draw.text((cx + 4, cy + 4), str(frame_idx), font=F_SMALL, fill=(0, 0, 0))
@@ -452,7 +459,22 @@ def generate_flipbook_html(manifest: dict, out_path: Path, root_dir: Path) -> No
             const dx = (canvas.width - rect.w) / 2;
             const dy = (canvas.height - rect.h) / 2;
             
+            ctx.save();
+            if (currentSeq.flipX) {{
+                ctx.translate(canvas.width, 0);
+                ctx.scale(-1, 1);
+            }}
             ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h, dx, dy, rect.w, rect.h);
+            ctx.restore();
+            
+            if (currentSeq.symmetry_warning) {{
+                ctx.strokeStyle = '#ff3c3c';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(dx, dy, rect.w, rect.h);
+                ctx.fillStyle = '#ff3c3c';
+                ctx.font = '10px Arial';
+                ctx.fillText('ASYMMETRY RISK', dx + 4, dy + rect.h - 4);
+            }}
         }}
         
         function loop(time) {{

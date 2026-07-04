@@ -23,8 +23,8 @@ const manifest = {
     note: 'Restored dynamic 10-col grid (H5.10C) using empirical numpy probe data.',
     columns: 10,
     rows: 6,
-    cellWidth: 281, // Approximate
-    frameHeightCropped: null, // No longer a strict static crop
+    cellWidth: 281,
+    frameHeightCropped: null,
     columnRects: columns.map((c, i) => ({ col: i, x: c.x, w: c.w })),
     rowRects: rows.map((r, i) => ({ row: i, y: r.y, h: r.h }))
   },
@@ -39,7 +39,7 @@ const manifest = {
     pilotFrameSuggested: 'platformer-goblin.walk frame 0'
   },
   animations: [
-    { id: 'platformer-goblin.idle', label: 'Idle', rowIndex: 0, frames: 10, loop: true },
+    { id: 'platformer-goblin.idle', label: 'Idle', rowIndex: 0, frames: 6, loop: true },
     { id: 'platformer-goblin.walk', label: 'Walk / Run', rowIndex: 1, frames: 10, loop: true },
     { id: 'platformer-goblin.jump', label: 'Jump / Airborne', rowIndex: 2, frames: 7, loop: false },
     { id: 'platformer-goblin.attack', label: 'Attack / Club Swing', rowIndex: 3, frames: 8, loop: false },

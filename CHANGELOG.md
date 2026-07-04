@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **Level 8 Birthday Build**: Preserved the playable One-Room Platformer birthday build, including Phaser-backed runtime wiring, sticker-book level layout, construction-piece assets, animation manifest usage, evidence/editor artifacts, and archived one-off spike scripts/debug outputs without deletion. Known follow-ups: terminal defeat fall loop and jump/platform scale tuning.
+
 * **H5.7 Platformer Goblin Animation Contract**: Added platformer goblin player animation-sheet inspection and draft animation manifest contract planning. The platformer goblin player sheet remains separate from the H5.6 expression/action pantry; cleanup, sequence/pivot/hitbox review, and runtime wiring are deferred.
 
 * **H5.6 Goblin Expression/Action Mapping**: Added Goblin Expression/Action region mapping evidence as the first creature expression/action semantic discovery lane, without creating animation sequences or runtime wiring.

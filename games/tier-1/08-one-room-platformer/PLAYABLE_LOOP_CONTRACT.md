@@ -5,16 +5,15 @@
 **Scale:** Planned → Contract Approved → First Playable → Playtested → Released → Retired/Expanded
 *(Current meaning: The game has passed automated playtesting.)*
 
-## 1. Canonical Fixed Timestep
-* Simulation function: `tick(state, input, deltaSeconds)`
-* Canonical v0.1 step: `deltaSeconds = 1 / 60`
-* Tests should use fixed-step simulation, not browser time.
-* Renderer may use browser time only to schedule/accumulate fixed ticks.
-* Simulation must not call `Date.now()`, `setInterval`, `requestAnimationFrame`, Phaser frame time, or engine physics internally.
+## 1. Canonical Fixed Timestep & Physics Graduation
+* **Architecture Evolution:** During earlier lessons, collision mathematics were implemented manually to expose the underlying concepts. Having completed that objective, the runtime now delegates collision resolution to Phaser Arcade Physics while preserving the simulation layer as the authoritative source of gameplay state, victory/defeat logic, animation intent, and event ledgers.
+* Phaser is the collision solver (the muscle). `simulation.ts` is the game brain.
+* The renderer reads the simulation state to determine what animations to play.
 
 ## 2. Exact Coordinate System and Room
 * Explicitly, all rectangles use a **top-left origin** with `x` and `y` marking the top-left corner.
-* **Room Dimensions:** 800 width x 450 height.
+* **Birthday Build Canvas:** 800 width x 600 height.
+* **Original Contract Room:** 800 width x 450 height. This remains useful historical contract context, but the Birthday Build uses the larger sticker-book room layout in `src/level8.json`.
 * **Player Dimensions:** 32x48.
 * **Spawn Position:** `x=60, y=352` (This places the bottom of the player perfectly on the floor at `y=400`).
 * **Floor Rectangle:** x=0, y=400, w=800, h=50.
@@ -80,12 +79,16 @@
   * No debug-page collapse.
 
 ## 9. Hard Exclusions (To prevent physics goblin chaos)
-* No engine physics as game truth.
 * No procedural generation.
 * No scrolling camera.
 * No enemies or combat.
 * No health system or collectibles.
 * No multiple rooms.
 * No advanced platforming (coyote time, input buffering, wall jumps, double jumps).
-* No particle systems, sound/music, or sprite animation system.
+* No particle systems or sound/music.
 * No v0.2 or release work.
+
+## 10. Birthday Build Follow-Up Issues
+* **Terminal fall loop:** Defeat currently stops horizontal input, but gravity/vertical velocity can continue moving the player downward after terminal state. Terminal states must freeze or safely park physics before this is considered polished.
+* **Jump/platform scale mismatch:** After the playfield grew to 800x600 and the goblin visual scale shrank, the first reachable platform sits just above the current jump arc. The next tuning pass should adjust player scale, platform placement, jump velocity, or level layout so the first platform is reachable without breaking the intended simple v0.1 physics.
+* **Contract/runtime alignment:** `src/level8.json` is now the current Birthday Build layout source. This contract should be reconciled with the JSON before final release-style approval.

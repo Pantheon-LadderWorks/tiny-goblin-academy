@@ -1,0 +1,378 @@
+{
+  "domain": "topdown-slime-v2-idle-move",
+  "operationalType": "character-animation-sheet",
+  "sourceSheet": "assets/academy/creatures/slime/tga-topdown-slime-v2-idle-move.png",
+  "derivedSheet": "assets/academy/creatures/slime/tga-topdown-slime-v2-idle-move-cleaned.png",
+  "animations": [
+    {
+      "id": "idle.down",
+      "label": "Idle.down",
+      "rowIndex": 0,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 51,
+            "y": 88,
+            "w": 322,
+            "h": 268
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 475,
+            "y": 88,
+            "w": 322,
+            "h": 268
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 899,
+            "y": 88,
+            "w": 322,
+            "h": 268
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1323,
+            "y": 88,
+            "w": 323,
+            "h": 268
+          }
+        }
+      ]
+    },
+    {
+      "id": "idle.up",
+      "label": "Idle.up",
+      "rowIndex": 1,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 50,
+            "y": 511,
+            "w": 323,
+            "h": 269
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 475,
+            "y": 511,
+            "w": 322,
+            "h": 269
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 899,
+            "y": 511,
+            "w": 322,
+            "h": 269
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1323,
+            "y": 511,
+            "w": 323,
+            "h": 269
+          }
+        }
+      ]
+    },
+    {
+      "id": "idle.right",
+      "label": "Idle.right",
+      "rowIndex": 2,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 51,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 475,
+            "y": 934,
+            "w": 322,
+            "h": 269
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 900,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1324,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        }
+      ]
+    },
+    {
+      "id": "idle.left",
+      "label": "Idle.left",
+      "rowIndex": 2,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 51,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 475,
+            "y": 934,
+            "w": 322,
+            "h": 269
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 900,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1324,
+            "y": 934,
+            "w": 321,
+            "h": 269
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.down",
+      "label": "Walk.down",
+      "rowIndex": 3,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 54,
+            "y": 1368,
+            "w": 316,
+            "h": 258
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 478,
+            "y": 1373,
+            "w": 317,
+            "h": 253
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 903,
+            "y": 1358,
+            "w": 316,
+            "h": 268
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1324,
+            "y": 1337,
+            "w": 321,
+            "h": 280
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.up",
+      "label": "Walk.up",
+      "rowIndex": 4,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 52,
+            "y": 1791,
+            "w": 320,
+            "h": 259
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 477,
+            "y": 1808,
+            "w": 319,
+            "h": 242
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 902,
+            "y": 1798,
+            "w": 319,
+            "h": 252
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1325,
+            "y": 1774,
+            "w": 319,
+            "h": 276
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.right",
+      "label": "Walk.right",
+      "rowIndex": 5,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 57,
+            "y": 2201,
+            "w": 327,
+            "h": 255
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 482,
+            "y": 2201,
+            "w": 326,
+            "h": 255
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 906,
+            "y": 2201,
+            "w": 326,
+            "h": 255
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1330,
+            "y": 2201,
+            "w": 327,
+            "h": 255
+          }
+        }
+      ]
+    },
+    {
+      "id": "walk.left",
+      "label": "Walk.left",
+      "rowIndex": 5,
+      "frameCount": 4,
+      "loop": true,
+      "reviewStatus": "Draft",
+      "flipX": true,
+      "frames": [
+        {
+          "index": 0,
+          "sourceRect": {
+            "x": 57,
+            "y": 2201,
+            "w": 327,
+            "h": 255
+          }
+        },
+        {
+          "index": 1,
+          "sourceRect": {
+            "x": 482,
+            "y": 2201,
+            "w": 326,
+            "h": 255
+          }
+        },
+        {
+          "index": 2,
+          "sourceRect": {
+            "x": 906,
+            "y": 2201,
+            "w": 326,
+            "h": 255
+          }
+        },
+        {
+          "index": 3,
+          "sourceRect": {
+            "x": 1330,
+            "y": 2201,
+            "w": 327,
+            "h": 255
+          }
+        }
+      ]
+    }
+  ]
+}

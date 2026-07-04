@@ -1,0 +1,680 @@
+{
+  "domain": "platformer-construction-pieces",
+  "operationalType": "region-manifest",
+  "sourceSheet": "assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.2.png",
+  "derivedSheet": "assets/academy/games/one-room-platformer/tga-one-room-platformer-construction-pieces-cleaned-v0.2.png",
+  "regions": [
+    {
+      "id": "platform.stone.flat.1",
+      "category": "platform",
+      "label": "Stone Platform (Flat 1)",
+      "sourceRect": {
+        "x": 0,
+        "y": 56,
+        "w": 118,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_01"
+    },
+    {
+      "id": "platform.stone.flat.2",
+      "category": "platform",
+      "label": "Stone Platform (Flat 2)",
+      "sourceRect": {
+        "x": 128,
+        "y": 56,
+        "w": 117,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_02"
+    },
+    {
+      "id": "platform.stone.flat.3",
+      "category": "platform",
+      "label": "Stone Platform (Flat 3)",
+      "sourceRect": {
+        "x": 259,
+        "y": 56,
+        "w": 117,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_03"
+    },
+    {
+      "id": "platform.stone.flat.4",
+      "category": "platform",
+      "label": "Stone Platform (Flat 4)",
+      "sourceRect": {
+        "x": 390,
+        "y": 56,
+        "w": 114,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_04"
+    },
+    {
+      "id": "platform.stone.cracked",
+      "category": "platform",
+      "label": "Stone Platform (Cracked)",
+      "sourceRect": {
+        "x": 517,
+        "y": 56,
+        "w": 115,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_05"
+    },
+    {
+      "id": "platform.stone.mossy",
+      "category": "platform",
+      "label": "Stone Platform (Mossy)",
+      "sourceRect": {
+        "x": 645,
+        "y": 56,
+        "w": 118,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_06"
+    },
+    {
+      "id": "platform.stone.dark",
+      "category": "platform",
+      "label": "Stone Platform (Dark)",
+      "sourceRect": {
+        "x": 776,
+        "y": 56,
+        "w": 116,
+        "h": 104
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_07"
+    },
+    {
+      "id": "platform.stone.decorative",
+      "category": "platform",
+      "label": "Stone Platform (Decorative)",
+      "sourceRect": {
+        "x": 904,
+        "y": 55,
+        "w": 113,
+        "h": 105
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_08"
+    },
+    {
+      "id": "platform.wood.flat",
+      "category": "platform",
+      "label": "Wooden Platform (Flat)",
+      "sourceRect": {
+        "x": 7,
+        "y": 240,
+        "w": 107,
+        "h": 32
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_09"
+    },
+    {
+      "id": "platform.wood.supported",
+      "category": "platform",
+      "label": "Wooden Platform (Supported)",
+      "sourceRect": {
+        "x": 129,
+        "y": 240,
+        "w": 120,
+        "h": 32
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_10"
+    },
+    {
+      "id": "platform.stone.slab.1",
+      "category": "platform",
+      "label": "Stone Slab (1)",
+      "sourceRect": {
+        "x": 264,
+        "y": 240,
+        "w": 108,
+        "h": 44
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_11"
+    },
+    {
+      "id": "platform.stone.slab.2",
+      "category": "platform",
+      "label": "Stone Slab (2)",
+      "sourceRect": {
+        "x": 384,
+        "y": 239,
+        "w": 126,
+        "h": 42
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_12"
+    },
+    {
+      "id": "prop.bookcase.small",
+      "category": "prop",
+      "label": "Bookcase (Small)",
+      "sourceRect": {
+        "x": 518,
+        "y": 212,
+        "w": 119,
+        "h": 86
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_13"
+    },
+    {
+      "id": "platform.wood.bracket",
+      "category": "platform",
+      "label": "Wooden Shelf (Bracket)",
+      "sourceRect": {
+        "x": 648,
+        "y": 212,
+        "w": 113,
+        "h": 88
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_14"
+    },
+    {
+      "id": "platform.wood.shelf",
+      "category": "platform",
+      "label": "Wooden Shelf",
+      "sourceRect": {
+        "x": 777,
+        "y": 238,
+        "w": 112,
+        "h": 34
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_15"
+    },
+    {
+      "id": "platform.stone.shelf",
+      "category": "platform",
+      "label": "Stone Shelf",
+      "sourceRect": {
+        "x": 904,
+        "y": 239,
+        "w": 115,
+        "h": 43
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_16"
+    },
+    {
+      "id": "support.metal.left",
+      "category": "support",
+      "label": "Metal Bracket (Left)",
+      "sourceRect": {
+        "x": 13,
+        "y": 389,
+        "w": 87,
+        "h": 83
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_17"
+    },
+    {
+      "id": "support.metal.right",
+      "category": "support",
+      "label": "Metal Bracket (Right)",
+      "sourceRect": {
+        "x": 151,
+        "y": 388,
+        "w": 85,
+        "h": 83
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_18"
+    },
+    {
+      "id": "support.wood",
+      "category": "support",
+      "label": "Wooden Bracket",
+      "sourceRect": {
+        "x": 262,
+        "y": 370,
+        "w": 110,
+        "h": 118
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_19"
+    },
+    {
+      "id": "pillar.stone.short",
+      "category": "pillar",
+      "label": "Stone Pillar (Short)",
+      "sourceRect": {
+        "x": 418,
+        "y": 385,
+        "w": 61,
+        "h": 100
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_20"
+    },
+    {
+      "id": "pillar.stone.tall",
+      "category": "pillar",
+      "label": "Stone Pillar (Tall)",
+      "sourceRect": {
+        "x": 544,
+        "y": 344,
+        "w": 64,
+        "h": 164
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_21"
+    },
+    {
+      "id": "vertical.chain",
+      "category": "vertical",
+      "label": "Chain",
+      "sourceRect": {
+        "x": 690,
+        "y": 360,
+        "w": 30,
+        "h": 134
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_22"
+    },
+    {
+      "id": "vertical.rope",
+      "category": "vertical",
+      "label": "Rope",
+      "sourceRect": {
+        "x": 824,
+        "y": 355,
+        "w": 18,
+        "h": 142
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_23"
+    },
+    {
+      "id": "platform.stone.ledge",
+      "category": "platform",
+      "label": "Stone Ledge (Under)",
+      "sourceRect": {
+        "x": 900,
+        "y": 397,
+        "w": 121,
+        "h": 63
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_24"
+    },
+    {
+      "id": "hazard.spikes.metal",
+      "category": "hazard",
+      "label": "Spikes (Metal)",
+      "sourceRect": {
+        "x": 9,
+        "y": 583,
+        "w": 106,
+        "h": 85
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_25"
+    },
+    {
+      "id": "hazard.spikes.wood",
+      "category": "hazard",
+      "label": "Spikes (Wood Base)",
+      "sourceRect": {
+        "x": 131,
+        "y": 576,
+        "w": 117,
+        "h": 94
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_26"
+    },
+    {
+      "id": "prop.button.small",
+      "category": "prop",
+      "label": "Floor Button (Small)",
+      "sourceRect": {
+        "x": 256,
+        "y": 592,
+        "w": 125,
+        "h": 73
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_27"
+    },
+    {
+      "id": "prop.button.medium",
+      "category": "prop",
+      "label": "Floor Button (Medium)",
+      "sourceRect": {
+        "x": 386,
+        "y": 593,
+        "w": 123,
+        "h": 76
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_28"
+    },
+    {
+      "id": "prop.button.large",
+      "category": "prop",
+      "label": "Floor Button (Large)",
+      "sourceRect": {
+        "x": 516,
+        "y": 592,
+        "w": 124,
+        "h": 73
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_29"
+    },
+    {
+      "id": "hazard.lava",
+      "category": "hazard",
+      "label": "Lava",
+      "sourceRect": {
+        "x": 652,
+        "y": 568,
+        "w": 109,
+        "h": 103
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_30"
+    },
+    {
+      "id": "hazard.rocks.crumbling",
+      "category": "hazard",
+      "label": "Crumbling Rocks",
+      "sourceRect": {
+        "x": 776,
+        "y": 558,
+        "w": 118,
+        "h": 107
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_31"
+    },
+    {
+      "id": "hazard.trapdoor",
+      "category": "hazard",
+      "label": "Trapdoor Outline",
+      "sourceRect": {
+        "x": 904,
+        "y": 607,
+        "w": 116,
+        "h": 50
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_32"
+    },
+    {
+      "id": "prop.ladder.1",
+      "category": "prop",
+      "label": "Ladder (1)",
+      "sourceRect": {
+        "x": 23,
+        "y": 753,
+        "w": 80,
+        "h": 123
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_33"
+    },
+    {
+      "id": "prop.ladder.2",
+      "category": "prop",
+      "label": "Ladder (2)",
+      "sourceRect": {
+        "x": 147,
+        "y": 752,
+        "w": 85,
+        "h": 125
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_34"
+    },
+    {
+      "id": "hazard.acid_pool",
+      "category": "hazard",
+      "label": "Acid Pool",
+      "sourceRect": {
+        "x": 268,
+        "y": 797,
+        "w": 103,
+        "h": 58
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_35"
+    },
+    {
+      "id": "prop.crate",
+      "category": "prop",
+      "label": "Wooden Crate",
+      "sourceRect": {
+        "x": 399,
+        "y": 764,
+        "w": 90,
+        "h": 107
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_36"
+    },
+    {
+      "id": "prop.flag",
+      "category": "prop",
+      "label": "Flag",
+      "sourceRect": {
+        "x": 543,
+        "y": 759,
+        "w": 80,
+        "h": 112
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_37"
+    },
+    {
+      "id": "prop.key",
+      "category": "prop",
+      "label": "Key",
+      "sourceRect": {
+        "x": 673,
+        "y": 780,
+        "w": 63,
+        "h": 77
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_38"
+    },
+    {
+      "id": "goal.door.locked",
+      "category": "goal",
+      "label": "Door (Locked)",
+      "sourceRect": {
+        "x": 792,
+        "y": 755,
+        "w": 88,
+        "h": 122
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_39"
+    },
+    {
+      "id": "goal.door.open",
+      "category": "goal",
+      "label": "Door (Open)",
+      "sourceRect": {
+        "x": 912,
+        "y": 752,
+        "w": 96,
+        "h": 124
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_40"
+    },
+    {
+      "id": "prop.torch",
+      "category": "prop",
+      "label": "Torch",
+      "sourceRect": {
+        "x": 38,
+        "y": 907,
+        "w": 45,
+        "h": 101
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_41"
+    },
+    {
+      "id": "prop.window",
+      "category": "prop",
+      "label": "Window",
+      "sourceRect": {
+        "x": 152,
+        "y": 898,
+        "w": 73,
+        "h": 116
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_42"
+    },
+    {
+      "id": "prop.banner",
+      "category": "prop",
+      "label": "Banner",
+      "sourceRect": {
+        "x": 272,
+        "y": 905,
+        "w": 89,
+        "h": 111
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_43"
+    },
+    {
+      "id": "prop.bookcase.large",
+      "category": "prop",
+      "label": "Bookcase (Large)",
+      "sourceRect": {
+        "x": 400,
+        "y": 904,
+        "w": 96,
+        "h": 112
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_44"
+    },
+    {
+      "id": "prop.chalkboard",
+      "category": "prop",
+      "label": "Chalkboard",
+      "sourceRect": {
+        "x": 518,
+        "y": 918,
+        "w": 115,
+        "h": 83
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_45"
+    },
+    {
+      "id": "prop.sign",
+      "category": "prop",
+      "label": "Sign",
+      "sourceRect": {
+        "x": 648,
+        "y": 922,
+        "w": 114,
+        "h": 71
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_46"
+    },
+    {
+      "id": "fx.sparkles",
+      "category": "fx",
+      "label": "Sparkles",
+      "sourceRect": {
+        "x": 802,
+        "y": 915,
+        "w": 78,
+        "h": 92
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_47"
+    },
+    {
+      "id": "fx.smoke",
+      "category": "fx",
+      "label": "Smoke Cloud",
+      "sourceRect": {
+        "x": 912,
+        "y": 912,
+        "w": 96,
+        "h": 94
+      },
+      "usage": "level-geometry",
+      "reviewStatus": "draft",
+      "original_id": "region_48"
+    }
+  ]
+}

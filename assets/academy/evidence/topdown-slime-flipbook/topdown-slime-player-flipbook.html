@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topdown-slime-player Flipbook</title>
+    <style>
+        body {
+            background-color: #121418;
+            color: #e1e6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #fff4cc;
+            margin-bottom: 8px;
+        }
+        p {
+            color: #b4c8dc;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        .canvas-container {
+            background-color: #181a20;
+            border: 2px solid #2d3340;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            min-width: 300px;
+        }
+        canvas {
+            background-color: #181a20;
+            image-rendering: pixelated;
+            max-width: 100%;
+        }
+        .controls {
+            display: flex;
+            gap: 16px;
+            background-color: #1f222a;
+            padding: 16px 24px;
+            border-radius: 8px;
+            border: 1px solid #2d3340;
+            align-items: center;
+        }
+        select, button, input {
+            background-color: #2d3340;
+            color: #e1e6f0;
+            border: 1px solid #404859;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+        select:focus, button:hover, input:focus {
+            border-color: #78b4ff;
+        }
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #3b4252;
+        }
+        button:hover {
+            background-color: #4c566a;
+        }
+        .fps-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #fps-value {
+            width: 24px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body>
+    <h1>topdown-slime-player Flipbook</h1>
+    <p>Interactive sequence viewer &mdash; Draft Review</p>
+    
+    <div class="canvas-container">
+        <canvas id="viewer"></canvas>
+    </div>
+    
+    <div class="controls">
+        <select id="seq-select"></select>
+        <div id="action-buttons" style="display: flex; gap: 8px; border-left: 1px solid #404859; padding-left: 16px; border-right: 1px solid #404859; padding-right: 16px;"></div>
+        <button id="play-btn">Pause</button>
+        <div class="fps-control">
+            <label for="fps-slider">FPS:</label>
+            <input type="range" id="fps-slider" min="1" max="30" value="10">
+            <span id="fps-value">10</span>
+        </div>
+    </div>
+
+    <script>
+        const manifest = {"domain": "topdown-slime-player", "operationalType": "character-animation-sheet", "sourceSheet": "assets/academy/creatures/slime/tga-topdown-slime-player-v0.1.png", "derivedSheet": "assets/academy/creatures/slime/tga-topdown-slime-player-cleaned-v0.1.png", "animations": [{"id": "idle.down", "label": "Idle (Down)", "rowIndex": 0, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 34, "y": 65, "w": 154, "h": 121}}, {"index": 1, "sourceRect": {"x": 254, "y": 66, "w": 154, "h": 121}}, {"index": 2, "sourceRect": {"x": 476, "y": 65, "w": 154, "h": 121}}, {"index": 3, "sourceRect": {"x": 698, "y": 66, "w": 154, "h": 120}}]}, {"id": "idle.up", "label": "Idle (Up)", "rowIndex": 0, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 1189, "y": 75, "w": 154, "h": 111}}, {"index": 1, "sourceRect": {"x": 1410, "y": 78, "w": 154, "h": 108}}, {"index": 2, "sourceRect": {"x": 1632, "y": 66, "w": 154, "h": 120}}, {"index": 3, "sourceRect": {"x": 1866, "y": 49, "w": 151, "h": 129}}]}, {"id": "idle.right", "label": "Idle (Right)", "rowIndex": 0, "frameCount": 2, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2110, "y": 71, "w": 154, "h": 116}}, {"index": 1, "sourceRect": {"x": 2340, "y": 76, "w": 154, "h": 110}}]}, {"id": "idle.left", "label": "Idle (Left)", "rowIndex": 0, "frameCount": 2, "loop": true, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2110, "y": 71, "w": 154, "h": 116}}, {"index": 1, "sourceRect": {"x": 2340, "y": 76, "w": 154, "h": 110}}]}, {"id": "walk.down", "label": "Walk (Down)", "rowIndex": 1, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 36, "y": 243, "w": 150, "h": 135}}, {"index": 1, "sourceRect": {"x": 256, "y": 242, "w": 150, "h": 137}}, {"index": 2, "sourceRect": {"x": 478, "y": 243, "w": 150, "h": 136}}, {"index": 3, "sourceRect": {"x": 700, "y": 243, "w": 150, "h": 136}}]}, {"id": "walk.up", "label": "Walk (Up)", "rowIndex": 1, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 1192, "y": 250, "w": 148, "h": 123}}, {"index": 1, "sourceRect": {"x": 1412, "y": 249, "w": 148, "h": 123}}, {"index": 2, "sourceRect": {"x": 1634, "y": 230, "w": 148, "h": 136}}, {"index": 3, "sourceRect": {"x": 1867, "y": 207, "w": 149, "h": 139}}]}, {"id": "walk.right", "label": "Walk (Right)", "rowIndex": 1, "frameCount": 2, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2115, "y": 230, "w": 148, "h": 136}}, {"index": 1, "sourceRect": {"x": 2342, "y": 250, "w": 149, "h": 123}}]}, {"id": "walk.left", "label": "Walk (Left)", "rowIndex": 1, "frameCount": 2, "loop": true, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2115, "y": 230, "w": 148, "h": 136}}, {"index": 1, "sourceRect": {"x": 2342, "y": 250, "w": 149, "h": 123}}]}, {"id": "hop.down", "label": "Hop (Down)", "rowIndex": 2, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 41, "y": 436, "w": 142, "h": 126}}, {"index": 1, "sourceRect": {"x": 261, "y": 436, "w": 142, "h": 126}}, {"index": 2, "sourceRect": {"x": 482, "y": 436, "w": 142, "h": 126}}, {"index": 3, "sourceRect": {"x": 704, "y": 436, "w": 140, "h": 126}}]}, {"id": "hop.up", "label": "Hop (Up)", "rowIndex": 2, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 1191, "y": 437, "w": 149, "h": 125}}, {"index": 1, "sourceRect": {"x": 1412, "y": 440, "w": 155, "h": 124}}, {"index": 2, "sourceRect": {"x": 1626, "y": 437, "w": 160, "h": 127}}, {"index": 3, "sourceRect": {"x": 1851, "y": 424, "w": 177, "h": 139}}]}, {"id": "hop.right", "label": "Hop (Right)", "rowIndex": 2, "frameCount": 3, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2101, "y": 422, "w": 179, "h": 139}}, {"index": 1, "sourceRect": {"x": 2340, "y": 438, "w": 161, "h": 127}}, {"index": 2, "sourceRect": {"x": 2562, "y": 440, "w": 155, "h": 124}}]}, {"id": "hop.left", "label": "Hop (Left)", "rowIndex": 2, "frameCount": 3, "loop": true, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2101, "y": 422, "w": 179, "h": 139}}, {"index": 1, "sourceRect": {"x": 2340, "y": 438, "w": 161, "h": 127}}, {"index": 2, "sourceRect": {"x": 2562, "y": 440, "w": 155, "h": 124}}]}, {"id": "dash.down", "label": "Dash (Down)", "rowIndex": 3, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 42, "y": 626, "w": 141, "h": 127}}, {"index": 1, "sourceRect": {"x": 261, "y": 626, "w": 141, "h": 126}}, {"index": 2, "sourceRect": {"x": 483, "y": 626, "w": 140, "h": 126}}, {"index": 3, "sourceRect": {"x": 704, "y": 626, "w": 140, "h": 126}}]}, {"id": "dash.up", "label": "Dash (Up)", "rowIndex": 3, "frameCount": 4, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 1192, "y": 632, "w": 150, "h": 121}}, {"index": 1, "sourceRect": {"x": 1413, "y": 633, "w": 154, "h": 121}}, {"index": 2, "sourceRect": {"x": 1626, "y": 632, "w": 160, "h": 122}}, {"index": 3, "sourceRect": {"x": 1846, "y": 622, "w": 180, "h": 132}}]}, {"id": "dash.right", "label": "Dash (Right)", "rowIndex": 3, "frameCount": 3, "loop": true, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2104, "y": 622, "w": 181, "h": 134}}, {"index": 1, "sourceRect": {"x": 2342, "y": 633, "w": 159, "h": 121}}, {"index": 2, "sourceRect": {"x": 2563, "y": 634, "w": 153, "h": 120}}]}, {"id": "dash.left", "label": "Dash (Left)", "rowIndex": 3, "frameCount": 3, "loop": true, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2104, "y": 622, "w": 181, "h": 134}}, {"index": 1, "sourceRect": {"x": 2342, "y": 633, "w": 159, "h": 121}}, {"index": 2, "sourceRect": {"x": 2563, "y": 634, "w": 153, "h": 120}}]}, {"id": "attack.down", "label": "Attack (Down)", "rowIndex": 4, "frameCount": 5, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 39, "y": 838, "w": 148, "h": 120}}, {"index": 1, "sourceRect": {"x": 255, "y": 835, "w": 150, "h": 126}}, {"index": 2, "sourceRect": {"x": 477, "y": 845, "w": 152, "h": 115}}, {"index": 3, "sourceRect": {"x": 698, "y": 836, "w": 210, "h": 126}}, {"index": 4, "sourceRect": {"x": 971, "y": 835, "w": 153, "h": 127}}]}, {"id": "attack.up", "label": "Attack (Up)", "rowIndex": 4, "frameCount": 4, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 1190, "y": 843, "w": 147, "h": 116}}, {"index": 1, "sourceRect": {"x": 1416, "y": 845, "w": 148, "h": 117}}, {"index": 2, "sourceRect": {"x": 1636, "y": 840, "w": 150, "h": 121}}, {"index": 3, "sourceRect": {"x": 1860, "y": 828, "w": 155, "h": 132}}]}, {"id": "attack.right", "label": "Attack (Right)", "rowIndex": 4, "frameCount": 3, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2116, "y": 828, "w": 156, "h": 131}}, {"index": 1, "sourceRect": {"x": 2343, "y": 841, "w": 149, "h": 120}}, {"index": 2, "sourceRect": {"x": 2566, "y": 845, "w": 147, "h": 117}}]}, {"id": "attack.left", "label": "Attack (Left)", "rowIndex": 4, "frameCount": 3, "loop": false, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2116, "y": 828, "w": 156, "h": 131}}, {"index": 1, "sourceRect": {"x": 2343, "y": 841, "w": 149, "h": 120}}, {"index": 2, "sourceRect": {"x": 2566, "y": 845, "w": 147, "h": 117}}]}, {"id": "hit.down", "label": "Hit (Down)", "rowIndex": 5, "frameCount": 3, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 41, "y": 1052, "w": 145, "h": 97}}, {"index": 1, "sourceRect": {"x": 246, "y": 1051, "w": 169, "h": 118}}, {"index": 2, "sourceRect": {"x": 479, "y": 1046, "w": 171, "h": 196}}]}, {"id": "hit.up", "label": "Hit (Up)", "rowIndex": 5, "frameCount": 3, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 726, "y": 1034, "w": 142, "h": 207}}, {"index": 1, "sourceRect": {"x": 1407, "y": 1095, "w": 275, "h": 113}}, {"index": 2, "sourceRect": {"x": 1771, "y": 1096, "w": 290, "h": 113}}]}, {"id": "hit.right", "label": "Hit (Right)", "rowIndex": 5, "frameCount": 2, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 2158, "y": 1104, "w": 196, "h": 103}}, {"index": 1, "sourceRect": {"x": 2432, "y": 1096, "w": 238, "h": 112}}]}, {"id": "hit.left", "label": "Hit (Left)", "rowIndex": 5, "frameCount": 2, "loop": false, "reviewStatus": "Draft", "flipX": true, "frames": [{"index": 0, "sourceRect": {"x": 2158, "y": 1104, "w": 196, "h": 103}}, {"index": 1, "sourceRect": {"x": 2432, "y": 1096, "w": 238, "h": 112}}]}, {"id": "die", "label": "Die", "rowIndex": 6, "frameCount": 4, "loop": false, "reviewStatus": "Draft", "frames": [{"index": 0, "sourceRect": {"x": 806, "y": 1329, "w": 181, "h": 196}}, {"index": 1, "sourceRect": {"x": 1137, "y": 1288, "w": 192, "h": 169}}, {"index": 2, "sourceRect": {"x": 1458, "y": 1287, "w": 188, "h": 237}}, {"index": 3, "sourceRect": {"x": 1786, "y": 1275, "w": 226, "h": 165}}]}]};
+        const imgPath = "../../creatures/slime/tga-topdown-slime-player-cleaned-v0.1.png";
+        
+        const canvas = document.getElementById('viewer');
+        const ctx = canvas.getContext('2d');
+        const select = document.getElementById('seq-select');
+        const actionButtons = document.getElementById('action-buttons');
+        const playBtn = document.getElementById('play-btn');
+        const fpsSlider = document.getElementById('fps-slider');
+        const fpsValue = document.getElementById('fps-value');
+        
+        let img = new Image();
+        let isPlaying = true;
+        let fps = 10;
+        let currentSeq = null;
+        let baseLoopSeq = null;
+        let isPlayingOneShot = false;
+        let currentFrameIdx = 0;
+        let lastFrameTime = 0;
+        let animationId = null;
+        
+        if (manifest.animations) {
+            manifest.animations.forEach((anim, idx) => {
+                if (anim.loop) {
+                    const opt = document.createElement('option');
+                    opt.value = idx;
+                    opt.textContent = anim.label || anim.id;
+                    select.appendChild(opt);
+                } else {
+                    const btn = document.createElement('button');
+                    btn.textContent = anim.label || anim.id;
+                    btn.addEventListener('click', () => playOneShot(idx));
+                    actionButtons.appendChild(btn);
+                }
+            });
+        }
+        
+        function updateCanvasSize() {
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0) return;
+            let maxW = 0, maxH = 0;
+            currentSeq.frames.forEach(f => {
+                if (f.sourceRect) {
+                    maxW = Math.max(maxW, f.sourceRect.w);
+                    maxH = Math.max(maxH, f.sourceRect.h);
+                }
+            });
+            canvas.width = maxW || 256;
+            canvas.height = maxH || 256;
+        }
+        
+        function setSequence(idx, isOneShot=false) {
+            currentSeq = manifest.animations[idx];
+            if (!isOneShot) {
+                baseLoopSeq = currentSeq;
+            }
+            currentFrameIdx = 0;
+            updateCanvasSize();
+            drawFrame();
+        }
+        
+        function playOneShot(idx) {
+            isPlayingOneShot = true;
+            setSequence(idx, true);
+            lastFrameTime = performance.now();
+        }
+        
+        function drawFrame() {
+            if (!currentSeq || !currentSeq.frames || currentSeq.frames.length === 0 || !img.complete) return;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const frame = currentSeq.frames[currentFrameIdx];
+            if (!frame || !frame.sourceRect) return;
+            const rect = frame.sourceRect;
+            
+            const dx = (canvas.width - rect.w) / 2;
+            const dy = (canvas.height - rect.h) / 2;
+            
+            ctx.save();
+            if (currentSeq.flipX) {
+                ctx.translate(canvas.width, 0);
+                ctx.scale(-1, 1);
+            }
+            ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h, dx, dy, rect.w, rect.h);
+            ctx.restore();
+            
+            if (currentSeq.symmetry_warning) {
+                ctx.strokeStyle = '#ff3c3c';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(dx, dy, rect.w, rect.h);
+                ctx.fillStyle = '#ff3c3c';
+                ctx.font = '10px Arial';
+                ctx.fillText('ASYMMETRY RISK', dx + 4, dy + rect.h - 4);
+            }
+        }
+        
+        function loop(time) {
+            if (isPlaying && currentSeq && currentSeq.frames.length > 0) {
+                const elapsed = time - lastFrameTime;
+                const msPerFrame = 1000 / fps;
+                
+                if (elapsed >= msPerFrame) {
+                    currentFrameIdx++;
+                    if (currentFrameIdx >= currentSeq.frames.length) {
+                        if (isPlayingOneShot) {
+                            isPlayingOneShot = false;
+                            currentSeq = baseLoopSeq;
+                            currentFrameIdx = 0;
+                            updateCanvasSize();
+                        } else {
+                            currentFrameIdx = currentSeq.loop ? 0 : currentSeq.frames.length - 1;
+                        }
+                    }
+                    drawFrame();
+                    lastFrameTime = time;
+                }
+            }
+            animationId = requestAnimationFrame(loop);
+        }
+        
+        select.addEventListener('change', (e) => {
+            if (!isPlayingOneShot) {
+                setSequence(e.target.value);
+                lastFrameTime = performance.now();
+            } else {
+                baseLoopSeq = manifest.animations[e.target.value];
+            }
+        });
+        
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playBtn.textContent = isPlaying ? 'Pause' : 'Play';
+            if (isPlaying) lastFrameTime = performance.now();
+        });
+        
+        fpsSlider.addEventListener('input', (e) => {
+            fps = parseInt(e.target.value);
+            fpsValue.textContent = fps;
+        });
+        
+        img.onload = () => {
+            if (manifest.animations && manifest.animations.length > 0) {
+                let firstLoopIdx = manifest.animations.findIndex(a => a.loop);
+                if (firstLoopIdx === -1) firstLoopIdx = 0;
+                setSequence(firstLoopIdx);
+                
+                // Keep select value in sync if a loop exists
+                if (select.options.length > 0) {
+                    select.value = firstLoopIdx;
+                }
+                
+                lastFrameTime = performance.now();
+                animationId = requestAnimationFrame(loop);
+            }
+        };
+        img.onerror = () => {
+            ctx.fillStyle = '#ff6e6e';
+            ctx.font = '16px Arial';
+            ctx.fillText('Failed to load sprite sheet', 20, 40);
+            ctx.fillText(imgPath, 20, 60);
+        };
+        img.src = imgPath;
+        
+    </script>
+</body>
+</html>

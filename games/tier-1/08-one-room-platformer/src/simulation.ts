@@ -7,6 +7,8 @@ export type PlayerState = {
   vy: number;
   isGrounded: boolean;
   jumpHeld: boolean;
+  animState: 'idle' | 'walk' | 'jump' | 'hurt';
+  facing: 'left' | 'right';
 };
 
 export type GameState = {
@@ -26,134 +28,93 @@ export const CONSTANTS = {
   RUN_SPEED: 180,
   JUMP_VELOCITY: -620,
   MAX_FALL_SPEED: 900,
-  PLAYER_W: 32,
-  PLAYER_H: 48
-};
-
-export const GEOMETRY = {
-  ROOM_W: 800,
-  ROOM_H: 450,
-  FLOOR: { x: 0, y: 400, w: 800, h: 50 },
-  PLATFORM_1: { x: 230, y: 310, w: 150, h: 24 },
-  PLATFORM_2: { x: 470, y: 235, w: 150, h: 24 },
-  SPIKES: { x: 395, y: 376, w: 80, h: 24 },
-  GOAL: { x: 700, y: 336, w: 48, h: 64 }
+  PLAYER_W: 32, // The physics bounding box width
+  PLAYER_H: 48, // The physics bounding box height
 };
 
 export function createInitialState(): GameState {
   return {
     player: {
-      x: 60,
-      y: 352,
+      x: 0,
+      y: 0,
       vx: 0,
       vy: 0,
-      isGrounded: true,
-      jumpHeld: false
+      isGrounded: false,
+      jumpHeld: false,
+      animState: 'idle',
+      facing: 'right'
     },
     runStatus: 'Active',
     events: ['Run started.']
   };
 }
 
-export function checkAABB(r1: Rect, r2: Rect): boolean {
-  return (
-    r1.x < r2.x + r2.w &&
-    r1.x + r1.w > r2.x &&
-    r1.y < r2.y + r2.h &&
-    r1.y + r1.h > r2.y
-  );
+/**
+ * Phaser is the muscle (physics). Simulation is the brain (game rules).
+ * Phaser calls this every frame to update the Simulation with the true physical state.
+ */
+export function syncPhysicsState(state: GameState, x: number, y: number, vx: number, vy: number, grounded: boolean) {
+  state.player.x = x;
+  state.player.y = y;
+  state.player.vx = vx;
+  state.player.vy = vy;
+  
+  if (state.runStatus !== 'Active') return;
+  state.player.isGrounded = grounded;
+  
+  // Determine animation intent based on physics state
+  if (!grounded) {
+    state.player.animState = 'jump';
+  } else if (Math.abs(vx) > 10) {
+    state.player.animState = 'walk';
+  } else {
+    state.player.animState = 'idle';
+  }
+
+  if (vx > 10) state.player.facing = 'right';
+  if (vx < -10) state.player.facing = 'left';
 }
 
-export function tick(state: GameState, input: Input, deltaSeconds: number): void {
-  if (state.runStatus !== 'Active') {
-    return;
-  }
+/**
+ * Simulation processes input and decides what the character intends to do.
+ * It returns the desired horizontal velocity and whether a jump should occur.
+ * Phaser will apply these back to the physics body.
+ */
+export function processInput(state: GameState, input: Input): { vx: number, doJump: boolean } {
+  if (state.runStatus !== 'Active') return { vx: 0, doJump: false };
 
-  const { player } = state;
-  const solids: Rect[] = [GEOMETRY.FLOOR, GEOMETRY.PLATFORM_1, GEOMETRY.PLATFORM_2];
-
-  // Horizontal Movement
+  let targetVx = 0;
   if (input.left && !input.right) {
-    player.vx = -CONSTANTS.RUN_SPEED;
+    targetVx = -CONSTANTS.RUN_SPEED;
   } else if (input.right && !input.left) {
-    player.vx = CONSTANTS.RUN_SPEED;
-  } else {
-    player.vx = 0;
+    targetVx = CONSTANTS.RUN_SPEED;
   }
 
-  player.x += player.vx * deltaSeconds;
+  const jumpJustPressed = input.jump && !state.player.jumpHeld;
+  state.player.jumpHeld = input.jump;
 
-  // Horizontal Collision
-  let pRect: Rect = { x: player.x, y: player.y, w: CONSTANTS.PLAYER_W, h: CONSTANTS.PLAYER_H };
-  for (const solid of solids) {
-    if (checkAABB(pRect, solid)) {
-      if (player.vx > 0) {
-        player.x = solid.x - CONSTANTS.PLAYER_W;
-      } else if (player.vx < 0) {
-        player.x = solid.x + solid.w;
-      }
-      player.vx = 0;
-      pRect.x = player.x;
-    }
-  }
-
-  // Room Bounds (Horizontal)
-  if (player.x < 0) {
-    player.x = 0;
-    player.vx = 0;
-    pRect.x = 0;
-  } else if (player.x > GEOMETRY.ROOM_W - CONSTANTS.PLAYER_W) {
-    player.x = GEOMETRY.ROOM_W - CONSTANTS.PLAYER_W;
-    player.vx = 0;
-    pRect.x = player.x;
-  }
-
-  // Vertical Movement
-  player.vy += CONSTANTS.GRAVITY * deltaSeconds;
-  if (player.vy > CONSTANTS.MAX_FALL_SPEED) {
-    player.vy = CONSTANTS.MAX_FALL_SPEED;
-  }
-
-  // Jump logic (edge detection to prevent holding space from jumping instantly on land without a new press)
-  const jumpJustPressed = input.jump && !player.jumpHeld;
-  player.jumpHeld = input.jump;
-
-  if (jumpJustPressed && player.isGrounded) {
-    player.vy = CONSTANTS.JUMP_VELOCITY;
-    player.isGrounded = false;
+  let doJump = false;
+  if (jumpJustPressed && state.player.isGrounded) {
+    doJump = true;
     state.events.unshift('Jumped.');
   }
 
-  player.y += player.vy * deltaSeconds;
-  player.isGrounded = false; // assume airborne until collision
+  return { vx: targetVx, doJump };
+}
 
-  // Vertical Collision
-  pRect.y = player.y;
-  for (const solid of solids) {
-    if (checkAABB(pRect, solid)) {
-      if (player.vy > 0) {
-        // Landing
-        player.y = solid.y - CONSTANTS.PLAYER_H;
-        player.isGrounded = true;
-      } else if (player.vy < 0) {
-        // Hitting ceiling
-        player.y = solid.y + solid.h;
-      }
-      player.vy = 0;
-      pRect.y = player.y;
-    }
-  }
-
-  // Terminal checks
-  const touchingSpikes = checkAABB(pRect, GEOMETRY.SPIKES);
-  const touchingGoal = checkAABB(pRect, GEOMETRY.GOAL);
-
-  // Defeat takes priority
-  if (touchingSpikes) {
+// Collision Callbacks triggered by Phaser overlaps
+export function onHazardCollision(state: GameState) {
+  if (state.runStatus === 'Active') {
     state.runStatus = 'Defeat';
+    state.player.animState = 'hurt';
     state.events.unshift('Hit spikes.');
-  } else if (touchingGoal) {
+  }
+}
+
+export function onGoalCollision(state: GameState) {
+  if (state.runStatus === 'Active') {
     state.runStatus = 'Victory';
+    state.player.animState = 'idle';
     state.events.unshift('Reached goal.');
   }
 }
