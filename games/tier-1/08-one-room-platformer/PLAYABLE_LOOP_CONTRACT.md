@@ -35,9 +35,9 @@
 * **Run Speed:** 180 px/s
 * **Jump Velocity:** -620 px/s
 * **Max Fall Speed:** 900 px/s
-* Left/Right input sets `vx` to `-runSpeed` / `+runSpeed`.
+* Left/Right arrow or A/D input sets `vx` to `-runSpeed` / `+runSpeed`.
 * No Left/Right input sets `vx` to 0.
-* Jump only applies when `isGrounded` is true.
+* Jump via Spacebar, Up, or W only applies when `isGrounded` is true.
 * No coyote time, no input buffering, no double jump.
 
 ## 5. Collision Rules
@@ -75,7 +75,8 @@
   * Left status panel showing position (x,y), velocity (vx,vy), grounded state, run status.
   * Center framed one-room platformer scene.
   * Right action ledger.
-  * Controls: Left, Right, Jump, Reset buttons mapped to keyboard arrows/space.
+  * Controls: Left, Right, Jump, Reset buttons in a page/HUD control row below the canvas, mapped to keyboard arrows/space and WASD.
+  * **Birthday Build Fix 2:** Page controls must not obstruct the 800x600 playable stage. Level controls belong in page/HUD layout unless intentionally designed as in-world UI.
   * Visible player, floor/platforms, spikes, and goal.
   * No debug-page collapse.
 
@@ -91,5 +92,6 @@
 
 ## 10. Birthday Build Follow-Up Issues
 * **Resolved — Terminal fall loop:** Fixed in Birthday Build Fix 1. Defeat/Victory now apply a terminal physics lock so the player stops simulating as an active falling actor.
+* **Resolved — Control bar overlap:** Fixed in Birthday Build Fix 2. The game container now matches the 800x600 Phaser canvas so DOM controls render below the full playfield instead of over the lower room.
 * **Jump/platform scale mismatch:** After the playfield grew to 800x600 and the goblin visual scale shrank, the first reachable platform sits just above the current jump arc. The next tuning pass should adjust player scale, platform placement, jump velocity, or level layout so the first platform is reachable without breaking the intended simple v0.1 physics.
 * **Contract/runtime alignment:** `src/level8.json` is now the current Birthday Build layout source. This contract should be reconciled with the JSON before final release-style approval.

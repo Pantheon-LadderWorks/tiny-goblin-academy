@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { createInitialState, processInput, syncPhysicsState, onHazardCollision, onGoalCollision, Input, CONSTANTS } from './simulation';
 import { applyTerminalPlayerLock } from './terminalPhysics';
+import { readKeyboardInput, type KeyboardInputKeys } from './inputControls';
 import levelData from './level8.json';
 
 import regionsManifest from '../../../../manifests/academy.platformer-construction-pieces.regions.json';
@@ -43,6 +44,7 @@ function updateDOM() {
 class MainScene extends Phaser.Scene {
   playerSprite!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
   cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
+  wasdKeys?: Pick<KeyboardInputKeys, 'a' | 'd' | 'w'>;
 
   constructor() {
     super('MainScene');
@@ -136,6 +138,11 @@ class MainScene extends Phaser.Scene {
 
     if (this.input.keyboard) {
       this.cursors = this.input.keyboard.createCursorKeys();
+      this.wasdKeys = this.input.keyboard.addKeys({
+        a: Phaser.Input.Keyboard.KeyCodes.A,
+        d: Phaser.Input.Keyboard.KeyCodes.D,
+        w: Phaser.Input.Keyboard.KeyCodes.W
+      }) as Pick<KeyboardInputKeys, 'a' | 'd' | 'w'>;
     }
     
     // Initial DOM setup
@@ -158,9 +165,18 @@ class MainScene extends Phaser.Scene {
 
     // 2. Read Keyboard Input
     if (this.cursors && state.runStatus === 'Active') {
-      inputState.left = this.cursors.left.isDown || btnLeftDown;
-      inputState.right = this.cursors.right.isDown || btnRightDown;
-      inputState.jump = this.cursors.up.isDown || this.cursors.space.isDown || btnJumpDown;
+      const keyboardInput = readKeyboardInput({
+        left: this.cursors.left,
+        right: this.cursors.right,
+        up: this.cursors.up,
+        space: this.cursors.space,
+        a: this.wasdKeys?.a,
+        d: this.wasdKeys?.d,
+        w: this.wasdKeys?.w
+      });
+      inputState.left = keyboardInput.left || btnLeftDown;
+      inputState.right = keyboardInput.right || btnRightDown;
+      inputState.jump = keyboardInput.jump || btnJumpDown;
     } else if (state.runStatus !== 'Active') {
       inputState.left = false;
       inputState.right = false;
