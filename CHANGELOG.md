@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.19 Pet Campfire Cleanup Human Review**: Recorded Kryssie's human review acceptance of the H5.18 Pet Campfire static props/icons cleanup candidate for draft pipeline use. The cleanup candidate is now marked reviewed/human-review-passed, while source PNGs remain untouched and runtime wiring remains deferred.
+
 * **H5.18 Pet Campfire Static Props + Icons Cleanup Candidate**: Created a derived transparent cleanup candidate and cleanup evidence for the 25 H5.17 Pet Campfire static prop/icon regions. Source PNGs remain untouched, cleanup remains draft-review, and runtime wiring did not occur.
 
 * **H5.17 Pet Campfire Static Props + Icons Mapping**: Added a draft region manifest and synchronized bbox/contact/table evidence for 25 Pet Campfire static prop, environment prop, reward token, and status/mood icon regions. Ember Pup poses, background scene-anchor work, cleanup production sheets, and runtime wiring remain deferred.

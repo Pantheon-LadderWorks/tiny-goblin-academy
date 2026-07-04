@@ -92,6 +92,14 @@ The source sheet remains untouched. The derived candidate is `assets/academy/gam
 
 Cleanup remains draft-review. Runtime wiring did not occur, Ember Pup poses were not cleaned, and the background was used only for overlay preview evidence.
 
+## H5.19 Pet Campfire Cleanup Human Review Note
+
+H5.19 records Kryssie's human review acceptance of the H5.18 Pet Campfire static props/icons cleanup candidate.
+
+The cleanup candidate is accepted for draft pipeline use and recorded in `manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`.
+
+This does not mark the asset runtime-approved. Source PNGs remain untouched, runtime wiring did not occur, and Ember Pup poses remain deferred to a future character/state or animation candidate lane.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

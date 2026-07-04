@@ -1,16 +1,27 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "sourceManifest": "manifests/academy.pet-campfire.static-props-icons.regions.json",
   "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
   "derivedSheet": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
   "cleanupMethod": "per-region edge-connected neutral-gray checkerboard flood removal; atlas composed from trimmed cleaned crops",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pipeline-use",
+  "runtimeEligibility": "not-runtime-approved",
+  "humanReview": {
+    "status": "passed",
+    "reviewer": "Kryssie",
+    "decision": "The H5.18 cleaned Pet Campfire static props/icons candidate is visually accepted for draft pipeline use.",
+    "riskFlagInterpretation": "The 12 medium-high regions were reviewed as risk flags, not failures.",
+    "damageFindings": "No obvious checkerboard leftovers, missing details, destroyed outlines, or cleanup damage were found.",
+    "runtimeBoundary": "Human review acceptance does not wire assets into runtime and does not mark the candidate final runtime-approved."
+  },
   "notes": [
-    "Draft cleanup candidate only; not runtime-approved.",
+    "Cleanup candidate accepted by human review for draft pipeline use; not runtime-approved.",
     "Source PNG remains untouched.",
     "Only H5.17 mapped static props/icons are cleaned; Ember Pup poses are not processed.",
-    "Background is used only for overlay evidence."
+    "Background is used only for overlay evidence.",
+    "No cleanup correction pass is needed based on H5.19 human review."
   ],
   "regions": [
     {
