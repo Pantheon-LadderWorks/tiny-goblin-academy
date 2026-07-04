@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "pet-campfire",
+  "operationalType": "split-lane-intake",
+  "sourceAssets": [
+    {
+      "path": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "dimensions": {
+        "w": 1024,
+        "h": 1024
+      },
+      "mode": "RGB",
+      "alpha": {
+        "present": false,
+        "extrema": null,
+        "usable": false
+      },
+      "transparencyVerdict": "no-alpha-source-with-baked-checkerboard",
+      "cleanupRisk": "medium-high",
+      "laneDecision": "split between pet-animation-sheet candidates, static prop candidates, ui/status icon candidates, reward token candidates, and campfire/environment prop candidates"
+    },
+    {
+      "path": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+      "dimensions": {
+        "w": 2816,
+        "h": 1536
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "present": true,
+        "extrema": [
+          255,
+          255
+        ],
+        "usable": false
+      },
+      "transparencyVerdict": "fully-opaque-alpha-scene-source",
+      "cleanupRisk": "low-cleanup-risk-but-high-misuse-risk",
+      "laneDecision": "scene-anchor-background; do not process as a sprite sheet"
+    }
+  ],
+  "lanes": [
+    {
+      "id": "pet-campfire.ember-pup-character",
+      "label": "Ember Pup character pose/state candidates",
+      "laneType": "pet-animation-sheet",
+      "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "candidateCountEstimate": 16,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Top two visible rows contain Ember Pup pose/state candidates. These are not approved animation sequences; they require character/state review, baseline/anchor review, and cleanup-risk review before runtime use."
+    },
+    {
+      "id": "pet-campfire.static-care-props",
+      "label": "Care props and pet interaction objects",
+      "laneType": "static-prop-sheet",
+      "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "candidateCountEstimate": 10,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Likely includes food bowl, water bowl, stick/ball, blanket, treat, brush, leash, crate, and bone. Future pass should create region sourceRects only after cleanup review."
+    },
+    {
+      "id": "pet-campfire.status-mood-icons",
+      "label": "Status, mood, and need icons",
+      "laneType": "ui-icon-sheet",
+      "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "candidateCountEstimate": 10,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Likely includes angry/upset, water need, happy, sleep, fire/warmth, warning, sparkle, thought cloud, moon/night, and sunrise/sunset style icons. Last-column vertical stacking needs sourceRect review."
+    },
+    {
+      "id": "pet-campfire.campfire-environment-props",
+      "label": "Campfire and environment props",
+      "laneType": "static-prop-sheet",
+      "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "candidateCountEstimate": 3,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Likely includes campfire, tent, and fire/warmth marker. Glow/flame edges make cleanup review important."
+    },
+    {
+      "id": "pet-campfire.reward-badges-tokens",
+      "label": "Reward badges and tokens",
+      "laneType": "ui-icon-sheet",
+      "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "candidateCountEstimate": 2,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Likely includes paw badge and paw coin/token. Future UI region mapping should decide whether these are rewards, status markers, or both."
+    },
+    {
+      "id": "pet-campfire.background-scene-anchor",
+      "label": "Pet Campfire full scene background",
+      "laneType": "scene-anchor-background",
+      "sourceSheet": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+      "candidateCountEstimate": 1,
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Full-scene background source. It should receive future scene-anchor/readability evidence, not sprite-region extraction."
+    }
+  ],
+  "reviewNotes": [
+    "Pet Campfire is a split-lane asset family. Ember Pup is a character/state asset, not a static prop.",
+    "The Ember Pup sheet is RGB with no alpha. The visible checkerboard is baked into the pixels.",
+    "Tiny diagnostic cleanup crops suggest conservative keying may work in selected places, but full-sheet cleanup is not approved.",
+    "The last column of the Ember Pup sheet contains vertically stacked status/sunrise icons that require careful sourceRect review.",
+    "The background source is RGBA but fully opaque and should be treated as a scene-anchor background."
+  ]
+}

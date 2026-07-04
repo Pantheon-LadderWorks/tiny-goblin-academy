@@ -1,0 +1,29 @@
+[
+  {
+    "path": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+    "filename": "tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGB",
+    "alphaPresent": false,
+    "alphaExtrema": null,
+    "alphaUsability": "none"
+  },
+  {
+    "path": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+    "filename": "tga-pet-campfire-background-source-v0.1.png",
+    "dimensions": [
+      2816,
+      1536
+    ],
+    "mode": "RGBA",
+    "alphaPresent": true,
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "alphaUsability": "fully-opaque-alpha"
+  }
+]

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.16 Pet Campfire Split-Lane Intake**: Opened Pet Campfire intake as a split-lane asset family. Ember Pup is treated as a character/state asset; care props, mood/status icons, and environment objects are separate future region lanes; the background is deferred as a scene-anchor background. No runtime wiring occurred.
+
 * **Level 8 Spawn Baseline Adjustment**: Moved the Birthday Build player spawn slightly upward so the enlarged readable goblin no longer starts embedded in the floor.
 
 * **Level 8 Player Scale + Required Path Reachability**: Centralized v0.1 player tuning, increased goblin visual scale, raised the single-jump envelope for the required first platform / hazard-crossing route, and documented that Sticker Book placement is authoring input rather than automatic gameplay approval.

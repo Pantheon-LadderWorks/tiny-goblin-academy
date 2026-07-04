@@ -68,6 +68,14 @@ The platformer goblin player sheet is separate from the H5.6 expression/action p
 
 Cleanup remains deferred because the source is RGBA but fully opaque with a baked checkerboard. Future sequence mapping requires sequence evidence, frame-order review, pivot/baseline review, and later hitbox/hurtbox gates before runtime use.
 
+## H5.16 Pet Campfire Split-Lane Intake Note
+
+H5.16 opens Pet Campfire split-lane intake for `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png` and `assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png`.
+
+Pet Campfire is not a single standard static-prop sheet. Ember Pup is treated as a character/state asset requiring future character/animation review, while care props, mood/status icons, reward tokens, and campfire/environment objects are separate future region lanes. The Pet Campfire background is deferred as a scene-anchor background and must not be processed as a sprite sheet.
+
+H5.16 creates intake metadata, split-lane classification, and cleanup-risk evidence only. No runtime wiring occurred, no source PNGs were modified, and no production cleaned sheet was created.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
