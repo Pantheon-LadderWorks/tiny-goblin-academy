@@ -1,3 +1,12 @@
+import {
+  PLAYER_BODY_HEIGHT,
+  PLAYER_BODY_WIDTH,
+  PLAYER_GRAVITY,
+  PLAYER_JUMP_VELOCITY,
+  PLAYER_MAX_FALL_SPEED,
+  PLAYER_RUN_SPEED
+} from './playerTuning';
+
 export type Rect = { x: number; y: number; w: number; h: number };
 
 export type PlayerState = {
@@ -24,12 +33,12 @@ export type Input = {
 };
 
 export const CONSTANTS = {
-  GRAVITY: 1800,
-  RUN_SPEED: 180,
-  JUMP_VELOCITY: -620,
-  MAX_FALL_SPEED: 900,
-  PLAYER_W: 32, // The physics bounding box width
-  PLAYER_H: 48, // The physics bounding box height
+  GRAVITY: PLAYER_GRAVITY,
+  RUN_SPEED: PLAYER_RUN_SPEED,
+  JUMP_VELOCITY: PLAYER_JUMP_VELOCITY,
+  MAX_FALL_SPEED: PLAYER_MAX_FALL_SPEED,
+  PLAYER_W: PLAYER_BODY_WIDTH, // The physics bounding box width
+  PLAYER_H: PLAYER_BODY_HEIGHT, // The physics bounding box height
 };
 
 export function createInitialState(): GameState {

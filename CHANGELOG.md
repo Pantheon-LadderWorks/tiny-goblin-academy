@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **Level 8 Player Scale + Required Path Reachability**: Centralized v0.1 player tuning, increased goblin visual scale, raised the single-jump envelope for the required first platform / hazard-crossing route, and documented that Sticker Book placement is authoring input rather than automatic gameplay approval.
+
 * **Level 8 Control Layout + WASD**: Moved Level 8 DOM controls out of the playable stage by aligning the game container with the 800x600 Birthday Build canvas, and added WASD keyboard support alongside arrows/space. Jump/platform reach tuning remains a separate follow-up.
 
 * **Level 8 Terminal State Lock**: Fixed the Birthday Build terminal defeat/victory physics bug by parking the Phaser player body after simulation enters a terminal state. The action ledger remains simulation-owned and idempotent; jump/platform tuning remains a separate follow-up.

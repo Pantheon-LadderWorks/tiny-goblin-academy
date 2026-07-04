@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { createInitialState, processInput, syncPhysicsState, onHazardCollision, onGoalCollision, Input, CONSTANTS } from './simulation';
 import { applyTerminalPlayerLock } from './terminalPhysics';
 import { readKeyboardInput, type KeyboardInputKeys } from './inputControls';
+import { PLAYER_FRAME_HEIGHT, PLAYER_FRAME_WIDTH, PLAYER_VISUAL_SCALE } from './playerTuning';
 import levelData from './level8.json';
 
 import regionsManifest from '../../../../manifests/academy.platformer-construction-pieces.regions.json';
@@ -111,15 +112,15 @@ class MainScene extends Phaser.Scene {
     );
     
     // The physics AABB is 32x48 per the contract.
-    // The visual goblin sprites are roughly 280x256. 
-    // We scale them down so the 64x64 sticker box looks about right.
-    const visualScale = 64 / 280;
+    // The visual goblin frames are roughly 280x256.
+    // PLAYER_VISUAL_SCALE keeps the goblin readable in the 800x600 Birthday Build room.
+    const visualScale = PLAYER_VISUAL_SCALE;
     this.playerSprite.setScale(visualScale);
     
     const unscaledW = CONSTANTS.PLAYER_W / visualScale;
     const unscaledH = CONSTANTS.PLAYER_H / visualScale;
     this.playerSprite.body.setSize(unscaledW, unscaledH);
-    this.playerSprite.body.setOffset((280 - unscaledW) / 2, 256 - unscaledH); 
+    this.playerSprite.body.setOffset((PLAYER_FRAME_WIDTH - unscaledW) / 2, PLAYER_FRAME_HEIGHT - unscaledH);
     
     this.playerSprite.setMaxVelocity(CONSTANTS.RUN_SPEED, CONSTANTS.MAX_FALL_SPEED);
 
