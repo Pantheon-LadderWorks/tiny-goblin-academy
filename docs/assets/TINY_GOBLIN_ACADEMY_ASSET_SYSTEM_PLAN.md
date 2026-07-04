@@ -108,6 +108,14 @@ The draft manifest is `manifests/academy.pet-campfire.ember-pup.pose-candidates.
 
 This is a character/state lane, not a static prop lane. No cleanup occurred, no runtime animation timing was assigned, no pivots or hitboxes were created, and no gameplay/runtime wiring occurred. The human-accepted static props/icons cleanup candidate remains separate.
 
+## H5.21 Ember Pup Pose Human Review Note
+
+H5.21 records Kryssie's human/product review pass for the H5.20 Ember Pup pose candidate mapping.
+
+The pose candidate manifest is now marked `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pose-cleanup-pipeline-use`. The 16 sourceRects, draft semantic labels, and future sequence grouping notes are accepted as draft cleanup-planning evidence only.
+
+This does not mark any pose runtime-approved. No Ember Pup cleanup occurred, no source PNGs were modified, no runtime animation timing was assigned, no pivots/anchors/hitboxes were created, and no gameplay/runtime wiring occurred. Ambiguous labels such as eating/play-bow, muddy/sick, and sad/tired remain intentionally soft.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

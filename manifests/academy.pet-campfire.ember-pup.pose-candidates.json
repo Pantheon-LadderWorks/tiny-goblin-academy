@@ -1,6 +1,9 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pose-cleanup-pipeline-use",
+  "runtimeEligibility": "not-runtime-approved",
   "domain": "pet-campfire",
   "operationalType": "pet-pose-candidates",
   "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
@@ -12,11 +15,32 @@
     "cleanupStatus": "not-run",
     "humanReviewRequired": true
   },
+  "humanReview": {
+    "phase": "H5.21",
+    "status": "passed",
+    "reviewer": "Kryssie",
+    "decision": "H5.20 sourceRects and draft semantic labels are accepted for draft pose cleanup pipeline use.",
+    "acceptedAsDraftOnly": [
+      "sourceRects",
+      "semantic labels",
+      "possible future sequence group notes"
+    ],
+    "intentionallySoftLabels": [
+      "eating-or-play-bow",
+      "muddy-or-sick",
+      "sad-or-tired"
+    ],
+    "runtimeBoundary": "No runtime animation sequences, frame timing, pivots, anchors, hitboxes, hurtboxes, gameplay states, or game-code wiring are approved by this review.",
+    "sourcePngUntouched": true,
+    "cleanupPerformed": false
+  },
   "reviewNotes": [
     "H5.20 maps Ember Pup pose/state candidates only.",
+    "H5.21 records Kryssie's human/product review pass for draft pose cleanup pipeline use.",
     "Ember Pup is a character/state asset, not a static prop.",
     "This manifest does not create runtime animation sequences, frame timing, pivots, hitboxes, or gameplay states.",
     "Source PNG remains untouched and no cleanup was performed in this pass.",
+    "Ambiguous labels remain intentionally soft: eating/play-bow, muddy/sick, and sad/tired.",
     "Static props/icons remain handled by the separate H5.17-H5.19 lane."
   ],
   "possibleFutureSequenceGroups": [

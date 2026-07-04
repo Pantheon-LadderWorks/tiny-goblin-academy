@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.21 Ember Pup Pose Human Review**: Recorded Kryssie's human/product review pass for the H5.20 Ember Pup pose candidates. SourceRects, draft semantic labels, and future sequence grouping notes are accepted for draft pose cleanup pipeline use only; no cleanup, runtime animation approval, or gameplay wiring occurred.
+
 * **H5.20 Ember Pup Pose Candidate Mapping**: Added a draft pose/state candidate manifest and synchronized bbox/contact/table/sequence-note evidence for 16 Ember Pup pose candidates. Ember Pup remains a character/state lane; no cleanup, runtime animation, or gameplay wiring occurred.
 
 * **H5.19 Pet Campfire Cleanup Human Review**: Recorded Kryssie's human review acceptance of the H5.18 Pet Campfire static props/icons cleanup candidate for draft pipeline use. The cleanup candidate is now marked reviewed/human-review-passed, while source PNGs remain untouched and runtime wiring remains deferred.
