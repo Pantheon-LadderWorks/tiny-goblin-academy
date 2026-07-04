@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { createInitialState, processInput, syncPhysicsState, onHazardCollision, onGoalCollision, Input, CONSTANTS } from './simulation';
+import { applyTerminalPlayerLock } from './terminalPhysics';
 import levelData from './level8.json';
 
 import regionsManifest from '../../../../manifests/academy.platformer-construction-pieces.regions.json';
@@ -13,6 +14,7 @@ let state = createInitialState();
 const inputState: Input = { left: false, right: false, jump: false };
 
 let totalEventsLogged = 1;
+let terminalPhysicsLocked = false;
 
 function updateDOM() {
   document.getElementById('pos-display')!.textContent = `${Math.round(state.player.x)}, ${Math.round(state.player.y)}`;
@@ -174,8 +176,9 @@ class MainScene extends Phaser.Scene {
       if (intent.doJump) {
         this.playerSprite.setVelocityY(CONSTANTS.JUMP_VELOCITY);
       }
-    } else {
-      this.playerSprite.setVelocityX(0); 
+    } else if (!terminalPhysicsLocked) {
+      applyTerminalPlayerLock(this.playerSprite);
+      terminalPhysicsLocked = true;
     }
 
     // 5. Renderer displays the Simulation Brain's intended animation

@@ -49,6 +49,7 @@
 * Touching the goal causes Victory.
 * **Terminal Priority:** If spike and goal overlaps are somehow both detected in the same tick, Defeat takes priority over Victory.
 * Terminal states lock movement/tick mutation except Reset.
+* **Birthday Build Fix 1:** Terminal states now park the player physics body by zeroing velocity, disabling gravity, and stopping active body movement so a defeated or victorious goblin does not keep falling after the run ends.
 * Reset restores the initial state.
 
 ## 6. Required Loop
@@ -89,6 +90,6 @@
 * No v0.2 or release work.
 
 ## 10. Birthday Build Follow-Up Issues
-* **Terminal fall loop:** Defeat currently stops horizontal input, but gravity/vertical velocity can continue moving the player downward after terminal state. Terminal states must freeze or safely park physics before this is considered polished.
+* **Resolved — Terminal fall loop:** Fixed in Birthday Build Fix 1. Defeat/Victory now apply a terminal physics lock so the player stops simulating as an active falling actor.
 * **Jump/platform scale mismatch:** After the playfield grew to 800x600 and the goblin visual scale shrank, the first reachable platform sits just above the current jump arc. The next tuning pass should adjust player scale, platform placement, jump velocity, or level layout so the first platform is reachable without breaking the intended simple v0.1 physics.
 * **Contract/runtime alignment:** `src/level8.json` is now the current Birthday Build layout source. This contract should be reconciled with the JSON before final release-style approval.
