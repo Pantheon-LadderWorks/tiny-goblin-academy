@@ -167,6 +167,12 @@ The Ember Pup state-symbol placement grammar and the UI/prop/care-symbol placeme
 
 The two-lane split remains required. The generic accepted-atlas dump pattern remains rejected. Placement remains draft planning only: no exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring were approved.
 
+## H5.28 Pet Campfire Draft Layout Composition Plan Note
+
+H5.28 creates `manifests/academy.pet-campfire.layout-composition-plan.json` as a draft visual composition plan for nine Pet Campfire scenarios: idle, happy greeting, hungry care, thirsty care, sleepy rest, sad comfort, sick recovery, active play, and quest/status.
+
+The plan connects reviewed scene anchors and reviewed placement grammars using anchor references and named slots only. It does not approve exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

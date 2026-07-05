@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.28 Pet Campfire Draft Layout Composition Plan**: Added a draft layout composition manifest and evidence for nine Pet Campfire scenarios. The plan connects reviewed scene anchors and reviewed placement grammars using anchor references and named slots only; no exact runtime coordinates or gameplay wiring occurred.
+
 * **H5.27 Pet Campfire Placement Grammar Human Review**: Recorded human review pass for the dual placement grammar manifests. The Ember Pup state-symbol and UI/prop/care-symbol placement split is accepted for draft layout composition planning, the generic atlas-dump pattern remains rejected, and no runtime wiring occurred.
 
 * **H5.26 Pet Campfire Dual Placement Grammars**: Added draft planning manifests and evidence that split Ember Pup state-symbol placement from UI/prop/care-symbol placement. Accepted cleaned assets are not treated as automatic scene placements, and no runtime wiring occurred.
