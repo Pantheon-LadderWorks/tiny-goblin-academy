@@ -1,0 +1,328 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "pet-campfire",
+  "operationalType": "ember-pup-state-symbol-placement-plan",
+  "sourcePoseCleanupManifest": "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+  "sourceSceneAnchorManifest": "manifests/academy.pet-campfire.background.scene-anchors.json",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "none",
+  "rules": [
+    {
+      "id": "pet-campfire.placement.ember-pup.idle-neutral",
+      "label": "Idle / neutral resting state-symbol placement",
+      "stateSymbols": [
+        "idle-neutral",
+        "profile-neutral"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-upper-canopy",
+        "pet-campfire.background.anchor.right-upper-canopy",
+        "pet-campfire.background.anchor.central-fire-focal"
+      ],
+      "placementRole": "default visible pet presence",
+      "scaleHint": "medium readable pet scale; keep clear of flame core",
+      "companionIconSuggestions": [
+        "pet-campfire.status-icon.happy-face",
+        "pet-campfire.feedback-icon.sparkles"
+      ],
+      "moodIntent": "calm campsite presence",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Use as a stable state-symbol, not an idle animation cycle."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.happy-alert",
+      "label": "Happy / alert / wave state-symbol placement",
+      "stateSymbols": [
+        "happy",
+        "happy-wave",
+        "alert"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-upper-canopy",
+        "pet-campfire.background.anchor.right-upper-canopy"
+      ],
+      "placementRole": "positive reaction / greeting state",
+      "scaleHint": "medium; may be slightly larger when used as focal reaction evidence",
+      "companionIconSuggestions": [
+        "pet-campfire.status-icon.happy-face",
+        "pet-campfire.feedback-icon.sparkles",
+        "pet-campfire.reward-token.paw-badge"
+      ],
+      "moodIntent": "friendly, active, greeting, or success state",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Right sign/banner may be thematic for greeting but needs readability review before use."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.sad-tired",
+      "label": "Sad / tired state-symbol placement",
+      "stateSymbols": [
+        "sad",
+        "sad-floppy",
+        "sad-or-tired"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "low-energy mood/state symbol",
+      "scaleHint": "medium; preserve facial readability and avoid high-glow areas",
+      "companionIconSuggestions": [
+        "pet-campfire.status-icon.thought-cloud",
+        "pet-campfire.status-icon.sleep-zzz",
+        "pet-campfire.status-icon.upset-face"
+      ],
+      "moodIntent": "sad, tired, worried, or needs-care state",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Use quieter anchors; avoid celebratory/sign-like anchors unless intentionally comedic."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.muddy-sick",
+      "label": "Muddy / sick state-symbol placement",
+      "stateSymbols": [
+        "muddy-or-sick"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-tent-care"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "needs-care or recovery state",
+      "scaleHint": "medium; keep facial/body state readable",
+      "companionIconSuggestions": [
+        "pet-campfire.status-icon.warning",
+        "pet-campfire.status-icon.thought-cloud",
+        "pet-campfire.care-prop.brush"
+      ],
+      "moodIntent": "muddy, sick, unhappy, or care-needed state",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Best near care/shelter context; do not use as animation damage state yet."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.sleeping-resting",
+      "label": "Sleeping / resting state-symbol placement",
+      "stateSymbols": [
+        "sleeping"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-tent-care"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.right-stumps-table",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "placementRole": "rest/sleep mood state",
+      "scaleHint": "medium-wide; avoid obstruction of curled silhouette",
+      "companionIconSuggestions": [
+        "pet-campfire.status-icon.sleep-zzz",
+        "pet-campfire.status-icon.moon-night",
+        "pet-campfire.care-prop.blanket-bedroll"
+      ],
+      "moodIntent": "resting, sleeping, safe, tucked-in state",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Tent/care cluster is the strongest semantic match, but busy art needs human readability review."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.eating",
+      "label": "Eating / play-bow care state-symbol placement",
+      "stateSymbols": [
+        "eating-or-play-bow",
+        "eating-food"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "care interaction state-symbol",
+      "scaleHint": "medium; keep bowl/muzzle interaction readable",
+      "companionIconSuggestions": [
+        "pet-campfire.care-prop.food-bowl",
+        "pet-campfire.care-prop.treat-biscuit",
+        "pet-campfire.status-icon.happy-face"
+      ],
+      "moodIntent": "feeding, treat, or care interaction",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Use with care prop placement grammar; no exact coordinates approved."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.drinking",
+      "label": "Drinking care state-symbol placement",
+      "stateSymbols": [
+        "drinking-water"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "water care interaction state-symbol",
+      "scaleHint": "medium; bowl and head must remain readable",
+      "companionIconSuggestions": [
+        "pet-campfire.care-prop.water-bowl",
+        "pet-campfire.status-icon.water-need",
+        "pet-campfire.status-icon.happy-face"
+      ],
+      "moodIntent": "thirst, water care, recovery",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Use with water need/bowl symbols; no runtime behavior implied."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.walk-active",
+      "label": "Walking / active pose-symbol placement",
+      "stateSymbols": [
+        "walk-run"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "active pose-symbol or directional presence",
+      "scaleHint": "medium; preserve legs/paws; do not imply validated walk cycle",
+      "companionIconSuggestions": [
+        "pet-campfire.feedback-icon.sparkles",
+        "pet-campfire.care-prop.stick-and-ball"
+      ],
+      "moodIntent": "movement-like variation without runtime animation approval",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "These are walk-ish pose-symbols, not an approved movement animation."
+    },
+    {
+      "id": "pet-campfire.placement.ember-pup.jump-excited",
+      "label": "Jumping / excited pose-symbol placement",
+      "stateSymbols": [
+        "jump-happy"
+      ],
+      "preferredAnchors": [
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedAnchors": [
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "avoidAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "placementRole": "excited reaction pose-symbol",
+      "scaleHint": "medium; keep airborne silhouette clear of high-clutter zones",
+      "companionIconSuggestions": [
+        "pet-campfire.feedback-icon.sparkles",
+        "pet-campfire.status-icon.happy-face",
+        "pet-campfire.reward-token.paw-coin"
+      ],
+      "moodIntent": "joy, success, play, or excitement",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Not a jump animation; use as a single excited state-symbol."
+    }
+  ],
+  "notes": [
+    "H5.26 connects accepted Ember Pup pose/state-symbol assets to accepted scene anchors as draft planning rules only.",
+    "Use state-symbol, pose-symbol, or state placement language; do not claim runtime animation cycles.",
+    "No exact runtime spawn coordinates are assigned or approved.",
+    "Anchor IDs are planning references, not runtime placement data."
+  ]
+}

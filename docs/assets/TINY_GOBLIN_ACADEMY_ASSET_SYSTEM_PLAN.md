@@ -148,6 +148,17 @@ The scene-anchor manifest is now accepted for draft scene-anchor planning as `st
 
 The key correction is that the H5.24 ghost preview did not approve generic asset placement. Future planning must split Ember Pup state-symbol placement from UI/prop/care-symbol placement. Accepted cleaned assets are not automatically valid scene placements, and the accepted props/icons atlas must not be dumped directly into scene space.
 
+## H5.26 Pet Campfire Dual Placement Grammar Note
+
+H5.26 creates two draft placement grammar manifests:
+
+* `manifests/academy.pet-campfire.ember-pup.state-placement-plan.json`
+* `manifests/academy.pet-campfire.ui-prop-care-placement-plan.json`
+
+The first grammar covers Ember Pup state-symbol placement: idle, happy, sad, sick, sleeping, eating, drinking, active, and excited pose-symbols. The second grammar covers UI/prop/care-symbol placement: care props, campfire/environment props, mood/status icons, feedback icons, reward markers, and quest/status markers.
+
+This pass connects accepted cleaned assets to accepted scene anchors as planning rules only. Accepted cleaned assets are not automatic scene placements. The generic atlas-dump pattern remains rejected. No source PNGs changed, no cleaned candidates changed, no exact runtime coordinates were approved, and no Pet Campfire runtime wiring occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
