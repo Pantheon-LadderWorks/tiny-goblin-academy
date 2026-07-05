@@ -1,0 +1,507 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "card-goblin-duel",
+  "operationalType": "ui-token-region-manifest",
+  "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
+  "sourceDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "transparency": {
+    "pixelFormat": "Format24bppRgb",
+    "hasAlpha": false,
+    "finding": "Source is RGB/opaque. Checkerboard-style background appears baked into the concept sheet; cleanup/transparency extraction is deferred."
+  },
+  "layoutClassification": "draft-gridlike-ui-token-sheet-with-mixed-surfaces-and-icons",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "regions": [
+    {
+      "id": "card-goblin-duel.ui-tokens.region-01",
+      "label": "UI/tokens region 01 - ui-panel",
+      "category": "ui-panel",
+      "sourceRect": {
+        "x": 13,
+        "y": 0,
+        "w": 243,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-02",
+      "label": "UI/tokens region 02 - ui-panel",
+      "category": "ui-panel",
+      "sourceRect": {
+        "x": 256,
+        "y": 0,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-03",
+      "label": "UI/tokens region 03 - dialogue-panel",
+      "category": "dialogue-panel",
+      "sourceRect": {
+        "x": 512,
+        "y": 0,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-04",
+      "label": "UI/tokens region 04 - speech-bubble",
+      "category": "speech-bubble",
+      "sourceRect": {
+        "x": 768,
+        "y": 0,
+        "w": 234,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-05",
+      "label": "UI/tokens region 05 - button",
+      "category": "button",
+      "sourceRect": {
+        "x": 0,
+        "y": 128,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-06",
+      "label": "UI/tokens region 06 - button",
+      "category": "button",
+      "sourceRect": {
+        "x": 256,
+        "y": 128,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-07",
+      "label": "UI/tokens region 07 - label-surface",
+      "category": "label-surface",
+      "sourceRect": {
+        "x": 512,
+        "y": 128,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-08",
+      "label": "UI/tokens region 08 - progress-bar",
+      "category": "progress-bar",
+      "sourceRect": {
+        "x": 768,
+        "y": 128,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-09",
+      "label": "UI/tokens region 09 - icon-button",
+      "category": "icon-button",
+      "sourceRect": {
+        "x": 0,
+        "y": 256,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-10",
+      "label": "UI/tokens region 10 - icon-button",
+      "category": "icon-button",
+      "sourceRect": {
+        "x": 256,
+        "y": 256,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-11",
+      "label": "UI/tokens region 11 - badge",
+      "category": "badge",
+      "sourceRect": {
+        "x": 512,
+        "y": 256,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-12",
+      "label": "UI/tokens region 12 - badge",
+      "category": "badge",
+      "sourceRect": {
+        "x": 768,
+        "y": 256,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-13",
+      "label": "UI/tokens region 13 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 0,
+        "y": 384,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-14",
+      "label": "UI/tokens region 14 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 256,
+        "y": 384,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-15",
+      "label": "UI/tokens region 15 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 512,
+        "y": 384,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-16",
+      "label": "UI/tokens region 16 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 768,
+        "y": 384,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-17",
+      "label": "UI/tokens region 17 - status-icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 0,
+        "y": 512,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-18",
+      "label": "UI/tokens region 18 - status-icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 256,
+        "y": 512,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-19",
+      "label": "UI/tokens region 19 - resource-icon",
+      "category": "resource-icon",
+      "sourceRect": {
+        "x": 512,
+        "y": 512,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-20",
+      "label": "UI/tokens region 20 - resource-icon",
+      "category": "resource-icon",
+      "sourceRect": {
+        "x": 768,
+        "y": 512,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-21",
+      "label": "UI/tokens region 21 - effect-icon",
+      "category": "effect-icon",
+      "sourceRect": {
+        "x": 0,
+        "y": 640,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-22",
+      "label": "UI/tokens region 22 - effect-icon",
+      "category": "effect-icon",
+      "sourceRect": {
+        "x": 256,
+        "y": 640,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-23",
+      "label": "UI/tokens region 23 - card-ui-marker",
+      "category": "card-ui-marker",
+      "sourceRect": {
+        "x": 512,
+        "y": 640,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-24",
+      "label": "UI/tokens region 24 - card-ui-marker",
+      "category": "card-ui-marker",
+      "sourceRect": {
+        "x": 768,
+        "y": 640,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-25",
+      "label": "UI/tokens region 25 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 0,
+        "y": 768,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-26",
+      "label": "UI/tokens region 26 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 256,
+        "y": 768,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-27",
+      "label": "UI/tokens region 27 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 512,
+        "y": 768,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-28",
+      "label": "UI/tokens region 28 - token",
+      "category": "token",
+      "sourceRect": {
+        "x": 768,
+        "y": 768,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-29",
+      "label": "UI/tokens region 29 - badge",
+      "category": "badge",
+      "sourceRect": {
+        "x": 0,
+        "y": 896,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-30",
+      "label": "UI/tokens region 30 - button",
+      "category": "button",
+      "sourceRect": {
+        "x": 256,
+        "y": 896,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-31",
+      "label": "UI/tokens region 31 - button",
+      "category": "button",
+      "sourceRect": {
+        "x": 512,
+        "y": 896,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping and baked-text review."
+    },
+    {
+      "id": "card-goblin-duel.ui-tokens.region-32",
+      "label": "UI/tokens region 32 - uncertain",
+      "category": "uncertain",
+      "sourceRect": {
+        "x": 768,
+        "y": 896,
+        "w": 256,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "notes": "Draft H5.41 visible-bounds region. Category is provisional for human review. Not runtime-approved. Likely token/icon/decorative candidate unless human review identifies surface behavior."
+    }
+  ],
+  "reviewNotes": [
+    "H5.41 maps Card Goblin Duel UI/tokens regions for draft review only.",
+    "Some UI/token assets may later become functional surfaces with internal slots, but H5.41 does not perform functional slot mapping.",
+    "Buttons, panels, labels, badges, bubbles, and progress bars should be reviewed as possible future functional surfaces.",
+    "No cleanup, runtime UI, text rendering, card gameplay, or Card Goblin Duel wiring is approved."
+  ]
+}

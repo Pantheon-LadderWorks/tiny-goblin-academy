@@ -546,3 +546,7 @@ H5.39 corrected the first card-frame slot pilot. Slots must be surface-type awar
 ## H5.40 Card Frame Functional Slot Human Review Note
 
 H5.40 accepted the corrected H5.39 Card Goblin Duel card-frame functional slot mapping for draft planning use. The reviewed map covers 32 surfaces and 116 corrected draft slots. Runtime UI, text rendering, card gameplay, and visual integration remain deferred. Future UI/HUD slot mapping should use the H5.39/H5.40 surface-type-aware approach.
+
+## H5.41 Card Goblin Duel UI/Tokens Region Mapping Note
+
+H5.41 created the draft Card Goblin Duel UI/tokens region manifest from ssets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png. The pass mapped 32 draft-review regions and marked likely future functional-surface candidates. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.

@@ -128,3 +128,11 @@ All notable changes to this project will be documented in this file.
 - Human review passed for 32 surfaces and 116 corrected draft slots.
 - Surface-type-aware semantics are now the reference pattern for future UI/HUD slot mapping.
 - Runtime UI, card gameplay, and visual integration remain deferred and not runtime-approved.
+
+## H5.41 - Card Goblin Duel UI/Tokens Region Mapping
+
+- Created draft Card Goblin Duel UI/tokens region manifest.
+- Mapped 32 draft-review regions from the UI/tokens source sheet.
+- Marked likely future functional-surface candidates for later review.
+- Created H5.41 region mapping evidence.
+- Cleanup, runtime UI, text rendering, slot mapping, and gameplay wiring remain deferred.
