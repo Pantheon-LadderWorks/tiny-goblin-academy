@@ -199,6 +199,12 @@ H5.32 creates `assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-taver
 
 The derived sheet preserves the original `1024x1024` / 8x8 layout and keeps `derivedRect` aligned with `sourceRect` for future planning convenience. The source PNG remains untouched. Cleanup remains draft-review; the future roll illusion remains planning-only; no runtime wiring, animation approval, probability logic, or game-code changes occurred.
 
+## H5.33 Dice Duel Tavern Cleanup Human Review Note
+
+H5.33 records Kryssie's human/product review pass for the H5.32 Dice Duel Tavern cleanup candidate.
+
+The cleanup candidate is accepted for draft pipeline use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`. High-risk FX notes remain retained for glow, smoke, dust, sparkle, burst, spiral, and motion-line regions. The future roll illusion remains planning-only, and runtime wiring remains deferred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

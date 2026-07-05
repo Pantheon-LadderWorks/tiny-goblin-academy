@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "dice-duel-tavern",
   "operationalType": "game-specific-cleanup-candidate",
   "sourceRegionManifest": "manifests/academy.dice-duel-tavern.regions.json",
@@ -20,8 +20,8 @@
     "description": "Created a transparent 1024x1024 sheet, cleaned each reviewed sourceRect crop with conservative edge-connected neutral-gray checkerboard removal, and pasted each cleaned crop back at its original sourceRect position.",
     "sourcePngUntouched": true
   },
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-cleanup-candidate",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pipeline-use",
   "runtimeEligibility": "not-runtime-approved",
   "rollIllusionApproval": "none",
   "animationApproval": "none",
@@ -1421,6 +1421,16 @@
     "H5.32 creates a derived transparent cleanup candidate only.",
     "Source PNG remains untouched.",
     "Derived sheet preserves the original 1024x1024 / 8x8 layout for future planning convenience.",
-    "Runtime use, roll illusion implementation, animation timing, probability logic, and game wiring remain unapproved."
+    "Runtime use, roll illusion implementation, animation timing, probability logic, and game wiring remain unapproved.",
+    "H5.32 human review passed in H5.33.",
+    "Cleanup candidate accepted for draft pipeline use.",
+    "No cleanup correction pass needed.",
+    "Source PNG remained untouched.",
+    "Derived cleaned sheet remains draft pipeline asset, not runtime-approved.",
+    "1024x1024 / 8x8 layout preservation accepted for future planning convenience.",
+    "High-risk flags remain useful history for glow/smoke/dust/sparkle/burst/spiral/motion-line regions.",
+    "Smoke wisps and soft FX are fragile/faint but accepted for draft pipeline use.",
+    "Future roll illusion remains planning-only.",
+    "No runtime roll code, animation timing, probability/gameplay logic, or Dice Duel Tavern wiring approved."
   ]
 }
