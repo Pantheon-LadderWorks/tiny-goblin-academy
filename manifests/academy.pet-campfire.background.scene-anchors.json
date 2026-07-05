@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "pet-campfire",
+  "operationalType": "scene-anchor-background",
+  "sourceBackground": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+  "backgroundDimensions": {
+    "w": 2816,
+    "h": 1536
+  },
+  "reviewStatus": "needs-human-review",
+  "anchors": [
+    {
+      "id": "pet-campfire.background.anchor.central-fire-focal",
+      "label": "Central campfire focal anchor",
+      "category": "primary-focal-anchor",
+      "rect": {
+        "x": 1230,
+        "y": 900,
+        "w": 410,
+        "h": 300
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Main visual focus. Good for warmth feedback and central attention; avoid covering flame with large pets or UI."
+    },
+    {
+      "id": "pet-campfire.background.anchor.front-clearing",
+      "label": "Foreground open clearing / pet stage",
+      "category": "ember-pup-safe-placement-zone",
+      "rect": {
+        "x": 1040,
+        "y": 1040,
+        "w": 760,
+        "h": 300
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Strong readable ground area around the fire glow. Candidate pet/state-symbol placement lane, but avoid direct flame overlap."
+    },
+    {
+      "id": "pet-campfire.background.anchor.left-tent-care",
+      "label": "Left tent and care cluster",
+      "category": "care-prop-safe-placement-zone",
+      "rect": {
+        "x": 210,
+        "y": 690,
+        "w": 760,
+        "h": 520
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Tent, crate, blanket, bedroll, and lantern already imply care/camp inventory. Good thematic care-prop area; visually busy for small labels."
+    },
+    {
+      "id": "pet-campfire.background.anchor.right-stumps-table",
+      "label": "Right stumps/table activity cluster",
+      "category": "possible-interaction-anchor",
+      "rect": {
+        "x": 1750,
+        "y": 790,
+        "w": 610,
+        "h": 430
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Stump, table, bucket, bench, and logs imply interaction/activity. Good future action zone, moderate clutter."
+    },
+    {
+      "id": "pet-campfire.background.anchor.right-sign-banner",
+      "label": "Right sign and banner board",
+      "category": "possible-interaction-anchor",
+      "rect": {
+        "x": 2300,
+        "y": 525,
+        "w": 360,
+        "h": 565
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Strong visual sign/notice anchor. Possible quest/status marker area; not a cutout sprite."
+    },
+    {
+      "id": "pet-campfire.background.anchor.upper-sky",
+      "label": "Upper sky and distant forest negative space",
+      "category": "ui-safe-zone",
+      "rect": {
+        "x": 980,
+        "y": 75,
+        "w": 820,
+        "h": 430
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Best broad negative-space candidate for overlays or atmospheric UI. Watch contrast near clouds and fireflies."
+    },
+    {
+      "id": "pet-campfire.background.anchor.left-upper-canopy",
+      "label": "Left upper tree canopy",
+      "category": "background-detail-zone",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 740,
+        "h": 420
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Beautiful but busy/dark canopy. Better as atmosphere than placement; UI readability risk."
+    },
+    {
+      "id": "pet-campfire.background.anchor.right-upper-canopy",
+      "label": "Right upper tree canopy",
+      "category": "background-detail-zone",
+      "rect": {
+        "x": 2140,
+        "y": 0,
+        "w": 676,
+        "h": 440
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Decorative canopy and tree trunk mass. Avoid small UI or tiny state icons here."
+    },
+    {
+      "id": "pet-campfire.background.anchor.left-foreground-mushrooms",
+      "label": "Left foreground mushrooms/shrubs",
+      "category": "foreground-obstruction-zone",
+      "rect": {
+        "x": 0,
+        "y": 1040,
+        "w": 360,
+        "h": 390
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Foreground foliage and mushrooms can obscure small pets/props. Good scenery, risky placement."
+    },
+    {
+      "id": "pet-campfire.background.anchor.right-foreground-rocks",
+      "label": "Right foreground rocks/leaves",
+      "category": "foreground-obstruction-zone",
+      "rect": {
+        "x": 2420,
+        "y": 1060,
+        "w": 395,
+        "h": 410
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Foreground rocks and large leaves create strong occlusion/readability risk. Avoid primary interactions."
+    },
+    {
+      "id": "pet-campfire.background.anchor.left-path-entry",
+      "label": "Left lower path entry",
+      "category": "ember-pup-safe-placement-zone",
+      "rect": {
+        "x": 420,
+        "y": 1180,
+        "w": 600,
+        "h": 250
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Readable ground strip for entry/idle pet placement. Some foreground path texture but not too busy."
+    },
+    {
+      "id": "pet-campfire.background.anchor.right-path-entry",
+      "label": "Right lower path entry",
+      "category": "ember-pup-safe-placement-zone",
+      "rect": {
+        "x": 1830,
+        "y": 1180,
+        "w": 560,
+        "h": 235
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Readable ground strip near stump/logs. Useful for pet placement if kept clear of bench/stump silhouettes."
+    },
+    {
+      "id": "pet-campfire.background.anchor.lantern-glow-left",
+      "label": "Left lantern glow cluster",
+      "category": "readability-risk-zone",
+      "rect": {
+        "x": 860,
+        "y": 660,
+        "w": 250,
+        "h": 330
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Bright lantern and midground tree shapes can compete with small glowing icons."
+    },
+    {
+      "id": "pet-campfire.background.anchor.lantern-glow-right",
+      "label": "Right lantern/banner glow cluster",
+      "category": "readability-risk-zone",
+      "rect": {
+        "x": 2470,
+        "y": 620,
+        "w": 235,
+        "h": 275
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "High contrast lantern/sign area. Good visual landmark, risky for tiny UI/status marks."
+    }
+  ],
+  "notes": [
+    "H5.24 audits visual placement/readability zones only.",
+    "The Pet Campfire background is a scene-anchor background, not a sprite sheet.",
+    "No background sprites or props were extracted.",
+    "No runtime placement or gameplay wiring is approved by this pass.",
+    "Source background PNG remains untouched."
+  ]
+}

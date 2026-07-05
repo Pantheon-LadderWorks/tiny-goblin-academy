@@ -132,6 +132,14 @@ The cleanup candidate is accepted for draft pose/state-symbol pipeline use and r
 
 This promotion does not make Ember Pup a runtime animation sheet. The cleaned poses may support draft state symbols, portraits, pet moods, or future planning inputs, but animation cycles, timing, pivots, anchors, hitboxes, gameplay states, and runtime wiring remain unapproved.
 
+## H5.24 Pet Campfire Background Scene-Anchor Audit Note
+
+H5.24 audits `assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png` as a scene-anchor background.
+
+The draft scene-anchor manifest is `manifests/academy.pet-campfire.background.scene-anchors.json`, with evidence under `assets/academy/evidence/h5-24-pet-campfire-background-scene-anchors/`.
+
+This pass maps 14 visual placement/readability zones for future planning, including the central campfire focal area, pet-safe lower clearings, tent/care cluster, stump/table interaction cluster, UI-safe upper sky, foreground obstruction zones, and lantern/sign readability risks. The background remains source-preserved; no sprite extraction, background prop cutouts, runtime placement data, game-code changes, or Pet Campfire wiring occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
