@@ -1,12 +1,12 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "functional-surface-slot-map",
   "sourceRegionManifest": "manifests/academy.card-goblin-duel.card-frames.regions.json",
   "sourceCleanupManifest": "manifests/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
   "derivedSheet": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "slotApproval": "none",
   "coordinatePolicy": "surface-relative-percent-rectangles-only-no-global-runtime-coordinates",
@@ -3871,7 +3871,13 @@
     "Functional slot mapping must be surface-type aware.",
     "Transparent frames and slots are containers/mounts, not card text surfaces.",
     "Future UI/HUD slot mapping must avoid generic slot templates and use surface-specific semantics.",
-    "Runtime UI remains unapproved."
+    "Runtime UI remains unapproved.",
+    "H5.39 human review passed in H5.40.",
+    "Corrected surface-type-aware slot semantics accepted.",
+    "32 surfaces and 116 corrected draft slots accepted for future planning.",
+    "Transparent/open frame correction accepted.",
+    "Runtime UI, card gameplay, text rendering, and visual integration remain deferred.",
+    "Future UI/HUD slot mapping should use the H5.39 surface-type-aware approach."
   ],
   "correctedBy": "H5.39 Card Frame Functional Slot Correction Pass",
   "correctionSummary": {
@@ -3944,6 +3950,24 @@
       "Transparent/open frames and board slots are containers or mounts, not card text surfaces.",
       "Card backs, deck stacks, board slots, front frames, and blank card faces do not share one generic slot template.",
       "This correction is draft-only and does not approve runtime UI or card gameplay wiring."
+    ]
+  },
+  "pipelineUse": "accepted-for-draft-functional-slot-planning",
+  "humanReview": {
+    "reviewId": "H5.40",
+    "decision": "passed",
+    "reviewedCommit": "a996a1a docs: correct card frame functional slot mapping",
+    "acceptedFor": "draft-functional-slot-planning-only",
+    "surfacesAccepted": 32,
+    "slotsAccepted": 116,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.39 human review passed in H5.40.",
+      "Corrected surface-type-aware slot semantics accepted.",
+      "32 surfaces and 116 corrected draft slots accepted for future planning.",
+      "Transparent/open frame correction accepted.",
+      "Runtime UI, card gameplay, text rendering, and visual integration remain deferred.",
+      "Future UI/HUD slot mapping should use the H5.39 surface-type-aware approach."
     ]
   }
 }

@@ -542,3 +542,7 @@ Manifests should define:
 ## H5.39 Card Frame Functional Slot Correction Note
 
 H5.39 corrected the first card-frame slot pilot. Slots must be surface-type aware: transparent/open frames use mount/window semantics, board/card slots use drop/occupancy semantics, card backs use identity/deck/group semantics, and solid/front card surfaces may use content slots. Runtime UI remains unapproved.
+
+## H5.40 Card Frame Functional Slot Human Review Note
+
+H5.40 accepted the corrected H5.39 Card Goblin Duel card-frame functional slot mapping for draft planning use. The reviewed map covers 32 surfaces and 116 corrected draft slots. Runtime UI, text rendering, card gameplay, and visual integration remain deferred. Future UI/HUD slot mapping should use the H5.39/H5.40 surface-type-aware approach.

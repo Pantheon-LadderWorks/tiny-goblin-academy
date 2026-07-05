@@ -141,3 +141,7 @@ A functional surface is an asset with internal rules.
 ## H5.39 Surface-Type-Aware Correction
 
 H5.39 corrected the first card-frame slot pilot. Functional slot mapping must be surface-type aware. Transparent/open frames use mount/window semantics and must not receive generic title/body/art card-face slots unless a solid content surface exists inside them. Board/card slots remain drop/occupancy surfaces; card backs remain identity surfaces; deck stacks and fanned backs remain deck/group surfaces. Runtime UI remains unapproved.
+
+## H5.40 Human Review Acceptance
+
+H5.40 accepted the corrected H5.39 Card Goblin Duel functional slot mapping for draft planning use only. Functional slots define where dynamic content may later belong inside reviewed card-frame surfaces, but they do not approve runtime UI, exact layout implementation, text rendering, card gameplay, or Card Goblin Duel wiring. The surface-type-aware approach should guide future UI/HUD slot mapping.

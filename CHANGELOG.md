@@ -121,3 +121,10 @@ All notable changes to this project will be documented in this file.
 - Functional slots must be surface-type aware.
 - Transparent/open frames now use mount/window semantics instead of title/body/art card-face slots.
 - Runtime UI remains unapproved.
+
+## H5.40 - Card Frame Functional Slot Human Review
+
+- Accepted the corrected H5.39 card-frame functional slot mapping for draft planning use.
+- Human review passed for 32 surfaces and 116 corrected draft slots.
+- Surface-type-aware semantics are now the reference pattern for future UI/HUD slot mapping.
+- Runtime UI, card gameplay, and visual integration remain deferred and not runtime-approved.
