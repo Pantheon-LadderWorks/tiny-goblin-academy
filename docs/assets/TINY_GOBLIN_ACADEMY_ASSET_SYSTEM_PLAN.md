@@ -205,6 +205,12 @@ H5.33 records Kryssie's human/product review pass for the H5.32 Dice Duel Tavern
 
 The cleanup candidate is accepted for draft pipeline use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`. High-risk FX notes remain retained for glow, smoke, dust, sparkle, burst, spiral, and motion-line regions. The future roll illusion remains planning-only, and runtime wiring remains deferred.
 
+## H5.34 Card Goblin Duel Card Frames Region Mapping Note
+
+H5.34 maps `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png` into `manifests/academy.card-goblin-duel.card-frames.regions.json` with 32 draft-review regions.
+
+The Card Goblin Duel card-frames source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, game-code change, or Card Goblin Duel UI/tokens processing occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

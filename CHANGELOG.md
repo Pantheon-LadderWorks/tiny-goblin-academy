@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.34 Card Goblin Duel Card Frames Region Mapping**: Added draft intake/region mapping for the Card Goblin Duel card-frames concept sheet, with 32 draft-review regions and evidence. The source PNG remains untouched, the UI/tokens sheet remains out of scope, and no cleanup or runtime wiring occurred.
+
 * **H5.33 Dice Duel Tavern Cleanup Human Review**: Recorded human review pass for the H5.32 Dice Duel Tavern cleanup candidate and accepted it for draft pipeline use. High-risk FX notes remain retained, the future roll illusion remains planning-only, and runtime wiring remains deferred.
 
 * **H5.32 Dice Duel Tavern Cleanup Candidate**: Created a derived transparent cleanup candidate for the 64 reviewed Dice Duel Tavern regions while preserving the original 1024x1024 / 8x8 layout. The source PNG remains untouched, cleanup remains draft-review, the future roll illusion remains planning-only, and no runtime wiring occurred.

@@ -1,0 +1,479 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "card-goblin-duel",
+  "operationalType": "card-frame-region-manifest",
+  "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
+  "sourceDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "transparency": {
+    "mode": "RGB",
+    "hasAlpha": false,
+    "alphaUsable": false,
+    "background": "baked checkerboard / fake transparency",
+    "cleanupRequiredForTransparentRuntimeUse": true,
+    "sourcePngUntouched": true
+  },
+  "layoutClassification": "mixed-card-frame-sheet-with-four-visual-rows-and-eight-columns",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "regions": [
+    {
+      "id": "card-goblin-duel.card-frames.empty-card-surface.blank-parchment-card",
+      "label": "Blank parchment card surface",
+      "category": "empty-card-surface",
+      "sourceRect": {
+        "x": 4,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.green-banner-front-frame",
+      "label": "Green banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 132,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.teal-banner-front-frame",
+      "label": "Teal banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 259,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.tan-banner-front-frame",
+      "label": "Tan banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 386,
+        "y": 27,
+        "w": 124,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.teal-edged-tan-front-frame",
+      "label": "Teal-edged tan card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 514,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.glowing-highlight-front-frame",
+      "label": "Glowing highlighted card front frame",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 641,
+        "y": 19,
+        "w": 126,
+        "h": 184
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Glow/edge treatment may require careful cleanup review."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.disabled-card-state.gray-disabled-front-frame",
+      "label": "Gray disabled card front frame",
+      "category": "disabled-card-state",
+      "sourceRect": {
+        "x": 769,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Gray disabled-state card may be harder to separate from baked checkerboard and needs human review."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.locked-chain-card-back",
+      "label": "Locked chain card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 897,
+        "y": 27,
+        "w": 125,
+        "h": 170
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.desk-card-back",
+      "label": "Desk illustration card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 4,
+        "y": 257,
+        "w": 123,
+        "h": 166
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.goblin-pattern-card-back",
+      "label": "Goblin pattern card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 132,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.arcane-orb-card-back",
+      "label": "Arcane orb card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 259,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.monster-card-back",
+      "label": "Monster card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 387,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.scratched-wood-card-back",
+      "label": "Scratched wood card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 514,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.treasure-laurel-card-back",
+      "label": "Treasure laurel card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 642,
+        "y": 258,
+        "w": 123,
+        "h": 166
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.green-deck-stack",
+      "label": "Green deck stack",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 779,
+        "y": 268,
+        "w": 107,
+        "h": 146
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.fanned-goblin-card-backs",
+      "label": "Fanned goblin card backs",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 897,
+        "y": 272,
+        "w": 126,
+        "h": 138
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.green-board-card-slot",
+      "label": "Green board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 4,
+        "y": 558,
+        "w": 123,
+        "h": 160
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.gray-board-card-slot",
+      "label": "Gray board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 131,
+        "y": 558,
+        "w": 123,
+        "h": 161
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.tan-board-card-slot",
+      "label": "Tan board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 258,
+        "y": 559,
+        "w": 124,
+        "h": 159
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.teal-board-card-slot",
+      "label": "Teal board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 386,
+        "y": 558,
+        "w": 124,
+        "h": 160
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.glowing-empty-card-slot",
+      "label": "Glowing empty card slot",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 513,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Glow/edge treatment may require careful cleanup review."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.gold-glowing-empty-card-slot",
+      "label": "Gold glowing empty card slot",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 641,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Glow/edge treatment may require careful cleanup review."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-slot.red-corner-card-slot",
+      "label": "Red corner card slot",
+      "category": "card-slot",
+      "sourceRect": {
+        "x": 769,
+        "y": 558,
+        "w": 125,
+        "h": 160
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-slot.gray-gold-corner-card-slot",
+      "label": "Gray/gold corner card slot",
+      "category": "card-slot",
+      "sourceRect": {
+        "x": 898,
+        "y": 559,
+        "w": 122,
+        "h": 159
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.large-blank-vertical-card",
+      "label": "Large blank vertical card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 4,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.small-horizontal-card-surface",
+      "label": "Small horizontal card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 131,
+        "y": 825,
+        "w": 123,
+        "h": 77
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.aged-parchment-card-surface",
+      "label": "Aged parchment card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 258,
+        "y": 825,
+        "w": 125,
+        "h": 186
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.gold-bordered-blank-card",
+      "label": "Gold bordered blank card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 385,
+        "y": 824,
+        "w": 126,
+        "h": 189
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.ornate-blank-card-surface",
+      "label": "Ornate blank card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 514,
+        "y": 825,
+        "w": 124,
+        "h": 187
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed. Preserve blank/overlay-ready interior as semantically important."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.gold-ornate-open-frame",
+      "label": "Gold ornate open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 641,
+        "y": 824,
+        "w": 125,
+        "h": 189
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.wood-open-card-frame",
+      "label": "Wood open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 770,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.corner-ornate-open-frame",
+      "label": "Corner ornate open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 898,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.34 Card Goblin Duel card-frames mapping. Source RGB sheet has no alpha; cleanup not performed."
+    }
+  ],
+  "reviewNotes": [
+    "H5.34 maps Card Goblin Duel card-frame regions for draft review only.",
+    "Card Goblin Duel UI/tokens sheet is out of scope for this pass.",
+    "Source sheet is RGB with no alpha and baked checkerboard/fake transparency.",
+    "No cleanup, runtime wiring, or source PNG modification occurred.",
+    "SourceRects require evidence review before cleanup or implementation."
+  ]
+}
