@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.25 Pet Campfire Scene-Anchor Human Review**: Recorded human review of the H5.24 scene-anchor audit. The 14 anchors are accepted for draft planning, while generic ghost placement is explicitly rejected; future planning splits Ember Pup state-symbol placement from UI/prop/care-symbol placement.
+
 * **H5.24 Pet Campfire Background Scene-Anchor Audit**: Added a draft scene-anchor manifest and evidence for 14 Pet Campfire background placement/readability zones. The background remains source-preserved; no sprite extraction, runtime placement, or game wiring occurred.
 
 * **H5.23 Ember Pup Cleanup Human Review**: Recorded Kryssie's human/product review acceptance of the H5.22 Ember Pup pose/state cleanup candidate for draft pose/state-symbol pipeline use. The candidate is now reviewed/human-review-passed while source PNGs remain untouched, `animationApproval` remains `none`, and runtime animation/gameplay wiring remains deferred.

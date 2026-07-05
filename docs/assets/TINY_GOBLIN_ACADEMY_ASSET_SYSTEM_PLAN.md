@@ -140,6 +140,14 @@ The draft scene-anchor manifest is `manifests/academy.pet-campfire.background.sc
 
 This pass maps 14 visual placement/readability zones for future planning, including the central campfire focal area, pet-safe lower clearings, tent/care cluster, stump/table interaction cluster, UI-safe upper sky, foreground obstruction zones, and lantern/sign readability risks. The background remains source-preserved; no sprite extraction, background prop cutouts, runtime placement data, game-code changes, or Pet Campfire wiring occurred.
 
+## H5.25 Pet Campfire Scene-Anchor Human Review Note
+
+H5.25 records Kryssie's human/product review of the H5.24 Pet Campfire scene-anchor audit.
+
+The scene-anchor manifest is now accepted for draft scene-anchor planning as `status: reviewed`, `reviewStatus: human-review-passed-with-placement-notes`, `pipelineUse: accepted-for-draft-scene-anchor-planning`, `runtimeEligibility: not-runtime-approved`, and `placementApproval: none`.
+
+The key correction is that the H5.24 ghost preview did not approve generic asset placement. Future planning must split Ember Pup state-symbol placement from UI/prop/care-symbol placement. Accepted cleaned assets are not automatically valid scene placements, and the accepted props/icons atlas must not be dumped directly into scene space.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

@@ -1,6 +1,10 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed-with-placement-notes",
+  "pipelineUse": "accepted-for-draft-scene-anchor-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "none",
   "domain": "pet-campfire",
   "operationalType": "scene-anchor-background",
   "sourceBackground": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
@@ -8,7 +12,22 @@
     "w": 2816,
     "h": 1536
   },
-  "reviewStatus": "needs-human-review",
+  "humanReview": {
+    "phase": "H5.25",
+    "status": "passed-with-placement-notes",
+    "reviewer": "Kryssie",
+    "decision": "Scene anchors are accepted as useful draft planning zones, but H5.24 ghost placement preview does not approve generic asset placement.",
+    "placementGrammarSplitRequired": true,
+    "runtimePlacementApproved": false,
+    "notes": [
+      "Some Ember Pup ghost placements are useful examples; others are visible no-go examples.",
+      "The bottom blob of accepted props/icons is visually weird and should not become placement doctrine.",
+      "Accepted cleaned assets are not automatically valid scene placements.",
+      "Ember Pup pose/state symbols require their own placement grammar.",
+      "UI, prop, and care symbols require a separate placement grammar.",
+      "Do not dump the accepted props/icons atlas directly into scene space."
+    ]
+  },
   "anchors": [
     {
       "id": "pet-campfire.background.anchor.central-fire-focal",
@@ -209,6 +228,10 @@
   ],
   "notes": [
     "H5.24 audits visual placement/readability zones only.",
+    "H5.25 records human review: anchors passed as draft planning zones with placement grammar split required.",
+    "H5.24 ghost placement preview is evidence only, not approved runtime placement data.",
+    "Future planning must split Ember Pup state-symbol placement from UI/prop/care-symbol placement.",
+    "Accepted cleaned assets are not automatically valid scene placements.",
     "The Pet Campfire background is a scene-anchor background, not a sprite sheet.",
     "No background sprites or props were extracted.",
     "No runtime placement or gameplay wiring is approved by this pass.",
