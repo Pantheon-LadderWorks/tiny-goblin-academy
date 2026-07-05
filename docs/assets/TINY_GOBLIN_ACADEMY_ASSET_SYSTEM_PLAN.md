@@ -221,6 +221,12 @@ H5.35 records Kryssie's human/product review pass for the H5.34 Card Goblin Duel
 
 The 32 mapped card-frame regions are accepted for draft cleanup/planning use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-cleanup-and-planning-use`. Cleanup remains deferred, open frames and slot interiors need careful fake-checkerboard cleanup later, the UI/tokens sheet remains a separate future lane, and runtime wiring remains deferred.
 
+## H5.36 Card Goblin Duel Card Frames Cleanup Candidate Note
+
+H5.36 creates `assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png` as a derived transparent cleanup candidate for the 32 reviewed Card Goblin Duel card-frame regions.
+
+The cleanup candidate uses per-region neutral checkerboard removal plus a conservative aperture pass for open frames, board slots, card slots, and highlighted empty slots. Cleanup remains `status: draft`, `reviewStatus: needs-human-review`, and `runtimeEligibility: not-runtime-approved`. The source PNG and Card Goblin Duel UI/tokens sheet remain untouched, and runtime wiring remains deferred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

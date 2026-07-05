@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.36 Card Goblin Duel Card Frames Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 reviewed Card Goblin Duel card-frame regions. Open frames, slots, highlighted states, and disabled gray remain review-risk areas; the source PNG and UI/tokens sheet remain untouched, and no runtime wiring occurred.
+
 * **Asset Processing Workflow**: Added a generalized asset-processing workflow for Tiny Goblin Academy covering intake, transparency audit, lane classification, mapping evidence, human review, cleanup candidates, promotion vocabulary, validation, and asset-type-specific directions.
 
 * **H5.35 Card Goblin Duel Card Frames Region Human Review**: Recorded human review pass for the H5.34 Card Goblin Duel card-frame region mapping and accepted the 32 regions for draft cleanup/planning use. Cleanup remains deferred, the UI/tokens sheet remains separate, and no runtime wiring occurred.

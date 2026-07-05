@@ -1,0 +1,910 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "card-goblin-duel",
+  "operationalType": "card-frame-cleanup-candidate",
+  "sourceRegionManifest": "manifests/academy.card-goblin-duel.card-frames.regions.json",
+  "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
+  "derivedSheet": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
+  "cleanupMethod": {
+    "name": "per-region-neutral-checkerboard-removal-with-open-slot-aperture-pass",
+    "layoutPreserved": true,
+    "sourceDimensions": {
+      "w": 1024,
+      "h": 1024
+    },
+    "derivedDimensions": {
+      "w": 1024,
+      "h": 1024
+    },
+    "description": "Created a transparent 1024x1024 sheet, cleaned each reviewed sourceRect crop with conservative neutral-gray checkerboard removal, and pasted each cleaned crop back at its original sourceRect position. Standard regions use edge-connected checkerboard removal. Open frames, board slots, card slots, and highlighted empty slots also clear a conservative interior aperture so baked checkerboard holes become transparent candidates while borders, ornaments, parchment, disabled states, and glows remain reviewable.",
+    "sourcePngUntouched": true,
+    "uiTokensSheetUntouched": true
+  },
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "cardGameplayApproval": "none",
+  "visualIntegrationApproval": "none",
+  "regions": [
+    {
+      "id": "card-goblin-duel.card-frames.empty-card-surface.blank-parchment-card",
+      "label": "Blank parchment card surface",
+      "category": "empty-card-surface",
+      "sourceRect": {
+        "x": 4,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 4,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1810,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1810 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.green-banner-front-frame",
+      "label": "Green banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 132,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 132,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1790,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1790 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.teal-banner-front-frame",
+      "label": "Teal banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 259,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 259,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1793,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1793 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.tan-banner-front-frame",
+      "label": "Tan banner card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 386,
+        "y": 27,
+        "w": 124,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 386,
+        "y": 27,
+        "w": 124,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1956,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1956 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.teal-edged-tan-front-frame",
+      "label": "Teal-edged tan card front frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 514,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 514,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1791,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1791 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.glowing-highlight-front-frame",
+      "label": "Glowing highlighted card front frame",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 641,
+        "y": 19,
+        "w": 126,
+        "h": 184
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 19,
+        "w": 126,
+        "h": 184
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 2909,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. glow/highlight edge preservation requires review. Removed/cleared 2909 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.disabled-card-state.gray-disabled-front-frame",
+      "label": "Gray disabled card front frame",
+      "category": "disabled-card-state",
+      "sourceRect": {
+        "x": 769,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 27,
+        "w": 123,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1800,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. gray disabled-state art is close to checkerboard values. Removed/cleared 1800 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.locked-chain-card-back",
+      "label": "Locked chain card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 897,
+        "y": 27,
+        "w": 125,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 27,
+        "w": 125,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 2157,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. thin chain/lock linework. Removed/cleared 2157 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.desk-card-back",
+      "label": "Desk illustration card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 4,
+        "y": 257,
+        "w": 123,
+        "h": 166
+      },
+      "derivedRect": {
+        "x": 4,
+        "y": 257,
+        "w": 123,
+        "h": 166
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1983,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1983 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.goblin-pattern-card-back",
+      "label": "Goblin pattern card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 132,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "derivedRect": {
+        "x": 132,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1753,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1753 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.arcane-orb-card-back",
+      "label": "Arcane orb card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 259,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "derivedRect": {
+        "x": 259,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1738,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1738 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.monster-card-back",
+      "label": "Monster card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 387,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "derivedRect": {
+        "x": 387,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1739,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1739 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.scratched-wood-card-back",
+      "label": "Scratched wood card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 514,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "derivedRect": {
+        "x": 514,
+        "y": 259,
+        "w": 123,
+        "h": 164
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1739,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1739 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.treasure-laurel-card-back",
+      "label": "Treasure laurel card back",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 642,
+        "y": 258,
+        "w": 123,
+        "h": 166
+      },
+      "derivedRect": {
+        "x": 642,
+        "y": 258,
+        "w": 123,
+        "h": 166
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 2072,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 2072 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.green-deck-stack",
+      "label": "Green deck stack",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 779,
+        "y": 268,
+        "w": 107,
+        "h": 146
+      },
+      "derivedRect": {
+        "x": 779,
+        "y": 268,
+        "w": 107,
+        "h": 146
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1865,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 1865 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-back.fanned-goblin-card-backs",
+      "label": "Fanned goblin card backs",
+      "category": "card-back",
+      "sourceRect": {
+        "x": 897,
+        "y": 272,
+        "w": 126,
+        "h": 138
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 272,
+        "w": 126,
+        "h": 138
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 4579,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. solid bordered card/frame cleanup risk appears low. Removed/cleared 4579 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.green-board-card-slot",
+      "label": "Green board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 4,
+        "y": 558,
+        "w": 123,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 4,
+        "y": 558,
+        "w": 123,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 13049,
+        "interiorCheckerPixelsRemoved": 4481,
+        "aperturePixelsCleared": 10092,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 13049 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.gray-board-card-slot",
+      "label": "Gray board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 131,
+        "y": 558,
+        "w": 123,
+        "h": 161
+      },
+      "derivedRect": {
+        "x": 131,
+        "y": 558,
+        "w": 123,
+        "h": 161
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 14048,
+        "interiorCheckerPixelsRemoved": 12258,
+        "aperturePixelsCleared": 10179,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 14048 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.tan-board-card-slot",
+      "label": "Tan board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 258,
+        "y": 559,
+        "w": 124,
+        "h": 159
+      },
+      "derivedRect": {
+        "x": 258,
+        "y": 559,
+        "w": 124,
+        "h": 159
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 11957,
+        "interiorCheckerPixelsRemoved": 89,
+        "aperturePixelsCleared": 10120,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 11957 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.board-slot.teal-board-card-slot",
+      "label": "Teal board card slot",
+      "category": "board-slot",
+      "sourceRect": {
+        "x": 386,
+        "y": 558,
+        "w": 124,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 386,
+        "y": 558,
+        "w": 124,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 14209,
+        "interiorCheckerPixelsRemoved": 12475,
+        "aperturePixelsCleared": 10208,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 14209 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.glowing-empty-card-slot",
+      "label": "Glowing empty card slot",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 513,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 17661,
+        "interiorCheckerPixelsRemoved": 13803,
+        "aperturePixelsCleared": 14100,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. glow/highlight edge preservation requires review. Removed/cleared 17661 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.highlighted-card-state.gold-glowing-empty-card-slot",
+      "label": "Gold glowing empty card slot",
+      "category": "highlighted-card-state",
+      "sourceRect": {
+        "x": 641,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 555,
+        "w": 126,
+        "h": 167
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 17362,
+        "interiorCheckerPixelsRemoved": 13125,
+        "aperturePixelsCleared": 14100,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. glow/highlight edge preservation requires review. Removed/cleared 17362 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-slot.red-corner-card-slot",
+      "label": "Red corner card slot",
+      "category": "card-slot",
+      "sourceRect": {
+        "x": 769,
+        "y": 558,
+        "w": 125,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 558,
+        "w": 125,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 15638,
+        "interiorCheckerPixelsRemoved": 11985,
+        "aperturePixelsCleared": 12028,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 15638 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-slot.gray-gold-corner-card-slot",
+      "label": "Gray/gold corner card slot",
+      "category": "card-slot",
+      "sourceRect": {
+        "x": 898,
+        "y": 559,
+        "w": 122,
+        "h": 159
+      },
+      "derivedRect": {
+        "x": 898,
+        "y": 559,
+        "w": 122,
+        "h": 159
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 15611,
+        "interiorCheckerPixelsRemoved": 12782,
+        "aperturePixelsCleared": 11562,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. slot aperture/interior transparency needs human review. Removed/cleared 15611 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.large-blank-vertical-card",
+      "label": "Large blank vertical card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 4,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "derivedRect": {
+        "x": 4,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1792,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. blank/overlay-ready interior must remain preserved. Removed/cleared 1792 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.small-horizontal-card-surface",
+      "label": "Small horizontal card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 131,
+        "y": 825,
+        "w": 123,
+        "h": 77
+      },
+      "derivedRect": {
+        "x": 131,
+        "y": 825,
+        "w": 123,
+        "h": 77
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1163,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. blank/overlay-ready interior must remain preserved. Removed/cleared 1163 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.aged-parchment-card-surface",
+      "label": "Aged parchment card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 258,
+        "y": 825,
+        "w": 125,
+        "h": 186
+      },
+      "derivedRect": {
+        "x": 258,
+        "y": 825,
+        "w": 125,
+        "h": 186
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 2426,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. blank/overlay-ready interior must remain preserved. Removed/cleared 2426 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.gold-bordered-blank-card",
+      "label": "Gold bordered blank card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 385,
+        "y": 824,
+        "w": 126,
+        "h": 189
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 824,
+        "w": 126,
+        "h": 189
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 2515,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. blank/overlay-ready interior must remain preserved. Removed/cleared 2515 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.overlay-ready-card-surface.ornate-blank-card-surface",
+      "label": "Ornate blank card surface",
+      "category": "overlay-ready-card-surface",
+      "sourceRect": {
+        "x": 514,
+        "y": 825,
+        "w": 124,
+        "h": 187
+      },
+      "derivedRect": {
+        "x": 514,
+        "y": 825,
+        "w": 124,
+        "h": 187
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 1885,
+        "interiorCheckerPixelsRemoved": 0,
+        "aperturePixelsCleared": 0,
+        "openInteriorCleanupApplied": false
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. blank/overlay-ready interior must remain preserved. Removed/cleared 1885 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.gold-ornate-open-frame",
+      "label": "Gold ornate open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 641,
+        "y": 824,
+        "w": 125,
+        "h": 189
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 824,
+        "w": 125,
+        "h": 189
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 15625,
+        "interiorCheckerPixelsRemoved": 12903,
+        "aperturePixelsCleared": 12367,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. open-frame aperture cleanup must preserve ornament/border. Removed/cleared 15625 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.wood-open-card-frame",
+      "label": "Wood open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 770,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "derivedRect": {
+        "x": 770,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 16212,
+        "interiorCheckerPixelsRemoved": 13353,
+        "aperturePixelsCleared": 14469,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. open-frame aperture cleanup must preserve ornament/border. Removed/cleared 16212 pixels in this crop."
+    },
+    {
+      "id": "card-goblin-duel.card-frames.card-front-frame.corner-ornate-open-frame",
+      "label": "Corner ornate open card frame",
+      "category": "card-front-frame",
+      "sourceRect": {
+        "x": 898,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "derivedRect": {
+        "x": 898,
+        "y": 825,
+        "w": 123,
+        "h": 187
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "cleanupStats": {
+        "transparentPixelsWritten": 16543,
+        "interiorCheckerPixelsRemoved": 122,
+        "aperturePixelsCleared": 13137,
+        "openInteriorCleanupApplied": true
+      },
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. open-frame aperture cleanup must preserve ornament/border. Removed/cleared 16543 pixels in this crop."
+    }
+  ],
+  "riskSummary": {
+    "high": 7,
+    "low": 18,
+    "medium": 1,
+    "medium-high": 6
+  },
+  "reviewNotes": [
+    "H5.36 creates a derived cleanup candidate for the 32 H5.35-reviewed Card Goblin Duel card-frame regions.",
+    "Source PNG remains untouched.",
+    "Card Goblin Duel UI/tokens sheet remains untouched and out of scope.",
+    "Cleanup remains needs-human-review and not runtime-approved.",
+    "Blank/overlay-ready card interiors should remain preserved.",
+    "Open frames, board slots, card slots, and highlighted empty slots received an aperture cleanup pass because the source uses baked checkerboard/fake transparency.",
+    "Gray disabled-state and glow/highlight regions are flagged high risk for human review.",
+    "No card gameplay behavior, visual integration, or runtime wiring is approved."
+  ]
+}
