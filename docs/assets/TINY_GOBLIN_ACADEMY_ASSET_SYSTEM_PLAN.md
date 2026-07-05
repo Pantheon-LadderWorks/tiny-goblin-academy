@@ -179,6 +179,12 @@ H5.29 records Kryssie's human/product review pass for the H5.28 draft layout com
 
 The nine campsite composition scenarios are accepted for future draft visual/layout planning as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-future-draft-layout-planning`. Pet Campfire asset prep is ready to pause/defer runtime integration while the remaining game asset sheets catch up. Runtime wiring remains deferred.
 
+## H5.30 Dice Duel Tavern Region Mapping Note
+
+H5.30 maps `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png` into `manifests/academy.dice-duel-tavern.regions.json` with 64 draft-review regions.
+
+The Dice Duel Tavern source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, or game-code changes occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

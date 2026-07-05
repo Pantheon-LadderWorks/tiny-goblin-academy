@@ -1,0 +1,926 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "dice-duel-tavern",
+  "operationalType": "game-specific-region-manifest",
+  "sourceSheet": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
+  "sourceDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "transparency": {
+    "mode": "RGB",
+    "hasAlpha": false,
+    "alphaUsable": false,
+    "background": "baked checkerboard / fake transparency",
+    "cleanupRequiredForTransparentRuntimeUse": true,
+    "sourcePngUntouched": true
+  },
+  "layoutClassification": "grid-like-8x8-concept-sheet-with-irregular-visible-bounds",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "regions": [
+    {
+      "id": "dice-duel-tavern.dice-face.flat-one",
+      "label": "Flat die face 1",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 1,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-two",
+      "label": "Flat die face 2",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 129,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-three",
+      "label": "Flat die face 3",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 257,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-four",
+      "label": "Flat die face 4",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 385,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-five",
+      "label": "Flat die face 5",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 513,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-six",
+      "label": "Flat die face 6",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 641,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.glowing-die",
+      "label": "Glowing die",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.paired-dice",
+      "label": "Paired dice",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.rolling-die-left",
+      "label": "Rolling die with motion streak",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 1,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+      "label": "Tumbling die with shadow",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-cup-a",
+      "label": "Wood dice cup A",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 257,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-tray-a",
+      "label": "Wood dice tray A",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 385,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-large-a",
+      "label": "Large sparkle A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 513,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-a",
+      "label": "Dust puff A",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 641,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.spiral-effect-a",
+      "label": "Spiral effect A",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 769,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.burst-effect-a",
+      "label": "Burst effect A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 897,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.tilted-die-glow",
+      "label": "Tilted die with glow",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 1,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.rolling-die-small",
+      "label": "Small rolling die with motion streaks",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-cup-b",
+      "label": "Wood dice cup B",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 257,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-tray-b",
+      "label": "Wood dice tray B",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 385,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-large-b",
+      "label": "Large sparkle B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 513,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-b",
+      "label": "Dust puff B",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 641,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.spiral-effect-b",
+      "label": "Spiral effect B",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 769,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.burst-effect-b",
+      "label": "Burst effect B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 897,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-token-teal-gold",
+      "label": "Shield token teal/gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 1,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-red",
+      "label": "Sword token red",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 129,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-gold",
+      "label": "Sword token gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.hand-token",
+      "label": "Hand token",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heal-token-green",
+      "label": "Heal token green",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.bar-token-teal",
+      "label": "Bar/weight token teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed. Semantic label should be confirmed during human review."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.reroll-token-orange",
+      "label": "Reroll token orange",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 769,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.laurel-token-green",
+      "label": "Laurel token green",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-token-teal-silver",
+      "label": "Shield token teal/silver",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 1,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-red-alt",
+      "label": "Sword token red alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 129,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-green",
+      "label": "Sword token green",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.hand-token-alt",
+      "label": "Hand token alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heal-token-green-alt",
+      "label": "Heal token green alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.scroll-token-teal",
+      "label": "Scroll/banner token teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.reroll-token-green",
+      "label": "Reroll token green",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 769,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.laurel-token-gold",
+      "label": "Laurel token gold",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.tavern-mug",
+      "label": "Foam tavern mug",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 1,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.candle-lit",
+      "label": "Lit candle",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 129,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-stacks",
+      "label": "Coin stacks",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-pouch",
+      "label": "Coin pouch",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.food-plate",
+      "label": "Food plate",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 513,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.parchment",
+      "label": "Blank parchment",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 641,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.background-prop.hanging-sign",
+      "label": "Hanging wood sign",
+      "category": "background-prop",
+      "sourceRect": {
+        "x": 769,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.background-prop.wood-table-corner",
+      "label": "Wood table corner",
+      "category": "background-prop",
+      "sourceRect": {
+        "x": 897,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-small-a",
+      "label": "Small sparkle A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 1,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.smoke-wisps",
+      "label": "Smoke wisps",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed. Low-contrast smoke on baked checkerboard may need careful cleanup review."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.balance-scales",
+      "label": "Balance scales",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.warning-triangle-gold",
+      "label": "Warning triangle gold",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 385,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-icon-silver",
+      "label": "Shield icon silver",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-red",
+      "label": "Heart shield red",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.crossed-swords",
+      "label": "Crossed swords",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-medal-gold",
+      "label": "Gold coin medal",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-small-b",
+      "label": "Small sparkle B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 1,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-c",
+      "label": "Dust puff C",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.balance-scales-shield",
+      "label": "Balance scales with shield",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.warning-triangle-red",
+      "label": "Warning triangle red",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 385,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-gold",
+      "label": "Heart shield gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-teal",
+      "label": "Heart shield teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.dice-cluster",
+      "label": "Dice cluster",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-medal-teal",
+      "label": "Teal coin medal",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Draft-review visible-bound region from H5.30 Dice Duel Tavern mapping. Source RGB sheet has no alpha; cleanup not performed."
+    }
+  ],
+  "reviewNotes": [
+    "H5.30 maps visible Dice Duel Tavern regions for draft review only.",
+    "Source sheet is RGB with no alpha and baked checkerboard background.",
+    "No cleanup, runtime wiring, or source PNG modification occurred.",
+    "SourceRects require evidence review before cleanup or implementation."
+  ]
+}
