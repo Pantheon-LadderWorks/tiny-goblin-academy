@@ -538,3 +538,7 @@ Manifests should define:
 * Draft-review evidence is not runtime approval.
 * `scripts/asset-pipeline/make-region-evidence.py` provides the reusable generator.
 * Old root-level census scripts were ingested under `scripts/asset-pipeline/legacy/` as reference-only tooling.
+
+## H5.39 Card Frame Functional Slot Correction Note
+
+H5.39 corrected the first card-frame slot pilot. Slots must be surface-type aware: transparent/open frames use mount/window semantics, board/card slots use drop/occupancy semantics, card backs use identity/deck/group semantics, and solid/front card surfaces may use content slots. Runtime UI remains unapproved.

@@ -114,3 +114,10 @@ All notable changes to this project will be documented in this file.
 * **Planning**: Added H4.6 hub surface contract and future layer scaling plan, documenting the pivot from fixed dashboard layout to full-screen launcher surface with tier-aware horizontal shelf planning, dev/prod runtime distinctions, future options, Butler/update, account, and cross-game ledger layers.
 * Public repo preparation, branding assets added, and legacy private concepts scrubbed.
 
+
+## H5.39 - Card Frame Functional Slot Correction Pass
+
+- Corrected the first card-frame slot pilot.
+- Functional slots must be surface-type aware.
+- Transparent/open frames now use mount/window semantics instead of title/body/art card-face slots.
+- Runtime UI remains unapproved.

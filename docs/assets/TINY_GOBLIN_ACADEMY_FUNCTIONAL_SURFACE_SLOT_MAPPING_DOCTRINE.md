@@ -137,3 +137,7 @@ A frame is not a sticker.
 A panel is not a sticker.
 A functional surface is an asset with internal rules.
 ```
+
+## H5.39 Surface-Type-Aware Correction
+
+H5.39 corrected the first card-frame slot pilot. Functional slot mapping must be surface-type aware. Transparent/open frames use mount/window semantics and must not receive generic title/body/art card-face slots unless a solid content surface exists inside them. Board/card slots remain drop/occupancy surfaces; card backs remain identity surfaces; deck stacks and fanned backs remain deck/group surfaces. Runtime UI remains unapproved.
