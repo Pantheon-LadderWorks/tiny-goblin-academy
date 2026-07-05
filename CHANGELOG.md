@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **Asset Processing Workflow**: Added a generalized asset-processing workflow for Tiny Goblin Academy covering intake, transparency audit, lane classification, mapping evidence, human review, cleanup candidates, promotion vocabulary, validation, and asset-type-specific directions.
+
 * **H5.35 Card Goblin Duel Card Frames Region Human Review**: Recorded human review pass for the H5.34 Card Goblin Duel card-frame region mapping and accepted the 32 regions for draft cleanup/planning use. Cleanup remains deferred, the UI/tokens sheet remains separate, and no runtime wiring occurred.
 
 * **H5.34 Card Goblin Duel Card Frames Region Mapping**: Added draft intake/region mapping for the Card Goblin Duel card-frames concept sheet, with 32 draft-review regions and evidence. The source PNG remains untouched, the UI/tokens sheet remains out of scope, and no cleanup or runtime wiring occurred.

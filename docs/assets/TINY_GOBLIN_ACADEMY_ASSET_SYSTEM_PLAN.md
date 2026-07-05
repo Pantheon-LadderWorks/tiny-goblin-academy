@@ -15,6 +15,10 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 
 ## Asset Sheet Intake Pipeline
 
+Expanded reusable workflow:
+
+`docs/assets/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md`
+
 Required sequence before any sheet is wired into hub/game code:
 
 1. **Register Sheet**: Place original asset in appropriate `assets/academy/` location.
