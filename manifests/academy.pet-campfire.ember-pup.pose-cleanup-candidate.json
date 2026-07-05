@@ -1,6 +1,10 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pose-state-symbol-pipeline-use",
+  "runtimeEligibility": "not-runtime-approved",
+  "animationApproval": "none",
   "domain": "pet-campfire",
   "operationalType": "ember-pup-pose-cleanup-candidate",
   "sourceManifest": "manifests/academy.pet-campfire.ember-pup.pose-candidates.json",
@@ -17,11 +21,23 @@
       "These are pose/state symbols for Pet Campfire draft planning, not approved runtime animations."
     ]
   },
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-cleanup-candidate",
-  "runtimeEligibility": "not-runtime-approved",
-  "animationApproval": "none",
   "stateSymbolDoctrine": "Ember Pup has pose/state symbols, not enough frames for approved runtime animation cycles.",
+  "humanReview": {
+    "phase": "H5.23",
+    "status": "passed",
+    "reviewer": "Kryssie",
+    "decision": "H5.22 Ember Pup pose/state cleanup candidate is visually accepted for draft pose/state-symbol pipeline use.",
+    "correctionPassRequired": false,
+    "sourcePngUntouched": true,
+    "staticPropsIconsCandidateUntouched": true,
+    "runtimeApproved": false,
+    "animationApproval": "none",
+    "notes": [
+      "No obvious checkerboard boxes, chopped ears, missing tails, ruined faces, or mangled paws were found in review.",
+      "The cleaned poses may be used as draft pipeline state symbols, portraits, pet moods, or future planning inputs.",
+      "This does not approve runtime animation cycles, timing, pivots, anchors, hitboxes, hurtboxes, gameplay states, or runtime wiring."
+    ]
+  },
   "regions": [
     {
       "id": "pet-campfire.ember-pup.pose.idle-neutral",

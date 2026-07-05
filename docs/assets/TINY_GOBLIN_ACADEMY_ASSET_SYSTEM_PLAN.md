@@ -124,6 +124,14 @@ The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-camp
 
 The current product interpretation is that these are pose/state symbols, not enough coherent frames for approved runtime animation cycles. Cleanup remains draft-review; source PNGs remain untouched; the H5.18/H5.19 static props/icons cleanup candidate remains untouched; no animation timing, pivots, anchors, hitboxes, gameplay states, or runtime wiring were approved.
 
+## H5.23 Ember Pup Cleanup Human Review Note
+
+H5.23 records Kryssie's human/product review acceptance of the H5.22 Ember Pup pose/state cleanup candidate.
+
+The cleanup candidate is accepted for draft pose/state-symbol pipeline use and recorded in `manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, `pipelineUse: accepted-for-draft-pose-state-symbol-pipeline-use`, `runtimeEligibility: not-runtime-approved`, and `animationApproval: none`.
+
+This promotion does not make Ember Pup a runtime animation sheet. The cleaned poses may support draft state symbols, portraits, pet moods, or future planning inputs, but animation cycles, timing, pivots, anchors, hitboxes, gameplay states, and runtime wiring remain unapproved.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
