@@ -185,6 +185,14 @@ H5.30 maps `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-con
 
 The Dice Duel Tavern source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, or game-code changes occurred.
 
+## H5.31 Dice Duel Tavern Region Human Review Note
+
+H5.31 records Kryssie's human/product review pass for the H5.30 Dice Duel Tavern region mapping.
+
+The 64 mapped regions are accepted for draft cleanup/planning use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-cleanup-and-planning-use`. Cleanup remains deferred to a future derived cleanup candidate.
+
+H5.31 also records a future code-driven dice roll illusion candidate using the flat die faces 1-6, rolling/tumbling dice candidates, and sparkle/dust/spiral/burst/smoke FX regions. This is not runtime-approved, not animation-approved, and does not approve probability/gameplay logic or Dice Duel Tavern wiring.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

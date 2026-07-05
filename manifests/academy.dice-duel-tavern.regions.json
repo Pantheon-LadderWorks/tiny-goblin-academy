@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "dice-duel-tavern",
   "operationalType": "game-specific-region-manifest",
   "sourceSheet": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
@@ -17,7 +17,7 @@
     "sourcePngUntouched": true
   },
   "layoutClassification": "grid-like-8x8-concept-sheet-with-irregular-visible-bounds",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "regions": [
     {
@@ -921,6 +921,63 @@
     "H5.30 maps visible Dice Duel Tavern regions for draft review only.",
     "Source sheet is RGB with no alpha and baked checkerboard background.",
     "No cleanup, runtime wiring, or source PNG modification occurred.",
-    "SourceRects require evidence review before cleanup or implementation."
-  ]
+    "SourceRects require evidence review before cleanup or implementation.",
+    "H5.30 human review passed in H5.31.",
+    "64 mapped regions accepted for draft cleanup/planning use.",
+    "No sourceRect correction pass needed.",
+    "Source PNG remains untouched.",
+    "Cleanup remains deferred to a future derived cleanup candidate.",
+    "Runtime wiring remains deferred.",
+    "Flat die faces 1-6, rolling/tumbling dice, and FX regions should support a future code-driven dice roll illusion planning lane.",
+    "This future roll illusion is not runtime-approved.",
+    "No animation timing, probability logic, or gameplay wiring is approved."
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "futurePlanning": {
+    "rollIllusionCandidate": {
+      "status": "draft-note",
+      "runtimeApproval": "none",
+      "animationApproval": "none",
+      "probabilityLogicApproval": "none",
+      "flatFaceRegionIds": [
+        "dice-duel-tavern.dice-face.flat-one",
+        "dice-duel-tavern.dice-face.flat-two",
+        "dice-duel-tavern.dice-face.flat-three",
+        "dice-duel-tavern.dice-face.flat-four",
+        "dice-duel-tavern.dice-face.flat-five",
+        "dice-duel-tavern.dice-face.flat-six"
+      ],
+      "tumbleRegionIds": [
+        "dice-duel-tavern.dice-token.glowing-die",
+        "dice-duel-tavern.dice-token.paired-dice",
+        "dice-duel-tavern.roll-effect.rolling-die-left",
+        "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+        "dice-duel-tavern.roll-effect.tilted-die-glow",
+        "dice-duel-tavern.roll-effect.rolling-die-small",
+        "dice-duel-tavern.dice-token.dice-cluster"
+      ],
+      "fxRegionIds": [
+        "dice-duel-tavern.feedback-icon.sparkle-large-a",
+        "dice-duel-tavern.roll-effect.dust-puff-a",
+        "dice-duel-tavern.roll-effect.spiral-effect-a",
+        "dice-duel-tavern.feedback-icon.burst-effect-a",
+        "dice-duel-tavern.feedback-icon.sparkle-large-b",
+        "dice-duel-tavern.roll-effect.dust-puff-b",
+        "dice-duel-tavern.roll-effect.spiral-effect-b",
+        "dice-duel-tavern.feedback-icon.burst-effect-b",
+        "dice-duel-tavern.feedback-icon.sparkle-small-a",
+        "dice-duel-tavern.roll-effect.smoke-wisps",
+        "dice-duel-tavern.feedback-icon.sparkle-small-b",
+        "dice-duel-tavern.roll-effect.dust-puff-c"
+      ],
+      "notes": [
+        "Future code-driven roll illusion candidate only.",
+        "Use flat die faces 1-6 as final reveal/result faces.",
+        "Use rolling/tumbling/tilted dice as throw or tumble illusion candidates.",
+        "Use sparkle, dust, spiral, burst, or smoke FX as optional roll feedback.",
+        "Code may later fake a roll through face cycling, shake, bounce, rotation, and final reveal.",
+        "This is not an animation manifest, runtime roll implementation, probability model, or gameplay approval."
+      ]
+    }
+  }
 }
