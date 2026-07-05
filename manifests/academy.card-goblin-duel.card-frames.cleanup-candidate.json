@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "card-frame-cleanup-candidate",
   "sourceRegionManifest": "manifests/academy.card-goblin-duel.card-frames.regions.json",
@@ -21,7 +21,8 @@
     "sourcePngUntouched": true,
     "uiTokensSheetUntouched": true
   },
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pipeline-use",
   "runtimeEligibility": "not-runtime-approved",
   "cardGameplayApproval": "none",
   "visualIntegrationApproval": "none",
@@ -899,12 +900,19 @@
   },
   "reviewNotes": [
     "H5.36 creates a derived cleanup candidate for the 32 H5.35-reviewed Card Goblin Duel card-frame regions.",
+    "H5.36 human review passed in H5.37.",
+    "Card Goblin Duel card-frames cleanup candidate accepted for draft pipeline use.",
+    "No cleanup correction pass needed.",
     "Source PNG remains untouched.",
     "Card Goblin Duel UI/tokens sheet remains untouched and out of scope.",
-    "Cleanup remains needs-human-review and not runtime-approved.",
+    "Cleanup candidate remains not runtime-approved.",
     "Blank/overlay-ready card interiors should remain preserved.",
+    "Solid blank/overlay-ready card surfaces looked acceptable in H5.36 evidence.",
+    "Open frames, card slots, and board slots correctly became transparent candidates.",
     "Open frames, board slots, card slots, and highlighted empty slots received an aperture cleanup pass because the source uses baked checkerboard/fake transparency.",
-    "Gray disabled-state and glow/highlight regions are flagged high risk for human review.",
-    "No card gameplay behavior, visual integration, or runtime wiring is approved."
+    "Gray disabled-state, glow/highlight frames, chains/locks, ornate open frames, and slot apertures retain their risk flags as review history.",
+    "Future Card Frame Functional Slot Mapping is needed before runtime card UI integration.",
+    "Card frames should be treated as functional surfaces, not just stickers.",
+    "No card gameplay behavior, visual integration, runtime assets, or runtime wiring is approved."
   ]
 }
