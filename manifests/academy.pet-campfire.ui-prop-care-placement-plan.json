@@ -1,11 +1,11 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "pet-campfire",
   "operationalType": "ui-prop-care-symbol-placement-plan",
   "sourceStaticCleanupManifest": "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
   "sourceSceneAnchorManifest": "manifests/academy.pet-campfire.background.scene-anchors.json",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "placementApproval": "none",
   "rules": [
@@ -356,6 +356,14 @@
     "H5.26 connects accepted Pet Campfire static props/icons to accepted scene anchors as draft planning rules only.",
     "Accepted cleaned assets are not automatically valid scene placements.",
     "The H5.24 ghost preview generic icon blob is explicitly rejected as a placement pattern.",
-    "No exact runtime coordinates, runtime UI, gameplay behavior, or Pet Campfire wiring are assigned or approved."
-  ]
+    "No exact runtime coordinates, runtime UI, gameplay behavior, or Pet Campfire wiring are assigned or approved.",
+    "H5.26 human review passed in H5.27.",
+    "The two-lane placement grammar split is accepted.",
+    "Ember Pup state-symbol placement and UI/prop/care-symbol placement remain separate planning grammars.",
+    "Accepted cleaned assets are not automatic scene placements.",
+    "The generic accepted-atlas dump pattern is rejected.",
+    "No exact runtime coordinates are approved.",
+    "No gameplay/runtime wiring is approved."
+  ],
+  "pipelineUse": "accepted-for-draft-layout-composition-planning"
 }

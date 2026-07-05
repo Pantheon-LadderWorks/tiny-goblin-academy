@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.27 Pet Campfire Placement Grammar Human Review**: Recorded human review pass for the dual placement grammar manifests. The Ember Pup state-symbol and UI/prop/care-symbol placement split is accepted for draft layout composition planning, the generic atlas-dump pattern remains rejected, and no runtime wiring occurred.
+
 * **H5.26 Pet Campfire Dual Placement Grammars**: Added draft planning manifests and evidence that split Ember Pup state-symbol placement from UI/prop/care-symbol placement. Accepted cleaned assets are not treated as automatic scene placements, and no runtime wiring occurred.
 
 * **Engine and Tooling Ladder Doctrine**: Added a future-facing doctrine note covering Phaser as training yard, third-party asset intake, CLI-first micro-UIs, Sticker Book as scene assembly, engine ladder thinking, and the canonical pose gate for future 3D assets.

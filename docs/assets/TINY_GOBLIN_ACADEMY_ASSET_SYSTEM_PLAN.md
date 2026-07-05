@@ -159,6 +159,14 @@ The first grammar covers Ember Pup state-symbol placement: idle, happy, sad, sic
 
 This pass connects accepted cleaned assets to accepted scene anchors as planning rules only. Accepted cleaned assets are not automatic scene placements. The generic atlas-dump pattern remains rejected. No source PNGs changed, no cleaned candidates changed, no exact runtime coordinates were approved, and no Pet Campfire runtime wiring occurred.
 
+## H5.27 Pet Campfire Dual Placement Grammar Human Review Note
+
+H5.27 records Kryssie's human/product review pass for the H5.26 dual placement grammar manifests.
+
+The Ember Pup state-symbol placement grammar and the UI/prop/care-symbol placement grammar are accepted for draft layout composition planning as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-layout-composition-planning`.
+
+The two-lane split remains required. The generic accepted-atlas dump pattern remains rejected. Placement remains draft planning only: no exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring were approved.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

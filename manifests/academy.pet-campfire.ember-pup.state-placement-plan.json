@@ -1,11 +1,11 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "pet-campfire",
   "operationalType": "ember-pup-state-symbol-placement-plan",
   "sourcePoseCleanupManifest": "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
   "sourceSceneAnchorManifest": "manifests/academy.pet-campfire.background.scene-anchors.json",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "placementApproval": "none",
   "rules": [
@@ -323,6 +323,14 @@
     "H5.26 connects accepted Ember Pup pose/state-symbol assets to accepted scene anchors as draft planning rules only.",
     "Use state-symbol, pose-symbol, or state placement language; do not claim runtime animation cycles.",
     "No exact runtime spawn coordinates are assigned or approved.",
-    "Anchor IDs are planning references, not runtime placement data."
-  ]
+    "Anchor IDs are planning references, not runtime placement data.",
+    "H5.26 human review passed in H5.27.",
+    "The two-lane placement grammar split is accepted.",
+    "Ember Pup state-symbol placement and UI/prop/care-symbol placement remain separate planning grammars.",
+    "Accepted cleaned assets are not automatic scene placements.",
+    "The generic accepted-atlas dump pattern is rejected.",
+    "No exact runtime coordinates are approved.",
+    "No gameplay/runtime wiring is approved."
+  ],
+  "pipelineUse": "accepted-for-draft-layout-composition-planning"
 }
