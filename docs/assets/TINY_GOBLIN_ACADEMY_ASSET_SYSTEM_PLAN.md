@@ -211,6 +211,12 @@ H5.34 maps `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-fram
 
 The Card Goblin Duel card-frames source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, game-code change, or Card Goblin Duel UI/tokens processing occurred.
 
+## H5.35 Card Goblin Duel Card Frames Region Human Review Note
+
+H5.35 records Kryssie's human/product review pass for the H5.34 Card Goblin Duel card-frame region mapping.
+
+The 32 mapped card-frame regions are accepted for draft cleanup/planning use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-cleanup-and-planning-use`. Cleanup remains deferred, open frames and slot interiors need careful fake-checkerboard cleanup later, the UI/tokens sheet remains a separate future lane, and runtime wiring remains deferred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

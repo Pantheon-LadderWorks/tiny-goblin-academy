@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "card-frame-region-manifest",
   "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
@@ -17,7 +17,8 @@
     "sourcePngUntouched": true
   },
   "layoutClassification": "mixed-card-frame-sheet-with-four-visual-rows-and-eight-columns",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "regions": [
     {
@@ -471,9 +472,16 @@
   ],
   "reviewNotes": [
     "H5.34 maps Card Goblin Duel card-frame regions for draft review only.",
-    "Card Goblin Duel UI/tokens sheet is out of scope for this pass.",
+    "H5.34 human review passed in H5.35.",
+    "32 mapped card-frame regions accepted for draft cleanup/planning use.",
+    "No sourceRect correction pass needed.",
+    "Card Goblin Duel UI/tokens sheet is out of scope for this pass and remains a separate future lane.",
     "Source sheet is RGB with no alpha and baked checkerboard/fake transparency.",
-    "No cleanup, runtime wiring, or source PNG modification occurred.",
-    "SourceRects require evidence review before cleanup or implementation."
+    "Source PNG remains untouched.",
+    "Cleanup remains deferred to a future derived cleanup candidate.",
+    "Runtime wiring remains deferred.",
+    "Blank/overlay-ready card surfaces are semantically important and should remain preserved.",
+    "Open frames and slot interiors need careful cleanup because the source has baked checkerboard/fake transparency.",
+    "No cleanup, runtime wiring, or source PNG modification occurred."
   ]
 }
