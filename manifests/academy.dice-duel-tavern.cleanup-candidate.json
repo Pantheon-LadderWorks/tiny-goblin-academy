@@ -1,0 +1,1426 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "dice-duel-tavern",
+  "operationalType": "game-specific-cleanup-candidate",
+  "sourceRegionManifest": "manifests/academy.dice-duel-tavern.regions.json",
+  "sourceSheet": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
+  "derivedSheet": "assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png",
+  "cleanupMethod": {
+    "name": "per-region-edge-connected-neutral-checkerboard-removal",
+    "layoutPreserved": true,
+    "sourceDimensions": {
+      "w": 1024,
+      "h": 1024
+    },
+    "derivedDimensions": {
+      "w": 1024,
+      "h": 1024
+    },
+    "description": "Created a transparent 1024x1024 sheet, cleaned each reviewed sourceRect crop with conservative edge-connected neutral-gray checkerboard removal, and pasted each cleaned crop back at its original sourceRect position.",
+    "sourcePngUntouched": true
+  },
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-cleanup-candidate",
+  "runtimeEligibility": "not-runtime-approved",
+  "rollIllusionApproval": "none",
+  "animationApproval": "none",
+  "probabilityLogicApproval": "none",
+  "regions": [
+    {
+      "id": "dice-duel-tavern.dice-face.flat-one",
+      "label": "Flat die face 1",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 1,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9076 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-two",
+      "label": "Flat die face 2",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 129,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9088 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-three",
+      "label": "Flat die face 3",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 257,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9121 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-four",
+      "label": "Flat die face 4",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 385,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9089 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-five",
+      "label": "Flat die face 5",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 513,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 8961 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-face.flat-six",
+      "label": "Flat die face 6",
+      "category": "dice-face",
+      "sourceRect": {
+        "x": 641,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9069 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.glowing-die",
+      "label": "Glowing die",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 5876 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.paired-dice",
+      "label": "Paired dice",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 1,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9902 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.rolling-die-left",
+      "label": "Rolling die with motion streak",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 1,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10059 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+      "label": "Tumbling die with shadow",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11045 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-cup-a",
+      "label": "Wood dice cup A",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 257,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9015 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-tray-a",
+      "label": "Wood dice tray A",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 385,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 8092 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-large-a",
+      "label": "Large sparkle A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 513,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 13168 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-a",
+      "label": "Dust puff A",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 641,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10310 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.spiral-effect-a",
+      "label": "Spiral effect A",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 769,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11360 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.burst-effect-a",
+      "label": "Burst effect A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 897,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 129,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10042 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.tilted-die-glow",
+      "label": "Tilted die with glow",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 1,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9514 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.rolling-die-small",
+      "label": "Small rolling die with motion streaks",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11258 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-cup-b",
+      "label": "Wood dice cup B",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 257,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 8910 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.dice-tray-b",
+      "label": "Wood dice tray B",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 385,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 8951 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-large-b",
+      "label": "Large sparkle B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 513,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 13371 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-b",
+      "label": "Dust puff B",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 641,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10099 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.spiral-effect-b",
+      "label": "Spiral effect B",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 769,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11587 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.burst-effect-b",
+      "label": "Burst effect B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 897,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 257,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9554 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-token-teal-gold",
+      "label": "Shield token teal/gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 1,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6911 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-red",
+      "label": "Sword token red",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 129,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6902 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-gold",
+      "label": "Sword token gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6929 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.hand-token",
+      "label": "Hand token",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6946 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heal-token-green",
+      "label": "Heal token green",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6917 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.bar-token-teal",
+      "label": "Bar/weight token teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6950 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.reroll-token-orange",
+      "label": "Reroll token orange",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 769,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9562 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.laurel-token-green",
+      "label": "Laurel token green",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 385,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11504 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-token-teal-silver",
+      "label": "Shield token teal/silver",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 1,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6937 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-red-alt",
+      "label": "Sword token red alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 129,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6938 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.sword-token-green",
+      "label": "Sword token green",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6903 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.hand-token-alt",
+      "label": "Hand token alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6892 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heal-token-green-alt",
+      "label": "Heal token green alt",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6924 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.scroll-token-teal",
+      "label": "Scroll/banner token teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6925 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.reroll-token-green",
+      "label": "Reroll token green",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 769,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9546 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.laurel-token-gold",
+      "label": "Laurel token gold",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 513,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11533 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.tavern-mug",
+      "label": "Foam tavern mug",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 1,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9254 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.candle-lit",
+      "label": "Lit candle",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 129,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 12218 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-stacks",
+      "label": "Coin stacks",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10441 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-pouch",
+      "label": "Coin pouch",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 385,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10939 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.tavern-prop.food-plate",
+      "label": "Food plate",
+      "category": "tavern-prop",
+      "sourceRect": {
+        "x": 513,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 8823 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.ui-marker.parchment",
+      "label": "Blank parchment",
+      "category": "ui-marker",
+      "sourceRect": {
+        "x": 641,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 6816 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.background-prop.hanging-sign",
+      "label": "Hanging wood sign",
+      "category": "background-prop",
+      "sourceRect": {
+        "x": 769,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 7355 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.background-prop.wood-table-corner",
+      "label": "Wood table corner",
+      "category": "background-prop",
+      "sourceRect": {
+        "x": 897,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 641,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 7979 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-small-a",
+      "label": "Small sparkle A",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 1,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 13539 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.smoke-wisps",
+      "label": "Smoke wisps",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 13633 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.balance-scales",
+      "label": "Balance scales",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11565 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.warning-triangle-gold",
+      "label": "Warning triangle gold",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 385,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10201 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.shield-icon-silver",
+      "label": "Shield icon silver",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9571 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-red",
+      "label": "Heart shield red",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9101 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.crossed-swords",
+      "label": "Crossed swords",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10670 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-medal-gold",
+      "label": "Gold coin medal",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 769,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 7483 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.sparkle-small-b",
+      "label": "Small sparkle B",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 1,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 1,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 12510 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.roll-effect.dust-puff-c",
+      "label": "Dust puff C",
+      "category": "roll-effect",
+      "sourceRect": {
+        "x": 129,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 129,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9776 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.balance-scales-shield",
+      "label": "Balance scales with shield",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 257,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 257,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 11470 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.feedback-icon.warning-triangle-red",
+      "label": "Warning triangle red",
+      "category": "feedback-icon",
+      "sourceRect": {
+        "x": 385,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 385,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 10162 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-gold",
+      "label": "Heart shield gold",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 513,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 513,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9537 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.duel-token.heart-shield-teal",
+      "label": "Heart shield teal",
+      "category": "duel-token",
+      "sourceRect": {
+        "x": 641,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 641,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9047 pixels in this crop."
+    },
+    {
+      "id": "dice-duel-tavern.dice-token.dice-cluster",
+      "label": "Dice cluster",
+      "category": "dice-token",
+      "sourceRect": {
+        "x": 769,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 769,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 9371 pixels in this crop. Review carefully for glow, smoke, dust, sparkle, burst, spiral, motion-line, or shadow preservation."
+    },
+    {
+      "id": "dice-duel-tavern.reward-token.coin-medal-teal",
+      "label": "Teal coin medal",
+      "category": "reward-token",
+      "sourceRect": {
+        "x": 897,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 897,
+        "y": 897,
+        "w": 126,
+        "h": 126
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "low",
+      "reviewStatus": "needs-human-review",
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Edge-connected neutral checkerboard removal cleaned 7434 pixels in this crop."
+    }
+  ],
+  "futurePlanning": {
+    "rollIllusionCandidate": {
+      "status": "planning-only-preserved-from-h5-31",
+      "runtimeApproval": "none",
+      "animationApproval": "none",
+      "probabilityLogicApproval": "none",
+      "flatFaceRegionIds": [
+        "dice-duel-tavern.dice-face.flat-one",
+        "dice-duel-tavern.dice-face.flat-two",
+        "dice-duel-tavern.dice-face.flat-three",
+        "dice-duel-tavern.dice-face.flat-four",
+        "dice-duel-tavern.dice-face.flat-five",
+        "dice-duel-tavern.dice-face.flat-six"
+      ],
+      "tumbleRegionIds": [
+        "dice-duel-tavern.dice-token.glowing-die",
+        "dice-duel-tavern.dice-token.paired-dice",
+        "dice-duel-tavern.roll-effect.rolling-die-left",
+        "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+        "dice-duel-tavern.roll-effect.tilted-die-glow",
+        "dice-duel-tavern.roll-effect.rolling-die-small",
+        "dice-duel-tavern.dice-token.dice-cluster"
+      ],
+      "fxRegionIds": [
+        "dice-duel-tavern.feedback-icon.sparkle-large-a",
+        "dice-duel-tavern.roll-effect.dust-puff-a",
+        "dice-duel-tavern.roll-effect.spiral-effect-a",
+        "dice-duel-tavern.feedback-icon.burst-effect-a",
+        "dice-duel-tavern.feedback-icon.sparkle-large-b",
+        "dice-duel-tavern.roll-effect.dust-puff-b",
+        "dice-duel-tavern.roll-effect.spiral-effect-b",
+        "dice-duel-tavern.feedback-icon.burst-effect-b",
+        "dice-duel-tavern.feedback-icon.sparkle-small-a",
+        "dice-duel-tavern.roll-effect.smoke-wisps",
+        "dice-duel-tavern.feedback-icon.sparkle-small-b",
+        "dice-duel-tavern.roll-effect.dust-puff-c"
+      ],
+      "notes": [
+        "Flat faces 1-6 may later support final reveal/result faces.",
+        "Tumbling dice may later support throw/tumble illusion.",
+        "FX may later support roll feedback.",
+        "H5.32 does not approve animation, timing, probability logic, runtime code, or gameplay wiring."
+      ]
+    }
+  },
+  "notes": [
+    "H5.32 creates a derived transparent cleanup candidate only.",
+    "Source PNG remains untouched.",
+    "Derived sheet preserves the original 1024x1024 / 8x8 layout for future planning convenience.",
+    "Runtime use, roll illusion implementation, animation timing, probability logic, and game wiring remain unapproved."
+  ]
+}

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.32 Dice Duel Tavern Cleanup Candidate**: Created a derived transparent cleanup candidate for the 64 reviewed Dice Duel Tavern regions while preserving the original 1024x1024 / 8x8 layout. The source PNG remains untouched, cleanup remains draft-review, the future roll illusion remains planning-only, and no runtime wiring occurred.
+
 * **H5.31 Dice Duel Tavern Region Human Review**: Recorded human review pass for the H5.30 Dice Duel Tavern region mapping and accepted the 64 regions for draft cleanup/planning use. Added a future code-driven roll illusion candidate note using flat die faces, tumbling dice, and FX regions; no cleanup or runtime wiring occurred.
 
 * **H5.30 Dice Duel Tavern Region Mapping**: Added draft intake/region mapping for the Dice Duel Tavern concept sheet, with 64 draft-review regions and evidence. The source PNG remains untouched; no cleanup or runtime wiring occurred.

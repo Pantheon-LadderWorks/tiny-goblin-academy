@@ -193,6 +193,12 @@ The 64 mapped regions are accepted for draft cleanup/planning use as `status: re
 
 H5.31 also records a future code-driven dice roll illusion candidate using the flat die faces 1-6, rolling/tumbling dice candidates, and sparkle/dust/spiral/burst/smoke FX regions. This is not runtime-approved, not animation-approved, and does not approve probability/gameplay logic or Dice Duel Tavern wiring.
 
+## H5.32 Dice Duel Tavern Cleanup Candidate Note
+
+H5.32 creates `assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png` as a derived transparent cleanup candidate for the 64 reviewed Dice Duel Tavern regions.
+
+The derived sheet preserves the original `1024x1024` / 8x8 layout and keeps `derivedRect` aligned with `sourceRect` for future planning convenience. The source PNG remains untouched. Cleanup remains draft-review; the future roll illusion remains planning-only; no runtime wiring, animation approval, probability logic, or game-code changes occurred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
