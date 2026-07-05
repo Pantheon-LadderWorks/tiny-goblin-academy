@@ -116,6 +116,14 @@ The pose candidate manifest is now marked `status: reviewed`, `reviewStatus: hum
 
 This does not mark any pose runtime-approved. No Ember Pup cleanup occurred, no source PNGs were modified, no runtime animation timing was assigned, no pivots/anchors/hitboxes were created, and no gameplay/runtime wiring occurred. Ambiguous labels such as eating/play-bow, muddy/sick, and sad/tired remain intentionally soft.
 
+## H5.22 Ember Pup Pose Cleanup Candidate Note
+
+H5.22 creates a derived transparent cleanup candidate for the 16 reviewed Ember Pup pose/state candidates.
+
+The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png`, with cleanup metadata in `manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` and evidence under `assets/academy/evidence/h5-22-ember-pup-pose-cleanup/`.
+
+The current product interpretation is that these are pose/state symbols, not enough coherent frames for approved runtime animation cycles. Cleanup remains draft-review; source PNGs remain untouched; the H5.18/H5.19 static props/icons cleanup candidate remains untouched; no animation timing, pivots, anchors, hitboxes, gameplay states, or runtime wiring were approved.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
