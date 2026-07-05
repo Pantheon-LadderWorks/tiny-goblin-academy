@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **Engine and Tooling Ladder Doctrine**: Added a future-facing doctrine note covering Phaser as training yard, third-party asset intake, CLI-first micro-UIs, Sticker Book as scene assembly, engine ladder thinking, and the canonical pose gate for future 3D assets.
+
 * **Scene Anchor Doctrine**: Added a future-facing note for scene anchors as background intelligence, including how future One-Room Platformer v0.2 work should combine background anchors, movement contracts, and Sticker Book authoring instead of tuning physics around every manual platform placement.
 
 * **H5.25 Pet Campfire Scene-Anchor Human Review**: Recorded human review of the H5.24 scene-anchor audit. The 14 anchors are accepted for draft planning, while generic ghost placement is explicitly rejected; future planning splits Ember Pup state-symbol placement from UI/prop/care-symbol placement.
