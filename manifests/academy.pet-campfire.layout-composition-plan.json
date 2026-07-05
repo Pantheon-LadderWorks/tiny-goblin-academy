@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "pet-campfire",
   "operationalType": "draft-layout-composition-plan",
   "sourceSceneAnchorManifest": "manifests/academy.pet-campfire.background.scene-anchors.json",
@@ -8,7 +8,7 @@
   "sourceUiPropCarePlacementGrammar": "manifests/academy.pet-campfire.ui-prop-care-placement-plan.json",
   "sourceEmberPupCleanupManifest": "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
   "sourceStaticPropsIconsCleanupManifest": "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "placementApproval": "none",
   "coordinatePolicy": "anchor-references-only-no-exact-runtime-coordinates",
@@ -806,6 +806,13 @@
     "Composition slots use named roles and scene-anchor IDs only.",
     "No exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring are approved.",
     "Accepted cleaned assets still require composition role, readability review, and human/product approval before runtime use.",
-    "The generic accepted-atlas dump pattern remains rejected."
-  ]
+    "The generic accepted-atlas dump pattern remains rejected.",
+    "H5.28 human review passed in H5.29.",
+    "Nine scenarios are accepted for future draft visual/layout planning.",
+    "Quest/status scenario remains secondary/deferred until gameplay needs it.",
+    "Composition slots are accepted as planning structure.",
+    "Preview truncation is acceptable because the manifest/report remain the source of truth.",
+    "No runtime placement, gameplay wiring, or animation approval occurred."
+  ],
+  "pipelineUse": "accepted-for-future-draft-layout-planning"
 }

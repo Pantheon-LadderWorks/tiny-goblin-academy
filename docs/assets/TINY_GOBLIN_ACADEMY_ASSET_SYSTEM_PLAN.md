@@ -173,6 +173,12 @@ H5.28 creates `manifests/academy.pet-campfire.layout-composition-plan.json` as a
 
 The plan connects reviewed scene anchors and reviewed placement grammars using anchor references and named slots only. It does not approve exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring.
 
+## H5.29 Pet Campfire Draft Layout Composition Human Review Note
+
+H5.29 records Kryssie's human/product review pass for the H5.28 draft layout composition plan.
+
+The nine campsite composition scenarios are accepted for future draft visual/layout planning as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-future-draft-layout-planning`. Pet Campfire asset prep is ready to pause/defer runtime integration while the remaining game asset sheets catch up. Runtime wiring remains deferred.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.
