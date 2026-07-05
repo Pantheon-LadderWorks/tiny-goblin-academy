@@ -233,6 +233,12 @@ H5.37 records Kryssie's human/product review pass for the H5.36 Card Goblin Duel
 
 The 32 cleaned card-frame regions are accepted for draft pipeline use as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`. Risk flags remain retained for disabled gray, glow/highlight frames, chains/locks, ornate open frames, and slot apertures. The card frames are now ready for future functional slot mapping, but runtime assets, card gameplay behavior, visual integration, and Card Goblin Duel wiring remain unapproved.
 
+## H5.38 Functional Surface Slot Mapping + Card Frame Pilot Note
+
+H5.38 introduces functional surface slot mapping as a reusable planning layer. Region mapping identifies an asset, cleanup prepares a visual candidate, and functional slot mapping defines where dynamic content may later belong inside the asset.
+
+The first pilot is `manifests/academy.card-goblin-duel.card-frames.functional-slots.json`, which maps 32 Card Goblin Duel card-frame functional surfaces and 122 draft slots using surface-relative percentages only. It also records a fit/overflow policy: future layout may scale a card or UI surface up within view/playfield budget, but H5.38 approves no runtime scaling, runtime UI, gameplay behavior, or Card Goblin Duel wiring. UI/HUD panels, dialogue panels, speech bubbles, buttons, progress bars, badges, and status panels should receive the same treatment later.
+
 ## Asset Pantry Doctrine
 
 * Generated asset sheets are source pantries, not mandatory usage contracts.

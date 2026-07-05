@@ -228,6 +228,7 @@ This means the cleaned candidate is acceptable for draft pipeline use, not autom
 Some lanes need planning after cleanup/mapping, before runtime:
 
 - scene anchors;
+- functional surface slot mapping;
 - placement grammar;
 - layout composition;
 - capability matrix;
@@ -241,6 +242,8 @@ Planning manifests should reference reviewed upstream assets and preserve:
 - no gameplay wiring;
 - no runtime placement data;
 - no animation approval unless that is the specific lane.
+
+Functional surface slot mapping defines where dynamic content belongs inside a reviewed asset surface, such as a card frame, HUD panel, dialogue panel, speech bubble, button, progress bar, badge, or status panel. Slots should use surface-relative percentages rather than global runtime coordinates. Slot manifests may include fit/overflow policy: scaling a surface instance up can be a future layout response when content needs more room, but scaling must remain bounded by view/playfield budget and is not runtime-approved unless a later integration lane approves it.
 
 ### 11. Runtime / Game Integration Gate
 
