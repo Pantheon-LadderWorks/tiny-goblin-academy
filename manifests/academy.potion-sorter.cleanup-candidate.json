@@ -3,49 +3,42 @@
   "status": "draft",
   "domain": "potion-sorter",
   "operationalType": "potion-sorter-cleanup-candidate",
-  "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-concept-v0.1.png",
+  "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
   "sourceRegionManifest": "manifests/academy.potion-sorter.regions.json",
-  "derivedSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-v0.1.png",
+  "derivedSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
   "sourceDimensions": {
-    "w": 1408,
-    "h": 768
+    "w": 1698,
+    "h": 926
   },
   "derivedDimensions": {
-    "w": 1408,
-    "h": 768
+    "w": 1698,
+    "h": 926
   },
   "transparency": {
-    "sourcePixelFormat": "RGBA",
-    "sourceHasAlpha": true,
-    "sourceAlphaExtrema": [
-      255,
-      255
-    ],
+    "sourcePixelFormat": "RGB",
+    "sourceHasAlpha": false,
+    "sourceAlphaExtrema": null,
     "derivedPixelFormat": "RGBA",
-    "cleanupFinding": "H5.48B regenerated cleanup removes visible baked checkerboard/background contamination with asset-type-specific transparency correction while preserving source PNG untouched and original 1408x768 layout."
+    "cleanupFinding": "H5.48C uses a Mega-regenerated RGB source that is visually cleaner than v0.1 but still has baked checkerboard; derived cleanup removes pale fake background from copied regions only."
   },
   "reviewStatus": "needs-human-review",
   "runtimeEligibility": "not-runtime-approved",
   "pipelineUse": "draft-cleanup-candidate-for-human-review",
-  "humanReviewFinding": {
-    "reviewId": "H5.48",
-    "decision": "correction-required",
-    "reasons": [
-      "Visible baked checkerboard/background contamination remained around and inside multiple assets.",
-      "Alchemy tray, sorting bin, and round-complete explanatory captions were included in H5.48 regions but are not part of the assets."
-    ]
+  "sourceRegeneration": {
+    "source": "C:\\Users\\kryst\\Downloads\\ChatGPT Image Jul 6, 2026, 04_07_45 PM.png",
+    "ingestedAs": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+    "finding": "Artwork looks intact and cleaner, but the file is RGB/opaque with fake checkerboard rather than true transparency."
   },
   "functionalSurfaceBoundary": {
     "functionalSurfaceCandidateCount": 6,
     "slotMappingIntroduced": false,
     "gameplaySortingLogicIntroduced": false,
-    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.48B does not perform functional slot mapping, define gameplay sorting logic, or wire runtime visuals."
+    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.48C does not perform functional slot mapping, define gameplay sorting logic, or wire runtime visuals."
   },
   "cleanupMethod": {
-    "summary": "H5.48B derived-only transparency correction with caption exclusion and asset-type-specific checker cleanup.",
-    "sourceRectPolicy": "Preserve reviewed H5.46/H5.47 sourceRects except for three H5.48B caption exclusions: alchemy tray, sorting bin, and round-complete chest.",
-    "backgroundRemovalPolicy": "Use conservative strict edge cleanup for solid surfaces, labels, badges, and functional candidates; use broadened neutral checker cleanup only for glow/smoke/spill/sparkle/fire-style problem regions; use strict interior cleanup only for empty glass/hourglass-style transparent-looking regions.",
-    "riskPolicy": "Glows, smoke, spills, liquid edges, glass edges, fire, sparkles, baked labels, and small badge details remain human-review risk areas."
+    "summary": "H5.48C derived-only cleanup from regenerated RGB v0.2 source with scaled region map and caption exclusions.",
+    "backgroundRemovalPolicy": "Remove pale fake checkerboard pixels connected to crop edges for all regions; remove remaining strict-pale checker flecks only for high-risk FX/glow/smoke/spill/fire/star regions and transparent glass/hourglass-style regions.",
+    "sourceRectPolicy": "Scale the prior H5.48B 32-region semantic map to the regenerated 1698x926 source dimensions; preserve caption exclusions for alchemy tray, sorting bin, and round-complete chest."
   },
   "captionExclusionCorrection": {
     "corrected": true,
@@ -54,7 +47,7 @@
       "potion-sorter.sorting-bin-labeled",
       "potion-sorter.round-complete-chest-labeled"
     ],
-    "note": "The explanatory sheet captions alchemy tray, sorting bin, and round-complete are excluded from corrected sourceRects and derived cleanup output."
+    "note": "The explanatory sheet captions alchemy tray, sorting bin, and round-complete are excluded from v0.2 sourceRects and derived cleanup output. H5.48C manually tightened round-complete to remove remaining caption debris."
   },
   "regions": [
     {
@@ -62,942 +55,908 @@
       "label": "Red round potion bottle",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 37,
-        "y": 24,
-        "w": 121,
-        "h": 158
+        "x": 45,
+        "y": 29,
+        "w": 146,
+        "h": 191
       },
       "derivedRect": {
-        "x": 37,
-        "y": 24,
-        "w": 121,
-        "h": 158
+        "x": 45,
+        "y": 29,
+        "w": 146,
+        "h": 191
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 10042,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 19118
+        "backgroundPixelsRemoved": 14481,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 27886
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 10042; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.blue-tall-vial",
       "label": "Blue tall vial",
       "category": "vial",
       "sourceRect": {
-        "x": 225,
-        "y": 24,
-        "w": 95,
-        "h": 158
+        "x": 271,
+        "y": 29,
+        "w": 115,
+        "h": 191
       },
       "derivedRect": {
-        "x": 225,
-        "y": 24,
-        "w": 95,
-        "h": 158
+        "x": 271,
+        "y": 29,
+        "w": 115,
+        "h": 191
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 9540,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 15010
+        "backgroundPixelsRemoved": 12643,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 21965
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 9540; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.green-round-potion-bottle",
       "label": "Green round potion bottle",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 386,
-        "y": 24,
-        "w": 118,
-        "h": 158
+        "x": 466,
+        "y": 29,
+        "w": 142,
+        "h": 191
       },
       "derivedRect": {
-        "x": 386,
-        "y": 24,
-        "w": 118,
-        "h": 158
+        "x": 466,
+        "y": 29,
+        "w": 142,
+        "h": 191
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 8633,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 18644
+        "backgroundPixelsRemoved": 14045,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 27122
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 8633; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.hourglass-potion-timer",
       "label": "Hourglass potion timer",
       "category": "sorter-token",
       "sourceRect": {
-        "x": 563,
-        "y": 24,
-        "w": 112,
-        "h": 160
+        "x": 679,
+        "y": 29,
+        "w": 135,
+        "h": 193
       },
       "derivedRect": {
-        "x": 563,
-        "y": 24,
-        "w": 112,
-        "h": 160
+        "x": 679,
+        "y": 29,
+        "w": 135,
+        "h": 193
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 7821,
-        "interiorCheckerPixelsRemoved": 15,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 17920
+        "backgroundPixelsRemoved": 11447,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 556,
+        "sourcePixelsInRegion": 26055
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal applied for empty glass/hourglass-style transparent-looking region. Checker/grid pixels made transparent in crop: 7821; strict interior removals: 15; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.purple-square-potion",
       "label": "Purple square potion bottle",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 733,
-        "y": 24,
-        "w": 120,
-        "h": 158
+        "x": 884,
+        "y": 29,
+        "w": 145,
+        "h": 191
       },
       "derivedRect": {
-        "x": 733,
-        "y": 24,
-        "w": 120,
-        "h": 158
+        "x": 884,
+        "y": 29,
+        "w": 145,
+        "h": 191
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 9387,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 18960
+        "backgroundPixelsRemoved": 12801,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 27695
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 9387; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.teal-flask",
       "label": "Teal flask",
       "category": "flask",
       "sourceRect": {
-        "x": 898,
-        "y": 24,
-        "w": 138,
-        "h": 154
+        "x": 1083,
+        "y": 29,
+        "w": 166,
+        "h": 186
       },
       "derivedRect": {
-        "x": 898,
-        "y": 24,
-        "w": 138,
-        "h": 154
+        "x": 1083,
+        "y": 29,
+        "w": 166,
+        "h": 186
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 12835,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 21252
+        "backgroundPixelsRemoved": 17398,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 30876
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 12835; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.broken-spilled-purple-potion",
       "label": "Broken spilled purple potion",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 1068,
-        "y": 28,
-        "w": 152,
-        "h": 155
+        "x": 1288,
+        "y": 34,
+        "w": 183,
+        "h": 187
       },
       "derivedRect": {
-        "x": 1068,
-        "y": 28,
-        "w": 152,
-        "h": 155
+        "x": 1288,
+        "y": 34,
+        "w": 183,
+        "h": 187
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 19587,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 75,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 23560
+        "backgroundPixelsRemoved": 20787,
+        "highRiskPaleFlecksRemoved": 530,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 34221
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 19587; strict interior removals: 0; broadened high-risk removals: 75."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.mystery-question-bottle",
       "label": "Mystery question bottle",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 1255,
-        "y": 24,
-        "w": 115,
-        "h": 160
+        "x": 1513,
+        "y": 29,
+        "w": 139,
+        "h": 193
       },
       "derivedRect": {
-        "x": 1255,
-        "y": 24,
-        "w": 115,
-        "h": 160
+        "x": 1513,
+        "y": 29,
+        "w": 139,
+        "h": 193
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 9533,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 18400
+        "backgroundPixelsRemoved": 12998,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 26827
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Baked symbol/text remains part of this icon for now; no text rendering approval. Checker/grid pixels made transparent in crop: 9533; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.glowing-green-potion",
       "label": "Glowing green potion",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 16,
-        "y": 190,
-        "w": 160,
-        "h": 190
+        "x": 19,
+        "y": 229,
+        "w": 193,
+        "h": 229
       },
       "derivedRect": {
-        "x": 16,
-        "y": 190,
-        "w": 160,
-        "h": 190
+        "x": 19,
+        "y": 229,
+        "w": 193,
+        "h": 229
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 17480,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 883,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 30400
+        "backgroundPixelsRemoved": 22509,
+        "highRiskPaleFlecksRemoved": 409,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 44197
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 17480; strict interior removals: 0; broadened high-risk removals: 883."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.bubbling-smoke-potion",
       "label": "Bubbling smoke potion",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 205,
-        "y": 190,
-        "w": 140,
-        "h": 190
+        "x": 247,
+        "y": 229,
+        "w": 169,
+        "h": 229
       },
       "derivedRect": {
-        "x": 205,
-        "y": 190,
-        "w": 140,
-        "h": 190
+        "x": 247,
+        "y": 229,
+        "w": 169,
+        "h": 229
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 16464,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 18,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 26600
+        "backgroundPixelsRemoved": 22095,
+        "highRiskPaleFlecksRemoved": 396,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 38701
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 16464; strict interior removals: 0; broadened high-risk removals: 18."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.empty-glass-bottle",
       "label": "Empty glass bottle",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 386,
-        "y": 220,
-        "w": 116,
-        "h": 150
+        "x": 466,
+        "y": 265,
+        "w": 140,
+        "h": 181
       },
       "derivedRect": {
-        "x": 386,
-        "y": 220,
-        "w": 116,
-        "h": 150
+        "x": 466,
+        "y": 265,
+        "w": 140,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 10384,
-        "interiorCheckerPixelsRemoved": 2,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 17400
+        "backgroundPixelsRemoved": 12947,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 634,
+        "sourcePixelsInRegion": 25340
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal applied for empty glass/hourglass-style transparent-looking region. Checker/grid pixels made transparent in crop: 10384; strict interior removals: 2; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.cork-stopper",
       "label": "Cork stopper",
       "category": "cork",
       "sourceRect": {
-        "x": 568,
-        "y": 236,
-        "w": 100,
-        "h": 105
+        "x": 685,
+        "y": 285,
+        "w": 121,
+        "h": 127
       },
       "derivedRect": {
-        "x": 568,
-        "y": 236,
-        "w": 100,
-        "h": 105
+        "x": 685,
+        "y": 285,
+        "w": 121,
+        "h": 127
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 5394,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 10500
+        "backgroundPixelsRemoved": 7797,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 15367
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 5394; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.spilled-green-flask",
       "label": "Spilled green flask",
       "category": "potion-liquid",
       "sourceRect": {
-        "x": 705,
-        "y": 210,
-        "w": 175,
-        "h": 150
+        "x": 850,
+        "y": 253,
+        "w": 211,
+        "h": 181
       },
       "derivedRect": {
-        "x": 705,
-        "y": 210,
-        "w": 175,
-        "h": 150
+        "x": 850,
+        "y": 253,
+        "w": 211,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 20601,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 230,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 26250
+        "backgroundPixelsRemoved": 24101,
+        "highRiskPaleFlecksRemoved": 330,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 38191
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 20601; strict interior removals: 0; broadened high-risk removals: 230."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.gold-sparkle-potion",
       "label": "Gold sparkle potion",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 895,
-        "y": 200,
-        "w": 150,
-        "h": 176
+        "x": 1079,
+        "y": 241,
+        "w": 181,
+        "h": 212
       },
       "derivedRect": {
-        "x": 895,
-        "y": 200,
-        "w": 150,
-        "h": 176
+        "x": 1079,
+        "y": 241,
+        "w": 181,
+        "h": 212
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 16433,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 144,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 26400
+        "backgroundPixelsRemoved": 19439,
+        "highRiskPaleFlecksRemoved": 465,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 38372
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 16433; strict interior removals: 0; broadened high-risk removals: 144."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.cracked-purple-potion",
       "label": "Cracked purple potion",
       "category": "potion-bottle",
       "sourceRect": {
-        "x": 1080,
-        "y": 205,
-        "w": 120,
-        "h": 165
+        "x": 1302,
+        "y": 247,
+        "w": 145,
+        "h": 199
       },
       "derivedRect": {
-        "x": 1080,
-        "y": 205,
-        "w": 120,
-        "h": 165
+        "x": 1302,
+        "y": 247,
+        "w": 145,
+        "h": 199
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 13965,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 130,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 19800
+        "backgroundPixelsRemoved": 15021,
+        "highRiskPaleFlecksRemoved": 673,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 28855
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 13965; strict interior removals: 0; broadened high-risk removals: 130."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.red-award-potion-medal",
       "label": "Red award potion medal",
       "category": "status-icon",
       "sourceRect": {
-        "x": 1250,
-        "y": 200,
-        "w": 125,
-        "h": 165
+        "x": 1507,
+        "y": 241,
+        "w": 151,
+        "h": 199
       },
       "derivedRect": {
-        "x": 1250,
-        "y": 200,
-        "w": 125,
-        "h": 165
+        "x": 1507,
+        "y": 241,
+        "w": 151,
+        "h": 199
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 11680,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 20625
+        "backgroundPixelsRemoved": 17171,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 30049
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Checker/grid pixels made transparent in crop: 11680; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.red-sorter-slot",
       "label": "Red sorter slot",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 20,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 24,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
       "derivedRect": {
-        "x": 20,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 24,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 4681,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 23250
+        "backgroundPixelsRemoved": 6901,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4681; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.blue-sorter-slot",
       "label": "Blue sorter slot",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 194,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 234,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
       "derivedRect": {
-        "x": 194,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 234,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 4746,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 23250
+        "backgroundPixelsRemoved": 6995,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4746; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.green-sorter-slot",
       "label": "Green sorter slot",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 367,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 443,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
       "derivedRect": {
-        "x": 367,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 443,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 4703,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 23250
+        "backgroundPixelsRemoved": 7172,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4703; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.wood-sorter-slot",
       "label": "Wood sorter slot",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 540,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 651,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
       "derivedRect": {
-        "x": 540,
-        "y": 400,
-        "w": 155,
-        "h": 150
+        "x": 651,
+        "y": 482,
+        "w": 187,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 4859,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 23250
+        "backgroundPixelsRemoved": 7189,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4859; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.potion-crate",
       "label": "Potion crate",
       "category": "background-prop",
       "sourceRect": {
-        "x": 710,
-        "y": 395,
-        "w": 165,
-        "h": 165
+        "x": 856,
+        "y": 476,
+        "w": 199,
+        "h": 199
       },
       "derivedRect": {
-        "x": 710,
-        "y": 395,
-        "w": 165,
-        "h": 165
+        "x": 856,
+        "y": 476,
+        "w": 199,
+        "h": 199
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 10140,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 27225
+        "backgroundPixelsRemoved": 14648,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 39601
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 10140; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.alchemy-tray-labeled",
       "label": "Alchemy tray",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 880,
-        "y": 400,
-        "w": 175,
-        "h": 140
+        "x": 1061,
+        "y": 482,
+        "w": 211,
+        "h": 169
       },
       "derivedRect": {
-        "x": 880,
-        "y": 400,
-        "w": 175,
-        "h": 140
+        "x": 1061,
+        "y": 482,
+        "w": 211,
+        "h": 169
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 10819,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 24500
+        "backgroundPixelsRemoved": 14874,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 35659
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Explanatory sheet caption excluded from corrected sourceRect/derivedRect in H5.48B. Checker/grid pixels made transparent in crop: 10819; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
     },
     {
       "id": "potion-sorter.sorting-bin-labeled",
       "label": "Sorting bin",
       "category": "sorter-slot",
       "sourceRect": {
-        "x": 1055,
-        "y": 405,
-        "w": 175,
-        "h": 130
+        "x": 1272,
+        "y": 488,
+        "w": 211,
+        "h": 157
       },
       "derivedRect": {
-        "x": 1055,
-        "y": 405,
-        "w": 175,
-        "h": 130
+        "x": 1272,
+        "y": 488,
+        "w": 211,
+        "h": 157
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
-        "checkerPixelsRemoved": 6994,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 22750
+        "backgroundPixelsRemoved": 10169,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33127
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Explanatory sheet caption excluded from corrected sourceRect/derivedRect in H5.48B. Checker/grid pixels made transparent in crop: 6994; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
     },
     {
       "id": "potion-sorter.round-complete-chest-labeled",
       "label": "Round-complete chest",
       "category": "status-icon",
       "sourceRect": {
-        "x": 1230,
-        "y": 400,
-        "w": 170,
-        "h": 150
+        "x": 1483,
+        "y": 482,
+        "w": 205,
+        "h": 160
       },
       "derivedRect": {
-        "x": 1230,
-        "y": 400,
-        "w": 170,
-        "h": 150
+        "x": 1483,
+        "y": 482,
+        "w": 205,
+        "h": 160
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 10375,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 25500
+        "backgroundPixelsRemoved": 11282,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 32800
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Explanatory sheet caption excluded from corrected sourceRect/derivedRect in H5.48B. Checker/grid pixels made transparent in crop: 10375; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
     },
     {
       "id": "potion-sorter.success-check-sparkle",
       "label": "Success check sparkle",
       "category": "status-icon",
       "sourceRect": {
-        "x": 25,
-        "y": 590,
-        "w": 145,
-        "h": 150
+        "x": 30,
+        "y": 711,
+        "w": 175,
+        "h": 181
       },
       "derivedRect": {
-        "x": 25,
-        "y": 590,
-        "w": 145,
-        "h": 150
+        "x": 30,
+        "y": 711,
+        "w": 175,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 13091,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 255,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 21750
+        "backgroundPixelsRemoved": 18514,
+        "highRiskPaleFlecksRemoved": 37,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 31675
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 13091; strict interior removals: 0; broadened high-risk removals: 255."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.failure-x-smoke",
       "label": "Failure X smoke",
       "category": "status-icon",
       "sourceRect": {
-        "x": 205,
-        "y": 590,
-        "w": 150,
-        "h": 150
+        "x": 247,
+        "y": 711,
+        "w": 181,
+        "h": 181
       },
       "derivedRect": {
-        "x": 205,
-        "y": 590,
-        "w": 150,
-        "h": 150
+        "x": 247,
+        "y": 711,
+        "w": 181,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 14410,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 219,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 22500
+        "backgroundPixelsRemoved": 18131,
+        "highRiskPaleFlecksRemoved": 273,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 32761
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 14410; strict interior removals: 0; broadened high-risk removals: 219."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.blue-fire-icon",
       "label": "Blue fire icon",
       "category": "fx-icon",
       "sourceRect": {
-        "x": 382,
-        "y": 590,
-        "w": 125,
-        "h": 155
+        "x": 461,
+        "y": 711,
+        "w": 151,
+        "h": 187
       },
       "derivedRect": {
-        "x": 382,
-        "y": 590,
-        "w": 125,
-        "h": 155
+        "x": 461,
+        "y": 711,
+        "w": 151,
+        "h": 187
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 11582,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 283,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 19375
+        "backgroundPixelsRemoved": 16622,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 28237
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Checker/grid pixels made transparent in crop: 11582; strict interior removals: 0; broadened high-risk removals: 283."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.small-hourglass-icon",
       "label": "Small hourglass icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 560,
-        "y": 590,
-        "w": 115,
-        "h": 160
+        "x": 675,
+        "y": 711,
+        "w": 139,
+        "h": 193
       },
       "derivedRect": {
-        "x": 560,
-        "y": 590,
-        "w": 115,
-        "h": 160
+        "x": 675,
+        "y": 711,
+        "w": 139,
+        "h": 193
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 7539,
-        "interiorCheckerPixelsRemoved": 753,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 18400
+        "backgroundPixelsRemoved": 9938,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 1583,
+        "sourcePixelsInRegion": 26827
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal applied for empty glass/hourglass-style transparent-looking region. Checker/grid pixels made transparent in crop: 7539; strict interior removals: 753; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.potion-coin-token",
       "label": "Potion coin token",
       "category": "ui-token",
       "sourceRect": {
-        "x": 715,
-        "y": 590,
-        "w": 155,
-        "h": 150
+        "x": 862,
+        "y": 711,
+        "w": 187,
+        "h": 181
       },
       "derivedRect": {
-        "x": 715,
-        "y": 590,
-        "w": 155,
-        "h": 150
+        "x": 862,
+        "y": 711,
+        "w": 187,
+        "h": 181
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 9569,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 23250
+        "backgroundPixelsRemoved": 14557,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Checker/grid pixels made transparent in crop: 9569; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.star-x3-reward",
       "label": "Star x3 reward",
       "category": "ui-token",
       "sourceRect": {
-        "x": 890,
-        "y": 590,
-        "w": 160,
-        "h": 155
+        "x": 1073,
+        "y": 711,
+        "w": 193,
+        "h": 187
       },
       "derivedRect": {
-        "x": 890,
-        "y": 590,
-        "w": 160,
-        "h": 155
+        "x": 1073,
+        "y": 711,
+        "w": 193,
+        "h": 187
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 14473,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 190,
-        "broadEdgeCleanupApplied": true,
-        "sourcePixelsInRegion": 24800
+        "backgroundPixelsRemoved": 20982,
+        "highRiskPaleFlecksRemoved": 188,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 36091
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Broader neutral checker cleanup applied because this is a glow/smoke/spill/sparkle/fire-style problem region. Baked symbol/text remains part of this icon for now; no text rendering approval. Checker/grid pixels made transparent in crop: 14473; strict interior removals: 0; broadened high-risk removals: 190."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.gold-potion-badge",
       "label": "Gold potion badge",
       "category": "status-icon",
       "sourceRect": {
-        "x": 1075,
-        "y": 590,
-        "w": 140,
-        "h": 160
+        "x": 1296,
+        "y": 711,
+        "w": 169,
+        "h": 193
       },
       "derivedRect": {
-        "x": 1075,
-        "y": 590,
-        "w": 140,
-        "h": 160
+        "x": 1296,
+        "y": 711,
+        "w": 169,
+        "h": 193
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "medium-high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 11689,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 22400
+        "backgroundPixelsRemoved": 16725,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 32617
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Checker/grid pixels made transparent in crop: 11689; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     },
     {
       "id": "potion-sorter.cracked-potion-fail-badge",
       "label": "Cracked potion fail badge",
       "category": "status-icon",
       "sourceRect": {
-        "x": 1245,
-        "y": 590,
-        "w": 140,
-        "h": 160
+        "x": 1501,
+        "y": 711,
+        "w": 169,
+        "h": 193
       },
       "derivedRect": {
-        "x": 1245,
-        "y": 590,
-        "w": 140,
-        "h": 160
+        "x": 1501,
+        "y": 711,
+        "w": 169,
+        "h": 193
       },
-      "cleanupStatus": "draft-cleanup-candidate-regenerated-h5-48b",
+      "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
-        "checkerPixelsRemoved": 11313,
-        "interiorCheckerPixelsRemoved": 0,
-        "highRiskBroadNeutralPixelsRemoved": 0,
-        "broadEdgeCleanupApplied": false,
-        "sourcePixelsInRegion": 22400
+        "backgroundPixelsRemoved": 16798,
+        "highRiskPaleFlecksRemoved": 0,
+        "interiorPaleCheckerPixelsRemoved": 0,
+        "sourcePixelsInRegion": 32617
       },
-      "notes": "H5.48B regenerated derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review remains required for glow/smoke/sparkle/fire/spill/liquid/text-like details. Checker/grid pixels made transparent in crop: 11313; strict interior removals: 0; broadened high-risk removals: 0."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
     }
   ],
   "riskSummary": {
-    "high": 11,
     "medium": 11,
+    "high": 11,
     "medium-high": 10
   },
   "reviewNotes": [
-    "H5.48B corrects the H5.48 cleanup candidate after human review found visible checkerboard/background contamination.",
-    "Source PNG remains untouched.",
-    "Original 1408x768 layout is preserved in the derived sheet.",
-    "Alchemy tray, sorting bin, and round-complete explanatory captions are excluded from corrected regions.",
+    "H5.48C ingests a Mega-regenerated Potion Sorter source as v0.2 because the v0.1 fake checkerboard source remained annoying for cleanup.",
+    "The regenerated source is visually cleaner but still RGB/opaque with baked checkerboard, so derived cleanup remains required.",
+    "Source v0.1 remains preserved; v0.2 is added as a new source artifact.",
     "Cleanup candidate remains draft / needs-human-review / not-runtime-approved.",
-    "Functional-surface candidate flags remain planning metadata only.",
     "No functional slot mapping, gameplay sorting logic, runtime placement approval, or Potion Sorter wiring is approved."
   ]
 }

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.48C Potion Sorter Regenerated Source Cleanup Candidate**: Ingested Mega's regenerated Potion Sorter sheet as a new v0.2 source artifact, confirmed it is visually cleaner but still RGB/opaque fake transparency, remapped the 32 Potion Sorter regions to the 1698x926 source, regenerated the derived cleanup candidate and evidence, preserved caption exclusions, and kept the lane draft / needs-human-review / not-runtime-approved with no functional slot mapping or runtime wiring.
+
 * **H5.48B Potion Sorter Cleanup Transparency Correction**: Regenerated the Potion Sorter cleanup candidate after human review found visible baked checkerboard/background contamination in H5.48. Corrected the alchemy tray, sorting bin, and round-complete regions to exclude explanatory captions, preserved the 32-region count and 1408x768 derived layout, regenerated cleanup evidence, and kept the candidate draft / needs-human-review / not-runtime-approved with no functional slot mapping or runtime wiring.
 
 * **H5.48 Potion Sorter Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 H5.47-reviewed Potion Sorter regions. Preserved the original 1408x768 layout, retained 6 functional-surface candidate flags as planning metadata only, generated cleanup evidence, and kept functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring deferred.
@@ -194,6 +196,14 @@ All notable changes to this project will be documented in this file.
 - Preserved the source PNG untouched, the original 1408x768 derived layout, and the 32-region count.
 - Regenerated the H5.48 cleanup evidence and kept the candidate draft / needs-human-review / not-runtime-approved.
 - Functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
+
+## H5.48C - Potion Sorter Regenerated Source Cleanup Candidate
+
+- Ingested Mega's regenerated Potion Sorter image as `tga-potion-sorter-sheet-regenerated-v0.2.png`.
+- Confirmed the regenerated source is visually cleaner but still RGB/opaque with fake checkerboard, not true alpha.
+- Remapped the prior 32-region Potion Sorter semantic map to the 1698x926 v0.2 source and preserved the caption exclusions.
+- Regenerated the derived cleanup candidate and H5.48C evidence.
+- Kept the mapping and cleanup candidate draft / needs-human-review / not-runtime-approved; no functional slot mapping, gameplay sorting logic, or runtime wiring occurred.
 
 ## H5.45 - Card Goblin Duel UI/Tokens Cleanup Human Review
 

@@ -157,8 +157,10 @@ This pass does not:
 Recommended next lane:
 
 ```text
-H5.49 — Potion Sorter Cleanup Human Review + Promotion
+H5.48C — Potion Sorter Regenerated Source Cleanup Candidate
 ```
+
+Note: H5.48C supersedes H5.48B as the active Potion Sorter cleanup candidate by ingesting Mega's regenerated v0.2 source sheet and regenerating the draft cleanup candidate from that source. H5.48B remains useful correction history for the original v0.1 source lane.
 
 Tiny correction law:
 

@@ -585,6 +585,12 @@ H5.48B corrected the Potion Sorter cleanup candidate after human review found th
 
 The correction also updated the alchemy tray, sorting bin, and round-complete sourceRects to exclude explanatory sheet captions from the asset cleanup output. The cleanup candidate remains draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
 
+## H5.48C Potion Sorter Regenerated Source Cleanup Candidate Note
+
+H5.48C ingested Mega's regenerated Potion Sorter sheet as `assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png`. The regenerated source is visually cleaner than the original v0.1 checkerboard source, but it is still RGB/opaque fake transparency rather than true alpha.
+
+The prior 32-region Potion Sorter semantic map was scaled to the 1698x926 v0.2 source, with the alchemy tray, sorting bin, and round-complete caption exclusions preserved. A new derived cleanup candidate was generated at `assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png`. The mapping and cleanup candidate remain draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
+
 ## H5.45 Card Goblin Duel UI/Tokens Cleanup Human Review Note
 
 H5.45 accepted the H5.44 Card Goblin Duel UI/tokens cleanup candidate for draft pipeline use. The reviewed cleanup candidate preserves 48 cleaned UI/token regions and 18 functional-surface candidate metadata flags. Risk flags remain as review history. Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred.
