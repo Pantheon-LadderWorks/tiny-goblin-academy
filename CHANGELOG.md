@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.46 Potion Sorter Region Mapping**: Created a draft region manifest and evidence set for the Potion Sorter source sheet. Mapped 32 draft-review regions across potion bottles, sorter slots, props, and status/reward icons; marked 6 sorter/tray surfaces as possible future functional-surface candidates; confirmed the RGBA source is fully opaque fake transparency; no cleanup or runtime wiring occurred.
+
 * **H5.44 Card Goblin Duel UI/Tokens Cleanup Candidate**: Created a derived transparent cleanup candidate for the 48 H5.43-reviewed Card Goblin Duel UI/tokens regions. Preserved the original 1024x1024 layout, retained 18 functional-surface candidate flags as planning metadata only, generated cleanup evidence, and kept runtime UI, functional slot mapping, text rendering, gameplay, and Card Goblin Duel wiring deferred.
 
 * **H5.38 Functional Surface Slot Mapping + Card Frame Pilot**: Introduced functional surface slot mapping as the layer between cleaned assets and future runtime UI. Added a Card Goblin Duel card-frame pilot manifest with relative slots, evidence, and fit/overflow notes; UI/HUD surfaces are registered as future targets, and no runtime UI/game wiring occurred.
@@ -163,6 +165,14 @@ All notable changes to this project will be documented in this file.
 - Used strict-neutral edge-connected checker/grid removal after visual inspection caught and corrected an over-cleaned clock/time badge.
 - Preserved 18 functional-surface candidate flags as planning metadata only.
 - Generated cleanup evidence and kept functional slot mapping, text rendering, runtime UI, gameplay behavior, and Card Goblin Duel wiring deferred.
+
+## H5.46 - Potion Sorter Region Mapping
+
+- Created the Potion Sorter draft region manifest from `assets/academy/games/potion-sorter/tga-potion-sorter-sheet-concept-v0.1.png`.
+- Confirmed the source is `1408x768` RGBA with fully opaque alpha, meaning the checkerboard is baked/fake transparency.
+- Mapped 32 draft-review regions and marked 6 sorter/tray surfaces as possible future functional-surface candidates.
+- Generated bbox overlay, numbered contact sheet, region table preview, and source inspection evidence.
+- Cleanup, gameplay sorting logic, functional slot mapping, runtime visuals, and game wiring remain deferred.
 
 ## H5.45 - Card Goblin Duel UI/Tokens Cleanup Human Review
 
