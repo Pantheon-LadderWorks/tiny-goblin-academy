@@ -218,3 +218,12 @@ All notable changes to this project will be documented in this file.
 - Human review passed for 32 visible regions and 6 provisional functional-surface candidates.
 - Baked label/text-bearing regions and glow/smoke/spill/liquid/fire/sparkle/glass/label edges retain cleanup-risk notes.
 - Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred.
+
+## H5.49 - Potion Sorter Regenerated Cleanup Human Review With Exclusions
+
+- Accepted the H5.48C regenerated Potion Sorter cleanup candidate for draft pipeline use with explicit region exclusions.
+- Accepted cleaned regions: 30.
+- Denied cleaned regions: 2.
+- Denied region indexes: 9 and 14.
+- Denied regions: potion-sorter.glowing-green-potion and potion-sorter.gold-sparkle-potion.
+- Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.

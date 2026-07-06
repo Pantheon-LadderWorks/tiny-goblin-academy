@@ -576,7 +576,11 @@
     "Glow, smoke, spill, liquid, fire, sparkle, glass, and label edges remain cleanup-risk areas.",
     "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred.",
     "H5.48B corrected alchemy tray, sorting bin, and round-complete chest regions to exclude explanatory sheet captions from sourceRects.",
-    "H5.48C remapped the prior 32-region Potion Sorter semantic map onto a regenerated RGB v0.2 source sheet. The new mapping needs human review before promotion."
+    "H5.48C remapped the prior 32-region Potion Sorter semantic map onto a regenerated RGB v0.2 source sheet. The new mapping needs human review before promotion.",
+    "H5.49 accepted the H5.48C regenerated cleanup candidate with explicit exclusions.",
+    "Regions 9 and 14 from the regenerated cleanup candidate are denied for use.",
+    "Denied cleanup region IDs: potion-sorter.glowing-green-potion, potion-sorter.gold-sparkle-potion.",
+    "Denied regions remain preserved in source/manifest/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring."
   ],
   "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "humanReview": {
@@ -614,5 +618,22 @@
       "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
       "reviewStatus": "needs-human-review"
     }
-  ]
+  ],
+  "regeneratedCleanupExclusions": {
+    "sourceCleanupManifest": "manifests/academy.potion-sorter.cleanup-candidate.json",
+    "decision": "explicit-region-denials",
+    "deniedRegionIndexes": [
+      9,
+      14
+    ],
+    "deniedRegionIds": [
+      "potion-sorter.glowing-green-potion",
+      "potion-sorter.gold-sparkle-potion"
+    ],
+    "deniedRegionLabels": [
+      "Glowing green potion",
+      "Gold sparkle potion"
+    ],
+    "policy": "Do not remove mapping regions; exclusions apply to the regenerated cleanup candidate use path."
+  }
 }

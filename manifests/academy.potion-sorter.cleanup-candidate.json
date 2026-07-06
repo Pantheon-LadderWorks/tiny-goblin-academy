@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "potion-sorter",
   "operationalType": "potion-sorter-cleanup-candidate",
   "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
@@ -21,9 +21,9 @@
     "derivedPixelFormat": "RGBA",
     "cleanupFinding": "H5.48C uses a Mega-regenerated RGB source that is visually cleaner than v0.1 but still has baked checkerboard; derived cleanup removes pale fake background from copied regions only."
   },
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed-with-exclusions",
   "runtimeEligibility": "not-runtime-approved",
-  "pipelineUse": "draft-cleanup-candidate-for-human-review",
+  "pipelineUse": "accepted-for-draft-pipeline-use-with-region-exclusions",
   "sourceRegeneration": {
     "source": "C:\\Users\\kryst\\Downloads\\ChatGPT Image Jul 6, 2026, 04_07_45 PM.png",
     "ingestedAs": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
@@ -33,7 +33,7 @@
     "functionalSurfaceCandidateCount": 6,
     "slotMappingIntroduced": false,
     "gameplaySortingLogicIntroduced": false,
-    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.48C does not perform functional slot mapping, define gameplay sorting logic, or wire runtime visuals."
+    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.48C does not perform functional slot mapping, define gameplay sorting logic, or wire runtime visuals. H5.49 preserves functional-surface metadata only; denied regions are excluded from future slot planning."
   },
   "cleanupMethod": {
     "summary": "H5.48C derived-only cleanup from regenerated RGB v0.2 source with scaled region map and caption exclusions.",
@@ -76,7 +76,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 27886
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-tall-vial",
@@ -104,7 +105,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 21965
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.green-round-potion-bottle",
@@ -132,7 +134,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 27122
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.hourglass-potion-timer",
@@ -160,7 +163,8 @@
         "interiorPaleCheckerPixelsRemoved": 556,
         "sourcePixelsInRegion": 26055
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.purple-square-potion",
@@ -188,7 +192,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 27695
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.teal-flask",
@@ -216,7 +221,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 30876
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.broken-spilled-purple-potion",
@@ -244,7 +250,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 34221
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.mystery-question-bottle",
@@ -272,7 +279,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 26827
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.glowing-green-potion",
@@ -292,7 +300,7 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-denied",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "backgroundPixelsRemoved": 22509,
@@ -300,7 +308,11 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 44197
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. H5.49 denial: this asset remains in source/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "usage": "do-not-use",
+      "denialReason": "Human review explicitly denied this regenerated cleanup region for draft pipeline use in H5.49."
     },
     {
       "id": "potion-sorter.bubbling-smoke-potion",
@@ -328,7 +340,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 38701
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.empty-glass-bottle",
@@ -356,7 +369,8 @@
         "interiorPaleCheckerPixelsRemoved": 634,
         "sourcePixelsInRegion": 25340
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.cork-stopper",
@@ -384,7 +398,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 15367
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.spilled-green-flask",
@@ -412,7 +427,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 38191
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.gold-sparkle-potion",
@@ -432,7 +448,7 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-regenerated-source-h5-48c",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-denied",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "backgroundPixelsRemoved": 19439,
@@ -440,7 +456,11 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 38372
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. H5.49 denial: this asset remains in source/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "usage": "do-not-use",
+      "denialReason": "Human review explicitly denied this regenerated cleanup region for draft pipeline use in H5.49."
     },
     {
       "id": "potion-sorter.cracked-purple-potion",
@@ -468,7 +488,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 28855
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.red-award-potion-medal",
@@ -496,7 +517,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 30049
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.red-sorter-slot",
@@ -524,7 +546,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-sorter-slot",
@@ -552,7 +575,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.green-sorter-slot",
@@ -580,7 +604,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.wood-sorter-slot",
@@ -608,7 +633,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.potion-crate",
@@ -636,7 +662,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 39601
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.alchemy-tray-labeled",
@@ -664,7 +691,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 35659
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.sorting-bin-labeled",
@@ -692,7 +720,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33127
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.round-complete-chest-labeled",
@@ -720,7 +749,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 32800
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic. Explanatory caption excluded from sourceRect/derivedRect.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.success-check-sparkle",
@@ -748,7 +778,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 31675
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.failure-x-smoke",
@@ -776,7 +807,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 32761
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-fire-icon",
@@ -804,7 +836,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 28237
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.small-hourglass-icon",
@@ -832,7 +865,8 @@
         "interiorPaleCheckerPixelsRemoved": 1583,
         "sourcePixelsInRegion": 26827
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.potion-coin-token",
@@ -860,7 +894,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 33847
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.star-x3-reward",
@@ -888,7 +923,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 36091
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.gold-potion-badge",
@@ -916,7 +952,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 32617
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.cracked-potion-fail-badge",
@@ -944,7 +981,8 @@
         "interiorPaleCheckerPixelsRemoved": 0,
         "sourcePixelsInRegion": 32617
       },
-      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic."
+      "notes": "H5.48C cleanup candidate from regenerated RGB v0.2 source. Source is still fake-checkerboard RGB, but cleaner than v0.1. Draft review only; no runtime approval, no functional slot mapping, no gameplay sorting logic.",
+      "runtimeEligibility": "not-runtime-approved"
     }
   ],
   "riskSummary": {
@@ -957,6 +995,50 @@
     "The regenerated source is visually cleaner but still RGB/opaque with baked checkerboard, so derived cleanup remains required.",
     "Source v0.1 remains preserved; v0.2 is added as a new source artifact.",
     "Cleanup candidate remains draft / needs-human-review / not-runtime-approved.",
-    "No functional slot mapping, gameplay sorting logic, runtime placement approval, or Potion Sorter wiring is approved."
-  ]
+    "No functional slot mapping, gameplay sorting logic, runtime placement approval, or Potion Sorter wiring is approved.",
+    "H5.48C human review passed with explicit region exclusions in H5.49.",
+    "Regenerated Potion Sorter cleanup candidate accepted for draft pipeline use with regions 9 and 14 denied.",
+    "30 cleaned regions accepted for draft pipeline use.",
+    "Regions 9 and 14 are hard denied for draft pipeline use, runtime use, functional-slot planning, gameplay sorting logic, and Potion Sorter wiring.",
+    "Denied regions remain preserved as source/manifest/evidence history only.",
+    "Functional slot mapping, runtime UI/visual wiring, gameplay sorting logic, and text rendering remain deferred."
+  ],
+  "humanReviewExclusions": {
+    "decision": "explicit-region-denials",
+    "deniedRegionIndexes": [
+      9,
+      14
+    ],
+    "deniedRegionIds": [
+      "potion-sorter.glowing-green-potion",
+      "potion-sorter.gold-sparkle-potion"
+    ],
+    "deniedRegionLabels": [
+      "Glowing green potion",
+      "Gold sparkle potion"
+    ],
+    "reason": "Human review accepted the regenerated cleanup candidate overall, but explicitly denied use of regions 9 and 14 because their regenerated/cleaned appearance is not acceptable for draft pipeline use.",
+    "policy": "Denied regions must remain preserved as source/manifest history but must not be selected for draft asset use, runtime use, functional-slot planning, or gameplay wiring."
+  },
+  "humanReview": {
+    "reviewId": "H5.49",
+    "decision": "passed-with-explicit-region-exclusions",
+    "reviewedCommit": "260d397 docs: add potion sorter regenerated cleanup candidate",
+    "acceptedFor": "draft-pipeline-use-with-region-exclusions",
+    "acceptedRegionCount": 30,
+    "deniedRegionCount": 2,
+    "deniedRegionIndexes": [
+      9,
+      14
+    ],
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.48C human review passed with explicit region exclusions in H5.49.",
+      "Regenerated Potion Sorter cleanup candidate accepted for draft pipeline use with regions 9 and 14 denied.",
+      "30 cleaned regions accepted for draft pipeline use.",
+      "Regions 9 and 14 are hard denied for draft pipeline use, runtime use, functional-slot planning, gameplay sorting logic, and Potion Sorter wiring.",
+      "Denied regions remain preserved as source/manifest/evidence history only.",
+      "Functional slot mapping, runtime UI/visual wiring, gameplay sorting logic, and text rendering remain deferred."
+    ]
+  }
 }

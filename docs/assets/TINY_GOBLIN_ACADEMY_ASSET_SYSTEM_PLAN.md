@@ -598,3 +598,7 @@ H5.45 accepted the H5.44 Card Goblin Duel UI/tokens cleanup candidate for draft 
 ## H5.47 Potion Sorter Region Human Review Note
 
 H5.47 accepted the H5.46 Potion Sorter region mapping for draft cleanup and planning use. The reviewed map contains 32 visible regions and 6 provisional functional-surface candidates. Baked labels/text-bearing surfaces and glow, smoke, spill, liquid, fire, sparkle, glass, and label edges retain cleanup-risk notes. Cleanup, functional slot mapping, gameplay sorting logic, and Potion Sorter runtime wiring remain deferred.
+
+## H5.49 Potion Sorter Regenerated Cleanup Human Review With Exclusions
+
+H5.49 accepted the H5.48C regenerated Potion Sorter cleanup candidate for draft pipeline use with explicit exclusions. The candidate contains 32 cleanup regions: 30 accepted and 2 denied. Denied indexes 9 and 14 resolve to potion-sorter.glowing-green-potion and potion-sorter.gold-sparkle-potion. Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.
