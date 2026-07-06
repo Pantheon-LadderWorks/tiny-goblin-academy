@@ -180,3 +180,10 @@ All notable changes to this project will be documented in this file.
 - Human review passed for 48 cleaned UI/token regions and 18 functional-surface candidate metadata flags.
 - Risk flags remain as review history, including strict-neutral cleanup and clock/time badge over-clean correction notes.
 - Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred.
+
+## H5.47 - Potion Sorter Region Human Review
+
+- Accepted the H5.46 Potion Sorter region mapping for draft cleanup/planning use.
+- Human review passed for 32 visible regions and 6 provisional functional-surface candidates.
+- Baked label/text-bearing regions and glow/smoke/spill/liquid/fire/sparkle/glass/label edges retain cleanup-risk notes.
+- Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred.

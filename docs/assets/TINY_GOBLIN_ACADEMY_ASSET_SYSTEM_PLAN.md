@@ -576,3 +576,7 @@ The pass mapped 32 draft-review regions across potion bottles, vial/flask shapes
 ## H5.45 Card Goblin Duel UI/Tokens Cleanup Human Review Note
 
 H5.45 accepted the H5.44 Card Goblin Duel UI/tokens cleanup candidate for draft pipeline use. The reviewed cleanup candidate preserves 48 cleaned UI/token regions and 18 functional-surface candidate metadata flags. Risk flags remain as review history. Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred.
+
+## H5.47 Potion Sorter Region Human Review Note
+
+H5.47 accepted the H5.46 Potion Sorter region mapping for draft cleanup and planning use. The reviewed map contains 32 visible regions and 6 provisional functional-surface candidates. Baked labels/text-bearing surfaces and glow, smoke, spill, liquid, fire, sparkle, glass, and label edges retain cleanup-risk notes. Cleanup, functional slot mapping, gameplay sorting logic, and Potion Sorter runtime wiring remain deferred.

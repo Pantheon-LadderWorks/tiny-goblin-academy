@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "potion-sorter",
   "operationalType": "potion-sorter-region-manifest",
   "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-concept-v0.1.png",
@@ -18,7 +18,7 @@
     "finding": "Source is RGBA but fully opaque; checkerboard-style background is baked/fake transparency and must not be treated as real alpha."
   },
   "layoutClassification": "mixed-potion-props-icons-sorter-surfaces-sheet",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "regions": [
     {
@@ -35,7 +35,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Red liquid bottle; glass highlights and liquid edge are cleanup-risk details. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Red liquid bottle; glass highlights and liquid edge are cleanup-risk details. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-tall-vial",
@@ -51,7 +52,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Tall blue vial; thin neck/glass edges need cleanup review. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Tall blue vial; thin neck/glass edges need cleanup review. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.green-round-potion-bottle",
@@ -67,7 +69,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Green potion with bubbles/highlights; liquid edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Green potion with bubbles/highlights; liquid edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.hourglass-potion-timer",
@@ -83,7 +86,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Hourglass/time token; sand/glass edges should be preserved. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Hourglass/time token; sand/glass edges should be preserved. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.purple-square-potion",
@@ -99,7 +103,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Square purple potion; cork and liquid facets need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Square purple potion; cork and liquid facets need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.teal-flask",
@@ -115,7 +120,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Triangular teal flask; long glass silhouette and liquid edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Triangular teal flask; long glass silhouette and liquid edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.broken-spilled-purple-potion",
@@ -131,7 +137,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Broken/spilled potion; shard edges and spill are high cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Broken/spilled potion; shard edges and spill are high cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.mystery-question-bottle",
@@ -147,7 +154,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Question-mark bottle; baked symbol/text-like mark preserved for now. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium."
+      "notes": "Question-mark bottle; baked symbol/text-like mark preserved for now. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.glowing-green-potion",
@@ -163,7 +171,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Glowing green potion; yellow aura is high cleanup-risk and should not be over-cut. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Glowing green potion; yellow aura is high cleanup-risk and should not be over-cut. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.bubbling-smoke-potion",
@@ -179,7 +188,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Potion with purple smoke/bubbles; smoke and bubbles are high cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Potion with purple smoke/bubbles; smoke and bubbles are high cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.empty-glass-bottle",
@@ -195,7 +205,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Empty bottle with pale glass fill; checkerboard visible through concept art, cleanup needs care. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Empty bottle with pale glass fill; checkerboard visible through concept art, cleanup needs care. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.cork-stopper",
@@ -211,7 +222,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Standalone cork/stem stopper; small prop. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Standalone cork/stem stopper; small prop. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.spilled-green-flask",
@@ -227,7 +239,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Spilled green liquid/flask; puddle edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Spilled green liquid/flask; puddle edge cleanup risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.gold-sparkle-potion",
@@ -243,7 +256,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Sparkling gold potion; star/sparkle details high cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Sparkling gold potion; star/sparkle details high cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.cracked-purple-potion",
@@ -259,7 +273,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Cracked/shaking purple potion; motion marks and crack lines should be preserved. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Cracked/shaking purple potion; motion marks and crack lines should be preserved. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.red-award-potion-medal",
@@ -275,7 +290,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Potion medal/status icon; ribbon and badge edges need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high."
+      "notes": "Potion medal/status icon; ribbon and badge edges need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.red-sorter-slot",
@@ -291,7 +307,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Red sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high."
+      "notes": "Red sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-sorter-slot",
@@ -307,7 +324,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Blue sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high."
+      "notes": "Blue sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.green-sorter-slot",
@@ -323,7 +341,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Green sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high."
+      "notes": "Green sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.wood-sorter-slot",
@@ -339,7 +358,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Wood sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high."
+      "notes": "Wood sorting slot / tray surface; possible future functional surface candidate. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.potion-crate",
@@ -355,7 +375,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Crate with potion/scroll clutter; grouped prop because contents are visually inseparable. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Crate with potion/scroll clutter; grouped prop because contents are visually inseparable. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.alchemy-tray-labeled",
@@ -371,7 +392,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Alchemy tray includes baked text label; text-bearing functional-surface candidate for later review only. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high."
+      "notes": "Alchemy tray includes baked text label; text-bearing functional-surface candidate for later review only. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.sorting-bin-labeled",
@@ -387,7 +409,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Sorting bin includes baked text label; possible functional surface, text-bearing risk. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high."
+      "notes": "Sorting bin includes baked text label; possible functional surface, text-bearing risk. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.round-complete-chest-labeled",
@@ -403,7 +426,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Treasure chest with baked round-complete label; text-bearing reward/status asset. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high."
+      "notes": "Treasure chest with baked round-complete label; text-bearing reward/status asset. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.success-check-sparkle",
@@ -419,7 +443,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Success check with sparkle; small sparkle edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Success check with sparkle; small sparkle edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.failure-x-smoke",
@@ -435,7 +460,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Failure X with smoke puffs; smoke and shards cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Failure X with smoke puffs; smoke and shards cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.blue-fire-icon",
@@ -451,7 +477,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Fire/flame icon; flame edge cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Fire/flame icon; flame edge cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.small-hourglass-icon",
@@ -467,7 +494,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Small hourglass status icon; thin supports/glass edges need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high."
+      "notes": "Small hourglass status icon; thin supports/glass edges need review. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.potion-coin-token",
@@ -483,7 +511,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Round coin/token with potion symbol; possible reward/resource marker. Draft region mapping only; not runtime-approved. Cleanup risk: medium."
+      "notes": "Round coin/token with potion symbol; possible reward/resource marker. Draft region mapping only; not runtime-approved. Cleanup risk: medium.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.star-x3-reward",
@@ -499,7 +528,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Star x3 reward includes baked multiplier text; text-bearing reward token. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: high."
+      "notes": "Star x3 reward includes baked multiplier text; text-bearing reward token. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.gold-potion-badge",
@@ -515,7 +545,8 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Gold badge/ribbon with potion mark; badge edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high."
+      "notes": "Gold badge/ribbon with potion mark; badge edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: medium-high.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.cracked-potion-fail-badge",
@@ -531,13 +562,40 @@
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Red cracked potion badge/ribbon; crack and ribbon edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high."
+      "notes": "Red cracked potion badge/ribbon; crack and ribbon edges cleanup-risk. Draft region mapping only; not runtime-approved. Cleanup risk: high.",
+      "runtimeEligibility": "not-runtime-approved"
     }
   ],
   "reviewNotes": [
     "H5.46 maps Potion Sorter source-sheet regions for draft review only.",
     "No cleanup, derived assets, gameplay sorting logic, functional slot mapping, or runtime wiring was performed.",
     "Sorter slots and labeled tray/bin surfaces are marked as possible future functional-surface candidates only.",
-    "Glows, smoke, spills, sparkles, fire, liquid edges, glass edges, and baked text labels are cleanup-risk areas."
-  ]
+    "Glows, smoke, spills, sparkles, fire, liquid edges, glass edges, and baked text labels are cleanup-risk areas.",
+    "H5.46 human review passed in H5.47.",
+    "32 Potion Sorter regions accepted for draft cleanup/planning use.",
+    "No region correction pass needed.",
+    "6 functional-surface candidates remain provisional planning metadata only.",
+    "Baked label/text-bearing regions remain cleanup/review risks.",
+    "Glow, smoke, spill, liquid, fire, sparkle, glass, and label edges remain cleanup-risk areas.",
+    "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred."
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "humanReview": {
+    "reviewId": "H5.47",
+    "decision": "passed",
+    "reviewedCommit": "e2399f2 docs: map potion sorter regions",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 32,
+    "functionalSurfaceCandidates": 6,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.46 human review passed in H5.47.",
+      "32 Potion Sorter regions accepted for draft cleanup/planning use.",
+      "No region correction pass needed.",
+      "6 functional-surface candidates remain provisional planning metadata only.",
+      "Baked label/text-bearing regions remain cleanup/review risks.",
+      "Glow, smoke, spill, liquid, fire, sparkle, glass, and label edges remain cleanup-risk areas.",
+      "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred."
+    ]
+  }
 }
