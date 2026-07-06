@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.44 Card Goblin Duel UI/Tokens Cleanup Candidate**: Created a derived transparent cleanup candidate for the 48 H5.43-reviewed Card Goblin Duel UI/tokens regions. Preserved the original 1024x1024 layout, retained 18 functional-surface candidate flags as planning metadata only, generated cleanup evidence, and kept runtime UI, functional slot mapping, text rendering, gameplay, and Card Goblin Duel wiring deferred.
+
 * **H5.38 Functional Surface Slot Mapping + Card Frame Pilot**: Introduced functional surface slot mapping as the layer between cleaned assets and future runtime UI. Added a Card Goblin Duel card-frame pilot manifest with relative slots, evidence, and fit/overflow notes; UI/HUD surfaces are registered as future targets, and no runtime UI/game wiring occurred.
 
 * **H5.37 Card Goblin Duel Card Frames Cleanup Human Review**: Recorded human review pass for the H5.36 Card Goblin Duel card-frame cleanup candidate and accepted the 32 cleaned regions for draft pipeline use. Risk flags remain retained for disabled gray, glow/highlight, chains/locks, ornate open frames, and slot apertures; runtime wiring remains deferred.
@@ -153,3 +155,11 @@ All notable changes to this project will be documented in this file.
 - Human review passed for 48 corrected regions and 18 provisional functional-surface candidates.
 - Row 2 128x192 protective review bounds accepted.
 - Cleanup, functional slot mapping, runtime UI, and gameplay wiring remain deferred.
+
+## H5.44 - Card Goblin Duel UI/Tokens Cleanup Candidate
+
+- Created a derived transparent cleanup candidate for the 48 H5.43-reviewed Card Goblin Duel UI/tokens regions.
+- Preserved the original 1024x1024 sheet layout and H5.42/H5.43 sourceRects, including row 2 128x192 protective review bounds.
+- Used strict-neutral edge-connected checker/grid removal after visual inspection caught and corrected an over-cleaned clock/time badge.
+- Preserved 18 functional-surface candidate flags as planning metadata only.
+- Generated cleanup evidence and kept functional slot mapping, text rendering, runtime UI, gameplay behavior, and Card Goblin Duel wiring deferred.

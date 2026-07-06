@@ -560,3 +560,9 @@ After visual inspection, H5.42 sourceRects and evidence were repaired again with
 ## H5.43 Card Goblin Duel UI/Tokens Region Human Review Note
 
 H5.43 accepted the repaired H5.42 Card Goblin Duel UI/tokens region mapping for draft cleanup and planning use. The reviewed map contains 48 corrected regions and 18 provisional functional-surface candidates. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
+
+## H5.44 Card Goblin Duel UI/Tokens Cleanup Candidate Note
+
+H5.44 created a derived transparent cleanup candidate for the 48 H5.43-reviewed Card Goblin Duel UI/tokens regions. The derived sheet preserves the original 1024x1024 layout and H5.42/H5.43 sourceRects, including row 2 128x192 protective review bounds.
+
+The cleanup uses strict-neutral edge-connected checker/grid removal. A first evidence inspection caught an over-cleaned clock/time badge, so the cleanup key was tightened before commit to preserve desaturated UI surfaces. The cleanup candidate remains draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, text rendering, runtime UI, gameplay behavior, and Card Goblin Duel wiring remain deferred.
