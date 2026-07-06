@@ -44,7 +44,11 @@ H5.42 used the same source sheet:
 
 The corrected manifest uses source-relative visible bounds for individual assets. Paired assets were split unless they appeared to be a single intentional cluster, such as the star cluster.
 
-After visual inspection, the corrected sourceRects were repaired with a cell-clamped 10px safety pad. This keeps the 48 individual asset split while avoiding clipped glows, ornaments, dividers, and multi-part icons such as the star cluster.
+After visual inspection, the corrected sourceRects were repaired again with conservative cell-clamped safety padding. This keeps the 48 individual asset split while giving glows, ornaments, dividers, effects, and multi-part icons cleanup/review breathing room instead of tight crop boxes.
+
+After a second human visual note, visual row 2 / regions 9-16 were widened to 128x192 cell-spacer review bounds so the bottoms of those sprites are not clipped. This was a focused padding repair only; the corrected 48-region split did not change.
+
+This padding is intentionally protective evidence padding, not runtime crop approval.
 
 No source pixels were modified.
 
@@ -59,7 +63,7 @@ Results:
 - H5.41 draft region count: 32
 - H5.42 corrected region count: 48
 - Blank/no-asset regions removed: 16
-- SourceRect repair: cell-clamped 10px padding applied after visual inspection
+- SourceRect repair: conservative cell-clamped safety padding applied after visual inspection, with visual row 2 / regions 9-16 widened to 128x192 cell-spacer review bounds after follow-up review
 - Status: draft
 - Review status: needs-human-review
 - Runtime eligibility: not-runtime-approved

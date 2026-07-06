@@ -143,5 +143,6 @@ All notable changes to this project will be documented in this file.
 - Split broad paired-cell regions into individual visible assets.
 - Removed blank/no-asset regions from the UI/tokens manifest.
 - Corrected manifest now maps 48 draft-review regions.
-- Repaired sourceRects/evidence with cell-clamped padding so glows, dividers, ornaments, and multi-part icons are not clipped.
+- Repaired sourceRects/evidence again with conservative cell-clamped safety padding so glows, dividers, ornaments, effects, and multi-part icons have cleanup/review breathing room instead of tight crop boxes.
+- Applied a focused follow-up repair to visual row 2 / regions 9-16, widening those review bounds to 128x192 cell-spacer boxes after human review flagged that row's bottoms as still clipped.
 - Cleanup, functional slot mapping, runtime UI, text rendering, and gameplay wiring remain deferred.

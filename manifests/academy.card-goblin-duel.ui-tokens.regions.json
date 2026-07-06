@@ -23,7 +23,9 @@
     "correctedRegionCount": 48,
     "removedBlankRegionCount": 16,
     "splitSummary": "Top visual rows and broad paired-cell regions were split into individual visible assets. Blank/no-asset grid areas were removed.",
-    "sourceRectRepair": "Post-review H5.42 repair: sourceRects expanded with a cell-clamped 10px safety pad to avoid clipped glows, ornaments, and multi-part icons while preserving the 48 individual asset split."
+    "sourceRectRepair": "Post-review H5.42 repair: sourceRects expanded with a cell-clamped 10px safety pad to avoid clipped glows, ornaments, and multi-part icons while preserving the 48 individual asset split.",
+    "sourceRectRepairV2": "Applied a second visual repair pass with conservative cell-clamped safety padding. Effects, glows, laurels, sparkles, and dividers use near-full-cell safety boxes; other assets get larger breathing room while preserving one region per visible asset cell.",
+    "sourceRectRepairV3": "Applied a focused third visual repair pass to visual row 2 (regions 9-16), widening those eight sourceRects to 128x192 cell-spacer review bounds after human review noted the bottoms were still clipped."
   },
   "regions": [
     {
@@ -31,585 +33,585 @@
       "label": "Sword icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 12,
-        "y": 13,
-        "w": 90,
-        "h": 111
+        "x": 2,
+        "y": 2,
+        "w": 120,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-icon",
       "label": "Shield icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 143,
-        "y": 13,
-        "w": 98,
-        "h": 109
+        "x": 130,
+        "y": 2,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-plus-icon",
       "label": "Heart plus icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 266,
-        "y": 15,
-        "w": 100,
-        "h": 97
+        "x": 258,
+        "y": 2,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.projectile-star-effect",
       "label": "Projectile star effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 396,
-        "y": 14,
-        "w": 98,
-        "h": 106
+        "x": 386,
+        "y": 2,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.club-weapon-icon",
       "label": "Club weapon icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 523,
-        "y": 13,
-        "w": 95,
-        "h": 109
+        "x": 514,
+        "y": 2,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.star-cluster-effect",
       "label": "Star cluster effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 647,
-        "y": 12,
-        "w": 108,
-        "h": 99
+        "x": 642,
+        "y": 2,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-card-marker",
       "label": "Green card marker",
       "category": "card-ui-marker",
       "sourceRect": {
-        "x": 786,
-        "y": 16,
-        "w": 74,
-        "h": 100
+        "x": 770,
+        "y": 2,
+        "w": 110,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-card-marker",
       "label": "Red card marker",
       "category": "card-ui-marker",
       "sourceRect": {
-        "x": 916,
-        "y": 17,
-        "w": 74,
-        "h": 100
+        "x": 898,
+        "y": 2,
+        "w": 112,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-icon",
       "label": "Heart icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 10,
-        "y": 153,
-        "w": 104,
-        "h": 103
+        "x": 0,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-defense-badge",
       "label": "Shield defense badge",
       "category": "badge",
       "sourceRect": {
-        "x": 135,
-        "y": 147,
-        "w": 115,
-        "h": 103
+        "x": 128,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.lightning-energy-badge",
       "label": "Lightning energy badge",
       "category": "badge",
       "sourceRect": {
-        "x": 264,
-        "y": 141,
-        "w": 109,
-        "h": 109
+        "x": 256,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.clock-time-badge",
       "label": "Clock time badge",
       "category": "badge",
       "sourceRect": {
-        "x": 387,
-        "y": 141,
-        "w": 111,
-        "h": 111
+        "x": 384,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-block-marker",
       "label": "Shield block marker",
       "category": "card-ui-marker",
       "sourceRect": {
-        "x": 526,
-        "y": 141,
-        "w": 111,
-        "h": 111
+        "x": 512,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.poison-slime-status-icon",
       "label": "Poison slime status icon",
       "category": "status-icon",
       "sourceRect": {
-        "x": 653,
-        "y": 144,
-        "w": 100,
-        "h": 110
+        "x": 640,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.exclamation-marker",
       "label": "Exclamation marker",
       "category": "status-icon",
       "sourceRect": {
-        "x": 779,
-        "y": 141,
-        "w": 111,
-        "h": 111
+        "x": 768,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.trophy-laurel-badge",
       "label": "Trophy laurel badge",
       "category": "badge",
       "sourceRect": {
-        "x": 902,
-        "y": 133,
-        "w": 121,
-        "h": 123
+        "x": 896,
+        "y": 128,
+        "w": 128,
+        "h": 192
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-portrait-token",
       "label": "Goblin portrait token",
       "category": "token",
       "sourceRect": {
-        "x": 6,
-        "y": 394,
-        "w": 112,
-        "h": 112
+        "x": 2,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-face-token",
       "label": "Goblin face token",
       "category": "token",
       "sourceRect": {
-        "x": 137,
-        "y": 394,
-        "w": 112,
-        "h": 112
+        "x": 130,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.active-turn-marker",
       "label": "Active turn marker",
       "category": "text-bearing-ui",
       "sourceRect": {
-        "x": 257,
-        "y": 384,
-        "w": 121,
-        "h": 117
+        "x": 258,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.target-reticle",
       "label": "Target reticle",
       "category": "status-icon",
       "sourceRect": {
-        "x": 390,
-        "y": 387,
-        "w": 108,
-        "h": 108
+        "x": 386,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.sword-round-token",
       "label": "Sword round token",
       "category": "token",
       "sourceRect": {
-        "x": 520,
-        "y": 390,
-        "w": 108,
-        "h": 108
+        "x": 514,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-round-token",
       "label": "Shield round token",
       "category": "token",
       "sourceRect": {
-        "x": 648,
-        "y": 390,
-        "w": 108,
-        "h": 108
+        "x": 642,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-coin-token",
       "label": "Crown coin token",
       "category": "token",
       "sourceRect": {
-        "x": 776,
-        "y": 387,
-        "w": 112,
-        "h": 112
+        "x": 770,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-laurel-badge",
       "label": "Crown laurel badge",
       "category": "badge",
       "sourceRect": {
-        "x": 901,
-        "y": 384,
-        "w": 123,
-        "h": 121
+        "x": 898,
+        "y": 386,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.explosion-effect",
       "label": "Explosion effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 0,
-        "y": 648,
-        "w": 123,
-        "h": 112
+        "x": 2,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-burst-effect",
       "label": "Shield burst effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 134,
-        "y": 640,
-        "w": 115,
-        "h": 123
+        "x": 130,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.glowing-heart-effect",
       "label": "Glowing heart effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 263,
-        "y": 643,
-        "w": 112,
-        "h": 115
+        "x": 258,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.swirl-effect",
       "label": "Swirl effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 390,
-        "y": 645,
-        "w": 112,
-        "h": 112
+        "x": 386,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.sparkle-effect",
       "label": "Sparkle effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 523,
-        "y": 643,
-        "w": 110,
-        "h": 112
+        "x": 514,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.smoke-cloud-effect",
       "label": "Smoke cloud effect",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 647,
-        "y": 649,
-        "w": 112,
-        "h": 102
+        "x": 642,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-warning-triangle",
       "label": "Red warning triangle",
       "category": "status-icon",
       "sourceRect": {
-        "x": 779,
-        "y": 647,
-        "w": 110,
-        "h": 106
+        "x": 770,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.gold-sparkle-burst",
       "label": "Gold sparkle burst",
       "category": "effect-icon",
       "sourceRect": {
-        "x": 910,
-        "y": 644,
-        "w": 111,
-        "h": 111
+        "x": 898,
+        "y": 642,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-round-button-surface",
       "label": "Blank round button surface",
       "category": "button",
       "sourceRect": {
-        "x": 11,
-        "y": 776,
-        "w": 104,
-        "h": 104
+        "x": 2,
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-hex-badge-surface",
       "label": "Blank hex badge surface",
       "category": "badge",
       "sourceRect": {
-        "x": 144,
-        "y": 776,
-        "w": 96,
-        "h": 98
+        "x": 130,
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-label-plaque",
       "label": "Blank label plaque",
       "category": "label-surface",
       "sourceRect": {
-        "x": 260,
-        "y": 780,
-        "w": 120,
-        "h": 77
+        "x": 258,
+        "y": 770,
+        "w": 124,
+        "h": 105
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-button",
       "label": "Green check button",
       "category": "button",
       "sourceRect": {
-        "x": 390,
+        "x": 386,
         "y": 770,
-        "w": 112,
-        "h": 112
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-x-button",
       "label": "Red X button",
       "category": "button",
       "sourceRect": {
-        "x": 519,
-        "y": 772,
-        "w": 112,
-        "h": 112
+        "x": 514,
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.yellow-warning-button",
       "label": "Yellow warning button",
       "category": "button",
       "sourceRect": {
-        "x": 647,
-        "y": 775,
-        "w": 110,
-        "h": 106
+        "x": 642,
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-marker-bubble",
       "label": "Green check marker bubble",
       "category": "icon-button",
       "sourceRect": {
-        "x": 780,
-        "y": 772,
-        "w": 110,
-        "h": 110
+        "x": 770,
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-divider-ornament",
@@ -617,119 +619,119 @@
       "category": "divider",
       "sourceRect": {
         "x": 898,
-        "y": 798,
-        "w": 120,
-        "h": 50
+        "y": 770,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-round-token",
       "label": "Wood round token",
       "category": "token",
       "sourceRect": {
-        "x": 10,
-        "y": 905,
-        "w": 106,
-        "h": 106
+        "x": 2,
+        "y": 898,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-hex-token",
       "label": "Wood hex token",
       "category": "token",
       "sourceRect": {
-        "x": 144,
-        "y": 903,
-        "w": 98,
-        "h": 98
+        "x": 130,
+        "y": 898,
+        "w": 124,
+        "h": 123
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-label-panel",
       "label": "Wood label panel",
       "category": "label-surface",
       "sourceRect": {
-        "x": 260,
-        "y": 910,
-        "w": 120,
-        "h": 78
+        "x": 258,
+        "y": 898,
+        "w": 124,
+        "h": 108
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-check-button",
       "label": "Cream check button",
       "category": "button",
       "sourceRect": {
-        "x": 390,
+        "x": 386,
         "y": 898,
-        "w": 111,
-        "h": 111
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-x-button",
       "label": "Brown X button",
       "category": "button",
       "sourceRect": {
-        "x": 519,
-        "y": 902,
-        "w": 110,
-        "h": 110
+        "x": 514,
+        "y": 898,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-warning-button",
       "label": "Cream warning button",
       "category": "button",
       "sourceRect": {
-        "x": 647,
-        "y": 903,
-        "w": 108,
-        "h": 108
+        "x": 642,
+        "y": 898,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-check-marker-bubble",
       "label": "Brown check marker bubble",
       "category": "icon-button",
       "sourceRect": {
-        "x": 780,
-        "y": 902,
-        "w": 106,
-        "h": 106
+        "x": 770,
+        "y": 898,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-divider-ornament",
@@ -737,14 +739,14 @@
       "category": "divider",
       "sourceRect": {
         "x": 898,
-        "y": 925,
-        "w": 120,
-        "h": 52
+        "y": 898,
+        "w": 124,
+        "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
     }
   ],
   "reviewNotes": [
@@ -752,7 +754,9 @@
     "Distinct paired icons are now represented as individual asset regions where visually separable.",
     "Blank/no-asset rows and cells are not represented as asset regions.",
     "Padded sourceRect repair applied after visual inspection so edge glows, ornaments, and multi-part icons are not clipped.",
+    "A second visual repair pass applied conservative safety padding so region boxes protect cleanup/review instead of hugging too tightly.",
     "Functional-surface candidate flags remain provisional.",
-    "No cleanup, functional slot mapping, runtime UI, text rendering, gameplay, or Card Goblin Duel wiring is approved."
+    "No cleanup, functional slot mapping, runtime UI, text rendering, gameplay, or Card Goblin Duel wiring is approved.",
+    "Focused row-2 padding repair: visual row 2 regions 9-16 were widened to 128x192 cell-spacer review bounds after human review noted their bottoms were still clipped. This remains protective cleanup/review evidence padding, not runtime crop approval."
   ]
 }
