@@ -380,53 +380,53 @@
     },
     {
       "id": "potion-sorter.alchemy-tray-labeled",
-      "label": "Alchemy tray with baked label",
+      "label": "Alchemy tray",
       "category": "sorter-slot",
       "sourceRect": {
         "x": 880,
         "y": 400,
         "w": 175,
-        "h": 190
+        "h": 140
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Alchemy tray includes baked text label; text-bearing functional-surface candidate for later review only. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "notes": "Alchemy tray includes baked text label; text-bearing functional-surface candidate for later review only. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high. Corrected in H5.48B to exclude explanatory sheet caption text below the tray.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.sorting-bin-labeled",
-      "label": "Sorting bin with baked label",
+      "label": "Sorting bin",
       "category": "sorter-slot",
       "sourceRect": {
         "x": 1055,
         "y": 405,
         "w": 175,
-        "h": 170
+        "h": 130
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
       "cleanupRisk": "medium-high",
-      "notes": "Sorting bin includes baked text label; possible functional surface, text-bearing risk. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "notes": "Sorting bin includes baked text label; possible functional surface, text-bearing risk. Draft region mapping only; not runtime-approved. Possible future functional-surface candidate; no functional slot mapping performed. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high. Corrected in H5.48B to exclude explanatory sheet caption text below the bin.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "potion-sorter.round-complete-chest-labeled",
-      "label": "Round-complete chest with baked label",
+      "label": "Round-complete chest",
       "category": "status-icon",
       "sourceRect": {
         "x": 1230,
         "y": 400,
         "w": 170,
-        "h": 185
+        "h": 150
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Treasure chest with baked round-complete label; text-bearing reward/status asset. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high.",
+      "notes": "Treasure chest with baked round-complete label; text-bearing reward/status asset. Draft region mapping only; not runtime-approved. Text-bearing or symbol-bearing concept asset; baked text/symbol preserved in mapping notes only. Cleanup risk: medium-high. Corrected in H5.48B to exclude explanatory sheet caption text below the chest.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -577,7 +577,8 @@
     "6 functional-surface candidates remain provisional planning metadata only.",
     "Baked label/text-bearing regions remain cleanup/review risks.",
     "Glow, smoke, spill, liquid, fire, sparkle, glass, and label edges remain cleanup-risk areas.",
-    "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred."
+    "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred.",
+    "H5.48B corrected alchemy tray, sorting bin, and round-complete chest regions to exclude explanatory sheet captions from sourceRects."
   ],
   "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "humanReview": {
@@ -597,5 +598,17 @@
       "Glow, smoke, spill, liquid, fire, sparkle, glass, and label edges remain cleanup-risk areas.",
       "Cleanup, functional slot mapping, gameplay sorting logic, and runtime wiring remain deferred."
     ]
-  }
+  },
+  "correctionHistory": [
+    {
+      "correctionId": "H5.48B",
+      "purpose": "Exclude explanatory sheet captions from three Potion Sorter asset regions before regenerating cleanup candidate.",
+      "correctedRegions": [
+        "potion-sorter.alchemy-tray-labeled",
+        "potion-sorter.sorting-bin-labeled",
+        "potion-sorter.round-complete-chest-labeled"
+      ],
+      "runtimeBoundary": "not-runtime-approved"
+    }
+  ]
 }

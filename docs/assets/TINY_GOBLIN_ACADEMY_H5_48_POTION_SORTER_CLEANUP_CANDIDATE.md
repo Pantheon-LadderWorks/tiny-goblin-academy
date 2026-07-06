@@ -6,6 +6,18 @@ H5.48 creates a derived transparent cleanup candidate for the reviewed Potion So
 
 H5.48 creates a derived transparent cleanup candidate for the reviewed Potion Sorter regions. The cleaned candidate remains draft-review only and is not runtime-approved. Functional-surface candidate flags remain planning metadata only; H5.48 does not perform functional slot mapping, define gameplay sorting logic, approve runtime placement, or wire Potion Sorter visuals into runtime.
 
+## Correction Status
+
+Human review found that the first H5.48 derived candidate retained visible baked checkerboard/background contamination and included explanatory captions under three bottom-row assets.
+
+H5.48 should not be treated as a passed cleanup candidate by itself. It is superseded by the H5.48B correction report:
+
+```text
+docs/assets/TINY_GOBLIN_ACADEMY_H5_48B_POTION_SORTER_CLEANUP_TRANSPARENCY_CORRECTION.md
+```
+
+The corrected candidate remains draft / needs-human-review / not-runtime-approved.
+
 ## 2. Source Inputs
 
 Source sheet:
@@ -172,7 +184,7 @@ Human review should check:
 Recommended next lane:
 
 ```text
-H5.49 — Potion Sorter Cleanup Human Review + Promotion
+H5.48B — Potion Sorter Cleanup Transparency Correction
 ```
 
 Tiny cleanup law:

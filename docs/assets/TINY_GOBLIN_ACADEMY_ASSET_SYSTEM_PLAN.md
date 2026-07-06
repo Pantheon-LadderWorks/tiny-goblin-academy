@@ -579,6 +579,12 @@ H5.48 created a derived transparent cleanup candidate for the 32 H5.47-reviewed 
 
 The cleanup removes baked checkerboard/fake transparency from derived copies only. Glass/liquid/potion-style regions allow interior checker cleanup, while high-risk glow, smoke, spill, sparkle, fire, and label-bearing regions retain risk flags for human review. The cleanup candidate remains draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
 
+## H5.48B Potion Sorter Cleanup Transparency Correction Note
+
+H5.48B corrected the Potion Sorter cleanup candidate after human review found that the first H5.48 derived sheet still retained visible baked checkerboard/background contamination. The correction regenerated the derived cleanup candidate and evidence while preserving the source PNG untouched, preserving the original 1408x768 derived layout, and keeping the region count at 32.
+
+The correction also updated the alchemy tray, sorting bin, and round-complete sourceRects to exclude explanatory sheet captions from the asset cleanup output. The cleanup candidate remains draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
+
 ## H5.45 Card Goblin Duel UI/Tokens Cleanup Human Review Note
 
 H5.45 accepted the H5.44 Card Goblin Duel UI/tokens cleanup candidate for draft pipeline use. The reviewed cleanup candidate preserves 48 cleaned UI/token regions and 18 functional-surface candidate metadata flags. Risk flags remain as review history. Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred.
