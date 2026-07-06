@@ -143,4 +143,5 @@ All notable changes to this project will be documented in this file.
 - Split broad paired-cell regions into individual visible assets.
 - Removed blank/no-asset regions from the UI/tokens manifest.
 - Corrected manifest now maps 48 draft-review regions.
+- Repaired sourceRects/evidence with cell-clamped padding so glows, dividers, ornaments, and multi-part icons are not clipped.
 - Cleanup, functional slot mapping, runtime UI, text rendering, and gameplay wiring remain deferred.

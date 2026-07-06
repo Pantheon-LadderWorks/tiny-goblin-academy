@@ -549,8 +549,10 @@ H5.40 accepted the corrected H5.39 Card Goblin Duel card-frame functional slot m
 
 ## H5.41 Card Goblin Duel UI/Tokens Region Mapping Note
 
-H5.41 created the draft Card Goblin Duel UI/tokens region manifest from ssets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png. The pass mapped 32 draft-review regions and marked likely future functional-surface candidates. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
+H5.41 created the draft Card Goblin Duel UI/tokens region manifest from `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png`. The pass mapped 32 draft-review regions and marked likely future functional-surface candidates. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
 
 ## H5.42 Card Goblin Duel UI/Tokens Region Correction Note
 
 H5.42 corrected the H5.41 Card Goblin Duel UI/tokens draft region mapping. Broad paired-cell regions were split into individual visible assets, blank/no-asset regions were removed, and the corrected manifest now maps 48 draft-review regions. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
+
+After visual inspection, H5.42 sourceRects and evidence were repaired with cell-clamped padding so glows, dividers, ornaments, and multi-part icons are not clipped. The region count remains 48 and the manifest remains draft / needs-human-review / not-runtime-approved.

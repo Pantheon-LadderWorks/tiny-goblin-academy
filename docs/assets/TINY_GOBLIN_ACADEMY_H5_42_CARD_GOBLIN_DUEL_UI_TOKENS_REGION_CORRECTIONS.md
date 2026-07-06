@@ -44,6 +44,8 @@ H5.42 used the same source sheet:
 
 The corrected manifest uses source-relative visible bounds for individual assets. Paired assets were split unless they appeared to be a single intentional cluster, such as the star cluster.
 
+After visual inspection, the corrected sourceRects were repaired with a cell-clamped 10px safety pad. This keeps the 48 individual asset split while avoiding clipped glows, ornaments, dividers, and multi-part icons such as the star cluster.
+
 No source pixels were modified.
 
 ## 6. Corrected Region Results
@@ -57,6 +59,7 @@ Results:
 - H5.41 draft region count: 32
 - H5.42 corrected region count: 48
 - Blank/no-asset regions removed: 16
+- SourceRect repair: cell-clamped 10px padding applied after visual inspection
 - Status: draft
 - Review status: needs-human-review
 - Runtime eligibility: not-runtime-approved
