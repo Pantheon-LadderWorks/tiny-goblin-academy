@@ -146,3 +146,10 @@ All notable changes to this project will be documented in this file.
 - Repaired sourceRects/evidence again with conservative cell-clamped safety padding so glows, dividers, ornaments, effects, and multi-part icons have cleanup/review breathing room instead of tight crop boxes.
 - Applied a focused follow-up repair to visual row 2 / regions 9-16, widening those review bounds to 128x192 cell-spacer boxes after human review flagged that row's bottoms as still clipped.
 - Cleanup, functional slot mapping, runtime UI, text rendering, and gameplay wiring remain deferred.
+
+## H5.43 - Card Goblin Duel UI/Tokens Region Human Review
+
+- Accepted the repaired H5.42 Card Goblin Duel UI/tokens region mapping for draft cleanup/planning use.
+- Human review passed for 48 corrected regions and 18 provisional functional-surface candidates.
+- Row 2 128x192 protective review bounds accepted.
+- Cleanup, functional slot mapping, runtime UI, and gameplay wiring remain deferred.

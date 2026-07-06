@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "ui-token-region-manifest",
   "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
@@ -14,7 +14,7 @@
     "finding": "Source is RGB/opaque. Checkerboard-style background appears baked into the concept sheet; cleanup/transparency extraction remains deferred."
   },
   "layoutClassification": "corrected-visible-asset-region-map-mixed-ui-token-sheet",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "correctionSummary": {
     "sourcePass": "H5.41 Card Goblin Duel UI/Tokens Region Mapping",
@@ -41,7 +41,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-icon",
@@ -56,7 +57,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-plus-icon",
@@ -71,7 +73,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.projectile-star-effect",
@@ -86,7 +89,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.club-weapon-icon",
@@ -101,7 +105,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.star-cluster-effect",
@@ -116,7 +121,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-card-marker",
@@ -131,7 +137,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-card-marker",
@@ -146,7 +153,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-icon",
@@ -161,7 +169,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-defense-badge",
@@ -176,7 +185,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.lightning-energy-badge",
@@ -191,7 +201,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.clock-time-badge",
@@ -206,7 +217,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-block-marker",
@@ -221,7 +233,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.poison-slime-status-icon",
@@ -236,7 +249,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.exclamation-marker",
@@ -251,7 +265,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.trophy-laurel-badge",
@@ -266,7 +281,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-portrait-token",
@@ -281,7 +297,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-face-token",
@@ -296,7 +313,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.active-turn-marker",
@@ -311,7 +329,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.target-reticle",
@@ -326,7 +345,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.sword-round-token",
@@ -341,7 +361,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-round-token",
@@ -356,7 +377,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-coin-token",
@@ -371,7 +393,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-laurel-badge",
@@ -386,7 +409,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.explosion-effect",
@@ -401,7 +425,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-burst-effect",
@@ -416,7 +441,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.glowing-heart-effect",
@@ -431,7 +457,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.swirl-effect",
@@ -446,7 +473,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.sparkle-effect",
@@ -461,7 +489,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.smoke-cloud-effect",
@@ -476,7 +505,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-warning-triangle",
@@ -491,7 +521,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.gold-sparkle-burst",
@@ -506,7 +537,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-round-button-surface",
@@ -521,7 +553,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-hex-badge-surface",
@@ -536,7 +569,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-label-plaque",
@@ -551,7 +585,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-button",
@@ -566,7 +601,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-x-button",
@@ -581,7 +617,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.yellow-warning-button",
@@ -596,7 +633,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-marker-bubble",
@@ -611,7 +649,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-divider-ornament",
@@ -626,7 +665,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-round-token",
@@ -641,7 +681,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-hex-token",
@@ -656,7 +697,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-label-panel",
@@ -671,7 +713,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-check-button",
@@ -686,7 +729,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-x-button",
@@ -701,7 +745,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-warning-button",
@@ -716,7 +761,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-check-marker-bubble",
@@ -731,7 +777,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": true,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Likely future functional-surface candidate; may need later internal slot mapping. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-divider-ornament",
@@ -746,7 +793,8 @@
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
-      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval."
+      "notes": "H5.42 corrected draft safety-padded visible-bounds region. Split from broad H5.41 paired-cell mapping where needed; blank/no-asset regions removed. Not runtime-approved. Token/icon/effect/decorative candidate; no internal slot mapping assumed. Safety padding is intentionally conservative for cleanup/review and is not a runtime crop approval.",
+      "runtimeEligibility": "not-runtime-approved"
     }
   ],
   "reviewNotes": [
@@ -757,6 +805,30 @@
     "A second visual repair pass applied conservative safety padding so region boxes protect cleanup/review instead of hugging too tightly.",
     "Functional-surface candidate flags remain provisional.",
     "No cleanup, functional slot mapping, runtime UI, text rendering, gameplay, or Card Goblin Duel wiring is approved.",
-    "Focused row-2 padding repair: visual row 2 regions 9-16 were widened to 128x192 cell-spacer review bounds after human review noted their bottoms were still clipped. This remains protective cleanup/review evidence padding, not runtime crop approval."
-  ]
+    "Focused row-2 padding repair: visual row 2 regions 9-16 were widened to 128x192 cell-spacer review bounds after human review noted their bottoms were still clipped. This remains protective cleanup/review evidence padding, not runtime crop approval.",
+    "H5.42 human review passed in H5.43.",
+    "48 corrected UI/token regions accepted for draft cleanup/planning use.",
+    "Row 2 128x192 protective review bounds accepted.",
+    "Blank/no-asset regions remain removed.",
+    "Functional-surface candidate flags remain provisional until a later slot-mapping lane.",
+    "Cleanup, functional slot mapping, runtime UI, and gameplay wiring remain deferred."
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "humanReview": {
+    "reviewId": "H5.43",
+    "decision": "passed",
+    "reviewedCommit": "21e73da docs: widen card goblin duel ui token regions",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 48,
+    "functionalSurfaceCandidates": 18,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.42 human review passed in H5.43.",
+      "48 corrected UI/token regions accepted for draft cleanup/planning use.",
+      "Row 2 128x192 protective review bounds accepted.",
+      "Blank/no-asset regions remain removed.",
+      "Functional-surface candidate flags remain provisional until a later slot-mapping lane.",
+      "Cleanup, functional slot mapping, runtime UI, and gameplay wiring remain deferred."
+    ]
+  }
 }

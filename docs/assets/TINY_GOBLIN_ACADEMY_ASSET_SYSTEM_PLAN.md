@@ -556,3 +556,7 @@ H5.41 created the draft Card Goblin Duel UI/tokens region manifest from `assets/
 H5.42 corrected the H5.41 Card Goblin Duel UI/tokens draft region mapping. Broad paired-cell regions were split into individual visible assets, blank/no-asset regions were removed, and the corrected manifest now maps 48 draft-review regions. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
 
 After visual inspection, H5.42 sourceRects and evidence were repaired again with conservative cell-clamped safety padding so glows, dividers, ornaments, effects, and multi-part icons have cleanup/review breathing room instead of tight crop boxes. A focused follow-up repair widened visual row 2 / regions 9-16 to 128x192 cell-spacer review bounds after human review flagged that row's bottoms as still clipped. This safety padding is not runtime crop approval. The region count remains 48 and the manifest remains draft / needs-human-review / not-runtime-approved.
+
+## H5.43 Card Goblin Duel UI/Tokens Region Human Review Note
+
+H5.43 accepted the repaired H5.42 Card Goblin Duel UI/tokens region mapping for draft cleanup and planning use. The reviewed map contains 48 corrected regions and 18 provisional functional-surface candidates. Cleanup, functional slot mapping, runtime UI, text rendering, and Card Goblin Duel wiring remain deferred.
