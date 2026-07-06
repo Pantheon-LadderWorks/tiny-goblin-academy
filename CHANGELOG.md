@@ -136,3 +136,11 @@ All notable changes to this project will be documented in this file.
 - Marked likely future functional-surface candidates for later review.
 - Created H5.41 region mapping evidence.
 - Cleanup, runtime UI, text rendering, slot mapping, and gameplay wiring remain deferred.
+
+## H5.42 - Card Goblin Duel UI/Tokens Region Correction Pass
+
+- Corrected the H5.41 Card Goblin Duel UI/tokens draft region mapping.
+- Split broad paired-cell regions into individual visible assets.
+- Removed blank/no-asset regions from the UI/tokens manifest.
+- Corrected manifest now maps 48 draft-review regions.
+- Cleanup, functional slot mapping, runtime UI, text rendering, and gameplay wiring remain deferred.
