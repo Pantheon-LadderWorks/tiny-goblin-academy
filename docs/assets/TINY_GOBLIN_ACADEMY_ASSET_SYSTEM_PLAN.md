@@ -602,3 +602,9 @@ H5.47 accepted the H5.46 Potion Sorter region mapping for draft cleanup and plan
 ## H5.49 Potion Sorter Regenerated Cleanup Human Review With Exclusions
 
 H5.49 accepted the H5.48C regenerated Potion Sorter cleanup candidate for draft pipeline use with explicit exclusions. The candidate contains 32 cleanup regions: 30 accepted and 2 denied. Denied indexes 9 and 14 resolve to potion-sorter.glowing-green-potion and potion-sorter.gold-sparkle-potion. Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.
+
+## H5.50 Farm Settlement Region Mapping Note
+
+H5.50 created the Farm Settlement draft region manifest from `assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png`. The source is 1408x768 RGBA, but alpha is fully opaque at 255/255, so the checkerboard-style background is baked/fake transparency.
+
+The pass mapped 32 draft-review regions across crop plots, crop states, resource props/icons, tools, buildings, terrain props, worker/animal symbols, and status/weather icons. No cleanup candidate was created. Functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.

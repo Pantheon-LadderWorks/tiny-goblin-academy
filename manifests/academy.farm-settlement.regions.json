@@ -1,0 +1,575 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "farm-settlement",
+  "operationalType": "farm-settlement-region-manifest",
+  "sourceSheet": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
+  "sourceDimensions": {
+    "w": 1408,
+    "h": 768
+  },
+  "transparency": {
+    "pixelFormat": "RGBA",
+    "hasAlpha": true,
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "finding": "Source is RGBA but fully opaque; checkerboard-style background is baked/fake transparency and must not be treated as real alpha."
+  },
+  "layoutClassification": "standard-static-prop-icon-sheet-4x8",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "regions": [
+    {
+      "id": "farm-settlement.soil-plot-empty",
+      "label": "Empty soil plot",
+      "category": "crop-plot",
+      "sourceRect": {
+        "x": 22,
+        "y": 67,
+        "w": 154,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Empty tilled soil plot; cleanup should preserve soft soil edge. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.soil-plot-seeded",
+      "label": "Seeded soil plot",
+      "category": "crop-plot",
+      "sourceRect": {
+        "x": 176,
+        "y": 67,
+        "w": 176,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Seeded tilled plot; small seed dots need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.soil-plot-sprout",
+      "label": "Sprout soil plot",
+      "category": "crop",
+      "sourceRect": {
+        "x": 352,
+        "y": 51,
+        "w": 176,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Sprouting plant in soil; curled stem and leaf edges need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.soil-plot-watered-sprout",
+      "label": "Watered sprout soil plot",
+      "category": "crop",
+      "sourceRect": {
+        "x": 528,
+        "y": 36,
+        "w": 176,
+        "h": 139
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.beet-crop-plot",
+      "label": "Beet crop plot",
+      "category": "crop",
+      "sourceRect": {
+        "x": 716,
+        "y": 17,
+        "w": 164,
+        "h": 158
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Root crop in soil; leaf and soil edge cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.beet-basket",
+      "label": "Basket of beets",
+      "category": "resource-prop",
+      "sourceRect": {
+        "x": 894,
+        "y": 31,
+        "w": 162,
+        "h": 144
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Basket of harvested beets; grouped resource prop. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.withered-crop-plot",
+      "label": "Withered crop plot",
+      "category": "crop",
+      "sourceRect": {
+        "x": 1056,
+        "y": 19,
+        "w": 176,
+        "h": 165
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Withered crop with yellow glow/aura; high cleanup risk around glow. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.dead-crop-plot",
+      "label": "Dead crop plot",
+      "category": "crop",
+      "sourceRect": {
+        "x": 1232,
+        "y": 32,
+        "w": 164,
+        "h": 143
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Wilted/dead crop in soil; thin stems need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.harvest-basket",
+      "label": "Harvest basket",
+      "category": "resource-prop",
+      "sourceRect": {
+        "x": 27,
+        "y": 221,
+        "w": 149,
+        "h": 144
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Basket of vegetables and bread; grouped harvest resource. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.wood-log-bundle",
+      "label": "Wood log bundle",
+      "category": "resource-prop",
+      "sourceRect": {
+        "x": 201,
+        "y": 223,
+        "w": 151,
+        "h": 139
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Bundled logs; rope and circular log ends need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.stone-pile",
+      "label": "Stone pile",
+      "category": "resource-prop",
+      "sourceRect": {
+        "x": 352,
+        "y": 223,
+        "w": 176,
+        "h": 140
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Pile of stones; small rubble pieces may be separate visually but grouped as one pile. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.leaf-coin-token",
+      "label": "Leaf coin token",
+      "category": "resource-icon",
+      "sourceRect": {
+        "x": 566,
+        "y": 224,
+        "w": 130,
+        "h": 135
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Gold token with leaf symbol; icon-like resource marker. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.water-drop-token",
+      "label": "Water drop token",
+      "category": "resource-icon",
+      "sourceRect": {
+        "x": 736,
+        "y": 225,
+        "w": 118,
+        "h": 143
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Large water droplet with glow; transparent/glow edge risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.wooden-mallet",
+      "label": "Wooden mallet",
+      "category": "tool",
+      "sourceRect": {
+        "x": 894,
+        "y": 223,
+        "w": 147,
+        "h": 154
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Farm/building hammer or mallet tool. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.map-scroll",
+      "label": "Map scroll",
+      "category": "ui-token",
+      "sourceRect": {
+        "x": 1065,
+        "y": 227,
+        "w": 150,
+        "h": 127
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Scroll/map marker; text-like marks are baked into the icon and preserved for now. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.animal-house-icon",
+      "label": "Animal house icon",
+      "category": "animal-or-creature",
+      "sourceRect": {
+        "x": 1237,
+        "y": 225,
+        "w": 152,
+        "h": 136
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Small animal house/chicken-coop style icon. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.tent",
+      "label": "Canvas tent",
+      "category": "building",
+      "sourceRect": {
+        "x": 22,
+        "y": 415,
+        "w": 154,
+        "h": 159
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Tent or camp shelter; straps and fabric edges need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.small-farmhouse",
+      "label": "Small farmhouse",
+      "category": "building",
+      "sourceRect": {
+        "x": 176,
+        "y": 401,
+        "w": 176,
+        "h": 174
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Small cottage/farmhouse building. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.large-farmhouse",
+      "label": "Large farmhouse",
+      "category": "building",
+      "sourceRect": {
+        "x": 361,
+        "y": 389,
+        "w": 167,
+        "h": 187
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Larger farmhouse/homestead with porch and stone base. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.wood-shed",
+      "label": "Wood shed",
+      "category": "building",
+      "sourceRect": {
+        "x": 528,
+        "y": 397,
+        "w": 176,
+        "h": 175
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Small storage shed with crates. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.campfire",
+      "label": "Campfire",
+      "category": "fx-icon",
+      "sourceRect": {
+        "x": 704,
+        "y": 400,
+        "w": 176,
+        "h": 176
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.watchtower",
+      "label": "Watchtower",
+      "category": "building",
+      "sourceRect": {
+        "x": 880,
+        "y": 399,
+        "w": 161,
+        "h": 177
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Wooden watchtower; ladder/thin legs need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.stone-fence",
+      "label": "Stone and wood fence",
+      "category": "terrain-prop",
+      "sourceRect": {
+        "x": 1063,
+        "y": 420,
+        "w": 167,
+        "h": 151
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium",
+      "notes": "Fence segment / settlement boundary prop. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.shield-monument",
+      "label": "Shield monument",
+      "category": "building",
+      "sourceRect": {
+        "x": 1252,
+        "y": 399,
+        "w": 124,
+        "h": 176
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Shield statue/monument; pedestal and icon edges need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.goblin-idle",
+      "label": "Idle farm goblin",
+      "category": "animal-or-creature",
+      "sourceRect": {
+        "x": 41,
+        "y": 611,
+        "w": 108,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Small goblin character/worker symbol; likely state/worker icon, not animation. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.goblin-worker",
+      "label": "Worker farm goblin",
+      "category": "animal-or-creature",
+      "sourceRect": {
+        "x": 194,
+        "y": 611,
+        "w": 147,
+        "h": 129
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Goblin worker with hoe/tool; small limbs and tool edges need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.no-food-tool-icon",
+      "label": "No food/tool icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 388,
+        "y": 604,
+        "w": 135,
+        "h": 144
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Knife/fork with red X; thin utensils and overlay mark are high cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.animal-house-complete",
+      "label": "Animal house complete icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 552,
+        "y": 601,
+        "w": 152,
+        "h": 152
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Animal house with green check; status icon with baked check mark. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.storm-cloud",
+      "label": "Storm cloud lightning",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 729,
+        "y": 576,
+        "w": 148,
+        "h": 171
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Weather/storm icon; cloud and lightning edges high cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.smiling-sun",
+      "label": "Smiling sun icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 880,
+        "y": 579,
+        "w": 176,
+        "h": 189
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Sun/weather icon with many rays; high edge cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.crescent-moon",
+      "label": "Crescent moon icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 1061,
+        "y": 600,
+        "w": 144,
+        "h": 152
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "high",
+      "notes": "Crescent moon weather/night icon; glow and crescent edges are high cleanup risk. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "id": "farm-settlement.farm-banner",
+      "label": "Farm banner",
+      "category": "ui-token",
+      "sourceRect": {
+        "x": 1241,
+        "y": 595,
+        "w": 145,
+        "h": 153
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupRisk": "medium-high",
+      "notes": "Green farm banner/flag; thin pole and cloth edges need review. Draft region mapping only; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved"
+    }
+  ],
+  "reviewNotes": [
+    "H5.50 maps visible Farm Settlement assets for draft review only.",
+    "No cleanup output was created.",
+    "No runtime wiring, gameplay behavior, functional slot mapping, or scene-anchor planning occurred.",
+    "Visual QA corrected regions 30 and 31: smiling sun and crescent moon are separate icons, not a grouped sun-and-moon asset."
+  ]
+}

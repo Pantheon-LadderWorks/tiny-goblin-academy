@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.50 Farm Settlement Region Mapping**: Created a draft region manifest and evidence set for the Farm Settlement source sheet. Mapped 32 draft-review regions across crop states, resource props/icons, tools, buildings, terrain props, worker/animal symbols, and status/weather icons; confirmed the RGBA source is fully opaque fake transparency; no cleanup, functional slot mapping, gameplay logic, or runtime wiring occurred.
+
 * **H5.48C Potion Sorter Regenerated Source Cleanup Candidate**: Ingested Mega's regenerated Potion Sorter sheet as a new v0.2 source artifact, confirmed it is visually cleaner but still RGB/opaque fake transparency, remapped the 32 Potion Sorter regions to the 1698x926 source, regenerated the derived cleanup candidate and evidence, preserved caption exclusions, and kept the lane draft / needs-human-review / not-runtime-approved with no functional slot mapping or runtime wiring.
 
 * **H5.48B Potion Sorter Cleanup Transparency Correction**: Regenerated the Potion Sorter cleanup candidate after human review found visible baked checkerboard/background contamination in H5.48. Corrected the alchemy tray, sorting bin, and round-complete regions to exclude explanatory captions, preserved the 32-region count and 1408x768 derived layout, regenerated cleanup evidence, and kept the candidate draft / needs-human-review / not-runtime-approved with no functional slot mapping or runtime wiring.
@@ -227,3 +229,11 @@ All notable changes to this project will be documented in this file.
 - Denied region indexes: 9 and 14.
 - Denied regions: potion-sorter.glowing-green-potion and potion-sorter.gold-sparkle-potion.
 - Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft asset use, runtime visuals, functional-slot planning, gameplay sorting logic, or Potion Sorter wiring.
+
+## H5.50 - Farm Settlement Region Mapping
+
+- Created a draft region manifest for `assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png`.
+- Confirmed the source is `1408x768` RGBA with fully opaque alpha, meaning the checkerboard-style background is baked/fake transparency.
+- Mapped 32 draft-review regions across crop states, resources, tools, buildings, terrain props, worker/animal symbols, and status/weather icons.
+- Generated bbox overlay, numbered contact sheet, region table preview, and source inspection evidence.
+- Cleanup, functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.
