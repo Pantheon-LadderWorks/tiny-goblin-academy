@@ -573,6 +573,12 @@ H5.46 created the Potion Sorter draft region manifest from `assets/academy/games
 
 The pass mapped 32 draft-review regions across potion bottles, vial/flask shapes, cork/spill props, sorter slots, tray/bin/chest props, status icons, reward tokens, and FX-like icons. Six sorter/tray surfaces are marked as possible future functional-surface candidates only. Cleanup, gameplay sorting logic, functional slot mapping, runtime visuals, and game wiring remain deferred.
 
+## H5.48 Potion Sorter Cleanup Candidate Note
+
+H5.48 created a derived transparent cleanup candidate for the 32 H5.47-reviewed Potion Sorter regions. The derived sheet preserves the original 1408x768 layout and reviewed H5.46/H5.47 sourceRects.
+
+The cleanup removes baked checkerboard/fake transparency from derived copies only. Glass/liquid/potion-style regions allow interior checker cleanup, while high-risk glow, smoke, spill, sparkle, fire, and label-bearing regions retain risk flags for human review. The cleanup candidate remains draft / needs-human-review / not-runtime-approved. Functional-surface candidate flags remain planning metadata only; functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring remain deferred.
+
 ## H5.45 Card Goblin Duel UI/Tokens Cleanup Human Review Note
 
 H5.45 accepted the H5.44 Card Goblin Duel UI/tokens cleanup candidate for draft pipeline use. The reviewed cleanup candidate preserves 48 cleaned UI/token regions and 18 functional-surface candidate metadata flags. Risk flags remain as review history. Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred.

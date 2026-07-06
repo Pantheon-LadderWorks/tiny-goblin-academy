@@ -1,0 +1,952 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "potion-sorter",
+  "operationalType": "potion-sorter-cleanup-candidate",
+  "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-concept-v0.1.png",
+  "sourceRegionManifest": "manifests/academy.potion-sorter.regions.json",
+  "derivedSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-v0.1.png",
+  "sourceDimensions": {
+    "w": 1408,
+    "h": 768
+  },
+  "derivedDimensions": {
+    "w": 1408,
+    "h": 768
+  },
+  "transparency": {
+    "sourcePixelFormat": "RGBA",
+    "sourceHasAlpha": true,
+    "sourceAlphaExtrema": [
+      255,
+      255
+    ],
+    "derivedPixelFormat": "RGBA",
+    "cleanupFinding": "Source is RGBA but fully opaque. Derived cleanup removes baked checkerboard/fake transparency while preserving original 1408x768 layout."
+  },
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "pipelineUse": "draft-cleanup-candidate-for-human-review",
+  "functionalSurfaceBoundary": {
+    "functionalSurfaceCandidateCount": 6,
+    "slotMappingIntroduced": false,
+    "gameplaySortingLogicIntroduced": false,
+    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.48 does not perform functional slot mapping, define gameplay sorting logic, or wire runtime visuals."
+  },
+  "cleanupMethod": {
+    "summary": "Derived-only checkerboard cleanup preserving the original sheet layout.",
+    "sourceRectPolicy": "Preserve reviewed H5.46/H5.47 sourceRects.",
+    "backgroundRemovalPolicy": "Remove edge-connected strict-neutral checker/grid pixels for all regions; remove strict-neutral interior checker pixels for glass/liquid/potion-style regions; apply broadened neutral checker removal only inside high-risk glow/smoke/spill/sparkle regions to reduce visible gray checker contamination without treating FX as final-approved.",
+    "riskPolicy": "Glows, smoke, spills, liquid edges, glass edges, fire, sparkles, baked labels, and small badge details are flagged for review rather than treated as automatically approved."
+  },
+  "regions": [
+    {
+      "id": "potion-sorter.red-round-potion-bottle",
+      "label": "Red round potion bottle",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 37,
+        "y": 24,
+        "w": 121,
+        "h": 158
+      },
+      "derivedRect": {
+        "x": 37,
+        "y": 24,
+        "w": 121,
+        "h": 158
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9927,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 19118
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 9927; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.blue-tall-vial",
+      "label": "Blue tall vial",
+      "category": "vial",
+      "sourceRect": {
+        "x": 225,
+        "y": 24,
+        "w": 95,
+        "h": 158
+      },
+      "derivedRect": {
+        "x": 225,
+        "y": 24,
+        "w": 95,
+        "h": 158
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9484,
+        "interiorCheckerPixelsRemoved": 60,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 15010
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 9484; strict interior removals: 60; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.green-round-potion-bottle",
+      "label": "Green round potion bottle",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 386,
+        "y": 24,
+        "w": 118,
+        "h": 158
+      },
+      "derivedRect": {
+        "x": 386,
+        "y": 24,
+        "w": 118,
+        "h": 158
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 8056,
+        "interiorCheckerPixelsRemoved": 18,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 18644
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 8056; strict interior removals: 18; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.hourglass-potion-timer",
+      "label": "Hourglass potion timer",
+      "category": "sorter-token",
+      "sourceRect": {
+        "x": 563,
+        "y": 24,
+        "w": 112,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 563,
+        "y": 24,
+        "w": 112,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 7578,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 17920
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 7578; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.purple-square-potion",
+      "label": "Purple square potion bottle",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 733,
+        "y": 24,
+        "w": 120,
+        "h": 158
+      },
+      "derivedRect": {
+        "x": 733,
+        "y": 24,
+        "w": 120,
+        "h": 158
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9400,
+        "interiorCheckerPixelsRemoved": 161,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 18960
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 9400; strict interior removals: 161; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.teal-flask",
+      "label": "Teal flask",
+      "category": "flask",
+      "sourceRect": {
+        "x": 898,
+        "y": 24,
+        "w": 138,
+        "h": 154
+      },
+      "derivedRect": {
+        "x": 898,
+        "y": 24,
+        "w": 138,
+        "h": 154
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12760,
+        "interiorCheckerPixelsRemoved": 22,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 21252
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 12760; strict interior removals: 22; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.broken-spilled-purple-potion",
+      "label": "Broken spilled purple potion",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 1068,
+        "y": 28,
+        "w": 152,
+        "h": 155
+      },
+      "derivedRect": {
+        "x": 1068,
+        "y": 28,
+        "w": 152,
+        "h": 155
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 18614,
+        "interiorCheckerPixelsRemoved": 702,
+        "highRiskBroadNeutralPixelsRemoved": 2935,
+        "sourcePixelsInRegion": 23560
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 18614; strict interior removals: 702; high-risk broadened neutral removals: 2935."
+    },
+    {
+      "id": "potion-sorter.mystery-question-bottle",
+      "label": "Mystery question bottle",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 1255,
+        "y": 24,
+        "w": 115,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 1255,
+        "y": 24,
+        "w": 115,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9381,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 18400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Baked text/symbol label preserved as visual source content; no text rendering approval. Checker/grid pixels made transparent in crop: 9381; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.glowing-green-potion",
+      "label": "Glowing green potion",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 16,
+        "y": 190,
+        "w": 160,
+        "h": 190
+      },
+      "derivedRect": {
+        "x": 16,
+        "y": 190,
+        "w": 160,
+        "h": 190
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 14332,
+        "interiorCheckerPixelsRemoved": 24,
+        "highRiskBroadNeutralPixelsRemoved": 4590,
+        "sourcePixelsInRegion": 30400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 14332; strict interior removals: 24; high-risk broadened neutral removals: 4590."
+    },
+    {
+      "id": "potion-sorter.bubbling-smoke-potion",
+      "label": "Bubbling smoke potion",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 205,
+        "y": 190,
+        "w": 140,
+        "h": 190
+      },
+      "derivedRect": {
+        "x": 205,
+        "y": 190,
+        "w": 140,
+        "h": 190
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12304,
+        "interiorCheckerPixelsRemoved": 4,
+        "highRiskBroadNeutralPixelsRemoved": 2958,
+        "sourcePixelsInRegion": 26600
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 12304; strict interior removals: 4; high-risk broadened neutral removals: 2958."
+    },
+    {
+      "id": "potion-sorter.empty-glass-bottle",
+      "label": "Empty glass bottle",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 386,
+        "y": 220,
+        "w": 116,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 386,
+        "y": 220,
+        "w": 116,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 10219,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 17400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 10219; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.cork-stopper",
+      "label": "Cork stopper",
+      "category": "cork",
+      "sourceRect": {
+        "x": 568,
+        "y": 236,
+        "w": 100,
+        "h": 105
+      },
+      "derivedRect": {
+        "x": 568,
+        "y": 236,
+        "w": 100,
+        "h": 105
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 5309,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 10500
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 5309; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.spilled-green-flask",
+      "label": "Spilled green flask",
+      "category": "potion-liquid",
+      "sourceRect": {
+        "x": 705,
+        "y": 210,
+        "w": 175,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 705,
+        "y": 210,
+        "w": 175,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 18204,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 1217,
+        "sourcePixelsInRegion": 26250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 18204; strict interior removals: 0; high-risk broadened neutral removals: 1217."
+    },
+    {
+      "id": "potion-sorter.gold-sparkle-potion",
+      "label": "Gold sparkle potion",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 895,
+        "y": 200,
+        "w": 150,
+        "h": 176
+      },
+      "derivedRect": {
+        "x": 895,
+        "y": 200,
+        "w": 150,
+        "h": 176
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12580,
+        "interiorCheckerPixelsRemoved": 104,
+        "highRiskBroadNeutralPixelsRemoved": 6910,
+        "sourcePixelsInRegion": 26400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 12580; strict interior removals: 104; high-risk broadened neutral removals: 6910."
+    },
+    {
+      "id": "potion-sorter.cracked-purple-potion",
+      "label": "Cracked purple potion",
+      "category": "potion-bottle",
+      "sourceRect": {
+        "x": 1080,
+        "y": 205,
+        "w": 120,
+        "h": 165
+      },
+      "derivedRect": {
+        "x": 1080,
+        "y": 205,
+        "w": 120,
+        "h": 165
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12233,
+        "interiorCheckerPixelsRemoved": 67,
+        "highRiskBroadNeutralPixelsRemoved": 3547,
+        "sourcePixelsInRegion": 19800
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 12233; strict interior removals: 67; high-risk broadened neutral removals: 3547."
+    },
+    {
+      "id": "potion-sorter.red-award-potion-medal",
+      "label": "Red award potion medal",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 1250,
+        "y": 200,
+        "w": 125,
+        "h": 165
+      },
+      "derivedRect": {
+        "x": 1250,
+        "y": 200,
+        "w": 125,
+        "h": 165
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 11579,
+        "interiorCheckerPixelsRemoved": 17,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 20625
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 11579; strict interior removals: 17; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.red-sorter-slot",
+      "label": "Red sorter slot",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 20,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 20,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 4517,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 23250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4517; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.blue-sorter-slot",
+      "label": "Blue sorter slot",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 194,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 194,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 4954,
+        "interiorCheckerPixelsRemoved": 355,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 23250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4954; strict interior removals: 355; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.green-sorter-slot",
+      "label": "Green sorter slot",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 367,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 367,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 4542,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 23250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4542; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.wood-sorter-slot",
+      "label": "Wood sorter slot",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 540,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 540,
+        "y": 400,
+        "w": 155,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 4652,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 23250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Checker/grid pixels made transparent in crop: 4652; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.potion-crate",
+      "label": "Potion crate",
+      "category": "background-prop",
+      "sourceRect": {
+        "x": 710,
+        "y": 395,
+        "w": 165,
+        "h": 165
+      },
+      "derivedRect": {
+        "x": 710,
+        "y": 395,
+        "w": 165,
+        "h": 165
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9997,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 27225
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 9997; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.alchemy-tray-labeled",
+      "label": "Alchemy tray with baked label",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 880,
+        "y": 400,
+        "w": 175,
+        "h": 190
+      },
+      "derivedRect": {
+        "x": 880,
+        "y": 400,
+        "w": 175,
+        "h": 190
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 17550,
+        "interiorCheckerPixelsRemoved": 171,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 33250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Baked text/symbol label preserved as visual source content; no text rendering approval. Checker/grid pixels made transparent in crop: 17550; strict interior removals: 171; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.sorting-bin-labeled",
+      "label": "Sorting bin with baked label",
+      "category": "sorter-slot",
+      "sourceRect": {
+        "x": 1055,
+        "y": 405,
+        "w": 175,
+        "h": 170
+      },
+      "derivedRect": {
+        "x": 1055,
+        "y": 405,
+        "w": 175,
+        "h": 170
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": true,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12312,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 29750
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Baked text/symbol label preserved as visual source content; no text rendering approval. Checker/grid pixels made transparent in crop: 12312; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.round-complete-chest-labeled",
+      "label": "Round-complete chest with baked label",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 1230,
+        "y": 400,
+        "w": 170,
+        "h": 185
+      },
+      "derivedRect": {
+        "x": 1230,
+        "y": 400,
+        "w": 170,
+        "h": 185
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 16054,
+        "interiorCheckerPixelsRemoved": 2177,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 31450
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Baked text/symbol label preserved as visual source content; no text rendering approval. Checker/grid pixels made transparent in crop: 16054; strict interior removals: 2177; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.success-check-sparkle",
+      "label": "Success check sparkle",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 25,
+        "y": 590,
+        "w": 145,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 25,
+        "y": 590,
+        "w": 145,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 10013,
+        "interiorCheckerPixelsRemoved": 45,
+        "highRiskBroadNeutralPixelsRemoved": 4968,
+        "sourcePixelsInRegion": 21750
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 10013; strict interior removals: 45; high-risk broadened neutral removals: 4968."
+    },
+    {
+      "id": "potion-sorter.failure-x-smoke",
+      "label": "Failure X smoke",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 205,
+        "y": 590,
+        "w": 150,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 205,
+        "y": 590,
+        "w": 150,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 12547,
+        "interiorCheckerPixelsRemoved": 136,
+        "highRiskBroadNeutralPixelsRemoved": 1393,
+        "sourcePixelsInRegion": 22500
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 12547; strict interior removals: 136; high-risk broadened neutral removals: 1393."
+    },
+    {
+      "id": "potion-sorter.blue-fire-icon",
+      "label": "Blue fire icon",
+      "category": "fx-icon",
+      "sourceRect": {
+        "x": 382,
+        "y": 590,
+        "w": 125,
+        "h": 155
+      },
+      "derivedRect": {
+        "x": 382,
+        "y": 590,
+        "w": 125,
+        "h": 155
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 11028,
+        "interiorCheckerPixelsRemoved": 52,
+        "highRiskBroadNeutralPixelsRemoved": 1331,
+        "sourcePixelsInRegion": 19375
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 11028; strict interior removals: 52; high-risk broadened neutral removals: 1331."
+    },
+    {
+      "id": "potion-sorter.small-hourglass-icon",
+      "label": "Small hourglass icon",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 560,
+        "y": 590,
+        "w": 115,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 560,
+        "y": 590,
+        "w": 115,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 7369,
+        "interiorCheckerPixelsRemoved": 695,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 18400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 7369; strict interior removals: 695; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.potion-coin-token",
+      "label": "Potion coin token",
+      "category": "ui-token",
+      "sourceRect": {
+        "x": 715,
+        "y": 590,
+        "w": 155,
+        "h": 150
+      },
+      "derivedRect": {
+        "x": 715,
+        "y": 590,
+        "w": 155,
+        "h": 150
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 9461,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 23250
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium cleanup review: preserve glass/liquid/cork/icon readability. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 9461; strict interior removals: 0; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.star-x3-reward",
+      "label": "Star x3 reward",
+      "category": "ui-token",
+      "sourceRect": {
+        "x": 890,
+        "y": 590,
+        "w": 160,
+        "h": 155
+      },
+      "derivedRect": {
+        "x": 890,
+        "y": 590,
+        "w": 160,
+        "h": 155
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 13621,
+        "interiorCheckerPixelsRemoved": 75,
+        "highRiskBroadNeutralPixelsRemoved": 1563,
+        "sourcePixelsInRegion": 24800
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Baked text/symbol label preserved as visual source content; no text rendering approval. Checker/grid pixels made transparent in crop: 13621; strict interior removals: 75; high-risk broadened neutral removals: 1563."
+    },
+    {
+      "id": "potion-sorter.gold-potion-badge",
+      "label": "Gold potion badge",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 1075,
+        "y": 590,
+        "w": 140,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 1075,
+        "y": 590,
+        "w": 140,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "medium-high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 11388,
+        "interiorCheckerPixelsRemoved": 35,
+        "highRiskBroadNeutralPixelsRemoved": 0,
+        "sourcePixelsInRegion": 22400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. Medium-high cleanup review: preserve labels, tray/sorter surfaces, badge/ribbon edges, and thin glass details. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 11388; strict interior removals: 35; high-risk broadened neutral removals: 0."
+    },
+    {
+      "id": "potion-sorter.cracked-potion-fail-badge",
+      "label": "Cracked potion fail badge",
+      "category": "status-icon",
+      "sourceRect": {
+        "x": 1245,
+        "y": 590,
+        "w": 140,
+        "h": 160
+      },
+      "derivedRect": {
+        "x": 1245,
+        "y": 590,
+        "w": 140,
+        "h": 160
+      },
+      "cleanupStatus": "draft-cleanup-candidate-generated",
+      "riskLevel": "high",
+      "reviewStatus": "needs-human-review",
+      "functionalSurfaceCandidate": false,
+      "cleanupStats": {
+        "checkerPixelsRemoved": 11976,
+        "interiorCheckerPixelsRemoved": 0,
+        "highRiskBroadNeutralPixelsRemoved": 809,
+        "sourcePixelsInRegion": 22400
+      },
+      "notes": "Derived cleanup candidate preserving original 1408x768 layout. High-risk cleanup review: glow/smoke/sparkle/fire/spill/liquid/text-like details may need human inspection; broadened neutral checker cleanup was applied only to high-risk regions to reduce visible gray checker contamination without approving final FX quality. Strict-neutral interior checker removal was allowed for this glass/liquid/potion-style region. Checker/grid pixels made transparent in crop: 11976; strict interior removals: 0; high-risk broadened neutral removals: 809."
+    }
+  ],
+  "riskSummary": {
+    "high": 11,
+    "medium": 11,
+    "medium-high": 10
+  },
+  "reviewNotes": [
+    "H5.48 creates a derived transparent cleanup candidate for the 32 H5.47-reviewed Potion Sorter regions.",
+    "Source PNG remains untouched.",
+    "Original 1408x768 layout is preserved in the derived sheet.",
+    "Functional-surface candidate flags remain planning metadata only.",
+    "No functional slot mapping, gameplay sorting logic, runtime placement approval, or Potion Sorter wiring is approved."
+  ]
+}

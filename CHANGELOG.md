@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.48 Potion Sorter Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 H5.47-reviewed Potion Sorter regions. Preserved the original 1408x768 layout, retained 6 functional-surface candidate flags as planning metadata only, generated cleanup evidence, and kept functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring deferred.
+
 * **H5.46 Potion Sorter Region Mapping**: Created a draft region manifest and evidence set for the Potion Sorter source sheet. Mapped 32 draft-review regions across potion bottles, sorter slots, props, and status/reward icons; marked 6 sorter/tray surfaces as possible future functional-surface candidates; confirmed the RGBA source is fully opaque fake transparency; no cleanup or runtime wiring occurred.
 
 * **H5.44 Card Goblin Duel UI/Tokens Cleanup Candidate**: Created a derived transparent cleanup candidate for the 48 H5.43-reviewed Card Goblin Duel UI/tokens regions. Preserved the original 1024x1024 layout, retained 18 functional-surface candidate flags as planning metadata only, generated cleanup evidence, and kept runtime UI, functional slot mapping, text rendering, gameplay, and Card Goblin Duel wiring deferred.
@@ -173,6 +175,14 @@ All notable changes to this project will be documented in this file.
 - Mapped 32 draft-review regions and marked 6 sorter/tray surfaces as possible future functional-surface candidates.
 - Generated bbox overlay, numbered contact sheet, region table preview, and source inspection evidence.
 - Cleanup, gameplay sorting logic, functional slot mapping, runtime visuals, and game wiring remain deferred.
+
+## H5.48 - Potion Sorter Cleanup Candidate
+
+- Created a derived transparent cleanup candidate for the 32 H5.47-reviewed Potion Sorter regions.
+- Preserved the original 1408x768 sheet layout and reviewed H5.46/H5.47 sourceRects.
+- Removed baked checkerboard/fake transparency from derived copies only, with extra caution for glass, liquid, glow, smoke, spill, fire, sparkle, and baked label edges.
+- Preserved 6 functional-surface candidate flags as planning metadata only.
+- Generated cleanup evidence and kept functional slot mapping, gameplay sorting logic, runtime placement, and Potion Sorter wiring deferred.
 
 ## H5.45 - Card Goblin Duel UI/Tokens Cleanup Human Review
 
