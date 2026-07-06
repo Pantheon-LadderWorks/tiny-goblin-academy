@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "ui-token-cleanup-candidate",
   "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
@@ -20,14 +20,14 @@
     "derivedPixelFormat": "RGBA",
     "cleanupFinding": "Derived cleanup candidate removes strict-neutral, edge-connected baked checkerboard/grid pixels conservatively while preserving original 1024x1024 layout."
   },
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
-  "pipelineUse": "draft-cleanup-candidate-for-human-review",
+  "pipelineUse": "accepted-for-draft-pipeline-use",
   "functionalSurfaceBoundary": {
     "functionalSurfaceCandidateCount": 18,
     "slotMappingIntroduced": false,
     "textRenderingApproved": false,
-    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.44 does not perform functional slot mapping or runtime UI wiring."
+    "notes": "Functional-surface candidate flags are preserved as planning metadata only. H5.44 does not perform functional slot mapping or runtime UI wiring. H5.45 keeps functional-surface candidates as planning metadata only."
   },
   "cleanupMethod": {
     "summary": "Conservative strict-neutral edge-connected background removal per reviewed sourceRect, preserving original sheet layout in a derived RGBA PNG.",
@@ -54,14 +54,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 12063,
         "sourcePixelsInRegion": 14880,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12063."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12063.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-icon",
@@ -81,14 +83,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 9896,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9896."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9896.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-plus-icon",
@@ -108,14 +112,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10124,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10124."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10124.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.projectile-star-effect",
@@ -135,14 +141,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11475,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11475."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11475.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.club-weapon-icon",
@@ -162,14 +170,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 12404,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12404."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12404.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.star-cluster-effect",
@@ -189,14 +199,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 12368,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12368."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12368.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-card-marker",
@@ -216,14 +228,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7509,
         "sourcePixelsInRegion": 13640,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7509."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7509.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-card-marker",
@@ -243,14 +257,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7724,
         "sourcePixelsInRegion": 13888,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7724."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7724.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.heart-icon",
@@ -270,14 +286,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 18944,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18944."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18944.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-defense-badge",
@@ -297,14 +315,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 18551,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18551."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18551.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.lightning-energy-badge",
@@ -324,14 +344,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 18187,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18187."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18187.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.clock-time-badge",
@@ -351,14 +373,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 18536,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Clock/time badge is a desaturated blue-gray asset; strict neutral-key cleanup is used to avoid over-cleaning its face. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18536."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Clock/time badge is a desaturated blue-gray asset; strict neutral-key cleanup is used to avoid over-cleaning its face. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 18536.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-block-marker",
@@ -378,14 +402,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 19523,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 19523."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 19523.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.poison-slime-status-icon",
@@ -405,14 +431,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 21529,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 21529."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 21529.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.exclamation-marker",
@@ -432,14 +460,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 17458,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 17458."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 17458.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.trophy-laurel-badge",
@@ -459,14 +489,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 17894,
         "sourcePixelsInRegion": 24576,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 17894."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Row 2 128x192 protective review bounds preserved; not runtime crop approval. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 17894.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-portrait-token",
@@ -486,14 +518,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7119,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7119."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7119.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.goblin-face-token",
@@ -513,14 +547,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7139,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7139."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7139.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.active-turn-marker",
@@ -540,14 +576,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7512,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Baked text preserved as-is; no text rendering or textless regeneration approved. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7512."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Baked text preserved as-is; no text rendering or textless regeneration approved. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7512.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.target-reticle",
@@ -567,14 +605,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 9133,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9133."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9133.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.sword-round-token",
@@ -594,14 +634,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 8128,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8128."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8128.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-round-token",
@@ -621,14 +663,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 8404,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8404."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8404.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-coin-token",
@@ -648,14 +692,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 8911,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8911."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8911.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.crown-laurel-badge",
@@ -675,14 +721,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 8475,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8475."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8475.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.explosion-effect",
@@ -702,14 +750,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10379,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10379."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10379.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.shield-burst-effect",
@@ -729,14 +779,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 8425,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8425."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 8425.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.glowing-heart-effect",
@@ -756,14 +808,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 6329,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 6329."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 6329.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.swirl-effect",
@@ -783,14 +837,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10040,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10040."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10040.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.sparkle-effect",
@@ -810,14 +866,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 12794,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12794."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12794.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.smoke-cloud-effect",
@@ -837,14 +895,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 9673,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9673."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 9673.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-warning-triangle",
@@ -864,14 +924,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10989,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10989."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10989.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.gold-sparkle-burst",
@@ -891,14 +953,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 12126,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12126."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 12126.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-round-button-surface",
@@ -918,14 +982,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11393,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11393."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11393.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-hex-badge-surface",
@@ -945,14 +1011,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11355,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11355."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium cleanup review: preserve icon readability and badge/card-marker edges. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11355.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.blank-label-plaque",
@@ -972,14 +1040,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 6957,
         "sourcePixelsInRegion": 13020,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 6957."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 6957.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-button",
@@ -999,14 +1069,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10297,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10297."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10297.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.red-x-button",
@@ -1026,14 +1098,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10035,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10035."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10035.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.yellow-warning-button",
@@ -1053,14 +1127,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11148,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11148."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11148.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-check-marker-bubble",
@@ -1080,14 +1156,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11510,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11510."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11510.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.green-divider-ornament",
@@ -1107,14 +1185,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 14045,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 14045."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 14045.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-round-token",
@@ -1134,14 +1214,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11358,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11358."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11358.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-hex-token",
@@ -1161,14 +1243,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "low",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11038,
         "sourcePixelsInRegion": 15252,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11038."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Low cleanup risk: compact token/icon with clear outline. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11038.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.wood-label-panel",
@@ -1188,14 +1272,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 7288,
         "sourcePixelsInRegion": 13392,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7288."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 7288.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-check-button",
@@ -1215,14 +1301,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10119,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10119."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10119.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-x-button",
@@ -1242,14 +1330,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 10031,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10031."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 10031.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.cream-warning-button",
@@ -1269,14 +1359,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11162,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11162."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11162.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-check-marker-bubble",
@@ -1296,14 +1388,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "medium-high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": true,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 11268,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11268."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. Medium-high cleanup review: preserve borders, shadows, text/readability surfaces, laurels, and click-surface clarity. Functional-surface candidate flag preserved as planning metadata only; no slot mapping approved. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 11268.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "card-goblin-duel.ui-tokens.brown-divider-ornament",
@@ -1323,14 +1417,16 @@
       },
       "cleanupStatus": "draft-cleanup-candidate-generated",
       "riskLevel": "high",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "functionalSurfaceCandidate": false,
       "cleanupStats": {
         "edgeConnectedCheckerPixelsRemoved": 13999,
         "sourcePixelsInRegion": 15376,
         "cleanupKey": "strict-neutral-edge-connected"
       },
-      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 13999."
+      "notes": "Derived cleanup candidate preserving original 1024x1024 layout. High-risk cleanup review: fragile glow/smoke/sparkle/divider/text-bearing detail may need human inspection. Edge-connected strict-neutral checker/grid pixels made transparent in crop: 13999.",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupApproval": "accepted-for-draft-pipeline-use"
     }
   ],
   "riskSummary": {
@@ -1346,6 +1442,29 @@
     "Corrected H5.42/H5.43 sourceRects are preserved, including row 2 128x192 protective review bounds.",
     "A stricter neutral-key cleanup pass replaced the first attempt after visual inspection showed the clock/time badge was over-cleaned.",
     "Functional-surface candidate flags remain planning metadata only.",
-    "No functional slot mapping, text rendering, runtime UI, card gameplay, or Card Goblin Duel wiring is approved."
-  ]
+    "No functional slot mapping, text rendering, runtime UI, card gameplay, or Card Goblin Duel wiring is approved.",
+    "H5.44 human review passed in H5.45.",
+    "Cleanup candidate accepted for draft pipeline use.",
+    "No cleanup correction pass needed.",
+    "Risk flags retained as review history.",
+    "Functional surface candidates remain planning metadata only.",
+    "Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred."
+  ],
+  "humanReview": {
+    "reviewId": "H5.45",
+    "decision": "passed",
+    "reviewedCommit": "db2b451 docs: add card goblin duel ui tokens cleanup candidate",
+    "acceptedFor": "draft-pipeline-use-only",
+    "regionsAccepted": 48,
+    "functionalSurfaceCandidates": 18,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.44 human review passed in H5.45.",
+      "Cleanup candidate accepted for draft pipeline use.",
+      "No cleanup correction pass needed.",
+      "Risk flags retained as review history.",
+      "Functional surface candidates remain planning metadata only.",
+      "Functional slot mapping, runtime UI, text rendering, gameplay behavior, and Card Goblin Duel wiring remain deferred."
+    ]
+  }
 }
