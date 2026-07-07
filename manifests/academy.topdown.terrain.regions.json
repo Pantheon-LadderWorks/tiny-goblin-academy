@@ -594,24 +594,23 @@
       ]
     },
     {
-      "id": "topdown.terrain.partial-grass-edge-tile",
+      "id": "topdown.terrain.empty-cell-row4-col6",
       "index": 30,
-      "label": "Partial grass edge tile",
-      "category": "grass-floor-tile",
+      "label": "Empty cell row 4 col 6",
+      "category": "blank-empty-cell",
       "sourceRect": {
         "x": 640,
         "y": 384,
         "width": 128,
         "height": 128
       },
-      "terrainRole": "grass-edge-partial",
+      "terrainRole": "blank-empty",
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "notes": [
-        "H5.60 human review correction: this cell contains visible grass/terrain edge content, not a blank placeholder.",
-        "Accepted as a draft grass-edge terrain candidate for cleanup/planning inventory only.",
-        "No runtime tile behavior, collision, pathfinding, or placement approval."
+        "H5.60B correction: this cell is blank/checkerboard-only and should remain a blank-empty-cell placeholder.",
+        "Mapped to preserve sheet inventory, not a runtime tile candidate."
       ]
     },
     {
@@ -767,22 +766,24 @@
       ]
     },
     {
-      "id": "topdown.terrain.empty-cell-row5-col7",
+      "id": "topdown.terrain.partial-grass-edge-vertical-tile",
       "index": 39,
-      "label": "Empty cell row 5 col 7",
-      "category": "blank-empty-cell",
+      "label": "Partial grass edge vertical tile",
+      "category": "grass-floor-tile",
       "sourceRect": {
         "x": 768,
         "y": 512,
         "width": 128,
         "height": 128
       },
-      "terrainRole": "blank-empty",
+      "terrainRole": "grass-edge-partial",
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "notes": [
-        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+        "H5.60B correction: this cell contains visible grass/terrain edge content with checkerboard background and is not blank.",
+        "Accepted as a draft grass-edge terrain candidate for cleanup/planning inventory only.",
+        "No runtime tile behavior, collision, pathfinding, or placement approval."
       ]
     },
     {
@@ -1279,7 +1280,10 @@
     "H5.60 human review passed with one category correction: region 30 is visible partial grass/terrain edge content, not blank.",
     "Only regions 31, 39, and 64 remain blank-empty-cell placeholders.",
     "Special marker/status-like terrain cells remain inventory categories only, not gameplay behavior approvals.",
-    "Runtime tilemap, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, and placement approval remain none."
+    "Runtime tilemap, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, and placement approval remain none.",
+    "H5.60B correction: H5.60 corrected the wrong blank cell. Region 30 is blank; region 39 contains visible grass/checkerboard edge content.",
+    "H5.60B final blank-empty-cell placeholders are regions 30, 31, and 64.",
+    "Partial checkerboard/content cells 25, 32, 35, 36, 37, 38, and 39 remain content-bearing terrain candidates, not blanks."
   ],
   "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
 }

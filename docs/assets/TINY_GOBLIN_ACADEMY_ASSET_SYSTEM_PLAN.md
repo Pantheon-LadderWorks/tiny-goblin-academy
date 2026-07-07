@@ -682,8 +682,16 @@ This is a semantic terrain inventory only. It does not create cleanup outputs, d
 
 ## H5.60 Topdown Terrain Region Human Review Note
 
-H5.60 records human review pass for the H5.59 topdown terrain region mapping with one correction: region 30 is not blank. It contains visible partial grass/terrain edge content and is now `grass-floor-tile` with terrain role `grass-edge-partial`.
+H5.60 records human review pass for the H5.59 topdown terrain region mapping. H5.60B supersedes this note for exact blank-cell identities because H5.60 corrected the wrong cell.
 
-`manifests/academy.topdown.terrain.regions.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`. All 64 regions and all 128x128 sourceRects are retained. Only regions 31, 39, and 64 remain `blank-empty-cell` placeholders.
+`manifests/academy.topdown.terrain.regions.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`. All 64 regions and all 128x128 sourceRects are retained. See H5.60B for the corrected final blank-cell list.
 
 Special marker/status-like tiles such as goblin crests, magic circles, glowing floors, caution stripes, portal swirls, arrows, and flag markers are accepted as inventory categories only. H5.60 does not approve runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, cleanup, derived images, or game/runtime wiring.
+
+## H5.60B Topdown Terrain Blank Cell Correction Note
+
+H5.60B corrects the H5.60 blank-cell identities. Region 30 is blank/checkerboard-only and is now `blank-empty-cell` with terrain role `blank-empty`. Region 39 contains visible grass/terrain edge content and is now `grass-floor-tile` with terrain role `grass-edge-partial`.
+
+Final blank placeholder cells are regions 30, 31, and 64. Partial checkerboard/content cells 25 and 35 remain water/checkerboard terrain candidates, 32 and 36 remain slime/checkerboard terrain candidates, and 37, 38, and 39 remain grass/checkerboard terrain candidates.
+
+H5.60B preserves the H5.60 review status and runtime boundary: `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use` / `not-runtime-approved`. It does not approve cleanup, runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, derived images, or game/runtime wiring.

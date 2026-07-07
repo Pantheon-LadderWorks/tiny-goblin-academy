@@ -1,5 +1,7 @@
 # Tiny Goblin Academy — H5.60 Topdown Terrain Region Human Review
 
+> Supersession note: H5.60B corrects the blank-cell identities from this report. Region 30 is blank; region 39 is a partial grass/terrain edge. The final blank placeholder cells are 30, 31, and 64. See `docs/assets/TINY_GOBLIN_ACADEMY_H5_60B_TOPDOWN_TERRAIN_BLANK_CELL_CORRECTION.md`.
+
 ## Purpose
 
 H5.60 records human review for the H5.59 Topdown Terrain region mapping.
