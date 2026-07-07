@@ -374,8 +374,8 @@ H5.54 created a split-aware draft measured-grid-cell region manifest for `assets
 * **Shared FX / Feedback utility sheet**
   * Path: `assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png`
   * Intended Use: Cross-game shared feedback, event-linked, and object-linked utility sprites.
-  * Status: concept / v0.1 / needs manifest.
-  * Notes: Useful cross-game shared feedback sheet. Includes a mix of pure FX and object-linked effect/event sprites. Accepted for v0.1 because it is highly reusable, but a future v0.2 pass may generate a stricter pure-FX sheet.
+  * Status: deferred / reference-only / particle-first replacement path / not-runtime-approved.
+  * Notes: H5.57 defers this RGB/no-alpha sheet as reference-only / concept-only. Soft FX, glows, smoke, dust, fire, sparkles, rain, clouds, blooms, rings, streaks, and bursts are high-risk fake-checker cleanup targets. Shared FX should be particle-first where practical; regenerate specific needed sprite FX as true-alpha one-offs and run the normal asset workflow from intake onward.
 
 * **Top-down terrain/floor construction sheet**
   * Path: `assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png`
@@ -640,3 +640,9 @@ H5.55 accepted the H5.54 Dungeon Platformer measured-grid region mapping for dra
 ## H5.56 Dungeon Platformer Cleanup Deferred Note
 
 H5.56 records a docs-only cleanup-deferred decision for the Dungeon Platformer mixed sheet. The H5.55 measured-grid mapping remains accepted for draft planning/reference, but no cleaned derived candidate is accepted because baked checkerboard/lattice overlaps gray dungeon art, UI surfaces, and stone/platform regions. Future path should be selective regeneration or true-alpha per-lane replacement rather than bulk cleanup. Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.
+
+## H5.57 Shared FX / Feedback Deferred Decision Note
+
+H5.57 records a docs-only cleanup-deferred decision for `assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png`. The source is `1024x1024` RGB with no alpha, and the sheet is dominated by soft fragile FX such as glows, smoke, dust, fire, sparkles, rain, clouds, light blooms, magic rings, streaks, and bursts. These are high-risk fake-checker cleanup targets because the background is baked into the effect edges.
+
+The sheet remains reference-only / concept-only and is not a runtime atlas. Shared FX should be particle-first where practical. If a concrete game later needs a sprite FX, regenerate or export that specific asset as true-alpha and run the normal asset workflow from intake onward. H5.57 created no mapping, sourceRects, cleanup candidate, derived PNG, evidence PNG, runtime FX, particle implementation, gameplay feedback behavior, or game wiring.
