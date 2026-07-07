@@ -1,0 +1,1188 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-region-mapping",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-walls",
+  "operationalType": "topdown-wall-region-manifest",
+  "sourceSheet": "assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png",
+  "sourceDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "transparency": {
+    "mode": "Format24bppRgb",
+    "hasAlpha": false,
+    "finding": "Source is RGB with no alpha channel; transparency is not present. Cleanup is deferred."
+  },
+  "layoutFinding": {
+    "type": "regular-8x8-grid-source-sheet",
+    "gridColumns": 8,
+    "gridRows": 8,
+    "cellSize": {
+      "w": 128,
+      "h": 128
+    },
+    "finding": "Draft mapping follows the visible 8x8 wall/boundary construction sheet structure. Region inventory only; not a runtime tilemap/autotile approval."
+  },
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.walls.north-wall-segment",
+      "label": "north wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 2,
+      "id": "topdown.walls.cracked-north-wall-segment",
+      "label": "cracked north wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 128,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 3,
+      "id": "topdown.walls.outer-wall-corner",
+      "label": "outer wall corner",
+      "category": "wall-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 256,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 4,
+      "id": "topdown.walls.inner-wall-corner",
+      "label": "inner wall corner",
+      "category": "wall-interior-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 384,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 5,
+      "id": "topdown.walls.open-doorway",
+      "label": "open doorway",
+      "category": "doorway",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 6,
+      "id": "topdown.walls.wooden-door",
+      "label": "wooden door",
+      "category": "door",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 7,
+      "id": "topdown.walls.barred-gate",
+      "label": "barred gate",
+      "category": "gate",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 8,
+      "id": "topdown.walls.stone-arch",
+      "label": "stone arch",
+      "category": "arch",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 9,
+      "id": "topdown.walls.west-wall-segment",
+      "label": "west wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 0,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 10,
+      "id": "topdown.walls.east-wall-segment",
+      "label": "east wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 128,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 11,
+      "id": "topdown.walls.corner-block",
+      "label": "corner block",
+      "category": "wall-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 256,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 12,
+      "id": "topdown.walls.ruined-wall-block",
+      "label": "ruined wall block",
+      "category": "ruin-wall",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 384,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 13,
+      "id": "topdown.walls.stone-pillar",
+      "label": "stone pillar",
+      "category": "pillar",
+      "wallRole": "structural-prop",
+      "objectRole": "structural-prop",
+      "sourceRect": {
+        "x": 512,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 14,
+      "id": "topdown.walls.cracked-stone-pillar",
+      "label": "cracked stone pillar",
+      "category": "pillar",
+      "wallRole": "structural-prop",
+      "objectRole": "structural-prop",
+      "sourceRect": {
+        "x": 640,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 15,
+      "id": "topdown.walls.wall-torch",
+      "label": "wall torch",
+      "category": "torch",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 768,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 16,
+      "id": "topdown.walls.wall-banner",
+      "label": "wall banner",
+      "category": "banner",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 896,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 17,
+      "id": "topdown.walls.wood-fence-horizontal",
+      "label": "wood fence horizontal",
+      "category": "fence",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 0,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 18,
+      "id": "topdown.walls.wood-fence-vertical",
+      "label": "wood fence vertical",
+      "category": "fence",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 128,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 19,
+      "id": "topdown.walls.fence-corner",
+      "label": "fence corner",
+      "category": "fence",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 256,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 20,
+      "id": "topdown.walls.wood-crate",
+      "label": "wood crate",
+      "category": "crate",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 384,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 21,
+      "id": "topdown.walls.barrel",
+      "label": "barrel",
+      "category": "barrel",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 512,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 22,
+      "id": "topdown.walls.wall-rubble-rock",
+      "label": "wall rubble rock",
+      "category": "rock",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 640,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 23,
+      "id": "topdown.walls.wall-side-bush",
+      "label": "wall-side bush",
+      "category": "bush",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 768,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 24,
+      "id": "topdown.walls.small-wall-prop",
+      "label": "small wall prop",
+      "category": "decorative-prop",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 896,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 25,
+      "id": "topdown.walls.magic-sealed-door",
+      "label": "magic sealed door",
+      "category": "magic-door-or-seal",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 26,
+      "id": "topdown.walls.locked-door",
+      "label": "locked door",
+      "category": "lock-door",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 27,
+      "id": "topdown.walls.reinforced-door",
+      "label": "reinforced door",
+      "category": "door",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 28,
+      "id": "topdown.walls.metal-gate",
+      "label": "metal gate",
+      "category": "gate",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 29,
+      "id": "topdown.walls.broken-arch",
+      "label": "broken arch",
+      "category": "arch",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 30,
+      "id": "topdown.walls.dark-wall-segment",
+      "label": "dark wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 640,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 31,
+      "id": "topdown.walls.dark-wall-corner",
+      "label": "dark wall corner",
+      "category": "wall-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 768,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 32,
+      "id": "topdown.walls.dark-inner-wall-corner",
+      "label": "dark inner wall corner",
+      "category": "wall-interior-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 896,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 33,
+      "id": "topdown.walls.stone-boundary-segment",
+      "label": "stone boundary segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 0,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 34,
+      "id": "topdown.walls.stone-boundary-corner",
+      "label": "stone boundary corner",
+      "category": "wall-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 128,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 35,
+      "id": "topdown.walls.round-pillar",
+      "label": "round pillar",
+      "category": "pillar",
+      "wallRole": "structural-prop",
+      "objectRole": "structural-prop",
+      "sourceRect": {
+        "x": 256,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 36,
+      "id": "topdown.walls.square-pillar",
+      "label": "square pillar",
+      "category": "pillar",
+      "wallRole": "structural-prop",
+      "objectRole": "structural-prop",
+      "sourceRect": {
+        "x": 384,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 37,
+      "id": "topdown.walls.lit-torch",
+      "label": "lit torch",
+      "category": "torch",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 512,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 38,
+      "id": "topdown.walls.red-banner",
+      "label": "red banner",
+      "category": "banner",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 640,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 39,
+      "id": "topdown.walls.hanging-sign-or-plaque",
+      "label": "hanging sign or plaque",
+      "category": "decorative-prop",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 768,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 40,
+      "id": "topdown.walls.uncertain-wall-part",
+      "label": "uncertain wall part",
+      "category": "uncertain",
+      "wallRole": "review-candidate",
+      "objectRole": "review-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 41,
+      "id": "topdown.walls.broken-ruin-wall",
+      "label": "broken ruin wall",
+      "category": "ruin-wall",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 0,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 42,
+      "id": "topdown.walls.ruin-wall-corner",
+      "label": "ruin wall corner",
+      "category": "ruin-wall",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 128,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 43,
+      "id": "topdown.walls.stone-pile",
+      "label": "stone pile",
+      "category": "rock",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 256,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 44,
+      "id": "topdown.walls.rubble-cluster",
+      "label": "rubble cluster",
+      "category": "rock",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 384,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 45,
+      "id": "topdown.walls.mossy-bush",
+      "label": "mossy bush",
+      "category": "bush",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 512,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 46,
+      "id": "topdown.walls.crate-stack",
+      "label": "crate stack",
+      "category": "crate",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 640,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 47,
+      "id": "topdown.walls.barrel-stack",
+      "label": "barrel stack",
+      "category": "barrel",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 768,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 48,
+      "id": "topdown.walls.small-prop-cluster",
+      "label": "small prop cluster",
+      "category": "decorative-prop",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 896,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 49,
+      "id": "topdown.walls.doorway-threshold",
+      "label": "doorway threshold",
+      "category": "doorway",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 50,
+      "id": "topdown.walls.closed-door-variant",
+      "label": "closed door variant",
+      "category": "door",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 51,
+      "id": "topdown.walls.locked-door-variant",
+      "label": "locked door variant",
+      "category": "lock-door",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 52,
+      "id": "topdown.walls.magic-portal-door-variant",
+      "label": "magic portal door variant",
+      "category": "magic-door-or-seal",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 53,
+      "id": "topdown.walls.gate-variant",
+      "label": "gate variant",
+      "category": "gate",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 54,
+      "id": "topdown.walls.arch-variant",
+      "label": "arch variant",
+      "category": "arch",
+      "wallRole": "passage-or-blocker-candidate",
+      "objectRole": "passage-or-blocker-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 55,
+      "id": "topdown.walls.large-wall-slab",
+      "label": "large wall slab",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 768,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 56,
+      "id": "topdown.walls.large-wall-corner",
+      "label": "large wall corner",
+      "category": "wall-corner",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 896,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 57,
+      "id": "topdown.walls.uncertain-boundary-cell",
+      "label": "uncertain boundary cell",
+      "category": "uncertain",
+      "wallRole": "review-candidate",
+      "objectRole": "review-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 58,
+      "id": "topdown.walls.decorative-wall-cell",
+      "label": "decorative wall cell",
+      "category": "decorative-prop",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 128,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 59,
+      "id": "topdown.walls.pillar-base",
+      "label": "pillar base",
+      "category": "pillar",
+      "wallRole": "structural-prop",
+      "objectRole": "structural-prop",
+      "sourceRect": {
+        "x": 256,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 60,
+      "id": "topdown.walls.torch-or-light-cell",
+      "label": "torch or light cell",
+      "category": "torch",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 384,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 61,
+      "id": "topdown.walls.banner-or-flag-cell",
+      "label": "banner or flag cell",
+      "category": "banner",
+      "wallRole": "decorative-or-obstacle-prop",
+      "objectRole": "decorative-or-obstacle-prop",
+      "sourceRect": {
+        "x": 512,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 62,
+      "id": "topdown.walls.fence-or-railing-cell",
+      "label": "fence or railing cell",
+      "category": "fence",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 640,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 63,
+      "id": "topdown.walls.final-wall-segment",
+      "label": "final wall segment",
+      "category": "wall-segment",
+      "wallRole": "boundary-piece",
+      "objectRole": "boundary-piece",
+      "sourceRect": {
+        "x": 768,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    },
+    {
+      "index": 64,
+      "id": "topdown.walls.uncertain-final-cell",
+      "label": "uncertain final cell",
+      "category": "uncertain",
+      "wallRole": "review-candidate",
+      "objectRole": "review-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Draft H5.61 grid-cell region mapping only. Source inventory and semantic classification for later cleanup/planning. No collision, pathfinding, wall autotiling, placement, door behavior, or runtime tilemap use approved."
+    }
+  ],
+  "reviewNotes": [
+    "H5.61 maps topdown walls as draft source inventory only.",
+    "No collision, pathfinding, placement, wall autotiling, door behavior, or runtime tilemap use approved.",
+    "Categories are provisional until H5.62 human review."
+  ]
+}

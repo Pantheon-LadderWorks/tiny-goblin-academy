@@ -317,3 +317,11 @@ All notable changes to this project will be documented in this file.
 - Cleanup candidate is not accepted because baked checkerboard/lattice overlaps gray dungeon art, UI surfaces, and stone/platform regions.
 - No derived cleanup candidate is accepted; future path is selective regeneration or true-alpha per-lane replacement.
 - Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.
+
+## H5.61 - Topdown Walls Region Mapping
+
+- Mapped the Topdown Walls source sheet as a draft 64-region inventory manifest.
+- Source path: ssets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png.
+- Source metadata: 1024x1024 RGB with no alpha channel.
+- Created H5.61 evidence for bbox overlay, contact sheet, region table, source inspection, and category preview.
+- Runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.

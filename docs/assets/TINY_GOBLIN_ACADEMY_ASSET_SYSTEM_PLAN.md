@@ -695,3 +695,7 @@ H5.60B corrects the H5.60 blank-cell identities. Region 30 is blank/checkerboard
 Final blank placeholder cells are regions 30, 31, and 64. Partial checkerboard/content cells 25 and 35 remain water/checkerboard terrain candidates, 32 and 36 remain slime/checkerboard terrain candidates, and 37, 38, and 39 remain grass/checkerboard terrain candidates.
 
 H5.60B preserves the H5.60 review status and runtime boundary: `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use` / `not-runtime-approved`. It does not approve cleanup, runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, derived images, or game/runtime wiring.
+
+## H5.61 Topdown Walls Region Mapping Note
+
+H5.61 mapped the Topdown Walls source sheet at ssets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png as a draft 64-region inventory manifest. The source is 1024x1024 RGB with no alpha channel. The mapping is source inventory and semantic classification only; runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.
