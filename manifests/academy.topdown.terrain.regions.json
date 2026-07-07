@@ -1,0 +1,1278 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown",
+  "operationalType": "terrain-region-mapping",
+  "sourceSheet": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+  "sourceDimensions": {
+    "width": 1024,
+    "height": 1024
+  },
+  "transparencyFinding": "RGB source with no alpha channel; checker-style background is baked/fake transparency.",
+  "measuredGrid": {
+    "type": "regular-visible-grid",
+    "columns": 8,
+    "rows": 8,
+    "cellWidth": 128,
+    "cellHeight": 128,
+    "xEdges": [
+      0,
+      128,
+      256,
+      384,
+      512,
+      640,
+      768,
+      896,
+      1024
+    ],
+    "yEdges": [
+      0,
+      128,
+      256,
+      384,
+      512,
+      640,
+      768,
+      896,
+      1024
+    ],
+    "finding": "Grid separators align to 128px increments across the 1024x1024 source; sourceRects follow full grid cells, including blank placeholder cells."
+  },
+  "regions": [
+    {
+      "id": "topdown.terrain.stone-floor-clean",
+      "index": 1,
+      "label": "Stone floor clean",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.stone-floor-cracked",
+      "index": 2,
+      "label": "Stone floor cracked",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.stone-floor-mossy",
+      "index": 3,
+      "label": "Stone floor mossy",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.stone-floor-dark",
+      "index": 4,
+      "label": "Stone floor dark",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-floor-clean",
+      "index": 5,
+      "label": "Grass floor clean",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-floor-clean",
+      "index": 6,
+      "label": "Dirt floor clean",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 640,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "dirt-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.leaf-litter-floor",
+      "index": 7,
+      "label": "Leaf litter floor",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "dirt-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.slime-pool-large",
+      "index": 8,
+      "label": "Large slime pool",
+      "category": "slime-liquid-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "slime-liquid",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Slime/liquid-like terrain; cleanup and hazard/slow behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-vertical-left-grass",
+      "index": 9,
+      "label": "Dirt path vertical left grass",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-vertical",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-vertical-centered",
+      "index": 10,
+      "label": "Dirt path vertical centered",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-vertical",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-horizontal",
+      "index": 11,
+      "label": "Dirt path horizontal",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-horizontal",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-corner-bottom-left",
+      "index": 12,
+      "label": "Dirt path corner bottom-left",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-corner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-curve-left",
+      "index": 13,
+      "label": "Dirt path curve left",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-curve",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-path-curve-right",
+      "index": 14,
+      "label": "Dirt path curve right",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 640,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "path-curve",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-corner-bottom-left",
+      "index": 15,
+      "label": "Grass corner bottom-left",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-corner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-corner-bottom-right",
+      "index": 16,
+      "label": "Grass corner bottom-right",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-corner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-open",
+      "index": 17,
+      "label": "Open water",
+      "category": "water-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "water-open",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-shore-north-left",
+      "index": 18,
+      "label": "Water shore north left",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "shore-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-shore-north-right",
+      "index": 19,
+      "label": "Water shore north right",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "shore-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.river-edge-west",
+      "index": 20,
+      "label": "River edge west",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "river-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.river-edge-east",
+      "index": 21,
+      "label": "River edge east",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "river-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-diagonal-shore-left",
+      "index": 22,
+      "label": "Water diagonal shore left",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 640,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "diagonal-shore",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-diagonal-shore-center",
+      "index": 23,
+      "label": "Water diagonal shore center",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "diagonal-shore",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-diagonal-shore-right",
+      "index": 24,
+      "label": "Water diagonal shore right",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "diagonal-shore",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-corner-southeast",
+      "index": 25,
+      "label": "Water corner southeast",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "water-corner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-shore-south-left",
+      "index": 26,
+      "label": "Water shore south left",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "shore-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-shore-south-right",
+      "index": 27,
+      "label": "Water shore south right",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "shore-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.river-vertical-west-bank",
+      "index": 28,
+      "label": "River vertical west bank",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "river-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.river-corner-east-bank",
+      "index": 29,
+      "label": "River corner east bank",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "river-corner",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.empty-cell-row4-col6",
+      "index": 30,
+      "label": "Empty cell row 4 col 6",
+      "category": "blank-empty-cell",
+      "sourceRect": {
+        "x": 640,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "blank-empty",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+      ]
+    },
+    {
+      "id": "topdown.terrain.empty-cell-row4-col7",
+      "index": 31,
+      "label": "Empty cell row 4 col 7",
+      "category": "blank-empty-cell",
+      "sourceRect": {
+        "x": 768,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "blank-empty",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+      ]
+    },
+    {
+      "id": "topdown.terrain.slime-stone-corner-top-right",
+      "index": 32,
+      "label": "Slime stone corner top-right",
+      "category": "slime-liquid-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "slime-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Slime/liquid-like terrain; cleanup and hazard/slow behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.water-shore-west-vertical",
+      "index": 33,
+      "label": "Water shore west vertical",
+      "category": "shore-edge-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "shore-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.pebble-water-floor",
+      "index": 34,
+      "label": "Pebble water floor",
+      "category": "water-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "water-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.small-water-puddle",
+      "index": 35,
+      "label": "Small water puddle",
+      "category": "water-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "water-puddle",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.slime-edge-southwest",
+      "index": 36,
+      "label": "Slime edge southwest",
+      "category": "slime-liquid-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "slime-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Slime/liquid-like terrain; cleanup and hazard/slow behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-edge-south",
+      "index": 37,
+      "label": "Grass edge south",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-strip-vertical",
+      "index": 38,
+      "label": "Grass strip vertical",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 640,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.empty-cell-row5-col7",
+      "index": 39,
+      "label": "Empty cell row 5 col 7",
+      "category": "blank-empty-cell",
+      "sourceRect": {
+        "x": 768,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "blank-empty",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+      ]
+    },
+    {
+      "id": "topdown.terrain.slime-stone-corner-bottom-right",
+      "index": 40,
+      "label": "Slime stone corner bottom-right",
+      "category": "slime-liquid-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "slime-edge",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Slime/liquid-like terrain; cleanup and hazard/slow behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.goblin-crest-floor-tile",
+      "index": 41,
+      "label": "Goblin crest floor tile",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "special-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.magic-circle-floor-tile",
+      "index": 42,
+      "label": "Magic circle floor tile",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 128,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "magic-circle",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.glowing-floor-tile",
+      "index": 43,
+      "label": "Glowing floor tile",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 256,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "glowing-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.caution-stripe-floor-tile",
+      "index": 44,
+      "label": "Caution stripe floor tile",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "caution-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.split-stone-seam-tile",
+      "index": 45,
+      "label": "Split stone seam tile",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-seam",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.portal-swirl-floor-tile",
+      "index": 46,
+      "label": "Portal swirl floor tile",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 640,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "portal-swirl",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.arrow-floor-tile",
+      "index": 47,
+      "label": "Arrow floor tile",
+      "category": "flag-status-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "direction-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Marker/status-like terrain cell; no gameplay state or direction behavior approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.flag-marker-goblin",
+      "index": 48,
+      "label": "Goblin flag marker tile",
+      "category": "flag-status-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "flag-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Marker/status-like terrain cell; no gameplay state or direction behavior approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.goblin-crest-floor-tile-alt",
+      "index": 49,
+      "label": "Goblin crest floor tile alternate",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "special-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.magic-circle-floor-tile-alt",
+      "index": 50,
+      "label": "Magic circle floor tile alternate",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 128,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "magic-circle",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.glowing-floor-tile-alt",
+      "index": 51,
+      "label": "Glowing floor tile alternate",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 256,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "glowing-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.caution-stripe-floor-tile-alt",
+      "index": 52,
+      "label": "Caution stripe floor tile alternate",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "caution-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.split-stone-seam-tile-alt",
+      "index": 53,
+      "label": "Split stone seam tile alternate",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-seam",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.portal-swirl-floor-tile-alt",
+      "index": 54,
+      "label": "Portal swirl floor tile alternate",
+      "category": "portal-special-marker",
+      "sourceRect": {
+        "x": 640,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "portal-swirl",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Special marker / portal-like tile; no runtime effect or interaction approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.arrow-floor-tile-alt",
+      "index": 55,
+      "label": "Arrow floor tile alternate",
+      "category": "flag-status-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "direction-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Marker/status-like terrain cell; no gameplay state or direction behavior approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.flag-marker-star",
+      "index": 56,
+      "label": "Star flag marker tile",
+      "category": "flag-status-tile",
+      "sourceRect": {
+        "x": 896,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "flag-marker",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Marker/status-like terrain cell; no gameplay state or direction behavior approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.grass-base-tile",
+      "index": 57,
+      "label": "Grass base tile",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 0,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "grass-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dirt-base-tile",
+      "index": 58,
+      "label": "Dirt base tile",
+      "category": "dirt-path-tile",
+      "sourceRect": {
+        "x": 128,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "dirt-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.gray-stone-base-tile",
+      "index": 59,
+      "label": "Gray stone base tile",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 256,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.dark-stone-base-tile",
+      "index": 60,
+      "label": "Dark stone base tile",
+      "category": "stone-special-tile",
+      "sourceRect": {
+        "x": 384,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "stone-floor",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.mossy-ground-base-tile",
+      "index": 61,
+      "label": "Mossy ground base tile",
+      "category": "grass-floor-tile",
+      "sourceRect": {
+        "x": 512,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "mossy-ground",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Terrain tile candidate; no collision/pathing/runtime tilemap approval."
+      ]
+    },
+    {
+      "id": "topdown.terrain.teal-water-base-tile",
+      "index": 62,
+      "label": "Teal water base tile",
+      "category": "water-tile",
+      "sourceRect": {
+        "x": 640,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "water-open",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Water/shore terrain candidate; collision/pathing/swim behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.slime-pad-base-tile",
+      "index": 63,
+      "label": "Slime pad base tile",
+      "category": "slime-liquid-tile",
+      "sourceRect": {
+        "x": 768,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "slime-pad",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Slime/liquid-like terrain; cleanup and hazard/slow behavior not approved."
+      ]
+    },
+    {
+      "id": "topdown.terrain.empty-cell-row8-col8",
+      "index": 64,
+      "label": "Empty cell row 8 col 8",
+      "category": "blank-empty-cell",
+      "sourceRect": {
+        "x": 896,
+        "y": 896,
+        "width": 128,
+        "height": 128
+      },
+      "terrainRole": "blank-empty",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+      ]
+    }
+  ],
+  "nonGoals": [
+    "No source PNG modification.",
+    "No cleanup candidate.",
+    "No derived PNGs.",
+    "No runtime tilemap approval.",
+    "No collision or pathfinding rules.",
+    "No placement data.",
+    "No topdown/walls or topdown/objects processing.",
+    "No mixed Slime Quest playfield pack processing.",
+    "No game code changes."
+  ],
+  "notes": [
+    "H5.59 maps the topdown terrain source only.",
+    "All regions remain draft-review / needs-human-review / not-runtime-approved.",
+    "Blank cells are explicitly mapped as blank-empty-cell inventory entries, not runtime candidates."
+  ]
+}

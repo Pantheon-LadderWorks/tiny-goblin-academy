@@ -671,3 +671,11 @@ Accepted routing:
 4. `topdown/objects` is primary lane 3.
 
 H5.58B did not create cleanup outputs, region manifests, placement/collision/interaction data, runtime atlases, or game/runtime wiring.
+
+## H5.59 Topdown Terrain Region Mapping Note
+
+H5.59 creates a draft 8x8 measured-grid region manifest for `assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png`. The source is `1024x1024` RGB with no alpha, so the checker-style background is baked/fake transparency.
+
+The terrain sheet grid measures as 8 columns by 8 rows with 128px cells. H5.59 maps all 64 grid cells as draft-review regions, including four explicit `blank-empty-cell` placeholders. Categories include grass/floor, dirt/path, water, shore/edge, slime/liquid, stone/special, portal/special marker, and flag/status tiles.
+
+This is a semantic terrain inventory only. It does not create cleanup outputs, derived PNGs, runtime tilemaps, collision/pathfinding/placement data, portal/water/slime behavior, topdown wall/object processing, mixed Slime Quest pack processing, or game wiring.
