@@ -636,3 +636,7 @@ H5.53 accepted the H5.52B Farm Settlement cleanup candidate for draft pipeline u
 ## H5.55 Dungeon Platformer Region Human Review Note
 
 H5.55 accepted the H5.54 Dungeon Platformer measured-grid region mapping for draft cleanup and planning use. The reviewed map contains 40 measured-grid regions using the irregular baked grid edges X 0, 165, 344, 523, 688, 867, 1046, 1211, 1376 and Y 0, 161, 326, 479, 630, 768. Split-aware mixed-lane classification is preserved. Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.
+
+## H5.56 Dungeon Platformer Cleanup Deferred Note
+
+H5.56 records a docs-only cleanup-deferred decision for the Dungeon Platformer mixed sheet. The H5.55 measured-grid mapping remains accepted for draft planning/reference, but no cleaned derived candidate is accepted because baked checkerboard/lattice overlaps gray dungeon art, UI surfaces, and stone/platform regions. Future path should be selective regeneration or true-alpha per-lane replacement rather than bulk cleanup. Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.

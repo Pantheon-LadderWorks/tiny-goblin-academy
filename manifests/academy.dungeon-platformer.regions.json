@@ -50,7 +50,7 @@
   },
   "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
-  "cleanupEligibility": "candidate-after-human-review",
+  "cleanupEligibility": "deferred",
   "regions": [
     {
       "id": "dungeon-platformer.stone-brick-floor-tile",
@@ -1265,6 +1265,26 @@
     "This sheet remains split-aware and mixed-lane.",
     "Future cleanup should preserve split-lane risk notes.",
     "Green slime enemy remains a candidate only, not animation/runtime-approved.",
-    "No collision, hitbox, hurtbox, placement, animation, gameplay behavior, or runtime wiring approved."
-  ]
+    "No collision, hitbox, hurtbox, placement, animation, gameplay behavior, or runtime wiring approved.",
+    "H5.56 cleanup deferred: broad or conservative cleanup is not acceptable for this source sheet.",
+    "The H5.55 measured-grid mapping remains accepted for draft planning/reference.",
+    "No derived Dungeon Platformer cleanup candidate is accepted.",
+    "Future path should be selective regeneration or true-alpha lane-specific replacement, not bulk cleanup."
+  ],
+  "cleanupDecision": {
+    "decision": "cleanup-deferred",
+    "reason": "baked checkerboard/lattice overlaps gray dungeon art and mixed sheet content",
+    "attemptedLane": "H5.56",
+    "generalCleanupViable": false,
+    "recommendedFutureUse": "reference-only / regenerate true-alpha per needed lane",
+    "runtimeEligibility": "not-runtime-approved",
+    "cleanupEligibility": "deferred",
+    "notes": [
+      "broad cleanup damages gray/stone assets",
+      "conservative cleanup leaves visible grid/checker artifacts",
+      "lattice-aware cleanup still leaves artifacts and risks asset damage",
+      "no derived cleanup candidate accepted",
+      "no runtime/collision/animation/placement/gameplay approval"
+    ]
+  }
 }

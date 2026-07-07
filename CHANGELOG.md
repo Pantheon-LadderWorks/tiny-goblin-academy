@@ -297,3 +297,11 @@ All notable changes to this project will be documented in this file.
 - Accepted measured grid edges: X 0, 165, 344, 523, 688, 867, 1046, 1211, 1376; Y 0, 161, 326, 479, 630, 768.
 - Split-aware mixed-lane classification is preserved for future cleanup and planning.
 - Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.
+
+## H5.56 - Dungeon Platformer Cleanup Deferred Decision
+
+- Recorded docs-only cleanup-deferred decision for the Dungeon Platformer mixed sheet.
+- H5.55 measured-grid mapping remains accepted for draft planning/reference.
+- Cleanup candidate is not accepted because baked checkerboard/lattice overlaps gray dungeon art, UI surfaces, and stone/platform regions.
+- No derived cleanup candidate is accepted; future path is selective regeneration or true-alpha per-lane replacement.
+- Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.
