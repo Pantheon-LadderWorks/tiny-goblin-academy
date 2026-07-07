@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.52 Farm Settlement Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions. Preserved the 1408x768 layout, kept the source PNG untouched, generated cleanup evidence, and retained fragile glow/fire/weather/sun/moon/banner/goblin edge risks for human review; no sourceRect remapping, scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, or game wiring occurred.
+
 * **H5.50B Farm Settlement Bounds Correction**: Corrected horizontal sourceRect bounds for Farm Settlement regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 after human review flagged right-edge clipping and neighboring-asset bleed. Regenerated bbox/contact/table evidence; no vertical padding changes, cleanup, source PNG edits, gameplay logic, functional slot mapping, or runtime wiring occurred.
 
 * **H5.50 Farm Settlement Region Mapping**: Created a draft region manifest and evidence set for the Farm Settlement source sheet. Mapped 32 draft-review regions across crop states, resource props/icons, tools, buildings, terrain props, worker/animal symbols, and status/weather icons; confirmed the RGBA source is fully opaque fake transparency; no cleanup, functional slot mapping, gameplay logic, or runtime wiring occurred.
@@ -256,3 +258,12 @@ All notable changes to this project will be documented in this file.
 - Final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 were accepted.
 - Cleanup risk notes and correction history remain preserved.
 - Cleanup, derived assets, functional slot mapping, scene-anchor planning, and runtime/game wiring remain deferred.
+
+## H5.52 - Farm Settlement Cleanup Candidate
+
+- Created `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png` as a derived transparent cleanup candidate.
+- Added `manifests/academy.farm-settlement.cleanup-candidate.json` with all 32 reviewed regions preserved as draft / needs-human-review / not-runtime-approved.
+- Generated cleanup evidence under `assets/academy/evidence/h5-52-farm-settlement-cleanup-candidate/`.
+- Preserved the source PNG, reviewed sourceRects, ids, labels, categories, and functional-surface candidate metadata.
+- Kept glow, fire, storm, sun, moon, banner, goblin outline, crop glow, water droplet glow, and thin-shape cleanup risks flagged for human review.
+- No scene-anchor planning, functional slot mapping, gameplay logic, placement approval, runtime approval, or Farm Settlement game wiring occurred.

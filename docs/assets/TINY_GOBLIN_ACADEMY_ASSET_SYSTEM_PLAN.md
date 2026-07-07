@@ -616,3 +616,7 @@ H5.50B corrected horizontal bounds for Farm Settlement regions 1, 2, 3, 4, 10, 1
 ## H5.51 Farm Settlement Region Human Review Note
 
 H5.51 accepted the H5.50B corrected Farm Settlement region mapping for draft cleanup and planning use. The reviewed map contains 32 regions, with final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 accepted. Cleanup risk notes and correction history remain preserved. Cleanup, derived assets, functional slot mapping, scene-anchor planning, and Farm Settlement runtime/game wiring remain deferred.
+
+## H5.52 Farm Settlement Cleanup Candidate Note
+
+H5.52 created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions at `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png`, with cleanup metadata recorded in `manifests/academy.farm-settlement.cleanup-candidate.json`. The source PNG remains untouched, the 1408x768 layout and reviewed sourceRects are preserved, and fragile glow/fire/weather/sun/moon/banner/goblin-edge cleanup risks remain flagged for human review. This is draft cleanup/planning evidence only: no scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, placement approval, or Farm Settlement game wiring occurred.
