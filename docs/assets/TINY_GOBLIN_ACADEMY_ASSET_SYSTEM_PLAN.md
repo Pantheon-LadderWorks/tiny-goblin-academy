@@ -380,26 +380,26 @@ H5.54 created a split-aware draft measured-grid-cell region manifest for `assets
 * **Top-down terrain/floor construction sheet**
   * Path: `assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png`
   * Intended Use: Shared top-down terrain and floor tile pantry for Dungeon Key Run and Top-Down Slime Quest.
-  * Status: concept / v0.1 / needs manifest.
-  * Notes: Contains center, edge, corner, water, path, slime, and special floor tiles. Future manifests will select only the tiles actually used.
+  * Status: concept / v0.1 / H5.58 inventoried / primary processing source / needs region mapping.
+  * Notes: Contains center, edge, corner, water, path, slime, and special floor tiles. H5.58 routes this as the first primary topdown processing lane because terrain defines the base map surface language. Future manifests will select only the tiles actually used.
 
 * **Top-down wall/boundary construction sheet**
   * Path: `assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png`
   * Intended Use: Shared top-down wall, boundary, gate, doorway, and obstacle pantry for map construction.
-  * Status: concept / v0.1 / needs manifest.
-  * Notes: Intended to support inward-facing room boundaries and collision edges. Future manifests must verify which wall/corner pieces align cleanly.
+  * Status: concept / v0.1 / H5.58 inventoried / primary processing source / needs region mapping.
+  * Notes: Intended to support inward-facing room boundaries and collision edges. H5.58 routes this as the second primary topdown processing lane after terrain. Future manifests must verify which wall/corner pieces align cleanly; collision behavior remains unapproved.
 
 * **Top-down environment objects sheet**
   * Path: `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
   * Intended Use: Shared top-down placed props and interactables for Dungeon Key Run and Top-Down Slime Quest.
-  * Status: concept / v0.1 / needs manifest.
-  * Notes: Object pantry only; games should use manifest-approved objects and ignore duplicates or unused extras.
+  * Status: concept / v0.1 / H5.58 inventoried / primary processing source / needs region mapping.
+  * Notes: Object pantry only; games should use manifest-approved objects and ignore duplicates or unused extras. H5.58 routes this as the third primary topdown processing lane after terrain and walls so prop placement and interaction semantics stay separate from map construction.
 
 * **Top-Down Slime Quest playfield candidate**
   * Path: `assets/academy/games/top-down-slime-quest/tga-top-down-slime-quest-playfield-pack-concept-v0.1.png`
   * Intended Use: Game 09-specific top-down playfield parts and outdoor/map props.
-  * Status: concept / v0.1 / needs manifest.
-  * Notes: Useful as a game-specific pantry alongside shared top-down terrain/walls/objects.
+  * Status: mixed-reference / H5.58 inventoried / cleanup deferred / not-runtime-approved.
+  * Notes: H5.58 routes this as a mixed/reference concept sheet, not the main Top-Down Slime Quest source of truth. It may be useful as visual reference or later human-routed salvage, but should not be cleaned, mapped, or approved as one unified runtime atlas.
 
 * **One-Room Platformer side-view construction pieces**
   * Path: `assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.1.png`
@@ -646,3 +646,15 @@ H5.56 records a docs-only cleanup-deferred decision for the Dungeon Platformer m
 H5.57 records a docs-only cleanup-deferred decision for `assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png`. The source is `1024x1024` RGB with no alpha, and the sheet is dominated by soft fragile FX such as glows, smoke, dust, fire, sparkles, rain, clouds, light blooms, magic rings, streaks, and bursts. These are high-risk fake-checker cleanup targets because the background is baked into the effect edges.
 
 The sheet remains reference-only / concept-only and is not a runtime atlas. Shared FX should be particle-first where practical. If a concrete game later needs a sprite FX, regenerate or export that specific asset as true-alpha and run the normal asset workflow from intake onward. H5.57 created no mapping, sourceRects, cleanup candidate, derived PNG, evidence PNG, runtime FX, particle implementation, gameplay feedback behavior, or game wiring.
+
+## H5.58 Top-Down Slime Quest Source Inventory + Lane Routing Note
+
+H5.58 inventories the older mixed Top-Down Slime Quest playfield pack and the three main topdown folder sources. The mixed playfield pack is `1024x1024` RGB with no alpha and is routed as a mixed/reference candidate only: not the main source of truth, not a cleanup target, not a unified runtime atlas, and not runtime-approved.
+
+The primary topdown processing lanes are now:
+
+1. `assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png`
+2. `assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png`
+3. `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
+
+All four inspected topdown sources are `1024x1024` RGB with no alpha, so later cleanup/mapping lanes must remain human-review gated. H5.58 created `manifests/academy.topdown.source-inventory.json` and lightweight source-inventory evidence only. It did not create cleanup outputs, region rectangles, runtime atlases, placement/collision/interaction rules, animation approval, or game wiring.

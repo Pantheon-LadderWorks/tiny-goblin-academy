@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown",
+  "operationalType": "source-inventory-and-routing",
+  "sources": [
+    {
+      "path": "assets/academy/games/top-down-slime-quest/tga-top-down-slime-quest-playfield-pack-concept-v0.1.png",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; fake/checker-style background is baked into the source",
+      "sourceRole": "secondary-reference-mixed-split-lane-source",
+      "recommendedLane": "top-down-slime-quest-mixed-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "deferred",
+      "notes": [
+        "This sheet is not the main Top-Down Slime Quest source of truth.",
+        "Treat as a mixed/reference candidate similar to the Dungeon Platformer mixed sheet.",
+        "Do not cleanup or map as one unified runtime atlas.",
+        "Useful only as visual reference or for later human-routed salvage decisions."
+      ]
+    },
+    {
+      "path": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; fake/checker-style background is baked into the source",
+      "sourceRole": "primary-processing-source",
+      "recommendedLane": "topdown-terrain",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "not-started",
+      "notes": [
+        "Primary topdown terrain/floor construction pantry.",
+        "Contains tile-like terrain, paths, water, slime, special floor markers, and ground surfaces.",
+        "Should be processed before walls and objects because terrain defines the base map language.",
+        "No collision, placement, or runtime tilemap approval is granted by this inventory."
+      ]
+    },
+    {
+      "path": "assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; fake/checker-style background is baked into the source",
+      "sourceRole": "primary-processing-source",
+      "recommendedLane": "topdown-walls",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "not-started",
+      "notes": [
+        "Primary topdown wall/boundary construction pantry.",
+        "Contains wall edges, corners, doors, gates, archways, fences, barriers, and boundary props.",
+        "Should be processed after terrain because walls depend on map-edge and room-boundary language.",
+        "No collision, hitbox, blocking, doorway, or runtime wall behavior is approved by this inventory."
+      ]
+    },
+    {
+      "path": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; fake/checker-style background is baked into the source",
+      "sourceRole": "primary-processing-source",
+      "recommendedLane": "topdown-objects",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "not-started",
+      "notes": [
+        "Primary topdown props/interactables/decor pantry.",
+        "Contains chests, switches, portals, signs, ruins, foliage, rocks, crates, barrels, hazards, and decorative objects.",
+        "Should be processed after terrain and walls so props can be classified relative to the map surface language.",
+        "No placement, interaction, collision, reward, hazard, or runtime object behavior is approved by this inventory."
+      ]
+    }
+  ],
+  "recommendedProcessingOrder": [
+    {
+      "step": "H5.59",
+      "lane": "topdown-terrain",
+      "source": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+      "reason": "Terrain/floor construction defines the base topdown map language before walls and props are interpreted."
+    },
+    {
+      "step": "H5.60",
+      "lane": "topdown-walls",
+      "source": "assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png",
+      "reason": "Walls, boundaries, gates, and doors should be classified after the terrain surface language is known."
+    },
+    {
+      "step": "H5.61",
+      "lane": "topdown-objects",
+      "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+      "reason": "Objects, props, interactables, and hazards should be routed after terrain and walls so placement semantics can stay separate."
+    }
+  ],
+  "nonGoals": [
+    "No source PNG modification.",
+    "No cleanup candidates.",
+    "No derived PNGs.",
+    "No unified runtime atlas approval for the mixed playfield pack.",
+    "No sourceRect region mapping.",
+    "No Phaser placement data.",
+    "No collision, hitbox, interaction, pathing, or gameplay rules.",
+    "No animation approval.",
+    "No Top-Down Slime Quest game code changes."
+  ],
+  "notes": [
+    "The mixed Top-Down Slime Quest playfield pack is a map of possibilities, not the pantry source of truth.",
+    "The topdown terrain, walls, and objects folders are the real next processing lanes.",
+    "All four inspected source images are RGB with no alpha, so future cleanup passes must handle fake/checker-style backgrounds cautiously."
+  ]
+}

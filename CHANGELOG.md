@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.58 Top-Down Slime Quest Source Inventory + Lane Routing**: Inventoried the mixed Top-Down Slime Quest playfield pack plus the `topdown/terrain`, `topdown/walls`, and `topdown/objects` source folders. Recorded the mixed playfield pack as reference-only / human-routed salvage candidate, identified the folder sheets as the primary processing lanes, created a draft topdown source-inventory manifest and lightweight evidence previews, and did not create cleanup outputs, region rectangles, runtime atlases, collision/placement/interaction rules, animation approval, or game wiring.
+
 * **H5.57 Shared FX / Feedback Deferred Decision**: Deferred the RGB/no-alpha Shared FX / Feedback concept sheet as reference-only / concept-only. Recorded particle-first replacement policy and true-alpha one-off regeneration fallback; no mapping, sourceRects, cleanup candidate, derived PNG, evidence PNG, runtime FX, particle implementation, gameplay feedback behavior, or game wiring occurred.
 
 * **H5.54 Dungeon Platformer Region Mapping**: Created a split-aware draft measured-grid-cell region manifest and evidence set for the mixed Dungeon Platformer source sheet. Mapped 40 irregular baked-grid cells across top-down terrain, side-view/platformer terrain, shared dungeon props, hazards, pickups, UI/status/control icons, FX candidates, and one slime enemy candidate; confirmed the RGBA source is fully opaque fake transparency; no cleanup, runtime wiring, animation timing, hitbox/collision approval, placement approval, Top-Down Slime Quest processing, or Shared FX processing occurred.
