@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown",
   "operationalType": "terrain-region-mapping",
@@ -594,22 +594,24 @@
       ]
     },
     {
-      "id": "topdown.terrain.empty-cell-row4-col6",
+      "id": "topdown.terrain.partial-grass-edge-tile",
       "index": 30,
-      "label": "Empty cell row 4 col 6",
-      "category": "blank-empty-cell",
+      "label": "Partial grass edge tile",
+      "category": "grass-floor-tile",
       "sourceRect": {
         "x": 640,
         "y": 384,
         "width": 128,
         "height": 128
       },
-      "terrainRole": "blank-empty",
+      "terrainRole": "grass-edge-partial",
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "notes": [
-        "Checkerboard-only placeholder cell; mapped to preserve sheet inventory, not a runtime tile candidate."
+        "H5.60 human review correction: this cell contains visible grass/terrain edge content, not a blank placeholder.",
+        "Accepted as a draft grass-edge terrain candidate for cleanup/planning inventory only.",
+        "No runtime tile behavior, collision, pathfinding, or placement approval."
       ]
     },
     {
@@ -1273,6 +1275,11 @@
   "notes": [
     "H5.59 maps the topdown terrain source only.",
     "All regions remain draft-review / needs-human-review / not-runtime-approved.",
-    "Blank cells are explicitly mapped as blank-empty-cell inventory entries, not runtime candidates."
-  ]
+    "Blank cells are explicitly mapped as blank-empty-cell inventory entries, not runtime candidates.",
+    "H5.60 human review passed with one category correction: region 30 is visible partial grass/terrain edge content, not blank.",
+    "Only regions 31, 39, and 64 remain blank-empty-cell placeholders.",
+    "Special marker/status-like terrain cells remain inventory categories only, not gameplay behavior approvals.",
+    "Runtime tilemap, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, and placement approval remain none."
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
 }

@@ -679,3 +679,11 @@ H5.59 creates a draft 8x8 measured-grid region manifest for `assets/academy/topd
 The terrain sheet grid measures as 8 columns by 8 rows with 128px cells. H5.59 maps all 64 grid cells as draft-review regions, including four explicit `blank-empty-cell` placeholders. Categories include grass/floor, dirt/path, water, shore/edge, slime/liquid, stone/special, portal/special marker, and flag/status tiles.
 
 This is a semantic terrain inventory only. It does not create cleanup outputs, derived PNGs, runtime tilemaps, collision/pathfinding/placement data, portal/water/slime behavior, topdown wall/object processing, mixed Slime Quest pack processing, or game wiring.
+
+## H5.60 Topdown Terrain Region Human Review Note
+
+H5.60 records human review pass for the H5.59 topdown terrain region mapping with one correction: region 30 is not blank. It contains visible partial grass/terrain edge content and is now `grass-floor-tile` with terrain role `grass-edge-partial`.
+
+`manifests/academy.topdown.terrain.regions.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`. All 64 regions and all 128x128 sourceRects are retained. Only regions 31, 39, and 64 remain `blank-empty-cell` placeholders.
+
+Special marker/status-like tiles such as goblin crests, magic circles, glowing floors, caution stripes, portal swirls, arrows, and flag markers are accepted as inventory categories only. H5.60 does not approve runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, cleanup, derived images, or game/runtime wiring.
