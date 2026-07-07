@@ -145,6 +145,16 @@ Validation expectations:
 
 ## 10. Recommended Next Lane
 
+## H5.50B Correction Status
+
+Human review found that regions 1, 2, 3, 4, 10, 17, 19, and 20 needed horizontal bounds correction. H5.50B updated those sourceRects, regenerated the bbox/contact/table evidence, and left the manifest draft / needs-human-review / not-runtime-approved.
+
+Correction report:
+
+```text
+docs/assets/TINY_GOBLIN_ACADEMY_H5_50B_FARM_SETTLEMENT_BOUNDS_CORRECTION.md
+```
+
 Recommended next lane:
 
 ```text

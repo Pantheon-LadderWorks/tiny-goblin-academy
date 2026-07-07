@@ -26,16 +26,16 @@
       "label": "Empty soil plot",
       "category": "crop-plot",
       "sourceRect": {
-        "x": 22,
+        "x": 6,
         "y": 67,
-        "w": 154,
+        "w": 182,
         "h": 108
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Empty tilled soil plot; cleanup should preserve soft soil edge. Draft region mapping only; not runtime-approved.",
+      "notes": "Empty tilled soil plot; cleanup should preserve soft soil edge. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 154, 'h': 108} to {'x': 22, 'y': 67, 'w': 166, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 166, 'h': 108} to {'x': 6, 'y': 67, 'w': 160, 'h': 108} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 6, 'y': 67, 'w': 160, 'h': 108} to {'x': 6, 'y': 67, 'w': 182, 'h': 108} after follow-up review flagged region 1 and the 19/20 boundary.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -43,16 +43,16 @@
       "label": "Seeded soil plot",
       "category": "crop-plot",
       "sourceRect": {
-        "x": 176,
+        "x": 194,
         "y": 67,
-        "w": 176,
+        "w": 170,
         "h": 108
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Seeded tilled plot; small seed dots need review. Draft region mapping only; not runtime-approved.",
+      "notes": "Seeded tilled plot; small seed dots need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 176, 'h': 108} to {'x': 176, 'y': 67, 'w': 188, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 188, 'h': 108} to {'x': 194, 'y': 67, 'w': 170, 'h': 108} to avoid shared-boundary clipping/neighbor bleed.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -60,16 +60,16 @@
       "label": "Sprout soil plot",
       "category": "crop",
       "sourceRect": {
-        "x": 352,
+        "x": 370,
         "y": 51,
-        "w": 176,
+        "w": 170,
         "h": 124
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
-      "notes": "Sprouting plant in soil; curled stem and leaf edges need review. Draft region mapping only; not runtime-approved.",
+      "notes": "Sprouting plant in soil; curled stem and leaf edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 176, 'h': 124} to {'x': 352, 'y': 51, 'w': 188, 'h': 124} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 188, 'h': 124} to {'x': 370, 'y': 51, 'w': 170, 'h': 124} to avoid shared-boundary clipping/neighbor bleed.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -77,16 +77,16 @@
       "label": "Watered sprout soil plot",
       "category": "crop",
       "sourceRect": {
-        "x": 528,
+        "x": 546,
         "y": 36,
-        "w": 176,
+        "w": 170,
         "h": 139
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved.",
+      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 176, 'h': 139} to {'x': 528, 'y': 36, 'w': 188, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 188, 'h': 139} to {'x': 546, 'y': 36, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -179,16 +179,16 @@
       "label": "Wood log bundle",
       "category": "resource-prop",
       "sourceRect": {
-        "x": 201,
+        "x": 194,
         "y": 223,
-        "w": 151,
+        "w": 170,
         "h": 139
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Bundled logs; rope and circular log ends need review. Draft region mapping only; not runtime-approved.",
+      "notes": "Bundled logs; rope and circular log ends need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 151, 'h': 139} to {'x': 201, 'y': 223, 'w': 163, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 163, 'h': 139} to {'x': 194, 'y': 223, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -298,16 +298,16 @@
       "label": "Canvas tent",
       "category": "building",
       "sourceRect": {
-        "x": 22,
+        "x": 6,
         "y": 415,
-        "w": 154,
+        "w": 178,
         "h": 159
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Tent or camp shelter; straps and fabric edges need review. Draft region mapping only; not runtime-approved.",
+      "notes": "Tent or camp shelter; straps and fabric edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 154, 'h': 159} to {'x': 22, 'y': 415, 'w': 166, 'h': 159} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 166, 'h': 159} to {'x': 6, 'y': 415, 'w': 170, 'h': 159} to avoid shared-boundary clipping/neighbor bleed. H5.50B final horizontal correction: sourceRect changed from {'x': 6, 'y': 415, 'w': 170, 'h': 159} to {'x': 6, 'y': 415, 'w': 178, 'h': 159} after human review requested final shared-boundary nudges.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -315,16 +315,16 @@
       "label": "Small farmhouse",
       "category": "building",
       "sourceRect": {
-        "x": 176,
+        "x": 184,
         "y": 401,
-        "w": 176,
+        "w": 168,
         "h": 174
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Small cottage/farmhouse building. Draft region mapping only; not runtime-approved.",
+      "notes": "Small cottage/farmhouse building. Draft region mapping only; not runtime-approved. H5.50B final horizontal correction: sourceRect changed from {'x': 176, 'y': 401, 'w': 176, 'h': 174} to {'x': 184, 'y': 401, 'w': 168, 'h': 174} after human review requested final shared-boundary nudges.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -332,16 +332,16 @@
       "label": "Large farmhouse",
       "category": "building",
       "sourceRect": {
-        "x": 361,
+        "x": 360,
         "y": 389,
-        "w": 167,
+        "w": 188,
         "h": 187
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Larger farmhouse/homestead with porch and stone base. Draft region mapping only; not runtime-approved.",
+      "notes": "Larger farmhouse/homestead with porch and stone base. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 167, 'h': 187} to {'x': 361, 'y': 389, 'w': 183, 'h': 187} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 183, 'h': 187} to {'x': 360, 'y': 389, 'w': 152, 'h': 187} to avoid shared-boundary clipping/neighbor bleed. H5.50B v3 correction: large farmhouse right bound changed from {'x': 360, 'y': 389, 'w': 152, 'h': 187} to {'x': 360, 'y': 389, 'w': 184, 'h': 187} after overlay review showed v2 clipped the house. H5.50B v4 targeted correction: sourceRect changed from {'x': 360, 'y': 389, 'w': 184, 'h': 187} to {'x': 360, 'y': 389, 'w': 188, 'h': 187} after follow-up review flagged region 1 and the 19/20 boundary.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -349,16 +349,16 @@
       "label": "Wood shed",
       "category": "building",
       "sourceRect": {
-        "x": 528,
+        "x": 568,
         "y": 397,
-        "w": 176,
+        "w": 172,
         "h": 175
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
-      "notes": "Small storage shed with crates. Draft region mapping only; not runtime-approved.",
+      "notes": "Small storage shed with crates. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 397, 'w': 176, 'h': 175} to {'x': 552, 'y': 397, 'w': 164, 'h': 175} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 552, 'y': 397, 'w': 164, 'h': 175} to {'x': 546, 'y': 397, 'w': 158, 'h': 175} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 546, 'y': 397, 'w': 158, 'h': 175} to {'x': 568, 'y': 397, 'w': 152, 'h': 175} after follow-up review flagged region 1 and the 19/20 boundary. H5.50B final horizontal correction: sourceRect changed from {'x': 568, 'y': 397, 'w': 152, 'h': 175} to {'x': 568, 'y': 397, 'w': 172, 'h': 175} after human review requested final shared-boundary nudges.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -366,16 +366,16 @@
       "label": "Campfire",
       "category": "fx-icon",
       "sourceRect": {
-        "x": 704,
+        "x": 740,
         "y": 400,
-        "w": 176,
+        "w": 140,
         "h": 176
       },
       "usage": "draft-review",
       "reviewStatus": "needs-human-review",
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved.",
+      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.50B follow-up horizontal bounds correction: sourceRect changed from {'x': 704, 'y': 400, 'w': 176, 'h': 176} to {'x': 728, 'y': 400, 'w': 152, 'h': 176} after human review flagged bleed from region 20 into region 21. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 728, 'y': 400, 'w': 152, 'h': 176} to {'x': 740, 'y': 400, 'w': 140, 'h': 176} to avoid shared-boundary clipping/neighbor bleed.",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -570,6 +570,31 @@
     "H5.50 maps visible Farm Settlement assets for draft review only.",
     "No cleanup output was created.",
     "No runtime wiring, gameplay behavior, functional slot mapping, or scene-anchor planning occurred.",
-    "Visual QA corrected regions 30 and 31: smiling sun and crescent moon are separate icons, not a grouped sun-and-moon asset."
+    "Visual QA corrected regions 30 and 31: smiling sun and crescent moon are separate icons, not a grouped sun-and-moon asset.",
+    "H5.50B corrected horizontal sourceRect bounds for regions 1, 2, 3, 4, 10, 17, 19, and 20; no vertical padding changes were made.",
+    "H5.50B follow-up corrected region 21 left bound to stop capturing bleed from region 20; no vertical padding changes were made.",
+    "H5.50B v2 applied human-guided horizontal tuning for regions 1, 2, 3, 4, 10, 17, 19, 20, and 21 after screenshot review showed remaining shared-boundary clipping/bleed.",
+    "H5.50B v3 restored region 19 right bound after v2 clipped the large farmhouse; region 20 remains shifted right to avoid stealing the house.",
+    "H5.50B v4 adjusted region 1 right padding and retuned the 19/20 boundary: region 19 keeps farmhouse room; region 20 shifts right to avoid farmhouse bleed.",
+    "H5.50B final tuning extended region 20 to meet region 21 and nudged the 17/18 shared boundary right by a few pixels."
+  ],
+  "correctionHistory": [
+    {
+      "id": "H5.50B",
+      "summary": "Corrected horizontal bounds for regions 1, 2, 3, 4, 10, 17, 19, and 20 after human review flagged right-edge clipping and neighboring-asset bleed. Follow-up also tightened region 21 left bound to remove region 20 bleed. H5.50B v2 retuned these bounds from screenshot review to avoid shared-boundary clipping and region 20/21 bleed. Final tuning extended region 20 to meet region 21 and nudged the 17/18 shared boundary right.",
+      "regions": [
+        "farm-settlement.soil-plot-empty",
+        "farm-settlement.soil-plot-seeded",
+        "farm-settlement.soil-plot-sprout",
+        "farm-settlement.soil-plot-watered-sprout",
+        "farm-settlement.wood-log-bundle",
+        "farm-settlement.tent",
+        "farm-settlement.large-farmhouse",
+        "farm-settlement.wood-shed",
+        "farm-settlement.campfire",
+        "farm-settlement.small-farmhouse"
+      ],
+      "reviewStatus": "needs-human-review"
+    }
   ]
 }

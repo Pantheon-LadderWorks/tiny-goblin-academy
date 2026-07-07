@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.50B Farm Settlement Bounds Correction**: Corrected horizontal sourceRect bounds for Farm Settlement regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 after human review flagged right-edge clipping and neighboring-asset bleed. Regenerated bbox/contact/table evidence; no vertical padding changes, cleanup, source PNG edits, gameplay logic, functional slot mapping, or runtime wiring occurred.
+
 * **H5.50 Farm Settlement Region Mapping**: Created a draft region manifest and evidence set for the Farm Settlement source sheet. Mapped 32 draft-review regions across crop states, resource props/icons, tools, buildings, terrain props, worker/animal symbols, and status/weather icons; confirmed the RGBA source is fully opaque fake transparency; no cleanup, functional slot mapping, gameplay logic, or runtime wiring occurred.
 
 * **H5.48C Potion Sorter Regenerated Source Cleanup Candidate**: Ingested Mega's regenerated Potion Sorter sheet as a new v0.2 source artifact, confirmed it is visually cleaner but still RGB/opaque fake transparency, remapped the 32 Potion Sorter regions to the 1698x926 source, regenerated the derived cleanup candidate and evidence, preserved caption exclusions, and kept the lane draft / needs-human-review / not-runtime-approved with no functional slot mapping or runtime wiring.
@@ -237,3 +239,12 @@ All notable changes to this project will be documented in this file.
 - Mapped 32 draft-review regions across crop states, resources, tools, buildings, terrain props, worker/animal symbols, and status/weather icons.
 - Generated bbox overlay, numbered contact sheet, region table preview, and source inspection evidence.
 - Cleanup, functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.
+
+## H5.50B - Farm Settlement Bounds Correction
+
+- Corrected horizontal sourceRect bounds for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21.
+- Added right-side breathing room where assets touched or clipped the bbox edge.
+- Shifted region 20 right to remove neighboring-house bleed from region 19.
+- Shifted region 21 right to stop capturing region 20 bleed, and nudged the 17/18 shared boundary right.
+- Regenerated bbox overlay, numbered contact sheet, and region table preview.
+- No vertical padding changes, cleanup output, source PNG edits, gameplay logic, functional slot mapping, or runtime wiring occurred.

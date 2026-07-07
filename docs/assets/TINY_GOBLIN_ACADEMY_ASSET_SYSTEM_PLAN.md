@@ -608,3 +608,7 @@ H5.49 accepted the H5.48C regenerated Potion Sorter cleanup candidate for draft 
 H5.50 created the Farm Settlement draft region manifest from `assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png`. The source is 1408x768 RGBA, but alpha is fully opaque at 255/255, so the checkerboard-style background is baked/fake transparency.
 
 The pass mapped 32 draft-review regions across crop plots, crop states, resource props/icons, tools, buildings, terrain props, worker/animal symbols, and status/weather icons. No cleanup candidate was created. Functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.
+
+## H5.50B Farm Settlement Bounds Correction Note
+
+H5.50B corrected horizontal bounds for Farm Settlement regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 after human review found right-edge clipping and neighboring-asset bleed. No vertical padding changes were made. Region 20 was shifted right to stop capturing part of region 19's farmhouse, region 21 was shifted right to stop capturing region 20 bleed, and the 17/18 shared boundary was nudged right. The manifest remains draft / needs-human-review / not-runtime-approved, and cleanup, functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.
