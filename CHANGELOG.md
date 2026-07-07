@@ -289,3 +289,11 @@ All notable changes to this project will be documented in this file.
 - Denied region indexes: 4, 7, 13, 21, 30, and 31.
 - Denied regions: arm-settlement.soil-plot-watered-sprout, arm-settlement.withered-crop-plot, arm-settlement.water-drop-token, arm-settlement.campfire, arm-settlement.smiling-sun, and arm-settlement.crescent-moon.
 - Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring.
+
+## H5.55 - Dungeon Platformer Region Human Review
+
+- Accepted the H5.54 Dungeon Platformer measured-grid region mapping for draft cleanup/planning use.
+- Human review passed for 40 measured-grid regions.
+- Accepted measured grid edges: X 0, 165, 344, 523, 688, 867, 1046, 1211, 1376; Y 0, 161, 326, 479, 630, 768.
+- Split-aware mixed-lane classification is preserved for future cleanup and planning.
+- Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.

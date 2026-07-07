@@ -632,3 +632,7 @@ H5.52B corrected the H5.52 Farm Settlement cleanup candidate for six human-flagg
 ## H5.53 Farm Settlement Cleanup Human Review With Exclusions
 
 H5.53 accepted the H5.52B Farm Settlement cleanup candidate for draft pipeline use with explicit exclusions. The candidate contains 32 cleanup regions: 26 accepted and 6 denied. Denied indexes 4, 7, 13, 21, 30, and 31 resolve to arm-settlement.soil-plot-watered-sprout, arm-settlement.withered-crop-plot, arm-settlement.water-drop-token, arm-settlement.campfire, arm-settlement.smiling-sun, and arm-settlement.crescent-moon. Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring.
+
+## H5.55 Dungeon Platformer Region Human Review Note
+
+H5.55 accepted the H5.54 Dungeon Platformer measured-grid region mapping for draft cleanup and planning use. The reviewed map contains 40 measured-grid regions using the irregular baked grid edges X 0, 165, 344, 523, 688, 867, 1046, 1211, 1376 and Y 0, 161, 326, 479, 630, 768. Split-aware mixed-lane classification is preserved. Runtime, collision, hitbox/hurtbox, animation, placement, and dungeon gameplay behavior remain deferred.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "dungeon-platformer",
   "operationalType": "mixed-dungeon-platformer-split-aware-measured-grid-region-manifest",
   "sourceSheet": "assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
@@ -48,7 +48,7 @@
       "enemy/creature candidates requiring separate animation/hitbox review"
     ]
   },
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "cleanupEligibility": "candidate-after-human-review",
   "regions": [
@@ -1218,5 +1218,53 @@
     "SourceRects intentionally follow the measured irregular baked grid-cell structure visible in the sheet.",
     "No cleanup candidate, derived cleaned asset, runtime wiring, animation timing, hitbox/hurtbox approval, collision approval, placement approval, or gameplay logic is created.",
     "This mixed sheet predates the later dedicated top-down and one-room platformer asset lanes; the manifest preserves that split context for later decisions."
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "humanReview": {
+    "reviewId": "H5.55",
+    "decision": "passed",
+    "reviewedCommit": "9b8ee77 docs: map dungeon platformer regions",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 40,
+    "runtimeBoundary": "not-runtime-approved",
+    "measuredGridEdges": {
+      "x": [
+        0,
+        165,
+        344,
+        523,
+        688,
+        867,
+        1046,
+        1211,
+        1376
+      ],
+      "y": [
+        0,
+        161,
+        326,
+        479,
+        630,
+        768
+      ]
+    },
+    "notes": [
+      "H5.54 human review passed in H5.55.",
+      "40 measured-grid Dungeon Platformer regions accepted for draft cleanup/planning use.",
+      "Measured irregular baked grid is the sourceRect truth for this sheet.",
+      "This sheet remains split-aware and mixed-lane.",
+      "Future cleanup should preserve split-lane risk notes.",
+      "Green slime enemy remains a candidate only, not animation/runtime-approved.",
+      "No collision, hitbox, hurtbox, placement, animation, gameplay behavior, or runtime wiring approved."
+    ]
+  },
+  "reviewNotes": [
+    "H5.54 human review passed in H5.55.",
+    "40 measured-grid Dungeon Platformer regions accepted for draft cleanup/planning use.",
+    "Measured irregular baked grid is the sourceRect truth for this sheet.",
+    "This sheet remains split-aware and mixed-lane.",
+    "Future cleanup should preserve split-lane risk notes.",
+    "Green slime enemy remains a candidate only, not animation/runtime-approved.",
+    "No collision, hitbox, hurtbox, placement, animation, gameplay behavior, or runtime wiring approved."
   ]
 }
