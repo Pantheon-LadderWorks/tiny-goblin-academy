@@ -612,3 +612,7 @@ The pass mapped 32 draft-review regions across crop plots, crop states, resource
 ## H5.50B Farm Settlement Bounds Correction Note
 
 H5.50B corrected horizontal bounds for Farm Settlement regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 after human review found right-edge clipping and neighboring-asset bleed. No vertical padding changes were made. Region 20 was shifted right to stop capturing part of region 19's farmhouse, region 21 was shifted right to stop capturing region 20 bleed, and the 17/18 shared boundary was nudged right. The manifest remains draft / needs-human-review / not-runtime-approved, and cleanup, functional slot mapping, settlement gameplay logic, runtime visuals, and game wiring remain deferred.
+
+## H5.51 Farm Settlement Region Human Review Note
+
+H5.51 accepted the H5.50B corrected Farm Settlement region mapping for draft cleanup and planning use. The reviewed map contains 32 regions, with final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 accepted. Cleanup risk notes and correction history remain preserved. Cleanup, derived assets, functional slot mapping, scene-anchor planning, and Farm Settlement runtime/game wiring remain deferred.

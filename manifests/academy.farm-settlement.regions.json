@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "farm-settlement",
   "operationalType": "farm-settlement-region-manifest",
   "sourceSheet": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
@@ -18,7 +18,7 @@
     "finding": "Source is RGBA but fully opaque; checkerboard-style background is baked/fake transparency and must not be treated as real alpha."
   },
   "layoutClassification": "standard-static-prop-icon-sheet-4x8",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "regions": [
     {
@@ -576,7 +576,13 @@
     "H5.50B v2 applied human-guided horizontal tuning for regions 1, 2, 3, 4, 10, 17, 19, 20, and 21 after screenshot review showed remaining shared-boundary clipping/bleed.",
     "H5.50B v3 restored region 19 right bound after v2 clipped the large farmhouse; region 20 remains shifted right to avoid stealing the house.",
     "H5.50B v4 adjusted region 1 right padding and retuned the 19/20 boundary: region 19 keeps farmhouse room; region 20 shifts right to avoid farmhouse bleed.",
-    "H5.50B final tuning extended region 20 to meet region 21 and nudged the 17/18 shared boundary right by a few pixels."
+    "H5.50B final tuning extended region 20 to meet region 21 and nudged the 17/18 shared boundary right by a few pixels.",
+    "H5.50B Farm Settlement corrected region mapping passed human/product review in H5.51.",
+    "32 mapped Farm Settlement regions accepted for draft cleanup/planning use.",
+    "Final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 accepted.",
+    "All other regions accepted as-is.",
+    "No further region correction pass needed.",
+    "Cleanup, functional slot mapping, scene-anchor planning, runtime/game wiring, and derived assets remain deferred."
   ],
   "correctionHistory": [
     {
@@ -594,7 +600,25 @@
         "farm-settlement.campfire",
         "farm-settlement.small-farmhouse"
       ],
-      "reviewStatus": "needs-human-review"
+      "reviewStatus": "human-review-passed"
     }
-  ]
+  ],
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "humanReview": {
+    "reviewId": "H5.51",
+    "decision": "passed",
+    "reviewedCommit": "2846d49 docs: correct farm settlement region bounds",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 32,
+    "functionalSurfaceCandidates": 0,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.50B Farm Settlement corrected region mapping passed human/product review in H5.51.",
+      "32 mapped Farm Settlement regions accepted for draft cleanup/planning use.",
+      "Final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 accepted.",
+      "All other regions accepted as-is.",
+      "No further region correction pass needed.",
+      "Cleanup, functional slot mapping, scene-anchor planning, runtime/game wiring, and derived assets remain deferred."
+    ]
+  }
 }

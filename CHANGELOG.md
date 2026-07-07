@@ -248,3 +248,11 @@ All notable changes to this project will be documented in this file.
 - Shifted region 21 right to stop capturing region 20 bleed, and nudged the 17/18 shared boundary right.
 - Regenerated bbox overlay, numbered contact sheet, and region table preview.
 - No vertical padding changes, cleanup output, source PNG edits, gameplay logic, functional slot mapping, or runtime wiring occurred.
+
+## H5.51 - Farm Settlement Region Human Review
+
+- Accepted the H5.50B corrected Farm Settlement region mapping for draft cleanup/planning use.
+- Human review passed for 32 mapped regions.
+- Final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 were accepted.
+- Cleanup risk notes and correction history remain preserved.
+- Cleanup, derived assets, functional slot mapping, scene-anchor planning, and runtime/game wiring remain deferred.
