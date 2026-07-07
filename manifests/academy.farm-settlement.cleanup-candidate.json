@@ -136,7 +136,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13544,
-      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 176, 'h': 139} to {'x': 528, 'y': 36, 'w': 188, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 188, 'h': 139} to {'x': 546, 'y': 36, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure."
+      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 176, 'h': 139} to {'x': 528, 'y': 36, 'w': 188, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 188, 'h': 139} to {'x': 546, 'y': 36, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 557,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.beet-crop-plot",
@@ -208,7 +219,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14204,
-      "notes": "Withered crop with yellow glow/aura; high cleanup risk around glow. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Withered crop with yellow glow/aura; high cleanup risk around glow. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 15109,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.dead-crop-plot",
@@ -352,7 +374,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 9770,
-      "notes": "Large water droplet with glow; transparent/glow edge risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Large water droplet with glow; transparent/glow edge risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 10444,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.wooden-mallet",
@@ -544,7 +577,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11794,
-      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.50B follow-up horizontal bounds correction: sourceRect changed from {'x': 704, 'y': 400, 'w': 176, 'h': 176} to {'x': 728, 'y': 400, 'w': 152, 'h': 176} after human review flagged bleed from region 20 into region 21. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 728, 'y': 400, 'w': 152, 'h': 176} to {'x': 740, 'y': 400, 'w': 140, 'h': 176} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure."
+      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.50B follow-up horizontal bounds correction: sourceRect changed from {'x': 704, 'y': 400, 'w': 176, 'h': 176} to {'x': 728, 'y': 400, 'w': 152, 'h': 176} after human review flagged bleed from region 20 into region 21. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 728, 'y': 400, 'w': 152, 'h': 176} to {'x': 740, 'y': 400, 'w': 140, 'h': 176} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 13344,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.watchtower",
@@ -760,7 +804,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 18187,
-      "notes": "Sun/weather icon with many rays; high edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Sun/weather icon with many rays; high edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 19806,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.crescent-moon",
@@ -784,7 +839,18 @@
       "reviewStatus": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13274,
-      "notes": "Crescent moon weather/night icon; glow and crescent edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Crescent moon weather/night icon; glow and crescent edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "correctionAttempt": "h5-52b-targeted-cleanup",
+      "correctionHistory": [
+        {
+          "lane": "H5.52B",
+          "type": "targeted-cleanup-correction",
+          "finding": "Human review found visible baked checkerboard/background remnants on this region in H5.52.",
+          "method": "Target-only neutral checker/background matte; region 4 uses a restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+          "removedPixels": 14737,
+          "status": "needs-human-review"
+        }
+      ]
     },
     {
       "id": "farm-settlement.farm-banner",
@@ -815,6 +881,33 @@
     "H5.52 is a draft cleanup candidate for human review.",
     "Functional-surface candidate metadata is preserved from the region manifest; no functional slot mapping is performed.",
     "Cleanup risk flags identify fragile details that require review; they are not automatic failures.",
-    "No runtime approval, gameplay approval, placement approval, or Farm Settlement game wiring is introduced."
+    "No runtime approval, gameplay approval, placement approval, or Farm Settlement game wiring is introduced.",
+    "H5.52B corrected only regions 4, 7, 13, 21, 30, and 31; H5.52B is not human-review-passed and remains draft / needs-human-review / not-runtime-approved."
+  ],
+  "correctionHistory": [
+    {
+      "lane": "H5.52B",
+      "type": "targeted-cleanup-correction",
+      "targetRegionNumbers": [
+        4,
+        7,
+        13,
+        21,
+        30,
+        31
+      ],
+      "targetRegionIds": [
+        "farm-settlement.soil-plot-watered-sprout",
+        "farm-settlement.withered-crop-plot",
+        "farm-settlement.water-drop-token",
+        "farm-settlement.campfire",
+        "farm-settlement.smiling-sun",
+        "farm-settlement.crescent-moon"
+      ],
+      "finding": "Human review did not promote H5.52 because six regions retained visible baked checkerboard/background remnants.",
+      "method": "Regenerated only target regions 4, 7, 13, 21, 30, and 31 with stricter target cleanup; region 4 uses restricted halo cleanup to preserve puddle detail; non-target regions preserved from H5.52 derived sheet.",
+      "status": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved"
+    }
   ]
 }

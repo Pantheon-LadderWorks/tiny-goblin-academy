@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.52B Farm Settlement Targeted Cleanup Correction**: Corrected the H5.52 Farm Settlement cleanup candidate for six human-flagged regions: 4 watered sprout soil plot, 7 withered crop plot, 13 water drop token, 21 campfire, 30 smiling sun, and 31 crescent moon. Regenerated targeted evidence, preserved non-target regions from the H5.52 derived sheet, kept the lane draft / needs-human-review / not-runtime-approved, and did not change source PNGs, sourceRects, gameplay logic, placement approval, functional slot mapping, scene anchors, or game wiring.
+
 * **H5.52 Farm Settlement Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions. Preserved the 1408x768 layout, kept the source PNG untouched, generated cleanup evidence, and retained fragile glow/fire/weather/sun/moon/banner/goblin edge risks for human review; no sourceRect remapping, scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, or game wiring occurred.
 
 * **H5.50B Farm Settlement Bounds Correction**: Corrected horizontal sourceRect bounds for Farm Settlement regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 after human review flagged right-edge clipping and neighboring-asset bleed. Regenerated bbox/contact/table evidence; no vertical padding changes, cleanup, source PNG edits, gameplay logic, functional slot mapping, or runtime wiring occurred.
@@ -267,3 +269,12 @@ All notable changes to this project will be documented in this file.
 - Preserved the source PNG, reviewed sourceRects, ids, labels, categories, and functional-surface candidate metadata.
 - Kept glow, fire, storm, sun, moon, banner, goblin outline, crop glow, water droplet glow, and thin-shape cleanup risks flagged for human review.
 - No scene-anchor planning, functional slot mapping, gameplay logic, placement approval, runtime approval, or Farm Settlement game wiring occurred.
+
+## H5.52B - Farm Settlement Targeted Cleanup Correction
+
+- Corrected the H5.52 cleanup candidate for six human-flagged regions: 4, 7, 13, 21, 30, and 31.
+- Added targeted correction history to `manifests/academy.farm-settlement.cleanup-candidate.json`.
+- Regenerated `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png` with non-target regions preserved from the H5.52 derived sheet.
+- Created targeted evidence under `assets/academy/evidence/h5-52b-farm-settlement-targeted-cleanup-correction/`.
+- Kept the cleanup candidate draft / needs-human-review / not-runtime-approved; H5.52B is not a human-review promotion.
+- No source PNG edits, sourceRect changes, game code changes, runtime approval, placement approval, scene-anchor work, functional slot mapping, or Farm Settlement gameplay wiring occurred.

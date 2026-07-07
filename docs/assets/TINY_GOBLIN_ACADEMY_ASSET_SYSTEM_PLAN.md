@@ -620,3 +620,7 @@ H5.51 accepted the H5.50B corrected Farm Settlement region mapping for draft cle
 ## H5.52 Farm Settlement Cleanup Candidate Note
 
 H5.52 created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions at `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png`, with cleanup metadata recorded in `manifests/academy.farm-settlement.cleanup-candidate.json`. The source PNG remains untouched, the 1408x768 layout and reviewed sourceRects are preserved, and fragile glow/fire/weather/sun/moon/banner/goblin-edge cleanup risks remain flagged for human review. This is draft cleanup/planning evidence only: no scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, placement approval, or Farm Settlement game wiring occurred.
+
+## H5.52B Farm Settlement Targeted Cleanup Correction Note
+
+H5.52B corrected the H5.52 Farm Settlement cleanup candidate for six human-flagged regions: 4 watered sprout soil plot, 7 withered crop plot, 13 water drop token, 21 campfire, 30 smiling sun, and 31 crescent moon. The pass regenerated only the target cleanup regions, preserved non-target regions from the H5.52 derived sheet, and added correction history while keeping the cleanup candidate draft / needs-human-review / not-runtime-approved. This is still not a promotion pass: no source PNG edits, sourceRect changes, runtime approval, placement approval, scene-anchor planning, functional slot mapping, gameplay logic, or Farm Settlement game wiring occurred.
