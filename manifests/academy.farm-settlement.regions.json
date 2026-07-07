@@ -582,7 +582,11 @@
     "Final horizontal bound corrections for regions 1, 2, 3, 4, 10, 17, 18, 19, 20, and 21 accepted.",
     "All other regions accepted as-is.",
     "No further region correction pass needed.",
-    "Cleanup, functional slot mapping, scene-anchor planning, runtime/game wiring, and derived assets remain deferred."
+    "Cleanup, functional slot mapping, scene-anchor planning, runtime/game wiring, and derived assets remain deferred.",
+    "H5.53 accepted the H5.52B cleanup candidate with explicit exclusions.",
+    "Cleanup denied region indexes: 4, 7, 13, 21, 30, 31.",
+    "Cleanup denied region IDs: farm-settlement.soil-plot-watered-sprout, farm-settlement.withered-crop-plot, farm-settlement.water-drop-token, farm-settlement.campfire, farm-settlement.smiling-sun, farm-settlement.crescent-moon.",
+    "Denied cleanup regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring."
   ],
   "correctionHistory": [
     {
@@ -620,5 +624,35 @@
       "No further region correction pass needed.",
       "Cleanup, functional slot mapping, scene-anchor planning, runtime/game wiring, and derived assets remain deferred."
     ]
+  },
+  "cleanupReviewExclusions": {
+    "sourceCleanupManifest": "manifests/academy.farm-settlement.cleanup-candidate.json",
+    "decision": "explicit-region-denials",
+    "deniedRegionIndexes": [
+      4,
+      7,
+      13,
+      21,
+      30,
+      31
+    ],
+    "deniedRegionIds": [
+      "farm-settlement.soil-plot-watered-sprout",
+      "farm-settlement.withered-crop-plot",
+      "farm-settlement.water-drop-token",
+      "farm-settlement.campfire",
+      "farm-settlement.smiling-sun",
+      "farm-settlement.crescent-moon"
+    ],
+    "deniedRegionLabels": [
+      "Watered sprout soil plot",
+      "Withered crop plot",
+      "Water drop token",
+      "Campfire",
+      "Smiling sun icon",
+      "Crescent moon icon"
+    ],
+    "reason": "Denied for cleaned draft pipeline use due to persistent baked checkerboard/halo remnants after cleanup attempts.",
+    "policy": "This does not invalidate the original reviewed source region mapping. Do not remove source regions; exclude these cleanup candidates from draft asset use."
   }
 }

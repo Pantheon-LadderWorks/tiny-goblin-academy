@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed",
   "domain": "farm-settlement",
   "operationalType": "cleanup-candidate",
   "sourceSheet": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
@@ -35,7 +35,7 @@
   "runtimeEligibility": "not-runtime-approved",
   "gameplayApproval": "none",
   "placementApproval": "none",
-  "reviewStatus": "needs-human-review",
+  "reviewStatus": "human-review-passed-with-exclusions",
   "sourceReviewManifestStatus": {
     "sourceRegionStatus": "reviewed",
     "sourceRegionReviewStatus": "human-review-passed",
@@ -61,10 +61,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11707,
-      "notes": "Empty tilled soil plot; cleanup should preserve soft soil edge. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 154, 'h': 108} to {'x': 22, 'y': 67, 'w': 166, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 166, 'h': 108} to {'x': 6, 'y': 67, 'w': 160, 'h': 108} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 6, 'y': 67, 'w': 160, 'h': 108} to {'x': 6, 'y': 67, 'w': 182, 'h': 108} after follow-up review flagged region 1 and the 19/20 boundary. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Empty tilled soil plot; cleanup should preserve soft soil edge. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 154, 'h': 108} to {'x': 22, 'y': 67, 'w': 166, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 67, 'w': 166, 'h': 108} to {'x': 6, 'y': 67, 'w': 160, 'h': 108} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 6, 'y': 67, 'w': 160, 'h': 108} to {'x': 6, 'y': 67, 'w': 182, 'h': 108} after follow-up review flagged region 1 and the 19/20 boundary. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.soil-plot-seeded",
@@ -85,10 +86,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 10419,
-      "notes": "Seeded tilled plot; small seed dots need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 176, 'h': 108} to {'x': 176, 'y': 67, 'w': 188, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 188, 'h': 108} to {'x': 194, 'y': 67, 'w': 170, 'h': 108} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Seeded tilled plot; small seed dots need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 176, 'h': 108} to {'x': 176, 'y': 67, 'w': 188, 'h': 108} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 176, 'y': 67, 'w': 188, 'h': 108} to {'x': 194, 'y': 67, 'w': 170, 'h': 108} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.soil-plot-sprout",
@@ -109,10 +111,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 12485,
-      "notes": "Sprouting plant in soil; curled stem and leaf edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 176, 'h': 124} to {'x': 352, 'y': 51, 'w': 188, 'h': 124} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 188, 'h': 124} to {'x': 370, 'y': 51, 'w': 170, 'h': 124} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Sprouting plant in soil; curled stem and leaf edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 176, 'h': 124} to {'x': 352, 'y': 51, 'w': 188, 'h': 124} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 352, 'y': 51, 'w': 188, 'h': 124} to {'x': 370, 'y': 51, 'w': 170, 'h': 124} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.soil-plot-watered-sprout",
@@ -132,11 +135,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13544,
-      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 176, 'h': 139} to {'x': 528, 'y': 36, 'w': 188, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 188, 'h': 139} to {'x': 546, 'y': 36, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Watered sprout with droplet and puddle; translucent water/glow risk. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 176, 'h': 139} to {'x': 528, 'y': 36, 'w': 188, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 528, 'y': 36, 'w': 188, 'h': 139} to {'x': 546, 'y': 36, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -147,7 +150,9 @@
           "removedPixels": 557,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.beet-crop-plot",
@@ -168,10 +173,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14441,
-      "notes": "Root crop in soil; leaf and soil edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Root crop in soil; leaf and soil edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.beet-basket",
@@ -192,10 +198,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11614,
-      "notes": "Basket of harvested beets; grouped resource prop. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Basket of harvested beets; grouped resource prop. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.withered-crop-plot",
@@ -215,11 +222,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14204,
-      "notes": "Withered crop with yellow glow/aura; high cleanup risk around glow. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Withered crop with yellow glow/aura; high cleanup risk around glow. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -230,7 +237,9 @@
           "removedPixels": 15109,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.dead-crop-plot",
@@ -251,10 +260,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13390,
-      "notes": "Wilted/dead crop in soil; thin stems need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Wilted/dead crop in soil; thin stems need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.harvest-basket",
@@ -275,10 +285,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 7861,
-      "notes": "Basket of vegetables and bread; grouped harvest resource. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Basket of vegetables and bread; grouped harvest resource. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.wood-log-bundle",
@@ -299,10 +310,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 12905,
-      "notes": "Bundled logs; rope and circular log ends need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 151, 'h': 139} to {'x': 201, 'y': 223, 'w': 163, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 163, 'h': 139} to {'x': 194, 'y': 223, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Bundled logs; rope and circular log ends need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 151, 'h': 139} to {'x': 201, 'y': 223, 'w': 163, 'h': 139} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 201, 'y': 223, 'w': 163, 'h': 139} to {'x': 194, 'y': 223, 'w': 170, 'h': 139} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.stone-pile",
@@ -323,10 +335,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14016,
-      "notes": "Pile of stones; small rubble pieces may be separate visually but grouped as one pile. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Pile of stones; small rubble pieces may be separate visually but grouped as one pile. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.leaf-coin-token",
@@ -347,10 +360,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 7192,
-      "notes": "Gold token with leaf symbol; icon-like resource marker. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Gold token with leaf symbol; icon-like resource marker. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.water-drop-token",
@@ -370,11 +384,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 9770,
-      "notes": "Large water droplet with glow; transparent/glow edge risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Large water droplet with glow; transparent/glow edge risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -385,7 +399,9 @@
           "removedPixels": 10444,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.wooden-mallet",
@@ -406,10 +422,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 15594,
-      "notes": "Farm/building hammer or mallet tool. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Farm/building hammer or mallet tool. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.map-scroll",
@@ -430,10 +447,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 7101,
-      "notes": "Scroll/map marker; text-like marks are baked into the icon and preserved for now. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Scroll/map marker; text-like marks are baked into the icon and preserved for now. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.animal-house-icon",
@@ -454,10 +472,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13155,
-      "notes": "Small animal house/chicken-coop style icon. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Small animal house/chicken-coop style icon. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.tent",
@@ -478,10 +497,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 17487,
-      "notes": "Tent or camp shelter; straps and fabric edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 154, 'h': 159} to {'x': 22, 'y': 415, 'w': 166, 'h': 159} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 166, 'h': 159} to {'x': 6, 'y': 415, 'w': 170, 'h': 159} to avoid shared-boundary clipping/neighbor bleed. H5.50B final horizontal correction: sourceRect changed from {'x': 6, 'y': 415, 'w': 170, 'h': 159} to {'x': 6, 'y': 415, 'w': 178, 'h': 159} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Tent or camp shelter; straps and fabric edges need review. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 154, 'h': 159} to {'x': 22, 'y': 415, 'w': 166, 'h': 159} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 22, 'y': 415, 'w': 166, 'h': 159} to {'x': 6, 'y': 415, 'w': 170, 'h': 159} to avoid shared-boundary clipping/neighbor bleed. H5.50B final horizontal correction: sourceRect changed from {'x': 6, 'y': 415, 'w': 170, 'h': 159} to {'x': 6, 'y': 415, 'w': 178, 'h': 159} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.small-farmhouse",
@@ -502,10 +522,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14279,
-      "notes": "Small cottage/farmhouse building. Draft region mapping only; not runtime-approved. H5.50B final horizontal correction: sourceRect changed from {'x': 176, 'y': 401, 'w': 176, 'h': 174} to {'x': 184, 'y': 401, 'w': 168, 'h': 174} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Small cottage/farmhouse building. Draft region mapping only; not runtime-approved. H5.50B final horizontal correction: sourceRect changed from {'x': 176, 'y': 401, 'w': 176, 'h': 174} to {'x': 184, 'y': 401, 'w': 168, 'h': 174} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.large-farmhouse",
@@ -526,10 +547,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 14227,
-      "notes": "Larger farmhouse/homestead with porch and stone base. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 167, 'h': 187} to {'x': 361, 'y': 389, 'w': 183, 'h': 187} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 183, 'h': 187} to {'x': 360, 'y': 389, 'w': 152, 'h': 187} to avoid shared-boundary clipping/neighbor bleed. H5.50B v3 correction: large farmhouse right bound changed from {'x': 360, 'y': 389, 'w': 152, 'h': 187} to {'x': 360, 'y': 389, 'w': 184, 'h': 187} after overlay review showed v2 clipped the house. H5.50B v4 targeted correction: sourceRect changed from {'x': 360, 'y': 389, 'w': 184, 'h': 187} to {'x': 360, 'y': 389, 'w': 188, 'h': 187} after follow-up review flagged region 1 and the 19/20 boundary. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Larger farmhouse/homestead with porch and stone base. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 167, 'h': 187} to {'x': 361, 'y': 389, 'w': 183, 'h': 187} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 361, 'y': 389, 'w': 183, 'h': 187} to {'x': 360, 'y': 389, 'w': 152, 'h': 187} to avoid shared-boundary clipping/neighbor bleed. H5.50B v3 correction: large farmhouse right bound changed from {'x': 360, 'y': 389, 'w': 152, 'h': 187} to {'x': 360, 'y': 389, 'w': 184, 'h': 187} after overlay review showed v2 clipped the house. H5.50B v4 targeted correction: sourceRect changed from {'x': 360, 'y': 389, 'w': 184, 'h': 187} to {'x': 360, 'y': 389, 'w': 188, 'h': 187} after follow-up review flagged region 1 and the 19/20 boundary. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.wood-shed",
@@ -550,10 +572,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13102,
-      "notes": "Small storage shed with crates. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 397, 'w': 176, 'h': 175} to {'x': 552, 'y': 397, 'w': 164, 'h': 175} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 552, 'y': 397, 'w': 164, 'h': 175} to {'x': 546, 'y': 397, 'w': 158, 'h': 175} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 546, 'y': 397, 'w': 158, 'h': 175} to {'x': 568, 'y': 397, 'w': 152, 'h': 175} after follow-up review flagged region 1 and the 19/20 boundary. H5.50B final horizontal correction: sourceRect changed from {'x': 568, 'y': 397, 'w': 152, 'h': 175} to {'x': 568, 'y': 397, 'w': 172, 'h': 175} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Small storage shed with crates. Draft region mapping only; not runtime-approved. H5.50B horizontal bounds correction: sourceRect changed from {'x': 528, 'y': 397, 'w': 176, 'h': 175} to {'x': 552, 'y': 397, 'w': 164, 'h': 175} after human review flagged right-edge clipping/bleed. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 552, 'y': 397, 'w': 164, 'h': 175} to {'x': 546, 'y': 397, 'w': 158, 'h': 175} to avoid shared-boundary clipping/neighbor bleed. H5.50B v4 targeted correction: sourceRect changed from {'x': 546, 'y': 397, 'w': 158, 'h': 175} to {'x': 568, 'y': 397, 'w': 152, 'h': 175} after follow-up review flagged region 1 and the 19/20 boundary. H5.50B final horizontal correction: sourceRect changed from {'x': 568, 'y': 397, 'w': 152, 'h': 175} to {'x': 568, 'y': 397, 'w': 172, 'h': 175} after human review requested final shared-boundary nudges. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.campfire",
@@ -573,11 +596,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11794,
-      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.50B follow-up horizontal bounds correction: sourceRect changed from {'x': 704, 'y': 400, 'w': 176, 'h': 176} to {'x': 728, 'y': 400, 'w': 152, 'h': 176} after human review flagged bleed from region 20 into region 21. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 728, 'y': 400, 'w': 152, 'h': 176} to {'x': 740, 'y': 400, 'w': 140, 'h': 176} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Campfire/flame prop; flame and glow edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.50B follow-up horizontal bounds correction: sourceRect changed from {'x': 704, 'y': 400, 'w': 176, 'h': 176} to {'x': 728, 'y': 400, 'w': 152, 'h': 176} after human review flagged bleed from region 20 into region 21. H5.50B v2 human-guided horizontal correction: sourceRect changed from {'x': 728, 'y': 400, 'w': 152, 'h': 176} to {'x': 740, 'y': 400, 'w': 140, 'h': 176} to avoid shared-boundary clipping/neighbor bleed. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -588,7 +611,9 @@
           "removedPixels": 13344,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.watchtower",
@@ -609,10 +634,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 17499,
-      "notes": "Wooden watchtower; ladder/thin legs need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Wooden watchtower; ladder/thin legs need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.stone-fence",
@@ -633,10 +659,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 15150,
-      "notes": "Fence segment / settlement boundary prop. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Fence segment / settlement boundary prop. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.shield-monument",
@@ -657,10 +684,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 10155,
-      "notes": "Shield statue/monument; pedestal and icon edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Shield statue/monument; pedestal and icon edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.goblin-idle",
@@ -681,10 +709,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 8078,
-      "notes": "Small goblin character/worker symbol; likely state/worker icon, not animation. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure."
+      "notes": "Small goblin character/worker symbol; likely state/worker icon, not animation. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.goblin-worker",
@@ -705,10 +734,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11568,
-      "notes": "Goblin worker with hoe/tool; small limbs and tool edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Goblin worker with hoe/tool; small limbs and tool edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.no-food-tool-icon",
@@ -729,10 +759,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11597,
-      "notes": "Knife/fork with red X; thin utensils and overlay mark are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Knife/fork with red X; thin utensils and overlay mark are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.animal-house-complete",
@@ -753,10 +784,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11483,
-      "notes": "Animal house with green check; status icon with baked check mark. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Animal house with green check; status icon with baked check mark. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.storm-cloud",
@@ -777,10 +809,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 16386,
-      "notes": "Weather/storm icon; cloud and lightning edges high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure."
+      "notes": "Weather/storm icon; cloud and lightning edges high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. High/medium-high visual review risk: preserve fragile glow, thin outline, weather/fire/light, banner, or character edge details; risk flag is review history, not a failure.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     },
     {
       "id": "farm-settlement.smiling-sun",
@@ -800,11 +833,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 18187,
-      "notes": "Sun/weather icon with many rays; high edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Sun/weather icon with many rays; high edge cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -815,7 +848,9 @@
           "removedPixels": 19806,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.crescent-moon",
@@ -835,11 +870,11 @@
       },
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "high",
-      "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "usage": "do-not-use",
+      "reviewStatus": "human-review-denied",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 13274,
-      "notes": "Crescent moon weather/night icon; glow and crescent edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review.",
+      "notes": "Crescent moon weather/night icon; glow and crescent edges are high cleanup risk. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved. H5.52B targeted cleanup correction attempted after human review found visible baked checkerboard/background remnants; remains draft and needs human review. H5.53 denial: persistent baked checkerboard/halo remnants remain after cleanup attempts. This asset remains source/manifest/evidence history only and must not be used for draft pipeline, runtime, placement, scene-anchor planning, functional slot planning, gameplay wiring, or Farm Settlement wiring.",
       "correctionAttempt": "h5-52b-targeted-cleanup",
       "correctionHistory": [
         {
@@ -850,7 +885,9 @@
           "removedPixels": 14737,
           "status": "needs-human-review"
         }
-      ]
+      ],
+      "pipelineUse": "denied-for-draft-pipeline-use",
+      "denialReason": "persistent baked checkerboard/halo remnants after cleanup attempts"
     },
     {
       "id": "farm-settlement.farm-banner",
@@ -871,10 +908,11 @@
       "functionalSurfaceCandidate": false,
       "cleanupRisk": "medium-high",
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "removedEdgeCheckerPixels": 11604,
-      "notes": "Green farm banner/flag; thin pole and cloth edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved."
+      "notes": "Green farm banner/flag; thin pole and cloth edges need review. Draft region mapping only; not runtime-approved. H5.52 cleanup candidate: derived-only conservative edge-connected gray-checker removal; source PNG untouched; draft review only; not runtime-approved.",
+      "pipelineUse": "accepted-for-draft-pipeline-use"
     }
   ],
   "notes": [
@@ -909,5 +947,70 @@
       "status": "needs-human-review",
       "runtimeEligibility": "not-runtime-approved"
     }
+  ],
+  "pipelineUse": "accepted-for-draft-pipeline-use-with-exclusions",
+  "acceptedRegionCount": 26,
+  "deniedRegionCount": 6,
+  "humanReviewExclusions": {
+    "decision": "explicit-region-denials",
+    "deniedRegionIndexes": [
+      4,
+      7,
+      13,
+      21,
+      30,
+      31
+    ],
+    "deniedRegionIds": [
+      "farm-settlement.soil-plot-watered-sprout",
+      "farm-settlement.withered-crop-plot",
+      "farm-settlement.water-drop-token",
+      "farm-settlement.campfire",
+      "farm-settlement.smiling-sun",
+      "farm-settlement.crescent-moon"
+    ],
+    "deniedRegionLabels": [
+      "Watered sprout soil plot",
+      "Withered crop plot",
+      "Water drop token",
+      "Campfire",
+      "Smiling sun icon",
+      "Crescent moon icon"
+    ],
+    "reason": "These six regions still retain visible baked checkerboard/halo remnants around natural sprite borders after H5.52 and H5.52B cleanup attempts.",
+    "policy": "Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring."
+  },
+  "humanReview": {
+    "reviewId": "H5.53",
+    "decision": "passed-with-explicit-region-exclusions",
+    "reviewedCommit": "5ce9d08 docs: correct farm settlement cleanup candidate",
+    "acceptedFor": "draft-pipeline-use-with-exclusions",
+    "acceptedRegionCount": 26,
+    "deniedRegionCount": 6,
+    "deniedRegionIndexes": [
+      4,
+      7,
+      13,
+      21,
+      30,
+      31
+    ],
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.52B Farm Settlement cleanup candidate passed human/product review with explicit exclusions in H5.53.",
+      "26 cleaned regions accepted for draft pipeline use.",
+      "6 cleaned regions denied for draft pipeline use.",
+      "Denied regions remain preserved as source/manifest/evidence history only.",
+      "No further cleanup correction pass needed.",
+      "Runtime/game wiring, placement approval, scene-anchor work, and functional slot mapping remain deferred."
+    ]
+  },
+  "reviewNotes": [
+    "H5.52B Farm Settlement cleanup candidate passed human/product review with explicit exclusions in H5.53.",
+    "26 cleaned regions accepted for draft pipeline use.",
+    "6 cleaned regions denied for draft pipeline use.",
+    "Denied regions remain preserved as source/manifest/evidence history only.",
+    "No further cleanup correction pass needed.",
+    "Runtime/game wiring, placement approval, scene-anchor work, and functional slot mapping remain deferred."
   ]
 }

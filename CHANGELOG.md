@@ -278,3 +278,12 @@ All notable changes to this project will be documented in this file.
 - Created targeted evidence under `assets/academy/evidence/h5-52b-farm-settlement-targeted-cleanup-correction/`.
 - Kept the cleanup candidate draft / needs-human-review / not-runtime-approved; H5.52B is not a human-review promotion.
 - No source PNG edits, sourceRect changes, game code changes, runtime approval, placement approval, scene-anchor work, functional slot mapping, or Farm Settlement gameplay wiring occurred.
+
+## H5.53 - Farm Settlement Cleanup Human Review With Exclusions
+
+- Accepted the H5.52B Farm Settlement cleanup candidate for draft pipeline use with explicit exclusions.
+- Accepted cleaned regions: 26.
+- Denied cleaned regions: 6.
+- Denied region indexes: 4, 7, 13, 21, 30, and 31.
+- Denied regions: arm-settlement.soil-plot-watered-sprout, arm-settlement.withered-crop-plot, arm-settlement.water-drop-token, arm-settlement.campfire, arm-settlement.smiling-sun, and arm-settlement.crescent-moon.
+- Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring.

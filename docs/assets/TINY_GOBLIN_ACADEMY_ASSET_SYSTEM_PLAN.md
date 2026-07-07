@@ -624,3 +624,7 @@ H5.52 created a derived transparent cleanup candidate for the 32 H5.51-reviewed 
 ## H5.52B Farm Settlement Targeted Cleanup Correction Note
 
 H5.52B corrected the H5.52 Farm Settlement cleanup candidate for six human-flagged regions: 4 watered sprout soil plot, 7 withered crop plot, 13 water drop token, 21 campfire, 30 smiling sun, and 31 crescent moon. The pass regenerated only the target cleanup regions, preserved non-target regions from the H5.52 derived sheet, and added correction history while keeping the cleanup candidate draft / needs-human-review / not-runtime-approved. This is still not a promotion pass: no source PNG edits, sourceRect changes, runtime approval, placement approval, scene-anchor planning, functional slot mapping, gameplay logic, or Farm Settlement game wiring occurred.
+
+## H5.53 Farm Settlement Cleanup Human Review With Exclusions
+
+H5.53 accepted the H5.52B Farm Settlement cleanup candidate for draft pipeline use with explicit exclusions. The candidate contains 32 cleanup regions: 26 accepted and 6 denied. Denied indexes 4, 7, 13, 21, 30, and 31 resolve to arm-settlement.soil-plot-watered-sprout, arm-settlement.withered-crop-plot, arm-settlement.water-drop-token, arm-settlement.campfire, arm-settlement.smiling-sun, and arm-settlement.crescent-moon. Denied regions remain preserved as source/manifest/evidence history only and must not be selected for draft pipeline use, runtime visuals, placement, scene-anchor planning, functional-slot planning, gameplay wiring, or Farm Settlement wiring.
