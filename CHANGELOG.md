@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.58B Topdown Source Inventory Human Review**: Recorded human review pass for the H5.58 topdown source inventory and lane-routing decision. Promoted `manifests/academy.topdown.source-inventory.json` to reviewed / human-review-passed / accepted-for-draft-lane-routing-use, preserved the mixed Top-Down Slime Quest playfield pack as reference-only / mixed pantry, and confirmed terrain → walls → objects as the primary topdown processing order with no cleanup, region mapping, placement/collision/interaction data, runtime atlases, or game wiring.
+
 * **H5.58 Top-Down Slime Quest Source Inventory + Lane Routing**: Inventoried the mixed Top-Down Slime Quest playfield pack plus the `topdown/terrain`, `topdown/walls`, and `topdown/objects` source folders. Recorded the mixed playfield pack as reference-only / human-routed salvage candidate, identified the folder sheets as the primary processing lanes, created a draft topdown source-inventory manifest and lightweight evidence previews, and did not create cleanup outputs, region rectangles, runtime atlases, collision/placement/interaction rules, animation approval, or game wiring.
 
 * **H5.57 Shared FX / Feedback Deferred Decision**: Deferred the RGB/no-alpha Shared FX / Feedback concept sheet as reference-only / concept-only. Recorded particle-first replacement policy and true-alpha one-off regeneration fallback; no mapping, sourceRects, cleanup candidate, derived PNG, evidence PNG, runtime FX, particle implementation, gameplay feedback behavior, or game wiring occurred.

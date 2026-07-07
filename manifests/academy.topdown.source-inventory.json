@@ -1,7 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-lane-routing-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown",
   "operationalType": "source-inventory-and-routing",
@@ -115,6 +116,13 @@
     "No Top-Down Slime Quest game code changes."
   ],
   "notes": [
+    "H5.58B human review passed.",
+    "Accepted routing: mixed Top-Down Slime Quest playfield pack is reference-only / mixed pantry.",
+    "Accepted routing: do not cleanup or map the mixed pack as a unified runtime atlas.",
+    "Accepted routing: topdown/terrain is primary lane 1.",
+    "Accepted routing: topdown/walls is primary lane 2.",
+    "Accepted routing: topdown/objects is primary lane 3.",
+    "Runtime eligibility remains not-runtime-approved.",
     "The mixed Top-Down Slime Quest playfield pack is a map of possibilities, not the pantry source of truth.",
     "The topdown terrain, walls, and objects folders are the real next processing lanes.",
     "All four inspected source images are RGB with no alpha, so future cleanup passes must handle fake/checker-style backgrounds cautiously."

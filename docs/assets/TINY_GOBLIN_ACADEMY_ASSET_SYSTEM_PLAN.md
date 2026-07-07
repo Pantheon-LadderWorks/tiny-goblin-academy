@@ -658,3 +658,16 @@ The primary topdown processing lanes are now:
 3. `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
 
 All four inspected topdown sources are `1024x1024` RGB with no alpha, so later cleanup/mapping lanes must remain human-review gated. H5.58 created `manifests/academy.topdown.source-inventory.json` and lightweight source-inventory evidence only. It did not create cleanup outputs, region rectangles, runtime atlases, placement/collision/interaction rules, animation approval, or game wiring.
+
+## H5.58B Topdown Source Inventory Human Review Note
+
+H5.58B records human review pass for the H5.58 topdown source inventory and lane-routing decision. `manifests/academy.topdown.source-inventory.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-lane-routing-use`, while `runtimeEligibility` remains `not-runtime-approved`.
+
+Accepted routing:
+
+1. The mixed Top-Down Slime Quest playfield pack remains reference-only / mixed pantry and should not be cleaned or mapped as a unified runtime atlas.
+2. `topdown/terrain` is primary lane 1.
+3. `topdown/walls` is primary lane 2.
+4. `topdown/objects` is primary lane 3.
+
+H5.58B did not create cleanup outputs, region manifests, placement/collision/interaction data, runtime atlases, or game/runtime wiring.
