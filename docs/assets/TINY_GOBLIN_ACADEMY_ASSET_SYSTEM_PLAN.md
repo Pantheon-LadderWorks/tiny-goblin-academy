@@ -343,6 +343,10 @@ The first pilot is `manifests/academy.card-goblin-duel.card-frames.functional-sl
   * Intended Use: Mixed parts bin for Game 05 and Game 08 environments. Dungeon/platformer sheet is a mixed-perspective parts bin, useful for v0.1 planning but may later split into dedicated top-down dungeon and side-view platformer sheets.
   * Status: concept / needs textless cleanup / needs manifest.
 
+## H5.54 Dungeon Platformer Region Mapping Note
+
+H5.54 created a split-aware draft measured-grid-cell region manifest for `assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png`. The source is 1376x768 RGBA, but alpha is fully opaque at 255/255, so the checkerboard-style background is baked/fake transparency. Because this sheet already has an irregular baked 8x5 grid, sourceRects follow the measured grid separators rather than ideal math cells or tight visible bounds. The pass mapped 40 draft-review cells across top-down terrain, side-view/platformer terrain, shared dungeon props, hazards, pickups, UI/status/control icons, FX candidates, and one slime enemy candidate. No cleanup candidate, runtime wiring, animation timing, collision/hitbox approval, placement approval, Top-Down Slime Quest processing, or Shared FX processing occurred.
+
 * **Dice Duel Tavern sheet**
   * Path: `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png`
   * Intended Use: Game 03 dice faces, roll effects, duel tokens, tavern props, and feedback icons.

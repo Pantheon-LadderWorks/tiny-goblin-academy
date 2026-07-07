@@ -1,0 +1,1222 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "domain": "dungeon-platformer",
+  "operationalType": "mixed-dungeon-platformer-split-aware-measured-grid-region-manifest",
+  "sourceSheet": "assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
+  "sourceDimensions": {
+    "w": 1376,
+    "h": 768
+  },
+  "transparency": {
+    "mode": "RGBA",
+    "alphaMin": 255,
+    "alphaMax": 255,
+    "finding": "Source PNG is RGBA but alpha is fully opaque; checkerboard/fake transparency is baked into the pixels."
+  },
+  "layoutClassification": {
+    "type": "mixed-perspective-parts-bin-with-irregular-baked-grid",
+    "gridObservation": "Baked 8 columns x 5 rows grid with irregular measured separator edges. H5.54 sourceRects follow measured grid cells rather than ideal math cells or tight visible bounds.",
+    "measuredGridEdges": {
+      "x": [
+        0,
+        165,
+        344,
+        523,
+        688,
+        867,
+        1046,
+        1211,
+        1376
+      ],
+      "y": [
+        0,
+        161,
+        326,
+        479,
+        630,
+        768
+      ]
+    },
+    "splitAwareDoctrine": "Map as inventory with classification lanes. Do not treat this sheet as one runtime atlas for a single game style.",
+    "futureSplitLanes": [
+      "top-down terrain/props/hazards for top-down dungeon/slime-style games",
+      "side-view platformer terrain/traversal/hazards for platformer games",
+      "shared dungeon props/pickups/doors/chests/keys",
+      "UI/status/control icons and functional-surface candidates",
+      "FX candidates",
+      "enemy/creature candidates requiring separate animation/hitbox review"
+    ]
+  },
+  "reviewStatus": "needs-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "cleanupEligibility": "candidate-after-human-review",
+  "regions": [
+    {
+      "id": "dungeon-platformer.stone-brick-floor-tile",
+      "label": "Stone brick floor tile",
+      "category": "dungeon-tile",
+      "classificationLane": "side-view-platformer-terrain",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "w": 165,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 1,
+        "xEdges": [
+          0,
+          165
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.grass-top-platform-tile",
+      "label": "Grass top platform / terrain tile",
+      "category": "terrain-tile",
+      "classificationLane": "split-candidate-platformer-and-top-down",
+      "sourceRect": {
+        "x": 165,
+        "y": 0,
+        "w": 179,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 2,
+        "xEdges": [
+          165,
+          344
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement."
+    },
+    {
+      "id": "dungeon-platformer.dirt-path-tile",
+      "label": "Dirt path terrain tile",
+      "category": "terrain-tile",
+      "classificationLane": "top-down-terrain",
+      "sourceRect": {
+        "x": 344,
+        "y": 0,
+        "w": 179,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 3,
+        "xEdges": [
+          344,
+          523
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement."
+    },
+    {
+      "id": "dungeon-platformer.wood-plank-platform",
+      "label": "Wood plank platform / bridge",
+      "category": "platform",
+      "classificationLane": "side-view-platformer-terrain",
+      "sourceRect": {
+        "x": 523,
+        "y": 0,
+        "w": 165,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 4,
+        "xEdges": [
+          523,
+          688
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.cracked-stone-floor-tile",
+      "label": "Cracked stone floor tile",
+      "category": "dungeon-tile",
+      "classificationLane": "top-down-or-platformer-terrain",
+      "sourceRect": {
+        "x": 688,
+        "y": 0,
+        "w": 179,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 5,
+        "xEdges": [
+          688,
+          867
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement."
+    },
+    {
+      "id": "dungeon-platformer.water-stone-corner-tile",
+      "label": "Water and stone corner tile",
+      "category": "terrain-tile",
+      "classificationLane": "top-down-terrain",
+      "sourceRect": {
+        "x": 867,
+        "y": 0,
+        "w": 179,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 6,
+        "xEdges": [
+          867,
+          1046
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement."
+    },
+    {
+      "id": "dungeon-platformer.blank-parchment-panel",
+      "label": "Blank parchment UI panel",
+      "category": "ui-surface",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 1046,
+        "y": 0,
+        "w": 165,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 7,
+        "xEdges": [
+          1046,
+          1211
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.objective-target-card",
+      "label": "Objective target card",
+      "category": "ui-status-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 1211,
+        "y": 0,
+        "w": 165,
+        "h": 161
+      },
+      "gridCell": {
+        "row": 1,
+        "column": 8,
+        "xEdges": [
+          1211,
+          1376
+        ],
+        "yEdges": [
+          0,
+          161
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.stone-wall-corner-block",
+      "label": "Stone wall corner block",
+      "category": "dungeon-tile",
+      "classificationLane": "side-view-platformer-terrain",
+      "sourceRect": {
+        "x": 0,
+        "y": 161,
+        "w": 165,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 1,
+        "xEdges": [
+          0,
+          165
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.broken-stone-wall-platform",
+      "label": "Broken stone wall platform",
+      "category": "platform",
+      "classificationLane": "side-view-platformer-terrain",
+      "sourceRect": {
+        "x": 165,
+        "y": 161,
+        "w": 179,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 2,
+        "xEdges": [
+          165,
+          344
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.short-fence-barrier",
+      "label": "Short fence barrier",
+      "category": "barrier-prop",
+      "classificationLane": "top-down-or-platformer-prop",
+      "sourceRect": {
+        "x": 344,
+        "y": 161,
+        "w": 179,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 3,
+        "xEdges": [
+          344,
+          523
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement."
+    },
+    {
+      "id": "dungeon-platformer.wooden-crate",
+      "label": "Wooden crate",
+      "category": "prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 523,
+        "y": 161,
+        "w": 165,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 4,
+        "xEdges": [
+          523,
+          688
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.stone-platform-block",
+      "label": "Stone platform block",
+      "category": "platform",
+      "classificationLane": "side-view-platformer-terrain",
+      "sourceRect": {
+        "x": 688,
+        "y": 161,
+        "w": 179,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 5,
+        "xEdges": [
+          688,
+          867
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.rune-pressure-plate",
+      "label": "Rune pressure plate",
+      "category": "interactive-prop",
+      "classificationLane": "top-down-or-platformer-interactive",
+      "sourceRect": {
+        "x": 867,
+        "y": 161,
+        "w": 179,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 6,
+        "xEdges": [
+          867,
+          1046
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.rope-ladder",
+      "label": "Rope ladder",
+      "category": "traversal-prop",
+      "classificationLane": "side-view-platformer-traversal",
+      "sourceRect": {
+        "x": 1046,
+        "y": 161,
+        "w": 165,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 7,
+        "xEdges": [
+          1046,
+          1211
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.stone-archway",
+      "label": "Stone archway",
+      "category": "architecture-prop",
+      "classificationLane": "side-view-platformer-prop",
+      "sourceRect": {
+        "x": 1211,
+        "y": 161,
+        "w": 165,
+        "h": 165
+      },
+      "gridCell": {
+        "row": 2,
+        "column": 8,
+        "xEdges": [
+          1211,
+          1376
+        ],
+        "yEdges": [
+          161,
+          326
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.spike-hazard",
+      "label": "Metal spike hazard",
+      "category": "hazard",
+      "classificationLane": "side-view-platformer-hazard",
+      "sourceRect": {
+        "x": 0,
+        "y": 326,
+        "w": 165,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 1,
+        "xEdges": [
+          0,
+          165
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential side-view/platformer lane; collision/hitbox approval deferred. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.cone-marker-hazard",
+      "label": "Cone marker hazard",
+      "category": "hazard",
+      "classificationLane": "top-down-or-platformer-hazard",
+      "sourceRect": {
+        "x": 165,
+        "y": 326,
+        "w": 179,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 2,
+        "xEdges": [
+          165,
+          344
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.pit-hole",
+      "label": "Pit hole hazard",
+      "category": "hazard",
+      "classificationLane": "top-down-or-platformer-hazard",
+      "sourceRect": {
+        "x": 344,
+        "y": 326,
+        "w": 179,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 3,
+        "xEdges": [
+          344,
+          523
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.green-slime-enemy",
+      "label": "Green slime enemy candidate",
+      "category": "enemy-candidate",
+      "classificationLane": "top-down-creature-deferred",
+      "sourceRect": {
+        "x": 523,
+        "y": 326,
+        "w": 165,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 4,
+        "xEdges": [
+          523,
+          688
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Enemy/creature candidate; animation timing, hitboxes, hurtboxes, and gameplay state approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.warning-sign",
+      "label": "Warning sign",
+      "category": "sign-prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 688,
+        "y": 326,
+        "w": 179,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 5,
+        "xEdges": [
+          688,
+          867
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.falling-rock-hazard",
+      "label": "Falling rock hazard",
+      "category": "hazard",
+      "classificationLane": "top-down-or-platformer-hazard",
+      "sourceRect": {
+        "x": 867,
+        "y": 326,
+        "w": 179,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 6,
+        "xEdges": [
+          867,
+          1046
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.flame-hazard",
+      "label": "Flame hazard",
+      "category": "hazard",
+      "classificationLane": "top-down-or-platformer-hazard",
+      "sourceRect": {
+        "x": 1046,
+        "y": 326,
+        "w": 165,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 7,
+        "xEdges": [
+          1046,
+          1211
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.retry-arrow-icon",
+      "label": "Retry arrow icon",
+      "category": "ui-control-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 1211,
+        "y": 326,
+        "w": 165,
+        "h": 153
+      },
+      "gridCell": {
+        "row": 3,
+        "column": 8,
+        "xEdges": [
+          1211,
+          1376
+        ],
+        "yEdges": [
+          326,
+          479
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.golden-key",
+      "label": "Golden key",
+      "category": "key-item",
+      "classificationLane": "shared-dungeon-pickup",
+      "sourceRect": {
+        "x": 0,
+        "y": 479,
+        "w": 165,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 1,
+        "xEdges": [
+          0,
+          165
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.locked-door",
+      "label": "Locked door",
+      "category": "door-prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 165,
+        "y": 479,
+        "w": 179,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 2,
+        "xEdges": [
+          165,
+          344
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.open-door",
+      "label": "Open door",
+      "category": "door-prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 344,
+        "y": 479,
+        "w": 179,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 3,
+        "xEdges": [
+          344,
+          523
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.green-banner-flag",
+      "label": "Green banner flag",
+      "category": "banner-prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 523,
+        "y": 479,
+        "w": 165,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 4,
+        "xEdges": [
+          523,
+          688
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.gold-star-reward",
+      "label": "Gold star reward",
+      "category": "reward-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 688,
+        "y": 479,
+        "w": 179,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 5,
+        "xEdges": [
+          688,
+          867
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.goblin-coin-token",
+      "label": "Goblin coin token",
+      "category": "currency-token",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 867,
+        "y": 479,
+        "w": 179,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 6,
+        "xEdges": [
+          867,
+          1046
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.lever-switch",
+      "label": "Lever switch",
+      "category": "interactive-prop",
+      "classificationLane": "top-down-or-platformer-interactive",
+      "sourceRect": {
+        "x": 1046,
+        "y": 479,
+        "w": 165,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 7,
+        "xEdges": [
+          1046,
+          1211
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. Potential top-down game asset lane; do not assume side-view platformer collision or placement. Gameplay meaning is semantic only; no hazard/collision/interaction approval in H5.54."
+    },
+    {
+      "id": "dungeon-platformer.locked-treasure-chest",
+      "label": "Locked treasure chest",
+      "category": "chest-prop",
+      "classificationLane": "shared-dungeon-prop",
+      "sourceRect": {
+        "x": 1211,
+        "y": 479,
+        "w": 165,
+        "h": 151
+      },
+      "gridCell": {
+        "row": 4,
+        "column": 8,
+        "xEdges": [
+          1211,
+          1376
+        ],
+        "yEdges": [
+          479,
+          630
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds."
+    },
+    {
+      "id": "dungeon-platformer.small-dust-puffs-fx",
+      "label": "Small dust puffs FX cluster",
+      "category": "fx",
+      "classificationLane": "fx-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 630,
+        "w": 165,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 1,
+        "xEdges": [
+          0,
+          165
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. FX candidate; cleanup and timing approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.large-dust-cloud-fx",
+      "label": "Large dust cloud FX",
+      "category": "fx",
+      "classificationLane": "fx-candidate",
+      "sourceRect": {
+        "x": 165,
+        "y": 630,
+        "w": 179,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 2,
+        "xEdges": [
+          165,
+          344
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. FX candidate; cleanup and timing approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.sparkle-burst-small",
+      "label": "Small sparkle burst",
+      "category": "fx",
+      "classificationLane": "fx-candidate",
+      "sourceRect": {
+        "x": 344,
+        "y": 630,
+        "w": 179,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 3,
+        "xEdges": [
+          344,
+          523
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. FX candidate; cleanup and timing approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.gold-arrow-indicator",
+      "label": "Gold arrow indicator",
+      "category": "ui-direction-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 523,
+        "y": 630,
+        "w": 165,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 4,
+        "xEdges": [
+          523,
+          688
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.red-exclamation-alert",
+      "label": "Red exclamation alert",
+      "category": "ui-status-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 688,
+        "y": 630,
+        "w": 179,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 5,
+        "xEdges": [
+          688,
+          867
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.sparkle-burst-large",
+      "label": "Large sparkle burst",
+      "category": "fx",
+      "classificationLane": "fx-candidate",
+      "sourceRect": {
+        "x": 867,
+        "y": 630,
+        "w": 179,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 6,
+        "xEdges": [
+          867,
+          1046
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium-high",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. FX candidate; cleanup and timing approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.shield-red-x-status",
+      "label": "Shield red X status icon",
+      "category": "ui-status-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 1046,
+        "y": 630,
+        "w": 165,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 7,
+        "xEdges": [
+          1046,
+          1211
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    },
+    {
+      "id": "dungeon-platformer.pause-retry-control-icon",
+      "label": "Pause/retry control icon",
+      "category": "ui-control-icon",
+      "classificationLane": "ui-status-surface",
+      "sourceRect": {
+        "x": 1211,
+        "y": 630,
+        "w": 165,
+        "h": 138
+      },
+      "gridCell": {
+        "row": 5,
+        "column": 8,
+        "xEdges": [
+          1211,
+          1376
+        ],
+        "yEdges": [
+          630,
+          768
+        ]
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupRisk": "medium",
+      "notes": "Draft split-aware grid-cell mapping only; not runtime-approved. SourceRect follows the measured baked 8x5 sheet grid, not tight visible bounds. UI/status candidate; functional slot mapping and runtime UI approval deferred."
+    }
+  ],
+  "notes": [
+    "H5.54 performs source intake and split-aware draft region mapping only.",
+    "SourceRects intentionally follow the measured irregular baked grid-cell structure visible in the sheet.",
+    "No cleanup candidate, derived cleaned asset, runtime wiring, animation timing, hitbox/hurtbox approval, collision approval, placement approval, or gameplay logic is created.",
+    "This mixed sheet predates the later dedicated top-down and one-room platformer asset lanes; the manifest preserves that split context for later decisions."
+  ]
+}

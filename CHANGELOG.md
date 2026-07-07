@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.54 Dungeon Platformer Region Mapping**: Created a split-aware draft measured-grid-cell region manifest and evidence set for the mixed Dungeon Platformer source sheet. Mapped 40 irregular baked-grid cells across top-down terrain, side-view/platformer terrain, shared dungeon props, hazards, pickups, UI/status/control icons, FX candidates, and one slime enemy candidate; confirmed the RGBA source is fully opaque fake transparency; no cleanup, runtime wiring, animation timing, hitbox/collision approval, placement approval, Top-Down Slime Quest processing, or Shared FX processing occurred.
+
 * **H5.52B Farm Settlement Targeted Cleanup Correction**: Corrected the H5.52 Farm Settlement cleanup candidate for six human-flagged regions: 4 watered sprout soil plot, 7 withered crop plot, 13 water drop token, 21 campfire, 30 smiling sun, and 31 crescent moon. Regenerated targeted evidence, preserved non-target regions from the H5.52 derived sheet, kept the lane draft / needs-human-review / not-runtime-approved, and did not change source PNGs, sourceRects, gameplay logic, placement approval, functional slot mapping, scene anchors, or game wiring.
 
 * **H5.52 Farm Settlement Cleanup Candidate**: Created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions. Preserved the 1408x768 layout, kept the source PNG untouched, generated cleanup evidence, and retained fragile glow/fire/weather/sun/moon/banner/goblin edge risks for human review; no sourceRect remapping, scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, or game wiring occurred.
