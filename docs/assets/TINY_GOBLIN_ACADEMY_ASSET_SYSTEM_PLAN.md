@@ -392,8 +392,8 @@ H5.54 created a split-aware draft measured-grid-cell region manifest for `assets
 * **Top-down environment objects sheet**
   * Path: `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
   * Intended Use: Shared top-down placed props and interactables for Dungeon Key Run and Top-Down Slime Quest.
-  * Status: concept / v0.1 / H5.58 inventoried / primary processing source / needs region mapping.
-  * Notes: Object pantry only; games should use manifest-approved objects and ignore duplicates or unused extras. H5.58 routes this as the third primary topdown processing lane after terrain and walls so prop placement and interaction semantics stay separate from map construction.
+  * Status: H5.63 draft mapped / needs human review / not-runtime-approved.
+  * Notes: Object pantry only; games should use manifest-approved objects and ignore duplicates or unused extras. H5.58 routes this as the third primary topdown processing lane after terrain and walls so prop placement and interaction semantics stay separate from map construction. H5.63 mapped the 8x8 object sheet as visual inventory only; behavior, placement, collision, interaction, cleanup, and runtime use remain unapproved.
 
 * **Top-Down Slime Quest playfield candidate**
   * Path: `assets/academy/games/top-down-slime-quest/tga-top-down-slime-quest-playfield-pack-concept-v0.1.png`
@@ -695,6 +695,14 @@ H5.60B corrects the H5.60 blank-cell identities. Region 30 is blank/checkerboard
 Final blank placeholder cells are regions 30, 31, and 64. Partial checkerboard/content cells 25 and 35 remain water/checkerboard terrain candidates, 32 and 36 remain slime/checkerboard terrain candidates, and 37, 38, and 39 remain grass/checkerboard terrain candidates.
 
 H5.60B preserves the H5.60 review status and runtime boundary: `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use` / `not-runtime-approved`. It does not approve cleanup, runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, derived images, or game/runtime wiring.
+
+## H5.63 Topdown Objects Region Mapping Note
+
+H5.63 creates a draft 8x8 grid-cell region manifest for `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`. The source is `1024x1024` RGB with no alpha, so the checker-style background is baked/fake transparency.
+
+The objects sheet grid measures as 8 columns by 8 rows with 128px cells. H5.63 maps all 64 grid cells as draft-review regions, including one `blank-empty-cell` placeholder at region 49. Categories include key/pedestal, chest, portal/seal, fire/light, rubble/rock, statue/monument, banner/sign, shield/crest, foliage, tree/stump, flowers/plants, reeds, fence, bridge/plank, crate, barrel, campfire, marker/plate, hazard/trap, and decorative props.
+
+This is visual object inventory only. Category names do not approve loot, pickup, teleport, light, trap/damage, switch, chest, key, portal, collision, placement, interaction, cleanup, derived assets, terrain/wall changes, mixed playfield-pack salvage, or runtime/game wiring.
 
 ## H5.61 Topdown Walls Region Mapping Note
 

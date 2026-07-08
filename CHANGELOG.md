@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.63 Topdown Objects Region Mapping**: Created a draft 8x8 grid-cell object region manifest for `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`. Mapped 64 draft-review cells, including one blank placeholder, across key/pedestal, chest, portal/seal, fire/light, rubble/rock, statue, banner/sign, shield/crest, foliage, tree/stump, flowers/plants, reeds, fence, bridge/plank, crate, barrel, campfire, marker/plate, hazard/trap, and decorative prop categories. Generated object mapping evidence and did not create cleanup outputs, derived assets, runtime placement/collision/interaction data, chest/key/portal/trap/light behavior, terrain/wall changes, mixed playfield-pack salvage, or game wiring.
+
 * **H5.60B Topdown Terrain Blank Cell Correction**: Corrected the H5.60 blank-cell identities for the Topdown Terrain manifest. Region 30 is now `blank-empty-cell` / `blank-empty`, region 39 is now `grass-floor-tile` / `grass-edge-partial`, and the final blank placeholders are regions 30, 31, and 64. Documented partial checkerboard/content cells 25, 32, 35, 36, 37, 38, and 39 as content-bearing terrain candidates, generated H5.60B correction evidence, and preserved the no-cleanup / no-runtime / no-collision / no-pathfinding boundary.
 
 * **H5.60 Topdown Terrain Region Human Review**: Recorded human review pass for the H5.59 Topdown Terrain region mapping. This entry was superseded by H5.60B for the exact blank-cell identities; H5.60B is the current correction source. H5.60 did not create cleanup outputs, derived PNGs, runtime tilemaps, collision/pathfinding/placement data, terrain behavior, portal/slime/hazard behavior, or game wiring.
