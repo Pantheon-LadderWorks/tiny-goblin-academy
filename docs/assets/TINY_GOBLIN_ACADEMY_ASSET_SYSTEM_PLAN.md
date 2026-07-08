@@ -763,3 +763,23 @@ H5.68 supersedes H5.65 for Topdown Objects cleanup-candidate evaluation. H5.65 r
 The source file still has a `.png` extension but JPEG-formatted bytes, so the lane remains degraded-source / needs-human-review. H5.68 intentionally excludes effect/glow/fire/portal/smoke/slime/shadow regions 7, 9, 10, 17, 18, 47, 55, 57, 60, 61, and 62. Torches, campfires, braziers, portal/slime/shadow/glow effects, and similar regions should be regenerated as base sprites or layered later through particles/FX instead of being fake-cleaned here.
 
 No runtime use, placement, collision, interaction, pickup, loot, portal, light, flame, trap, slime, pressure plate, shadow/hole behavior, or game wiring is approved by H5.68.
+
+## H5.69 Topdown Objects Non-FX Cleanup Human Review Note
+
+H5.69 accepts the H5.68 Topdown Objects selective non-FX cleanup candidate for draft cleanup/planning use with one product exclusion.
+
+Accepted usable non-FX regions:
+
+```text
+51
+```
+
+Region 1 is excluded by product choice / not-selected-for-use. It is not marked as cleanup-failed.
+
+The H5.68 effect/glow/fire/portal/smoke/slime/shadow exclusions remain excluded:
+
+```text
+7, 9, 10, 17, 18, 47, 55, 57, 60, 61, 62
+```
+
+The active Topdown Objects cleanup candidate remains not-runtime-approved. No placement, collision, interaction, pickup, loot, chest/key/portal behavior, light/flame behavior, trap damage, slime hazard, pressure plate behavior, shadow/hole behavior, or game wiring is approved.
