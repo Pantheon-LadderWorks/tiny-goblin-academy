@@ -731,3 +731,19 @@ H5.66 pauses asset processing to close the pipeline governance gap exposed by H5
 H5.66 introduces `scripts/asset-pipeline/cli.mjs` as the canonical asset-pipeline command surface, adds a cleanup method registry, adds run-log helpers, converts lane scripts from help-only stubs into CLI wrappers, and documents the rule that future asset operations must use canonical scripts or registered methods. Future cleanup/mapping/evidence operations should write `pipeline-run-log.json` and generated manifests should record pipeline provenance.
 
 Asset processing remains paused until the CLI/provenance layer is used for the next sheet. No source PNGs, derived PNGs, evidence PNGs, manifests, game/runtime code, package files, lockfiles, or dependency folders were modified by the H5.66 audit/lockdown lane.
+
+## H5.67 Run-Log + Manifest Provenance Contract Note
+
+H5.67 makes the H5.66 lockdown enforceable. Future H5.67+ generated asset manifests must record a `pipelineRun` block that points back to the canonical pipeline tool, command, registered method, method status, source hash, git baseline, and evidence run log.
+
+The canonical validation surface now includes:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+Existing manifests are not backfilled in H5.67. They are classified as `legacy-pre-H5.67` under legacy-ok validation, while hard provenance mode is reserved for future migration or H5.67+ generated manifests.
+
+No source PNGs, derived PNGs, evidence PNGs, production manifests, game/runtime code, package files, or lockfiles were modified by the H5.67 provenance-contract lane.

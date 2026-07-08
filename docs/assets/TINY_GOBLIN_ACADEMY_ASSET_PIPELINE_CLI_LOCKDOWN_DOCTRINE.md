@@ -99,6 +99,30 @@ Future generated manifests should include a provenance block such as:
 
 Older manifests are not retroactively invalid, but new manifests should follow this contract.
 
+## H5.67 Provenance Enforcement
+
+H5.67 promotes the provenance requirement from doctrine to executable validation.
+
+The contract lives in:
+
+`scripts/asset-pipeline/lib/provenance-contract.mjs`
+
+The validator lives in:
+
+`scripts/asset-pipeline/validate-pipeline-provenance.mjs`
+
+Agents should use:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+`--legacy-ok` allows pre-H5.67 manifests without `pipelineRun` while still validating any manifest or run log that does provide provenance. `--hard` is the future enforcement mode for H5.67+ generated manifests and selected migration lanes.
+
+For future generated assets, missing provenance is not a warning. It is evidence that the output did not pass through the canonical pipeline contract.
+
 ## Evidence Folder Requirement
 
 Evidence is not only screenshots. Evidence must contain:
@@ -154,4 +178,3 @@ A script must be one of:
 - documented legacy/read-only reference.
 
 Anything else is technical debt and should be corrected or removed.
-

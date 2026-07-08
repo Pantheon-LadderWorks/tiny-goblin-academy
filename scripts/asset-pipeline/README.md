@@ -27,6 +27,8 @@ node scripts/asset-pipeline/cli.mjs list-cleanup-methods
 node scripts/asset-pipeline/cli.mjs inspect-source --source assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png
 node scripts/asset-pipeline/cli.mjs make-evidence --manifest manifests/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
 node scripts/asset-pipeline/cli.mjs validate
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
 ```
 
 `pipeline-index.mjs` remains as a compatibility wrapper for lane profile lookup, but `cli.mjs` is the canonical command surface.
@@ -81,3 +83,31 @@ pipeline-run-log.json
 ```
 
 The run log records the tool path, command, method, method status, agent/session, git baseline, source path, source hash, output paths, output hashes, generated evidence, validation commands, warnings, and whether source/runtime files were modified.
+
+## H5.67 Provenance Contract
+
+Future H5.67+ generated asset manifests must include a `pipelineRun` block that matches the evidence run log.
+
+Required validation:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+Useful inspection:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+```
+
+`--legacy-ok` keeps pre-H5.67 manifests valid as historical artifacts while validating any provenance that exists. `--hard` is for future H5.67+ enforcement or explicit migration lanes:
+
+```powershell
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --hard
+```
+
+New cleanup/mapping/evidence outputs should not be accepted if they lack both:
+
+- a manifest `pipelineRun` block;
+- an evidence `pipeline-run-log.json`.

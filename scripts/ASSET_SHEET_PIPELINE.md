@@ -306,6 +306,22 @@ The remaining roadmap is to deepen the CLI, not to create more one-off scripts:
 
 The pipeline should remain boring and auditable. The goal is not magic. The goal is safe asset cartography.
 
+## H5.67 Run-Log + Manifest Provenance Contract
+
+H5.67 adds executable provenance validation so future asset outputs can prove how they were created.
+
+Canonical commands:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+Future H5.67+ generated manifests must include `pipelineRun` metadata that links to an evidence-folder `pipeline-run-log.json`. The run log must identify the canonical tool, command, registered method, method status, source hash, output hashes, git baseline, and source/runtime mutation flags.
+
+Pre-H5.67 manifests remain valid as `legacy-pre-H5.67` under legacy-ok validation. Missing provenance is not acceptable for new generated asset outputs.
+
 ## Final Runtime Principle
 
 Game code should not know about messy concept sheets.

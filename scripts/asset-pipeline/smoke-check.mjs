@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { spawnSync } from 'child_process';
 import { getLaneProfile, operationalAssetTypes } from './lib/asset-taxonomy.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
@@ -46,6 +47,16 @@ for (const file of requiredLaneFiles) {
   if (!fs.existsSync(fullPath)) {
     console.error(`❌ Missing lane script: ${file}`);
     hasErrors = true;
+    continue;
+  }
+  const content = fs.readFileSync(fullPath, 'utf8');
+  if (!content.includes('scripts/asset-pipeline/cli.mjs')) {
+    console.error(`❌ Lane wrapper does not route through canonical CLI: ${file}`);
+    hasErrors = true;
+  }
+  if (/\bstub\b|future TODO|help-only/i.test(content)) {
+    console.error(`❌ Lane wrapper contains stub/TODO/help-only language: ${file}`);
+    hasErrors = true;
   }
 }
 
@@ -56,6 +67,8 @@ for (const file of [
   'scripts/asset-pipeline/lib/cleanup-method-registry.mjs',
   'scripts/asset-pipeline/lib/run-log.mjs',
   'scripts/asset-pipeline/lib/file-hash.mjs',
+  'scripts/asset-pipeline/lib/provenance-contract.mjs',
+  'scripts/asset-pipeline/validate-pipeline-provenance.mjs',
   'scripts/validate-academy-asset-manifests.mjs',
   'manifests/hub.icon-regions.json',
   'scripts/clean-fake-transparent-sheet.py'
@@ -70,12 +83,37 @@ if (hasErrors) {
   process.exit(1);
 }
 
+for (const commandArgs of [
+  ['scripts/asset-pipeline/cli.mjs', 'list-cleanup-methods', '--json'],
+  ['scripts/asset-pipeline/cli.mjs', 'explain-provenance-contract', '--json'],
+  ['scripts/asset-pipeline/validate-pipeline-provenance.mjs', '--legacy-ok']
+]) {
+  const result = spawnSync('node', commandArgs, {
+    cwd: repoRoot,
+    encoding: 'utf8'
+  });
+  if (result.status !== 0) {
+    console.error(`❌ Command failed: node ${commandArgs.join(' ')}`);
+    console.error(result.stdout);
+    console.error(result.stderr);
+    hasErrors = true;
+  }
+}
+
+if (hasErrors) {
+  process.exit(1);
+}
+
 console.log('✅ Asset pipeline smoke check passed');
 console.log(` - Taxonomy operational types: ${operationalAssetTypes.length}`);
 console.log(` - Lane scripts: ${requiredLaneFiles.length}`);
 console.log(' - Canonical CLI found');
 console.log(' - Cleanup method registry found');
 console.log(' - Run log helper found');
+console.log(' - Provenance contract found');
+console.log(' - Provenance validator found');
+console.log(' - Lane wrappers route through canonical CLI');
+console.log(' - CLI provenance commands passed');
 console.log(' - Cleanup script reference found');
 console.log(' - Region evidence generator found');
 console.log(' - Hub icon source-region manifest reference found');

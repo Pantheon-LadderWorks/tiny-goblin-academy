@@ -35,8 +35,8 @@ No source image becomes runtime truth merely because it exists.
 - Runtime use needs a separate implementation or integration lane.
 - Use the canonical asset-pipeline CLI where it applies: `scripts/asset-pipeline/cli.mjs`.
 - Do not use inline cleanup scripts or unregistered pixel methods for normal cleanup candidates.
-- Future cleanup/mapping/evidence operations should write `pipeline-run-log.json`.
-- Future generated manifests should include pipeline provenance once the manifest provenance contract is active.
+- H5.67+ cleanup/mapping/evidence operations must write or preserve `pipeline-run-log.json`.
+- H5.67+ generated manifests must include `pipelineRun` provenance that points to the canonical pipeline command and run log.
 
 ## Standard Pass Sequence
 
@@ -223,6 +223,8 @@ Every future cleanup candidate should include a run log:
 ```text
 assets/academy/evidence/<lane>/pipeline-run-log.json
 ```
+
+H5.67+ cleanup manifests should include a matching `pipelineRun` block. Missing run-log or manifest provenance is a pipeline failure unless the pass is explicitly docs-only or legacy-pre-H5.67.
 
 ### 9. Cleanup Human Review / Promotion
 
@@ -518,6 +520,19 @@ node scripts/validate-hub-icons.mjs
 node scripts/validate-academy-asset-manifests.mjs
 node scripts/validate-academy-animation-manifests.mjs
 node scripts/asset-pipeline/smoke-check.mjs
+```
+
+Run provenance validation for H5.67+ lanes:
+
+```text
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+Use hard mode only when the current lane explicitly migrates or generates H5.67+ provenance-complete manifests:
+
+```text
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --hard
 ```
 
 Also parse any new JSON directly and check lane-specific invariants:

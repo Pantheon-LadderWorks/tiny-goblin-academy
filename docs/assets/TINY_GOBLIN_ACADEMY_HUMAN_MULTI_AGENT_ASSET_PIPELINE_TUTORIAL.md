@@ -68,6 +68,46 @@ A source sheet can be mapped and still be rejected for cleanup.
 
 That is not failure. That is the pipeline doing its job.
 
+## 1.1 H5.67 Provenance Rule
+
+After H5.67, a new generated asset output should be able to prove how it was made.
+
+Future H5.67+ generated manifests should include:
+
+```text
+pipelineRun
+```
+
+The evidence folder should include:
+
+```text
+pipeline-run-log.json
+```
+
+Together, those records identify:
+
+```text
+canonical tool
+command
+registered method
+method status
+source hash
+output hash
+git baseline
+source/runtime mutation flags
+validation commands
+```
+
+Review agents should reject new generated asset outputs that claim pipeline processing but cannot point to machine-readable provenance, unless the pass is explicitly docs-only or legacy-pre-H5.67.
+
+Useful commands:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs validate-provenance
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
 ---
 
 # 2. The Agent Surface

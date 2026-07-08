@@ -49,6 +49,7 @@ node scripts/asset-pipeline/cli.mjs make-evidence --manifest [REGION_MANIFEST_PA
 node scripts/asset-pipeline/cli.mjs list-cleanup-methods
 node scripts/asset-pipeline/cli.mjs cleanup-candidate --method [REGISTERED_METHOD] --source [SOURCE_PATH] --output [DERIVED_SHEET_PATH] --preview [PREVIEW_PATH] --run-log [EVIDENCE_FOLDER]/pipeline-run-log.json
 node scripts/asset-pipeline/cli.mjs validate
+node scripts/asset-pipeline/cli.mjs validate-provenance
 ```
 
 Do not write inline one-off cleanup scripts.
@@ -62,11 +63,20 @@ If an edge case does not fit the current method registry, stop and either:
 * regenerate/export true-alpha source;
 * ask Kryssie for a pipeline lane.
 
-Every future cleanup/mapping/evidence operation should include or create a machine-readable run log:
+Every H5.67+ cleanup/mapping/evidence operation should include or create a machine-readable run log:
 
 `pipeline-run-log.json`
 
-Every future generated manifest should include pipeline provenance fields pointing to the tool, command, method, method status, and run log.
+Every H5.67+ generated manifest should include `pipelineRun` provenance fields pointing to the tool, command, method, method status, source hash, git baseline, and run log.
+
+If the current prompt needs to inspect the contract, run:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs explain-provenance-contract
+node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok
+```
+
+Do not accept new generated asset outputs that lack both manifest provenance and an evidence run log unless the pass is explicitly docs-only or legacy-pre-H5.67.
 
 Before editing, run:
 

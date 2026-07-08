@@ -8,6 +8,13 @@ import { readImageMetadata } from './lib/image-metadata.mjs';
 import { getCleanupMethod, listCleanupMethods } from './lib/cleanup-method-registry.mjs';
 import { buildRunLog, writeRunLog } from './lib/run-log.mjs';
 import { sha256File } from './lib/file-hash.mjs';
+import {
+  allowedCommands,
+  allowedMethodStatuses,
+  provenanceContractVersion,
+  requiredManifestPipelineRunFields,
+  requiredRunLogFields
+} from './lib/provenance-contract.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const cliPath = 'scripts/asset-pipeline/cli.mjs';
@@ -23,6 +30,8 @@ Usage:
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
   node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--output <path>] [--preview <path>] [--run-log <path>] [--agent <name>]
   node scripts/asset-pipeline/cli.mjs validate
+  node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
+  node scripts/asset-pipeline/cli.mjs explain-provenance-contract [--json]
   node scripts/asset-pipeline/cli.mjs write-run-log --run-log <path> --command <name> [--method <method>] [--source <path>] [--manifest <path>] [--output <path>]...
 
 Rules:
@@ -161,6 +170,38 @@ function validate() {
   for (const [command, commandArgs] of commands) run(command, commandArgs);
 }
 
+function validateProvenance(args) {
+  const modeArgs = args.includes('--hard') ? ['--hard'] : ['--legacy-ok'];
+  run('node', ['scripts/asset-pipeline/validate-pipeline-provenance.mjs', ...modeArgs]);
+}
+
+function explainProvenanceContract(args) {
+  const data = {
+    contractVersion: provenanceContractVersion,
+    canonicalTool: cliPath,
+    requiredRunLogFields,
+    requiredManifestPipelineRunFields,
+    allowedMethodStatuses,
+    allowedCommands,
+    legacyPolicy: 'Pre-H5.67 manifests are allowed in legacy-ok mode. H5.67+ generated asset outputs must include pipelineRun provenance and run logs.',
+    hardModePolicy: 'Hard mode fails manifests missing pipelineRun provenance.',
+    sourceMutationPolicy: 'sourcePngModified must not be true.',
+    runtimeMutationPolicy: 'runtimeFilesModified must not be true for asset-only lanes.'
+  };
+  if (hasArg(args, '--json')) return printJson(data);
+  console.log('Asset Pipeline Provenance Contract');
+  console.log(` - Contract version: ${data.contractVersion}`);
+  console.log(` - Canonical tool: ${data.canonicalTool}`);
+  console.log(` - Required run-log fields: ${requiredRunLogFields.join(', ')}`);
+  console.log(` - Required manifest pipelineRun fields: ${requiredManifestPipelineRunFields.join(', ')}`);
+  console.log(` - Allowed method statuses: ${allowedMethodStatuses.join(', ')}`);
+  console.log(` - Allowed commands: ${allowedCommands.join(', ')}`);
+  console.log(` - Legacy policy: ${data.legacyPolicy}`);
+  console.log(` - Hard mode policy: ${data.hardModePolicy}`);
+  console.log(` - Source mutation policy: ${data.sourceMutationPolicy}`);
+  console.log(` - Runtime mutation policy: ${data.runtimeMutationPolicy}`);
+}
+
 function cleanupCandidate(args) {
   const methodId = argValue(args, '--method');
   const source = argValue(args, '--source');
@@ -220,9 +261,11 @@ function cleanupCandidate(args) {
     const runLog = buildRunLog({
       toolPath: cliPath,
       command: 'cleanup-candidate',
-      method: method.id,
-      methodStatus: method.status,
-      agent,
+    method: method.id,
+    methodStatus: method.status,
+    laneId: argValue(args, '--lane', null),
+    repoRoot,
+    agent,
       gitBaseline: currentGitBaseline(),
       sourcePath: source,
       outputPaths: generated,
@@ -251,10 +294,13 @@ function writeLog(args) {
     command,
     method: methodId,
     methodStatus: method?.status ?? null,
+    laneId: argValue(args, '--lane', null),
+    repoRoot,
     agent: argValue(args, '--agent', 'unknown-agent'),
     gitBaseline: currentGitBaseline(),
     sourcePath: argValue(args, '--source'),
     manifestPath: argValue(args, '--manifest'),
+    inputManifests: argValues(args, '--input-manifest'),
     outputPaths: outputs,
     evidenceFiles: argValues(args, '--evidence'),
     validationCommands: argValues(args, '--validation'),
@@ -292,6 +338,12 @@ switch (command) {
   case 'validate':
     validate();
     break;
+  case 'validate-provenance':
+    validateProvenance(rest);
+    break;
+  case 'explain-provenance-contract':
+    explainProvenanceContract(rest);
+    break;
   case 'write-run-log':
     writeLog(rest);
     break;
@@ -305,4 +357,3 @@ switch (command) {
     usage();
     process.exit(1);
 }
-
