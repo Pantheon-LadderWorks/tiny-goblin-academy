@@ -325,3 +325,10 @@ All notable changes to this project will be documented in this file.
 - Source metadata: 1024x1024 RGB with no alpha channel.
 - Created H5.61 evidence for bbox overlay, contact sheet, region table, source inspection, and category preview.
 - Runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.
+
+## H5.62 - Topdown Walls Region Human Review
+
+- Accepted the H5.61 Topdown Walls region mapping for draft cleanup/planning use.
+- Human review passed for 64 wall/object regions.
+- 8x8 128px grid sourceRects and H5.61 category/role assignments were retained.
+- Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain deferred.

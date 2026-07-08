@@ -699,3 +699,7 @@ H5.60B preserves the H5.60 review status and runtime boundary: `reviewed` / `hum
 ## H5.61 Topdown Walls Region Mapping Note
 
 H5.61 mapped the Topdown Walls source sheet at ssets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png as a draft 64-region inventory manifest. The source is 1024x1024 RGB with no alpha channel. The mapping is source inventory and semantic classification only; runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.
+
+## H5.62 Topdown Walls Region Human Review Note
+
+H5.62 accepted the H5.61 Topdown Walls region mapping for draft cleanup and planning use. The reviewed map contains 64 wall/object regions using the 8x8 128px source grid, with H5.61 category and role assignments retained. Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain deferred.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-region-mapping",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-walls",
   "operationalType": "topdown-wall-region-manifest",
@@ -1183,6 +1183,28 @@
   "reviewNotes": [
     "H5.61 maps topdown walls as draft source inventory only.",
     "No collision, pathfinding, placement, wall autotiling, door behavior, or runtime tilemap use approved.",
-    "Categories are provisional until H5.62 human review."
-  ]
+    "Categories are provisional until H5.62 human review.",
+    "H5.61 Topdown Walls region mapping passed human/product review in H5.62.",
+    "64 wall/object regions accepted for draft cleanup/planning use.",
+    "8x8 128px grid sourceRects accepted.",
+    "No sourceRect correction pass needed.",
+    "Categories and roles from H5.61 accepted for draft cleanup/planning use only.",
+    "Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain not approved."
+  ],
+  "humanReview": {
+    "reviewId": "H5.62",
+    "decision": "passed",
+    "reviewedCommit": "3aa43a8 docs: map topdown wall regions",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 64,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.61 Topdown Walls region mapping passed human/product review in H5.62.",
+      "64 wall/object regions accepted for draft cleanup/planning use.",
+      "8x8 128px grid sourceRects accepted.",
+      "No sourceRect correction pass needed.",
+      "Categories and roles from H5.61 accepted for draft cleanup/planning use only.",
+      "Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain not approved."
+    ]
+  }
 }
