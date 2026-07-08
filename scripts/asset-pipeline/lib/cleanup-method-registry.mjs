@@ -30,11 +30,13 @@ export const cleanupMethods = {
     id: 'edge-connected-checker-cleanup',
     status: 'canonical-with-caution',
     implemented: true,
-    description: 'Alias of flood-fill-gray-background for edge-connected fake checkerboard sheets.',
+    description: 'Per-grid-cell edge-connected fake checker cleanup. Removes only checker/background pixels connected to each cell boundary.',
     safeDefault: false,
     requiresOutput: true,
-    requiresPreview: true,
-    aliasOf: 'flood-fill-gray-background'
+    requiresPreview: false,
+    requiresManifest: true,
+    requiresCleanupManifest: true,
+    requiresEvidenceDir: true
   },
   'color-key-cleanup': {
     id: 'color-key-cleanup',
@@ -81,4 +83,3 @@ export function listCleanupMethods() {
 export function getCleanupMethod(id) {
   return cleanupMethods[id] ?? null;
 }
-

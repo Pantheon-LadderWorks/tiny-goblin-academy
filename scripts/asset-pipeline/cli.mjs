@@ -28,7 +28,7 @@ Usage:
   node scripts/asset-pipeline/cli.mjs list-cleanup-methods [--json]
   node scripts/asset-pipeline/cli.mjs inspect-source --source <path> [--json]
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
-  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--output <path>] [--preview <path>] [--run-log <path>] [--agent <name>]
+  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>]
   node scripts/asset-pipeline/cli.mjs validate
   node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
   node scripts/asset-pipeline/cli.mjs explain-provenance-contract [--json]
@@ -205,7 +205,10 @@ function explainProvenanceContract(args) {
 function cleanupCandidate(args) {
   const methodId = argValue(args, '--method');
   const source = argValue(args, '--source');
+  const manifest = argValue(args, '--manifest');
   const output = argValue(args, '--output');
+  const cleanupManifest = argValue(args, '--cleanup-manifest');
+  const evidenceDir = argValue(args, '--evidence-dir');
   const preview = argValue(args, '--preview');
   const runLogPath = argValue(args, '--run-log');
   const agent = argValue(args, '--agent', 'unknown-agent');
@@ -230,6 +233,18 @@ function cleanupCandidate(args) {
     console.error(`Cleanup method '${methodId}' requires --preview`);
     process.exit(1);
   }
+  if (method.requiresManifest && !manifest) {
+    console.error(`Cleanup method '${methodId}' requires --manifest`);
+    process.exit(1);
+  }
+  if (method.requiresCleanupManifest && !cleanupManifest) {
+    console.error(`Cleanup method '${methodId}' requires --cleanup-manifest`);
+    process.exit(1);
+  }
+  if (method.requiresEvidenceDir && !evidenceDir) {
+    console.error(`Cleanup method '${methodId}' requires --evidence-dir`);
+    process.exit(1);
+  }
 
   const sourceFull = repoPath(source);
   const outputFull = output ? repoPath(output) : null;
@@ -244,6 +259,25 @@ function cleanupCandidate(args) {
     fs.mkdirSync(path.dirname(outputFull), { recursive: true });
     fs.copyFileSync(sourceFull, outputFull);
     generated.push(output);
+  } else if (effectiveMethod.id === 'edge-connected-checker-cleanup') {
+    if (!runLogPath) {
+      console.error(`Cleanup method '${methodId}' requires --run-log for H5.67 provenance`);
+      process.exit(1);
+    }
+    run('python', [
+      'scripts/asset-pipeline/cleanup-edge-connected-checker.py',
+      '--input', source,
+      '--manifest', manifest,
+      '--output', output,
+      '--cleanup-manifest', cleanupManifest,
+      '--evidence-dir', evidenceDir,
+      '--excluded-regions', argValue(args, '--excluded-regions', ''),
+      '--method', method.id,
+      '--method-status', method.status,
+      '--run-log', runLogPath,
+      '--repo-root', repoRoot
+    ]);
+    generated.push(output, cleanupManifest);
   } else if (effectiveMethod.id === 'flood-fill-gray-background') {
     run('python', [
       'scripts/clean-fake-transparent-sheet.py',
@@ -258,22 +292,63 @@ function cleanupCandidate(args) {
   }
 
   if (runLogPath) {
+    const generatedEvidence = evidenceDir && fs.existsSync(repoPath(evidenceDir))
+      ? fs.readdirSync(repoPath(evidenceDir))
+        .filter((entry) => entry.endsWith('.png'))
+        .map((entry) => `${evidenceDir.replaceAll('\\', '/')}/${entry}`)
+      : (preview ? [preview] : []);
     const runLog = buildRunLog({
       toolPath: cliPath,
       command: 'cleanup-candidate',
-    method: method.id,
-    methodStatus: method.status,
+      method: method.id,
+      methodStatus: method.status,
     laneId: argValue(args, '--lane', null),
     repoRoot,
     agent,
       gitBaseline: currentGitBaseline(),
       sourcePath: source,
+      manifestPath: manifest,
+      inputManifests: [],
       outputPaths: generated,
-      evidenceFiles: preview ? [preview] : [],
-      warnings,
+      evidenceFiles: generatedEvidence,
+      validationCommands: [
+        'node scripts/asset-pipeline/cli.mjs validate-provenance',
+        'node scripts/asset-pipeline/smoke-check.mjs'
+      ],
+      warnings: [
+        ...warnings,
+        ...(method.id === 'edge-connected-checker-cleanup' ? [
+          'Source may be degraded/fake-transparent; H5.68 uses edge-connected masks only and excludes effect/glow/fire/portal/smoke/slime/shadow regions.'
+        ] : [])
+      ],
       sourcePngModified: false,
       runtimeFilesModified: false
     });
+    if (cleanupManifest && fs.existsSync(repoPath(cleanupManifest))) {
+      const manifestPath = repoPath(cleanupManifest);
+      const cleanupData = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+      cleanupData.sourceSha256 = runLog.sourceSha256;
+      cleanupData.outputSha256 = runLog.outputFiles.find((file) => file.path === output)?.sha256 ?? null;
+      cleanupData.pipelineRun = {
+        tool: cliPath,
+        command: 'cleanup-candidate',
+        method: method.id,
+        methodStatus: method.status,
+        runLog: runLogPath.replaceAll('\\', '/'),
+        sourceSha256: runLog.sourceSha256,
+        generatedAt: runLog.completedAt,
+        gitBaseline: runLog.gitBaseline,
+        sourcePngModified: false,
+        runtimeFilesModified: false
+      };
+      fs.writeFileSync(manifestPath, `${JSON.stringify(cleanupData, null, 2)}\n`, 'utf8');
+      const refreshedOutputs = runLog.outputFiles.map((file) => ({
+        ...file,
+        sha256: sha256File(repoPath(file.path))
+      }));
+      runLog.outputFiles = refreshedOutputs;
+      runLog.outputPaths = refreshedOutputs;
+    }
     writeRunLog(repoPath(runLogPath), runLog);
     console.log(`Run log written: ${runLogPath}`);
   }

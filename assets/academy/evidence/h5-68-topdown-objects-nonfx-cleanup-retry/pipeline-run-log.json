@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "cleanup-candidate",
+  "method": "edge-connected-checker-cleanup",
+  "methodStatus": "canonical-with-caution",
+  "laneId": "h5-68-topdown-objects-nonfx-cleanup-retry",
+  "agent": "codex",
+  "gitBaseline": "ea46f7e tools: enforce asset pipeline provenance contract",
+  "startedAt": "2026-07-08T20:45:14.986Z",
+  "completedAt": "2026-07-08T20:45:14.993Z",
+  "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+  "sourceSha256": "56690b639c8b2c53f6a57dcc9766dc0bf9764663086aa13ecf4d2f1e4423e657",
+  "manifestPath": "manifests/academy.topdown.objects.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.objects.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
+      "sha256": "67fc55a82aa6966c7de05042124b4e371b775c58af3ac84785e4347d4f3ea459"
+    },
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "sha256": "11e9bce7ee25c678bcdf44faba648d94dd03d8d508e1e6a0f182461bf8590d6c"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
+      "sha256": "67fc55a82aa6966c7de05042124b4e371b775c58af3ac84785e4347d4f3ea459"
+    },
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "sha256": "11e9bce7ee25c678bcdf44faba648d94dd03d8d508e1e6a0f182461bf8590d6c"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-excluded-effects-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-accepted-candidate-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-mask-overlay.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-mask-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-excluded-effects-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-accepted-candidate-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-mask-overlay.png",
+    "assets/academy/evidence/h5-68-topdown-objects-nonfx-cleanup-retry/topdown-objects-nonfx-mask-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "Source may be degraded/fake-transparent; H5.68 uses edge-connected masks only and excludes effect/glow/fire/portal/smoke/slime/shadow regions."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-08T20:45:14.997Z"
+}
