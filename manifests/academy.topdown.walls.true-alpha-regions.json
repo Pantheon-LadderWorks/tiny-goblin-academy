@@ -1,0 +1,1141 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-region-mapping",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-walls",
+  "operationalType": "true-alpha-variable-region-mapping",
+  "sourceSheet": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
+  "sourceKind": "regenerated-true-alpha-source",
+  "mappingMethod": "alpha-assisted-variable-region-mapping",
+  "sourceDimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "alphaFinding": {
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "transparentPixels": 892779,
+    "nonOpaquePixels": 1255659
+  },
+  "regionCount": 58,
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.walls.true-alpha.stone-brick-wall-short",
+      "label": "brick wall segment short",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 43,
+        "y": 42,
+        "w": 220,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 2,
+      "id": "topdown.walls.true-alpha.stone-brick-wall-long",
+      "label": "brick wall segment long",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 267,
+        "y": 42,
+        "w": 291,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 3,
+      "id": "topdown.walls.true-alpha.ruined-corner-left-tall",
+      "label": "ruined wall corner left tall",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 570,
+        "y": 28,
+        "w": 181,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 4,
+      "id": "topdown.walls.true-alpha.ruined-corner-right-tall",
+      "label": "ruined wall corner right tall",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 763,
+        "y": 28,
+        "w": 136,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 5,
+      "id": "topdown.walls.true-alpha.short-cracked-wall-stack",
+      "label": "short cracked wall stack",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 909,
+        "y": 28,
+        "w": 116,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 6,
+      "id": "topdown.walls.true-alpha.narrow-cracked-wall-stack",
+      "label": "narrow cracked wall stack",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 1035,
+        "y": 28,
+        "w": 95,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 7,
+      "id": "topdown.walls.true-alpha.low-rubble-wall-run",
+      "label": "low rubble wall run",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1133,
+        "y": 76,
+        "w": 196,
+        "h": 67
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 8,
+      "id": "topdown.walls.true-alpha.small-loose-rubble-stones",
+      "label": "small loose rubble stones",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1334,
+        "y": 70,
+        "w": 83,
+        "h": 70
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 9,
+      "id": "topdown.walls.true-alpha.single-tall-stone-column",
+      "label": "single tall stone column",
+      "category": "column",
+      "sourceRect": {
+        "x": 1435,
+        "y": 29,
+        "w": 67,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 10,
+      "id": "topdown.walls.true-alpha.block-wall-segment-short",
+      "label": "block wall segment short",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 42,
+        "y": 177,
+        "w": 220,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 11,
+      "id": "topdown.walls.true-alpha.block-wall-segment-long",
+      "label": "block wall segment long",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 268,
+        "y": 177,
+        "w": 331,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 12,
+      "id": "topdown.walls.true-alpha.inner-wall-corner-down-turn",
+      "label": "inner wall corner down turn",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 615,
+        "y": 175,
+        "w": 136,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 13,
+      "id": "topdown.walls.true-alpha.angled-cracked-wall-corner",
+      "label": "angled cracked wall corner",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 770,
+        "y": 177,
+        "w": 112,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 14,
+      "id": "topdown.walls.true-alpha.broken-wall-base-short",
+      "label": "broken wall base short",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 890,
+        "y": 175,
+        "w": 125,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 15,
+      "id": "topdown.walls.true-alpha.rubble-wall-base-short",
+      "label": "rubble wall base short",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1019,
+        "y": 176,
+        "w": 129,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 16,
+      "id": "topdown.walls.true-alpha.long-broken-rubble-wall",
+      "label": "long broken rubble wall",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1157,
+        "y": 176,
+        "w": 221,
+        "h": 103
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 17,
+      "id": "topdown.walls.true-alpha.short-cracked-wall-block",
+      "label": "short cracked wall block",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 1385,
+        "y": 176,
+        "w": 113,
+        "h": 101
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 18,
+      "id": "topdown.walls.true-alpha.mossy-wide-arch-wall",
+      "label": "mossy wide arch wall",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 42,
+        "y": 312,
+        "w": 248,
+        "h": 121
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 19,
+      "id": "topdown.walls.true-alpha.mossy-narrow-arch-wall",
+      "label": "mossy narrow arch wall",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 302,
+        "y": 311,
+        "w": 142,
+        "h": 122
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 20,
+      "id": "topdown.walls.true-alpha.mossy-medium-arch-wall",
+      "label": "mossy medium arch wall",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 451,
+        "y": 311,
+        "w": 165,
+        "h": 123
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 21,
+      "id": "topdown.walls.true-alpha.low-rubble-pile-wall",
+      "label": "low rubble pile wall",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 626,
+        "y": 351,
+        "w": 171,
+        "h": 79
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 22,
+      "id": "topdown.walls.true-alpha.single-loose-stone",
+      "label": "single loose stone",
+      "category": "rock",
+      "sourceRect": {
+        "x": 801,
+        "y": 375,
+        "w": 60,
+        "h": 54
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 23,
+      "id": "topdown.walls.true-alpha.low-stacked-stone-wall",
+      "label": "low stacked stone wall",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 873,
+        "y": 312,
+        "w": 164,
+        "h": 116
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 24,
+      "id": "topdown.walls.true-alpha.round-topped-stone-pillar",
+      "label": "round-topped stone pillar",
+      "category": "pillar",
+      "sourceRect": {
+        "x": 1044,
+        "y": 327,
+        "w": 210,
+        "h": 109
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 25,
+      "id": "topdown.walls.true-alpha.small-stone-pillar",
+      "label": "small stone pillar",
+      "category": "pillar",
+      "sourceRect": {
+        "x": 1279,
+        "y": 309,
+        "w": 67,
+        "h": 117
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 26,
+      "id": "topdown.walls.true-alpha.long-low-broken-stone-wall",
+      "label": "long low broken stone wall",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1408,
+        "y": 310,
+        "w": 73,
+        "h": 122
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 27,
+      "id": "topdown.walls.true-alpha.plain-stone-arch",
+      "label": "plain stone arch",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 43,
+        "y": 464,
+        "w": 121,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 28,
+      "id": "topdown.walls.true-alpha.wooden-door-arch",
+      "label": "wooden door arch",
+      "category": "door",
+      "sourceRect": {
+        "x": 183,
+        "y": 464,
+        "w": 123,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 29,
+      "id": "topdown.walls.true-alpha.dark-wooden-door-arch",
+      "label": "dark wooden door arch",
+      "category": "door",
+      "sourceRect": {
+        "x": 319,
+        "y": 464,
+        "w": 112,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 30,
+      "id": "topdown.walls.true-alpha.mossy-broken-wall-chunk",
+      "label": "mossy broken wall chunk",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 454,
+        "y": 464,
+        "w": 114,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 31,
+      "id": "topdown.walls.true-alpha.small-lock-marker-block",
+      "label": "small lock marker block",
+      "category": "uncertain",
+      "sourceRect": {
+        "x": 577,
+        "y": 463,
+        "w": 81,
+        "h": 81
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 32,
+      "id": "topdown.walls.true-alpha.short-capped-column",
+      "label": "short capped column",
+      "category": "column",
+      "sourceRect": {
+        "x": 665,
+        "y": 465,
+        "w": 73,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 33,
+      "id": "topdown.walls.true-alpha.long-stone-sill-slab",
+      "label": "long stone sill slab",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 768,
+        "y": 517,
+        "w": 284,
+        "h": 60
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 34,
+      "id": "topdown.walls.true-alpha.mossy-low-rubble-wall",
+      "label": "mossy low rubble wall",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1057,
+        "y": 503,
+        "w": 206,
+        "h": 76
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 35,
+      "id": "topdown.walls.true-alpha.broken-narrow-wall-column",
+      "label": "broken narrow wall column",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1267,
+        "y": 466,
+        "w": 90,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 36,
+      "id": "topdown.walls.true-alpha.mossy-cracked-wall-block",
+      "label": "mossy cracked wall block",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1376,
+        "y": 468,
+        "w": 120,
+        "h": 120
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 37,
+      "id": "topdown.walls.true-alpha.wood-fence-long-low",
+      "label": "wood fence long low",
+      "category": "fence",
+      "sourceRect": {
+        "x": 44,
+        "y": 628,
+        "w": 181,
+        "h": 88
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 38,
+      "id": "topdown.walls.true-alpha.wood-fence-long-with-posts",
+      "label": "wood fence long with posts",
+      "category": "fence",
+      "sourceRect": {
+        "x": 243,
+        "y": 627,
+        "w": 225,
+        "h": 89
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 39,
+      "id": "topdown.walls.true-alpha.short-round-stone-pillar",
+      "label": "short round stone pillar",
+      "category": "pillar",
+      "sourceRect": {
+        "x": 506,
+        "y": 610,
+        "w": 64,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 40,
+      "id": "topdown.walls.true-alpha.broken-stone-pillar-pile",
+      "label": "broken stone pillar pile",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 593,
+        "y": 616,
+        "w": 123,
+        "h": 112
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 41,
+      "id": "topdown.walls.true-alpha.loose-stone-pile-small",
+      "label": "loose stone pile small",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 735,
+        "y": 628,
+        "w": 208,
+        "h": 89
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 42,
+      "id": "topdown.walls.true-alpha.wood-fence-panel",
+      "label": "wood fence panel",
+      "category": "fence",
+      "sourceRect": {
+        "x": 962,
+        "y": 619,
+        "w": 152,
+        "h": 97
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 43,
+      "id": "topdown.walls.true-alpha.gray-boulder",
+      "label": "gray boulder",
+      "category": "rock",
+      "sourceRect": {
+        "x": 1121,
+        "y": 630,
+        "w": 133,
+        "h": 92
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 44,
+      "id": "topdown.walls.true-alpha.wood-post-barrier",
+      "label": "wood post barrier",
+      "category": "fence",
+      "sourceRect": {
+        "x": 1266,
+        "y": 616,
+        "w": 93,
+        "h": 101
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 45,
+      "id": "topdown.walls.true-alpha.green-bush",
+      "label": "green bush",
+      "category": "bush",
+      "sourceRect": {
+        "x": 1375,
+        "y": 623,
+        "w": 143,
+        "h": 97
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 46,
+      "id": "topdown.walls.true-alpha.mossy-brick-wall-short",
+      "label": "mossy brick wall short",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 40,
+        "y": 761,
+        "w": 210,
+        "h": 98
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 47,
+      "id": "topdown.walls.true-alpha.mossy-brick-wall-long",
+      "label": "mossy brick wall long",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 285,
+        "y": 759,
+        "w": 250,
+        "h": 101
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 48,
+      "id": "topdown.walls.true-alpha.mossy-stone-cap-slab",
+      "label": "mossy stone cap slab",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 571,
+        "y": 764,
+        "w": 223,
+        "h": 76
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 49,
+      "id": "topdown.walls.true-alpha.flat-pebble-rubble-patch",
+      "label": "flat pebble rubble patch",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 830,
+        "y": 762,
+        "w": 169,
+        "h": 58
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 50,
+      "id": "topdown.walls.true-alpha.small-pebble-rubble-patch",
+      "label": "small pebble rubble patch",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1027,
+        "y": 760,
+        "w": 161,
+        "h": 65
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 51,
+      "id": "topdown.walls.true-alpha.thin-pebble-rubble-strip",
+      "label": "thin pebble rubble strip",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1204,
+        "y": 764,
+        "w": 120,
+        "h": 56
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 52,
+      "id": "topdown.walls.true-alpha.stacked-rubble-patch",
+      "label": "stacked rubble patch",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1337,
+        "y": 745,
+        "w": 181,
+        "h": 90
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 53,
+      "id": "topdown.walls.true-alpha.very-long-mossy-brick-wall",
+      "label": "very long mossy brick wall",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 39,
+        "y": 903,
+        "w": 446,
+        "h": 68
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 54,
+      "id": "topdown.walls.true-alpha.round-green-bush",
+      "label": "round green bush",
+      "category": "bush",
+      "sourceRect": {
+        "x": 513,
+        "y": 872,
+        "w": 136,
+        "h": 102
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 55,
+      "id": "topdown.walls.true-alpha.mossy-brick-wall-long-broken",
+      "label": "mossy brick wall long broken",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 671,
+        "y": 868,
+        "w": 306,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 56,
+      "id": "topdown.walls.true-alpha.mossy-brick-wall-medium",
+      "label": "mossy brick wall medium",
+      "category": "wall-horizontal",
+      "sourceRect": {
+        "x": 1000,
+        "y": 875,
+        "w": 177,
+        "h": 86
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 57,
+      "id": "topdown.walls.true-alpha.long-rubble-wall-pile",
+      "label": "long rubble wall pile",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1199,
+        "y": 874,
+        "w": 157,
+        "h": 93
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 58,
+      "id": "topdown.walls.true-alpha.stacked-rubble-wall-pile",
+      "label": "stacked rubble wall pile",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1369,
+        "y": 873,
+        "w": 154,
+        "h": 91
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Alpha-assisted variable-size sourceRect candidate; needs human review.",
+        "Visual inventory only; no collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    }
+  ],
+  "nonGoals": [
+    "No cleanup performed.",
+    "No derived cleanup image created.",
+    "No source PNG modification.",
+    "No runtime, collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or game wiring approval."
+  ],
+  "notes": [
+    "H5.71 maps the regenerated true-alpha wall source.",
+    "This is variable-size alpha-assisted mapping, not an 8x8 grid mapping.",
+    "H5.71 supersedes the old wall cleanup direction for this true-alpha source, but does not delete or invalidate prior reviewed old-wall mapping history."
+  ]
+}

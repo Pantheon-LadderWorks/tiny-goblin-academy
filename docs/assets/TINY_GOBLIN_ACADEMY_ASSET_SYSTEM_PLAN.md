@@ -797,3 +797,21 @@ assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated
 The horizontal/mixed wall source is `1536x1024` RGBA with real alpha and should be mapped carefully without transparency cleanup. The vertical wall supplement is `1448x1086` RGB with fake transparency, but it is mostly hard-edged stone with no glow/fire/smoke and is a good candidate for map-then-clean processing. The regenerated object sheet is `1254x1254` RGB with fake transparency, but it removes the prior fire/portal/glow-heavy object set and is the preferred next object remapping / cleanup source.
 
 H5.70 does not map sourceRects, create cleanup outputs, create derived PNGs, approve runtime atlases, or change game/runtime code. It records routing only: hard-edged fake-transparent sources may enter cleanup school, while flame/glow/smoke/portal effects should be regenerated or layered later through particles/FX instead of scraped from fake transparency.
+
+## H5.71 Topdown Walls True-Alpha Region Mapping Note
+
+H5.71 maps the regenerated true-alpha wall source:
+
+```text
+assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png
+```
+
+The sheet is `1536x1024` PNG / RGBA with alpha range `0-255`, so H5.71 performs variable-size alpha-assisted region mapping instead of 8x8 grid mapping or fake-background cleanup. The draft manifest is:
+
+```text
+manifests/academy.topdown.walls.true-alpha-regions.json
+```
+
+H5.71 maps 58 draft regions across wall-horizontal, wall-ruin, rubble, wall-corner, wall-arch, fence, wall-vertical, pillar, column, rock, bush, door, and uncertain categories. These categories remain visual inventory labels only. No cleanup, derived cleanup image, source PNG edit, runtime asset approval, collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or game wiring is approved.
+
+H5.71 supersedes the old wall cleanup direction for this true-alpha source, but it does not delete or invalidate prior H5.61/H5.62 reviewed old-wall mapping history. The white-background vertical wall supplement remains a separate map-then-clean lane.
