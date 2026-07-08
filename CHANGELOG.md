@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.66 Asset Pipeline CLI Lockdown Audit**: Paused asset processing after H5.65 exposed a cleanup governance gap. Added a canonical `scripts/asset-pipeline/cli.mjs` command surface, cleanup method registry, run-log helper, file hashing helper, and non-stub lane wrappers; updated smoke-check to require the CLI/provenance organs; documented the CLI lockdown doctrine and evidence vault architecture; classified H5.65 blank-cell-reference cleanup as experimental / unsafe-default / not promotion-ready; and updated prompt/tutorial/system-plan docs so future asset operations must use canonical scripts or registered methods with run logs.
+
 * **H5.65 Topdown Objects Cleanup Candidate**: Created a draft cleanup candidate for the H5.64-reviewed Topdown Objects 8x8 grid using region 49 as a blank-cell reference background. Generated the derived cleaned sheet, cleanup manifest, and cleanup evidence for all 64 regions; retained high-risk behavior/soft-edge flags for regions 7, 9, 10, 17, 18, 47, 55, 57, 58, 60, 61, and 62; preserved the no-runtime / no-behavior / no-placement / no-collision boundary; and did not modify source PNGs, terrain/wall manifests, mixed playfield-pack assets, or game/runtime files.
 
 * **H5.63 Topdown Objects Region Mapping**: Created a draft 8x8 grid-cell object region manifest for `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`. Mapped 64 draft-review cells, including one blank placeholder, across key/pedestal, chest, portal/seal, fire/light, rubble/rock, statue, banner/sign, shield/crest, foliage, tree/stump, flowers/plants, reeds, fence, bridge/plank, crate, barrel, campfire, marker/plate, hazard/trap, and decorative prop categories. Generated object mapping evidence and did not create cleanup outputs, derived assets, runtime placement/collision/interaction data, chest/key/portal/trap/light behavior, terrain/wall changes, mixed playfield-pack salvage, or game wiring.
@@ -325,7 +327,7 @@ All notable changes to this project will be documented in this file.
 ## H5.61 - Topdown Walls Region Mapping
 
 - Mapped the Topdown Walls source sheet as a draft 64-region inventory manifest.
-- Source path: ssets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png.
+- Source path: assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png.
 - Source metadata: 1024x1024 RGB with no alpha channel.
 - Created H5.61 evidence for bbox overlay, contact sheet, region table, source inspection, and category preview.
 - Runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.

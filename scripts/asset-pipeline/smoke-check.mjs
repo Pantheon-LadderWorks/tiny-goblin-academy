@@ -50,8 +50,12 @@ for (const file of requiredLaneFiles) {
 }
 
 for (const file of [
+  'scripts/asset-pipeline/cli.mjs',
   'scripts/asset-pipeline/pipeline-index.mjs',
   'scripts/asset-pipeline/make-region-evidence.py',
+  'scripts/asset-pipeline/lib/cleanup-method-registry.mjs',
+  'scripts/asset-pipeline/lib/run-log.mjs',
+  'scripts/asset-pipeline/lib/file-hash.mjs',
   'scripts/validate-academy-asset-manifests.mjs',
   'manifests/hub.icon-regions.json',
   'scripts/clean-fake-transparent-sheet.py'
@@ -69,6 +73,9 @@ if (hasErrors) {
 console.log('✅ Asset pipeline smoke check passed');
 console.log(` - Taxonomy operational types: ${operationalAssetTypes.length}`);
 console.log(` - Lane scripts: ${requiredLaneFiles.length}`);
+console.log(' - Canonical CLI found');
+console.log(' - Cleanup method registry found');
+console.log(' - Run log helper found');
 console.log(' - Cleanup script reference found');
 console.log(' - Region evidence generator found');
 console.log(' - Hub icon source-region manifest reference found');

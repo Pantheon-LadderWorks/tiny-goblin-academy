@@ -8,6 +8,9 @@ This document exists because a sheet filename is not enough for runtime use. A s
 
 Known related scripts:
 
+- `scripts/asset-pipeline/cli.mjs`
+- `scripts/asset-pipeline/lib/cleanup-method-registry.mjs`
+- `scripts/asset-pipeline/lib/run-log.mjs`
 - `scripts/clean-fake-transparent-sheet.py`
 - `scripts/clean-hub-icon-checkerboard.py`
 - `scripts/validate-hub-icon-regions.mjs`
@@ -39,6 +42,9 @@ Note: this companion does not replace those documents. It gathers the script-fac
 6. Every automated pass must produce visual evidence.
 7. Every region must be bounds-validated before use.
 8. Every promoted sprite must have a semantic name.
+9. Every future cleanup/mapping/evidence run must use the canonical CLI or a documented canonical helper.
+10. Every future cleanup method must be registered before use.
+11. Every future run should write `pipeline-run-log.json`.
 
 ## Sheet Categories
 
@@ -279,13 +285,24 @@ The first trusted command should process one sheet, write evidence, write a cand
 
 ## Script Roadmap
 
-The current cleanup scripts should eventually be joined by:
+H5.66 establishes `scripts/asset-pipeline/cli.mjs` as the canonical command surface and converts lane scripts into wrappers over it. The CLI now covers:
 
-- `inspect-asset-sheet.py`
-- `detect-sprite-regions.py`
-- `generate-contact-sheet.py`
-- `validate-sprite-regions.mjs`
-- `promote-reviewed-manifest.mjs`
+- source inspection;
+- lane profile lookup;
+- cleanup method registry lookup;
+- evidence generation;
+- cleanup candidate dispatch through registered methods;
+- validation;
+- run-log writing.
+
+The remaining roadmap is to deepen the CLI, not to create more one-off scripts:
+
+- add first-class grid mapping commands;
+- add manifest promotion commands;
+- add evidence index/vault support;
+- add manifest provenance validation;
+- wrap animation evidence through the CLI;
+- retire or register any useful legacy/pilot method explicitly.
 
 The pipeline should remain boring and auditable. The goal is not magic. The goal is safe asset cartography.
 

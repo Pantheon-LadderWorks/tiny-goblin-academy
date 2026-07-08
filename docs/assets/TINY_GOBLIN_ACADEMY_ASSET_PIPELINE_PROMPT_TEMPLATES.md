@@ -35,6 +35,39 @@ Do not use `git add .` or `git add ..`.
 Stage exact files only.
 Write text/JSON files using UTF-8.
 
+Canonical tooling required:
+
+Asset processing must use the canonical asset-pipeline command surface where it applies:
+
+`scripts/asset-pipeline/cli.mjs`
+
+Use canonical commands such as:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs inspect-source --source [SOURCE_PATH]
+node scripts/asset-pipeline/cli.mjs make-evidence --manifest [REGION_MANIFEST_PATH] --out [EVIDENCE_FOLDER]
+node scripts/asset-pipeline/cli.mjs list-cleanup-methods
+node scripts/asset-pipeline/cli.mjs cleanup-candidate --method [REGISTERED_METHOD] --source [SOURCE_PATH] --output [DERIVED_SHEET_PATH] --preview [PREVIEW_PATH] --run-log [EVIDENCE_FOLDER]/pipeline-run-log.json
+node scripts/asset-pipeline/cli.mjs validate
+```
+
+Do not write inline one-off cleanup scripts.
+Do not invent unregistered pixel methods.
+Do not create a cleanup candidate from a method that is not registered in `scripts/asset-pipeline/lib/cleanup-method-registry.mjs`.
+
+If an edge case does not fit the current method registry, stop and either:
+
+* register an explicit experimental method;
+* defer cleanup;
+* regenerate/export true-alpha source;
+* ask Kryssie for a pipeline lane.
+
+Every future cleanup/mapping/evidence operation should include or create a machine-readable run log:
+
+`pipeline-run-log.json`
+
+Every future generated manifest should include pipeline provenance fields pointing to the tool, command, method, method status, and run log.
+
 Before editing, run:
 
 ```powershell

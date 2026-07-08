@@ -723,3 +723,11 @@ H5.65 creates a draft cleanup candidate for `assets/academy/topdown/objects/tga-
 This candidate remains `draft` / `needs-human-review` / `not-runtime-approved`. It preserves the object layout and records high-risk behavior/soft-edge regions 7, 9, 10, 17, 18, 47, 55, 57, 58, 60, 61, and 62 for human review. H5.65 does not approve loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, terrain/wall changes, mixed playfield-pack salvage, or game/runtime use.
 
 Because the source has baked checkerboard/fake transparency, H5.66 should review the cleanup visually and may accept, exclude, or correct individual regions rather than treating the derived sheet as automatically runtime-ready.
+
+## H5.66 Asset Pipeline CLI Lockdown Note
+
+H5.66 pauses asset processing to close the pipeline governance gap exposed by H5.65. The H5.65 manifest/evidence workflow was disciplined, but the cleanup pixel operation used non-canonical inline blank-cell-reference logic. That method is now classified as `blank-cell-reference-experimental` / unsafe-default / not promotion-ready.
+
+H5.66 introduces `scripts/asset-pipeline/cli.mjs` as the canonical asset-pipeline command surface, adds a cleanup method registry, adds run-log helpers, converts lane scripts from help-only stubs into CLI wrappers, and documents the rule that future asset operations must use canonical scripts or registered methods. Future cleanup/mapping/evidence operations should write `pipeline-run-log.json` and generated manifests should record pipeline provenance.
+
+Asset processing remains paused until the CLI/provenance layer is used for the next sheet. No source PNGs, derived PNGs, evidence PNGs, manifests, game/runtime code, package files, lockfiles, or dependency folders were modified by the H5.66 audit/lockdown lane.

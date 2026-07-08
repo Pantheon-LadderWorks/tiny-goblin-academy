@@ -1,15 +1,12 @@
 #!/usr/bin/env node
-import { getLaneProfile } from '../lib/asset-taxonomy.mjs';
+import { spawnSync } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const profile = getLaneProfile('ui-icon-sheet');
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
+const result = spawnSync('node', ['scripts/asset-pipeline/cli.mjs', 'profile', '--type', 'ui-icon-sheet', ...process.argv.slice(2)], {
+  cwd: repoRoot,
+  stdio: 'inherit'
+});
 
-console.log('Tiny Goblin Academy asset lane: ui-icon-sheet');
-console.log('');
-console.log('Responsible for: static UI icons, HUD controls, badges, panels, and small interface sprites.');
-console.log(`Required manifest type: ${profile.manifestContract}`);
-console.log(`Required evidence: ${profile.requiredEvidence.join(', ')}`);
-console.log(`Human review: ${profile.humanReviewGate}`);
-console.log(`Cleanup policy: ${profile.cleanupPolicy}`);
-console.log(`Forbidden actions: ${profile.forbiddenActions.join(', ')}`);
-console.log('');
-console.log('This H5.1 lane stub is help-only and does not modify files.');
+process.exit(result.status ?? 1);

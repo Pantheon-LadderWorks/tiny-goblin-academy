@@ -684,6 +684,51 @@ The pipeline works best when the agent handles the boring law and Kryssie handle
 
 Every repo agent should obey these gates.
 
+## 10.0 Canonical tooling gate
+
+The repo agent must not quietly invent a cleanup pipeline.
+
+Future asset-processing work should enter through:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs --help
+```
+
+The important standard is shared across all agents:
+
+```text
+same CLI
+same cleanup method registry
+same run-log shape
+same manifest provenance
+same no-runtime boundary
+```
+
+Browser-review agents, code agents, evidence agents, and documentation agents must all treat unregistered pixel cleanup as a failed gate, not a clever shortcut.
+
+If a method is missing, the next prompt should say one of:
+
+```text
+register an experimental method
+defer cleanup
+regenerate true-alpha source
+create a pipeline implementation lane
+```
+
+It should not say:
+
+```text
+just run a quick inline cleanup script
+```
+
+Every future cleanup/mapping/evidence run should create or preserve:
+
+```text
+pipeline-run-log.json
+```
+
+That run log is the bridge between the visual evidence, the manifest, the source hash, the output hash, the exact tool command, and the final review decision.
+
 ## Before editing
 
 ```powershell

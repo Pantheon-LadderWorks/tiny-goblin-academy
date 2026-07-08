@@ -33,6 +33,10 @@ No source image becomes runtime truth merely because it exists.
 - Every mapping or cleanup lane needs evidence that a future human or agent can inspect without reopening the whole source sheet.
 - Human/product review approves visual acceptability; it does not automatically approve runtime wiring.
 - Runtime use needs a separate implementation or integration lane.
+- Use the canonical asset-pipeline CLI where it applies: `scripts/asset-pipeline/cli.mjs`.
+- Do not use inline cleanup scripts or unregistered pixel methods for normal cleanup candidates.
+- Future cleanup/mapping/evidence operations should write `pipeline-run-log.json`.
+- Future generated manifests should include pipeline provenance once the manifest provenance contract is active.
 
 ## Standard Pass Sequence
 
@@ -205,6 +209,20 @@ Rules:
 - cleanup remains `draft-review` until human/product review passes.
 
 For fake checkerboard cleanup, prefer conservative derived cleanup over destructive source edits.
+
+Cleanup candidates must use a registered cleanup method. Check:
+
+```powershell
+node scripts/asset-pipeline/cli.mjs list-cleanup-methods
+```
+
+If a method is not registered, do not create a normal cleanup candidate with it. Register it as experimental, defer cleanup, or regenerate/export true-alpha source.
+
+Every future cleanup candidate should include a run log:
+
+```text
+assets/academy/evidence/<lane>/pipeline-run-log.json
+```
 
 ### 9. Cleanup Human Review / Promotion
 
@@ -486,6 +504,12 @@ Use these terms consistently:
 ## Validation Checklist
 
 Run existing validators appropriate to the repo:
+
+```text
+node scripts/asset-pipeline/cli.mjs validate
+```
+
+The CLI validation command wraps:
 
 ```text
 node scripts/validate-academy-manifest.mjs
