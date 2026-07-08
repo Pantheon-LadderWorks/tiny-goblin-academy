@@ -28,7 +28,7 @@ Usage:
   node scripts/asset-pipeline/cli.mjs list-cleanup-methods [--json]
   node scripts/asset-pipeline/cli.mjs inspect-source --source <path> [--json]
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
-  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>]
+  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>]
   node scripts/asset-pipeline/cli.mjs validate
   node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
   node scripts/asset-pipeline/cli.mjs explain-provenance-contract [--json]
@@ -264,7 +264,7 @@ function cleanupCandidate(args) {
       console.error(`Cleanup method '${methodId}' requires --run-log for H5.67 provenance`);
       process.exit(1);
     }
-    run('python', [
+    const cleanupArgs = [
       'scripts/asset-pipeline/cleanup-edge-connected-checker.py',
       '--input', source,
       '--manifest', manifest,
@@ -272,11 +272,22 @@ function cleanupCandidate(args) {
       '--cleanup-manifest', cleanupManifest,
       '--evidence-dir', evidenceDir,
       '--excluded-regions', argValue(args, '--excluded-regions', ''),
+      '--evidence-prefix', argValue(args, '--evidence-prefix', 'edge-connected-checker'),
+      '--lane-title', argValue(args, '--lane-title', 'Edge-Connected Checker Cleanup'),
+      '--domain', argValue(args, '--domain', 'asset-cleanup'),
+      '--operational-type', argValue(args, '--operational-type', 'edge-connected-checker-cleanup-candidate'),
+      '--pipeline-use', argValue(args, '--pipeline-use', 'draft-cleanup-candidate'),
+      '--risk-regex', argValue(args, '--risk-regex', ''),
       '--method', method.id,
       '--method-status', method.status,
       '--run-log', runLogPath,
       '--repo-root', repoRoot
-    ]);
+    ];
+    const backgroundReferenceRegion = argValue(args, '--background-reference-region', null);
+    if (backgroundReferenceRegion !== null) {
+      cleanupArgs.push('--background-reference-region', backgroundReferenceRegion);
+    }
+    run('python', cleanupArgs);
     generated.push(output, cleanupManifest);
   } else if (effectiveMethod.id === 'flood-fill-gray-background') {
     run('python', [
@@ -302,9 +313,9 @@ function cleanupCandidate(args) {
       command: 'cleanup-candidate',
       method: method.id,
       methodStatus: method.status,
-    laneId: argValue(args, '--lane', null),
-    repoRoot,
-    agent,
+      laneId: argValue(args, '--lane', null),
+      repoRoot,
+      agent,
       gitBaseline: currentGitBaseline(),
       sourcePath: source,
       manifestPath: manifest,
@@ -318,7 +329,7 @@ function cleanupCandidate(args) {
       warnings: [
         ...warnings,
         ...(method.id === 'edge-connected-checker-cleanup' ? [
-          'Source may be degraded/fake-transparent; H5.68 uses edge-connected masks only and excludes effect/glow/fire/portal/smoke/slime/shadow regions.'
+          'Source may be degraded/fake-transparent; edge-connected-checker-cleanup removes only edge-connected background-like masks and requires human review.'
         ] : [])
       ],
       sourcePngModified: false,

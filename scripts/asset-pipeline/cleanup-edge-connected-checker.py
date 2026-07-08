@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 from collections import Counter, deque
 from pathlib import Path
 
@@ -19,14 +20,14 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 
-DEFAULT_EXCLUDED = {7, 9, 10, 17, 18, 47, 55, 57, 60, 61, 62}
+DEFAULT_EXCLUDED: set[int] = set()
 DEFAULT_PARAMS = {
     "gray_sat_max": 0.18,
     "gray_min": 0.24,
     "gray_max": 0.90,
     "channel_delta_max": 0.09,
     "reference_distance_max": 0.34,
-    "background_reference_region": 49,
+    "background_reference_region": None,
     "edge_expansion_passes": 0,
     "edge_alpha": 160,
 }
@@ -207,7 +208,7 @@ def contact_sheet(cards: list[tuple[str, Image.Image, str]], title: str, subtitl
         crop.thumbnail((thumb, thumb), Image.LANCZOS)
         bg.alpha_composite(crop, ((thumb - crop.width) // 2, (thumb - crop.height) // 2))
         canvas.alpha_composite(bg, (x, y))
-        color = (120, 210, 255, 255) if status == "candidate" else (255, 120, 120, 255)
+        color = (120, 210, 255, 255) if status == "candidate" else (255, 180, 90, 255) if "risk" in status else (255, 120, 120, 255)
         draw.rectangle([x, y, x + thumb, y + thumb], outline=color, width=2)
         draw.text((x, y + thumb + 3), label[:18], fill=(235, 235, 235, 255), font=font)
         draw.text((x, y + thumb + 17), status[:18], fill=color, font=font)
@@ -249,7 +250,7 @@ def table_preview(regions: list[dict], title: str, subtitle: str) -> Image.Image
     for r in regions:
         rows.append([
             str(r["index"]),
-            r["id"].replace("topdown.objects.", ""),
+            r["id"].replace("topdown.objects.", "").replace("topdown.walls.", "").replace("topdown.terrain.", ""),
             r.get("category", ""),
             r.get("cleanupStatus", ""),
             "; ".join(r.get("notes", []))[:64] if isinstance(r.get("notes"), list) else str(r.get("notes", ""))[:64],
@@ -274,13 +275,22 @@ def table_preview(regions: list[dict], title: str, subtitle: str) -> Image.Image
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Selective edge-connected checker cleanup for topdown object grid sheets.")
+    parser = argparse.ArgumentParser(description="Selective edge-connected checker cleanup for grid-cell asset sheets.")
     parser.add_argument("--input", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--cleanup-manifest", required=True)
     parser.add_argument("--evidence-dir", required=True)
     parser.add_argument("--excluded-regions", default="")
+    parser.add_argument("--evidence-prefix", default="edge-connected-checker")
+    parser.add_argument("--lane-title", default="Edge-Connected Checker Cleanup")
+    parser.add_argument("--domain", default="asset-cleanup")
+    parser.add_argument("--operational-type", default="edge-connected-checker-cleanup-candidate")
+    parser.add_argument("--pipeline-use", default="draft-cleanup-candidate")
+    parser.add_argument("--risk-regex", default="")
+    parser.add_argument("--background-reference-region", type=int, default=None)
+    parser.add_argument("--excluded-status", default="excluded-effect-regeneration-needed")
+    parser.add_argument("--excluded-usage", default="do-not-use-from-cleanup")
     parser.add_argument("--method", default="edge-connected-checker-cleanup")
     parser.add_argument("--method-status", default="canonical-with-caution")
     parser.add_argument("--run-log", required=True)
@@ -297,6 +307,9 @@ def main() -> None:
 
     excluded = DEFAULT_EXCLUDED | parse_indexes(args.excluded_regions)
     params = dict(DEFAULT_PARAMS)
+    if args.background_reference_region is not None:
+        params["background_reference_region"] = args.background_reference_region
+    risk_pattern = re.compile(args.risk_regex, re.IGNORECASE) if args.risk_regex else None
 
     evidence_dir.mkdir(parents=True, exist_ok=True)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -308,7 +321,7 @@ def main() -> None:
     source_img = Image.open(source_path).convert("RGBA")
     reference_crop = None
     for region in source_manifest["regions"]:
-        if int(region["index"]) == params["background_reference_region"]:
+        if params["background_reference_region"] and int(region["index"]) == params["background_reference_region"]:
             rect = region["sourceRect"]
             reference_crop = source_img.crop((rect["x"], rect["y"], rect["x"] + rect["w"], rect["y"] + rect["h"]))
             break
@@ -321,6 +334,7 @@ def main() -> None:
     accepted_cards: list[tuple[str, Image.Image, str]] = []
     excluded_cards: list[tuple[str, Image.Image, str]] = []
     mask_cards: list[tuple[str, Image.Image]] = []
+    risk_cards: list[tuple[str, Image.Image, str]] = []
     stats = {
         "candidateRegions": 0,
         "excludedRegions": 0,
@@ -333,6 +347,15 @@ def main() -> None:
         rect = region["sourceRect"]
         box = (rect["x"], rect["y"], rect["x"] + rect["w"], rect["y"] + rect["h"])
         crop = source_img.crop(box)
+        risk_text = " ".join([
+            str(region.get("id", "")),
+            str(region.get("label", "")),
+            str(region.get("category", "")),
+            str(region.get("objectRole", "")),
+            str(region.get("wallRole", "")),
+            str(region.get("terrainRole", "")),
+        ])
+        is_risk = bool(risk_pattern and risk_pattern.search(risk_text))
         region_notes: list[str] = []
         out_region = {
             "index": idx,
@@ -340,6 +363,8 @@ def main() -> None:
             "label": region["label"],
             "category": region.get("category"),
             "objectRole": region.get("objectRole"),
+            "wallRole": region.get("wallRole"),
+            "terrainRole": region.get("terrainRole"),
             "sourceRect": rect,
             "derivedRect": rect,
             "cleanupRisk": "medium",
@@ -349,11 +374,11 @@ def main() -> None:
 
         if idx in excluded:
             out_region.update({
-                "cleanupStatus": "excluded-effect-regeneration-needed",
-                "usage": "do-not-use-from-h5-68-cleanup",
+                "cleanupStatus": args.excluded_status,
+                "usage": args.excluded_usage,
             })
             region_notes.extend([
-                "Excluded from H5.68 cleanup because effect/glow/fire/portal/smoke/slime/shadow sprites should be regenerated or layered later.",
+                "Excluded from this cleanup candidate because the cell should be regenerated, layered, or reviewed outside this cleanup lane.",
                 "Not runtime-approved; no behavior, placement, collision, interaction, light, flame, portal, trap, slime, or shadow approval.",
             ])
             excluded_cards.append((f"{idx}. {region['label']}", crop, "excluded"))
@@ -364,7 +389,7 @@ def main() -> None:
                 "usage": "draft-review",
                 "cleanupRisk": "low",
             })
-            region_notes.append("Blank inventory cell preserved as transparent in the H5.68 derived candidate.")
+            region_notes.append("Blank inventory cell preserved as transparent in the derived cleanup candidate.")
             empty = Image.new("RGBA", crop.size, (0, 0, 0, 0))
             out_sheet.alpha_composite(empty, (rect["x"], rect["y"]))
             before_after_rows.append((idx, region["label"], crop, empty, "blank transparent"))
@@ -383,11 +408,13 @@ def main() -> None:
                 "maskTransparentPixels": transparent_pixels,
             })
             region_notes.extend([
-                "H5.68 selective non-effect cleanup candidate using edge-connected background mask only.",
+                f"{args.lane_title} cleanup candidate using edge-connected background mask only.",
                 "Needs human review; not runtime-approved.",
             ])
-            if idx == 58:
-                region_notes.append("Spike trap remains visual-only; no damage, collision, placement, interaction, or runtime approval.")
+            if is_risk:
+                out_region["behaviorRisk"] = "behavior-deferred"
+                region_notes.append("Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.")
+                risk_cards.append((f"{idx}. {region['label']}", cleaned, "risk"))
             before_after_rows.append((idx, region["label"], crop, cleaned, "candidate needs review"))
             accepted_cards.append((f"{idx}. {region['label']}", cleaned, "candidate"))
 
@@ -416,27 +443,34 @@ def main() -> None:
     derived_preview.alpha_composite(checker_bg, (20, 70))
     derived_preview.alpha_composite(dark_preview, (source_img.width + 20, 70))
     ddraw = ImageDraw.Draw(derived_preview)
-    ddraw.text((20, 18), "H5.68 Topdown Objects Non-FX Cleaned Derived Sheet Preview", fill=(255, 224, 148, 255), font=load_font(26))
+    ddraw.text((20, 18), f"{args.lane_title} Cleaned Derived Sheet Preview", fill=(255, 224, 148, 255), font=load_font(26))
     ddraw.text((20, 48), "draft cleanup candidate • edge-connected masks • source untouched • not runtime-approved", fill=(220, 220, 225, 255), font=load_font(14))
     ddraw.text((20, 72), "checker preview", fill=(120, 210, 255, 255), font=load_font(14))
     ddraw.text((source_img.width + 20, 72), "dark preview", fill=(120, 210, 255, 255), font=load_font(14))
-    derived_preview.save(evidence_dir / "topdown-objects-nonfx-cleaned-derived-sheet-preview.png")
-    add_title(dark_preview, "H5.68 Topdown Objects Non-FX Cleaned On-Dark Preview", "draft cleanup candidate • on-dark residue review • no runtime approval").save(evidence_dir / "topdown-objects-nonfx-cleaned-on-dark-preview.png")
-    before_after_sheet(before_after_rows, "H5.68 Topdown Objects Non-FX Before/After Contact Sheet", "candidate regions + blank cell • excluded effects shown separately • needs human review").save(evidence_dir / "topdown-objects-nonfx-before-after-contact-sheet.png")
-    mask_sheet(mask_cards, "H5.68 Topdown Objects Non-FX Mask Preview", "red pixels are edge-connected background masks only • no global color chewing").save(evidence_dir / "topdown-objects-nonfx-mask-preview.png")
-    contact_sheet(accepted_cards, "H5.68 Topdown Objects Accepted Candidate Preview", "ordinary non-effect candidates only • still needs human review • not runtime-approved", cols=8).save(evidence_dir / "topdown-objects-nonfx-accepted-candidate-preview.png")
-    contact_sheet(excluded_cards, "H5.68 Topdown Objects Excluded Effects Preview", "future regeneration/base-sprite/particle candidates • not cleaned • not runtime-approved", cols=4).save(evidence_dir / "topdown-objects-excluded-effects-preview.png")
-    table_preview(regions_out, "H5.68 Topdown Objects Non-FX Cleanup Table Preview", "status for all 64 source cells • effects excluded • candidates need review").save(evidence_dir / "topdown-objects-nonfx-cleanup-table-preview.png")
-    add_title(Image.alpha_composite(source_img, mask_overlay), "H5.68 Topdown Objects Edge Mask Overlay", "red overlay marks edge-connected background removal masks • method proof, not runtime approval").save(evidence_dir / "topdown-objects-nonfx-mask-overlay.png")
+    prefix = args.evidence_prefix
+    derived_preview.save(evidence_dir / f"{prefix}-cleaned-derived-sheet-preview.png")
+    add_title(dark_preview, f"{args.lane_title} Cleaned On-Dark Preview", "draft cleanup candidate • on-dark residue review • no runtime approval").save(evidence_dir / f"{prefix}-cleaned-on-dark-preview.png")
+    before_after_sheet(before_after_rows, f"{args.lane_title} Before/After Contact Sheet", "all regions • excluded cells shown separately if any • needs human review").save(evidence_dir / f"{prefix}-before-after-contact-sheet.png")
+    mask_sheet(mask_cards, f"{args.lane_title} Mask Preview", "red pixels are edge-connected background masks only • no global color chewing").save(evidence_dir / f"{prefix}-mask-preview.png")
+    contact_sheet(accepted_cards, f"{args.lane_title} Candidate Preview", "visual cleanup candidates only • still needs human review • not runtime-approved", cols=8).save(evidence_dir / f"{prefix}-candidate-preview.png")
+    if excluded_cards:
+        contact_sheet(excluded_cards, f"{args.lane_title} Excluded Preview", "excluded from cleanup candidate • not runtime-approved", cols=4).save(evidence_dir / f"{prefix}-excluded-preview.png")
+    risk_preview_cards = risk_cards if risk_cards else []
+    if risk_preview_cards:
+        contact_sheet(risk_preview_cards, f"{args.lane_title} Risk Preview", "behavior-looking cells are visual-only and behavior-deferred", cols=4).save(evidence_dir / f"{prefix}-risk-preview.png")
+    else:
+        table_preview([r for r in regions_out if r.get("behaviorRisk")], f"{args.lane_title} Risk Preview", "no risk-regex matches found; all regions still not-runtime-approved").save(evidence_dir / f"{prefix}-risk-preview.png")
+    table_preview(regions_out, f"{args.lane_title} Cleanup Table Preview", "status for all source cells • candidates need review • no runtime approval").save(evidence_dir / f"{prefix}-cleanup-table-preview.png")
+    add_title(Image.alpha_composite(source_img, mask_overlay), f"{args.lane_title} Edge Mask Overlay", "red overlay marks edge-connected background removal masks • method proof, not runtime approval").save(evidence_dir / f"{prefix}-mask-overlay.png")
 
     cleanup_manifest = {
         "schemaVersion": "0.1",
         "status": "draft",
         "reviewStatus": "needs-human-review",
-        "pipelineUse": "draft-nonfx-cleanup-candidate",
+        "pipelineUse": args.pipeline_use,
         "runtimeEligibility": "not-runtime-approved",
-        "domain": "topdown-objects",
-        "operationalType": "topdown-objects-selective-nonfx-cleanup-candidate",
+        "domain": args.domain,
+        "operationalType": args.operational_type,
         "sourceSheet": repo_rel(source_path, repo_root),
         "sourceRegionManifest": repo_rel(manifest_path, repo_root),
         "derivedSheet": repo_rel(output_path, repo_root),
@@ -455,19 +489,16 @@ def main() -> None:
         "gameplayApproval": "none",
         "collisionApproval": "none",
         "interactionApproval": "none",
-        "excludedEffectRegions": sorted(excluded),
+        "excludedRegions": sorted(excluded),
+        "riskRegionIndexes": [r["index"] for r in regions_out if r.get("behaviorRisk")],
         "candidateRegionCount": stats["candidateRegions"],
         "excludedRegionCount": stats["excludedRegions"],
         "blankTransparentRegionCount": sum(1 for r in regions_out if r["cleanupStatus"] == "blank-empty-cell-transparent"),
         "regions": regions_out,
         "notes": [
-            "H5.68 supersedes H5.65 for Topdown Objects cleanup-candidate evaluation.",
-            "H5.65 remains historical failed/limited exploratory evidence and is not promoted.",
-            "Source has .png extension but JPEG-formatted bytes; treat as degraded source.",
-            "Effect/glow/fire/portal/smoke/slime/shadow regions are intentionally excluded.",
-            "Torches/campfires/braziers should later be regenerated as base sprites without flames/glow.",
-            "Effects should later be layered through particles, FX sprites, or runtime effects.",
-            "No runtime behavior, placement, collision, interaction, pickup, loot, chest, key, portal, light, flame, trap, slime, pressure plate, or shadow behavior is approved.",
+            f"{args.lane_title} cleanup candidate generated through canonical CLI/provenance.",
+            "Source is treated as degraded/fake-transparent for this cleanup method and remains needs-human-review.",
+            "No runtime behavior, placement, collision, interaction, pickup, loot, chest, key, portal, door, gate, lock, wall, pathfinding, light, flame, trap, slime, pressure plate, shadow, autotile, tilemap, or game wiring is approved.",
         ],
     }
 
