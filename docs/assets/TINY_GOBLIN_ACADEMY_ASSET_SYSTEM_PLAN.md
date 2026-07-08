@@ -706,7 +706,7 @@ This is visual object inventory only. Category names do not approve loot, pickup
 
 ## H5.61 Topdown Walls Region Mapping Note
 
-H5.61 mapped the Topdown Walls source sheet at ssets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png as a draft 64-region inventory manifest. The source is 1024x1024 RGB with no alpha channel. The mapping is source inventory and semantic classification only; runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.
+H5.61 mapped the Topdown Walls source sheet at `assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png` as a draft 64-region inventory manifest. The source is 1024x1024 RGB with no alpha channel. The mapping is source inventory and semantic classification only; runtime, collision, pathfinding, wall autotiling, door behavior, placement, cleanup, and game wiring remain deferred.
 
 ## H5.62 Topdown Walls Region Human Review Note
 
@@ -715,3 +715,11 @@ H5.62 accepted the H5.61 Topdown Walls region mapping for draft cleanup and plan
 ## H5.64 Topdown Objects Region Human Review Note
 
 H5.64 accepted the H5.63 Topdown Objects region mapping for draft cleanup and planning use. The reviewed map contains 64 mapped object cells using the 8x8 128px source grid, with draft labels and semantic categories retained. Runtime-danger/effect-bearing regions remain behavior-deferred. Loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, cleanup output, and derived runtime atlas use remain deferred.
+
+## H5.65 Topdown Objects Cleanup Candidate Note
+
+H5.65 creates a draft cleanup candidate for `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png` using the H5.64-reviewed 64-region grid as the source of truth. The source is `1024x1024` RGB with no alpha, so H5.65 uses region 49 as a blank-cell checker/background reference and creates a derived cleanup candidate at `assets/academy/topdown/objects/derived/tga-topdown-objects-cleaned-v0.1.png`.
+
+This candidate remains `draft` / `needs-human-review` / `not-runtime-approved`. It preserves the object layout and records high-risk behavior/soft-edge regions 7, 9, 10, 17, 18, 47, 55, 57, 58, 60, 61, and 62 for human review. H5.65 does not approve loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, terrain/wall changes, mixed playfield-pack salvage, or game/runtime use.
+
+Because the source has baked checkerboard/fake transparency, H5.66 should review the cleanup visually and may accept, exclude, or correct individual regions rather than treating the derived sheet as automatically runtime-ready.
