@@ -783,3 +783,17 @@ The H5.68 effect/glow/fire/portal/smoke/slime/shadow exclusions remain excluded:
 ```
 
 The active Topdown Objects cleanup candidate remains not-runtime-approved. No placement, collision, interaction, pickup, loot, chest/key/portal behavior, light/flame behavior, trap damage, slime hazard, pressure plate behavior, shadow/hole behavior, or game wiring is approved.
+
+## H5.70 Topdown Regenerated Source Intake Note
+
+H5.70 ingests three regenerated topdown source candidates:
+
+```text
+assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png
+assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png
+assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png
+```
+
+The horizontal/mixed wall source is `1536x1024` RGBA with real alpha and should be mapped carefully without transparency cleanup. The vertical wall supplement is `1448x1086` RGB with fake transparency, but it is mostly hard-edged stone with no glow/fire/smoke and is a good candidate for map-then-clean processing. The regenerated object sheet is `1254x1254` RGB with fake transparency, but it removes the prior fire/portal/glow-heavy object set and is the preferred next object remapping / cleanup source.
+
+H5.70 does not map sourceRects, create cleanup outputs, create derived PNGs, approve runtime atlases, or change game/runtime code. It records routing only: hard-edged fake-transparent sources may enter cleanup school, while flame/glow/smoke/portal effects should be regenerated or layered later through particles/FX instead of scraped from fake transparency.

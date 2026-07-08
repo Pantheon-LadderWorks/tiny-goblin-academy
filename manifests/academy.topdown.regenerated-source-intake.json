@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "regenerated-source-intake-and-routing",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown",
+  "operationalType": "regenerated-source-intake",
+  "baselineCommit": "f0703b8",
+  "sources": [
+    {
+      "path": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
+      "sourceRole": "regenerated-primary-wall-source",
+      "recommendedLane": "topdown-walls-horizontal-region-mapping",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "PNG",
+      "mode": "RGBA",
+      "alphaFinding": "true alpha present; alpha range 0-255 with transparent and non-opaque pixels",
+      "sha256": "8F82E181A54C3A324010EF6D3BCDCD1763F85E3C80D9E55F2ADEA1B6032D05CE",
+      "cleanupEligibility": "not-needed-for-source-alpha",
+      "mappingRequirement": "careful-visual-region-mapping",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Regenerated wall source accepted into the topdown walls pantry as a true-alpha source candidate.",
+        "Needs careful sourceRect mapping before any cleanup, layout, collision, or runtime use.",
+        "No cleanup candidate is required for transparency; mapping still requires human review."
+      ]
+    },
+    {
+      "path": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+      "sourceRole": "regenerated-secondary-vertical-wall-source",
+      "recommendedLane": "topdown-walls-vertical-region-mapping-then-cleanup",
+      "dimensions": {
+        "width": 1448,
+        "height": 1086
+      },
+      "format": "PNG",
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; white/checker-style fake transparency is baked into the source",
+      "sha256": "E726C05E45ECA4A45639B9E3C235B5A72302E487BAC66CF84A67428A3ED1AA71",
+      "cleanupEligibility": "good-candidate-after-mapping",
+      "mappingRequirement": "careful-visual-region-mapping",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Regenerated vertical wall supplement fills a missing wall-shape gap from the true-alpha wall sheet.",
+        "Although it lacks alpha, it is mostly hard-edged stone without fire, smoke, glow, or soft FX.",
+        "This is a suitable candidate for the canonical fake-background cleanup pipeline after mapping."
+      ]
+    },
+    {
+      "path": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+      "sourceRole": "regenerated-primary-nonfx-object-source",
+      "recommendedLane": "topdown-objects-nonfx-region-mapping-then-cleanup",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "PNG",
+      "mode": "RGB",
+      "alphaFinding": "no alpha channel; white/checker-style fake transparency is baked into the source",
+      "sha256": "FD78781394F2F7F0BF991DE82D560682996AC078B677237AD294B6428A0B5D0A",
+      "cleanupEligibility": "good-candidate-after-mapping",
+      "mappingRequirement": "careful-visual-region-mapping",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": [
+        "Regenerated object source removes the fire, portal, smoke, and glow-heavy objects that made the prior object cleanup lane fragile.",
+        "Although it lacks alpha, it is mostly hard-edged non-FX props and should be easier to map and clean.",
+        "Future flame, glow, portal, smoke, sparkle, and similar effects should be particles, FX layers, or separate true-alpha one-offs rather than baked into this object pantry."
+      ]
+    }
+  ],
+  "routingDecision": {
+    "terrain": "Existing H5.60B-reviewed terrain remains mapped and still needs cleanup planning.",
+    "walls": "Use the new true-alpha horizontal/mixed wall sheet as the next wall mapping source; use the new vertical wall sheet as a supplemental map-and-clean source.",
+    "objects": "Use the new no-FX object sheet as the preferred next object mapping/cleanup source; retain H5.69 accepted old object cleanup as historical usable draft output but do not let it block the cleaner regenerated path."
+  },
+  "recommendedProcessingOrder": [
+    {
+      "step": "H5.71",
+      "lane": "topdown-walls-horizontal-region-mapping",
+      "source": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
+      "reason": "True-alpha source can be mapped without transparency cleanup."
+    },
+    {
+      "step": "H5.72",
+      "lane": "topdown-walls-vertical-region-mapping",
+      "source": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+      "reason": "Supplemental vertical walls fill missing wall shapes and should be mapped before cleanup."
+    },
+    {
+      "step": "H5.73",
+      "lane": "topdown-walls-vertical-cleanup-candidate",
+      "source": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+      "reason": "Hard-edged stone with no glow/fire/smoke is suitable for canonical fake-background cleanup after mapping."
+    },
+    {
+      "step": "H5.74",
+      "lane": "topdown-objects-nonfx-regenerated-region-mapping",
+      "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+      "reason": "No-FX object source should be easier to map and clean than the prior mixed FX-bearing source."
+    },
+    {
+      "step": "H5.75",
+      "lane": "topdown-objects-nonfx-regenerated-cleanup-candidate",
+      "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+      "reason": "Hard-edged non-FX props are suitable for canonical fake-background cleanup after mapping."
+    }
+  ],
+  "nonGoals": [
+    "No sourceRect region mapping in this intake pass.",
+    "No cleanup candidate generation in this intake pass.",
+    "No derived PNG generation.",
+    "No runtime atlas approval.",
+    "No collision, pathfinding, placement, interaction, pickup, loot, trap, door, wall, tilemap, light, flame, portal, particle, or gameplay behavior approval.",
+    "No Top-Down Slime Quest runtime/game code changes."
+  ],
+  "notes": [
+    "Hard-edged fake-transparent sources can still be valid cleanup candidates.",
+    "Fake-transparent sources with fire, glow, smoke, translucent magic, or other soft FX remain high-risk and should usually be regenerated or layered as particles/FX.",
+    "A wall can go through cleanup school; fire should not be scraped off a checkerboard."
+  ]
+}
