@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-region-mapping",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-objects",
   "operationalType": "topdown-object-region-manifest",
@@ -1119,7 +1119,13 @@
   "reviewNotes": [
     "H5.63 maps topdown objects as draft source inventory only.",
     "No cleanup, derived assets, placement approval, collision approval, interaction behavior, door/chest/key/portal behavior, or runtime/game wiring approved.",
-    "Categories are provisional until human review."
+    "Categories are provisional until human review.",
+    "H5.63 Topdown Objects region mapping passed human/product review in H5.64.",
+    "64 topdown object regions accepted for draft cleanup/planning use.",
+    "8x8 128px grid sourceRects accepted.",
+    "Draft labels and semantic categories accepted for planning only.",
+    "Runtime-danger/effect-bearing regions remain behavior-deferred.",
+    "Loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, cleanup output, and derived runtime atlas use remain not approved."
   ],
   "nonGoals": [
     "No source PNG modification.",
@@ -1130,5 +1136,35 @@
     "No terrain or walls changes.",
     "No mixed Slime Quest playfield pack salvage.",
     "No game/runtime code changes."
-  ]
+  ],
+  "humanReview": {
+    "reviewId": "H5.64",
+    "decision": "passed",
+    "reviewedCommit": "b0f96c5 docs: map topdown object regions",
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "regionsAccepted": 64,
+    "runtimeBoundary": "not-runtime-approved",
+    "runtimeDangerRegionIndexes": [
+      7,
+      9,
+      10,
+      17,
+      18,
+      47,
+      55,
+      57,
+      58,
+      60,
+      61,
+      62
+    ],
+    "notes": [
+      "H5.63 Topdown Objects region mapping passed human/product review in H5.64.",
+      "64 topdown object regions accepted for draft cleanup/planning use.",
+      "8x8 128px grid sourceRects accepted.",
+      "Draft labels and semantic categories accepted for planning only.",
+      "Runtime-danger/effect-bearing regions remain behavior-deferred.",
+      "Loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, cleanup output, and derived runtime atlas use remain not approved."
+    ]
+  }
 }

@@ -711,3 +711,7 @@ H5.61 mapped the Topdown Walls source sheet at ssets/academy/topdown/walls/tga-
 ## H5.62 Topdown Walls Region Human Review Note
 
 H5.62 accepted the H5.61 Topdown Walls region mapping for draft cleanup and planning use. The reviewed map contains 64 wall/object regions using the 8x8 128px source grid, with H5.61 category and role assignments retained. Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain deferred.
+
+## H5.64 Topdown Objects Region Human Review Note
+
+H5.64 accepted the H5.63 Topdown Objects region mapping for draft cleanup and planning use. The reviewed map contains 64 mapped object cells using the 8x8 128px source grid, with draft labels and semantic categories retained. Runtime-danger/effect-bearing regions remain behavior-deferred. Loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, cleanup output, and derived runtime atlas use remain deferred.

@@ -334,3 +334,11 @@ All notable changes to this project will be documented in this file.
 - Human review passed for 64 wall/object regions.
 - 8x8 128px grid sourceRects and H5.61 category/role assignments were retained.
 - Collision, pathfinding, door/gate behavior, wall autotiling, placement, runtime tilemap use, and game wiring remain deferred.
+
+## H5.64 - Topdown Objects Region Human Review
+
+- Accepted the H5.63 Topdown Objects region mapping for draft cleanup/planning use.
+- Human review passed for 64 mapped object cells.
+- 8x8 128px grid sourceRects, draft labels, and semantic categories were retained.
+- Runtime-danger/effect-bearing regions remain behavior-deferred.
+- Loot, pickup, chest opening, key behavior, portal teleport, light emission, trap damage, interaction, placement, collision, runtime wiring, cleanup output, and derived runtime atlas use remain deferred.
