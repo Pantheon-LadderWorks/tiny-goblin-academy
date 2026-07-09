@@ -1063,4 +1063,25 @@ H5.60B remains authoritative:
 
 H5.81 retains all 64 terrain region records and produces 59 cleanup candidates. All regions remain `draft` / `needs-human-review` / `not-runtime-approved`.
 
-H5.81 does not process H5.73A future floor tilesheets, modify source PNGs, modify object/wall files, approve runtime terrain use, approve collision, approve pathfinding, approve walkability, approve blocked/slow/hazard/water/slime/portal behavior, approve tilemap use, approve autotiling, or wire any game/runtime code. H5.82 should perform human/product review before any draft cleanup/planning promotion.
+H5.81 does not process H5.73A future floor tilesheets, modify source PNGs, modify object/wall files, approve runtime terrain use, approve collision, approve pathfinding, approve walkability, approve blocked/slow/hazard/water/slime/portal behavior, approve tilemap use, approve autotiling, or wire any game/runtime code. H5.82 has now completed human/product review before any draft cleanup/planning promotion.
+
+## H5.82 Existing Topdown Terrain Cleanup Human Review Note
+
+H5.82 records human/product review for the H5.81 existing terrain cleanup candidate:
+
+```text
+manifests/academy.topdown.terrain.cleanup-candidate.json
+assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png
+```
+
+H5.82 passes H5.81 with exclusions/deferred cells. Accepted cleanup candidates: `59`. Deferred/excluded water/checker partial cells: `25` and `35`. Blank transparent/reference cells: `30`, `31`, and `64`. Retained partial content cells: `32`, `36`, `37`, `38`, and `39`.
+
+Cells `25` and `35` are content-bearing water/checker partial cells with unacceptable checker remnants. They are not blank cells. Future targeted correction or regeneration is allowed only if those exact cells are needed.
+
+H5.60B truth remains authoritative:
+
+- blank cells are exactly `30`, `31`, and `64`;
+- region `39` is not blank;
+- region `39` lives as retained partial grass-edge content.
+
+H5.82 does not rerun cleanup, edit source PNGs, edit derived PNGs, edit evidence PNGs, alter sourceRects, modify game/runtime files, approve runtime terrain use, approve tilemap use, approve collision, approve pathfinding, approve walkability, approve water/slime/portal/hazard behavior, or approve game wiring.
