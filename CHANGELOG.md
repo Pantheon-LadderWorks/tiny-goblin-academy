@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.72 Topdown Walls True-Alpha Region Human Review**: Recorded human/product review pass for the H5.71 regenerated true-alpha wall mapping. Accepted all 58 variable-size alpha-assisted regions for draft region planning use, confirmed no sourceRect correction pass or cleanup is needed, retained region 31 as an uncertain / lock-marker candidate, and preserved all no-runtime/no-collision/no-placement/no-pathfinding/no-tilemap/no-game-wiring boundaries.
+
 * **H5.71 Topdown Walls True-Alpha Region Mapping**: Mapped the regenerated true-alpha topdown wall source as 58 variable-size alpha-assisted draft regions. Created source inspection, alpha mask, bbox overlay, numbered contact sheet, region table, and category preview evidence; confirmed no cleanup, derived cleanup image, source PNG edit, runtime approval, collision/pathfinding/placement approval, tilemap approval, or game wiring occurred.
 
 * **H5.70 Topdown Regenerated Source Intake**: Ingested three regenerated topdown source candidates: a true-alpha horizontal/mixed wall source, an RGB vertical wall supplement, and an RGB no-FX object source. Routed the true-alpha wall sheet for careful mapping without cleanup, routed the hard-edged vertical wall and no-FX object sheets for map-then-clean processing, and recorded the FX doctrine that flame/glow/smoke/portal effects should be layered or regenerated separately instead of scraped from fake transparency. No mapping, cleanup, derived PNGs, runtime approval, or game wiring occurred.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-region-mapping",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-region-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-walls",
   "operationalType": "true-alpha-variable-region-mapping",
@@ -1136,6 +1136,17 @@
   "notes": [
     "H5.71 maps the regenerated true-alpha wall source.",
     "This is variable-size alpha-assisted mapping, not an 8x8 grid mapping.",
-    "H5.71 supersedes the old wall cleanup direction for this true-alpha source, but does not delete or invalidate prior reviewed old-wall mapping history."
-  ]
+    "H5.71 supersedes the old wall cleanup direction for this true-alpha source, but does not delete or invalidate prior reviewed old-wall mapping history.",
+    "H5.72 human/product review passed; all 58 true-alpha wall regions are accepted for draft region planning use only. No cleanup, runtime approval, collision, placement, pathfinding, tilemap use, wall autotiling, door/gate/lock behavior, or game wiring is approved."
+  ],
+  "humanReview": {
+    "reviewId": "H5.72",
+    "decision": "passed",
+    "reviewedCommit": "6559884 docs: map topdown true-alpha wall regions",
+    "acceptedRegionCount": 58,
+    "acceptedFor": "draft-region-planning-use-only",
+    "noCorrectionPassNeeded": true,
+    "noCleanupNeeded": true,
+    "runtimeBoundary": "not-runtime-approved"
+  }
 }

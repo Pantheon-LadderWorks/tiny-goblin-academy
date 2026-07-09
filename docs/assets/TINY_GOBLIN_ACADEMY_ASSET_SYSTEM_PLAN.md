@@ -815,3 +815,11 @@ manifests/academy.topdown.walls.true-alpha-regions.json
 H5.71 maps 58 draft regions across wall-horizontal, wall-ruin, rubble, wall-corner, wall-arch, fence, wall-vertical, pillar, column, rock, bush, door, and uncertain categories. These categories remain visual inventory labels only. No cleanup, derived cleanup image, source PNG edit, runtime asset approval, collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or game wiring is approved.
 
 H5.71 supersedes the old wall cleanup direction for this true-alpha source, but it does not delete or invalidate prior H5.61/H5.62 reviewed old-wall mapping history. The white-background vertical wall supplement remains a separate map-then-clean lane.
+
+## H5.72 Topdown Walls True-Alpha Region Human Review Note
+
+H5.72 accepts the H5.71 true-alpha wall mapping for draft region planning use. All 58 variable-size alpha-assisted regions are now `reviewed` / `human-review-passed` / `accepted-for-draft-region-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`.
+
+No sourceRect correction pass is needed. No cleanup is needed for this true-alpha source. Region 31 may remain `uncertain` / lock-marker candidate.
+
+This review does not approve runtime asset use, collision, placement, wall autotiling, pathfinding, tilemap use, door behavior, gate behavior, lock behavior, gameplay interaction, or game wiring.
