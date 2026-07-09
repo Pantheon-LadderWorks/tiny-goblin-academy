@@ -841,3 +841,23 @@ manifests/academy.topdown.walls.vertical.regions.json
 Mapped categories include wall-corner, wall-ruin, wall-vertical, wall-column, door, rubble, and wall-arch visual inventory labels. The manifest records H5.67-style pipeline provenance and links to the H5.73 evidence run log.
 
 H5.73 does not create cleanup outputs, derived PNGs, runtime atlases, collision/pathfinding/placement data, wall autotiling data, door/gate behavior, tilemap approval, or game/runtime wiring. Human review should confirm region bounds before the recommended H5.74 cleanup candidate lane.
+
+## H5.73A Topdown Floor Tilesheet Future Intake Note
+
+H5.73A stages six newly generated topdown floor/terrain tilesheet PNGs and paired planning documents under:
+
+```text
+assets/academy/topdown/terrain/future-floor-tilesheets/
+```
+
+This is future pantry intake only. The copied PNGs are `1254x1254` RGB/no-alpha files, while the supplied planning manifest describes 8x8 / 128px semantic vocabulary sheets. They are therefore not treated as ready production terrain manifests and must be inspected/remapped later from observed content.
+
+The intake index is:
+
+```text
+assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json
+```
+
+The road/path overlay sheet remains excluded. The mixed-terrain transition spec remains pre-generation design guidance only, not final manifest truth.
+
+H5.73A does not map individual tiles, create cleanup candidates, create runtime manifests, replace the active terrain source, modify existing terrain/wall/object manifests, approve collision/pathfinding/hazard/portal/slime/water/trigger behavior, or change game/runtime code.

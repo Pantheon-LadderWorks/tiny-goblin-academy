@@ -1,0 +1,186 @@
+{
+  "spec_id": "H5.70",
+  "title": "Tiny Goblin Academy Topdown Mixed Terrain Transition Generation Spec",
+  "status": "pre-generation design spec",
+  "purpose": "Define intended 8x8 mixed-terrain transition sheets before image generation. This is not a final manifest.",
+  "global_constraints": {
+    "columns": 8,
+    "rows": 8,
+    "tile_count": 64,
+    "tile_shape": "full-cell square terrain tiles",
+    "background_requirement": "opaque terrain in every cell; no transparent or partial-alpha edge dependency",
+    "no_objects": true,
+    "no_walls": true,
+    "no_props": true,
+    "no_labels": true,
+    "no_ui_symbols": true,
+    "no_glowing_fx": true,
+    "no_runtime_behavior_approval": true
+  },
+  "column_grammar": [
+    {
+      "column": 1,
+      "role": "horizontal transition",
+      "description": "Terrain A and B meet across a horizontal band/edge."
+    },
+    {
+      "column": 2,
+      "role": "vertical transition",
+      "description": "Terrain A and B meet across a vertical band/edge."
+    },
+    {
+      "column": 3,
+      "role": "outer corner",
+      "description": "One terrain wraps around the outside of the other."
+    },
+    {
+      "column": 4,
+      "role": "inner corner",
+      "description": "One terrain cuts into the other as an inside corner."
+    },
+    {
+      "column": 5,
+      "role": "T-junction",
+      "description": "One terrain branches into or through the other in a T shape."
+    },
+    {
+      "column": 6,
+      "role": "cross / four-way blend",
+      "description": "Both terrains meet in a cross or multi-direction blend."
+    },
+    {
+      "column": 7,
+      "role": "end cap / terminal edge",
+      "description": "A path or patch of one terrain ends inside the other."
+    },
+    {
+      "column": 8,
+      "role": "patch / island / irregular blob",
+      "description": "Small irregular patch of Terrain B inside Terrain A, or vice versa."
+    }
+  ],
+  "sheets": [
+    {
+      "sheet_id": "mixed-natural-transitions-v0.1",
+      "proposed_filename": "tga-topdown-mixed-terrain-natural-transitions-8x8-v0.1.png",
+      "purpose": "Common outdoor/natural biome blending for procedural stages.",
+      "rows": [
+        {
+          "row": 1,
+          "pair": "grass ↔ dirt",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 2,
+          "pair": "grass ↔ stone",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 3,
+          "pair": "dirt ↔ stone",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 4,
+          "pair": "grass ↔ mud",
+          "runtime_note": "candidate slow terrain; behavior deferred"
+        },
+        {
+          "row": 5,
+          "pair": "dirt ↔ mud",
+          "runtime_note": "candidate slow terrain; behavior deferred"
+        },
+        {
+          "row": 6,
+          "pair": "grass ↔ shallow water / shore",
+          "runtime_note": "candidate slow or blocked; behavior deferred"
+        },
+        {
+          "row": 7,
+          "pair": "dirt ↔ shallow water / shore",
+          "runtime_note": "candidate slow or blocked; behavior deferred"
+        },
+        {
+          "row": 8,
+          "pair": "grass ↔ swamp / slime edge",
+          "runtime_note": "candidate slow or hazard; behavior deferred"
+        }
+      ],
+      "generation_prompt": "Create an 8x8 top-down fantasy RPG mixed natural terrain transition tilesheet. Each tile is a complete opaque square ground tile, no transparency needed, no objects, no walls, no props, no labels, no UI symbols, no glowing effects. Use full-cell baked terrain blends only. Columns 1-8 repeat the same shape grammar in every row: horizontal transition, vertical transition, outer corner, inner corner, T-junction, cross/four-way blend, end cap, patch/island/blob. Rows 1-8 are: grass to dirt, grass to stone, dirt to stone, grass to mud, dirt to mud, grass to shallow water/shore, dirt to shallow water/shore, grass to swamp/slime edge. Keep a consistent hand-painted top-down game tile style. Make the grid a clean 8 columns by 8 rows."
+    },
+    {
+      "sheet_id": "mixed-structural-special-transitions-v0.1",
+      "proposed_filename": "tga-topdown-mixed-terrain-structural-special-transitions-8x8-v0.1.png",
+      "purpose": "Indoor, ruin, cave, slime, and arcane/metal transition language for procedural stages.",
+      "rows": [
+        {
+          "row": 1,
+          "pair": "wood ↔ stone",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 2,
+          "pair": "wood ↔ dirt",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 3,
+          "pair": "cave rock ↔ dirt",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 4,
+          "pair": "cave rock ↔ mud",
+          "runtime_note": "candidate slow terrain; behavior deferred"
+        },
+        {
+          "row": 5,
+          "pair": "ruined stone ↔ moss / overgrowth",
+          "runtime_note": "walkable normal or candidate slow; behavior deferred"
+        },
+        {
+          "row": 6,
+          "pair": "stone ↔ slime",
+          "runtime_note": "candidate slow or hazard; behavior deferred"
+        },
+        {
+          "row": 7,
+          "pair": "stone ↔ arcane metal",
+          "runtime_note": "walkable normal"
+        },
+        {
+          "row": 8,
+          "pair": "dirt ↔ arcane metal",
+          "runtime_note": "walkable normal"
+        }
+      ],
+      "generation_prompt": "Create an 8x8 top-down fantasy RPG mixed structural and special terrain transition tilesheet. Each tile is a complete opaque square ground tile, no transparency needed, no objects, no walls, no props, no labels, no UI symbols, no glowing effects. Use full-cell baked terrain blends only. Columns 1-8 repeat the same shape grammar in every row: horizontal transition, vertical transition, outer corner, inner corner, T-junction, cross/four-way blend, end cap, patch/island/blob. Rows 1-8 are: wood to stone, wood to dirt, cave rock to dirt, cave rock to mud, ruined stone to moss/overgrowth, stone to slime, stone to arcane metal, dirt to arcane metal. Keep a consistent hand-painted top-down game tile style. Make the grid a clean 8 columns by 8 rows."
+    }
+  ],
+  "post_generation_inspection_rules": [
+    "Do not assume generated cells match the intended spec.",
+    "Inspect the generated sheet as an 8x8 grid.",
+    "Create a final manifest from observed content, not desired content.",
+    "Mark cells accepted, review-candidate, duplicate, mismatch, rejected, or placeholder.",
+    "Do not approve collision, pathfinding, slow, hazard, portal, trigger, or runtime behavior from visual labels alone.",
+    "If a row or column grammar drifts but the tile is still useful, name its actual use honestly."
+  ],
+  "recommended_post_inspection_status_values": [
+    "accepted-visual",
+    "review-candidate",
+    "duplicate",
+    "mismatch",
+    "rejected",
+    "placeholder"
+  ],
+  "recommended_runtime_metadata_fields": [
+    "walkable",
+    "movement",
+    "collision",
+    "hazard",
+    "slippery",
+    "slow",
+    "visualOnly",
+    "notes"
+  ]
+}

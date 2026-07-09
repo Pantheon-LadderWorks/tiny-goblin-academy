@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "create-run-log",
+  "method": "no-cleanup-reference-only",
+  "methodStatus": "canonical",
+  "laneId": "H5.73A-topdown-floor-tilesheet-future-intake",
+  "agent": "Codex",
+  "gitBaseline": "2be21b1 docs: map topdown vertical wall regions",
+  "startedAt": "2026-07-09T13:27:15.691Z",
+  "completedAt": "2026-07-09T13:27:15.695Z",
+  "sourcePath": null,
+  "sourceSha256": null,
+  "manifestPath": "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json",
+  "inputManifests": [
+    "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_rpg_tilemap_for_terrain_design.png",
+      "sha256": "65eb534841ab400a92868ec04124341c6845caf139baba351c287fa37cf878bc"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_dungeon_floor_tilesheet_textures.png",
+      "sha256": "109bdd1280ddd1eb696f39e62d12882ae2a228bff54c3bda6c6ac2a03a075de6"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/wood_and_stone_floor_tile_grid.png",
+      "sha256": "303a2f85005154e38c33f970c4d5f40e02d74b10a8ce17ad3e9d87a815673170"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/dungeon_floor_tileset_grid.png",
+      "sha256": "21dcc996a5446699b6d7013e1e5a0e75af07ef1397f0815242d27eedd1146dff"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/swamp_terrain_tile_set.png",
+      "sha256": "a2485c28c89730fe36dd4debb6532926dd152101a6df7e1943065faace2dd48c"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/sci_fi_steampunk_floor_tiles_sheet.png",
+      "sha256": "bc8d26cfcf7c512eb543b12caf282b9d87f58dfd4bee9526c468909857cff0ab"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json",
+      "sha256": "33b416788341dfec4f7ef250bb4b8e561794bef69c20cd68e5b5e3d255ae4c5f"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.md",
+      "sha256": "e0d086f5858cf2da546d67017b2ca8a8fb2a62517c81e4a19548c242219f8f17"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.json",
+      "sha256": "f13c6cd1c94fc6147cad10d8b1bea9d2afb03242ddf0acdf684520fcf238f4b9"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.md",
+      "sha256": "80e3abe34a022b8f3e905549dccdf8d634193954ca5c64bacfcac617010a5f0f"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json",
+      "sha256": "9677f34640eb9851c838e1131b0f6893ee900f73c8416032ecebb341b07c3270"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-contact-sheet.png",
+      "sha256": "3a0e900948b5a3c107d2a4c20f2a076482cc7bea2bef328b01206c5bdaec1301"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-table-preview.png",
+      "sha256": "ab002d86c2440ac0b46e48d360557b8b4a84013c7e6ea77813c249d5fd153c7f"
+    },
+    {
+      "path": "docs/assets/TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md",
+      "sha256": "a19540ffad25fccdd00962160403bdfec3c5b5c895c502cb90504843297c722e"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_rpg_tilemap_for_terrain_design.png",
+      "sha256": "65eb534841ab400a92868ec04124341c6845caf139baba351c287fa37cf878bc"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_dungeon_floor_tilesheet_textures.png",
+      "sha256": "109bdd1280ddd1eb696f39e62d12882ae2a228bff54c3bda6c6ac2a03a075de6"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/wood_and_stone_floor_tile_grid.png",
+      "sha256": "303a2f85005154e38c33f970c4d5f40e02d74b10a8ce17ad3e9d87a815673170"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/dungeon_floor_tileset_grid.png",
+      "sha256": "21dcc996a5446699b6d7013e1e5a0e75af07ef1397f0815242d27eedd1146dff"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/swamp_terrain_tile_set.png",
+      "sha256": "a2485c28c89730fe36dd4debb6532926dd152101a6df7e1943065faace2dd48c"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/sci_fi_steampunk_floor_tiles_sheet.png",
+      "sha256": "bc8d26cfcf7c512eb543b12caf282b9d87f58dfd4bee9526c468909857cff0ab"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json",
+      "sha256": "33b416788341dfec4f7ef250bb4b8e561794bef69c20cd68e5b5e3d255ae4c5f"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.md",
+      "sha256": "e0d086f5858cf2da546d67017b2ca8a8fb2a62517c81e4a19548c242219f8f17"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.json",
+      "sha256": "f13c6cd1c94fc6147cad10d8b1bea9d2afb03242ddf0acdf684520fcf238f4b9"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.md",
+      "sha256": "80e3abe34a022b8f3e905549dccdf8d634193954ca5c64bacfcac617010a5f0f"
+    },
+    {
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json",
+      "sha256": "9677f34640eb9851c838e1131b0f6893ee900f73c8416032ecebb341b07c3270"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-contact-sheet.png",
+      "sha256": "3a0e900948b5a3c107d2a4c20f2a076482cc7bea2bef328b01206c5bdaec1301"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-table-preview.png",
+      "sha256": "ab002d86c2440ac0b46e48d360557b8b4a84013c7e6ea77813c249d5fd153c7f"
+    },
+    {
+      "path": "docs/assets/TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md",
+      "sha256": "a19540ffad25fccdd00962160403bdfec3c5b5c895c502cb90504843297c722e"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-contact-sheet.png",
+    "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-table-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-contact-sheet.png",
+    "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/topdown-floor-tilesheets-future-intake-table-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate",
+    "node scripts/asset-pipeline/cli.mjs validate-provenance"
+  ],
+  "warnings": [
+    "Future intake only; no mapping, cleanup, runtime manifest, or game wiring performed."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T13:27:15.695Z"
+}

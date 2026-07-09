@@ -1,0 +1,237 @@
+{
+  "schemaVersion": "0.1",
+  "intakeId": "H5.73A",
+  "status": "future-intake-only",
+  "pipelineUse": "future-terrain-pantries-not-processed",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-terrain",
+  "operationalType": "future-floor-tilesheet-intake",
+  "copiedSourceCount": 6,
+  "sources": [
+    {
+      "sheetId": "terrain.grass-dirt.v0.1",
+      "displayName": "Grass / Dirt Outdoor Ground",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_rpg_tilemap_for_terrain_design.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_42 AM.png",
+      "sizeBytes": 3440119,
+      "sha256": "65eb534841ab400a92868ec04124341c6845caf139baba351c287fa37cf878bc",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    },
+    {
+      "sheetId": "terrain.dungeon-stone.v0.1",
+      "displayName": "Fantasy Dungeon Stone Floors",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/fantasy_dungeon_floor_tilesheet_textures.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_37 AM.png",
+      "sizeBytes": 3301396,
+      "sha256": "109bdd1280ddd1eb696f39e62d12882ae2a228bff54c3bda6c6ac2a03a075de6",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    },
+    {
+      "sheetId": "terrain.wood-stone.v0.1",
+      "displayName": "Wood And Stone Floor Grid",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/wood_and_stone_floor_tile_grid.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_34 AM.png",
+      "sizeBytes": 3079083,
+      "sha256": "303a2f85005154e38c33f970c4d5f40e02d74b10a8ce17ad3e9d87a815673170",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    },
+    {
+      "sheetId": "terrain.cave-rock.v0.1",
+      "displayName": "Dungeon / Cave Rock Floor Grid",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/dungeon_floor_tileset_grid.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_30 AM.png",
+      "sizeBytes": 3132255,
+      "sha256": "21dcc996a5446699b6d7013e1e5a0e75af07ef1397f0815242d27eedd1146dff",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    },
+    {
+      "sheetId": "terrain.swamp.v0.1",
+      "displayName": "Swamp Terrain Tile Set",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/swamp_terrain_tile_set.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_27 AM.png",
+      "sizeBytes": 3358812,
+      "sha256": "a2485c28c89730fe36dd4debb6532926dd152101a6df7e1943065faace2dd48c",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    },
+    {
+      "sheetId": "terrain.arcane-metal.v0.1",
+      "displayName": "Sci-Fi / Steampunk Floor Tiles",
+      "path": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/sci_fi_steampunk_floor_tiles_sheet.png",
+      "originalDownloadsPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 08_50_23 AM.png",
+      "sizeBytes": 3409043,
+      "sha256": "bc8d26cfcf7c512eb543b12caf282b9d87f58dfd4bee9526c468909857cff0ab",
+      "format": "PNG",
+      "mode": "RGB",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alphaFinding": {
+        "mode": "RGB",
+        "hasAlphaChannel": false,
+        "alphaRange": null,
+        "transparentPixels": 0,
+        "nonOpaquePixels": 0,
+        "finding": "RGB/no-alpha generated PNG; not true transparent; future source only"
+      },
+      "declaredGridFromPlanningManifest": {
+        "columns": 8,
+        "rows": 8,
+        "tileSize": 128
+      },
+      "actualGridReadiness": "not-production-mapped; generated dimensions are 1254x1254 and require later inspection/remapping before tile use",
+      "runtimeEligibility": "not-runtime-approved",
+      "processingStatus": "future-intake-only-not-processed"
+    }
+  ],
+  "copiedManifestPaths": [
+    "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json",
+    "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.md"
+  ],
+  "copiedSpecPaths": [
+    "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.json",
+    "assets/academy/topdown/terrain/future-floor-tilesheets/specs/tga-topdown-mixed-terrain-transition-generation-spec-h5.70.md"
+  ],
+  "excludedSources": [
+    {
+      "label": "road/path overlay sheet",
+      "reason": "explicitly excluded by planning manifest and H5.73A doctrine"
+    }
+  ],
+  "doctrine": [
+    "These six sheets are future terrain/floor pantry sources.",
+    "They do not replace the already-mapped terrain sheet yet.",
+    "Tile labels from the uploaded manifest are draft semantic vocabulary only.",
+    "The mixed-terrain spec is pre-generation design guidance only, not final manifest truth.",
+    "No collision, pathfinding, slow, hazard, water, slime, portal, trigger, or runtime behavior is approved."
+  ],
+  "currentPriorityAfterIntake": [
+    "vertical walls mapping/cleanup",
+    "regenerated non-FX object sheet intake/mapping/cleanup",
+    "existing mapped floor sheet cleanup/review"
+  ],
+  "nonGoals": [
+    "no tile mapping",
+    "no cleanup candidates",
+    "no runtime manifests",
+    "no game wiring",
+    "no production terrain manifest changes"
+  ],
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "create-run-log",
+    "method": "no-cleanup-reference-only",
+    "methodStatus": "canonical",
+    "runLog": "assets/academy/evidence/h5-73a-topdown-floor-tilesheet-future-intake/pipeline-run-log.json",
+    "sourceSha256": null,
+    "generatedAt": "2026-07-09T13:27:15.695Z",
+    "gitBaseline": "2be21b1 docs: map topdown vertical wall regions",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  }
+}

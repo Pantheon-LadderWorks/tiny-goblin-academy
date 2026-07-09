@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+* **H5.73A Topdown Floor Tilesheet Future Intake**: Ingested six newly generated topdown floor/terrain tilesheet PNGs plus paired planning manifest/spec Markdown and JSON files into `assets/academy/topdown/terrain/future-floor-tilesheets/` as future pantry sources only. Recorded dimensions, hashes, alpha findings, and future-only status in an intake index; noted that the copied PNGs are `1254x1254` RGB/no-alpha sources and are not production-mapped 1024x1024 tile manifests. No tile mapping, cleanup, runtime manifests, existing terrain/wall/object manifest changes, or game wiring occurred.
+
 * **H5.73 Topdown Vertical Walls Region Mapping**: Mapped the regenerated RGB/fake-background vertical wall supplement as 72 contour-assisted variable-size draft regions. Created source inspection, background mask, bbox overlay, category preview, numbered contact sheet, region table, and pipeline run-log evidence. No cleanup, derived PNG, source PNG edit, runtime approval, collision/pathfinding/placement approval, wall autotiling/tilemap approval, door/gate behavior, or game wiring occurred.
 
 * **H5.72 Topdown Walls True-Alpha Region Human Review**: Recorded human/product review pass for the H5.71 regenerated true-alpha wall mapping. Accepted all 58 variable-size alpha-assisted regions for draft region planning use, confirmed no sourceRect correction pass or cleanup is needed, retained region 31 as an uncertain / lock-marker candidate, and preserved all no-runtime/no-collision/no-placement/no-pathfinding/no-tilemap/no-game-wiring boundaries.
