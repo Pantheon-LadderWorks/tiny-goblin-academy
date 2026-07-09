@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "cleanup-candidate",
+  "method": "edge-connected-checker-cleanup",
+  "methodStatus": "canonical-with-caution",
+  "methodParameters": {
+    "gray_sat_max": 0.12,
+    "gray_min": 0.75,
+    "gray_max": 1.01,
+    "channel_delta_max": 0.06,
+    "edge_seed_inset": 4,
+    "edge_alpha": 160
+  },
+  "laneId": null,
+  "agent": "Codex",
+  "gitBaseline": "56f9e49 docs: review topdown nonfx object cleanup",
+  "startedAt": "2026-07-09T21:45:02.105Z",
+  "completedAt": "2026-07-09T21:45:02.111Z",
+  "sourcePath": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+  "sourceSha256": "209bce9fbad14787d0916f7758c3af18363428d28c23656ae79ddfeb7e94929a",
+  "manifestPath": "manifests/academy.topdown.terrain.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.terrain.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
+      "sha256": "5c84d27c6ba455fdac5fcee978119e373c13ebf2fd2b817d59bbdc5c643b87a0"
+    },
+    {
+      "path": "manifests/academy.topdown.terrain.cleanup-candidate.json",
+      "sha256": "81b4f02c6a4465496f435b5e7afe28ac190b01033ca586e0b292ac654117d72c"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
+      "sha256": "5c84d27c6ba455fdac5fcee978119e373c13ebf2fd2b817d59bbdc5c643b87a0"
+    },
+    {
+      "path": "manifests/academy.topdown.terrain.cleanup-candidate.json",
+      "sha256": "81b4f02c6a4465496f435b5e7afe28ac190b01033ca586e0b292ac654117d72c"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-blank-and-partial-cell-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-candidate-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-excluded-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-mask-overlay.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-mask-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-risk-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-blank-and-partial-cell-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-candidate-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-excluded-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-mask-overlay.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-mask-preview.png",
+    "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/topdown-terrain-risk-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "Source may be degraded/fake-transparent; edge-connected-checker-cleanup removes only edge-connected background-like masks and requires human review.",
+    "H5.81 cleanup manifest was metadata-tightened after CLI generation to preserve H5.60B blank/partial-cell doctrine; output manifest SHA refreshed in this run log.",
+    "Regions 25 and 35 are deferred water/checker partial cells and excluded from the usable cleanup candidate set.",
+    "edge_seed_inset=4 was used for terrain because black grid borders prevent exact-edge seeding from reaching checker background inside partial cells."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T21:45:02.113Z"
+}

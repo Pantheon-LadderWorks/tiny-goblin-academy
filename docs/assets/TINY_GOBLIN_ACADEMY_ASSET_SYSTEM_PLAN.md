@@ -1026,3 +1026,41 @@ Next active lane:
 ```text
 H5.81 — Existing Topdown Terrain Cleanup Candidate
 ```
+
+## H5.81 Existing Topdown Terrain Cleanup Candidate Note
+
+H5.81 creates a cleanup candidate for the existing reviewed terrain source:
+
+```text
+assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png
+```
+
+The cleanup candidate is:
+
+```text
+assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png
+```
+
+The cleanup manifest is:
+
+```text
+manifests/academy.topdown.terrain.cleanup-candidate.json
+```
+
+H5.81 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
+
+```text
+assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/pipeline-run-log.json
+```
+
+The lane also matures the canonical cleanup method so it accepts both `w/h` and `width/height` sourceRect schemas and exposes `edge_seed_inset` for grid-bordered sheets. H5.81 uses `edge_seed_inset: 4` with provenance rather than a one-off script.
+
+H5.60B remains authoritative:
+
+- blank cells are exactly `30`, `31`, and `64`;
+- water/checker partial cells `25` and `35` are content-bearing but deferred from the usable cleanup candidate set;
+- partial content cells `32`, `36`, `37`, `38`, and `39` remain cleanup candidates for human review.
+
+H5.81 retains all 64 terrain region records and produces 59 cleanup candidates. All regions remain `draft` / `needs-human-review` / `not-runtime-approved`.
+
+H5.81 does not process H5.73A future floor tilesheets, modify source PNGs, modify object/wall files, approve runtime terrain use, approve collision, approve pathfinding, approve walkability, approve blocked/slow/hazard/water/slime/portal behavior, approve tilemap use, approve autotiling, or wire any game/runtime code. H5.82 should perform human/product review before any draft cleanup/planning promotion.

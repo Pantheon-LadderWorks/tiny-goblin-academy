@@ -28,7 +28,7 @@ Usage:
   node scripts/asset-pipeline/cli.mjs list-cleanup-methods [--json]
   node scripts/asset-pipeline/cli.mjs inspect-source --source <path> [--json]
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
-  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>] [--gray-sat-max <n>] [--gray-min <n>] [--gray-max <n>] [--channel-delta-max <n>] [--reference-distance-max <n>] [--edge-expansion-passes <n>] [--edge-alpha <n>]
+  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>] [--gray-sat-max <n>] [--gray-min <n>] [--gray-max <n>] [--channel-delta-max <n>] [--reference-distance-max <n>] [--edge-seed-inset <n>] [--edge-expansion-passes <n>] [--edge-alpha <n>]
   node scripts/asset-pipeline/cli.mjs validate
   node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
   node scripts/asset-pipeline/cli.mjs explain-provenance-contract [--json]
@@ -294,6 +294,7 @@ function cleanupCandidate(args) {
       '--gray-max',
       '--channel-delta-max',
       '--reference-distance-max',
+      '--edge-seed-inset',
       '--edge-expansion-passes',
       '--edge-alpha'
     ]) {

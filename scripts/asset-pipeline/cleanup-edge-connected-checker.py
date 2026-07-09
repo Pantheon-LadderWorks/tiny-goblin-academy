@@ -28,6 +28,7 @@ DEFAULT_PARAMS = {
     "channel_delta_max": 0.09,
     "reference_distance_max": 0.34,
     "background_reference_region": None,
+    "edge_seed_inset": 1,
     "edge_expansion_passes": 0,
     "edge_alpha": 160,
 }
@@ -61,6 +62,25 @@ def repo_rel(path: Path, repo_root: Path) -> str:
         return path.as_posix()
 
 
+def normalize_rect(rect: dict, *, context: str) -> dict:
+    """Return a canonical x/y/w/h rectangle from either w/h or width/height input."""
+    missing = [key for key in ["x", "y"] if key not in rect]
+    if missing:
+        raise KeyError(f"{context} missing rectangle keys: {', '.join(missing)}")
+
+    width = rect.get("w", rect.get("width"))
+    height = rect.get("h", rect.get("height"))
+    if width is None or height is None:
+        raise KeyError(f"{context} rectangle must include w/h or width/height")
+
+    return {
+        "x": int(rect["x"]),
+        "y": int(rect["y"]),
+        "w": int(width),
+        "h": int(height),
+    }
+
+
 def gray_like_mask(crop: Image.Image, params: dict, reference_crop: Image.Image | None = None) -> np.ndarray:
     arr = np.asarray(crop.convert("RGBA")).astype(np.float32) / 255.0
     rgb = arr[..., :3]
@@ -88,21 +108,14 @@ def edge_connected_mask(crop: Image.Image, params: dict, reference_crop: Image.I
     h, w = gray.shape
     visited = np.zeros((h, w), dtype=bool)
     q: deque[tuple[int, int]] = deque()
+    seed_inset = max(1, int(params.get("edge_seed_inset", 1)))
 
-    for x in range(w):
-        if gray[0, x]:
-            visited[0, x] = True
-            q.append((0, x))
-        if gray[h - 1, x]:
-            visited[h - 1, x] = True
-            q.append((h - 1, x))
     for y in range(h):
-        if gray[y, 0]:
-            visited[y, 0] = True
-            q.append((y, 0))
-        if gray[y, w - 1]:
-            visited[y, w - 1] = True
-            q.append((y, w - 1))
+        for x in range(w):
+            if y < seed_inset or y >= h - seed_inset or x < seed_inset or x >= w - seed_inset:
+                if gray[y, x] and not visited[y, x]:
+                    visited[y, x] = True
+                    q.append((y, x))
 
     dirs = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     while q:
@@ -294,6 +307,7 @@ def main() -> None:
     parser.add_argument("--gray-max", type=float, default=None)
     parser.add_argument("--channel-delta-max", type=float, default=None)
     parser.add_argument("--reference-distance-max", type=float, default=None)
+    parser.add_argument("--edge-seed-inset", type=int, default=None)
     parser.add_argument("--edge-expansion-passes", type=int, default=None)
     parser.add_argument("--edge-alpha", type=int, default=None)
     parser.add_argument("--excluded-status", default="excluded-effect-regeneration-needed")
@@ -326,6 +340,8 @@ def main() -> None:
         params["channel_delta_max"] = args.channel_delta_max
     if args.reference_distance_max is not None:
         params["reference_distance_max"] = args.reference_distance_max
+    if args.edge_seed_inset is not None:
+        params["edge_seed_inset"] = args.edge_seed_inset
     if args.edge_expansion_passes is not None:
         params["edge_expansion_passes"] = args.edge_expansion_passes
     if args.edge_alpha is not None:
@@ -343,7 +359,7 @@ def main() -> None:
     reference_crop = None
     for region in source_manifest["regions"]:
         if params["background_reference_region"] and int(region["index"]) == params["background_reference_region"]:
-            rect = region["sourceRect"]
+            rect = normalize_rect(region["sourceRect"], context=f"region {region.get('index', '?')} sourceRect")
             reference_crop = source_img.crop((rect["x"], rect["y"], rect["x"] + rect["w"], rect["y"] + rect["h"]))
             break
     out_sheet = Image.new("RGBA", source_img.size, (0, 0, 0, 0))
@@ -365,7 +381,7 @@ def main() -> None:
 
     for region in source_manifest["regions"]:
         idx = int(region["index"])
-        rect = region["sourceRect"]
+        rect = normalize_rect(region["sourceRect"], context=f"region {idx} sourceRect")
         box = (rect["x"], rect["y"], rect["x"] + rect["w"], rect["y"] + rect["h"])
         crop = source_img.crop(box)
         risk_text = " ".join([
