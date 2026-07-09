@@ -1000,4 +1000,29 @@ assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/pipeline-r
 
 All 64 regions remain `draft` / `needs-human-review` / `not-runtime-approved`. Interactive-looking categories and container-like props are behavior-deferred. The on-dark preview shows the cleanup is mostly strong, but small light edge residue should be reviewed in H5.80 rather than silently accepted or overcut.
 
-H5.79 does not approve runtime asset use, placement, collision, interaction, pickup, loot, chest/key behavior, portal/teleport behavior, trap behavior, pressure plate behavior, fire/light/glow behavior, obstacle behavior, or game/runtime wiring. H5.80 should perform human/product review before any draft cleanup/planning promotion.
+H5.79 does not approve runtime asset use, placement, collision, interaction, pickup, loot, chest/key behavior, portal/teleport behavior, trap behavior, pressure plate behavior, fire/light/glow behavior, obstacle behavior, or game/runtime wiring. H5.80 has now completed human/product review before any draft cleanup/planning promotion.
+
+## H5.80 Topdown Non-FX Objects Regenerated Cleanup Human Review Note
+
+H5.80 records human/product review for the H5.79 regenerated non-FX object cleanup candidate:
+
+```text
+manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
+assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png
+```
+
+All 64 cleanup regions are accepted for draft cleanup/planning use through the canonical `edge-connected-checker-cleanup` method. No regions are excluded.
+
+The no-glow/non-FX regeneration made this sheet substantially cleaner than the old mixed effect-bearing object source. The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set, but H5.79/H5.80 is the regenerated non-FX cleanup lane.
+
+Known minor polish notes: some fence regions retain small white interior gaps between bars, and a few objects may retain tiny light edge residue/slivers on the dark preview. These notes do not block acceptance. Any future fix should be targeted only to exact selected pieces if those pieces are used in runtime draft planning.
+
+Behavior-looking props remain behavior-deferred: chests, traps, plates/markers, torch/brazier/campfire bases, banners/signs/shields, crates, barrels, wells, and seal/portal-looking markers remain visual-only.
+
+H5.80 does not rerun cleanup, regenerate evidence, modify source PNGs, modify derived PNGs, patch pixels, approve runtime asset use, approve placement, approve collision, approve interaction, approve pickup/loot/chest/key behavior, approve trap behavior, approve portal/teleport behavior, approve pressure plate behavior, approve fire/light/glow behavior, approve obstacle behavior, or wire any game/runtime code.
+
+Next active lane:
+
+```text
+H5.81 — Existing Topdown Terrain Cleanup Candidate
+```
