@@ -64,6 +64,7 @@ for (const file of [
   'scripts/asset-pipeline/cli.mjs',
   'scripts/asset-pipeline/pipeline-index.mjs',
   'scripts/asset-pipeline/make-region-evidence.py',
+  'scripts/asset-pipeline/map-grid-batch.py',
   'scripts/asset-pipeline/lib/cleanup-method-registry.mjs',
   'scripts/asset-pipeline/lib/run-log.mjs',
   'scripts/asset-pipeline/lib/file-hash.mjs',

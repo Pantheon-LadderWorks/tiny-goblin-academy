@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "map-grid-batch",
+  "method": "proportional-8x8-grid-source-rects",
+  "methodStatus": "mapping-only",
+  "methodParameters": {
+    "grid": "8x8",
+    "sourceRectStrategy": "proportional-actual-dimensions",
+    "semanticRectPolicy": "preserve-semantic-128-grid"
+  },
+  "laneId": "h5-83-topdown-future-floor-tilesheets-batch-region-mapping",
+  "agent": "Codex",
+  "gitBaseline": "cde064b docs: review topdown terrain cleanup",
+  "startedAt": "2026-07-09T23:15:18.901Z",
+  "completedAt": "2026-07-09T23:15:18.913Z",
+  "sourcePath": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json",
+  "sourceSha256": "33b416788341dfec4f7ef250bb4b8e561794bef69c20cd68e5b5e3d255ae4c5f",
+  "manifestPath": "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json",
+  "inputManifests": [
+    "assets/academy/topdown/terrain/future-floor-tilesheets/manifests/tga-topdown-floor-tilesheets-manifest-v0.1.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy.topdown.floor-tilesheets.future.regions.json",
+      "sha256": "cf81b5f5d6e2702b7d5f24c4b0f83349c4e7f2c9a3a4ca10bf49729f41b91c7c"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-source-contact-sheet.png",
+      "sha256": "0e10508f130051c3f84e19d3e9719ad89957d5e0797288c0c73769db04176eea"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-summary-table-preview.png",
+      "sha256": "b7bc30f057d4adbf79541c2d18f3871f49daaac02b14870d5591df72054138ed"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-bbox-overlay.png",
+      "sha256": "cf63ecf4a5fa3a9e4602940024ff84fac5922368f30a02400951c8ee6abd2ded"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-numbered-contact-sheet.png",
+      "sha256": "fe3dbab8e6eda6257bb128b602f611aae7c5d1318115f0fc7fa52973c5ea5caa"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-region-table-preview.png",
+      "sha256": "23b0c155b696b9c42ca71b0daa7475e9c9bd33e7caa76d9d69c14886115e2415"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-bbox-overlay.png",
+      "sha256": "eb40b791400903478eb36a174593039575d979c4a50e30b1859e04e0dec67e43"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-numbered-contact-sheet.png",
+      "sha256": "5dd2afa2bbb4668ae90e6209e3fcadf6bdcd7c2b3eb3178f7e35a423dc6ae551"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-region-table-preview.png",
+      "sha256": "52cfa925ca8bbae245f335ad3fdeb77621302384490b56df487028d01a91abfd"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-bbox-overlay.png",
+      "sha256": "4009dda80d28bad616c3129838d3a38025d333c983930c42df9c5b8005d2e5c4"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-numbered-contact-sheet.png",
+      "sha256": "d52873fb9d9abd2d3e766f6825fff45ae6f14df06acc5345e6084dbd49a45d35"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-region-table-preview.png",
+      "sha256": "0cd83191ac3631ea5af46d15f90e9eb103164c8e8158bf0efb7d7bfaea87a7dd"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-bbox-overlay.png",
+      "sha256": "0cb438616244c4c4e05f387d5ffb8b1b801a745dcb78383c6da94112426469ef"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-numbered-contact-sheet.png",
+      "sha256": "a26d98db7d67fcef7a26d725609870b3ca9eaaa7fe7a6c7d8e8a523e9e2be3a2"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-region-table-preview.png",
+      "sha256": "97e2a310820926935c243234facefa45ffc5b2bf1b7863a3b40b61a662b5d4aa"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-bbox-overlay.png",
+      "sha256": "e11055c4e841b60d1d25a6803646ce840b57ff5c9e042f2e88ce2834131ccf99"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-numbered-contact-sheet.png",
+      "sha256": "94da4ef56deb9a74ca857e794f38fb1f60d0494137e4f8500a96bb2cd25c3c27"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-region-table-preview.png",
+      "sha256": "8d4f08f0d0efa5c185c16d54a08825555435261fc4bdc87b792367fba8603887"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-bbox-overlay.png",
+      "sha256": "91938bd3c64a0ae8ee8da7bee8e5998a60f50306c9182afe3a3b1c7587d1bc72"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-numbered-contact-sheet.png",
+      "sha256": "5b5616d753c164806f270faedf4168754bb0c5afe2383892280de9c36465ae65"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-region-table-preview.png",
+      "sha256": "64cc65c69853138797c4896ba3aad16ad35814e25aa86cc0bed20c68889036d4"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "manifests/academy.topdown.floor-tilesheets.future.regions.json",
+      "sha256": "cf81b5f5d6e2702b7d5f24c4b0f83349c4e7f2c9a3a4ca10bf49729f41b91c7c"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-source-contact-sheet.png",
+      "sha256": "0e10508f130051c3f84e19d3e9719ad89957d5e0797288c0c73769db04176eea"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-summary-table-preview.png",
+      "sha256": "b7bc30f057d4adbf79541c2d18f3871f49daaac02b14870d5591df72054138ed"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-bbox-overlay.png",
+      "sha256": "cf63ecf4a5fa3a9e4602940024ff84fac5922368f30a02400951c8ee6abd2ded"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-numbered-contact-sheet.png",
+      "sha256": "fe3dbab8e6eda6257bb128b602f611aae7c5d1318115f0fc7fa52973c5ea5caa"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-region-table-preview.png",
+      "sha256": "23b0c155b696b9c42ca71b0daa7475e9c9bd33e7caa76d9d69c14886115e2415"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-bbox-overlay.png",
+      "sha256": "eb40b791400903478eb36a174593039575d979c4a50e30b1859e04e0dec67e43"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-numbered-contact-sheet.png",
+      "sha256": "5dd2afa2bbb4668ae90e6209e3fcadf6bdcd7c2b3eb3178f7e35a423dc6ae551"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-region-table-preview.png",
+      "sha256": "52cfa925ca8bbae245f335ad3fdeb77621302384490b56df487028d01a91abfd"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-bbox-overlay.png",
+      "sha256": "4009dda80d28bad616c3129838d3a38025d333c983930c42df9c5b8005d2e5c4"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-numbered-contact-sheet.png",
+      "sha256": "d52873fb9d9abd2d3e766f6825fff45ae6f14df06acc5345e6084dbd49a45d35"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-region-table-preview.png",
+      "sha256": "0cd83191ac3631ea5af46d15f90e9eb103164c8e8158bf0efb7d7bfaea87a7dd"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-bbox-overlay.png",
+      "sha256": "0cb438616244c4c4e05f387d5ffb8b1b801a745dcb78383c6da94112426469ef"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-numbered-contact-sheet.png",
+      "sha256": "a26d98db7d67fcef7a26d725609870b3ca9eaaa7fe7a6c7d8e8a523e9e2be3a2"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-region-table-preview.png",
+      "sha256": "97e2a310820926935c243234facefa45ffc5b2bf1b7863a3b40b61a662b5d4aa"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-bbox-overlay.png",
+      "sha256": "e11055c4e841b60d1d25a6803646ce840b57ff5c9e042f2e88ce2834131ccf99"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-numbered-contact-sheet.png",
+      "sha256": "94da4ef56deb9a74ca857e794f38fb1f60d0494137e4f8500a96bb2cd25c3c27"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-region-table-preview.png",
+      "sha256": "8d4f08f0d0efa5c185c16d54a08825555435261fc4bdc87b792367fba8603887"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-bbox-overlay.png",
+      "sha256": "91938bd3c64a0ae8ee8da7bee8e5998a60f50306c9182afe3a3b1c7587d1bc72"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-numbered-contact-sheet.png",
+      "sha256": "5b5616d753c164806f270faedf4168754bb0c5afe2383892280de9c36465ae65"
+    },
+    {
+      "path": "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-region-table-preview.png",
+      "sha256": "64cc65c69853138797c4896ba3aad16ad35814e25aa86cc0bed20c68889036d4"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-source-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-summary-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-region-table-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-source-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/batch-summary-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-arcane-metal/terrain-arcane-metal-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-cave-rock/terrain-cave-rock-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-grass-dirt/terrain-grass-dirt-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-stone-ruin/terrain-stone-ruin-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-swamp-slime/terrain-swamp-slime-region-table-preview.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-bbox-overlay.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-83-topdown-future-floor-tilesheets-batch-region-mapping/terrain-wood-indoor/terrain-wood-indoor-region-table-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "Future pantry mapping only; no cleanup, runtime tilemap approval, collision approval, pathfinding approval, walkability approval, hazard/water/slime/portal/trigger behavior, or autotiling approval."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T23:15:18.914Z"
+}

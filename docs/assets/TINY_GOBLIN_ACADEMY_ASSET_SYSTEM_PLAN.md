@@ -40,6 +40,16 @@ Required sequence before any sheet is wired into hub/game code:
 * Screenshots are required because visual artifacts (like baked backgrounds) can pass build/tests.
 * Human review decides whether the pixels are acceptable.
 
+## H5.83 Future Topdown Floor Tilesheets Batch Mapping Note
+
+H5.83 maps the six H5.73A future Topdown floor / ground tilesheets as a batch future-pantry inventory.
+
+The batch manifest is `manifests/academy.topdown.floor-tilesheets.future.regions.json`. It records 6 sheets, 64 regions per sheet, and 384 total draft regions. Because the source PNGs are `1254x1254` while the semantic manifest uses an 8x8 `128x128` vocabulary, H5.83 records proportional real-image `sourceRect` values and preserves the original semantic coordinates separately as `semanticRect`.
+
+This lane also matures the canonical asset pipeline with `node scripts/asset-pipeline/cli.mjs map-grid-batch`, backed by `scripts/asset-pipeline/map-grid-batch.py` and the standard provenance run-log contract. Future like-shaped tilesheet batches should use that path instead of one-off scripts.
+
+No cleanup, derived cleaned PNGs, source PNG edits, runtime tilemaps, collision/pathfinding/walkability approval, hazard/water/slime/portal/trigger behavior, autotiling, or game wiring occurred. The road/path overlay source remains excluded from H5.83.
+
 ## H5.3 Shared Core Region Mapping Note
 
 H5.3 performs Shared Core lane region mapping for `assets/academy/shared-core/tga-shared-core-sheet-v0.1.png`. The mapping remains `draft-review`, and no runtime wiring occurred.

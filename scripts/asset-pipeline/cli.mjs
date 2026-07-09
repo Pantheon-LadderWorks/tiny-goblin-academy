@@ -28,6 +28,7 @@ Usage:
   node scripts/asset-pipeline/cli.mjs list-cleanup-methods [--json]
   node scripts/asset-pipeline/cli.mjs inspect-source --source <path> [--json]
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
+  node scripts/asset-pipeline/cli.mjs map-grid-batch --semantic-manifest <path> --sources-dir <folder> --output-manifest <path> --evidence-dir <folder> --run-log <path> [--agent <name>]
   node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>] [--gray-sat-max <n>] [--gray-min <n>] [--gray-max <n>] [--channel-delta-max <n>] [--reference-distance-max <n>] [--edge-seed-inset <n>] [--edge-expansion-passes <n>] [--edge-alpha <n>]
   node scripts/asset-pipeline/cli.mjs validate
   node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
@@ -85,6 +86,25 @@ function run(command, commandArgs) {
   if (result.status !== 0) {
     process.exit(result.status ?? 1);
   }
+}
+
+function listFilesRecursive(dirPath, predicate = () => true) {
+  const results = [];
+  const fullDir = repoPath(dirPath);
+  if (!fs.existsSync(fullDir)) return results;
+  const stack = [fullDir];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        stack.push(fullPath);
+      } else if (entry.isFile() && predicate(fullPath)) {
+        results.push(path.relative(repoRoot, fullPath).replaceAll(path.sep, '/'));
+      }
+    }
+  }
+  return results.sort();
 }
 
 function listLanes(args) {
@@ -156,6 +176,85 @@ function makeEvidence(args) {
     process.exit(1);
   }
   run('python', ['scripts/asset-pipeline/make-region-evidence.py', '--manifest', manifest, '--out', out]);
+}
+
+function mapGridBatch(args) {
+  const semanticManifest = argValue(args, '--semantic-manifest');
+  const sourcesDir = argValue(args, '--sources-dir');
+  const outputManifest = argValue(args, '--output-manifest');
+  const evidenceDir = argValue(args, '--evidence-dir');
+  const runLogPath = argValue(args, '--run-log');
+  const agent = argValue(args, '--agent', 'unknown-agent');
+  if (!semanticManifest || !sourcesDir || !outputManifest || !evidenceDir || !runLogPath) {
+    console.error('Missing --semantic-manifest, --sources-dir, --output-manifest, --evidence-dir, or --run-log');
+    process.exit(1);
+  }
+
+  run('python', [
+    'scripts/asset-pipeline/map-grid-batch.py',
+    '--semantic-manifest', semanticManifest,
+    '--sources-dir', sourcesDir,
+    '--output-manifest', outputManifest,
+    '--evidence-dir', evidenceDir,
+    '--repo-root', repoRoot
+  ]);
+
+  const evidenceFiles = listFilesRecursive(evidenceDir, (filePath) => filePath.endsWith('.png'));
+  const outputPaths = [outputManifest, ...evidenceFiles];
+  const runLog = buildRunLog({
+    toolPath: cliPath,
+    command: 'map-grid-batch',
+    method: 'proportional-8x8-grid-source-rects',
+    methodStatus: 'mapping-only',
+    methodParameters: {
+      grid: '8x8',
+      sourceRectStrategy: 'proportional-actual-dimensions',
+      semanticRectPolicy: 'preserve-semantic-128-grid'
+    },
+    laneId: argValue(args, '--lane', 'h5-83-topdown-future-floor-tilesheets-batch-region-mapping'),
+    repoRoot,
+    agent,
+    gitBaseline: currentGitBaseline(),
+    sourcePath: semanticManifest,
+    manifestPath: semanticManifest,
+    inputManifests: [],
+    outputPaths,
+    evidenceFiles,
+    validationCommands: [
+      'node scripts/asset-pipeline/cli.mjs validate-provenance',
+      'node scripts/asset-pipeline/smoke-check.mjs'
+    ],
+    warnings: [
+      'Future pantry mapping only; no cleanup, runtime tilemap approval, collision approval, pathfinding approval, walkability approval, hazard/water/slime/portal/trigger behavior, or autotiling approval.'
+    ],
+    sourcePngModified: false,
+    runtimeFilesModified: false
+  });
+
+  const manifestPath = repoPath(outputManifest);
+  const manifestData = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  manifestData.sourceSha256 = runLog.sourceSha256;
+  manifestData.pipelineRun = {
+    tool: cliPath,
+    command: 'map-grid-batch',
+    method: 'proportional-8x8-grid-source-rects',
+    methodStatus: 'mapping-only',
+    runLog: runLogPath.replaceAll('\\', '/'),
+    sourceSha256: runLog.sourceSha256,
+    generatedAt: runLog.completedAt,
+    gitBaseline: runLog.gitBaseline,
+    sourcePngModified: false,
+    runtimeFilesModified: false
+  };
+  fs.writeFileSync(manifestPath, `${JSON.stringify(manifestData, null, 2)}\n`, 'utf8');
+
+  runLog.outputFiles = outputPaths.map((outputPath) => ({
+    path: outputPath,
+    sha256: sha256File(repoPath(outputPath))
+  }));
+  runLog.outputPaths = runLog.outputFiles;
+  writeRunLog(repoPath(runLogPath), runLog);
+  console.log(`Run log written: ${runLogPath}`);
 }
 
 function validate() {
@@ -436,6 +535,9 @@ switch (command) {
     break;
   case 'make-evidence':
     makeEvidence(rest);
+    break;
+  case 'map-grid-batch':
+    mapGridBatch(rest);
     break;
   case 'cleanup-candidate':
     cleanupCandidate(rest);

@@ -52,6 +52,7 @@ export const allowedMethodStatuses = [
 export const allowedCommands = [
   'inspect-source',
   'map-grid',
+  'map-grid-batch',
   'map-regions',
   'make-evidence',
   'cleanup-candidate',
