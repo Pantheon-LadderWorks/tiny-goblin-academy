@@ -945,4 +945,29 @@ manifests/academy.topdown.objects.nonfx-regenerated.regions.json
 
 The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set. H5.77 starts the new regenerated non-FX object source lane and does not process the old H5.63/H5.68 source.
 
-H5.77 does not create cleanup outputs, derived cleanup PNGs, runtime manifests, placement/collision/interaction data, pickup/loot/chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game/runtime wiring. H5.78 should perform human/product review before any cleanup candidate is generated.
+H5.77 does not create cleanup outputs, derived cleanup PNGs, runtime manifests, placement/collision/interaction data, pickup/loot/chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game/runtime wiring. H5.78 has now completed human/product review before any cleanup candidate is generated.
+
+## H5.78 Topdown Non-FX Objects Regenerated Region Human Review Note
+
+H5.78 records human/product review for the H5.77 regenerated non-FX object region mapping:
+
+```text
+manifests/academy.topdown.objects.nonfx-regenerated.regions.json
+assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png
+```
+
+All 64 contour-assisted variable-size object regions are accepted for draft cleanup/planning use. No sourceRect correction pass is needed.
+
+The source is `1254x1254` PNG / RGB with no alpha channel and a fake white/checker-style background. It is not true alpha. H5.78 does not clean this sheet, create derived cleanup output, regenerate evidence, modify source PNGs, or modify sourceRects.
+
+The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set. H5.77/H5.78 is the regenerated non-FX object source lane.
+
+Behavior-deferred reminder: objects such as chests, portals/seals, traps, plates, signs, shields, wells, banners, and campfire/torch bases remain visual-only. Labels do not approve runtime behavior.
+
+Runtime, placement, collision, interaction, pickup, loot, chest/key behavior, trap behavior, portal/teleport behavior, light/fire/glow behavior, and game wiring remain unapproved.
+
+Cleanup remains future work:
+
+```text
+H5.79 — Topdown Non-FX Objects Regenerated Cleanup Candidate
+```

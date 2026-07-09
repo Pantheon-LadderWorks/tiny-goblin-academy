@@ -1,15 +1,15 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-region-mapping",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-objects-nonfx-regenerated",
   "operationalType": "topdown-nonfx-objects-regenerated-region-mapping",
   "sourceSheet": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
   "sourceKind": "regenerated-nonfx-object-source",
   "mappingMethod": "contour-assisted-variable-region-mapping",
-  "cleanupEligibility": "cleanup-candidate-after-review",
+  "cleanupEligibility": "approved-for-cleanup-candidate",
   "sourceDimensions": {
     "width": 1254,
     "height": 1254
@@ -1696,7 +1696,11 @@
   "notes": [
     "H5.77 maps the regenerated non-FX topdown object source as draft visual inventory.",
     "The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set; this is the new regenerated non-FX object source lane.",
-    "No cleanup, runtime use, placement, collision, interaction, pickup, loot, chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game wiring is approved."
+    "No cleanup, runtime use, placement, collision, interaction, pickup, loot, chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game wiring is approved.",
+    "H5.78 human/product review passed the H5.77 regenerated non-FX object region mapping for draft cleanup/planning use.",
+    "All 64 contour-assisted variable-size regions are accepted; no sourceRect correction pass is needed.",
+    "Cleanup remains future H5.79; no cleanup, derived cleanup output, evidence regeneration, or PNG modification occurred in H5.78.",
+    "Objects such as chests, portals/seals, traps, plates, signs, shields, wells, banners, and campfire/torch bases remain visual-only; labels do not approve runtime behavior."
   ],
   "sourceSha256": "fd78781394f2f7f0bf991de82d560682996ac078b677237ad294b6428a0b5d0a",
   "pipelineRun": {
@@ -1710,5 +1714,16 @@
     "gitBaseline": "6c058d6 docs: review topdown vertical walls cleanup",
     "sourcePngModified": false,
     "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.78",
+    "decision": "passed",
+    "reviewedCommit": "e573a5f docs: map topdown nonfx object regions",
+    "acceptedRegionCount": 64,
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "noCorrectionPassNeeded": true,
+    "cleanupCandidateLane": "H5.79",
+    "runtimeBoundary": "not-runtime-approved",
+    "behaviorDeferredReminder": "Objects such as chests, portals/seals, traps, plates, signs, shields, wells, banners, and campfire/torch bases remain visual-only; labels do not approve runtime behavior."
   }
 }
