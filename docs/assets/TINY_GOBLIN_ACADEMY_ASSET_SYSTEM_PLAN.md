@@ -971,3 +971,33 @@ Cleanup remains future work:
 ```text
 H5.79 — Topdown Non-FX Objects Regenerated Cleanup Candidate
 ```
+
+## H5.79 Topdown Non-FX Objects Regenerated Cleanup Candidate Note
+
+H5.79 creates a cleanup candidate for the H5.78-reviewed regenerated non-FX object source:
+
+```text
+assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png
+```
+
+The cleanup candidate is:
+
+```text
+assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png
+```
+
+The cleanup manifest is:
+
+```text
+manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
+```
+
+H5.79 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
+
+```text
+assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/pipeline-run-log.json
+```
+
+All 64 regions remain `draft` / `needs-human-review` / `not-runtime-approved`. Interactive-looking categories and container-like props are behavior-deferred. The on-dark preview shows the cleanup is mostly strong, but small light edge residue should be reviewed in H5.80 rather than silently accepted or overcut.
+
+H5.79 does not approve runtime asset use, placement, collision, interaction, pickup, loot, chest/key behavior, portal/teleport behavior, trap behavior, pressure plate behavior, fire/light/glow behavior, obstacle behavior, or game/runtime wiring. H5.80 should perform human/product review before any draft cleanup/planning promotion.

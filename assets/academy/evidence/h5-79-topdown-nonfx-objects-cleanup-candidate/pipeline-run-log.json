@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "cleanup-candidate",
+  "method": "edge-connected-checker-cleanup",
+  "methodStatus": "canonical-with-caution",
+  "methodParameters": {
+    "gray_sat_max": 0.12,
+    "gray_min": 0.84,
+    "gray_max": 1.01,
+    "channel_delta_max": 0.06,
+    "edge_alpha": 160
+  },
+  "laneId": null,
+  "agent": "Codex",
+  "gitBaseline": "22d01d5 docs: review topdown nonfx object regions",
+  "startedAt": "2026-07-09T19:40:43.612Z",
+  "completedAt": "2026-07-09T19:40:43.631Z",
+  "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+  "sourceSha256": "fd78781394f2f7f0bf991de82d560682996ac078b677237ad294b6428a0b5d0a",
+  "manifestPath": "manifests/academy.topdown.objects.nonfx-regenerated.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.objects.nonfx-regenerated.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
+      "sha256": "077cccc14d158e25aa518f00a9c03dd53dd066ea3f693e96ab8a9b3cd506fb41"
+    },
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+      "sha256": "92382142f8561edeba7fa3fadeadbf8226324a16e8e20ff2cc0f5f686cd2b6ca"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
+      "sha256": "077cccc14d158e25aa518f00a9c03dd53dd066ea3f693e96ab8a9b3cd506fb41"
+    },
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+      "sha256": "92382142f8561edeba7fa3fadeadbf8226324a16e8e20ff2cc0f5f686cd2b6ca"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-candidate-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-mask-overlay.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-mask-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-risk-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-candidate-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-mask-overlay.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-mask-preview.png",
+    "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/topdown-nonfx-objects-risk-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "Source may be degraded/fake-transparent; edge-connected-checker-cleanup removes only edge-connected background-like masks and requires human review.",
+    "H5.79 cleanup manifest was metadata-tightened after CLI generation to mark additional container/well-like props as behavior-deferred; output manifest SHA refreshed in this run log."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T19:40:43.645Z"
+}
