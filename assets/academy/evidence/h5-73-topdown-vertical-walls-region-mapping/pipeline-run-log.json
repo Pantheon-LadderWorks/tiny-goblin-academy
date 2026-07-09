@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "map-regions",
+  "method": "grid-slice-only",
+  "methodStatus": "mapping-only",
+  "laneId": "H5.73-topdown-vertical-walls-region-mapping",
+  "agent": "Codex",
+  "gitBaseline": "d3d75b1 docs: review topdown true-alpha wall regions",
+  "startedAt": "2026-07-09T13:14:31.719Z",
+  "completedAt": "2026-07-09T13:14:31.730Z",
+  "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+  "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+  "manifestPath": "manifests/academy.topdown.walls.vertical.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.walls.vertical.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy.topdown.walls.vertical.regions.json",
+      "sha256": "9ae58bbe12cb9c8385a8e164837f44b83ae549001d1ea8cce466c6d7cdfb5d53"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-background-mask-preview.png",
+      "sha256": "40300c4a80996271855aae17cf1181887c1d6e6c1b4c47dd1ba49c2bfe166902"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-bbox-overlay.png",
+      "sha256": "ce56a6ab9f6b543f5d1b19e20c7251d0180d0ee9a2ada5691bafbece031d7ea0"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-category-preview.png",
+      "sha256": "a4f2cecf5f9cdb44bf4f596e1c1cf90370c92496581728a0a2cea02359413835"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-numbered-contact-sheet.png",
+      "sha256": "f88be957aee45ca77697d67eacc322eb3d264c046f74c44315211dcfc3424a39"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-region-table-preview.png",
+      "sha256": "25a3777ef95cf32757a717b9b201395e628b23df67f0fe6a76c7e0de51306b22"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-source-inspection-preview.png",
+      "sha256": "603c8c458cdcd9b8d29ddbb5a941da708f4d7b168addcc8f7e18d87c82a8eac2"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "manifests/academy.topdown.walls.vertical.regions.json",
+      "sha256": "9ae58bbe12cb9c8385a8e164837f44b83ae549001d1ea8cce466c6d7cdfb5d53"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-background-mask-preview.png",
+      "sha256": "40300c4a80996271855aae17cf1181887c1d6e6c1b4c47dd1ba49c2bfe166902"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-bbox-overlay.png",
+      "sha256": "ce56a6ab9f6b543f5d1b19e20c7251d0180d0ee9a2ada5691bafbece031d7ea0"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-category-preview.png",
+      "sha256": "a4f2cecf5f9cdb44bf4f596e1c1cf90370c92496581728a0a2cea02359413835"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-numbered-contact-sheet.png",
+      "sha256": "f88be957aee45ca77697d67eacc322eb3d264c046f74c44315211dcfc3424a39"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-region-table-preview.png",
+      "sha256": "25a3777ef95cf32757a717b9b201395e628b23df67f0fe6a76c7e0de51306b22"
+    },
+    {
+      "path": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-source-inspection-preview.png",
+      "sha256": "603c8c458cdcd9b8d29ddbb5a941da708f4d7b168addcc8f7e18d87c82a8eac2"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-background-mask-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-bbox-overlay.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-category-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-region-table-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-source-inspection-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-background-mask-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-bbox-overlay.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-category-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-region-table-preview.png",
+    "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/topdown-vertical-walls-source-inspection-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate",
+    "node scripts/asset-pipeline/cli.mjs validate-provenance"
+  ],
+  "warnings": [
+    "Contour-assisted variable-region mapping used for RGB fake-background vertical wall source; cleanup not performed."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T13:14:31.773Z"
+}

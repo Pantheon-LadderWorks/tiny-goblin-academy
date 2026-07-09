@@ -1,0 +1,1568 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-region-mapping",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-walls",
+  "operationalType": "vertical-wall-cleanup-source-region-mapping",
+  "sourceSheet": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+  "sourceKind": "regenerated-fake-background-cleanup-source",
+  "mappingMethod": "contour-assisted-variable-region-mapping",
+  "cleanupEligibility": "cleanup-candidate-after-review",
+  "sourceDimensions": {
+    "width": 1448,
+    "height": 1086
+  },
+  "alphaFinding": {
+    "mode": "RGB",
+    "alphaRange": [
+      255,
+      255
+    ],
+    "transparentPixels": 0,
+    "nonOpaquePixels": 0,
+    "finding": "no alpha channel; white/checker-style fake transparency baked into source"
+  },
+  "backgroundFinding": "bright low-saturation fake/checker background; foreground mask used for mapping evidence only, not cleanup approval",
+  "regionCount": 72,
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-01",
+      "label": "tall straight stone wall column 1",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 15,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 2,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-02",
+      "label": "tall straight stone wall column 2",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 113,
+        "y": 15,
+        "w": 62,
+        "h": 295
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 3,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-03",
+      "label": "tall straight stone wall column 3",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 222,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 4,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-04",
+      "label": "tall straight stone wall column 4",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 337,
+        "y": 31,
+        "w": 62,
+        "h": 279
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 5,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-05",
+      "label": "tall straight stone wall column 5",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 435,
+        "y": 57,
+        "w": 62,
+        "h": 253
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 6,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-06",
+      "label": "tall straight stone wall column 6",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 527,
+        "y": 82,
+        "w": 59,
+        "h": 228
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 7,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-07",
+      "label": "mossy straight stone wall column 7",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 611,
+        "y": 87,
+        "w": 53,
+        "h": 223
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 8,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-08",
+      "label": "broken mossy vertical wall ruin 8",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 688,
+        "y": 105,
+        "w": 74,
+        "h": 206
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 9,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-09",
+      "label": "mossy straight stone wall column 9",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 789,
+        "y": 133,
+        "w": 62,
+        "h": 177
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 10,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-10",
+      "label": "broken mossy vertical wall ruin 10",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 877,
+        "y": 142,
+        "w": 81,
+        "h": 168
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 11,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-11",
+      "label": "mossy straight stone wall column 11",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 969,
+        "y": 166,
+        "w": 60,
+        "h": 144
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 12,
+      "id": "topdown.walls.vertical.short-straight-stone-wall-column-12",
+      "label": "short straight stone wall column 12",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 1050,
+        "y": 181,
+        "w": 72,
+        "h": 129
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 13,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-13",
+      "label": "broken mossy vertical wall ruin 13",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1142,
+        "y": 194,
+        "w": 71,
+        "h": 117
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 14,
+      "id": "topdown.walls.vertical.short-straight-stone-wall-column-14",
+      "label": "short straight stone wall column 14",
+      "category": "wall-vertical",
+      "sourceRect": {
+        "x": 1234,
+        "y": 206,
+        "w": 61,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 15,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-15",
+      "label": "broken mossy vertical wall ruin 15",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1319,
+        "y": 225,
+        "w": 59,
+        "h": 85
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 16,
+      "id": "topdown.walls.vertical.large-l-stone-wall-corner-16",
+      "label": "large L stone wall corner 16",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 33,
+        "y": 334,
+        "w": 134,
+        "h": 127
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 17,
+      "id": "topdown.walls.vertical.large-l-stone-wall-corner-17",
+      "label": "large L stone wall corner 17",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 204,
+        "y": 342,
+        "w": 103,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 18,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-18",
+      "label": "mossy L wall corner 18",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 328,
+        "y": 341,
+        "w": 119,
+        "h": 116
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 19,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-19",
+      "label": "mossy L wall corner 19",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 479,
+        "y": 341,
+        "w": 103,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 20,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-20",
+      "label": "mossy L wall corner 20",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 610,
+        "y": 343,
+        "w": 110,
+        "h": 107
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 21,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-21",
+      "label": "broken side wall corner 21",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 743,
+        "y": 349,
+        "w": 96,
+        "h": 103
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 22,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-22",
+      "label": "broken side wall corner 22",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 874,
+        "y": 349,
+        "w": 98,
+        "h": 103
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 23,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-23",
+      "label": "broken side wall corner 23",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1008,
+        "y": 349,
+        "w": 63,
+        "h": 103
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 24,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-24",
+      "label": "broken side wall corner 24",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1099,
+        "y": 348,
+        "w": 80,
+        "h": 110
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 25,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-25",
+      "label": "broken side wall corner 25",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1215,
+        "y": 346,
+        "w": 76,
+        "h": 110
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 26,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-26",
+      "label": "broken side wall corner 26",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1333,
+        "y": 349,
+        "w": 89,
+        "h": 107
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 27,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-27",
+      "label": "top L wall corner variant 27",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 37,
+        "y": 483,
+        "w": 90,
+        "h": 105
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 28,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-28",
+      "label": "top L wall corner variant 28",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 181,
+        "y": 483,
+        "w": 110,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 29,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-29",
+      "label": "top L wall corner variant 29",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 337,
+        "y": 483,
+        "w": 96,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 30,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-30",
+      "label": "top L wall corner variant 30",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 483,
+        "y": 483,
+        "w": 82,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 31,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-31",
+      "label": "top L wall corner variant 31",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 615,
+        "y": 481,
+        "w": 94,
+        "h": 107
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 32,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-32",
+      "label": "top L wall corner variant 32",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 762,
+        "y": 483,
+        "w": 112,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 33,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-33",
+      "label": "top L wall corner variant 33",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 911,
+        "y": 484,
+        "w": 120,
+        "h": 103
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 34,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-34",
+      "label": "top L wall corner variant 34",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1071,
+        "y": 486,
+        "w": 109,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 35,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-35",
+      "label": "top L wall corner variant 35",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1218,
+        "y": 486,
+        "w": 74,
+        "h": 97
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 36,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-36",
+      "label": "top L wall corner variant 36",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 1330,
+        "y": 486,
+        "w": 91,
+        "h": 96
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 37,
+      "id": "topdown.walls.vertical.open-stone-archway-37",
+      "label": "open stone archway 37",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 36,
+        "y": 613,
+        "w": 89,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 38,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-38",
+      "label": "stone doorway with wooden door 38",
+      "category": "door",
+      "sourceRect": {
+        "x": 166,
+        "y": 612,
+        "w": 98,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 39,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-39",
+      "label": "stone doorway with wooden door 39",
+      "category": "door",
+      "sourceRect": {
+        "x": 308,
+        "y": 612,
+        "w": 115,
+        "h": 130
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 40,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-40",
+      "label": "stone doorway with wooden door 40",
+      "category": "door",
+      "sourceRect": {
+        "x": 461,
+        "y": 613,
+        "w": 89,
+        "h": 129
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 41,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-41",
+      "label": "stone doorway with wooden door 41",
+      "category": "door",
+      "sourceRect": {
+        "x": 582,
+        "y": 612,
+        "w": 91,
+        "h": 130
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 42,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-42",
+      "label": "stone doorway with wooden door 42",
+      "category": "door",
+      "sourceRect": {
+        "x": 701,
+        "y": 615,
+        "w": 76,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 43,
+      "id": "topdown.walls.vertical.open-stone-archway-43",
+      "label": "open stone archway 43",
+      "category": "wall-arch",
+      "sourceRect": {
+        "x": 813,
+        "y": 612,
+        "w": 76,
+        "h": 128
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 44,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-44",
+      "label": "narrow broken wall ruin 44",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 929,
+        "y": 618,
+        "w": 83,
+        "h": 122
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 45,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-45",
+      "label": "narrow broken wall ruin 45",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1038,
+        "y": 625,
+        "w": 84,
+        "h": 117
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 46,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-46",
+      "label": "narrow broken wall ruin 46",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1150,
+        "y": 634,
+        "w": 58,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 47,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-47",
+      "label": "narrow broken wall ruin 47",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1240,
+        "y": 631,
+        "w": 72,
+        "h": 106
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 48,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-48",
+      "label": "narrow broken wall ruin 48",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1337,
+        "y": 634,
+        "w": 62,
+        "h": 107
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 49,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-49",
+      "label": "stone pillar column variant 49",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 37,
+        "y": 766,
+        "w": 60,
+        "h": 120
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 50,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-50",
+      "label": "stone pillar column variant 50",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 155,
+        "y": 772,
+        "w": 56,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 51,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-51",
+      "label": "stone pillar column variant 51",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 272,
+        "y": 774,
+        "w": 54,
+        "h": 112
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 52,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-52",
+      "label": "stone pillar column variant 52",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 389,
+        "y": 776,
+        "w": 53,
+        "h": 110
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 53,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-53",
+      "label": "stone pillar column variant 53",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 497,
+        "y": 780,
+        "w": 53,
+        "h": 106
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 54,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-54",
+      "label": "stone pillar column variant 54",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 602,
+        "y": 778,
+        "w": 63,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 55,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-55",
+      "label": "stone pillar column variant 55",
+      "category": "wall-column",
+      "sourceRect": {
+        "x": 726,
+        "y": 780,
+        "w": 56,
+        "h": 106
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 56,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-56",
+      "label": "small broken wall ruin 56",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 835,
+        "y": 778,
+        "w": 70,
+        "h": 107
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 57,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-57",
+      "label": "small broken wall ruin 57",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 942,
+        "y": 784,
+        "w": 70,
+        "h": 102
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 58,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-58",
+      "label": "small broken wall ruin 58",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1051,
+        "y": 783,
+        "w": 90,
+        "h": 105
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 59,
+      "id": "topdown.walls.vertical.low-stacked-wall-block-59",
+      "label": "low stacked wall block 59",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1169,
+        "y": 805,
+        "w": 81,
+        "h": 81
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 60,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-60",
+      "label": "small broken wall ruin 60",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1277,
+        "y": 786,
+        "w": 65,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 61,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-61",
+      "label": "small broken wall ruin 61",
+      "category": "wall-ruin",
+      "sourceRect": {
+        "x": 1360,
+        "y": 810,
+        "w": 64,
+        "h": 78
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 62,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-62",
+      "label": "small L wall corner variant 62",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 28,
+        "y": 909,
+        "w": 92,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 63,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-63",
+      "label": "small L wall corner variant 63",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 159,
+        "y": 926,
+        "w": 99,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 64,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-64",
+      "label": "small L wall corner variant 64",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 291,
+        "y": 929,
+        "w": 105,
+        "h": 105
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 65,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-65",
+      "label": "small L wall corner variant 65",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 427,
+        "y": 930,
+        "w": 71,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 66,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-66",
+      "label": "small L wall corner variant 66",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 539,
+        "y": 923,
+        "w": 74,
+        "h": 111
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 67,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-67",
+      "label": "small L wall corner variant 67",
+      "category": "wall-corner",
+      "sourceRect": {
+        "x": 656,
+        "y": 923,
+        "w": 81,
+        "h": 113
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 68,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-68",
+      "label": "freestanding rubble wall pile 68",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 789,
+        "y": 926,
+        "w": 89,
+        "h": 108
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 69,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-69",
+      "label": "freestanding rubble wall pile 69",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 920,
+        "y": 934,
+        "w": 100,
+        "h": 100
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 70,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-70",
+      "label": "freestanding rubble wall pile 70",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1060,
+        "y": 930,
+        "w": 81,
+        "h": 104
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 71,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-71",
+      "label": "freestanding rubble wall pile 71",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1172,
+        "y": 937,
+        "w": 92,
+        "h": 99
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    },
+    {
+      "index": 72,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-72",
+      "label": "freestanding rubble wall pile 72",
+      "category": "rubble",
+      "sourceRect": {
+        "x": 1290,
+        "y": 929,
+        "w": 85,
+        "h": 105
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable-size sourceRect candidate; needs human review.",
+        "RGB/fake-background source; mapping only, cleanup remains future candidate lane.",
+        "Visual inventory only; no collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or runtime wiring approved."
+      ]
+    }
+  ],
+  "nonGoals": [
+    "No cleanup performed.",
+    "No derived cleanup image created.",
+    "No source PNG modification.",
+    "No runtime, collision, placement, door/gate behavior, wall autotiling, pathfinding, tilemap use, or game wiring approval."
+  ],
+  "notes": [
+    "H5.73 maps the regenerated vertical wall cleanup source.",
+    "This source is fake-background/RGB, not true alpha.",
+    "Mapping is variable-size / contour-assisted, not grid-based.",
+    "Cleanup remains a future H5.74 candidate lane."
+  ],
+  "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "grid-slice-only",
+    "methodStatus": "mapping-only",
+    "runLog": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/pipeline-run-log.json",
+    "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+    "generatedAt": "2026-07-09T13:14:31.730Z",
+    "gitBaseline": "d3d75b1 docs: review topdown true-alpha wall regions",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  }
+}

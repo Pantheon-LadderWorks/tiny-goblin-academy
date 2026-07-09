@@ -823,3 +823,21 @@ H5.72 accepts the H5.71 true-alpha wall mapping for draft region planning use. A
 No sourceRect correction pass is needed. No cleanup is needed for this true-alpha source. Region 31 may remain `uncertain` / lock-marker candidate.
 
 This review does not approve runtime asset use, collision, placement, wall autotiling, pathfinding, tilemap use, door behavior, gate behavior, lock behavior, gameplay interaction, or game wiring.
+
+## H5.73 Topdown Vertical Walls Region Mapping Note
+
+H5.73 maps the regenerated vertical wall supplement:
+
+```text
+assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png
+```
+
+The sheet is `1448x1086` PNG / RGB with no alpha channel, so it remains a fake-background cleanup-source candidate rather than a true-alpha source. H5.73 performs contour-assisted variable-region mapping and records 72 draft regions in:
+
+```text
+manifests/academy.topdown.walls.vertical.regions.json
+```
+
+Mapped categories include wall-corner, wall-ruin, wall-vertical, wall-column, door, rubble, and wall-arch visual inventory labels. The manifest records H5.67-style pipeline provenance and links to the H5.73 evidence run log.
+
+H5.73 does not create cleanup outputs, derived PNGs, runtime atlases, collision/pathfinding/placement data, wall autotiling data, door/gate behavior, tilemap approval, or game/runtime wiring. Human review should confirm region bounds before the recommended H5.74 cleanup candidate lane.
