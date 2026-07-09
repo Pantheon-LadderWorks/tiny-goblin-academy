@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "map-regions",
+  "method": "contour-assisted-variable-region-mapping",
+  "methodStatus": "mapping-only",
+  "methodParameters": {},
+  "laneId": "H5.77-topdown-nonfx-objects-region-mapping",
+  "agent": "Codex",
+  "gitBaseline": "6c058d6 docs: review topdown vertical walls cleanup",
+  "startedAt": "2026-07-09T18:50:36.471Z",
+  "completedAt": "2026-07-09T18:50:36.489Z",
+  "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+  "sourceSha256": "fd78781394f2f7f0bf991de82d560682996ac078b677237ad294b6428a0b5d0a",
+  "manifestPath": "manifests/academy.topdown.objects.nonfx-regenerated.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.objects.nonfx-regenerated.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-regenerated.regions.json",
+      "sha256": "e0ee5b6972e6138ed345a4673de6b2a6bd9d88b43caf588ebf8945230dc247ba"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-source-inspection-preview.png",
+      "sha256": "354b6c0b961d53cb99c8ea07122468d8cc44abeec167503b2bc95f5ee0c701bb"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-bbox-overlay.png",
+      "sha256": "72d39c74fa05874b587e85eb32ac68b614225eae05de3a8dcfd55bb84b1c7729"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-numbered-contact-sheet.png",
+      "sha256": "dc7ad5dfd484fbda01ee95de3a0fd4f11487d2ed91b93375a064b2b5b1934929"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-region-table-preview.png",
+      "sha256": "724cc9429980876039317b1f92271698d5a0481254d8f48b235533fa476f38bc"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-category-preview.png",
+      "sha256": "adda1de3c7ba1e069ca612f5b8df2fb17fcb7f5c21d7f0ac2e5734cc07142eaf"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-background-or-alpha-preview.png",
+      "sha256": "9c8717253674ea9e0d82747acc98b77a714fc3ca321a972c177590a2d94c9d87"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "manifests/academy.topdown.objects.nonfx-regenerated.regions.json",
+      "sha256": "e0ee5b6972e6138ed345a4673de6b2a6bd9d88b43caf588ebf8945230dc247ba"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-source-inspection-preview.png",
+      "sha256": "354b6c0b961d53cb99c8ea07122468d8cc44abeec167503b2bc95f5ee0c701bb"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-bbox-overlay.png",
+      "sha256": "72d39c74fa05874b587e85eb32ac68b614225eae05de3a8dcfd55bb84b1c7729"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-numbered-contact-sheet.png",
+      "sha256": "dc7ad5dfd484fbda01ee95de3a0fd4f11487d2ed91b93375a064b2b5b1934929"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-region-table-preview.png",
+      "sha256": "724cc9429980876039317b1f92271698d5a0481254d8f48b235533fa476f38bc"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-category-preview.png",
+      "sha256": "adda1de3c7ba1e069ca612f5b8df2fb17fcb7f5c21d7f0ac2e5734cc07142eaf"
+    },
+    {
+      "path": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-background-or-alpha-preview.png",
+      "sha256": "9c8717253674ea9e0d82747acc98b77a714fc3ca321a972c177590a2d94c9d87"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-source-inspection-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-bbox-overlay.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-region-table-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-category-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-background-or-alpha-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-source-inspection-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-bbox-overlay.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-numbered-contact-sheet.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-region-table-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-category-preview.png",
+    "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/topdown-nonfx-objects-background-or-alpha-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate",
+    "node scripts/asset-pipeline/cli.mjs validate-provenance"
+  ],
+  "warnings": [
+    "Contour-assisted variable-region mapping used because equal 8x8 grid cells clipped or overlapped several generated objects."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T18:50:36.496Z"
+}

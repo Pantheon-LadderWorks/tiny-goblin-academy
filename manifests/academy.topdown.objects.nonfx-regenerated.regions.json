@@ -1,0 +1,1714 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-region-mapping",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-objects-nonfx-regenerated",
+  "operationalType": "topdown-nonfx-objects-regenerated-region-mapping",
+  "sourceSheet": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+  "sourceKind": "regenerated-nonfx-object-source",
+  "mappingMethod": "contour-assisted-variable-region-mapping",
+  "cleanupEligibility": "cleanup-candidate-after-review",
+  "sourceDimensions": {
+    "width": 1254,
+    "height": 1254
+  },
+  "layoutFinding": "Visually arranged as 8x8 object pantry, but equal grid cells clipped/overlapped several objects; H5.77 uses contour-assisted variable sourceRects instead of forced grid slices.",
+  "alphaFinding": {
+    "mode": "RGB",
+    "hasAlphaChannel": false,
+    "alphaRange": [
+      255,
+      255
+    ],
+    "transparentPixels": 0,
+    "nonOpaquePixels": 0,
+    "finding": "RGB/no-alpha source with fake white/checker-style background; not true alpha"
+  },
+  "regionCount": 64,
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.objects.nonfx-regenerated.01.raised-square-stone-platform",
+      "label": "raised square stone platform",
+      "category": "stone-platform",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 53,
+        "y": 52,
+        "w": 98,
+        "h": 111
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 2,
+      "id": "topdown.objects.nonfx-regenerated.02.stacked-raised-stone-platform",
+      "label": "stacked raised stone platform",
+      "category": "stone-platform",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 193,
+        "y": 52,
+        "w": 117,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 3,
+      "id": "topdown.objects.nonfx-regenerated.03.mossy-compass-seal-platform",
+      "label": "mossy compass seal platform",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 344,
+        "y": 50,
+        "w": 114,
+        "h": 121
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 4,
+      "id": "topdown.objects.nonfx-regenerated.04.glass-floor-plate",
+      "label": "glass floor plate",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 498,
+        "y": 51,
+        "w": 111,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 5,
+      "id": "topdown.objects.nonfx-regenerated.05.closed-treasure-chest",
+      "label": "closed treasure chest",
+      "category": "chest",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 649,
+        "y": 59,
+        "w": 116,
+        "h": 99
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 6,
+      "id": "topdown.objects.nonfx-regenerated.06.open-treasure-chest",
+      "label": "open treasure chest",
+      "category": "chest",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 789,
+        "y": 40,
+        "w": 113,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 7,
+      "id": "topdown.objects.nonfx-regenerated.07.blue-portal-well-marker",
+      "label": "blue portal well marker",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 923,
+        "y": 45,
+        "w": 134,
+        "h": 130
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 8,
+      "id": "topdown.objects.nonfx-regenerated.08.round-lock-seal-marker",
+      "label": "round lock seal marker",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 1,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1081,
+        "y": 41,
+        "w": 131,
+        "h": 134
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 9,
+      "id": "topdown.objects.nonfx-regenerated.09.unlit-brazier-base",
+      "label": "unlit brazier base",
+      "category": "brazier-base",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 52,
+        "y": 196,
+        "w": 105,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 10,
+      "id": "topdown.objects.nonfx-regenerated.10.unlit-torch-fixture",
+      "label": "unlit torch fixture",
+      "category": "torch-base",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 207,
+        "y": 199,
+        "w": 66,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 11,
+      "id": "topdown.objects.nonfx-regenerated.11.large-rubble-pile",
+      "label": "large rubble pile",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 327,
+        "y": 194,
+        "w": 141,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 12,
+      "id": "topdown.objects.nonfx-regenerated.12.small-rubble-scatter",
+      "label": "small rubble scatter",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 504,
+        "y": 210,
+        "w": 95,
+        "h": 91
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 13,
+      "id": "topdown.objects.nonfx-regenerated.13.goblin-bust-statue",
+      "label": "goblin bust statue",
+      "category": "statue",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 655,
+        "y": 188,
+        "w": 96,
+        "h": 133
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 14,
+      "id": "topdown.objects.nonfx-regenerated.14.blue-hanging-banner",
+      "label": "blue hanging banner",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 782,
+        "y": 178,
+        "w": 131,
+        "h": 154
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 15,
+      "id": "topdown.objects.nonfx-regenerated.15.wooden-sign-board",
+      "label": "wooden sign board",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 939,
+        "y": 191,
+        "w": 112,
+        "h": 130
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 16,
+      "id": "topdown.objects.nonfx-regenerated.16.wooden-shield-plaque",
+      "label": "wooden shield plaque",
+      "category": "shield-or-plaque",
+      "gridPositionHint": {
+        "row": 2,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1093,
+        "y": 196,
+        "w": 109,
+        "h": 121
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 17,
+      "id": "topdown.objects.nonfx-regenerated.17.unlit-campfire-base",
+      "label": "unlit campfire base",
+      "category": "campfire-base",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 39,
+        "y": 349,
+        "w": 127,
+        "h": 113
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 18,
+      "id": "topdown.objects.nonfx-regenerated.18.black-torch-stand",
+      "label": "black torch stand",
+      "category": "torch-base",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 206,
+        "y": 333,
+        "w": 68,
+        "h": 132
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 19,
+      "id": "topdown.objects.nonfx-regenerated.19.mossy-standing-rubble",
+      "label": "mossy standing rubble",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 330,
+        "y": 342,
+        "w": 130,
+        "h": 120
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 20,
+      "id": "topdown.objects.nonfx-regenerated.20.flat-rubble-scatter",
+      "label": "flat rubble scatter",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 484,
+        "y": 346,
+        "w": 133,
+        "h": 110
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 21,
+      "id": "topdown.objects.nonfx-regenerated.21.knight-bust-statue",
+      "label": "knight bust statue",
+      "category": "statue",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 654,
+        "y": 318,
+        "w": 93,
+        "h": 145
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 22,
+      "id": "topdown.objects.nonfx-regenerated.22.wooden-arrow-sign",
+      "label": "wooden arrow sign",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 792,
+        "y": 355,
+        "w": 108,
+        "h": 99
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 23,
+      "id": "topdown.objects.nonfx-regenerated.23.round-wooden-shield",
+      "label": "round wooden shield",
+      "category": "shield-or-plaque",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 928,
+        "y": 337,
+        "w": 123,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 24,
+      "id": "topdown.objects.nonfx-regenerated.24.round-bush",
+      "label": "round bush",
+      "category": "bush-or-foliage",
+      "gridPositionHint": {
+        "row": 3,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1085,
+        "y": 338,
+        "w": 128,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 25,
+      "id": "topdown.objects.nonfx-regenerated.25.large-leafy-bush",
+      "label": "large leafy bush",
+      "category": "bush-or-foliage",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 31,
+        "y": 485,
+        "w": 139,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 26,
+      "id": "topdown.objects.nonfx-regenerated.26.large-gray-rock",
+      "label": "large gray rock",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 187,
+        "y": 490,
+        "w": 111,
+        "h": 116
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 27,
+      "id": "topdown.objects.nonfx-regenerated.27.gray-rock-cluster",
+      "label": "gray rock cluster",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 327,
+        "y": 488,
+        "w": 126,
+        "h": 123
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 28,
+      "id": "topdown.objects.nonfx-regenerated.28.tree-stump",
+      "label": "tree stump",
+      "category": "tree-or-stump",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 484,
+        "y": 500,
+        "w": 122,
+        "h": 111
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 29,
+      "id": "topdown.objects.nonfx-regenerated.29.small-leafy-tree",
+      "label": "small leafy tree",
+      "category": "tree-or-stump",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 642,
+        "y": 472,
+        "w": 129,
+        "h": 144
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 30,
+      "id": "topdown.objects.nonfx-regenerated.30.flowering-shrub-patch",
+      "label": "flowering shrub patch",
+      "category": "flower-or-plant",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 790,
+        "y": 500,
+        "w": 136,
+        "h": 111
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 31,
+      "id": "topdown.objects.nonfx-regenerated.31.reed-water-plant",
+      "label": "reed water plant",
+      "category": "reed-or-water-plant",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 953,
+        "y": 475,
+        "w": 106,
+        "h": 146
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 32,
+      "id": "topdown.objects.nonfx-regenerated.32.small-pine-tree",
+      "label": "small pine tree",
+      "category": "tree-or-stump",
+      "gridPositionHint": {
+        "row": 4,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1106,
+        "y": 462,
+        "w": 101,
+        "h": 160
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 33,
+      "id": "topdown.objects.nonfx-regenerated.33.dead-tree-stump",
+      "label": "dead tree stump",
+      "category": "tree-or-stump",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 40,
+        "y": 618,
+        "w": 104,
+        "h": 151
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 34,
+      "id": "topdown.objects.nonfx-regenerated.34.single-wooden-crate",
+      "label": "single wooden crate",
+      "category": "crate",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 189,
+        "y": 648,
+        "w": 97,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 35,
+      "id": "topdown.objects.nonfx-regenerated.35.stacked-wooden-crates",
+      "label": "stacked wooden crates",
+      "category": "crate",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 322,
+        "y": 637,
+        "w": 137,
+        "h": 136
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 36,
+      "id": "topdown.objects.nonfx-regenerated.36.wooden-barrel",
+      "label": "wooden barrel",
+      "category": "barrel",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 495,
+        "y": 639,
+        "w": 106,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 37,
+      "id": "topdown.objects.nonfx-regenerated.37.wooden-bench",
+      "label": "wooden bench",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 617,
+        "y": 663,
+        "w": 140,
+        "h": 81
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 38,
+      "id": "topdown.objects.nonfx-regenerated.38.straight-wooden-fence",
+      "label": "straight wooden fence",
+      "category": "fence",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 764,
+        "y": 655,
+        "w": 145,
+        "h": 86
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 39,
+      "id": "topdown.objects.nonfx-regenerated.39.corner-wooden-fence",
+      "label": "corner wooden fence",
+      "category": "fence",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 925,
+        "y": 649,
+        "w": 159,
+        "h": 112
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 40,
+      "id": "topdown.objects.nonfx-regenerated.40.short-wooden-fence",
+      "label": "short wooden fence",
+      "category": "fence",
+      "gridPositionHint": {
+        "row": 5,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1094,
+        "y": 640,
+        "w": 113,
+        "h": 121
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 41,
+      "id": "topdown.objects.nonfx-regenerated.41.wood-and-stone-bridge",
+      "label": "wood and stone bridge",
+      "category": "bridge-or-plank",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 33,
+        "y": 793,
+        "w": 128,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 42,
+      "id": "topdown.objects.nonfx-regenerated.42.round-wooden-table",
+      "label": "round wooden table",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 185,
+        "y": 788,
+        "w": 119,
+        "h": 122
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 43,
+      "id": "topdown.objects.nonfx-regenerated.43.square-stone-pressure-plate-visual",
+      "label": "square stone pressure plate visual",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 336,
+        "y": 793,
+        "w": 118,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 44,
+      "id": "topdown.objects.nonfx-regenerated.44.spike-trap-visual",
+      "label": "spike trap visual",
+      "category": "trap-visual",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 488,
+        "y": 796,
+        "w": 116,
+        "h": 112
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 45,
+      "id": "topdown.objects.nonfx-regenerated.45.mossy-stone-floor-plate",
+      "label": "mossy stone floor plate",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 642,
+        "y": 795,
+        "w": 111,
+        "h": 113
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 46,
+      "id": "topdown.objects.nonfx-regenerated.46.purple-rune-floor-seal",
+      "label": "purple rune floor seal",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 783,
+        "y": 789,
+        "w": 128,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 47,
+      "id": "topdown.objects.nonfx-regenerated.47.blue-rune-floor-seal",
+      "label": "blue rune floor seal",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 933,
+        "y": 783,
+        "w": 130,
+        "h": 131
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 48,
+      "id": "topdown.objects.nonfx-regenerated.48.green-slime-pond-visual",
+      "label": "green slime pond visual",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 6,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1087,
+        "y": 796,
+        "w": 127,
+        "h": 109
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 49,
+      "id": "topdown.objects.nonfx-regenerated.49.mossy-rocky-ground-patch",
+      "label": "mossy rocky ground patch",
+      "category": "rubble-or-rock",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 33,
+        "y": 926,
+        "w": 128,
+        "h": 121
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 50,
+      "id": "topdown.objects.nonfx-regenerated.50.cloth-sack-pile",
+      "label": "cloth sack pile",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 180,
+        "y": 933,
+        "w": 132,
+        "h": 115
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 51,
+      "id": "topdown.objects.nonfx-regenerated.51.stone-pedestal-block",
+      "label": "stone pedestal block",
+      "category": "stone-platform",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 344,
+        "y": 926,
+        "w": 103,
+        "h": 124
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 52,
+      "id": "topdown.objects.nonfx-regenerated.52.wooden-bulletin-board",
+      "label": "wooden bulletin board",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 486,
+        "y": 930,
+        "w": 118,
+        "h": 116
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 53,
+      "id": "topdown.objects.nonfx-regenerated.53.engraved-gravestone-marker",
+      "label": "engraved gravestone marker",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 646,
+        "y": 921,
+        "w": 109,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 54,
+      "id": "topdown.objects.nonfx-regenerated.54.round-stone-planter",
+      "label": "round stone planter",
+      "category": "flower-or-plant",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 795,
+        "y": 932,
+        "w": 105,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 55,
+      "id": "topdown.objects.nonfx-regenerated.55.small-closed-chest",
+      "label": "small closed chest",
+      "category": "chest",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 940,
+        "y": 930,
+        "w": 112,
+        "h": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 56,
+      "id": "topdown.objects.nonfx-regenerated.56.small-wooden-barrel",
+      "label": "small wooden barrel",
+      "category": "barrel",
+      "gridPositionHint": {
+        "row": 7,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1100,
+        "y": 921,
+        "w": 100,
+        "h": 129
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 57,
+      "id": "topdown.objects.nonfx-regenerated.57.wooden-signpost",
+      "label": "wooden signpost",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 1
+      },
+      "sourceRect": {
+        "x": 42,
+        "y": 1067,
+        "w": 107,
+        "h": 130
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 58,
+      "id": "topdown.objects.nonfx-regenerated.58.broken-wagon-wheel",
+      "label": "broken wagon wheel",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 2
+      },
+      "sourceRect": {
+        "x": 169,
+        "y": 1068,
+        "w": 137,
+        "h": 122
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 59,
+      "id": "topdown.objects.nonfx-regenerated.59.ornate-square-stone-floor-plate",
+      "label": "ornate square stone floor plate",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 3
+      },
+      "sourceRect": {
+        "x": 326,
+        "y": 1076,
+        "w": 120,
+        "h": 117
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 60,
+      "id": "topdown.objects.nonfx-regenerated.60.round-stone-seal",
+      "label": "round stone seal",
+      "category": "plate-or-marker",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 4
+      },
+      "sourceRect": {
+        "x": 475,
+        "y": 1070,
+        "w": 130,
+        "h": 129
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 61,
+      "id": "topdown.objects.nonfx-regenerated.61.freestanding-blue-banner",
+      "label": "freestanding blue banner",
+      "category": "banner-or-sign",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 5
+      },
+      "sourceRect": {
+        "x": 647,
+        "y": 1039,
+        "w": 105,
+        "h": 168
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 62,
+      "id": "topdown.objects.nonfx-regenerated.62.square-stone-well-frame",
+      "label": "square stone well frame",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 6
+      },
+      "sourceRect": {
+        "x": 793,
+        "y": 1083,
+        "w": 112,
+        "h": 106
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 63,
+      "id": "topdown.objects.nonfx-regenerated.63.stone-water-well",
+      "label": "stone water well",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 7
+      },
+      "sourceRect": {
+        "x": 943,
+        "y": 1058,
+        "w": 117,
+        "h": 148
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    },
+    {
+      "index": 64,
+      "id": "topdown.objects.nonfx-regenerated.64.haystack",
+      "label": "haystack",
+      "category": "decorative-prop",
+      "gridPositionHint": {
+        "row": 8,
+        "column": 8
+      },
+      "sourceRect": {
+        "x": 1090,
+        "y": 1078,
+        "w": 119,
+        "h": 117
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupEligibility": "pending-human-region-review",
+      "notes": [
+        "Contour-assisted variable sourceRect candidate; needs human review.",
+        "Regenerated non-FX source is visually arranged in 8 rows, but objects are not safely contained by equal grid cells.",
+        "Mapping only; no cleanup performed in H5.77.",
+        "Visual inventory only; no runtime, placement, collision, interaction, pickup, loot, chest/key, trap, light/fire/glow, portal/teleport, or game wiring approval."
+      ]
+    }
+  ],
+  "notes": [
+    "H5.77 maps the regenerated non-FX topdown object source as draft visual inventory.",
+    "The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set; this is the new regenerated non-FX object source lane.",
+    "No cleanup, runtime use, placement, collision, interaction, pickup, loot, chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game wiring is approved."
+  ],
+  "sourceSha256": "fd78781394f2f7f0bf991de82d560682996ac078b677237ad294b6428a0b5d0a",
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "contour-assisted-variable-region-mapping",
+    "methodStatus": "mapping-only",
+    "runLog": "assets/academy/evidence/h5-77-topdown-nonfx-objects-region-mapping/pipeline-run-log.json",
+    "sourceSha256": "fd78781394f2f7f0bf991de82d560682996ac078b677237ad294b6428a0b5d0a",
+    "generatedAt": "2026-07-09T18:50:36.489Z",
+    "gitBaseline": "6c058d6 docs: review topdown vertical walls cleanup",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  }
+}

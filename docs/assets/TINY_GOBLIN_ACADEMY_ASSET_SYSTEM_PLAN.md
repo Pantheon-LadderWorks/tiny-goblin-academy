@@ -928,3 +928,21 @@ All 72 cleanup regions are accepted for draft cleanup/planning use through the c
 Known minor polish note: one wall/ruin region retains a small interior white pocket/window artifact. This does not block acceptance. Any future fix should be targeted only to that exact region/piece if it is actually selected for runtime draft use.
 
 H5.76 does not rerun cleanup, regenerate evidence, modify source PNGs, modify derived PNGs, patch pixels, approve runtime asset use, approve collision, approve placement, approve pathfinding, approve tilemap use, approve wall autotiling, approve obstacle behavior, approve door/gate/lock behavior, or wire any game/runtime code.
+
+## H5.77 Topdown Non-FX Objects Regenerated Region Mapping Note
+
+H5.77 maps the regenerated non-FX object source:
+
+```text
+assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png
+```
+
+The source is `1254x1254` PNG / RGB with no alpha channel, so it remains a fake-background cleanup-source candidate rather than true alpha. The sheet is visually arranged as an 8x8 object pantry, but equal grid cells clipped or overlapped several objects. H5.77 therefore uses `contour-assisted-variable-region-mapping` and records 64 draft visual-inventory regions in:
+
+```text
+manifests/academy.topdown.objects.nonfx-regenerated.regions.json
+```
+
+The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set. H5.77 starts the new regenerated non-FX object source lane and does not process the old H5.63/H5.68 source.
+
+H5.77 does not create cleanup outputs, derived cleanup PNGs, runtime manifests, placement/collision/interaction data, pickup/loot/chest/key behavior, trap behavior, light/fire/glow behavior, portal/teleport behavior, or game/runtime wiring. H5.78 should perform human/product review before any cleanup candidate is generated.
