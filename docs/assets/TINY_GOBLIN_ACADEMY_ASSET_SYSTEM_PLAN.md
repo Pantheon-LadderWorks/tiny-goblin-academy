@@ -840,7 +840,29 @@ manifests/academy.topdown.walls.vertical.regions.json
 
 Mapped categories include wall-corner, wall-ruin, wall-vertical, wall-column, door, rubble, and wall-arch visual inventory labels. The manifest records H5.67-style pipeline provenance and links to the H5.73 evidence run log.
 
-H5.73 does not create cleanup outputs, derived PNGs, runtime atlases, collision/pathfinding/placement data, wall autotiling data, door/gate behavior, tilemap approval, or game/runtime wiring. Human review should confirm region bounds before the recommended H5.74 cleanup candidate lane.
+H5.73 does not create cleanup outputs, derived PNGs, runtime atlases, collision/pathfinding/placement data, wall autotiling data, door/gate behavior, tilemap approval, or game/runtime wiring. H5.74 human review has now confirmed region bounds. Cleanup is deferred to H5.75.
+
+## H5.74 Topdown Vertical Walls Region Human Review Note
+
+H5.74 records human/product review for the H5.73 vertical wall region mapping. All 72 contour-assisted variable-size regions are accepted for draft cleanup and planning use only.
+
+The source remains:
+
+```text
+assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png
+```
+
+The source is RGB/fake-background, not true alpha. H5.74 does not modify the source PNG, regenerate evidence, rerun mapping, clean the sheet, create derived cleanup PNGs, or approve runtime/collision/placement/pathfinding/tilemap/wall-autotiling/door/gate/lock behavior/game wiring.
+
+H5.74 also performs the provenance consistency check requested after review. The H5.73 run log and manifest pipelineRun method label were corrected from `grid-slice-only` to `contour-assisted-variable-region-mapping`. The output hashes, source path, source hash, evidence paths, and mapping outputs were not regenerated.
+
+Cleanup remains a future lane:
+
+```text
+H5.75 — Topdown Vertical Walls Cleanup Candidate
+```
+
+H5.73A future floor tilesheet intake is unrelated and remains untouched.
 
 ## H5.73A Topdown Floor Tilesheet Future Intake Note
 

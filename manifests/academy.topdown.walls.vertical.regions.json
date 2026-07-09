@@ -1,15 +1,15 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-region-mapping",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-walls",
   "operationalType": "vertical-wall-cleanup-source-region-mapping",
   "sourceSheet": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
   "sourceKind": "regenerated-fake-background-cleanup-source",
   "mappingMethod": "contour-assisted-variable-region-mapping",
-  "cleanupEligibility": "cleanup-candidate-after-review",
+  "cleanupEligibility": "approved-for-cleanup-candidate",
   "sourceDimensions": {
     "width": 1448,
     "height": 1086
@@ -1550,19 +1550,41 @@
     "H5.73 maps the regenerated vertical wall cleanup source.",
     "This source is fake-background/RGB, not true alpha.",
     "Mapping is variable-size / contour-assisted, not grid-based.",
-    "Cleanup remains a future H5.74 candidate lane."
+    "Cleanup remains a future H5.75 candidate lane.",
+    "H5.74 human/product review passed; all 72 vertical wall regions are accepted for draft cleanup and planning use only.",
+    "H5.74 provenance review corrected the H5.73 run-log method label from grid-slice-only to contour-assisted-variable-region-mapping. The output hashes, source path, source hash, evidence paths, and mapping outputs were not regenerated."
   ],
   "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
   "pipelineRun": {
     "tool": "scripts/asset-pipeline/cli.mjs",
     "command": "map-regions",
-    "method": "grid-slice-only",
+    "method": "contour-assisted-variable-region-mapping",
     "methodStatus": "mapping-only",
     "runLog": "assets/academy/evidence/h5-73-topdown-vertical-walls-region-mapping/pipeline-run-log.json",
     "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
     "generatedAt": "2026-07-09T13:14:31.730Z",
     "gitBaseline": "d3d75b1 docs: review topdown true-alpha wall regions",
     "sourcePngModified": false,
-    "runtimeFilesModified": false
+    "runtimeFilesModified": false,
+    "provenanceCorrection": {
+      "reviewId": "H5.74",
+      "correctedField": "method",
+      "previousValue": "grid-slice-only",
+      "correctedValue": "contour-assisted-variable-region-mapping",
+      "note": "H5.74 provenance review corrected the H5.73 run-log method label from grid-slice-only to contour-assisted-variable-region-mapping. The output hashes, source path, source hash, evidence paths, and mapping outputs were not regenerated.",
+      "outputsRegenerated": false
+    }
+  },
+  "humanReview": {
+    "reviewId": "H5.74",
+    "decision": "passed",
+    "reviewedCommit": "2be21b1 docs: map topdown vertical wall regions",
+    "acceptedRegionCount": 72,
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "noCorrectionPassNeeded": true,
+    "cleanupCandidateLane": "H5.75",
+    "runtimeBoundary": "not-runtime-approved",
+    "provenanceConsistencyChecked": true,
+    "provenanceCorrectionApplied": true
   }
 }

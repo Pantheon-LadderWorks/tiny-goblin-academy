@@ -4,7 +4,7 @@
   "tool": "scripts/asset-pipeline/cli.mjs",
   "toolPath": "scripts/asset-pipeline/cli.mjs",
   "command": "map-regions",
-  "method": "grid-slice-only",
+  "method": "contour-assisted-variable-region-mapping",
   "methodStatus": "mapping-only",
   "laneId": "H5.73-topdown-vertical-walls-region-mapping",
   "agent": "Codex",
@@ -98,10 +98,19 @@
     "node scripts/asset-pipeline/cli.mjs validate-provenance"
   ],
   "warnings": [
-    "Contour-assisted variable-region mapping used for RGB fake-background vertical wall source; cleanup not performed."
+    "Contour-assisted variable-region mapping used for RGB fake-background vertical wall source; cleanup not performed.",
+    "H5.74 provenance review corrected the H5.73 run-log method label from grid-slice-only to contour-assisted-variable-region-mapping. The output hashes, source path, source hash, evidence paths, and mapping outputs were not regenerated."
   ],
   "sourcePngModified": false,
   "runtimeFilesModified": false,
   "status": "completed",
-  "createdAtUtc": "2026-07-09T13:14:31.773Z"
+  "createdAtUtc": "2026-07-09T13:14:31.773Z",
+  "provenanceCorrection": {
+    "reviewId": "H5.74",
+    "correctedField": "method",
+    "previousValue": "grid-slice-only",
+    "correctedValue": "contour-assisted-variable-region-mapping",
+    "note": "H5.74 provenance review corrected the H5.73 run-log method label from grid-slice-only to contour-assisted-variable-region-mapping. The output hashes, source path, source hash, evidence paths, and mapping outputs were not regenerated.",
+    "outputsRegenerated": false
+  }
 }
