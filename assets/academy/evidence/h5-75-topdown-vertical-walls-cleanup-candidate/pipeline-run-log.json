@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "cleanup-candidate",
+  "method": "edge-connected-checker-cleanup",
+  "methodStatus": "canonical-with-caution",
+  "methodParameters": {
+    "gray_sat_max": 0.12,
+    "gray_min": 0.84,
+    "gray_max": 1.01,
+    "channel_delta_max": 0.06,
+    "edge_alpha": 160
+  },
+  "laneId": null,
+  "agent": "Codex",
+  "gitBaseline": "f36e2e4 docs: review topdown vertical wall regions",
+  "startedAt": "2026-07-09T14:36:53.607Z",
+  "completedAt": "2026-07-09T14:36:53.609Z",
+  "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+  "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+  "manifestPath": "manifests/academy.topdown.walls.vertical.regions.json",
+  "inputManifests": [
+    "manifests/academy.topdown.walls.vertical.regions.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
+      "sha256": "39abb0b12db8fc2757fb1e2a5684934516cb68e1e1f0b052a96b79987f1f7a3f"
+    },
+    {
+      "path": "manifests/academy.topdown.walls.vertical.cleanup-candidate.json",
+      "sha256": "7402a4213ec90000c9c39c24c9072bc998a528128e8e97ef5ca4edebac8385a4"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
+      "sha256": "39abb0b12db8fc2757fb1e2a5684934516cb68e1e1f0b052a96b79987f1f7a3f"
+    },
+    {
+      "path": "manifests/academy.topdown.walls.vertical.cleanup-candidate.json",
+      "sha256": "7402a4213ec90000c9c39c24c9072bc998a528128e8e97ef5ca4edebac8385a4"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-candidate-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-mask-overlay.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-mask-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-risk-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-before-after-contact-sheet.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-candidate-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleaned-derived-sheet-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleaned-on-dark-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-cleanup-table-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-mask-overlay.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-mask-preview.png",
+    "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/topdown-vertical-walls-risk-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "Source may be degraded/fake-transparent; edge-connected-checker-cleanup removes only edge-connected background-like masks and requires human review."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-09T14:36:53.617Z"
+}

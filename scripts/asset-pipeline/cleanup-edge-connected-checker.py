@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Edge-connected fake checker cleanup for grid-cell asset sheets.
+"""Edge-connected fake checker cleanup for asset-sheet regions.
 
 This is a canonical-with-caution pipeline method for degraded fake-transparent
-grid sheets. It removes only gray/checker-like pixels connected to each cell's
+region sheets. It removes only gray/checker-like pixels connected to each region's
 edge, avoiding whole-sheet blank-cell comparison and avoiding global color
 replacement that chews holes through gray/stone/wood interiors.
 """
@@ -275,7 +275,7 @@ def table_preview(regions: list[dict], title: str, subtitle: str) -> Image.Image
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Selective edge-connected checker cleanup for grid-cell asset sheets.")
+    parser = argparse.ArgumentParser(description="Selective edge-connected checker cleanup for asset-sheet regions.")
     parser.add_argument("--input", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--output", required=True)
@@ -289,6 +289,13 @@ def main() -> None:
     parser.add_argument("--pipeline-use", default="draft-cleanup-candidate")
     parser.add_argument("--risk-regex", default="")
     parser.add_argument("--background-reference-region", type=int, default=None)
+    parser.add_argument("--gray-sat-max", type=float, default=None)
+    parser.add_argument("--gray-min", type=float, default=None)
+    parser.add_argument("--gray-max", type=float, default=None)
+    parser.add_argument("--channel-delta-max", type=float, default=None)
+    parser.add_argument("--reference-distance-max", type=float, default=None)
+    parser.add_argument("--edge-expansion-passes", type=int, default=None)
+    parser.add_argument("--edge-alpha", type=int, default=None)
     parser.add_argument("--excluded-status", default="excluded-effect-regeneration-needed")
     parser.add_argument("--excluded-usage", default="do-not-use-from-cleanup")
     parser.add_argument("--method", default="edge-connected-checker-cleanup")
@@ -309,6 +316,20 @@ def main() -> None:
     params = dict(DEFAULT_PARAMS)
     if args.background_reference_region is not None:
         params["background_reference_region"] = args.background_reference_region
+    if args.gray_sat_max is not None:
+        params["gray_sat_max"] = args.gray_sat_max
+    if args.gray_min is not None:
+        params["gray_min"] = args.gray_min
+    if args.gray_max is not None:
+        params["gray_max"] = args.gray_max
+    if args.channel_delta_max is not None:
+        params["channel_delta_max"] = args.channel_delta_max
+    if args.reference_distance_max is not None:
+        params["reference_distance_max"] = args.reference_distance_max
+    if args.edge_expansion_passes is not None:
+        params["edge_expansion_passes"] = args.edge_expansion_passes
+    if args.edge_alpha is not None:
+        params["edge_alpha"] = args.edge_alpha
     risk_pattern = re.compile(args.risk_regex, re.IGNORECASE) if args.risk_regex else None
 
     evidence_dir.mkdir(parents=True, exist_ok=True)

@@ -66,7 +66,7 @@ Registered cleanup methods:
 - `alpha-pass-through` — canonical, implemented.
 - `no-cleanup-reference-only` — canonical, implemented.
 - `flood-fill-gray-background` — canonical with caution, implemented through `scripts/clean-fake-transparent-sheet.py`.
-- `edge-connected-checker-cleanup` — canonical with caution, implemented through `scripts/asset-pipeline/cleanup-edge-connected-checker.py` for per-grid-cell degraded fake-checker cleanup.
+- `edge-connected-checker-cleanup` — canonical with caution, implemented through `scripts/asset-pipeline/cleanup-edge-connected-checker.py` for per-region degraded fake-checker cleanup using reviewed sourceRects.
 - `color-key-cleanup` — pilot-only, not canonical production cleanup.
 - `grid-slice-only` — mapping-only, not a cleanup method.
 - `blank-cell-reference-experimental` — H5.65 failure-case method, experimental / unsafe-default / not promotion-ready.

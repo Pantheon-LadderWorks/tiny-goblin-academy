@@ -30,7 +30,7 @@ export const cleanupMethods = {
     id: 'edge-connected-checker-cleanup',
     status: 'canonical-with-caution',
     implemented: true,
-    description: 'Per-grid-cell edge-connected fake checker cleanup. Removes only checker/background pixels connected to each cell boundary.',
+    description: 'Per-region edge-connected fake checker cleanup. Removes only checker/background pixels connected to each reviewed sourceRect boundary.',
     safeDefault: false,
     requiresOutput: true,
     requiresPreview: false,

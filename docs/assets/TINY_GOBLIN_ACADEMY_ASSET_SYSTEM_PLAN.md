@@ -883,3 +883,33 @@ assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-
 The road/path overlay sheet remains excluded. The mixed-terrain transition spec remains pre-generation design guidance only, not final manifest truth.
 
 H5.73A does not map individual tiles, create cleanup candidates, create runtime manifests, replace the active terrain source, modify existing terrain/wall/object manifests, approve collision/pathfinding/hazard/portal/slime/water/trigger behavior, or change game/runtime code.
+
+## H5.75 Topdown Vertical Walls Cleanup Candidate Note
+
+H5.75 creates a draft cleanup candidate for the H5.74-reviewed regenerated vertical wall source:
+
+```text
+assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png
+```
+
+The cleanup candidate is:
+
+```text
+assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png
+```
+
+The cleanup manifest is:
+
+```text
+manifests/academy.topdown.walls.vertical.cleanup-candidate.json
+```
+
+H5.75 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
+
+```text
+assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/pipeline-run-log.json
+```
+
+This lane also adds lane-neutral threshold flags to the canonical CLI/script so bright low-saturation fake backgrounds can be tuned without one-off scripts. H5.75 retains all 72 regions as `draft` / `needs-human-review` / `not-runtime-approved`, with all wall/door/rubble categories behavior-deferred.
+
+H5.75 does not approve runtime asset use, collision, placement, pathfinding, tilemap use, wall autotiling, door/gate/lock behavior, obstacle behavior, interaction, or game/runtime wiring. H5.76 should perform human/product review against the on-dark preview, before/after contact sheet, and mask evidence.

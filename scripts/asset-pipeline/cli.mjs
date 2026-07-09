@@ -28,7 +28,7 @@ Usage:
   node scripts/asset-pipeline/cli.mjs list-cleanup-methods [--json]
   node scripts/asset-pipeline/cli.mjs inspect-source --source <path> [--json]
   node scripts/asset-pipeline/cli.mjs make-evidence --manifest <path> --out <folder>
-  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>]
+  node scripts/asset-pipeline/cli.mjs cleanup-candidate --method <method> --source <path> [--manifest <path>] [--output <path>] [--cleanup-manifest <path>] [--evidence-dir <path>] [--preview <path>] [--run-log <path>] [--agent <name>] [--evidence-prefix <slug>] [--lane-title <title>] [--domain <domain>] [--operational-type <type>] [--pipeline-use <use>] [--excluded-regions <csv>] [--risk-regex <regex>] [--background-reference-region <index>] [--gray-sat-max <n>] [--gray-min <n>] [--gray-max <n>] [--channel-delta-max <n>] [--reference-distance-max <n>] [--edge-expansion-passes <n>] [--edge-alpha <n>]
   node scripts/asset-pipeline/cli.mjs validate
   node scripts/asset-pipeline/cli.mjs validate-provenance [--legacy-ok|--hard]
   node scripts/asset-pipeline/cli.mjs explain-provenance-contract [--json]
@@ -252,6 +252,7 @@ function cleanupCandidate(args) {
   const effectiveMethod = method.aliasOf ? getCleanupMethod(method.aliasOf) : method;
   const generated = [];
   const warnings = [];
+  const methodParameters = {};
 
   if (effectiveMethod.id === 'no-cleanup-reference-only') {
     warnings.push('No cleanup performed; source remains reference/planning only.');
@@ -287,6 +288,22 @@ function cleanupCandidate(args) {
     if (backgroundReferenceRegion !== null) {
       cleanupArgs.push('--background-reference-region', backgroundReferenceRegion);
     }
+    for (const optionName of [
+      '--gray-sat-max',
+      '--gray-min',
+      '--gray-max',
+      '--channel-delta-max',
+      '--reference-distance-max',
+      '--edge-expansion-passes',
+      '--edge-alpha'
+    ]) {
+      const optionValue = argValue(args, optionName, null);
+      if (optionValue !== null) {
+        cleanupArgs.push(optionName, optionValue);
+        methodParameters[optionName.replace(/^--/, '').replaceAll('-', '_')] = Number.isNaN(Number(optionValue)) ? optionValue : Number(optionValue);
+      }
+    }
+    if (backgroundReferenceRegion !== null) methodParameters.background_reference_region = Number(backgroundReferenceRegion);
     run('python', cleanupArgs);
     generated.push(output, cleanupManifest);
   } else if (effectiveMethod.id === 'flood-fill-gray-background') {
@@ -313,6 +330,7 @@ function cleanupCandidate(args) {
       command: 'cleanup-candidate',
       method: method.id,
       methodStatus: method.status,
+      methodParameters: typeof methodParameters === 'object' ? methodParameters : {},
       laneId: argValue(args, '--lane', null),
       repoRoot,
       agent,
