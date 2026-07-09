@@ -912,4 +912,19 @@ assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/pipeline-
 
 This lane also adds lane-neutral threshold flags to the canonical CLI/script so bright low-saturation fake backgrounds can be tuned without one-off scripts. H5.75 retains all 72 regions as `draft` / `needs-human-review` / `not-runtime-approved`, with all wall/door/rubble categories behavior-deferred.
 
-H5.75 does not approve runtime asset use, collision, placement, pathfinding, tilemap use, wall autotiling, door/gate/lock behavior, obstacle behavior, interaction, or game/runtime wiring. H5.76 should perform human/product review against the on-dark preview, before/after contact sheet, and mask evidence.
+H5.75 does not approve runtime asset use, collision, placement, pathfinding, tilemap use, wall autotiling, door/gate/lock behavior, obstacle behavior, interaction, or game/runtime wiring. H5.76 has now completed human/product review against the on-dark preview, before/after contact sheet, and mask evidence.
+
+## H5.76 Topdown Vertical Walls Cleanup Human Review Note
+
+H5.76 records human/product review for the H5.75 vertical wall cleanup candidate:
+
+```text
+manifests/academy.topdown.walls.vertical.cleanup-candidate.json
+assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png
+```
+
+All 72 cleanup regions are accepted for draft cleanup/planning use through the canonical `edge-connected-checker-cleanup` method. No regions are excluded.
+
+Known minor polish note: one wall/ruin region retains a small interior white pocket/window artifact. This does not block acceptance. Any future fix should be targeted only to that exact region/piece if it is actually selected for runtime draft use.
+
+H5.76 does not rerun cleanup, regenerate evidence, modify source PNGs, modify derived PNGs, patch pixels, approve runtime asset use, approve collision, approve placement, approve pathfinding, approve tilemap use, approve wall autotiling, approve obstacle behavior, approve door/gate/lock behavior, or wire any game/runtime code.

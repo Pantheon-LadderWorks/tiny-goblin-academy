@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-cleanup-candidate",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
   "runtimeEligibility": "not-runtime-approved",
   "domain": "topdown-walls",
   "operationalType": "vertical-wall-cleanup-candidate",
@@ -139,7 +139,7 @@
         "h": 295
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -148,8 +148,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 2,
@@ -172,7 +174,7 @@
         "h": 295
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -181,8 +183,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 3,
@@ -205,7 +209,7 @@
         "h": 295
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -214,8 +218,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 4,
@@ -238,7 +244,7 @@
         "h": 279
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -247,8 +253,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 5,
@@ -271,7 +279,7 @@
         "h": 253
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -280,8 +288,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 6,
@@ -304,7 +314,7 @@
         "h": 228
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -313,8 +323,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 7,
@@ -337,7 +349,7 @@
         "h": 223
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -346,8 +358,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 8,
@@ -370,7 +384,7 @@
         "h": 206
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -379,8 +393,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 9,
@@ -403,7 +419,7 @@
         "h": 177
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -412,8 +428,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 10,
@@ -436,7 +454,7 @@
         "h": 168
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -445,8 +463,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 11,
@@ -469,7 +489,7 @@
         "h": 144
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -478,8 +498,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 12,
@@ -502,7 +524,7 @@
         "h": 129
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -511,8 +533,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 13,
@@ -535,7 +559,7 @@
         "h": 117
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -544,8 +568,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 14,
@@ -568,7 +594,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -577,8 +603,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 15,
@@ -601,7 +629,7 @@
         "h": 85
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -610,8 +638,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 16,
@@ -634,7 +664,7 @@
         "h": 127
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -643,8 +673,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 17,
@@ -667,7 +699,7 @@
         "h": 128
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -676,8 +708,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 18,
@@ -700,7 +734,7 @@
         "h": 116
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -709,8 +743,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 19,
@@ -733,7 +769,7 @@
         "h": 108
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -742,8 +778,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 20,
@@ -766,7 +804,7 @@
         "h": 107
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -775,8 +813,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 21,
@@ -799,7 +839,7 @@
         "h": 103
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -808,8 +848,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 22,
@@ -832,7 +874,7 @@
         "h": 103
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -841,8 +883,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 23,
@@ -865,7 +909,7 @@
         "h": 103
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -874,8 +918,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 24,
@@ -898,7 +944,7 @@
         "h": 110
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -907,8 +953,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 25,
@@ -931,7 +979,7 @@
         "h": 110
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -940,8 +988,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 26,
@@ -964,7 +1014,7 @@
         "h": 107
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -973,8 +1023,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 27,
@@ -997,7 +1049,7 @@
         "h": 105
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1006,8 +1058,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 28,
@@ -1030,7 +1084,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1039,8 +1093,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 29,
@@ -1063,7 +1119,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1072,8 +1128,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 30,
@@ -1096,7 +1154,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1105,8 +1163,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 31,
@@ -1129,7 +1189,7 @@
         "h": 107
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1138,8 +1198,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 32,
@@ -1162,7 +1224,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1171,8 +1233,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 33,
@@ -1195,7 +1259,7 @@
         "h": 103
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1204,8 +1268,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 34,
@@ -1228,7 +1294,7 @@
         "h": 100
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1237,8 +1303,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 35,
@@ -1261,7 +1329,7 @@
         "h": 97
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1270,8 +1338,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 36,
@@ -1294,7 +1364,7 @@
         "h": 96
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1303,8 +1373,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 37,
@@ -1327,7 +1399,7 @@
         "h": 128
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1336,8 +1408,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 38,
@@ -1360,7 +1434,7 @@
         "h": 128
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1369,8 +1443,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 39,
@@ -1393,7 +1469,7 @@
         "h": 130
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1402,8 +1478,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 40,
@@ -1426,7 +1504,7 @@
         "h": 129
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1435,8 +1513,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 41,
@@ -1459,7 +1539,7 @@
         "h": 130
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1468,8 +1548,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 42,
@@ -1492,7 +1574,7 @@
         "h": 125
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1501,8 +1583,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 43,
@@ -1525,7 +1609,7 @@
         "h": 128
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1534,8 +1618,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 44,
@@ -1558,7 +1644,7 @@
         "h": 122
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1567,8 +1653,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 45,
@@ -1591,7 +1679,7 @@
         "h": 117
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1600,8 +1688,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 46,
@@ -1624,7 +1714,7 @@
         "h": 108
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1633,8 +1723,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 47,
@@ -1657,7 +1749,7 @@
         "h": 106
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1666,8 +1758,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 48,
@@ -1690,7 +1784,7 @@
         "h": 107
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1699,8 +1793,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 49,
@@ -1723,7 +1819,7 @@
         "h": 120
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1732,8 +1828,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 50,
@@ -1756,7 +1854,7 @@
         "h": 114
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1765,8 +1863,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 51,
@@ -1789,7 +1889,7 @@
         "h": 112
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1798,8 +1898,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 52,
@@ -1822,7 +1924,7 @@
         "h": 110
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1831,8 +1933,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 53,
@@ -1855,7 +1959,7 @@
         "h": 106
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1864,8 +1968,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 54,
@@ -1888,7 +1994,7 @@
         "h": 108
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1897,8 +2003,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 55,
@@ -1921,7 +2029,7 @@
         "h": 106
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1930,8 +2038,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 56,
@@ -1954,7 +2064,7 @@
         "h": 107
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1963,8 +2073,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 57,
@@ -1987,7 +2099,7 @@
         "h": 102
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -1996,8 +2108,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 58,
@@ -2020,7 +2134,7 @@
         "h": 105
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2029,8 +2143,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 59,
@@ -2053,7 +2169,7 @@
         "h": 81
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2062,8 +2178,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 60,
@@ -2086,7 +2204,7 @@
         "h": 100
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2095,8 +2213,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 61,
@@ -2119,7 +2239,7 @@
         "h": 78
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2128,8 +2248,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 62,
@@ -2152,7 +2274,7 @@
         "h": 126
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2161,8 +2283,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 63,
@@ -2185,7 +2309,7 @@
         "h": 108
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2194,8 +2318,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 64,
@@ -2218,7 +2344,7 @@
         "h": 105
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2227,8 +2353,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 65,
@@ -2251,7 +2379,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2260,8 +2388,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 66,
@@ -2284,7 +2414,7 @@
         "h": 111
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2293,8 +2423,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 67,
@@ -2317,7 +2449,7 @@
         "h": 113
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2326,8 +2458,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 68,
@@ -2350,7 +2484,7 @@
         "h": 108
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2359,8 +2493,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 69,
@@ -2383,7 +2519,7 @@
         "h": 100
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2392,8 +2528,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 70,
@@ -2416,7 +2554,7 @@
         "h": 104
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2425,8 +2563,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 71,
@@ -2449,7 +2589,7 @@
         "h": 99
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2458,8 +2598,10 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     },
     {
       "index": 72,
@@ -2482,7 +2624,7 @@
         "h": 105
       },
       "cleanupRisk": "medium",
-      "reviewStatus": "needs-human-review",
+      "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "cleanupStatus": "nonfx-cleanup-candidate",
       "usage": "draft-review",
@@ -2491,14 +2633,19 @@
       "notes": [
         "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
         "Needs human review; not runtime-approved.",
-        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval."
-      ]
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
     }
   ],
   "notes": [
     "H5.75 Topdown Vertical Walls cleanup candidate generated through canonical CLI/provenance.",
     "Source is treated as degraded/fake-transparent for this cleanup method and remains needs-human-review.",
-    "No runtime behavior, placement, collision, interaction, pickup, loot, chest, key, portal, door, gate, lock, wall, pathfinding, light, flame, trap, slime, pressure plate, shadow, autotile, tilemap, or game wiring is approved."
+    "No runtime behavior, placement, collision, interaction, pickup, loot, chest, key, portal, door, gate, lock, wall, pathfinding, light, flame, trap, slime, pressure plate, shadow, autotile, tilemap, or game wiring is approved.",
+    "H5.76 human/product review passed the H5.75 cleanup candidate for draft cleanup/planning use with a minor polish note.",
+    "One wall/ruin region has a small interior white pocket/window artifact; not blocking; future targeted fix only if needed.",
+    "No runtime behavior, collision, placement, pathfinding, tilemap use, wall autotiling, obstacle behavior, door/gate/lock behavior, or game wiring is approved."
   ],
   "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
   "outputSha256": "39abb0b12db8fc2757fb1e2a5684934516cb68e1e1f0b052a96b79987f1f7a3f",
@@ -2513,5 +2660,18 @@
     "gitBaseline": "f36e2e4 docs: review topdown vertical wall regions",
     "sourcePngModified": false,
     "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.76",
+    "decision": "passed-with-minor-polish-note",
+    "reviewedCommit": "83c2cf8 tools: add topdown vertical walls cleanup candidate",
+    "acceptedRegionCount": 72,
+    "excludedRegionCount": 0,
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "cleanupMethod": "edge-connected-checker-cleanup",
+    "runtimeBoundary": "not-runtime-approved",
+    "minorPolishNotes": [
+      "one wall/ruin region has a small interior white pocket/window artifact; not blocking; future targeted fix only if needed"
+    ]
   }
 }
