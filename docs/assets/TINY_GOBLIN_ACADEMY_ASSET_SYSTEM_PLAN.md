@@ -1194,3 +1194,48 @@ Next recommended lane:
 ```text
 H5.88 — Visual Tool Suite Registry Plan
 ```
+
+## H5.88 Visual Tool Suite Registry Plan Note
+
+H5.88 creates a draft planning registry for the future GlyphForge Visual Tool Suite:
+
+```text
+manifests/academy.visual-tool-suite-registry-plan.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md
+```
+
+The planned tool surfaces are:
+
+```text
+Flipbook Viewer
+Sticker / Picture Book Viewer
+Particle FX Viewer
+Future Audio / Sound Pipeline Viewer
+```
+
+The discovery model is pantry-index-first:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+```
+
+Tools should read reviewed manifests and pantry records before loading images. They should display `pipelineUse`, `reviewStatus`, `runtimeEligibility`, denied/deferred/future-pantry-only status, and relevant cleanup or exclusion notes. Tool display does not approve runtime use.
+
+H5.88 inspected existing repo flipbook evidence HTML files and the user-held Downloads prototypes:
+
+```text
+C:/Users/kryst/Downloads/sprite-box-annotator.html
+C:/Users/kryst/Downloads/particle_fx_viewer (1).html
+```
+
+Those Downloads tools remain external/user-held references. H5.88 did not copy, move, ingest, canonicalize, or modify them.
+
+Audio remains future Tier 2.5. Visual assets remain Tier 1.5. Button Goblin Clicker remains the first later runtime visual integration candidate, while Top-Down Slime Quest remains last or near-last for runtime visual integration.
+
+H5.88 does not build tools, move folders, reorganize manifests/docs, wire runtime, modify game code, process images, modify PNGs, or approve collision/pathfinding/placement/tilemap/animation/particle/audio behavior.
+
+Next recommended lane:
+
+```text
+H5.88A — Tool Prototype Intake Decision
+```
