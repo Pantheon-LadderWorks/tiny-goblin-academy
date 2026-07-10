@@ -48,7 +48,25 @@ The batch manifest is `manifests/academy.topdown.floor-tilesheets.future.regions
 
 This lane also matures the canonical asset pipeline with `node scripts/asset-pipeline/cli.mjs map-grid-batch`, backed by `scripts/asset-pipeline/map-grid-batch.py` and the standard provenance run-log contract. Future like-shaped tilesheet batches should use that path instead of one-off scripts.
 
-No cleanup, derived cleaned PNGs, source PNG edits, runtime tilemaps, collision/pathfinding/walkability approval, hazard/water/slime/portal/trigger behavior, autotiling, or game wiring occurred. The road/path overlay source remains excluded from H5.83.
+No cleanup, derived cleaned PNGs, source PNG edits, runtime tilemaps, collision/pathfinding/walkability approval, hazard/water/slime/portal/trigger behavior, autotiling, or game wiring occurred. The road/path overlay source remains excluded from H5.83. H5.84 has now completed batch human/product review for future-pantry region planning use.
+
+## H5.84 Future Topdown Floor Tilesheets Batch Region Human Review Note
+
+H5.84 records batch human/product review for the H5.83 future topdown floor / ground tilesheet mapping:
+
+```text
+manifests/academy.topdown.floor-tilesheets.future.regions.json
+```
+
+H5.84 accepts 6 sheets and 384 regions for future-pantry region planning use only. No correction pass is needed. No cleanup is needed in this review lane.
+
+The H5.83 proportional actual-dimension sourceRect strategy remains accepted. Source PNGs are `1254x1254`, while semantic `128x128` grid labels remain preserved separately as vocabulary-only `semanticRect` metadata.
+
+Runtime safety remains locked down: emitted region `runtimeBehavior` remains `none-approved`, emitted region `walkabilityApproval` remains `none`, and semantic hints such as `semanticDefaultWalkable` or `semanticRuntimeBehavior` remain semantic metadata only. Visual-only/marker/rune/glow/arrow/tech-looking labels do not approve gameplay behavior.
+
+H5.84 does not regenerate evidence, rerun mapping, edit PNGs, create cleanup outputs, create derived PNGs, normalize sources, approve tilemaps, approve collision, approve pathfinding, approve walkability, approve hazard/water/slime/portal/trigger behavior, approve autotiling, or wire any game/runtime code.
+
+The road/path overlay sheet remains excluded. The existing H5.81/H5.82 terrain cleanup lane remains separate and unchanged.
 
 ## H5.3 Shared Core Region Mapping Note
 
