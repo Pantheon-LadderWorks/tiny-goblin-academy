@@ -1164,3 +1164,33 @@ Next active lane:
 ```text
 H5.87 — Manifest and Asset Docs Organization Plan
 ```
+
+## H5.87 Manifest and Asset Docs Organization Plan Note
+
+H5.87 creates a draft planning manifest and report for organizing the now-large manifest and asset documentation shelves:
+
+```text
+manifests/academy.manifest-and-docs-organization-plan.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md
+```
+
+Current inventory recorded:
+
+```text
+manifests root files: 55
+docs/assets root files: 116
+```
+
+The proposed manifest organization separates academy core, hub, shared assets, creatures/animations, game-specific assets, topdown terrain/walls/objects/future-floor lanes, visual pantry indexes, tooling/planning manifests, boot records, and legacy records.
+
+The proposed `docs/assets` organization separates doctrine, pipeline/tutorial material, pantry summaries, game-specific reports, topdown reports, hub visuals, evidence architecture, and archive material.
+
+H5.87 also records stale/current-doc candidates, especially older Level 1 / Button Goblin Clicker restoration-deferred language in overview docs, while preserving historical reports as historical evidence.
+
+No physical reorganization occurred in H5.87. No manifests or docs were moved, validators were not changed, stale docs were not corrected, runtime/game code was not touched, and no PNG/source/derived/evidence/package/lock files were modified.
+
+Next recommended lane:
+
+```text
+H5.88 — Visual Tool Suite Registry Plan
+```
