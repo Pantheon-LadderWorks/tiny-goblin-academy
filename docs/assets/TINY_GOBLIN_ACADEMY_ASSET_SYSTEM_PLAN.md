@@ -1500,3 +1500,47 @@ sharedMonoDebug: Fira Code or Space Mono
 Future game-specific flavor fonts should be used sparingly so UI does not become ransom-note goblin. Decorative fonts belong in titles, labels, cards, and preview surfaces before they are allowed into dense UI.
 
 H5.89 does not copy or ingest font binaries, create `assets/academy/fonts/`, wire runtime fonts, change game code, change package/lock files, install dependencies, modify PNGs/images, modify tool implementation files, or reorganize docs/manifests folders. License status must be recorded before font ingestion, and runtime font usage remains not approved.
+
+## H5.90 Font Pantry Human Review and New Fantasy Core Selection Note
+
+H5.90 reviews the H5.89 font pantry inventory and records the human/product direction for Tiny Goblin Academy typography:
+
+```text
+Do not make Tiny Goblin Academy "Kryssie Method fonts, but in a goblin hat."
+```
+
+Existing local fonts are useful as support candidates, not primary identity. Atkinson Hyperlegible or Outfit may support readable UI/accessibility fallback, and Fira Code or Space Mono may support debug/tooling mono. Ubuntu is not selected for now, Love Light remains decorative-only if ever used, and `ROGLyonsTypeRegular3.ttf` remains do-not-ingest without license proof.
+
+H5.90 creates:
+
+```text
+manifests/academy.font-pantry-core-selection.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md
+```
+
+Selected shared core direction:
+
+```text
+sharedDisplay: Cinzel Decorative or Cinzel
+sharedReadableFantasyUiBody: Caudex or Alegreya
+sharedReadableAccessibilityFallback: Atkinson Hyperlegible or Outfit
+sharedMonoDebug: Fira Code or Space Mono
+```
+
+Future fantasy/storybook pantry candidates include Uncial Antiqua, MedievalSharp, Almendra, Almendra SC, Macondo, Metamorphous, Fondamento, Cormorant Garamond, Grenze Gotisch, Eagle Lake, Merienda, and Alegreya. These names are candidate targets only; future intake must capture source and license evidence before font binaries are copied into the repo.
+
+The GlyphForge tool lane remains paused after H5.88E, with the future return point still:
+
+```text
+H5.88F — GlyphForge Region Browser Image Preview Plan
+```
+
+After the font lane, the next planning priority is shelf cleanup:
+
+```text
+H5.91 — Manifest Folder Reorganization Dry Run
+H5.92 — Asset Docs Reorganization Dry Run
+H5.93 — Stale Overview Docs Correction
+```
+
+H5.90 does not copy font binaries, fetch remote fonts, create `assets/academy/fonts/`, wire runtime fonts, change game code, modify package/lock files, install dependencies, modify PNGs/images, modify tool implementation files, or reorganize docs/manifests folders. Runtime font use remains not approved.
