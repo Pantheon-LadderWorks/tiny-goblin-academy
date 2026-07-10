@@ -1,0 +1,938 @@
+{
+  "schemaVersion": "0.1",
+  "registryId": "glyphforge-visual-registry.v0.1",
+  "generatedAt": "2026-07-10T06:16:26.953Z",
+  "generator": "tools/glyphforge/registry/generate-glyphforge-visual-registry.mjs",
+  "sourceOfTruth": "manifests/academy.visual-asset-pantry-index.json",
+  "sourceSha256": "7fe77470d1063cd4a464ce10473cc7cc2f8e15c031d2738fce7c6b70f844bc56",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "glyphforge-static-viewer-registry",
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApprovalPolicy": "never-infer-runtime-approval",
+  "knownToolModes": [
+    "dashboard-launcher",
+    "flipbook-viewer",
+    "region-asset-browser",
+    "scene-composition-editor",
+    "particle-fx-viewer",
+    "audio-viewer-placeholder"
+  ],
+  "entryCount": 24,
+  "entries": [
+    {
+      "entryId": "button-goblin-clicker.scene-anchor-background.1",
+      "displayName": "Button Goblin Clicker — scene-anchor-background",
+      "gameSlug": "button-goblin-clicker",
+      "domain": "button-goblin-clicker",
+      "assetFamily": "scene-anchor-background",
+      "toolMode": "scene-composition-editor",
+      "manifestPath": "manifests/academy.button-goblin-clicker.background.scene-anchors.json",
+      "manifestPaths": [
+        "manifests/academy.button-goblin-clicker.background.scene-anchors.json"
+      ],
+      "sourcePath": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+      "derivedPath": null,
+      "evidencePaths": [
+        "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/",
+        "button-goblin-clicker-cavern-background-source-inspection-preview.png",
+        "button-goblin-clicker-cavern-background-anchor-overlay.png",
+        "button-goblin-clicker-cavern-background-anchor-table-preview.png"
+      ],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "accepted-for-scene-anchor-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsOrAnchors": 9,
+        "manifestAnchors": 9
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [
+        "Large central negative space for Tap Titans-like clicker staging."
+      ],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Button Goblin Clicker",
+        "assetType": "scene-anchor-background",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "potion-sorter.static-prop-ui-sheet-cleanup-candidate.1",
+      "displayName": "Potion Sorter — static-prop-ui-sheet-cleanup-candidate",
+      "gameSlug": "potion-sorter",
+      "domain": "potion-sorter",
+      "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.potion-sorter.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.potion-sorter.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "derivedPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-exclusions",
+      "pipelineUse": "accepted-for-draft-pipeline-use-with-region-exclusions",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 32,
+        "acceptedRegions": 30,
+        "deniedRegions": 2,
+        "manifestRegions": 32
+      },
+      "warnings": [
+        "2 denied regions recorded."
+      ],
+      "deniedRegions": [
+        9,
+        14
+      ],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Potion Sorter",
+        "assetType": "static-prop-ui-sheet-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "dice-duel-tavern.static-prop-ui-sheet-cleanup-candidate.1",
+      "displayName": "Dice Duel Tavern — static-prop-ui-sheet-cleanup-candidate",
+      "gameSlug": "dice-duel-tavern",
+      "domain": "dice-duel-tavern",
+      "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.dice-duel-tavern.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.dice-duel-tavern.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
+      "derivedPath": "assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 64,
+        "acceptedRegions": 64,
+        "manifestRegions": 64
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Dice Duel Tavern",
+        "assetType": "static-prop-ui-sheet-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "card-goblin-duel.card-frame-sheet-cleanup-candidate.1",
+      "displayName": "Card Goblin Duel — card-frame-sheet-cleanup-candidate",
+      "gameSlug": "card-goblin-duel",
+      "domain": "card-goblin-duel",
+      "assetFamily": "card-frame-sheet-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.card-goblin-duel.card-frames.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
+      "derivedPath": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 32,
+        "acceptedRegions": 32,
+        "manifestRegions": 32
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Card Goblin Duel",
+        "assetType": "card-frame-sheet-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "card-goblin-duel.ui-token-sheet-cleanup-candidate.2",
+      "displayName": "Card Goblin Duel — ui-token-sheet-cleanup-candidate",
+      "gameSlug": "card-goblin-duel",
+      "domain": "card-goblin-duel",
+      "assetFamily": "ui-token-sheet-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
+      "derivedPath": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 48,
+        "acceptedRegions": 48,
+        "manifestRegions": 48
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Card Goblin Duel",
+        "assetType": "ui-token-sheet-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "tiny-farm-day.static-prop-ui-sheet-cleanup-candidate.1",
+      "displayName": "Tiny Farm Day / Farm Settlement — static-prop-ui-sheet-cleanup-candidate",
+      "gameSlug": "tiny-farm-day",
+      "domain": "tiny-farm-day",
+      "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.farm-settlement.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.farm-settlement.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
+      "derivedPath": "assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-exclusions",
+      "pipelineUse": "accepted-for-draft-pipeline-use-with-exclusions",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 32,
+        "acceptedRegions": 26,
+        "deniedRegions": 6,
+        "manifestRegions": 32
+      },
+      "warnings": [
+        "6 denied regions recorded."
+      ],
+      "deniedRegions": [
+        4,
+        7,
+        13,
+        21,
+        30,
+        31
+      ],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Tiny Farm Day / Farm Settlement",
+        "assetType": "static-prop-ui-sheet-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "pet-campfire.static-props-icons-cleanup-candidate.1",
+      "displayName": "Pet Campfire — static-props-icons-cleanup-candidate",
+      "gameSlug": "pet-campfire",
+      "domain": "pet-campfire",
+      "assetFamily": "static-props-icons-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "derivedPath": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 25,
+        "acceptedRegions": 25,
+        "manifestRegions": 25
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Pet Campfire",
+        "assetType": "static-props-icons-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "pet-campfire.pose-state-symbol-cleanup-candidate.2",
+      "displayName": "Pet Campfire — pose-state-symbol-cleanup-candidate",
+      "gameSlug": "pet-campfire",
+      "domain": "pet-campfire",
+      "assetFamily": "pose-state-symbol-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+      "derivedPath": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pose-state-symbol-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 16,
+        "acceptedRegions": 16,
+        "manifestRegions": 16
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Pet Campfire",
+        "assetType": "pose-state-symbol-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "pet-campfire.scene-anchor-background.3",
+      "displayName": "Pet Campfire — scene-anchor-background",
+      "gameSlug": "pet-campfire",
+      "domain": "pet-campfire",
+      "assetFamily": "scene-anchor-background",
+      "toolMode": "scene-composition-editor",
+      "manifestPath": "manifests/academy.pet-campfire.background.scene-anchors.json",
+      "manifestPaths": [
+        "manifests/academy.pet-campfire.background.scene-anchors.json"
+      ],
+      "sourcePath": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-placement-notes",
+      "pipelineUse": "accepted-for-draft-scene-anchor-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsOrAnchors": 14,
+        "manifestAnchors": 14
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Pet Campfire",
+        "assetType": "scene-anchor-background",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "one-room-platformer.platformer-construction-sheet.1",
+      "displayName": "One Room Platformer — platformer-construction-sheet",
+      "gameSlug": "one-room-platformer",
+      "domain": "one-room-platformer",
+      "assetFamily": "platformer-construction-sheet",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.platformer-construction-pieces.regions.json",
+      "manifestPaths": [
+        "manifests/academy.platformer-construction-pieces.regions.json"
+      ],
+      "sourcePath": "assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.2.png",
+      "derivedPath": "assets/academy/games/one-room-platformer/tga-one-room-platformer-construction-pieces-cleaned-v0.2.png",
+      "evidencePaths": [],
+      "status": "reviewed-or-existing-runtime-candidate",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "existing-level-8-specific-assets-present-but-not-general-runtime-approved",
+      "counts": {
+        "regionsTotal": 48,
+        "manifestRegions": 48
+      },
+      "warnings": [
+        "Nonstandard runtimeEligibility from source record: existing-level-8-specific-assets-present-but-not-general-runtime-approved"
+      ],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "One Room Platformer",
+        "assetType": "platformer-construction-sheet",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.terrain-cleanup-candidate.1",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — terrain-cleanup-candidate",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "terrain-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.topdown.terrain.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.terrain.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+      "derivedPath": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 64,
+        "acceptedRegions": 59,
+        "deferredRegions": 2,
+        "blankReferenceCells": 3,
+        "retainedPartialContentCells": 5,
+        "manifestRegions": 64
+      },
+      "warnings": [
+        "2 deferred regions recorded."
+      ],
+      "deniedRegions": [],
+      "deferredRegions": [
+        25,
+        35
+      ],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "terrain-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.true-alpha-wall-boundary-sheet.2",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — true-alpha-wall-boundary-sheet",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "true-alpha-wall-boundary-sheet",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.topdown.walls.true-alpha-regions.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.walls.true-alpha-regions.json"
+      ],
+      "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-region-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 58,
+        "acceptedRegions": 58,
+        "manifestRegions": 58
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "true-alpha-wall-boundary-sheet",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.vertical-wall-cleanup-candidate.3",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — vertical-wall-cleanup-candidate",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "vertical-wall-cleanup-candidate",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.topdown.walls.vertical.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.walls.vertical.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+      "derivedPath": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 72,
+        "acceptedRegions": 72,
+        "manifestRegions": 72
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "vertical-wall-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.nonfx-object-cleanup-candidate.4",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — nonfx-object-cleanup-candidate",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "nonfx-object-cleanup-candidate",
+      "toolMode": "particle-fx-viewer",
+      "manifestPath": "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+      "derivedPath": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 64,
+        "acceptedRegions": 64,
+        "manifestRegions": 64
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "nonfx-object-cleanup-candidate",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.historical-nonfx-object-cleanup-fallback.5",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — historical-nonfx-object-cleanup-fallback",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "historical-nonfx-object-cleanup-fallback",
+      "toolMode": "particle-fx-viewer",
+      "manifestPath": "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json"
+      ],
+      "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+      "derivedPath": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 64,
+        "acceptedRegions": 51,
+        "effectExcludedRegions": 11,
+        "productExcludedRegions": 1,
+        "manifestRegions": 64
+      },
+      "warnings": [
+        "Historical/fallback record.",
+        "11 effect/glow/fire regions excluded.",
+        "1 product-excluded regions recorded."
+      ],
+      "deniedRegions": [
+        1,
+        7,
+        9,
+        10,
+        17,
+        18,
+        47,
+        55,
+        57,
+        60,
+        61,
+        62
+      ],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": true,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "historical-nonfx-object-cleanup-fallback",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "top-down-slime-quest.future-floor-tilesheets-batch-regions.6",
+      "displayName": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry — future-floor-tilesheets-batch-regions",
+      "gameSlug": "top-down-slime-quest",
+      "domain": "top-down-slime-quest",
+      "assetFamily": "future-floor-tilesheets-batch-regions",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.topdown.floor-tilesheets.future.regions.json",
+      "manifestPaths": [
+        "manifests/academy.topdown.floor-tilesheets.future.regions.json"
+      ],
+      "sourcePath": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-future-pantry-region-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 384,
+        "acceptedRegions": 384,
+        "sheetsTotal": 6
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+        "assetType": "future-floor-tilesheets-batch-regions",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "dungeon-platformer.mixed-sheet-region-manifest.1",
+      "displayName": "Dungeon Platformer / Mixed Reference Sheet — mixed-sheet-region-manifest",
+      "gameSlug": "dungeon-platformer",
+      "domain": "dungeon-platformer",
+      "assetFamily": "mixed-sheet-region-manifest",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.dungeon-platformer.regions.json",
+      "manifestPaths": [
+        "manifests/academy.dungeon-platformer.regions.json"
+      ],
+      "sourcePath": "assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 40,
+        "manifestRegions": 40
+      },
+      "warnings": [
+        "Deferred or reference-only asset; do not treat as runtime-ready."
+      ],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "gameAssetGroups",
+        "gameTitle": "Dungeon Platformer / Mixed Reference Sheet",
+        "assetType": "mixed-sheet-region-manifest",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "shared.shared-core.1",
+      "displayName": "Shared Assets — shared-core",
+      "gameSlug": "shared",
+      "domain": "shared",
+      "assetFamily": "shared-core",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.shared-core.regions.json",
+      "manifestPaths": [
+        "manifests/academy.shared-core.regions.json"
+      ],
+      "sourcePath": "assets/academy/shared-core/tga-shared-core-sheet-v0.1.png",
+      "derivedPath": "assets/academy/derived-cleaned/shared-core/tga-shared-core-sheet-cleaned-preview-v0.1.png",
+      "evidencePaths": [],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 32,
+        "manifestRegions": 32
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "sharedAssetGroups",
+        "gameTitle": "Shared Assets",
+        "assetType": "shared-core",
+        "toolingTarget": null
+      }
+    },
+    {
+      "entryId": "shared.ui-hud.2",
+      "displayName": "Shared Assets — ui-hud",
+      "gameSlug": "shared",
+      "domain": "shared",
+      "assetFamily": "ui-hud",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.ui-hud.regions.json",
+      "manifestPaths": [
+        "manifests/academy.ui-hud.regions.json"
+      ],
+      "sourcePath": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
+      "derivedPath": "assets/academy/derived-cleaned/ui/tga-ui-hud-sheet-cleaned-preview-v0.1.png",
+      "evidencePaths": [],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 34,
+        "manifestRegions": 34
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "sharedAssetGroups",
+        "gameTitle": "Shared Assets",
+        "assetType": "ui-hud",
+        "toolingTarget": null
+      }
+    },
+    {
+      "entryId": "shared.shared-fx.3",
+      "displayName": "Shared Assets — shared-fx",
+      "gameSlug": "shared",
+      "domain": "shared",
+      "assetFamily": "shared-fx",
+      "toolMode": "particle-fx-viewer",
+      "manifestPath": "manifests/academy.shared-fx.regions.json",
+      "manifestPaths": [
+        "manifests/academy.shared-fx.regions.json"
+      ],
+      "sourcePath": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "deferred-reference-only",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "manifestRegions": 3
+      },
+      "warnings": [
+        "Deferred or reference-only asset; do not treat as runtime-ready."
+      ],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [
+        "particle-first; regenerate true-alpha one-offs only when a concrete game need exists"
+      ],
+      "sourceRecord": {
+        "sourceGroup": "sharedAssetGroups",
+        "gameTitle": "Shared Assets",
+        "assetType": "shared-fx",
+        "toolingTarget": null
+      }
+    },
+    {
+      "entryId": "creatures.goblin-expression-action.1",
+      "displayName": "Creature Assets — goblin-expression-action",
+      "gameSlug": "creatures",
+      "domain": "creatures",
+      "assetFamily": "goblin-expression-action",
+      "toolMode": "region-asset-browser",
+      "manifestPath": "manifests/academy.goblin-expression-action.regions.json",
+      "manifestPaths": [
+        "manifests/academy.goblin-expression-action.regions.json"
+      ],
+      "sourcePath": "assets/academy/creatures/goblin/tga-goblin-expression-action-sheet-v0.1.png",
+      "derivedPath": null,
+      "evidencePaths": [],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "regionsTotal": 40,
+        "manifestRegions": 40
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "creatureAssetGroups",
+        "gameTitle": "Creature Assets",
+        "assetType": "goblin-expression-action",
+        "toolingTarget": "sticker-picture-book-viewer"
+      }
+    },
+    {
+      "entryId": "creatures.platformer-goblin-player-animation.2",
+      "displayName": "Creature Assets — platformer-goblin-player-animation",
+      "gameSlug": "creatures",
+      "domain": "creatures",
+      "assetFamily": "platformer-goblin-player-animation",
+      "toolMode": "flipbook-viewer",
+      "manifestPath": "manifests/academy.platformer-goblin-player.animations.json",
+      "manifestPaths": [
+        "manifests/academy.platformer-goblin-player.animations.json"
+      ],
+      "sourcePath": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
+      "derivedPath": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "animationGroups": 6,
+        "manifestAnimations": 6
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "creatureAssetGroups",
+        "gameTitle": "Creature Assets",
+        "assetType": "platformer-goblin-player-animation",
+        "toolingTarget": "flipbook-viewer"
+      }
+    },
+    {
+      "entryId": "creatures.platformer-training-dummy-enemy-animation.3",
+      "displayName": "Creature Assets — platformer-training-dummy-enemy-animation",
+      "gameSlug": "creatures",
+      "domain": "creatures",
+      "assetFamily": "platformer-training-dummy-enemy-animation",
+      "toolMode": "flipbook-viewer",
+      "manifestPath": "manifests/academy.platformer-training-dummy-enemy.animations.json",
+      "manifestPaths": [
+        "manifests/academy.platformer-training-dummy-enemy.animations.json"
+      ],
+      "sourcePath": "assets/academy/creatures/training-dummy/tga-platformer-training-dummy-enemy-concept-v0.1.png",
+      "derivedPath": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
+      "evidencePaths": [],
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "animationGroups": 5,
+        "manifestAnimations": 5
+      },
+      "warnings": [],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "creatureAssetGroups",
+        "gameTitle": "Creature Assets",
+        "assetType": "platformer-training-dummy-enemy-animation",
+        "toolingTarget": "flipbook-viewer"
+      }
+    },
+    {
+      "entryId": "creatures.topdown-slime-and-soldier-animation-candidates.4",
+      "displayName": "Creature Assets — topdown-slime-and-soldier-animation-candidates",
+      "gameSlug": "creatures",
+      "domain": "creatures",
+      "assetFamily": "topdown-slime-and-soldier-animation-candidates",
+      "toolMode": "flipbook-viewer",
+      "manifestPath": "manifests/academy.topdown-slime-player.animations.json",
+      "manifestPaths": [
+        "manifests/academy.topdown-slime-player.animations.json",
+        "manifests/academy.topdown-slime-v2-action.animations.json",
+        "manifests/academy.topdown-slime-v2-idle-move.animations.json",
+        "manifests/academy.topdown-soldier-enemy.animations.json"
+      ],
+      "sourcePath": "assets/academy/creatures/slime/tga-topdown-slime-player-v0.1.png",
+      "derivedPath": "assets/academy/creatures/slime/tga-topdown-slime-player-cleaned-v0.1.png",
+      "evidencePaths": [],
+      "status": "deferred-for-future-topdown-runtime-planning",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "pantry-index-reference",
+      "runtimeEligibility": "not-runtime-approved",
+      "counts": {
+        "manifestAnimations": 25
+      },
+      "warnings": [
+        "Deferred or reference-only asset; do not treat as runtime-ready."
+      ],
+      "deniedRegions": [],
+      "deferredRegions": [],
+      "futurePantryOnly": false,
+      "historical": false,
+      "notes": [],
+      "sourceRecord": {
+        "sourceGroup": "creatureAssetGroups",
+        "gameTitle": "Creature Assets",
+        "assetType": "topdown-slime-and-soldier-animation-candidates",
+        "toolingTarget": "flipbook-viewer"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlyphForge Visual Workbench — Static Prototype v0.1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Tiny Goblin Academy • GlyphForge</p>
+      <h1>Visual Workbench — Static Prototype v0.1</h1>
+    </div>
+    <div class="header-actions">
+      <button id="loadDefaultBtn" type="button">Load bundled registry</button>
+      <label class="file-button">
+        Load registry file
+        <input id="registryFileInput" type="file" accept="application/json,.json">
+      </label>
+    </div>
+  </header>
+
+  <section class="runtime-banner">
+    <strong>Runtime approval is never inferred.</strong>
+    <span>This tool is for local visual review and planning only. It does not mutate assets, manifests, or game code.</span>
+  </section>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>Filters</h2>
+        <input id="searchInput" class="text-input" type="search" placeholder="Search assets, paths, notes...">
+        <select id="domainFilter"></select>
+        <select id="toolModeFilter"></select>
+        <select id="reviewFilter"></select>
+        <select id="runtimeFilter"></select>
+      </section>
+
+      <section class="panel grow">
+        <h2>Asset entries <span id="entryCount" class="count-pill">0</span></h2>
+        <div id="assetList" class="asset-list" aria-live="polite"></div>
+      </section>
+    </aside>
+
+    <section class="main-panel">
+      <nav class="mode-tabs" aria-label="Viewer modes">
+        <button data-mode="dashboard-launcher" class="mode-tab active" type="button">Dashboard</button>
+        <button data-mode="flipbook-viewer" class="mode-tab" type="button">Flipbook</button>
+        <button data-mode="region-asset-browser" class="mode-tab" type="button">Region Browser</button>
+        <button data-mode="scene-composition-editor" class="mode-tab" type="button">Scene Composition</button>
+        <button data-mode="particle-fx-viewer" class="mode-tab" type="button">Particle FX</button>
+        <button data-mode="audio-viewer-placeholder" class="mode-tab" type="button">Audio Later</button>
+      </nav>
+
+      <section id="boundaryStrip" class="boundary-strip">
+        <span>Select an entry to inspect status boundaries.</span>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="panel viewer-panel">
+          <h2 id="viewerTitle">Dashboard</h2>
+          <div id="viewerContent"></div>
+        </article>
+
+        <aside class="details-stack">
+          <section class="panel">
+            <h2>Metadata</h2>
+            <dl id="metadataList" class="metadata-list"></dl>
+          </section>
+
+          <section class="panel">
+            <h2>Warnings / exclusions</h2>
+            <div id="warningsPanel" class="warnings-panel"></div>
+          </section>
+
+          <section class="panel">
+            <h2>Paths</h2>
+            <div id="pathsPanel" class="paths-panel"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="panel raw-panel">
+        <h2>Raw selected registry entry</h2>
+        <pre id="rawJsonPreview">{}</pre>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1371,3 +1371,56 @@ Region / Asset Browser / Sticker Picture Book Mode
 Scene Composition remains distinct from Region Browser: Region Browser asks what an asset/box is, while Scene Composition asks where an asset/entity goes in a scene. Flipbook, Particle FX, and future Audio remain routed modes/placeholders.
 
 H5.88C does not build the shell, edit prototype HTML files, wire runtime, modify game code, modify PNGs, install dependencies, modify package/lock files, or reorganize docs/manifests. Button Goblin Clicker remains the first later runtime visual integration candidate, Top-Down Slime Quest remains last or near-last, and Audio remains future Tier 2.5.
+
+## H5.88D GlyphForge Static Viewer Shell Prototype Note
+
+H5.88D builds the first static/offline GlyphForge Visual Workbench prototype:
+
+```text
+tools/glyphforge/viewer-shell-static/index.html
+tools/glyphforge/viewer-shell-static/styles.css
+tools/glyphforge/viewer-shell-static/app.js
+tools/glyphforge/viewer-shell-static/README.md
+```
+
+It also creates a generated tool-facing registry:
+
+```text
+tools/glyphforge/registry/generate-glyphforge-visual-registry.mjs
+tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json
+```
+
+The registry is derived from:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+```
+
+H5.88D registry result:
+
+```text
+24 entries
+```
+
+Implemented shell capabilities:
+
+- load generated registry JSON;
+- use file picker fallback when `file://` blocks relative fetch;
+- list asset entries;
+- filter by game/domain, tool mode, review status, runtime eligibility, and text search;
+- open selected entries;
+- show manifest/source/derived/evidence paths;
+- show warnings, exclusions, denied regions, and deferred regions;
+- show a runtime-boundary strip with `pipelineUse`, `reviewStatus`, and `runtimeEligibility`;
+- show raw selected registry JSON;
+- implement first-useful Region / Asset Browser summary mode.
+
+Placeholder modes exist for Flipbook, Scene Composition, Particle FX, and future Audio. They route and display metadata/status, but do not yet implement playback, layout editing, particle authoring, or audio preview.
+
+H5.88D does not wire runtime, modify game code, modify package/lock files, install dependencies, process images, modify PNGs, mutate source/derived/evidence images, modify preserved prototypes, write back to manifests, approve runtime placement, approve collision/pathfinding/tilemap behavior, approve animation cycles, approve particle behavior, or approve audio triggers.
+
+Next recommended lane:
+
+```text
+H5.88E — GlyphForge Static Viewer Shell Human Review
+```
