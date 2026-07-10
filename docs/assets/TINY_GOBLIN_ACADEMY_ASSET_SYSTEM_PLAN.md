@@ -1141,3 +1141,26 @@ H5.60B truth remains authoritative:
 - region `39` lives as retained partial grass-edge content.
 
 H5.82 does not rerun cleanup, edit source PNGs, edit derived PNGs, edit evidence PNGs, alter sourceRects, modify game/runtime files, approve runtime terrain use, approve tilemap use, approve collision, approve pathfinding, approve walkability, approve water/slime/portal/hazard behavior, or approve game wiring.
+
+## H5.86 Academy Visual Asset Pantry Human Review Note
+
+H5.86 records human/product review for the H5.85 Academy Visual Asset Pantry Index and Button Goblin Clicker background scene-anchor manifest:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+manifests/academy.button-goblin-clicker.background.scene-anchors.json
+```
+
+The pantry index is accepted as the Tier 1.5 visual integration planning source of truth. Button Goblin Clicker background anchors are accepted for planning use only, with 9 anchors retained.
+
+Runtime doctrine remains unchanged: visual assets are Tier 1.5, audio assets are future Tier 2.5, Button Goblin Clicker should be the first runtime visual integration candidate, and Top-Down Slime Quest remains last or near-last because animation, tile behavior, placement, collision, pathfinding, and map rules remain deferred.
+
+The Button Goblin Clicker background has a large central negative space appropriate for Tap Titans-like clicker staging. Edge props remain decorative/readability-risk zones. Anchors are planning-only and do not approve exact runtime placement. The Goblin Clicker SVG goblin remains the current runtime click target until a later H6 lane.
+
+H5.86 does not wire runtime, change game code, modify PNGs, process images, create cleanup outputs, move folders, reorganize manifests, reorganize docs, or approve runtime use. Known organization debt remains tracked for H5.87.
+
+Next active lane:
+
+```text
+H5.87 — Manifest and Asset Docs Organization Plan
+```

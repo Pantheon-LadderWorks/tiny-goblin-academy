@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "draft-scene-anchor-planning",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-scene-anchor-planning",
   "runtimeEligibility": "not-runtime-approved",
   "placementApproval": "none",
   "domain": "button-goblin-clicker",
@@ -43,8 +43,10 @@
         "h": 518
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Large clear warm negative space intended for current SVG goblin/click target. No runtime placement approved."
+      "reviewStatus": "human-review-passed",
+      "notes": "Large clear warm negative space intended for current SVG goblin/click target. No runtime placement approved.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.lower-floor-stage",
@@ -57,8 +59,10 @@
         "h": 188
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Readable floor area below target; candidate for shadows/click feedback later. No runtime placement approved."
+      "reviewStatus": "human-review-passed",
+      "notes": "Readable floor area below target; candidate for shadows/click feedback later. No runtime placement approved.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.upper-ceiling-frame",
@@ -71,8 +75,10 @@
         "h": 169
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Decorative cave ceiling; avoid text/UI overlays without contrast treatment."
+      "reviewStatus": "human-review-passed",
+      "notes": "Decorative cave ceiling; avoid text/UI overlays without contrast treatment.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.left-prop-frame",
@@ -85,8 +91,10 @@
         "h": 678
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Torch, mushrooms, crates, crystals, and clutter frame the click stage; not a click target zone."
+      "reviewStatus": "human-review-passed",
+      "notes": "Torch, mushrooms, crates, crystals, and clutter frame the click stage; not a click target zone.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.right-prop-frame",
@@ -99,8 +107,10 @@
         "h": 678
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Lantern, torch, barrel, crystals, and clutter frame the click stage; not a click target zone."
+      "reviewStatus": "human-review-passed",
+      "notes": "Lantern, torch, barrel, crystals, and clutter frame the click stage; not a click target zone.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.left-torch-glow-risk",
@@ -113,8 +123,10 @@
         "h": 207
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Bright torch/glow competes with small click feedback."
+      "reviewStatus": "human-review-passed",
+      "notes": "Bright torch/glow competes with small click feedback.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.right-torch-glow-risk",
@@ -127,8 +139,10 @@
         "h": 235
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Bright torch/glow competes with small click feedback."
+      "reviewStatus": "human-review-passed",
+      "notes": "Bright torch/glow competes with small click feedback.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.bottom-foreground-obstruction",
@@ -141,8 +155,10 @@
         "h": 207
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Foreground crystals/plants/rail can obscure low UI or click effects."
+      "reviewStatus": "human-review-passed",
+      "notes": "Foreground crystals/plants/rail can obscure low UI or click effects.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     },
     {
       "id": "button-goblin-clicker.background.anchor.top-hud-safe-band",
@@ -155,8 +171,10 @@
         "h": 113
       },
       "usage": "draft-review",
-      "reviewStatus": "needs-human-review",
-      "notes": "Potential slim HUD/status band if contrast treatment is added later; not runtime-approved."
+      "reviewStatus": "human-review-passed",
+      "notes": "Potential slim HUD/status band if contrast treatment is added later; not runtime-approved.",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "accepted-for-scene-anchor-planning"
     }
   ],
   "evidence": {
@@ -172,7 +190,11 @@
     "This background is suitable for future Tap Titans-like clicker staging because it leaves a large central negative space.",
     "The current SVG goblin/click behavior is not replaced in this pass.",
     "No runtime wiring, exact placement, UI layout, gameplay behavior, or click target change is approved.",
-    "No cleanup or derived image is created because this is a full opaque background, not a transparent sprite sheet."
+    "No cleanup or derived image is created because this is a full opaque background, not a transparent sprite sheet.",
+    "H5.86 human/product review accepted these Button Goblin Clicker background anchors for planning use only.",
+    "Large central negative space is appropriate for Tap Titans-like clicker staging.",
+    "Edge props remain decorative/readability-risk zones, not runtime placement targets.",
+    "The Goblin Clicker SVG goblin remains the current runtime click target until a later H6 lane."
   ],
   "pipelineRun": {
     "tool": "scripts/asset-pipeline/cli.mjs",
@@ -185,5 +207,17 @@
     "gitBaseline": "c268413 docs: review future topdown floor tilesheet regions",
     "sourcePngModified": false,
     "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.86",
+    "decision": "passed",
+    "acceptedAnchorCount": 9,
+    "acceptedFor": "scene-anchor-planning-only",
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "large central negative space is appropriate for Tap Titans-like clicker staging",
+      "edge props are decorative/readability-risk zones",
+      "anchors are planning-only, not runtime placement approval"
+    ]
   }
 }

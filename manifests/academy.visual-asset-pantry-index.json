@@ -1,16 +1,18 @@
 {
   "schemaVersion": "0.1",
   "indexId": "H5.85",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
-  "pipelineUse": "visual-asset-pantry-index",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-tier-1-5-visual-integration-planning",
   "runtimeEligibility": "not-runtime-approved",
   "purpose": "Manifest-derived current visual asset pantry index for Tiny Goblin Academy Tier 1.5 visual integration planning.",
   "scopeNotes": [
     "This is an index, not runtime approval.",
     "This is not a stale-doc cleanup or manifest-folder reorganization.",
     "Counts and paths are derived from current manifests and current H5.85 source intake.",
-    "Every listed asset remains subject to its own manifest review boundary."
+    "Every listed asset remains subject to its own manifest review boundary.",
+    "H5.86 human/product review accepted this pantry index for Tier 1.5 visual integration planning only.",
+    "H5.86 does not reorganize manifests, reorganize docs, move folders, wire runtime, or approve any runtime asset use."
   ],
   "runtimeDoctrine": {
     "visualAssetsTier": "1.5",
@@ -429,10 +431,9 @@
     "This index intentionally records the debt instead of performing broad reorganization in the same lane."
   ],
   "recommendedNextLanes": [
-    "H5.86 — Academy Visual Asset Pantry Human Review",
-    "H5.87 — Visual Tool Suite Registry Plan",
-    "H6.0 — Button Goblin Clicker Runtime Visual Integration Plan",
-    "H6.1 — Button Goblin Clicker Background Runtime Wiring"
+    "H5.87 — Manifest and Asset Docs Organization Plan",
+    "H5.88 — Visual Tool Suite Registry Plan",
+    "H6.0 — Button Goblin Clicker Runtime Visual Integration Plan"
   ],
   "pipelineRun": {
     "tool": "scripts/asset-pipeline/cli.mjs",
@@ -445,5 +446,33 @@
     "gitBaseline": "c268413 docs: review future topdown floor tilesheet regions",
     "sourcePngModified": false,
     "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.86",
+    "decision": "passed",
+    "acceptedFor": "tier-1-5-visual-integration-planning-only",
+    "noRuntimeWiringApproved": true,
+    "nextRecommendedLane": "H5.87 — Manifest and Asset Docs Organization Plan",
+    "acceptedDoctrines": {
+      "runtimeOrder": {
+        "first": "Button Goblin Clicker",
+        "lastOrNearLast": "Top-Down Slime Quest"
+      },
+      "toolingCategories": [
+        "flipbook viewer",
+        "sticker/picture book viewer",
+        "particle FX viewer",
+        "future sound/audio pipeline viewer"
+      ],
+      "tiers": {
+        "visualAssets": "Tier 1.5",
+        "audioAssets": "Tier 2.5"
+      }
+    },
+    "notes": [
+      "This index is manifest-derived, not a heavy stale-doc audit.",
+      "Known organization debt remains recorded for H5.87 rather than silently fixed in H5.86.",
+      "Runtime wiring begins later after this index is reviewed."
+    ]
   }
 }
