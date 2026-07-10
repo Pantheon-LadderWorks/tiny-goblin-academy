@@ -1463,3 +1463,40 @@ Next recommended lane:
 ```text
 H5.88F — GlyphForge Region Browser Image Preview Plan
 ```
+
+## H5.89 Font Pantry Source Inventory and Intake Plan Note
+
+H5.89 pauses the GlyphForge tool lane after H5.88E and records the next tool-lane return point as:
+
+```text
+H5.88F — GlyphForge Region Browser Image Preview Plan
+```
+
+This pass opens the Tiny Goblin Academy font pantry lane as Tier 1.5 visual-support planning. Fonts support academy identity, readable UI text, debug/tooling text, game-specific flavor, and future local/offline packaging, but they are not runtime game behavior.
+
+H5.89 creates:
+
+```text
+manifests/academy.font-pantry-source-inventory-plan.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md
+```
+
+Local font sources were inspected under:
+
+```text
+C:\Users\kryst\Workspace\Literature\the-kryssie-method\km_series\kryssie_method_1\fonts
+```
+
+Local OFL evidence was found for Atkinson Hyperlegible, Fira Code, Iceberg, Iceland, Love Light, Orbitron, Outfit, Rajdhani, Space Grotesk, and Space Mono. Ubuntu has a local `UFL.txt` and is recorded as local-license-present-needs-human-review. `ROGLyonsTypeRegular3.ttf` has no nearby license found and must not be ingested without clear future license provenance.
+
+Recommended shared core roles are:
+
+```text
+sharedDisplay: Cinzel Decorative or Cinzel
+sharedReadableUi: Atkinson Hyperlegible or Outfit
+sharedMonoDebug: Fira Code or Space Mono
+```
+
+Future game-specific flavor fonts should be used sparingly so UI does not become ransom-note goblin. Decorative fonts belong in titles, labels, cards, and preview surfaces before they are allowed into dense UI.
+
+H5.89 does not copy or ingest font binaries, create `assets/academy/fonts/`, wire runtime fonts, change game code, change package/lock files, install dependencies, modify PNGs/images, modify tool implementation files, or reorganize docs/manifests folders. License status must be recorded before font ingestion, and runtime font usage remains not approved.
