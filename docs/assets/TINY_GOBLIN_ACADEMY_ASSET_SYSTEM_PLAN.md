@@ -1291,3 +1291,50 @@ Recommended next lane:
 ```text
 H5.88B — GlyphForge Unified Viewer Shell Design
 ```
+
+## H5.88B GlyphForge Unified Viewer Shell Design Note
+
+H5.88B creates the unified GlyphForge Visual Workbench shell design:
+
+```text
+manifests/academy.glyphforge-unified-viewer-shell-design.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md
+```
+
+The planned shell modes are:
+
+```text
+dashboard / launcher mode
+flipbook viewer mode
+region / asset browser mode
+scene composition / layout editor mode
+particle FX viewer mode
+future audio viewer placeholder mode
+```
+
+H5.88B preserves the key design split:
+
+```text
+Sprite Box Annotator asks: what is this asset?
+Sticker Book Editor asks: where does it go?
+```
+
+The Region / Asset Browser mode is informed by `tools/glyphforge/prototypes/sprite-box-annotator-prototype-v0.1.html` and should inspect sourceRects, derivedRects, cleanup status, risk notes, exclusions, labels, categories, `pipelineUse`, `reviewStatus`, and `runtimeEligibility`.
+
+The Scene Composition / Layout Editor mode is informed by `tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html` and should eventually support background images, scene anchors, safe zones, readability-risk zones, asset palettes, placed entities with `x/y/w/h`, optional snap grids, layers/groups, and draft layout JSON export. It does not approve runtime placement.
+
+The shell discovery model remains registry-first:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+```
+
+Supported assets are routed by manifest shape: animation manifests to Flipbook, region/cleanup manifests to Region Browser, scene-anchor/background manifests to Scene Composition, particle presets to Particle FX later, and future audio manifests to Tier 2.5 placeholder mode.
+
+H5.88B does not build tools, implement UI, wire runtime, modify game code, modify package/lock files, install dependencies, process images, modify PNGs, reorganize manifests/docs folders, move prototypes, or convert prototypes into canonical tooling.
+
+Next recommended lane:
+
+```text
+H5.88C — GlyphForge Viewer Shell Static Prototype Plan
+```

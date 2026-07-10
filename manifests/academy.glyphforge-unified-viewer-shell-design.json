@@ -1,0 +1,455 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "glyphforge-viewer-shell-design",
+  "runtimeEligibility": "not-runtime-approved",
+  "blockedUntilHumanReview": true,
+  "relatedRegistryPlan": "manifests/academy.visual-tool-suite-registry-plan.json",
+  "relatedPrototypeComparison": "manifests/academy.visual-tool-prototype-intake-comparison.json",
+  "pantryIndex": "manifests/academy.visual-asset-pantry-index.json",
+  "shellName": "GlyphForge Visual Workbench",
+  "purpose": "Design a unified registry-fed shell that routes Tiny Goblin Academy visual assets into the appropriate preview or planning mode without building the tool suite, approving runtime use, or replacing the preserved prototypes.",
+  "designPrinciples": [
+    "Registry first.",
+    "Manifest second.",
+    "Image path third.",
+    "Runtime approval never inferred.",
+    "Every asset view must show pipelineUse, reviewStatus, and runtimeEligibility.",
+    "Denied, deferred, future-pantry-only, historical, and needs-human-review status must be visible.",
+    "Tools may produce draft planning JSON, but not runtime approval.",
+    "Single-file/offline ergonomics are useful, but canonical tools should be registry-fed.",
+    "No tool should mutate source assets directly.",
+    "Prototype code is reference material, not canonical implementation."
+  ],
+  "toolModes": [
+    {
+      "modeId": "dashboardLauncherMode",
+      "displayName": "Dashboard / Launcher Mode",
+      "primaryQuestion": "Which goblin bench should this asset go to?",
+      "purpose": "List pantry entries, group by game/domain/tool target, show readiness and runtime boundaries, and route selected manifests to the correct viewer mode.",
+      "prototypeSources": [
+        "H5.88 registry plan",
+        "H5.88A prototype comparison",
+        "H5.88A2 sticker book addendum"
+      ],
+      "inputs": [
+        "manifests/academy.visual-asset-pantry-index.json",
+        "manifest records referenced by pantry entries",
+        "future tool registry records"
+      ],
+      "outputs": [
+        "viewer route decision",
+        "status summary",
+        "warnings/boundary display"
+      ],
+      "implementationStatus": "planned"
+    },
+    {
+      "modeId": "flipbookViewerMode",
+      "displayName": "Flipbook Viewer Mode",
+      "primaryQuestion": "How does it move?",
+      "purpose": "Preview animation manifests and state/pose sequences with frame stepping, playback, FPS controls, and status boundaries.",
+      "prototypeSources": [
+        "assets/academy/evidence/**/**flipbook*.html"
+      ],
+      "inputs": [
+        "animation manifests",
+        "source image path",
+        "derived image path when present",
+        "animation groups",
+        "frame rects"
+      ],
+      "outputs": [
+        "preview playback",
+        "frame/sequence summary",
+        "status boundary display"
+      ],
+      "implementationStatus": "planned"
+    },
+    {
+      "modeId": "regionAssetBrowserMode",
+      "displayName": "Region / Asset Browser Mode",
+      "primaryQuestion": "What is the box around this asset?",
+      "purpose": "Inspect sourceRects, derivedRects, cleanup status, labels, categories, risk notes, exclusions, and manifest status for region/cleanup assets.",
+      "prototypeSources": [
+        "tools/glyphforge/prototypes/sprite-box-annotator-prototype-v0.1.html"
+      ],
+      "inputs": [
+        "region manifests",
+        "cleanup candidate manifests",
+        "source image path",
+        "derived image path when present",
+        "pantry index entries"
+      ],
+      "outputs": [
+        "draft region review notes",
+        "future bbox correction/export JSON",
+        "visual status display"
+      ],
+      "implementationStatus": "planned"
+    },
+    {
+      "modeId": "sceneCompositionLayoutEditorMode",
+      "displayName": "Scene Composition / Layout Editor Mode",
+      "primaryQuestion": "Where does this asset or entity go in the scene?",
+      "purpose": "Load a background/scene-anchor surface plus selectable assets and allow draft layout composition with planning JSON export only.",
+      "prototypeSources": [
+        "tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html"
+      ],
+      "inputs": [
+        "background source image",
+        "scene-anchor manifest",
+        "asset manifests",
+        "placement grammar or layout composition manifests when present"
+      ],
+      "outputs": [
+        "draft layout JSON",
+        "board-pixel x/y/w/h planning records",
+        "no runtime placement approval"
+      ],
+      "implementationStatus": "planned"
+    },
+    {
+      "modeId": "particleFxViewerMode",
+      "displayName": "Particle FX Viewer Mode",
+      "primaryQuestion": "What visual effect can we conjure?",
+      "purpose": "Preview particle presets and adjustable procedural FX as the future replacement lane for many glow/fire/smoke/portal sprite cleanup risks.",
+      "prototypeSources": [
+        "tools/glyphforge/prototypes/particle-fx-viewer-prototype-v0.1.html"
+      ],
+      "inputs": [
+        "future particle preset manifest",
+        "effect family",
+        "adjustable parameters",
+        "preview defaults"
+      ],
+      "outputs": [
+        "preview-only particle playback",
+        "future preset draft JSON",
+        "no runtime behavior approval"
+      ],
+      "implementationStatus": "planned"
+    },
+    {
+      "modeId": "futureAudioViewerPlaceholderMode",
+      "displayName": "Future Audio Viewer Placeholder Mode",
+      "primaryQuestion": "What sound belongs here later?",
+      "purpose": "Reserve a Tier 2.5 audio pipeline surface for future sound preview, license metadata, normalization metadata, and runtime trigger planning.",
+      "prototypeSources": [],
+      "inputs": [
+        "future audio manifest",
+        "sound id",
+        "source/license metadata",
+        "preview playback metadata"
+      ],
+      "outputs": [
+        "future audio review notes",
+        "no runtime trigger approval"
+      ],
+      "implementationStatus": "future-placeholder"
+    }
+  ],
+  "navigationModel": {
+    "shellCapabilities": [
+      "list asset groups from the pantry index",
+      "filter by game or domain",
+      "filter by tool target",
+      "filter by reviewStatus and runtimeEligibility",
+      "open a manifest in the appropriate mode",
+      "show source, derived, evidence, and prototype-reference paths",
+      "show warnings and runtime boundaries before viewer launch",
+      "route animation manifests to Flipbook Viewer",
+      "route region and cleanup manifests to Region Asset Browser",
+      "route scene-anchor/background manifests to Scene Composition Layout Editor",
+      "route particle preset manifests to Particle FX Viewer later",
+      "show future audio placeholder without implementing audio"
+    ],
+    "recommendedRouteRules": [
+      {
+        "when": "operationalType includes character-animation-sheet, enemy-animation-sheet, pet-animation-sheet, or manifest contains animations",
+        "routeTo": "flipbookViewerMode"
+      },
+      {
+        "when": "manifest contains regions or cleanup candidate regions",
+        "routeTo": "regionAssetBrowserMode"
+      },
+      {
+        "when": "operationalType is scene-anchor-background or manifest contains anchors",
+        "routeTo": "sceneCompositionLayoutEditorMode"
+      },
+      {
+        "when": "manifest is particle preset or fx planning manifest",
+        "routeTo": "particleFxViewerMode"
+      },
+      {
+        "when": "manifest is future audio inventory or sound manifest",
+        "routeTo": "futureAudioViewerPlaceholderMode"
+      }
+    ]
+  },
+  "registryDiscoveryModel": {
+    "primaryRegistry": "manifests/academy.visual-asset-pantry-index.json",
+    "supportingPlans": [
+      "manifests/academy.visual-tool-suite-registry-plan.json",
+      "manifests/academy.visual-tool-prototype-intake-comparison.json",
+      "manifests/academy.manifest-and-docs-organization-plan.json"
+    ],
+    "discoveryLaw": [
+      "Do not scan random folders as the first source of truth.",
+      "Read pantry index entries first.",
+      "Follow referenced manifests second.",
+      "Load source/derived/evidence image paths only after manifest status is known.",
+      "Display review/runtime status before showing export or planning actions.",
+      "Preserve denied/deferred/historical/future-pantry-only state."
+    ]
+  },
+  "sharedDataContracts": {
+    "requiredEverywhere": [
+      "manifestPath",
+      "domain",
+      "operationalType",
+      "pipelineUse",
+      "reviewStatus",
+      "runtimeEligibility",
+      "sourcePath",
+      "derivedPath when present",
+      "evidencePaths when present",
+      "statusWarnings",
+      "humanReviewBoundary"
+    ],
+    "neverInfer": [
+      "runtime approval",
+      "placement approval",
+      "collision approval",
+      "pathfinding approval",
+      "tilemap approval",
+      "animation cycle approval",
+      "particle behavior approval",
+      "audio trigger approval"
+    ]
+  },
+  "perModeDataContracts": {
+    "flipbookViewerMode": {
+      "supports": [
+        "source image",
+        "derived image if present",
+        "animation groups",
+        "frame rects",
+        "frame count",
+        "fps / preview FPS",
+        "loop hint",
+        "state/action labels",
+        "reviewStatus",
+        "runtimeEligibility"
+      ],
+      "planningOutputsOnly": [
+        "preview notes",
+        "candidate sequence review notes"
+      ]
+    },
+    "regionAssetBrowserMode": {
+      "supports": [
+        "source image",
+        "derived image if present",
+        "region index/id/label/category",
+        "sourceRect",
+        "derivedRect",
+        "cleanupStatus",
+        "accepted/denied/deferred status",
+        "notes / risk / polish notes",
+        "pipelineUse",
+        "reviewStatus",
+        "runtimeEligibility"
+      ],
+      "planningOutputsOnly": [
+        "draft bbox corrections",
+        "review notes",
+        "future manifest patch proposal"
+      ]
+    },
+    "sceneCompositionLayoutEditorMode": {
+      "supports": [
+        "background source image",
+        "scene anchors",
+        "safe zones / negative-space zones",
+        "readability-risk zones",
+        "palette of selectable assets from pantry/manifest",
+        "placed entities with x/y/w/h",
+        "optional snap grid",
+        "import/export JSON",
+        "layers or entity groups",
+        "runtimePlacementApproval none by default"
+      ],
+      "planningOutputsOnly": [
+        "draft layout JSON",
+        "anchor-referenced composition notes",
+        "board-pixel planning records"
+      ]
+    },
+    "particleFxViewerMode": {
+      "supports": [
+        "preset id",
+        "effect family",
+        "adjustable parameters",
+        "preview defaults",
+        "emitter counts",
+        "canvas interaction / click casting",
+        "runtimeBehavior none-approved by default"
+      ],
+      "planningOutputsOnly": [
+        "draft particle preset JSON",
+        "preview notes"
+      ]
+    },
+    "futureAudioViewerPlaceholderMode": {
+      "supportsLater": [
+        "sound id",
+        "category",
+        "source/license metadata",
+        "preview playback",
+        "volume normalization metadata",
+        "runtimeTriggerApproval none by default"
+      ],
+      "planningOutputsOnly": [
+        "future audio inventory notes"
+      ]
+    }
+  },
+  "prototypeFeatureSources": [
+    {
+      "source": "assets/academy/evidence/**/**flipbook*.html",
+      "mode": "flipbookViewerMode",
+      "usefulFeatures": [
+        "canvas frame playback",
+        "FPS slider",
+        "play/pause",
+        "animation buttons",
+        "frame-rect driven rendering",
+        "loop/one-shot preview"
+      ],
+      "boundary": "Evidence prototypes only; not registry-fed canonical tools."
+    },
+    {
+      "source": "tools/glyphforge/prototypes/sprite-box-annotator-prototype-v0.1.html",
+      "mode": "regionAssetBrowserMode",
+      "usefulFeatures": [
+        "drag/resize bbox editing",
+        "snap grid",
+        "zoom/fit",
+        "labels",
+        "status select",
+        "notes",
+        "coordinate fields",
+        "JSON copy/import"
+      ],
+      "boundary": "Reference prototype only; future version must load manifests and preserve runtime boundaries."
+    },
+    {
+      "source": "tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html",
+      "mode": "sceneCompositionLayoutEditorMode",
+      "usefulFeatures": [
+        "entity/sticker palette",
+        "fixed board placement",
+        "drag placement with snap grid",
+        "Delete/Backspace removal",
+        "live layout JSON",
+        "copy-to-clipboard handoff",
+        "board-pixel x/y/w/h export"
+      ],
+      "boundary": "Reference prototype only; future version must load backgrounds, anchors, and assets from registries."
+    },
+    {
+      "source": "tools/glyphforge/prototypes/particle-fx-viewer-prototype-v0.1.html",
+      "mode": "particleFxViewerMode",
+      "usefulFeatures": [
+        "canvas FX preview",
+        "effect selector",
+        "click/touch casting",
+        "active counters",
+        "recipe-like effect definitions",
+        "generic emitter pattern"
+      ],
+      "boundary": "Reference prototype only; no runtime FX behavior approval."
+    }
+  ],
+  "safetyBoundaries": [
+    "H5.88B designs the unified shell only.",
+    "No tools are built.",
+    "No UI implementation is created.",
+    "No runtime wiring occurs.",
+    "No game code is changed.",
+    "No PNGs or images are changed.",
+    "No package or lock files are changed.",
+    "No dependencies are installed.",
+    "No manifests or docs folders are reorganized.",
+    "Prototype files remain preserved references, not canonical tools.",
+    "Scene Composition mode outputs draft layout JSON only; runtime placement remains unapproved.",
+    "Audio remains Tier 2.5."
+  ],
+  "implementationPhases": [
+    {
+      "phaseId": "H5.88B",
+      "label": "GlyphForge Unified Viewer Shell Design",
+      "status": "current-draft",
+      "goal": "Define shell modes, routing, contracts, and prototype feature sources."
+    },
+    {
+      "phaseId": "H5.88C",
+      "label": "GlyphForge Viewer Shell Static Prototype Plan",
+      "status": "recommended-next-if-building-tools",
+      "goal": "Plan a non-runtime static prototype for the shell before implementation."
+    },
+    {
+      "phaseId": "H5.88D",
+      "label": "Region Asset Browser / Sticker Picture Book Mode Implementation Plan",
+      "status": "future",
+      "goal": "Plan the first practical registry-fed tool mode around region/cleanup browsing."
+    },
+    {
+      "phaseId": "H5.90",
+      "label": "Manifest Folder Reorganization Dry Run",
+      "status": "parallel-future",
+      "goal": "Make path discovery resilient before reorganizing manifests."
+    },
+    {
+      "phaseId": "H6.0",
+      "label": "Button Goblin Clicker Runtime Visual Integration Plan",
+      "status": "future-runtime-planning",
+      "goal": "Plan first runtime visual integration after tool and shelf boundaries are reviewed."
+    }
+  ],
+  "firstImplementationRecommendation": {
+    "recommendedLane": "H5.88C — GlyphForge Viewer Shell Static Prototype Plan",
+    "recommendedFirstToolModeIfImplementationBegins": "Region Asset Browser / Sticker Picture Book Mode",
+    "reason": "Region Asset Browser can immediately browse the visual pantry, cleanup outputs, denied/deferred regions, and game asset sheets before runtime wiring starts. It also benefits most directly from the Sprite Box Annotator prototype while staying safely planning/review-only."
+  },
+  "nonGoals": [
+    "Do not build the tool suite.",
+    "Do not implement UI.",
+    "Do not wire runtime.",
+    "Do not modify game code.",
+    "Do not modify package/lock files.",
+    "Do not install dependencies.",
+    "Do not process images.",
+    "Do not modify PNGs.",
+    "Do not reorganize manifests/docs folders.",
+    "Do not move existing prototypes.",
+    "Do not convert prototypes into canonical implementations."
+  ],
+  "openQuestions": [
+    "Should H5.88C plan a static shell prototype before any implementation?",
+    "Should Region Asset Browser be the first implemented mode because it supports immediate pantry review?",
+    "Should the shell be single-file/offline HTML first, or a repo app surface later?",
+    "Should draft layout JSON from Scene Composition use board pixels, anchor-relative hints, or both?",
+    "Should the shell consume the pantry index directly or consume a generated tool-focused registry derived from the pantry index?",
+    "Where should canonical tool implementation live after prototypes: tools/glyphforge/viewer-shell, an app route, or generated static evidence tooling?"
+  ],
+  "notes": [
+    "Sprite Box Annotator asks what is this asset.",
+    "Sticker Book Editor asks where does it go.",
+    "Flipbook asks how does it move.",
+    "Particle Viewer asks what effect can we conjure.",
+    "GlyphForge shell asks which goblin bench gets the asset."
+  ]
+}
