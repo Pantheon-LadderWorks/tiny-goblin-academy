@@ -1535,11 +1535,14 @@ The GlyphForge tool lane remains paused after H5.88E, with the future return poi
 H5.88F — GlyphForge Region Browser Image Preview Plan
 ```
 
-After the font lane, the next planning priority is shelf cleanup:
+H5.91 completed the manifest shelf cleanup as an actual move pass, not just a dry run. It used a fresh inventory after H5.90 and moved all 61 tracked root JSON manifests with `git mv` into categorized shelves under `manifests/academy/` and `manifests/boot/`. Root `manifests/*.json` is now 0, `manifests/README.md` documents the new shelf map, and `manifests/academy/tooling/organization/academy.manifest-folder-reorganization-execution.json` records the move map and safety checks.
+
+H5.91 also updated active machine-readable references and validators for the nested structure, including the GlyphForge visual registry generator. Historical lane reports were not broadly rewritten; old flat paths in historical docs remain historical record until the docs reorganization/correction lanes handle them deliberately. No runtime/game code, PNGs/images, package/lock files, dependency installs, `docs/assets` reorganization, or stale overview-doc correction occurred.
+
+After the manifest shelf cleanup, the next planning priority is asset-doc shelf cleanup:
 
 ```text
-H5.91 — Manifest Folder Reorganization Dry Run
-H5.92 — Asset Docs Reorganization Dry Run
+H5.92 — Asset Docs Reorganization Move Pass
 H5.93 — Stale Overview Docs Correction
 ```
 

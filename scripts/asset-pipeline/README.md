@@ -25,7 +25,7 @@ node scripts/asset-pipeline/cli.mjs --help
 node scripts/asset-pipeline/cli.mjs list-lanes
 node scripts/asset-pipeline/cli.mjs list-cleanup-methods
 node scripts/asset-pipeline/cli.mjs inspect-source --source assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png
-node scripts/asset-pipeline/cli.mjs make-evidence --manifest manifests/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
+node scripts/asset-pipeline/cli.mjs make-evidence --manifest manifests/academy/shared/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
 node scripts/asset-pipeline/cli.mjs validate
 node scripts/asset-pipeline/cli.mjs validate-provenance
 node scripts/asset-pipeline/cli.mjs explain-provenance-contract
@@ -46,10 +46,10 @@ Indexes must match across all three outputs. SourceRects must not be trusted wit
 Use:
 
 ```powershell
-node scripts/asset-pipeline/cli.mjs make-evidence --manifest manifests/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
+node scripts/asset-pipeline/cli.mjs make-evidence --manifest manifests/academy/shared/academy.ui-hud.regions.json --out assets/academy/evidence/h5-2b
 ```
 
-The generator also supports the older Hub Icon source-region manifest shape at `manifests/hub.icon-regions.json` by normalizing it internally for evidence output.
+The generator also supports the older Hub Icon source-region manifest shape at `manifests/academy/hub/hub.icon-regions.json` by normalizing it internally for evidence output.
 
 The generated evidence is draft-review evidence only. It is not runtime approval.
 

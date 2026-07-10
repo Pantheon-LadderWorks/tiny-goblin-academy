@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
-const MANIFEST_PATH = path.join(REPO_ROOT, 'manifests', 'academy.games.json');
+const MANIFEST_PATH = path.join(REPO_ROOT, 'manifests', 'academy', 'core', 'academy.games.json');
 
 let errors = [];
 

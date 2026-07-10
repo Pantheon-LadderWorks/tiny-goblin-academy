@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const MANIFEST_PATH = path.resolve('manifests/hub.icon-regions.json');
-const ACADEMY_MANIFEST_PATH = path.resolve('manifests/academy.games.json');
+const MANIFEST_PATH = path.resolve('manifests/academy/hub/hub.icon-regions.json');
+const ACADEMY_MANIFEST_PATH = path.resolve('manifests/academy/core/academy.games.json');
 const RUNTIME_MIRROR_PATH = path.resolve('hub/src/data/hubIconRegions.ts');
 
 function loadRuntimeMirrorRegions() {

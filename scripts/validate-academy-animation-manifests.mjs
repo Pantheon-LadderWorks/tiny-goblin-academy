@@ -7,7 +7,7 @@ const repoRoot = process.cwd();
 
 const manifestSpecs = [
   {
-    path: 'manifests/academy.platformer-goblin-player.animations.json',
+    path: 'manifests/academy/creatures/academy.platformer-goblin-player.animations.json',
     domain: 'platformer-goblin-player',
     operationalType: 'character-animation-sheet'
   }

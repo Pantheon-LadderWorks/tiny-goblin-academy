@@ -7,9 +7,9 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
 
 const manifestPaths = [
-  'manifests/academy.shared-core.regions.json',
-  'manifests/academy.shared-fx.regions.json',
-  'manifests/academy.ui-hud.regions.json'
+  'manifests/academy/shared/academy.shared-core.regions.json',
+  'manifests/academy/shared/academy.shared-fx.regions.json',
+  'manifests/academy/shared/academy.ui-hud.regions.json'
 ];
 
 let hasErrors = false;

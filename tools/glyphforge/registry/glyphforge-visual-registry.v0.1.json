@@ -1,10 +1,10 @@
 {
   "schemaVersion": "0.1",
   "registryId": "glyphforge-visual-registry.v0.1",
-  "generatedAt": "2026-07-10T06:16:26.953Z",
+  "generatedAt": "2026-07-10T16:10:02.674Z",
   "generator": "tools/glyphforge/registry/generate-glyphforge-visual-registry.mjs",
-  "sourceOfTruth": "manifests/academy.visual-asset-pantry-index.json",
-  "sourceSha256": "7fe77470d1063cd4a464ce10473cc7cc2f8e15c031d2738fce7c6b70f844bc56",
+  "sourceOfTruth": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+  "sourceSha256": "1a5b414209901ac88f1fc1e14c647d49374785e10d31c0dd8c7bfc4e2f38e142",
   "status": "draft",
   "reviewStatus": "needs-human-review",
   "pipelineUse": "glyphforge-static-viewer-registry",
@@ -27,9 +27,9 @@
       "domain": "button-goblin-clicker",
       "assetFamily": "scene-anchor-background",
       "toolMode": "scene-composition-editor",
-      "manifestPath": "manifests/academy.button-goblin-clicker.background.scene-anchors.json",
+      "manifestPath": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
       "manifestPaths": [
-        "manifests/academy.button-goblin-clicker.background.scene-anchors.json"
+        "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json"
       ],
       "sourcePath": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
       "derivedPath": null,
@@ -69,9 +69,9 @@
       "domain": "potion-sorter",
       "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.potion-sorter.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.potion-sorter.cleanup-candidate.json"
+        "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
       "derivedPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
@@ -111,9 +111,9 @@
       "domain": "dice-duel-tavern",
       "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.dice-duel-tavern.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.dice-duel-tavern.cleanup-candidate.json"
+        "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
       "derivedPath": "assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png",
@@ -147,9 +147,9 @@
       "domain": "card-goblin-duel",
       "assetFamily": "card-frame-sheet-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.card-goblin-duel.card-frames.cleanup-candidate.json"
+        "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
       "derivedPath": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
@@ -183,9 +183,9 @@
       "domain": "card-goblin-duel",
       "assetFamily": "ui-token-sheet-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json"
+        "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
       "derivedPath": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png",
@@ -219,9 +219,9 @@
       "domain": "tiny-farm-day",
       "assetFamily": "static-prop-ui-sheet-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.farm-settlement.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.farm-settlement.cleanup-candidate.json"
+        "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
       "derivedPath": "assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png",
@@ -265,9 +265,9 @@
       "domain": "pet-campfire",
       "assetFamily": "static-props-icons-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json"
+        "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
       "derivedPath": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
@@ -301,9 +301,9 @@
       "domain": "pet-campfire",
       "assetFamily": "pose-state-symbol-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+      "manifestPath": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json"
+        "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
       "derivedPath": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png",
@@ -337,9 +337,9 @@
       "domain": "pet-campfire",
       "assetFamily": "scene-anchor-background",
       "toolMode": "scene-composition-editor",
-      "manifestPath": "manifests/academy.pet-campfire.background.scene-anchors.json",
+      "manifestPath": "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json",
       "manifestPaths": [
-        "manifests/academy.pet-campfire.background.scene-anchors.json"
+        "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json"
       ],
       "sourcePath": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
       "derivedPath": null,
@@ -372,9 +372,9 @@
       "domain": "one-room-platformer",
       "assetFamily": "platformer-construction-sheet",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.platformer-construction-pieces.regions.json",
+      "manifestPath": "manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json",
       "manifestPaths": [
-        "manifests/academy.platformer-construction-pieces.regions.json"
+        "manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json"
       ],
       "sourcePath": "assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.2.png",
       "derivedPath": "assets/academy/games/one-room-platformer/tga-one-room-platformer-construction-pieces-cleaned-v0.2.png",
@@ -409,9 +409,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "terrain-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.topdown.terrain.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.topdown.terrain.cleanup-candidate.json"
+        "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
       "derivedPath": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
@@ -453,9 +453,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "true-alpha-wall-boundary-sheet",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.topdown.walls.true-alpha-regions.json",
+      "manifestPath": "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
       "manifestPaths": [
-        "manifests/academy.topdown.walls.true-alpha-regions.json"
+        "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json"
       ],
       "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
       "derivedPath": null,
@@ -489,9 +489,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "vertical-wall-cleanup-candidate",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.topdown.walls.vertical.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.topdown.walls.vertical.cleanup-candidate.json"
+        "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
       "derivedPath": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
@@ -525,9 +525,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "nonfx-object-cleanup-candidate",
       "toolMode": "particle-fx-viewer",
-      "manifestPath": "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+      "manifestPath": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json"
+        "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
       "derivedPath": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
@@ -561,9 +561,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "historical-nonfx-object-cleanup-fallback",
       "toolMode": "particle-fx-viewer",
-      "manifestPath": "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "manifestPath": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy.topdown.objects.nonfx-cleanup-candidate.json"
+        "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
       "derivedPath": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
@@ -616,9 +616,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "future-floor-tilesheets-batch-regions",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.topdown.floor-tilesheets.future.regions.json",
+      "manifestPath": "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
       "manifestPaths": [
-        "manifests/academy.topdown.floor-tilesheets.future.regions.json"
+        "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json"
       ],
       "sourcePath": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/",
       "derivedPath": null,
@@ -652,9 +652,9 @@
       "domain": "dungeon-platformer",
       "assetFamily": "mixed-sheet-region-manifest",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.dungeon-platformer.regions.json",
+      "manifestPath": "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json",
       "manifestPaths": [
-        "manifests/academy.dungeon-platformer.regions.json"
+        "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json"
       ],
       "sourcePath": "assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
       "derivedPath": null,
@@ -689,9 +689,9 @@
       "domain": "shared",
       "assetFamily": "shared-core",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.shared-core.regions.json",
+      "manifestPath": "manifests/academy/shared/academy.shared-core.regions.json",
       "manifestPaths": [
-        "manifests/academy.shared-core.regions.json"
+        "manifests/academy/shared/academy.shared-core.regions.json"
       ],
       "sourcePath": "assets/academy/shared-core/tga-shared-core-sheet-v0.1.png",
       "derivedPath": "assets/academy/derived-cleaned/shared-core/tga-shared-core-sheet-cleaned-preview-v0.1.png",
@@ -724,9 +724,9 @@
       "domain": "shared",
       "assetFamily": "ui-hud",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.ui-hud.regions.json",
+      "manifestPath": "manifests/academy/shared/academy.ui-hud.regions.json",
       "manifestPaths": [
-        "manifests/academy.ui-hud.regions.json"
+        "manifests/academy/shared/academy.ui-hud.regions.json"
       ],
       "sourcePath": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
       "derivedPath": "assets/academy/derived-cleaned/ui/tga-ui-hud-sheet-cleaned-preview-v0.1.png",
@@ -759,9 +759,9 @@
       "domain": "shared",
       "assetFamily": "shared-fx",
       "toolMode": "particle-fx-viewer",
-      "manifestPath": "manifests/academy.shared-fx.regions.json",
+      "manifestPath": "manifests/academy/shared/academy.shared-fx.regions.json",
       "manifestPaths": [
-        "manifests/academy.shared-fx.regions.json"
+        "manifests/academy/shared/academy.shared-fx.regions.json"
       ],
       "sourcePath": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
       "derivedPath": null,
@@ -797,9 +797,9 @@
       "domain": "creatures",
       "assetFamily": "goblin-expression-action",
       "toolMode": "region-asset-browser",
-      "manifestPath": "manifests/academy.goblin-expression-action.regions.json",
+      "manifestPath": "manifests/academy/creatures/academy.goblin-expression-action.regions.json",
       "manifestPaths": [
-        "manifests/academy.goblin-expression-action.regions.json"
+        "manifests/academy/creatures/academy.goblin-expression-action.regions.json"
       ],
       "sourcePath": "assets/academy/creatures/goblin/tga-goblin-expression-action-sheet-v0.1.png",
       "derivedPath": null,
@@ -832,9 +832,9 @@
       "domain": "creatures",
       "assetFamily": "platformer-goblin-player-animation",
       "toolMode": "flipbook-viewer",
-      "manifestPath": "manifests/academy.platformer-goblin-player.animations.json",
+      "manifestPath": "manifests/academy/creatures/academy.platformer-goblin-player.animations.json",
       "manifestPaths": [
-        "manifests/academy.platformer-goblin-player.animations.json"
+        "manifests/academy/creatures/academy.platformer-goblin-player.animations.json"
       ],
       "sourcePath": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
       "derivedPath": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png",
@@ -867,9 +867,9 @@
       "domain": "creatures",
       "assetFamily": "platformer-training-dummy-enemy-animation",
       "toolMode": "flipbook-viewer",
-      "manifestPath": "manifests/academy.platformer-training-dummy-enemy.animations.json",
+      "manifestPath": "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json",
       "manifestPaths": [
-        "manifests/academy.platformer-training-dummy-enemy.animations.json"
+        "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json"
       ],
       "sourcePath": "assets/academy/creatures/training-dummy/tga-platformer-training-dummy-enemy-concept-v0.1.png",
       "derivedPath": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
@@ -902,12 +902,12 @@
       "domain": "creatures",
       "assetFamily": "topdown-slime-and-soldier-animation-candidates",
       "toolMode": "flipbook-viewer",
-      "manifestPath": "manifests/academy.topdown-slime-player.animations.json",
+      "manifestPath": "manifests/academy/creatures/academy.topdown-slime-player.animations.json",
       "manifestPaths": [
-        "manifests/academy.topdown-slime-player.animations.json",
-        "manifests/academy.topdown-slime-v2-action.animations.json",
-        "manifests/academy.topdown-slime-v2-idle-move.animations.json",
-        "manifests/academy.topdown-soldier-enemy.animations.json"
+        "manifests/academy/creatures/academy.topdown-slime-player.animations.json",
+        "manifests/academy/creatures/academy.topdown-slime-v2-action.animations.json",
+        "manifests/academy/creatures/academy.topdown-slime-v2-idle-move.animations.json",
+        "manifests/academy/creatures/academy.topdown-soldier-enemy.animations.json"
       ],
       "sourcePath": "assets/academy/creatures/slime/tga-topdown-slime-player-v0.1.png",
       "derivedPath": "assets/academy/creatures/slime/tga-topdown-slime-player-cleaned-v0.1.png",

@@ -77,7 +77,7 @@ def main():
     original_path = 'assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png'
     derived_dir = 'assets/academy/hub/derived'
     derived_path = os.path.join(derived_dir, 'tga-hub-game-icons-cleaned-v0.1.png')
-    manifest_path = 'manifests/hub.icon-regions.json'
+    manifest_path = 'manifests/academy/hub/hub.icon-regions.json'
     
     evidence_dir = 'hub/evidence/screenshots/h2-5-checkerboard-cleanup'
     

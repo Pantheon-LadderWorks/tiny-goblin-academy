@@ -1,0 +1,3973 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "domain": "card-goblin-duel",
+  "operationalType": "functional-surface-slot-map",
+  "sourceRegionManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.regions.json",
+  "sourceCleanupManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+  "derivedSheet": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
+  "reviewStatus": "human-review-passed",
+  "runtimeEligibility": "not-runtime-approved",
+  "slotApproval": "none",
+  "coordinatePolicy": "surface-relative-percent-rectangles-only-no-global-runtime-coordinates",
+  "fitPolicy": {
+    "overflowRisk": "review-required",
+    "scaleUpAllowedAsPlanningOption": true,
+    "scaleUpRuntimeApproval": "none",
+    "notes": "Overflow can be addressed by scaling a card/surface instance up within future view/playfield budget, by scaling content down, by wrapping/truncating text, or by reducing content density. H5.38 approves no runtime scaling values."
+  },
+  "surfaces": [
+    {
+      "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card",
+      "label": "Blank parchment card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.empty-card-surface.blank-parchment-card",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.empty-card-surface.blank-parchment-card.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame",
+      "label": "Green banner card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.green-banner-front-frame",
+      "surfaceType": "front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Front frame with banner/portrait/body candidates.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame",
+      "label": "Teal banner card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.teal-banner-front-frame",
+      "surfaceType": "front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Front frame with banner/portrait/body candidates.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame",
+      "label": "Tan banner card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.tan-banner-front-frame",
+      "surfaceType": "front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Front frame with banner/portrait/body candidates.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame",
+      "label": "Teal-edged tan card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.teal-edged-tan-front-frame",
+      "surfaceType": "front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Front frame with banner/portrait/body candidates.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame",
+      "label": "Glowing highlighted card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.highlighted-card-state.glowing-highlight-front-frame",
+      "surfaceType": "highlighted-front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.active-glow",
+          "label": "Active/highlight glow zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "highlight-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface active/glow state overlay."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Glow/highlight state retained as visual state surface.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame",
+      "label": "Gray disabled card front frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.disabled-card-state.gray-disabled-front-frame",
+      "surfaceType": "disabled-front-card-frame",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.status",
+          "label": "Status overlay corner",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.14,
+            "hPct": 0.12
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Status badge that should not cover frame edges."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.cost",
+          "label": "Cost/value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.8,
+            "yPct": 0.05,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small value/cost badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.portrait",
+          "label": "Portrait / large icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.2,
+            "yPct": 0.13,
+            "wPct": 0.6,
+            "hPct": 0.4
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Upper oval/front-face feature area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.title-banner",
+          "label": "Banner title area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.54,
+            "wPct": 0.74,
+            "hPct": 0.15
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Lower banner/nameplate area."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.body",
+          "label": "Short body text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.72,
+            "wPct": 0.7,
+            "hPct": 0.17
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small rules/effect text candidate; likely tight at small scale."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame selection/active/hover overlay zone."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.disabled",
+          "label": "Disabled overlay zone",
+          "slotType": "disabled-overlay-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "disabled-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-frame disabled/locked-out overlay."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Disabled gray frame is accepted cleanup but remains visual-risk history.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.locked-chain-card-back",
+      "label": "Locked chain card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.locked-chain-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.locked-chain-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.locked-chain-card-back.locked",
+          "label": "Locked/sealed overlay zone",
+          "slotType": "locked-state-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "locked-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full card-back sealed/locked-state overlay."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.desk-card-back",
+      "label": "Desk illustration card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.desk-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.desk-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.goblin-pattern-card-back",
+      "label": "Goblin pattern card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.goblin-pattern-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.goblin-pattern-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.arcane-orb-card-back",
+      "label": "Arcane orb card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.arcane-orb-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.arcane-orb-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.monster-card-back",
+      "label": "Monster card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.monster-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.monster-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.scratched-wood-card-back",
+      "label": "Scratched wood card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.scratched-wood-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.scratched-wood-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.treasure-laurel-card-back",
+      "label": "Treasure laurel card back",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.treasure-laurel-card-back",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.treasure-laurel-card-back.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.green-deck-stack",
+      "label": "Green deck stack",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.green-deck-stack",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.green-deck-stack.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.green-deck-stack.count",
+          "label": "Deck count badge zone",
+          "slotType": "deck-count-badge-zone",
+          "relativeRect": {
+            "xPct": 0.66,
+            "yPct": 0.68,
+            "wPct": 0.25,
+            "hPct": 0.2
+          },
+          "contentKind": "number-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Optional deck/card-count badge candidate."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-back.fanned-goblin-card-backs",
+      "label": "Fanned goblin card backs",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-back.fanned-goblin-card-backs",
+      "surfaceType": "card-back-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.fanned-goblin-card-backs.identity",
+          "label": "Card-back identity zone",
+          "slotType": "card-back-identity-zone",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.12,
+            "wPct": 0.72,
+            "hPct": 0.7
+          },
+          "contentKind": "back-art-or-symbol",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Central card-back identity/symbol zone."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-back.fanned-goblin-card-backs.fan-status",
+          "label": "Fan group status marker",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.68,
+            "yPct": 0.05,
+            "wPct": 0.22,
+            "hPct": 0.18
+          },
+          "contentKind": "small-icon-or-count",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Optional grouped-card status or count marker."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Card-back/state surface; not a front-face text layout by default.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.board-slot.green-board-card-slot",
+      "label": "Green board card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.board-slot.green-board-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.green-board-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.green-board-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.board-slot.gray-board-card-slot",
+      "label": "Gray board card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.board-slot.gray-board-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.gray-board-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.gray-board-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.board-slot.tan-board-card-slot",
+      "label": "Tan board card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.board-slot.tan-board-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.tan-board-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.tan-board-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.board-slot.teal-board-card-slot",
+      "label": "Teal board card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.board-slot.teal-board-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.teal-board-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.board-slot.teal-board-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-empty-card-slot",
+      "label": "Glowing empty card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.highlighted-card-state.glowing-empty-card-slot",
+      "surfaceType": "highlighted-empty-slot",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-empty-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-empty-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-empty-card-slot.highlight",
+          "label": "Valid target highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "highlight-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot highlight/active target zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Highlighted slot surface; useful for valid target/selection feedback.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.highlighted-card-state.gold-glowing-empty-card-slot",
+      "label": "Gold glowing empty card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.highlighted-card-state.gold-glowing-empty-card-slot",
+      "surfaceType": "highlighted-empty-slot",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.gold-glowing-empty-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.gold-glowing-empty-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.highlighted-card-state.gold-glowing-empty-card-slot.highlight",
+          "label": "Valid target highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "highlight-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot highlight/active target zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Highlighted slot surface; useful for valid target/selection feedback.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-slot.red-corner-card-slot",
+      "label": "Red corner card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-slot.red-corner-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-slot.red-corner-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-slot.red-corner-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-slot.gray-gold-corner-card-slot",
+      "label": "Gray/gold corner card slot",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-slot.gray-gold-corner-card-slot",
+      "surfaceType": "board-or-card-slot-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-slot.gray-gold-corner-card-slot.drop-zone",
+          "label": "Empty drop / occupancy zone",
+          "slotType": "empty-drop-zone",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.7
+          },
+          "contentKind": "card-placement-target",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Card placement/occupancy aperture; relative only, not runtime coordinates."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-slot.gray-gold-corner-card-slot.occupancy",
+          "label": "Board occupancy state zone",
+          "slotType": "board-occupancy-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "state-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full slot state overlay candidate for occupied/valid/invalid states."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Slot/drop-zone surface; defines where a future card may visually occupy the slot.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card",
+      "label": "Large blank vertical card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.overlay-ready-card-surface.large-blank-vertical-card",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.large-blank-vertical-card.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface",
+      "label": "Small horizontal card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.overlay-ready-card-surface.small-horizontal-card-surface",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.small-horizontal-card-surface.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface",
+      "label": "Aged parchment card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.overlay-ready-card-surface.aged-parchment-card-surface",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.aged-parchment-card-surface.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card",
+      "label": "Gold bordered blank card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.overlay-ready-card-surface.gold-bordered-blank-card",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.gold-bordered-blank-card.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface",
+      "label": "Ornate blank card surface",
+      "sourceRegionId": "card-goblin-duel.card-frames.overlay-ready-card-surface.ornate-blank-card-surface",
+      "surfaceType": "blank-overlay-ready-card-surface",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.status",
+          "label": "Status / rarity overlay",
+          "slotType": "status-overlay-slot",
+          "relativeRect": {
+            "xPct": 0.05,
+            "yPct": 0.04,
+            "wPct": 0.15,
+            "hPct": 0.13
+          },
+          "contentKind": "small-icon-or-status-badge",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small top-left status marker candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.cost",
+          "label": "Cost / value badge",
+          "slotType": "cost-or-value-badge-slot",
+          "relativeRect": {
+            "xPct": 0.78,
+            "yPct": 0.04,
+            "wPct": 0.17,
+            "hPct": 0.14
+          },
+          "contentKind": "number-or-small-icon",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Top-right cost/value badge candidate."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.title",
+          "label": "Title / name area",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.08,
+            "wPct": 0.7,
+            "hPct": 0.12
+          },
+          "contentKind": "short-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Short card title or type label; overflow may need surface scaling or truncation."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.art",
+          "label": "Main art / icon area",
+          "slotType": "art-or-icon-slot",
+          "relativeRect": {
+            "xPct": 0.16,
+            "yPct": 0.22,
+            "wPct": 0.68,
+            "hPct": 0.34
+          },
+          "contentKind": "icon-or-future-art",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Primary symbolic art/icon region; future full card art remains optional."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.body",
+          "label": "Rules / effect text area",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.62,
+            "wPct": 0.74,
+            "hPct": 0.25
+          },
+          "contentKind": "short-body-text",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Small body copy/effect text candidate; high overflow risk on small cards."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.overlay-ready-card-surface.ornate-blank-card-surface.selection",
+          "label": "Selection / hover highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Full-surface selection/hover/active highlight zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Blank/overlay-ready card surface; interior is meaningful and should not be treated as empty transparency.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.gold-ornate-open-frame",
+      "label": "Gold ornate open card frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.gold-ornate-open-frame",
+      "surfaceType": "transparent-open-frame-container",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.gold-ornate-open-frame.mount",
+          "label": "Child card mount zone",
+          "slotType": "child-card-mount-zone",
+          "relativeRect": {
+            "xPct": 0.12,
+            "yPct": 0.1,
+            "wPct": 0.76,
+            "hPct": 0.8
+          },
+          "contentKind": "mounted-card-or-child-surface",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Mount/anchor zone for a child card or content surface. This replaces generic title/body/art slots."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.gold-ornate-open-frame.window",
+          "label": "Content window zone",
+          "slotType": "content-window-zone",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.18,
+            "wPct": 0.64,
+            "hPct": 0.62
+          },
+          "contentKind": "transparent-content-window",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Transparent or open interior area. The frame does not own text content here."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.gold-ornate-open-frame.frame-decoration",
+          "label": "Frame decoration zone",
+          "slotType": "frame-decoration-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "frame-art-and-border",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Visual frame/border/ornament zone for decorations and frame state."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.gold-ornate-open-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "selection-or-hover-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Whole-frame selection/hover target zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Open frame with transparent aperture; slot content may appear beneath or inside the frame.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling.",
+        "H5.39 correction: transparent/open frames are container or mount surfaces, not card-face text surfaces.",
+        "Removed generic card-face slot template: status-overlay-slot, cost-or-value-badge-slot, title-slot, art-or-icon-slot, body-text-slot, selection-highlight-zone."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.wood-open-card-frame",
+      "label": "Wood open card frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.wood-open-card-frame",
+      "surfaceType": "transparent-open-frame-container",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.wood-open-card-frame.mount",
+          "label": "Child card mount zone",
+          "slotType": "child-card-mount-zone",
+          "relativeRect": {
+            "xPct": 0.12,
+            "yPct": 0.1,
+            "wPct": 0.76,
+            "hPct": 0.8
+          },
+          "contentKind": "mounted-card-or-child-surface",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Mount/anchor zone for a child card or content surface. This replaces generic title/body/art slots."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.wood-open-card-frame.window",
+          "label": "Content window zone",
+          "slotType": "content-window-zone",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.18,
+            "wPct": 0.64,
+            "hPct": 0.62
+          },
+          "contentKind": "transparent-content-window",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Transparent or open interior area. The frame does not own text content here."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.wood-open-card-frame.frame-decoration",
+          "label": "Frame decoration zone",
+          "slotType": "frame-decoration-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "frame-art-and-border",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Visual frame/border/ornament zone for decorations and frame state."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.wood-open-card-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "selection-or-hover-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Whole-frame selection/hover target zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Open frame with transparent aperture; slot content may appear beneath or inside the frame.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling.",
+        "H5.39 correction: transparent/open frames are container or mount surfaces, not card-face text surfaces.",
+        "Removed generic card-face slot template: status-overlay-slot, cost-or-value-badge-slot, title-slot, art-or-icon-slot, body-text-slot, selection-highlight-zone."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    },
+    {
+      "id": "card-goblin-duel.functional-surface.card-front-frame.corner-ornate-open-frame",
+      "label": "Corner ornate open card frame",
+      "sourceRegionId": "card-goblin-duel.card-frames.card-front-frame.corner-ornate-open-frame",
+      "surfaceType": "transparent-open-frame-container",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "slots": [
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.corner-ornate-open-frame.mount",
+          "label": "Child card mount zone",
+          "slotType": "child-card-mount-zone",
+          "relativeRect": {
+            "xPct": 0.12,
+            "yPct": 0.1,
+            "wPct": 0.76,
+            "hPct": 0.8
+          },
+          "contentKind": "mounted-card-or-child-surface",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Mount/anchor zone for a child card or content surface. This replaces generic title/body/art slots."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.corner-ornate-open-frame.window",
+          "label": "Content window zone",
+          "slotType": "content-window-zone",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.18,
+            "wPct": 0.64,
+            "hPct": 0.62
+          },
+          "contentKind": "transparent-content-window",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Transparent or open interior area. The frame does not own text content here."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.corner-ornate-open-frame.frame-decoration",
+          "label": "Frame decoration zone",
+          "slotType": "frame-decoration-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "frame-art-and-border",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Visual frame/border/ornament zone for decorations and frame state."
+        },
+        {
+          "id": "card-goblin-duel.functional-surface.card-front-frame.corner-ornate-open-frame.selection",
+          "label": "Selection highlight zone",
+          "slotType": "selection-highlight-zone",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "contentKind": "selection-or-hover-overlay",
+          "usage": "draft-review",
+          "reviewStatus": "needs-human-review",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density"
+            ],
+            "scaleUpAllowed": true,
+            "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
+          },
+          "notes": "Whole-frame selection/hover target zone."
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "surface-dependent-review-required",
+        "scaleUpPolicy": "allowed-as-future-layout-option-within-view-budget",
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "If title/body/icon content overflows, future layout may scale the card or surface instance up within available view/playfield budget before reducing content density. This is planning guidance only."
+      },
+      "notes": [
+        "Open frame with transparent aperture; slot content may appear beneath or inside the frame.",
+        "All slot rectangles are relative to the mapped surface bounds, not global runtime coordinates.",
+        "Overflow/fit policy may allow bounded card/surface scale-up in future layout planning, but H5.38 approves no runtime scaling.",
+        "H5.39 correction: transparent/open frames are container or mount surfaces, not card-face text surfaces.",
+        "Removed generic card-face slot template: status-overlay-slot, cost-or-value-badge-slot, title-slot, art-or-icon-slot, body-text-slot, selection-highlight-zone."
+      ],
+      "correctionStatus": "h5-39-surface-type-aware-corrected-draft"
+    }
+  ],
+  "notes": [
+    "H5.38 introduces functional surface slot mapping as a planning layer after region mapping and cleanup.",
+    "Card frames are the first applied pilot; UI/HUD panels, dialogue panels, speech bubbles, buttons, progress bars, badges, and status panels are future targets.",
+    "Region mapping identifies an asset; cleanup prepares a visual candidate; functional slot mapping defines where dynamic content may later belong inside the asset.",
+    "All slots use relativeRect percentages inside a surface, not global runtime coordinates.",
+    "A bounded scale-up policy is recorded as a future fit response to overflow, but runtime scaling is not approved.",
+    "No runtime UI, text rendering, card gameplay, or Card Goblin Duel wiring is approved.",
+    "H5.39 corrected the first H5.38 pilot.",
+    "Functional slot mapping must be surface-type aware.",
+    "Transparent frames and slots are containers/mounts, not card text surfaces.",
+    "Future UI/HUD slot mapping must avoid generic slot templates and use surface-specific semantics.",
+    "Runtime UI remains unapproved.",
+    "H5.39 human review passed in H5.40.",
+    "Corrected surface-type-aware slot semantics accepted.",
+    "32 surfaces and 116 corrected draft slots accepted for future planning.",
+    "Transparent/open frame correction accepted.",
+    "Runtime UI, card gameplay, text rendering, and visual integration remain deferred.",
+    "Future UI/HUD slot mapping should use the H5.39 surface-type-aware approach."
+  ],
+  "correctedBy": "H5.39 Card Frame Functional Slot Correction Pass",
+  "correctionSummary": {
+    "sourcePilot": "H5.38 Card Frame Functional Slot Mapping Pilot",
+    "correctionPass": "H5.39 Card Frame Functional Slot Correction Pass",
+    "beforeSlotCount": 122,
+    "afterSlotCount": 116,
+    "correctedSurfaceCount": 3,
+    "correctedSurfaces": [
+      {
+        "id": "card-goblin-duel.card-frames.card-front-frame.gold-ornate-open-frame",
+        "before": 6,
+        "after": 4,
+        "beforeTypes": [
+          "status-overlay-slot",
+          "cost-or-value-badge-slot",
+          "title-slot",
+          "art-or-icon-slot",
+          "body-text-slot",
+          "selection-highlight-zone"
+        ],
+        "afterTypes": [
+          "child-card-mount-zone",
+          "content-window-zone",
+          "frame-decoration-zone",
+          "selection-highlight-zone"
+        ]
+      },
+      {
+        "id": "card-goblin-duel.card-frames.card-front-frame.wood-open-card-frame",
+        "before": 6,
+        "after": 4,
+        "beforeTypes": [
+          "status-overlay-slot",
+          "cost-or-value-badge-slot",
+          "title-slot",
+          "art-or-icon-slot",
+          "body-text-slot",
+          "selection-highlight-zone"
+        ],
+        "afterTypes": [
+          "child-card-mount-zone",
+          "content-window-zone",
+          "frame-decoration-zone",
+          "selection-highlight-zone"
+        ]
+      },
+      {
+        "id": "card-goblin-duel.card-frames.card-front-frame.corner-ornate-open-frame",
+        "before": 6,
+        "after": 4,
+        "beforeTypes": [
+          "status-overlay-slot",
+          "cost-or-value-badge-slot",
+          "title-slot",
+          "art-or-icon-slot",
+          "body-text-slot",
+          "selection-highlight-zone"
+        ],
+        "afterTypes": [
+          "child-card-mount-zone",
+          "content-window-zone",
+          "frame-decoration-zone",
+          "selection-highlight-zone"
+        ]
+      }
+    ],
+    "doctrine": [
+      "Functional slot mapping must be surface-type aware.",
+      "Transparent/open frames and board slots are containers or mounts, not card text surfaces.",
+      "Card backs, deck stacks, board slots, front frames, and blank card faces do not share one generic slot template.",
+      "This correction is draft-only and does not approve runtime UI or card gameplay wiring."
+    ]
+  },
+  "pipelineUse": "accepted-for-draft-functional-slot-planning",
+  "humanReview": {
+    "reviewId": "H5.40",
+    "decision": "passed",
+    "reviewedCommit": "a996a1a docs: correct card frame functional slot mapping",
+    "acceptedFor": "draft-functional-slot-planning-only",
+    "surfacesAccepted": 32,
+    "slotsAccepted": 116,
+    "runtimeBoundary": "not-runtime-approved",
+    "notes": [
+      "H5.39 human review passed in H5.40.",
+      "Corrected surface-type-aware slot semantics accepted.",
+      "32 surfaces and 116 corrected draft slots accepted for future planning.",
+      "Transparent/open frame correction accepted.",
+      "Runtime UI, card gameplay, text rendering, and visual integration remain deferred.",
+      "Future UI/HUD slot mapping should use the H5.39 surface-type-aware approach."
+    ]
+  }
+}

@@ -1,0 +1,818 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "domain": "pet-campfire",
+  "operationalType": "draft-layout-composition-plan",
+  "sourceSceneAnchorManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json",
+  "sourceEmberPupPlacementGrammar": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.state-placement-plan.json",
+  "sourceUiPropCarePlacementGrammar": "manifests/academy/games/pet-campfire/academy.pet-campfire.ui-prop-care-placement-plan.json",
+  "sourceEmberPupCleanupManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+  "sourceStaticPropsIconsCleanupManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+  "reviewStatus": "human-review-passed",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "none",
+  "coordinatePolicy": "anchor-references-only-no-exact-runtime-coordinates",
+  "compositions": [
+    {
+      "id": "pet-campfire.layout.default-idle-campsite",
+      "label": "Default Idle Campsite",
+      "scenarioType": "default-idle",
+      "emotionalIntent": "calm baseline; campsite feels warm but uncluttered",
+      "primaryPupStateSymbols": [
+        "idle / neutral"
+      ],
+      "secondaryPupStateSymbols": [
+        "happy / alert as optional variation"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.central-fire-focal"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "optional tiny happy/neutral local feedback only if needed"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.left-tent-care"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "uiStatusSurfaceHint": "none or very light local status; avoid permanent HUD clutter",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.front-clearing",
+          "relativeHint": "center-lower area of anchor; keep pup grounded and off the direct fire focal point",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "local-status-bubble",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "optional small bubble only when state communication is needed",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "default scene should breathe; do not prove every asset exists at once",
+        "pup should be readable against lower clearing contrast"
+      ],
+      "rejectedPatterns": [
+        "generic accepted-atlas dump",
+        "permanent icon row in lower scene"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.idle-neutral",
+        "pet-campfire.placement.ember-pup.happy-alert",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Use this as the quiet baseline composition for future layout comparison."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.happy-greeting-campsite",
+      "label": "Happy Greeting Campsite",
+      "scenarioType": "greeting-feedback",
+      "emotionalIntent": "welcoming, playful, and readable at first glance",
+      "primaryPupStateSymbols": [
+        "happy / wave / alert"
+      ],
+      "secondaryPupStateSymbols": [
+        "jumping / excited pose-symbol"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.right-sign-banner"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "sparkles",
+        "happy feedback",
+        "small thought cloud only if it reads cleanly"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "uiStatusSurfaceHint": "local feedback bubble near pup; upper UI-safe area only for persistent status",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.front-clearing",
+          "relativeHint": "lower visible area with enough negative space for ears/tail silhouette",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "local-status-bubble",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "above or near pup by anchor relationship only; no exact coordinate approval",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "sparkles must not eat the pup outline",
+        "avoid lantern glow because small feedback symbols become muddy there"
+      ],
+      "rejectedPatterns": [
+        "celebration icons stacked over sign/banner by default",
+        "atlas strip across bottom foreground"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.happy-alert",
+        "pet-campfire.placement.ember-pup.jump-excited",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Use as a positive feedback / greeting composition candidate, not a permanent state machine."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.hungry-care-campsite",
+      "label": "Hungry Care Campsite",
+      "scenarioType": "care-need-food",
+      "emotionalIntent": "care request; pup wants food without turning the scene into UI soup",
+      "primaryPupStateSymbols": [
+        "eating / play-bow / food-focused"
+      ],
+      "secondaryPupStateSymbols": [
+        "idle / neutral"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "food bowl",
+        "treat",
+        "bone",
+        "optional thought cloud"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "uiStatusSurfaceHint": "food need can be a local bubble or care-zone prop relationship; do not park icons in upper sky unless UI explicitly needs it",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "near care cluster but clear of tent edge; anchor relationship only",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "near pup/care area; keep bowl/treat visually grounded",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "local-status-bubble",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "only if food need must be visible as status",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "care props should explain the state without needing text",
+        "avoid sign/upper-sky generic icon dumping"
+      ],
+      "rejectedPatterns": [
+        "food/water/treat/bone all shown at once without role",
+        "care icon row detached from pup"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.eating",
+        "pet-campfire.placement.ember-pup.idle-neutral",
+        "pet-campfire.placement.ui-prop.care-bowls-feeding",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Composition should feel like a care moment, not an inventory display."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.thirsty-care-campsite",
+      "label": "Thirsty Care Campsite",
+      "scenarioType": "care-need-water",
+      "emotionalIntent": "clear water need with low visual clutter",
+      "primaryPupStateSymbols": [
+        "drinking"
+      ],
+      "secondaryPupStateSymbols": [
+        "idle / neutral"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "water bowl",
+        "water droplet icon",
+        "optional thought cloud"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.right-sign-banner"
+      ],
+      "uiStatusSurfaceHint": "water droplet may read as local bubble or upper UI-safe status; prefer local if it points to the pup state",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "care cluster or front clearing, clear of fire glow",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "water bowl near care/pup relationship",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "local-status-bubble",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "droplet status can float as UI hint only by anchor reference",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "avoid fire overlap because water/fire semantics fight and glow hurts small icon reads",
+        "keep droplet away from lantern clutter"
+      ],
+      "rejectedPatterns": [
+        "water icon placed over campfire focal center",
+        "water need hidden in foreground rocks"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.drinking",
+        "pet-campfire.placement.ember-pup.idle-neutral",
+        "pet-campfire.placement.ui-prop.care-bowls-feeding",
+        "pet-campfire.placement.ui-prop.need-status-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "This is the clean water counterpart to hungry-care."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.sleepy-rest-campsite",
+      "label": "Sleepy Rest Campsite",
+      "scenarioType": "rest-sleep",
+      "emotionalIntent": "quiet, tucked, low-energy rest scene",
+      "primaryPupStateSymbols": [
+        "sleeping / resting"
+      ],
+      "secondaryPupStateSymbols": [
+        "sad / tired"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "blanket / bedroll",
+        "sleep icon",
+        "moon/night icon"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.left-tent-care"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "uiStatusSurfaceHint": "sleep/moon icon can use local bubble or upper UI-safe surface; keep it quiet, not celebratory",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "tucked into care cluster or quiet clearing edge",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "bedroll/blanket relationship, anchor only",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "ui-status-surface",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "moon/sleep status if persistent UI is needed",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "rest composition should avoid central flame dominance",
+        "foreground clutter can make a sleeping pup look buried"
+      ],
+      "rejectedPatterns": [
+        "sleep icon over central fire as default",
+        "celebration sparkles in rest state"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.sleeping-resting",
+        "pet-campfire.placement.ember-pup.sad-tired",
+        "pet-campfire.placement.ui-prop.rest-care-props",
+        "pet-campfire.placement.ui-prop.time-warmth-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Good candidate for low-action campsite state."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.sad-comfort-campsite",
+      "label": "Sad Comfort Campsite",
+      "scenarioType": "comfort-mood",
+      "emotionalIntent": "soft concern; pup is visible but emotionally quieter",
+      "primaryPupStateSymbols": [
+        "sad / tired"
+      ],
+      "secondaryPupStateSymbols": [
+        "idle / neutral"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "thought cloud",
+        "comfort/care marker",
+        "optional blanket or treat"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "uiStatusSurfaceHint": "thought cloud or comfort marker should be local and sparse; avoid making sadness a scoreboard icon",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "quiet edge of care cluster or lower path",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "local-status-bubble",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "soft thought cloud only if readable",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "single comfort prop, not a clutter pile",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "avoid celebratory sign/focal placement unless future design intentionally wants a gag",
+        "sad/tired silhouette needs clear negative space"
+      ],
+      "rejectedPatterns": [
+        "happy sparkles around sad pup by default",
+        "status marker pinned to sign/banner"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.sad-tired",
+        "pet-campfire.placement.ember-pup.idle-neutral",
+        "pet-campfire.placement.ui-prop.rest-care-props",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Composition should invite care, not punish the scene with alert spam."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.sick-recovery-campsite",
+      "label": "Sick Recovery Campsite",
+      "scenarioType": "recovery-care",
+      "emotionalIntent": "care urgency without visual panic",
+      "primaryPupStateSymbols": [
+        "muddy / sick"
+      ],
+      "secondaryPupStateSymbols": [
+        "sad / tired",
+        "resting"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-path-entry"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "warning icon",
+        "water icon",
+        "brush",
+        "care marker",
+        "optional thought cloud"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.front-clearing"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.upper-sky"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "uiStatusSurfaceHint": "warning/care status can use upper UI-safe surface if persistent; local bubble if momentary",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "care cluster or quiet clearing edge, not in foreground clutter",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.left-tent-care",
+          "relativeHint": "brush/water/care marker near recovery area",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "ui-status-surface",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "warning/care status if persistent and readable",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "do not bury sick pup in foreground obstruction zones",
+        "avoid lantern glow for warning icon unless later evidence proves readability"
+      ],
+      "rejectedPatterns": [
+        "all care icons active simultaneously",
+        "warning icon over sign/banner as permanent decoration"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.muddy-sick",
+        "pet-campfire.placement.ember-pup.sad-tired",
+        "pet-campfire.placement.ember-pup.sleeping-resting",
+        "pet-campfire.placement.ui-prop.need-status-icons",
+        "pet-campfire.placement.ui-prop.rest-care-props",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "This is a recovery scene, not a damage-state animation approval."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.active-play-campsite",
+      "label": "Active Play Campsite",
+      "scenarioType": "play-active",
+      "emotionalIntent": "movement and play without claiming animation cycles",
+      "primaryPupStateSymbols": [
+        "walking / active pose-symbol",
+        "jumping / excited pose-symbol"
+      ],
+      "secondaryPupStateSymbols": [
+        "happy / alert"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "ball",
+        "stick",
+        "treat",
+        "sparkles"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-path-entry",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right"
+      ],
+      "uiStatusSurfaceHint": "local feedback only; no persistent status required unless future gameplay adds one",
+      "compositionSlots": [
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.front-clearing",
+          "relativeHint": "open lower action zone with room for pose silhouette",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "secondary-pup/state-variation",
+          "anchorId": "pet-campfire.background.anchor.left-path-entry",
+          "relativeHint": "optional alternate entry/exit feel, not a second runtime pup",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "care-prop",
+          "anchorId": "pet-campfire.background.anchor.front-clearing",
+          "relativeHint": "play prop near action lane, no exact placement",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "active pose-symbols create variation but are not walk/run cycles",
+        "avoid central fire overlap and tent collision reads"
+      ],
+      "rejectedPatterns": [
+        "treating two active poses as approved animation",
+        "play props scattered across all anchors"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.walk-active",
+        "pet-campfire.placement.ember-pup.jump-excited",
+        "pet-campfire.placement.ember-pup.happy-alert",
+        "pet-campfire.placement.ui-prop.play-props",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "Use to plan lively variation while preserving the no-animation-approval boundary."
+      ]
+    },
+    {
+      "id": "pet-campfire.layout.quest-or-status-campsite",
+      "label": "Quest Or Status Campsite",
+      "scenarioType": "quest-status",
+      "emotionalIntent": "status readable without hijacking the cozy focal scene",
+      "primaryPupStateSymbols": [
+        "optional secondary pup",
+        "idle / neutral if present"
+      ],
+      "secondaryPupStateSymbols": [
+        "happy / alert as attention cue"
+      ],
+      "preferredPupAnchors": [
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.right-path-entry"
+      ],
+      "allowedPupAnchors": [
+        "pet-campfire.background.anchor.left-tent-care",
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPupAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.lantern-glow-left",
+        "pet-campfire.background.anchor.lantern-glow-right",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "recommendedCarePropsOrIcons": [
+        "quest/status marker",
+        "paw badge/token",
+        "thought cloud only if needed"
+      ],
+      "preferredPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-sign-banner",
+        "pet-campfire.background.anchor.upper-sky"
+      ],
+      "allowedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.right-stumps-table"
+      ],
+      "avoidedPropOrIconAnchors": [
+        "pet-campfire.background.anchor.central-fire-focal",
+        "pet-campfire.background.anchor.front-clearing",
+        "pet-campfire.background.anchor.left-foreground-mushrooms",
+        "pet-campfire.background.anchor.right-foreground-rocks"
+      ],
+      "uiStatusSurfaceHint": "sign/banner or upper UI-safe zone for persistent quest/status marker; avoid central fire permanent UI",
+      "compositionSlots": [
+        {
+          "slotRole": "quest/status marker",
+          "anchorId": "pet-campfire.background.anchor.right-sign-banner",
+          "relativeHint": "use sign/banner as status surface by anchor reference only",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "ui-status-surface",
+          "anchorId": "pet-campfire.background.anchor.upper-sky",
+          "relativeHint": "upper UI-safe persistent status if sign is too visually busy",
+          "exactCoordinatesApproved": false
+        },
+        {
+          "slotRole": "primary-pup",
+          "anchorId": "pet-campfire.background.anchor.front-clearing",
+          "relativeHint": "pup remains secondary to quest/status composition if present",
+          "exactCoordinatesApproved": false
+        }
+      ],
+      "readabilityNotes": [
+        "status markers should not become campfire decoration",
+        "pup may be absent or secondary when status is the point"
+      ],
+      "rejectedPatterns": [
+        "turning central fire into permanent UI clutter",
+        "atlas dumping near sign/banner"
+      ],
+      "grammarRuleTrace": [
+        "pet-campfire.placement.ember-pup.idle-neutral",
+        "pet-campfire.placement.ember-pup.happy-alert",
+        "pet-campfire.placement.ui-prop.reward-quest-markers",
+        "pet-campfire.placement.ui-prop.feedback-icons",
+        "pet-campfire.placement.ui-prop.rejected-generic-atlas-dump"
+      ],
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeApproval": "none",
+      "notes": [
+        "This is the strongest bridge toward future layout composition review, not runtime UI."
+      ]
+    }
+  ],
+  "notes": [
+    "H5.28 creates draft layout composition scenarios from reviewed Pet Campfire scene anchors and reviewed placement grammars.",
+    "Composition slots use named roles and scene-anchor IDs only.",
+    "No exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring are approved.",
+    "Accepted cleaned assets still require composition role, readability review, and human/product approval before runtime use.",
+    "The generic accepted-atlas dump pattern remains rejected.",
+    "H5.28 human review passed in H5.29.",
+    "Nine scenarios are accepted for future draft visual/layout planning.",
+    "Quest/status scenario remains secondary/deferred until gameplay needs it.",
+    "Composition slots are accepted as planning structure.",
+    "Preview truncation is acceptable because the manifest/report remain the source of truth.",
+    "No runtime placement, gameplay wiring, or animation approval occurred."
+  ],
+  "pipelineUse": "accepted-for-future-draft-layout-planning"
+}

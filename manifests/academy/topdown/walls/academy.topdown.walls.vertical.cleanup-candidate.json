@@ -1,0 +1,2677 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-walls",
+  "operationalType": "vertical-wall-cleanup-candidate",
+  "sourceSheet": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+  "sourceRegionManifest": "manifests/academy/topdown/walls/academy.topdown.walls.vertical.regions.json",
+  "derivedSheet": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
+  "runLog": "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/pipeline-run-log.json",
+  "sourceDimensions": {
+    "w": 1448,
+    "h": 1086
+  },
+  "derivedDimensions": {
+    "w": 1448,
+    "h": 1086
+  },
+  "degradedSource": true,
+  "declaredExtension": ".png",
+  "actualFileSignature": "PNG",
+  "method": "edge-connected-checker-cleanup",
+  "methodStatus": "canonical-with-caution",
+  "methodParameters": {
+    "gray_sat_max": 0.12,
+    "gray_min": 0.84,
+    "gray_max": 1.01,
+    "channel_delta_max": 0.06,
+    "reference_distance_max": 0.34,
+    "background_reference_region": null,
+    "edge_expansion_passes": 0,
+    "edge_alpha": 160
+  },
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "placementApproval": "none",
+  "gameplayApproval": "none",
+  "collisionApproval": "none",
+  "interactionApproval": "none",
+  "excludedRegions": [],
+  "riskRegionIndexes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72
+  ],
+  "candidateRegionCount": 72,
+  "excludedRegionCount": 0,
+  "blankTransparentRegionCount": 0,
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-01",
+      "label": "tall straight stone wall column 1",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 15,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "derivedRect": {
+        "x": 15,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4654,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 2,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-02",
+      "label": "tall straight stone wall column 2",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 113,
+        "y": 15,
+        "w": 62,
+        "h": 295
+      },
+      "derivedRect": {
+        "x": 113,
+        "y": 15,
+        "w": 62,
+        "h": 295
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4919,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 3,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-03",
+      "label": "tall straight stone wall column 3",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 222,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "derivedRect": {
+        "x": 222,
+        "y": 15,
+        "w": 61,
+        "h": 295
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4655,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 4,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-04",
+      "label": "tall straight stone wall column 4",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 337,
+        "y": 31,
+        "w": 62,
+        "h": 279
+      },
+      "derivedRect": {
+        "x": 337,
+        "y": 31,
+        "w": 62,
+        "h": 279
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4866,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 5,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-05",
+      "label": "tall straight stone wall column 5",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 435,
+        "y": 57,
+        "w": 62,
+        "h": 253
+      },
+      "derivedRect": {
+        "x": 435,
+        "y": 57,
+        "w": 62,
+        "h": 253
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4486,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 6,
+      "id": "topdown.walls.vertical.tall-straight-stone-wall-column-06",
+      "label": "tall straight stone wall column 6",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 527,
+        "y": 82,
+        "w": 59,
+        "h": 228
+      },
+      "derivedRect": {
+        "x": 527,
+        "y": 82,
+        "w": 59,
+        "h": 228
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3975,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 7,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-07",
+      "label": "mossy straight stone wall column 7",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 611,
+        "y": 87,
+        "w": 53,
+        "h": 223
+      },
+      "derivedRect": {
+        "x": 611,
+        "y": 87,
+        "w": 53,
+        "h": 223
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4035,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 8,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-08",
+      "label": "broken mossy vertical wall ruin 8",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 688,
+        "y": 105,
+        "w": 74,
+        "h": 206
+      },
+      "derivedRect": {
+        "x": 688,
+        "y": 105,
+        "w": 74,
+        "h": 206
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 5854,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 9,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-09",
+      "label": "mossy straight stone wall column 9",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 789,
+        "y": 133,
+        "w": 62,
+        "h": 177
+      },
+      "derivedRect": {
+        "x": 789,
+        "y": 133,
+        "w": 62,
+        "h": 177
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3880,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 10,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-10",
+      "label": "broken mossy vertical wall ruin 10",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 877,
+        "y": 142,
+        "w": 81,
+        "h": 168
+      },
+      "derivedRect": {
+        "x": 877,
+        "y": 142,
+        "w": 81,
+        "h": 168
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 5727,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 11,
+      "id": "topdown.walls.vertical.mossy-straight-stone-wall-column-11",
+      "label": "mossy straight stone wall column 11",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 969,
+        "y": 166,
+        "w": 60,
+        "h": 144
+      },
+      "derivedRect": {
+        "x": 969,
+        "y": 166,
+        "w": 60,
+        "h": 144
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3030,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 12,
+      "id": "topdown.walls.vertical.short-straight-stone-wall-column-12",
+      "label": "short straight stone wall column 12",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1050,
+        "y": 181,
+        "w": 72,
+        "h": 129
+      },
+      "derivedRect": {
+        "x": 1050,
+        "y": 181,
+        "w": 72,
+        "h": 129
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3639,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 13,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-13",
+      "label": "broken mossy vertical wall ruin 13",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1142,
+        "y": 194,
+        "w": 71,
+        "h": 117
+      },
+      "derivedRect": {
+        "x": 1142,
+        "y": 194,
+        "w": 71,
+        "h": 117
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3652,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 14,
+      "id": "topdown.walls.vertical.short-straight-stone-wall-column-14",
+      "label": "short straight stone wall column 14",
+      "category": "wall-vertical",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1234,
+        "y": 206,
+        "w": 61,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 1234,
+        "y": 206,
+        "w": 61,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2131,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 15,
+      "id": "topdown.walls.vertical.broken-mossy-vertical-wall-ruin-15",
+      "label": "broken mossy vertical wall ruin 15",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1319,
+        "y": 225,
+        "w": 59,
+        "h": 85
+      },
+      "derivedRect": {
+        "x": 1319,
+        "y": 225,
+        "w": 59,
+        "h": 85
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2322,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 16,
+      "id": "topdown.walls.vertical.large-l-stone-wall-corner-16",
+      "label": "large L stone wall corner 16",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 33,
+        "y": 334,
+        "w": 134,
+        "h": 127
+      },
+      "derivedRect": {
+        "x": 33,
+        "y": 334,
+        "w": 134,
+        "h": 127
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 6755,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 17,
+      "id": "topdown.walls.vertical.large-l-stone-wall-corner-17",
+      "label": "large L stone wall corner 17",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 204,
+        "y": 342,
+        "w": 103,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 204,
+        "y": 342,
+        "w": 103,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4904,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 18,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-18",
+      "label": "mossy L wall corner 18",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 328,
+        "y": 341,
+        "w": 119,
+        "h": 116
+      },
+      "derivedRect": {
+        "x": 328,
+        "y": 341,
+        "w": 119,
+        "h": 116
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 6048,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 19,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-19",
+      "label": "mossy L wall corner 19",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 479,
+        "y": 341,
+        "w": 103,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 479,
+        "y": 341,
+        "w": 103,
+        "h": 108
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4649,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 20,
+      "id": "topdown.walls.vertical.mossy-l-wall-corner-20",
+      "label": "mossy L wall corner 20",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 610,
+        "y": 343,
+        "w": 110,
+        "h": 107
+      },
+      "derivedRect": {
+        "x": 610,
+        "y": 343,
+        "w": 110,
+        "h": 107
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4444,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 21,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-21",
+      "label": "broken side wall corner 21",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 743,
+        "y": 349,
+        "w": 96,
+        "h": 103
+      },
+      "derivedRect": {
+        "x": 743,
+        "y": 349,
+        "w": 96,
+        "h": 103
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3084,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 22,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-22",
+      "label": "broken side wall corner 22",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 874,
+        "y": 349,
+        "w": 98,
+        "h": 103
+      },
+      "derivedRect": {
+        "x": 874,
+        "y": 349,
+        "w": 98,
+        "h": 103
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4245,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 23,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-23",
+      "label": "broken side wall corner 23",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1008,
+        "y": 349,
+        "w": 63,
+        "h": 103
+      },
+      "derivedRect": {
+        "x": 1008,
+        "y": 349,
+        "w": 63,
+        "h": 103
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2183,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 24,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-24",
+      "label": "broken side wall corner 24",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1099,
+        "y": 348,
+        "w": 80,
+        "h": 110
+      },
+      "derivedRect": {
+        "x": 1099,
+        "y": 348,
+        "w": 80,
+        "h": 110
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3499,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 25,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-25",
+      "label": "broken side wall corner 25",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1215,
+        "y": 346,
+        "w": 76,
+        "h": 110
+      },
+      "derivedRect": {
+        "x": 1215,
+        "y": 346,
+        "w": 76,
+        "h": 110
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3059,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 26,
+      "id": "topdown.walls.vertical.broken-side-wall-corner-26",
+      "label": "broken side wall corner 26",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1333,
+        "y": 349,
+        "w": 89,
+        "h": 107
+      },
+      "derivedRect": {
+        "x": 1333,
+        "y": 349,
+        "w": 89,
+        "h": 107
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3609,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 27,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-27",
+      "label": "top L wall corner variant 27",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 37,
+        "y": 483,
+        "w": 90,
+        "h": 105
+      },
+      "derivedRect": {
+        "x": 37,
+        "y": 483,
+        "w": 90,
+        "h": 105
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4480,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 28,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-28",
+      "label": "top L wall corner variant 28",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 181,
+        "y": 483,
+        "w": 110,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 181,
+        "y": 483,
+        "w": 110,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 5082,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 29,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-29",
+      "label": "top L wall corner variant 29",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 337,
+        "y": 483,
+        "w": 96,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 337,
+        "y": 483,
+        "w": 96,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4824,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 30,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-30",
+      "label": "top L wall corner variant 30",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 483,
+        "y": 483,
+        "w": 82,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 483,
+        "y": 483,
+        "w": 82,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4007,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 31,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-31",
+      "label": "top L wall corner variant 31",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 615,
+        "y": 481,
+        "w": 94,
+        "h": 107
+      },
+      "derivedRect": {
+        "x": 615,
+        "y": 481,
+        "w": 94,
+        "h": 107
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4061,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 32,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-32",
+      "label": "top L wall corner variant 32",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 762,
+        "y": 483,
+        "w": 112,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 762,
+        "y": 483,
+        "w": 112,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4697,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 33,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-33",
+      "label": "top L wall corner variant 33",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 911,
+        "y": 484,
+        "w": 120,
+        "h": 103
+      },
+      "derivedRect": {
+        "x": 911,
+        "y": 484,
+        "w": 120,
+        "h": 103
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4983,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 34,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-34",
+      "label": "top L wall corner variant 34",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1071,
+        "y": 486,
+        "w": 109,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 1071,
+        "y": 486,
+        "w": 109,
+        "h": 100
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4502,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 35,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-35",
+      "label": "top L wall corner variant 35",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1218,
+        "y": 486,
+        "w": 74,
+        "h": 97
+      },
+      "derivedRect": {
+        "x": 1218,
+        "y": 486,
+        "w": 74,
+        "h": 97
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2684,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 36,
+      "id": "topdown.walls.vertical.top-l-wall-corner-variant-36",
+      "label": "top L wall corner variant 36",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1330,
+        "y": 486,
+        "w": 91,
+        "h": 96
+      },
+      "derivedRect": {
+        "x": 1330,
+        "y": 486,
+        "w": 91,
+        "h": 96
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3101,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 37,
+      "id": "topdown.walls.vertical.open-stone-archway-37",
+      "label": "open stone archway 37",
+      "category": "wall-arch",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 36,
+        "y": 613,
+        "w": 89,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 36,
+        "y": 613,
+        "w": 89,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4935,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 38,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-38",
+      "label": "stone doorway with wooden door 38",
+      "category": "door",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 166,
+        "y": 612,
+        "w": 98,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 166,
+        "y": 612,
+        "w": 98,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3129,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 39,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-39",
+      "label": "stone doorway with wooden door 39",
+      "category": "door",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 308,
+        "y": 612,
+        "w": 115,
+        "h": 130
+      },
+      "derivedRect": {
+        "x": 308,
+        "y": 612,
+        "w": 115,
+        "h": 130
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3195,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 40,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-40",
+      "label": "stone doorway with wooden door 40",
+      "category": "door",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 461,
+        "y": 613,
+        "w": 89,
+        "h": 129
+      },
+      "derivedRect": {
+        "x": 461,
+        "y": 613,
+        "w": 89,
+        "h": 129
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2905,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 41,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-41",
+      "label": "stone doorway with wooden door 41",
+      "category": "door",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 582,
+        "y": 612,
+        "w": 91,
+        "h": 130
+      },
+      "derivedRect": {
+        "x": 582,
+        "y": 612,
+        "w": 91,
+        "h": 130
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2928,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 42,
+      "id": "topdown.walls.vertical.stone-doorway-with-wooden-door-42",
+      "label": "stone doorway with wooden door 42",
+      "category": "door",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 701,
+        "y": 615,
+        "w": 76,
+        "h": 125
+      },
+      "derivedRect": {
+        "x": 701,
+        "y": 615,
+        "w": 76,
+        "h": 125
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2520,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 43,
+      "id": "topdown.walls.vertical.open-stone-archway-43",
+      "label": "open stone archway 43",
+      "category": "wall-arch",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 813,
+        "y": 612,
+        "w": 76,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 813,
+        "y": 612,
+        "w": 76,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3905,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 44,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-44",
+      "label": "narrow broken wall ruin 44",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 929,
+        "y": 618,
+        "w": 83,
+        "h": 122
+      },
+      "derivedRect": {
+        "x": 929,
+        "y": 618,
+        "w": 83,
+        "h": 122
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3403,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 45,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-45",
+      "label": "narrow broken wall ruin 45",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1038,
+        "y": 625,
+        "w": 84,
+        "h": 117
+      },
+      "derivedRect": {
+        "x": 1038,
+        "y": 625,
+        "w": 84,
+        "h": 117
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3781,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 46,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-46",
+      "label": "narrow broken wall ruin 46",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1150,
+        "y": 634,
+        "w": 58,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 1150,
+        "y": 634,
+        "w": 58,
+        "h": 108
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2724,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 47,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-47",
+      "label": "narrow broken wall ruin 47",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1240,
+        "y": 631,
+        "w": 72,
+        "h": 106
+      },
+      "derivedRect": {
+        "x": 1240,
+        "y": 631,
+        "w": 72,
+        "h": 106
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3371,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 48,
+      "id": "topdown.walls.vertical.narrow-broken-wall-ruin-48",
+      "label": "narrow broken wall ruin 48",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1337,
+        "y": 634,
+        "w": 62,
+        "h": 107
+      },
+      "derivedRect": {
+        "x": 1337,
+        "y": 634,
+        "w": 62,
+        "h": 107
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2740,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 49,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-49",
+      "label": "stone pillar column variant 49",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 37,
+        "y": 766,
+        "w": 60,
+        "h": 120
+      },
+      "derivedRect": {
+        "x": 37,
+        "y": 766,
+        "w": 60,
+        "h": 120
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2254,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 50,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-50",
+      "label": "stone pillar column variant 50",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 155,
+        "y": 772,
+        "w": 56,
+        "h": 114
+      },
+      "derivedRect": {
+        "x": 155,
+        "y": 772,
+        "w": 56,
+        "h": 114
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2246,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 51,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-51",
+      "label": "stone pillar column variant 51",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 272,
+        "y": 774,
+        "w": 54,
+        "h": 112
+      },
+      "derivedRect": {
+        "x": 272,
+        "y": 774,
+        "w": 54,
+        "h": 112
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2181,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 52,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-52",
+      "label": "stone pillar column variant 52",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 389,
+        "y": 776,
+        "w": 53,
+        "h": 110
+      },
+      "derivedRect": {
+        "x": 389,
+        "y": 776,
+        "w": 53,
+        "h": 110
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2080,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 53,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-53",
+      "label": "stone pillar column variant 53",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 497,
+        "y": 780,
+        "w": 53,
+        "h": 106
+      },
+      "derivedRect": {
+        "x": 497,
+        "y": 780,
+        "w": 53,
+        "h": 106
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2150,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 54,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-54",
+      "label": "stone pillar column variant 54",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 602,
+        "y": 778,
+        "w": 63,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 602,
+        "y": 778,
+        "w": 63,
+        "h": 108
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2258,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 55,
+      "id": "topdown.walls.vertical.stone-pillar-column-variant-55",
+      "label": "stone pillar column variant 55",
+      "category": "wall-column",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 726,
+        "y": 780,
+        "w": 56,
+        "h": 106
+      },
+      "derivedRect": {
+        "x": 726,
+        "y": 780,
+        "w": 56,
+        "h": 106
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2225,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 56,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-56",
+      "label": "small broken wall ruin 56",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 835,
+        "y": 778,
+        "w": 70,
+        "h": 107
+      },
+      "derivedRect": {
+        "x": 835,
+        "y": 778,
+        "w": 70,
+        "h": 107
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2965,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 57,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-57",
+      "label": "small broken wall ruin 57",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 942,
+        "y": 784,
+        "w": 70,
+        "h": 102
+      },
+      "derivedRect": {
+        "x": 942,
+        "y": 784,
+        "w": 70,
+        "h": 102
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2528,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 58,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-58",
+      "label": "small broken wall ruin 58",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1051,
+        "y": 783,
+        "w": 90,
+        "h": 105
+      },
+      "derivedRect": {
+        "x": 1051,
+        "y": 783,
+        "w": 90,
+        "h": 105
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3693,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 59,
+      "id": "topdown.walls.vertical.low-stacked-wall-block-59",
+      "label": "low stacked wall block 59",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1169,
+        "y": 805,
+        "w": 81,
+        "h": 81
+      },
+      "derivedRect": {
+        "x": 1169,
+        "y": 805,
+        "w": 81,
+        "h": 81
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2450,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 60,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-60",
+      "label": "small broken wall ruin 60",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1277,
+        "y": 786,
+        "w": 65,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 1277,
+        "y": 786,
+        "w": 65,
+        "h": 100
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2695,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 61,
+      "id": "topdown.walls.vertical.small-broken-wall-ruin-61",
+      "label": "small broken wall ruin 61",
+      "category": "wall-ruin",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1360,
+        "y": 810,
+        "w": 64,
+        "h": 78
+      },
+      "derivedRect": {
+        "x": 1360,
+        "y": 810,
+        "w": 64,
+        "h": 78
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 2241,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 62,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-62",
+      "label": "small L wall corner variant 62",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 28,
+        "y": 909,
+        "w": 92,
+        "h": 126
+      },
+      "derivedRect": {
+        "x": 28,
+        "y": 909,
+        "w": 92,
+        "h": 126
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 5625,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 63,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-63",
+      "label": "small L wall corner variant 63",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 159,
+        "y": 926,
+        "w": 99,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 159,
+        "y": 926,
+        "w": 99,
+        "h": 108
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 5877,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 64,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-64",
+      "label": "small L wall corner variant 64",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 291,
+        "y": 929,
+        "w": 105,
+        "h": 105
+      },
+      "derivedRect": {
+        "x": 291,
+        "y": 929,
+        "w": 105,
+        "h": 105
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 6012,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 65,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-65",
+      "label": "small L wall corner variant 65",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 427,
+        "y": 930,
+        "w": 71,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 427,
+        "y": 930,
+        "w": 71,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3601,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 66,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-66",
+      "label": "small L wall corner variant 66",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 539,
+        "y": 923,
+        "w": 74,
+        "h": 111
+      },
+      "derivedRect": {
+        "x": 539,
+        "y": 923,
+        "w": 74,
+        "h": 111
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3641,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 67,
+      "id": "topdown.walls.vertical.small-l-wall-corner-variant-67",
+      "label": "small L wall corner variant 67",
+      "category": "wall-corner",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 656,
+        "y": 923,
+        "w": 81,
+        "h": 113
+      },
+      "derivedRect": {
+        "x": 656,
+        "y": 923,
+        "w": 81,
+        "h": 113
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4408,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 68,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-68",
+      "label": "freestanding rubble wall pile 68",
+      "category": "rubble",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 789,
+        "y": 926,
+        "w": 89,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 789,
+        "y": 926,
+        "w": 89,
+        "h": 108
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4610,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 69,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-69",
+      "label": "freestanding rubble wall pile 69",
+      "category": "rubble",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 920,
+        "y": 934,
+        "w": 100,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 920,
+        "y": 934,
+        "w": 100,
+        "h": 100
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4264,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 70,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-70",
+      "label": "freestanding rubble wall pile 70",
+      "category": "rubble",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1060,
+        "y": 930,
+        "w": 81,
+        "h": 104
+      },
+      "derivedRect": {
+        "x": 1060,
+        "y": 930,
+        "w": 81,
+        "h": 104
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3474,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 71,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-71",
+      "label": "freestanding rubble wall pile 71",
+      "category": "rubble",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1172,
+        "y": 937,
+        "w": 92,
+        "h": 99
+      },
+      "derivedRect": {
+        "x": 1172,
+        "y": 937,
+        "w": 92,
+        "h": 99
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 3686,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    },
+    {
+      "index": 72,
+      "id": "topdown.walls.vertical.freestanding-rubble-wall-pile-72",
+      "label": "freestanding rubble wall pile 72",
+      "category": "rubble",
+      "objectRole": null,
+      "wallRole": null,
+      "terrainRole": null,
+      "sourceRect": {
+        "x": 1290,
+        "y": 929,
+        "w": 85,
+        "h": 105
+      },
+      "derivedRect": {
+        "x": 1290,
+        "y": 929,
+        "w": 85,
+        "h": 105
+      },
+      "cleanupRisk": "medium",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "cleanupStatus": "nonfx-cleanup-candidate",
+      "usage": "draft-review",
+      "maskTransparentPixels": 4049,
+      "behaviorRisk": "behavior-deferred",
+      "notes": [
+        "H5.75 Topdown Vertical Walls cleanup candidate using edge-connected background mask only.",
+        "Needs human review; not runtime-approved.",
+        "Risk/behavior-looking cell remains visual-only; no collision, placement, interaction, light, door/gate/lock/pathfinding/autotile, damage, or runtime approval.",
+        "H5.76 human/product review accepted this cleanup region for draft cleanup/planning use only."
+      ],
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use"
+    }
+  ],
+  "notes": [
+    "H5.75 Topdown Vertical Walls cleanup candidate generated through canonical CLI/provenance.",
+    "Source is treated as degraded/fake-transparent for this cleanup method and remains needs-human-review.",
+    "No runtime behavior, placement, collision, interaction, pickup, loot, chest, key, portal, door, gate, lock, wall, pathfinding, light, flame, trap, slime, pressure plate, shadow, autotile, tilemap, or game wiring is approved.",
+    "H5.76 human/product review passed the H5.75 cleanup candidate for draft cleanup/planning use with a minor polish note.",
+    "One wall/ruin region has a small interior white pocket/window artifact; not blocking; future targeted fix only if needed.",
+    "No runtime behavior, collision, placement, pathfinding, tilemap use, wall autotiling, obstacle behavior, door/gate/lock behavior, or game wiring is approved."
+  ],
+  "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+  "outputSha256": "39abb0b12db8fc2757fb1e2a5684934516cb68e1e1f0b052a96b79987f1f7a3f",
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "cleanup-candidate",
+    "method": "edge-connected-checker-cleanup",
+    "methodStatus": "canonical-with-caution",
+    "runLog": "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/pipeline-run-log.json",
+    "sourceSha256": "e726c05e45eca4a45639b9e3c235b5a72302e487bac66cf84a67428a3ed1aa71",
+    "generatedAt": "2026-07-09T14:36:53.609Z",
+    "gitBaseline": "f36e2e4 docs: review topdown vertical wall regions",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.76",
+    "decision": "passed-with-minor-polish-note",
+    "reviewedCommit": "83c2cf8 tools: add topdown vertical walls cleanup candidate",
+    "acceptedRegionCount": 72,
+    "excludedRegionCount": 0,
+    "acceptedFor": "draft-cleanup-and-planning-use-only",
+    "cleanupMethod": "edge-connected-checker-cleanup",
+    "runtimeBoundary": "not-runtime-approved",
+    "minorPolishNotes": [
+      "one wall/ruin region has a small interior white pocket/window artifact; not blocking; future targeted fix only if needed"
+    ]
+  }
+}

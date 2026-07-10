@@ -1,0 +1,492 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "organization-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "sourceBaselineCommit": "c125205",
+  "blockedUntilHumanReview": true,
+  "currentManifestInventory": {
+    "rootFileCount": 55,
+    "summary": "Current academy manifests are mostly flat files under manifests/. The flat layout is workable for validators, but it is no longer readable as a long-term asset registry now that H5 includes shared assets, hub assets, game sheets, topdown sublanes, visual-pantry indexes, cleanup candidates, animation manifests, and source-intake records.",
+    "currentGroups": [
+      {
+        "id": "academy-core",
+        "description": "Core game roster and academy-level planning records.",
+        "examples": [
+          "manifests/academy/core/academy.games.json",
+          "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+          "manifests/academy/tooling/organization/academy.manifest-and-docs-organization-plan.json"
+        ]
+      },
+      {
+        "id": "hub-boot-identity",
+        "description": "Hub icon, boot, favicon, and identity surfaces.",
+        "examples": [
+          "manifests/academy/hub/hub.icons.json",
+          "manifests/academy/hub/hub.icon-regions.json",
+          "manifests/academy/hub/hub.identity-assets.json",
+          "manifests/boot/boot.identity-assets.json",
+          "manifests/academy/hub/favicon.exports.json"
+        ]
+      },
+      {
+        "id": "shared-assets",
+        "description": "Common-domain shared sheets and UI/HUD region records.",
+        "examples": [
+          "manifests/academy/shared/academy.shared-core.regions.json",
+          "manifests/academy/shared/academy.shared-fx.regions.json",
+          "manifests/academy/shared/academy.ui-hud.regions.json"
+        ]
+      },
+      {
+        "id": "creatures-and-animation",
+        "description": "Creature, player, enemy, slime, soldier, and animation candidate records.",
+        "examples": [
+          "manifests/academy/creatures/academy.goblin-expression-action.regions.json",
+          "manifests/academy/creatures/academy.platformer-goblin-player.animations.json",
+          "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json",
+          "manifests/academy.topdown-slime-blue.animations.json",
+          "manifests/academy.topdown-soldier.animations.json"
+        ]
+      },
+      {
+        "id": "game-specific-assets",
+        "description": "Game-specific region, cleanup, scene-anchor, slot, and composition manifests.",
+        "examples": [
+          "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+          "manifests/academy/games/pet-campfire/academy.pet-campfire.layout-composition-plan.json",
+          "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.functional-slots.json",
+          "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json",
+          "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+          "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
+          "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json"
+        ]
+      },
+      {
+        "id": "topdown-pantry",
+        "description": "Topdown source inventory, terrain, walls, objects, regenerated intake, cleanup, and future floor tilesheets.",
+        "examples": [
+          "manifests/academy/topdown/source/academy.topdown.source-inventory.json",
+          "manifests/academy/topdown/terrain/academy.topdown.terrain.regions.json",
+          "manifests/academy/topdown/walls/academy.topdown.walls.regions.json",
+          "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+          "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json"
+        ]
+      }
+    ]
+  },
+  "currentDocsInventory": {
+    "docsAssetsRootFileCount": 116,
+    "docsAssetsBreakdown": {
+      "h5Reports": 88,
+      "h4Reports": 14,
+      "doctrinePipelinePantry": 13,
+      "other": 1
+    },
+    "existingDocsFolders": {
+      "docs/hub": 34,
+      "docs/manifests": 2,
+      "docs/roadmap": 3,
+      "docs/evidence": 1
+    },
+    "summary": "docs/assets/ has become a flat scroll of H4/H5 reports plus doctrine, workflow, tutorial, evidence, pantry, and pipeline documents. The files are useful, but the folder no longer communicates what is doctrine, what is a lane report, what is a game-specific report, what is pantry state, or what is historical evidence."
+  },
+  "proposedManifestCategories": [
+    {
+      "path": "manifests/README.md",
+      "purpose": "Index and migration guidance for the manifest tree."
+    },
+    {
+      "path": "manifests/academy/core/",
+      "purpose": "Academy roster, cross-game planning, and root academy indexes."
+    },
+    {
+      "path": "manifests/academy/hub/",
+      "purpose": "Hub icons, hub identity, launcher-facing visual metadata, and hub-specific references."
+    },
+    {
+      "path": "manifests/academy/shared/",
+      "purpose": "Shared core, shared UI/HUD, shared FX status, and common-domain assets."
+    },
+    {
+      "path": "manifests/academy/creatures/",
+      "purpose": "Creature, player, enemy, slime, soldier, and animation/state-symbol manifests."
+    },
+    {
+      "path": "manifests/academy/games/button-goblin-clicker/",
+      "purpose": "Button Goblin Clicker-specific backgrounds, anchors, future runtime visual planning, and later runtime-approved metadata."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/",
+      "purpose": "Potion Sorter regions, regenerated source metadata, cleanup candidates, and future functional-surface manifests."
+    },
+    {
+      "path": "manifests/academy/games/dice-duel-tavern/",
+      "purpose": "Dice Duel Tavern regions, cleanup candidates, and future code-driven roll-illusion planning."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/",
+      "purpose": "Card frames, UI tokens, cleanup candidates, and functional slot mappings."
+    },
+    {
+      "path": "manifests/academy/games/tiny-farm-day/",
+      "purpose": "Farm Settlement / Tiny Farm Day regions and cleanup candidates."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/",
+      "purpose": "Pet Campfire props/icons, Ember Pup state-symbols, background anchors, placement grammars, and composition plans."
+    },
+    {
+      "path": "manifests/academy/games/one-room-platformer/",
+      "purpose": "One-Room Platformer construction pieces, platformer player/enemy animation records, and future scene-anchor/movement-contract notes."
+    },
+    {
+      "path": "manifests/academy/games/dungeon-platformer/",
+      "purpose": "Dungeon Platformer mixed-sheet mapping and deferred cleanup status."
+    },
+    {
+      "path": "manifests/academy/games/top-down-slime-quest/",
+      "purpose": "Game-specific Top-Down Slime Quest mixed/reference sheet routing, with runtime wiring still deferred."
+    },
+    {
+      "path": "manifests/academy/topdown/terrain/",
+      "purpose": "Topdown terrain regions, cleanup candidates, blank/partial-cell corrections, and future tile behavior notes."
+    },
+    {
+      "path": "manifests/academy/topdown/walls/",
+      "purpose": "Topdown wall region and cleanup manifests, including true-alpha and vertical wall sources."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/",
+      "purpose": "Topdown object source inventory, regenerated non-FX mapping, cleanup candidates, and behavior-deferred records."
+    },
+    {
+      "path": "manifests/academy/topdown/future-floor-tilesheets/",
+      "purpose": "Future-pantry floor/ground tilesheet batch manifests and intake indexes."
+    },
+    {
+      "path": "manifests/academy/visual-pantry/",
+      "purpose": "Global visual pantry indexes and tool-routing indexes."
+    },
+    {
+      "path": "manifests/academy/tooling/",
+      "purpose": "Pipeline provenance, organization plans, batch/migration plans, and tooling-facing manifests."
+    },
+    {
+      "path": "manifests/boot/",
+      "purpose": "Boot and icon export surfaces that are not game-specific."
+    },
+    {
+      "path": "manifests/legacy/",
+      "purpose": "Deprecated or superseded flat-manifest records retained for archaeology and migration safety."
+    }
+  ],
+  "proposedDocsCategories": [
+    {
+      "path": "docs/assets/README.md",
+      "purpose": "Entry point for the organized asset documentation tree."
+    },
+    {
+      "path": "docs/assets/doctrine/",
+      "purpose": "Stable doctrine: scene anchors, functional surfaces, particle-first FX, no-stub policy, and runtime boundary law."
+    },
+    {
+      "path": "docs/assets/pipeline/",
+      "purpose": "Canonical workflow, tutorial, prompt templates, CLI/provenance docs, and pipeline-operation rules."
+    },
+    {
+      "path": "docs/assets/pantry/",
+      "purpose": "Global visual pantry index reports, pantry human review, and cross-game asset availability summaries."
+    },
+    {
+      "path": "docs/assets/game-assets/button-goblin-clicker/",
+      "purpose": "Button Goblin Clicker source/background, anchor, and future visual integration reports."
+    },
+    {
+      "path": "docs/assets/game-assets/potion-sorter/",
+      "purpose": "Potion Sorter mapping, regenerated source, cleanup, and review reports."
+    },
+    {
+      "path": "docs/assets/game-assets/dice-duel-tavern/",
+      "purpose": "Dice Duel Tavern mapping, cleanup, review, and future roll-illusion reports."
+    },
+    {
+      "path": "docs/assets/game-assets/card-goblin-duel/",
+      "purpose": "Card frames, UI tokens, cleanup, functional slots, and review reports."
+    },
+    {
+      "path": "docs/assets/game-assets/tiny-farm-day/",
+      "purpose": "Farm Settlement / Tiny Farm Day bounds, cleanup, exclusion, and review reports."
+    },
+    {
+      "path": "docs/assets/game-assets/pet-campfire/",
+      "purpose": "Pet Campfire split-lane, cleanup, anchors, grammars, and composition reports."
+    },
+    {
+      "path": "docs/assets/game-assets/one-room-platformer/",
+      "purpose": "One-Room Platformer visual integration, platformer construction, and future scene-anchor notes."
+    },
+    {
+      "path": "docs/assets/game-assets/dungeon-platformer/",
+      "purpose": "Dungeon Platformer mixed-sheet mapping and cleanup deferral reports."
+    },
+    {
+      "path": "docs/assets/game-assets/top-down-slime-quest/",
+      "purpose": "Top-Down Slime Quest game-specific source routing and deferred runtime notes."
+    },
+    {
+      "path": "docs/assets/topdown/terrain/",
+      "purpose": "Topdown terrain mapping, correction, cleanup, and future floor tilesheet reports."
+    },
+    {
+      "path": "docs/assets/topdown/walls/",
+      "purpose": "Topdown wall mapping, cleanup, and review reports."
+    },
+    {
+      "path": "docs/assets/topdown/objects/",
+      "purpose": "Topdown object mapping, cleanup, regenerated source, and review reports."
+    },
+    {
+      "path": "docs/assets/topdown/future-floor-tilesheets/",
+      "purpose": "Future topdown floor tilesheet intake and batch mapping/review reports."
+    },
+    {
+      "path": "docs/assets/hub-visuals/",
+      "purpose": "H4 hub identity, favicon, banner, console mock, and hub visual evidence reports."
+    },
+    {
+      "path": "docs/assets/evidence-architecture/",
+      "purpose": "Evidence vault architecture, screenshot/contact-sheet standards, and visual QA doctrine."
+    },
+    {
+      "path": "docs/assets/archive/",
+      "purpose": "Superseded reports and historical notes that should remain preserved but no longer occupy the active lane surface."
+    }
+  ],
+  "proposedMoveMap": [
+    {
+      "from": "manifests/academy/core/academy.games.json",
+      "to": "manifests/academy/core/academy.games.json",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/hub.*.json",
+      "to": "manifests/academy/hub/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/boot/boot.identity-assets.json",
+      "to": "manifests/boot/boot.identity-assets.json",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.shared-*.json and manifests/academy/shared/academy.ui-hud.regions.json",
+      "to": "manifests/academy/shared/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.*goblin*.json, academy.platformer-*.animations.json, academy.topdown-*.animations.json",
+      "to": "manifests/academy/creatures/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.pet-campfire.*.json",
+      "to": "manifests/academy/games/pet-campfire/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.card-goblin-duel.*.json",
+      "to": "manifests/academy/games/card-goblin-duel/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.topdown.terrain*.json",
+      "to": "manifests/academy/topdown/terrain/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.topdown.walls*.json",
+      "to": "manifests/academy/topdown/walls/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy.topdown.objects*.json",
+      "to": "manifests/academy/topdown/objects/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
+      "to": "manifests/academy/topdown/future-floor-tilesheets/",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+      "to": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+      "phase": "manifest-dry-run-then-move"
+    },
+    {
+      "from": "docs/assets/TINY_GOBLIN_ACADEMY_H5_*.md",
+      "to": "docs/assets/{pipeline|pantry|game-assets|topdown|archive}/ based on lane",
+      "phase": "docs-dry-run-then-move"
+    },
+    {
+      "from": "docs/assets/TINY_GOBLIN_ACADEMY_H4_*.md",
+      "to": "docs/assets/hub-visuals/",
+      "phase": "docs-dry-run-then-move"
+    },
+    {
+      "from": "docs/assets/*WORKFLOW* / *TUTORIAL* / *PROMPT* / *PIPELINE*",
+      "to": "docs/assets/pipeline/",
+      "phase": "docs-dry-run-then-move"
+    },
+    {
+      "from": "docs/assets/*DOCTRINE* / *SCENE_ANCHORS* / *FUNCTIONAL*",
+      "to": "docs/assets/doctrine/",
+      "phase": "docs-dry-run-then-move"
+    }
+  ],
+  "referencesLikelyNeedingUpdates": [
+    {
+      "path": "scripts/validate-academy-asset-manifests.mjs",
+      "risk": "Hardcoded flat manifest paths and glob expectations may fail after manifest movement."
+    },
+    {
+      "path": "scripts/validate-academy-animation-manifests.mjs",
+      "risk": "Creature/animation manifest path assumptions likely need recursive discovery or an index."
+    },
+    {
+      "path": "scripts/validate-hub-icon-regions.mjs",
+      "risk": "Hub icon region manifest path may move under academy/hub."
+    },
+    {
+      "path": "scripts/validate-hub-icons.mjs",
+      "risk": "Hub icon manifest path may move under academy/hub."
+    },
+    {
+      "path": "scripts/validate-academy-shared-asset-regions.mjs",
+      "risk": "Shared asset region manifests may move under academy/shared."
+    },
+    {
+      "path": "scripts/asset-pipeline/validate-pipeline-provenance.mjs",
+      "risk": "Provenance validation may need recursive manifest discovery and legacy path allowances."
+    },
+    {
+      "path": "scripts/asset-pipeline/smoke-check.mjs",
+      "risk": "Smoke checks may reference exact manifest/doc paths."
+    },
+    {
+      "path": "docs/assets/*.md",
+      "risk": "Many lane reports reference flat manifest paths and must either remain historically accurate or gain current-path notes."
+    },
+    {
+      "path": "README.md, docs/README.md, meta/progress-tracker.md",
+      "risk": "Current overview docs include stale Level 1 / Button Goblin Clicker restoration language."
+    }
+  ],
+  "validatorOrScriptPathAssumptions": [
+    "Current validators should be updated to support recursive manifest discovery before physical movement.",
+    "During migration, validators should accept both flat legacy paths and new organized paths until the move is complete.",
+    "Asset-pipeline provenance should continue to record exact paths at creation time; moved historical outputs should either preserve legacy path history or include migration records.",
+    "No manifest file should be moved until a path-reference dry run lists every affected script, doc, and JSON reference.",
+    "No docs/assets file should be moved until links, evidence references, and changelog references have a dry-run move map."
+  ],
+  "staleDocCandidates": [
+    {
+      "path": "README.md",
+      "finding": "Button Goblin Clicker is still labeled Historical / Restoration Deferred.",
+      "recommendation": "Update during a dedicated stale-doc correction lane after H5.87 review."
+    },
+    {
+      "path": "meta/progress-tracker.md",
+      "finding": "Level 1/Button Goblin Clicker still references Source Missing and restoration deferred.",
+      "recommendation": "Update or mark as historical after current manifest truth is confirmed."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "finding": "Level 1 is described as intentionally deferred until hub/runtime architecture supports it.",
+      "recommendation": "Review for current accuracy before runtime visual integration starts."
+    },
+    {
+      "path": "docs/hub/TINY_GOBLIN_ACADEMY_MINIMAL_HUB_SCAFFOLD_PLAN.md",
+      "finding": "Still includes Historical Pass / Restoration Deferred UI status language.",
+      "recommendation": "Keep as historical scaffold plan or add a superseded-by note."
+    },
+    {
+      "path": "docs/manifests/TINY_GOBLIN_ACADEMY_MANIFEST_STRATEGY.md",
+      "finding": "Includes sample Level 1 missing/restoration-deferred JSON.",
+      "recommendation": "Update example or annotate as historical."
+    },
+    {
+      "path": "docs/hub/reports/TINY_GOBLIN_ACADEMY_H1_HUB_COMPLETION_REPORT.md",
+      "finding": "Says Level 1 correctly shows Restoration Deferred.",
+      "recommendation": "Preserve as historical evidence; do not rewrite as current status."
+    },
+    {
+      "path": "docs/hub/reports/TINY_GOBLIN_ACADEMY_H1_6_HUB_SCREENSHOT_EVIDENCE.md",
+      "finding": "Describes Button Goblin Clicker as historically passed without source.",
+      "recommendation": "Preserve as historical evidence; optional superseded-by note."
+    },
+    {
+      "path": "docs/hub/reports/TINY_GOBLIN_ACADEMY_H2_HUB_GRID_REDESIGN_REPORT.md",
+      "finding": "Contains Restoration Deferred detail-view language.",
+      "recommendation": "Preserve as historical evidence; optional superseded-by note."
+    },
+    {
+      "path": "docs/incidents/STRUCTURAL_REFACTOR_INCIDENT_LEVEL_1_LOSS.md",
+      "finding": "Historical incident record about Level 1 loss.",
+      "recommendation": "Preserve, do not modernize away; add recovery/status cross-reference only if needed."
+    }
+  ],
+  "migrationPhases": [
+    {
+      "id": "H5.88",
+      "label": "Visual Tool Suite Registry Plan",
+      "goal": "Define how Flipbook, Sticker/Picture Book, Particle FX Viewer, and future audio tooling should discover assets from the pantry and organized manifests without runtime wiring."
+    },
+    {
+      "id": "H5.89",
+      "label": "Font Pantry Intake Plan or Font Intake",
+      "goal": "If fonts are needed before runtime polish, inventory and route font assets as a separate visual-adjacent pantry lane."
+    },
+    {
+      "id": "H5.90",
+      "label": "Manifest Folder Reorganization Dry Run",
+      "goal": "Generate an exact move map, update validators for recursive discovery, and validate both old and proposed paths before moving any manifest."
+    },
+    {
+      "id": "H5.91",
+      "label": "Asset Docs Reorganization Dry Run",
+      "goal": "Generate an exact docs/assets move map and link/reference update list before moving any report."
+    },
+    {
+      "id": "H5.92",
+      "label": "Stale Overview Docs Correction",
+      "goal": "Update current overview docs such as README and progress trackers while preserving historical reports as historical evidence."
+    },
+    {
+      "id": "H6.0",
+      "label": "Button Goblin Clicker Runtime Visual Integration Plan",
+      "goal": "Plan the first runtime visual integration using the accepted pantry and background anchors, without starting Top-Down Slime Quest runtime first."
+    },
+    {
+      "id": "H6.1",
+      "label": "Button Goblin Clicker Background Runtime Wiring",
+      "goal": "Wire the accepted Button Goblin Clicker background into runtime only after H6.0 planning and review."
+    }
+  ],
+  "nonGoals": [
+    "Do not move or rename manifests in H5.87.",
+    "Do not move or rename docs/assets files in H5.87.",
+    "Do not update validators in H5.87.",
+    "Do not correct stale docs in H5.87 beyond listing candidates.",
+    "Do not modify runtime/game code.",
+    "Do not modify source PNGs, derived PNGs, evidence PNGs, package files, or lock files."
+  ],
+  "notes": [
+    "H5.87 is a shelf-building plan, not the shelf move.",
+    "The organized tree should be introduced only after recursive validator support and a dry-run reference map exist.",
+    "Historical reports should remain historically truthful; current overview docs should be corrected in a separate stale-doc lane.",
+    "Runtime integration order remains separate from asset pantry completion order."
+  ]
+}

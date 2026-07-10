@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 
 const col_divs = [0, 280, 562, 843, 1124, 1406, 1688, 1970, 2251, 2532, 2816];
 const columns = [];
@@ -70,4 +70,4 @@ const manifest = {
   }))
 };
 
-fs.writeFileSync('manifests/academy.platformer-goblin-player.animations.json', JSON.stringify(manifest, null, 2) + '\n');
+fs.writeFileSync('manifests/academy/creatures/academy.platformer-goblin-player.animations.json', JSON.stringify(manifest, null, 2) + '\n');

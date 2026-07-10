@@ -6,8 +6,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '..');
 
-const iconManifestPath = path.join(repoRoot, 'manifests', 'hub.icons.json');
-const gamesManifestPath = path.join(repoRoot, 'manifests', 'academy.games.json');
+const iconManifestPath = path.join(repoRoot, 'manifests', 'academy', 'hub', 'hub.icons.json');
+const gamesManifestPath = path.join(repoRoot, 'manifests', 'academy', 'core', 'academy.games.json');
 
 const errors = [];
 const warnings = [];

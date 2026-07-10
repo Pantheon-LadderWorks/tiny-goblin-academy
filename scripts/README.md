@@ -23,7 +23,7 @@ node scripts/validate-hub-icons.mjs
 ``
 
 **What it does:**
-* Validates manifests/hub.icons.json structure, ensuring the sheet metadata and icon entries are correctly formed.
-* Cross-checks icon mappings against manifests/academy.games.json to ensure every game has exactly one mapped icon, and no duplicate assignments exist.
+* Validates manifests/academy/hub/hub.icons.json structure, ensuring the sheet metadata and icon entries are correctly formed.
+* Cross-checks icon mappings against manifests/academy/core/academy.games.json to ensure every game has exactly one mapped icon, and no duplicate assignments exist.
 * Checks that the path to the icon sheet is repo-relative and the file actually exists.
 * Does not crop images, launch games, or build assets.

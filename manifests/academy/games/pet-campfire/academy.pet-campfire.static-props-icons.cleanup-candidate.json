@@ -1,0 +1,578 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "sourceManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.regions.json",
+  "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+  "derivedSheet": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
+  "cleanupMethod": "per-region edge-connected neutral-gray checkerboard flood removal; atlas composed from trimmed cleaned crops",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-draft-pipeline-use",
+  "runtimeEligibility": "not-runtime-approved",
+  "humanReview": {
+    "status": "passed",
+    "reviewer": "Kryssie",
+    "decision": "The H5.18 cleaned Pet Campfire static props/icons candidate is visually accepted for draft pipeline use.",
+    "riskFlagInterpretation": "The 12 medium-high regions were reviewed as risk flags, not failures.",
+    "damageFindings": "No obvious checkerboard leftovers, missing details, destroyed outlines, or cleanup damage were found.",
+    "runtimeBoundary": "Human review acceptance does not wire assets into runtime and does not mark the candidate final runtime-approved."
+  },
+  "notes": [
+    "Cleanup candidate accepted by human review for draft pipeline use; not runtime-approved.",
+    "Source PNG remains untouched.",
+    "Only H5.17 mapped static props/icons are cleaned; Ember Pup poses are not processed.",
+    "Background is used only for overlay evidence.",
+    "No cleanup correction pass is needed based on H5.19 human review."
+  ],
+  "regions": [
+    {
+      "id": "pet-campfire.care-prop.food-bowl",
+      "category": "pet-care-prop",
+      "label": "Food bowl",
+      "sourceRect": {
+        "x": 12,
+        "y": 462,
+        "w": 104,
+        "h": 80
+      },
+      "derivedRect": {
+        "x": 38,
+        "y": 52,
+        "w": 94,
+        "h": 65
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 3647,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.water-bowl",
+      "category": "pet-care-prop",
+      "label": "Water bowl",
+      "sourceRect": {
+        "x": 138,
+        "y": 468,
+        "w": 110,
+        "h": 74
+      },
+      "derivedRect": {
+        "x": 188,
+        "y": 55,
+        "w": 94,
+        "h": 60
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 3528,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.stick-and-ball",
+      "category": "pet-care-prop",
+      "label": "Fetch stick and small ball",
+      "sourceRect": {
+        "x": 272,
+        "y": 451,
+        "w": 96,
+        "h": 102
+      },
+      "derivedRect": {
+        "x": 344,
+        "y": 42,
+        "w": 82,
+        "h": 86
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 6452,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; grouped crop remains intentionally combined"
+    },
+    {
+      "id": "pet-campfire.care-prop.rolling-ball",
+      "category": "pet-care-prop",
+      "label": "Rolling tennis ball",
+      "sourceRect": {
+        "x": 394,
+        "y": 453,
+        "w": 96,
+        "h": 102
+      },
+      "derivedRect": {
+        "x": 493,
+        "y": 45,
+        "w": 84,
+        "h": 80
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 5876,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.blanket-bedroll",
+      "category": "pet-care-prop",
+      "label": "Blanket or bedroll",
+      "sourceRect": {
+        "x": 512,
+        "y": 460,
+        "w": 128,
+        "h": 90
+      },
+      "derivedRect": {
+        "x": 630,
+        "y": 48,
+        "w": 110,
+        "h": 74
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 5760,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.environment-prop.campfire",
+      "category": "campfire-environment-prop",
+      "label": "Campfire",
+      "sourceRect": {
+        "x": 655,
+        "y": 444,
+        "w": 100,
+        "h": 120
+      },
+      "derivedRect": {
+        "x": 46,
+        "y": 186,
+        "w": 78,
+        "h": 97
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 7229,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; flame edge and glow silhouette need review"
+    },
+    {
+      "id": "pet-campfire.environment-prop.tent",
+      "category": "campfire-environment-prop",
+      "label": "Small tent",
+      "sourceRect": {
+        "x": 770,
+        "y": 443,
+        "w": 128,
+        "h": 110
+      },
+      "derivedRect": {
+        "x": 182,
+        "y": 190,
+        "w": 106,
+        "h": 89
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 9634,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.reward-token.paw-badge",
+      "category": "reward-badge-or-token",
+      "label": "Paw badge ribbon",
+      "sourceRect": {
+        "x": 904,
+        "y": 439,
+        "w": 112,
+        "h": 127
+      },
+      "derivedRect": {
+        "x": 337,
+        "y": 177,
+        "w": 96,
+        "h": 115
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 6733,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.status-icon.upset-face",
+      "category": "status-mood-icon",
+      "label": "Upset face icon",
+      "sourceRect": {
+        "x": 18,
+        "y": 656,
+        "w": 94,
+        "h": 96
+      },
+      "derivedRect": {
+        "x": 496,
+        "y": 196,
+        "w": 77,
+        "h": 78
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium",
+      "removedPixels": 4052,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.status-icon.water-need",
+      "category": "status-mood-icon",
+      "label": "Water need droplet",
+      "sourceRect": {
+        "x": 152,
+        "y": 654,
+        "w": 80,
+        "h": 101
+      },
+      "derivedRect": {
+        "x": 654,
+        "y": 192,
+        "w": 61,
+        "h": 85
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 4653,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required"
+    },
+    {
+      "id": "pet-campfire.status-icon.happy-face",
+      "category": "status-mood-icon",
+      "label": "Happy face icon",
+      "sourceRect": {
+        "x": 270,
+        "y": 654,
+        "w": 100,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 44,
+        "y": 344,
+        "w": 82,
+        "h": 81
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium",
+      "removedPixels": 4853,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.status-icon.sleep-zzz",
+      "category": "status-mood-icon",
+      "label": "Sleep ZZZ icon",
+      "sourceRect": {
+        "x": 394,
+        "y": 656,
+        "w": 108,
+        "h": 96
+      },
+      "derivedRect": {
+        "x": 192,
+        "y": 348,
+        "w": 86,
+        "h": 74
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium",
+      "removedPixels": 7947,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.status-icon.fire-warmth",
+      "category": "status-mood-icon",
+      "label": "Fire or warmth icon",
+      "sourceRect": {
+        "x": 529,
+        "y": 652,
+        "w": 94,
+        "h": 110
+      },
+      "derivedRect": {
+        "x": 350,
+        "y": 341,
+        "w": 70,
+        "h": 88
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 6288,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; flame edge and glow silhouette need review"
+    },
+    {
+      "id": "pet-campfire.status-icon.warning",
+      "category": "status-mood-icon",
+      "label": "Warning icon",
+      "sourceRect": {
+        "x": 653,
+        "y": 656,
+        "w": 106,
+        "h": 99
+      },
+      "derivedRect": {
+        "x": 492,
+        "y": 346,
+        "w": 85,
+        "h": 77
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 6390,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required"
+    },
+    {
+      "id": "pet-campfire.feedback-icon.sparkles",
+      "category": "ui-feedback-icon",
+      "label": "Sparkles feedback icon",
+      "sourceRect": {
+        "x": 786,
+        "y": 655,
+        "w": 96,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 646,
+        "y": 344,
+        "w": 77,
+        "h": 81
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 6974,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; thin sparkle flecks need review"
+    },
+    {
+      "id": "pet-campfire.status-icon.thought-cloud",
+      "category": "status-mood-icon",
+      "label": "Thought cloud icon",
+      "sourceRect": {
+        "x": 906,
+        "y": 656,
+        "w": 110,
+        "h": 112
+      },
+      "derivedRect": {
+        "x": 42,
+        "y": 489,
+        "w": 85,
+        "h": 91
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 7566,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; smoke/cloud interior and outline need review"
+    },
+    {
+      "id": "pet-campfire.status-icon.sunrise-check",
+      "category": "status-mood-icon",
+      "label": "Sunrise check icon",
+      "sourceRect": {
+        "x": 910,
+        "y": 785,
+        "w": 104,
+        "h": 70
+      },
+      "derivedRect": {
+        "x": 186,
+        "y": 502,
+        "w": 97,
+        "h": 65
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 4118,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; thin rays/edge details need review"
+    },
+    {
+      "id": "pet-campfire.reward-token.paw-coin",
+      "category": "reward-badge-or-token",
+      "label": "Paw coin token",
+      "sourceRect": {
+        "x": 12,
+        "y": 906,
+        "w": 106,
+        "h": 106
+      },
+      "derivedRect": {
+        "x": 341,
+        "y": 490,
+        "w": 88,
+        "h": 89
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 5134,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.treat-biscuit",
+      "category": "pet-care-prop",
+      "label": "Treat biscuit",
+      "sourceRect": {
+        "x": 140,
+        "y": 910,
+        "w": 104,
+        "h": 98
+      },
+      "derivedRect": {
+        "x": 494,
+        "y": 495,
+        "w": 81,
+        "h": 80
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 6352,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.brush",
+      "category": "pet-care-prop",
+      "label": "Pet brush",
+      "sourceRect": {
+        "x": 273,
+        "y": 908,
+        "w": 98,
+        "h": 100
+      },
+      "derivedRect": {
+        "x": 645,
+        "y": 492,
+        "w": 80,
+        "h": 85
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 6592,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required"
+    },
+    {
+      "id": "pet-campfire.care-prop.leash",
+      "category": "pet-care-prop",
+      "label": "Pet leash",
+      "sourceRect": {
+        "x": 398,
+        "y": 907,
+        "w": 106,
+        "h": 102
+      },
+      "derivedRect": {
+        "x": 45,
+        "y": 642,
+        "w": 80,
+        "h": 85
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 5591,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required"
+    },
+    {
+      "id": "pet-campfire.care-prop.crate",
+      "category": "pet-care-prop",
+      "label": "Pet crate",
+      "sourceRect": {
+        "x": 518,
+        "y": 905,
+        "w": 116,
+        "h": 108
+      },
+      "derivedRect": {
+        "x": 187,
+        "y": 642,
+        "w": 96,
+        "h": 85
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 6204,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.care-prop.bone",
+      "category": "pet-care-prop",
+      "label": "Bone",
+      "sourceRect": {
+        "x": 652,
+        "y": 907,
+        "w": 104,
+        "h": 102
+      },
+      "derivedRect": {
+        "x": 344,
+        "y": 644,
+        "w": 82,
+        "h": 82
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "low-medium",
+      "removedPixels": 7737,
+      "reviewStatus": "needs-human-review",
+      "notes": "Conservative cleanup candidate; needs human visual review."
+    },
+    {
+      "id": "pet-campfire.status-icon.moon-night",
+      "category": "status-mood-icon",
+      "label": "Moon night icon",
+      "sourceRect": {
+        "x": 784,
+        "y": 910,
+        "w": 96,
+        "h": 96
+      },
+      "derivedRect": {
+        "x": 497,
+        "y": 646,
+        "w": 76,
+        "h": 77
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 4635,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; thin rays/edge details need review"
+    },
+    {
+      "id": "pet-campfire.status-icon.sunrise-sunset",
+      "category": "status-mood-icon",
+      "label": "Sunrise or sunset icon",
+      "sourceRect": {
+        "x": 910,
+        "y": 912,
+        "w": 104,
+        "h": 74
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 654,
+        "w": 89,
+        "h": 61
+      },
+      "cleanupStatus": "candidate-cleaned-needs-human-review",
+      "riskLevel": "medium-high",
+      "removedPixels": 5264,
+      "reviewStatus": "needs-human-review",
+      "notes": "edge/detail review required; thin rays/edge details need review"
+    }
+  ]
+}

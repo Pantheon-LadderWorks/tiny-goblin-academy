@@ -19,9 +19,9 @@ Known related scripts:
 
 Known related manifests:
 
-- `manifests/hub.icons.json`
-- `manifests/hub.icon-regions.json`
-- `manifests/academy.games.json`
+- `manifests/academy/hub/hub.icons.json`
+- `manifests/academy/hub/hub.icon-regions.json`
+- `manifests/academy/core/academy.games.json`
 
 Known related planning/report docs from the repository tree:
 

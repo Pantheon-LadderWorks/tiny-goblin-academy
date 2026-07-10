@@ -71,7 +71,7 @@ for (const file of [
   'scripts/asset-pipeline/lib/provenance-contract.mjs',
   'scripts/asset-pipeline/validate-pipeline-provenance.mjs',
   'scripts/validate-academy-asset-manifests.mjs',
-  'manifests/hub.icon-regions.json',
+  'manifests/academy/hub/hub.icon-regions.json',
   'scripts/clean-fake-transparent-sheet.py'
 ]) {
   if (!fs.existsSync(path.join(repoRoot, file))) {

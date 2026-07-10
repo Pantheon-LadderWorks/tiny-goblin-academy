@@ -1,0 +1,478 @@
+{
+  "schemaVersion": "0.1",
+  "indexId": "H5.85",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-for-tier-1-5-visual-integration-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "purpose": "Manifest-derived current visual asset pantry index for Tiny Goblin Academy Tier 1.5 visual integration planning.",
+  "scopeNotes": [
+    "This is an index, not runtime approval.",
+    "This is not a stale-doc cleanup or manifest-folder reorganization.",
+    "Counts and paths are derived from current manifests and current H5.85 source intake.",
+    "Every listed asset remains subject to its own manifest review boundary.",
+    "H5.86 human/product review accepted this pantry index for Tier 1.5 visual integration planning only.",
+    "H5.86 does not reorganize manifests, reorganize docs, move folders, wire runtime, or approve any runtime asset use."
+  ],
+  "runtimeDoctrine": {
+    "visualAssetsTier": "1.5",
+    "audioAssetsTier": "2.5",
+    "firstRuntimeVisualCandidate": "button-goblin-clicker",
+    "topdownRuntimeOrder": "last-or-near-last",
+    "reason": "Topdown assets are now pantry-rich, but Top-Down Slime Quest still depends on deferred animation, tile behavior, placement, collision, pathfinding, and map rules."
+  },
+  "toolingCategories": [
+    "flipbook-viewer",
+    "sticker-picture-book-viewer",
+    "particle-fx-viewer",
+    "future-sound-audio-pipeline-viewer"
+  ],
+  "gameAssetGroups": [
+    {
+      "gameSlug": "button-goblin-clicker",
+      "gameTitle": "Button Goblin Clicker",
+      "recommendedRuntimeOrder": 1,
+      "assetReadinessSummary": "First game-specific background ingested as draft scene-anchor planning. Current SVG goblin remains the active runtime click target until a later wiring pass.",
+      "assets": [
+        {
+          "assetType": "scene-anchor-background",
+          "status": "draft",
+          "reviewStatus": "needs-human-review",
+          "manifest": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+          "source": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+          "derived": null,
+          "regionsOrAnchors": 9,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved",
+          "notes": "Large central negative space for Tap Titans-like clicker staging."
+        }
+      ]
+    },
+    {
+      "gameSlug": "potion-sorter",
+      "gameTitle": "Potion Sorter",
+      "recommendedRuntimeOrder": 2,
+      "assetReadinessSummary": "Regenerated cleanup candidate accepted with exclusions. Functional slot mapping still needed before runtime UI/use.",
+      "assets": [
+        {
+          "assetType": "static-prop-ui-sheet-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed-with-exclusions",
+          "manifest": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+          "source": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+          "derived": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+          "regionsTotal": 32,
+          "acceptedRegions": 30,
+          "deniedRegions": [
+            9,
+            14
+          ],
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "dice-duel-tavern",
+      "gameTitle": "Dice Duel Tavern",
+      "recommendedRuntimeOrder": 3,
+      "assetReadinessSummary": "Cleanup accepted for draft pipeline use. Future code-driven roll illusion is planned but not approved as runtime animation.",
+      "assets": [
+        {
+          "assetType": "static-prop-ui-sheet-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json",
+          "source": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
+          "derived": "assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png",
+          "regionsTotal": 64,
+          "acceptedRegions": 64,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "card-goblin-duel",
+      "gameTitle": "Card Goblin Duel",
+      "recommendedRuntimeOrder": 4,
+      "assetReadinessSummary": "Card frames and UI/tokens cleanup accepted. Functional surface slots exist for card frames, but runtime card UI integration is not approved.",
+      "assets": [
+        {
+          "assetType": "card-frame-sheet-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+          "source": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png",
+          "derived": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
+          "regionsTotal": 32,
+          "acceptedRegions": 32,
+          "functionalSurfaceManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.functional-slots.json",
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "ui-token-sheet-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
+          "source": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
+          "derived": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png",
+          "regionsTotal": 48,
+          "acceptedRegions": 48,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "tiny-farm-day",
+      "gameTitle": "Tiny Farm Day / Farm Settlement",
+      "recommendedRuntimeOrder": 5,
+      "assetReadinessSummary": "Cleanup accepted with six hard exclusions. Usable set is draft/planning only.",
+      "assets": [
+        {
+          "assetType": "static-prop-ui-sheet-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed-with-exclusions",
+          "manifest": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
+          "source": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
+          "derived": "assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png",
+          "regionsTotal": 32,
+          "acceptedRegions": 26,
+          "deniedRegions": [
+            4,
+            7,
+            13,
+            21,
+            30,
+            31
+          ],
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "pet-campfire",
+      "gameTitle": "Pet Campfire",
+      "recommendedRuntimeOrder": 6,
+      "assetReadinessSummary": "Props/icons, Ember Pup state symbols, scene anchors, placement grammars, and composition plan exist. Still not runtime-wired and not animation-approved.",
+      "assets": [
+        {
+          "assetType": "static-props-icons-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+          "source": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+          "derived": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
+          "regionsTotal": 25,
+          "acceptedRegions": 25,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "pose-state-symbol-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+          "source": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
+          "derived": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png",
+          "regionsTotal": 16,
+          "acceptedRegions": 16,
+          "animationApproval": "none",
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "scene-anchor-background",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed-with-placement-notes",
+          "manifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json",
+          "source": "assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png",
+          "derived": null,
+          "regionsOrAnchors": 14,
+          "placementGrammars": [
+            "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.state-placement-plan.json",
+            "manifests/academy/games/pet-campfire/academy.pet-campfire.ui-prop-care-placement-plan.json",
+            "manifests/academy/games/pet-campfire/academy.pet-campfire.layout-composition-plan.json"
+          ],
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "one-room-platformer",
+      "gameTitle": "One Room Platformer",
+      "recommendedRuntimeOrder": 7,
+      "assetReadinessSummary": "Birthday Build runtime visuals already exist; construction pieces are mapped/cleaned. Future v0.2 should add scene anchors and movement-contract-aware layout planning before expansion.",
+      "assets": [
+        {
+          "assetType": "platformer-construction-sheet",
+          "status": "reviewed-or-existing-runtime-candidate",
+          "manifest": "manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json",
+          "source": "assets/academy/games/one-room-platformer/tga-one-room-platformer-sideview-construction-pieces-concept-v0.2.png",
+          "derived": "assets/academy/games/one-room-platformer/tga-one-room-platformer-construction-pieces-cleaned-v0.2.png",
+          "regionsTotal": 48,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "existing-level-8-specific-assets-present-but-not-general-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "top-down-slime-quest",
+      "gameTitle": "Top-Down Slime Quest / Dungeon Key Run shared topdown pantry",
+      "recommendedRuntimeOrder": 10,
+      "assetReadinessSummary": "Topdown pantry is rich but intentionally not first runtime target because behavior, animation, placement, collision, and map rules remain deferred.",
+      "assets": [
+        {
+          "assetType": "terrain-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json",
+          "source": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
+          "derived": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
+          "regionsTotal": 64,
+          "acceptedRegions": 59,
+          "blankReferenceCells": [
+            30,
+            31,
+            64
+          ],
+          "deferredRegions": [
+            25,
+            35
+          ],
+          "retainedPartialContentCells": [
+            32,
+            36,
+            37,
+            38,
+            39
+          ],
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "true-alpha-wall-boundary-sheet",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
+          "source": "assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated-v0.2.png",
+          "derived": null,
+          "regionsTotal": 58,
+          "acceptedRegions": 58,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "vertical-wall-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json",
+          "source": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
+          "derived": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
+          "regionsTotal": 72,
+          "acceptedRegions": 72,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "nonfx-object-cleanup-candidate",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+          "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
+          "derived": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
+          "regionsTotal": 64,
+          "acceptedRegions": 64,
+          "preferredOverHistoricalOldObjectSheet": true,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "historical-nonfx-object-cleanup-fallback",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json",
+          "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+          "derived": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
+          "regionsTotal": 64,
+          "acceptedRegions": 51,
+          "productExcludedRegions": [
+            1
+          ],
+          "effectExcludedRegions": [
+            7,
+            9,
+            10,
+            17,
+            18,
+            47,
+            55,
+            57,
+            60,
+            61,
+            62
+          ],
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        },
+        {
+          "assetType": "future-floor-tilesheets-batch-regions",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
+          "source": "assets/academy/topdown/terrain/future-floor-tilesheets/sources/",
+          "derived": null,
+          "sheetsTotal": 6,
+          "regionsTotal": 384,
+          "acceptedRegions": 384,
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    },
+    {
+      "gameSlug": "dungeon-platformer",
+      "gameTitle": "Dungeon Platformer / Mixed Reference Sheet",
+      "recommendedRuntimeOrder": 8,
+      "assetReadinessSummary": "Mixed old sheet mapped and human-reviewed, but cleanup deferred. Treat as reference/salvage planning, not preferred runtime asset source.",
+      "assets": [
+        {
+          "assetType": "mixed-sheet-region-manifest",
+          "status": "reviewed",
+          "reviewStatus": "human-review-passed",
+          "manifest": "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json",
+          "source": "assets/academy/games/dungeon-platformer/tga-dungeon-platformer-mixed-sheet-concept-v0.1.png",
+          "derived": null,
+          "regionsTotal": 40,
+          "cleanupDecision": "deferred",
+          "toolingTarget": "sticker-picture-book-viewer",
+          "runtimeEligibility": "not-runtime-approved"
+        }
+      ]
+    }
+  ],
+  "sharedAssetGroups": [
+    {
+      "assetType": "shared-core",
+      "manifest": "manifests/academy/shared/academy.shared-core.regions.json",
+      "source": "assets/academy/shared-core/tga-shared-core-sheet-v0.1.png",
+      "derived": "assets/academy/derived-cleaned/shared-core/tga-shared-core-sheet-cleaned-preview-v0.1.png",
+      "regionsTotal": 32,
+      "status": "draft",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "assetType": "ui-hud",
+      "manifest": "manifests/academy/shared/academy.ui-hud.regions.json",
+      "source": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
+      "derived": "assets/academy/derived-cleaned/ui/tga-ui-hud-sheet-cleaned-preview-v0.1.png",
+      "regionsTotal": 34,
+      "status": "draft",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "assetType": "shared-fx",
+      "manifest": "manifests/academy/shared/academy.shared-fx.regions.json",
+      "source": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
+      "derived": null,
+      "status": "deferred-reference-only",
+      "policy": "particle-first; regenerate true-alpha one-offs only when a concrete game need exists",
+      "runtimeEligibility": "not-runtime-approved"
+    }
+  ],
+  "creatureAssetGroups": [
+    {
+      "assetType": "goblin-expression-action",
+      "manifest": "manifests/academy/creatures/academy.goblin-expression-action.regions.json",
+      "source": "assets/academy/creatures/goblin/tga-goblin-expression-action-sheet-v0.1.png",
+      "regionsTotal": 40,
+      "toolingTarget": "sticker-picture-book-viewer",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "assetType": "platformer-goblin-player-animation",
+      "manifest": "manifests/academy/creatures/academy.platformer-goblin-player.animations.json",
+      "source": "assets/academy/creatures/goblin/tga-platformer-goblin-player-v0.1.png",
+      "derived": "assets/academy/derived-cleaned/goblin/tga-platformer-goblin-player-cleaned-v0.1.png",
+      "animationGroups": 6,
+      "toolingTarget": "flipbook-viewer",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "assetType": "platformer-training-dummy-enemy-animation",
+      "manifest": "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json",
+      "source": "assets/academy/creatures/training-dummy/tga-platformer-training-dummy-enemy-concept-v0.1.png",
+      "derived": "assets/academy/derived/tga-platformer-training-dummy-enemy-concept-v0.1-clean.png",
+      "animationGroups": 5,
+      "toolingTarget": "flipbook-viewer",
+      "runtimeEligibility": "not-runtime-approved"
+    },
+    {
+      "assetType": "topdown-slime-and-soldier-animation-candidates",
+      "manifests": [
+        "manifests/academy/creatures/academy.topdown-slime-player.animations.json",
+        "manifests/academy/creatures/academy.topdown-slime-v2-action.animations.json",
+        "manifests/academy/creatures/academy.topdown-slime-v2-idle-move.animations.json",
+        "manifests/academy/creatures/academy.topdown-soldier-enemy.animations.json"
+      ],
+      "toolingTarget": "flipbook-viewer",
+      "status": "deferred-for-future-topdown-runtime-planning",
+      "runtimeEligibility": "not-runtime-approved"
+    }
+  ],
+  "knownOrganizationDebt": [
+    "The root manifests folder is flat and increasingly crowded.",
+    "docs/assets contains many H4/H5 lane reports at one level and should be nested by category in a future docs hygiene lane.",
+    "README and older docs contain known stale Level 1/Button Goblin Clicker restoration language that should be reconciled before public-facing runtime integration docs are treated as current.",
+    "This index intentionally records the debt instead of performing broad reorganization in the same lane."
+  ],
+  "recommendedNextLanes": [
+    "H5.87 — Manifest and Asset Docs Organization Plan",
+    "H5.88 — Visual Tool Suite Registry Plan",
+    "H6.0 — Button Goblin Clicker Runtime Visual Integration Plan"
+  ],
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "scene-anchor-background-planning",
+    "methodStatus": null,
+    "runLog": "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/pipeline-run-log.json",
+    "sourceSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+    "generatedAt": "2026-07-10T03:33:43.661Z",
+    "gitBaseline": "c268413 docs: review future topdown floor tilesheet regions",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  },
+  "humanReview": {
+    "reviewId": "H5.86",
+    "decision": "passed",
+    "acceptedFor": "tier-1-5-visual-integration-planning-only",
+    "noRuntimeWiringApproved": true,
+    "nextRecommendedLane": "H5.87 — Manifest and Asset Docs Organization Plan",
+    "acceptedDoctrines": {
+      "runtimeOrder": {
+        "first": "Button Goblin Clicker",
+        "lastOrNearLast": "Top-Down Slime Quest"
+      },
+      "toolingCategories": [
+        "flipbook viewer",
+        "sticker/picture book viewer",
+        "particle FX viewer",
+        "future sound/audio pipeline viewer"
+      ],
+      "tiers": {
+        "visualAssets": "Tier 1.5",
+        "audioAssets": "Tier 2.5"
+      }
+    },
+    "notes": [
+      "This index is manifest-derived, not a heavy stale-doc audit.",
+      "Known organization debt remains recorded for H5.87 rather than silently fixed in H5.86.",
+      "Runtime wiring begins later after this index is reviewed."
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "font-pantry-core-selection",
+  "runtimeEligibility": "not-runtime-approved",
+  "blockedUntilHumanReview": false,
+  "tier": "1.5",
+  "domain": "academy-fonts",
+  "operationalType": "font-pantry-human-review-and-new-fantasy-core-selection",
+  "relatedPlan": "manifests/academy/fonts/academy.font-pantry-source-inventory-plan.json",
+  "toolLanePausedAt": "H5.88E",
+  "nextToolLaneReturnPoint": "H5.88F — GlyphForge Region Browser Image Preview Plan",
+  "nextOrganizationLane": "H5.91 — Manifest Folder Reorganization Dry Run",
+  "purpose": [
+    "Review the H5.89 font pantry inventory and choose a Tiny Goblin Academy font identity direction.",
+    "Avoid making Tiny Goblin Academy feel like a Kryssie Method ebook font set wearing a goblin hat.",
+    "Select new fantasy/storybook font candidates for academy identity while preserving one or two existing local fonts as support.",
+    "Keep runtime font wiring and font binary intake for later explicit lanes."
+  ],
+  "humanDirection": {
+    "decision": "passed-with-new-fantasy-core-direction",
+    "summary": "Tiny Goblin Academy should get its own fantasy/storybook font identity. Existing Kryssie Method fonts may support readability or debug/tooling, but should not define the main personality.",
+    "constraints": [
+      "Use at most one or two existing local fonts as support fonts.",
+      "Prefer new fantasy/storybook fonts for academy identity.",
+      "Keep the runtime font set tiny even if the pantry is larger.",
+      "Do not select Ubuntu unless a later concrete need appears.",
+      "Do not ingest ROGLyonsTypeRegular3.ttf without clear license proof."
+    ]
+  },
+  "existingLocalFontDecision": {
+    "supportCandidates": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "role": "readable UI accessibility fallback/support",
+        "licenseStatusFromH5_89": "verified-open-font-license",
+        "selection": "support-only-candidate"
+      },
+      {
+        "family": "Outfit",
+        "role": "readable UI fallback/support",
+        "licenseStatusFromH5_89": "verified-open-font-license",
+        "selection": "support-only-candidate"
+      },
+      {
+        "family": "Fira Code",
+        "role": "debug/tooling mono",
+        "licenseStatusFromH5_89": "verified-open-font-license",
+        "selection": "support-only-candidate"
+      },
+      {
+        "family": "Space Mono",
+        "role": "debug/tooling mono fallback",
+        "licenseStatusFromH5_89": "verified-open-font-license",
+        "selection": "support-only-candidate"
+      }
+    ],
+    "notPrimaryIdentity": [
+      "Atkinson Hyperlegible",
+      "Outfit",
+      "Fira Code",
+      "Space Mono",
+      "Iceberg",
+      "Iceland",
+      "Love Light",
+      "Orbitron",
+      "Rajdhani",
+      "Space Grotesk",
+      "Ubuntu"
+    ],
+    "notes": [
+      "Existing ebook/local fonts are useful but should not define Tiny Goblin Academy's main type personality.",
+      "Love Light remains decorative-only if ever used; it is not selected for primary UI.",
+      "Orbitron, Rajdhani, Iceberg, Iceland, and Space Grotesk may remain optional tech/arcane pantry candidates later, but H5.90 favors new fantasy/storybook identity."
+    ]
+  },
+  "newFantasyCandidateSet": {
+    "sharedAcademyIdentity": [
+      "Cinzel Decorative",
+      "Cinzel",
+      "Caudex",
+      "Alegreya"
+    ],
+    "fantasyMagicDungeon": [
+      "Uncial Antiqua",
+      "MedievalSharp",
+      "Almendra",
+      "Almendra SC",
+      "Macondo",
+      "Metamorphous",
+      "Fondamento",
+      "Cormorant Garamond",
+      "Grenze Gotisch",
+      "Eagle Lake"
+    ],
+    "cozyFarmPet": [
+      "Merienda",
+      "Alegreya"
+    ],
+    "sourceLane": "future-google-fonts-or-other-open-font-source-intake-with-license-capture",
+    "licenseVerificationStatus": "needed-before-binary-intake"
+  },
+  "selectedCoreRoles": [
+    {
+      "role": "sharedDisplay",
+      "selectedCandidates": [
+        "Cinzel Decorative",
+        "Cinzel"
+      ],
+      "intendedUse": [
+        "academy title",
+        "banner",
+        "major heading"
+      ],
+      "runtimeApproval": "none",
+      "licenseVerificationNeeded": true
+    },
+    {
+      "role": "sharedReadableFantasyUiBody",
+      "selectedCandidates": [
+        "Caudex",
+        "Alegreya"
+      ],
+      "intendedUse": [
+        "storybook UI",
+        "readable fantasy body text",
+        "dialogue or lore surfaces"
+      ],
+      "runtimeApproval": "none",
+      "licenseVerificationNeeded": true
+    },
+    {
+      "role": "sharedReadableAccessibilityFallback",
+      "selectedCandidates": [
+        "Atkinson Hyperlegible",
+        "Outfit"
+      ],
+      "intendedUse": [
+        "small UI",
+        "accessibility fallback",
+        "dense readable text"
+      ],
+      "runtimeApproval": "none",
+      "licenseVerificationNeeded": false,
+      "licenseStatusFromH5_89": "verified-open-font-license"
+    },
+    {
+      "role": "sharedMonoDebug",
+      "selectedCandidates": [
+        "Fira Code",
+        "Space Mono"
+      ],
+      "intendedUse": [
+        "debug overlays",
+        "tooling text",
+        "coordinates",
+        "manifest/code-style previews"
+      ],
+      "runtimeApproval": "none",
+      "licenseVerificationNeeded": false,
+      "licenseStatusFromH5_89": "verified-open-font-license"
+    }
+  ],
+  "selectedGameFlavorCandidates": [
+    {
+      "game": "button-goblin-clicker",
+      "candidateFamilies": [
+        "Cinzel",
+        "Atkinson Hyperlegible",
+        "Outfit"
+      ],
+      "notes": "No heavy font needed yet; keep click feedback readable."
+    },
+    {
+      "game": "dice-duel-tavern",
+      "candidateFamilies": [
+        "Cinzel",
+        "Fondamento"
+      ],
+      "notes": "Tavern/game labels can be flavorful; dice results must remain readable."
+    },
+    {
+      "game": "card-goblin-duel",
+      "candidateFamilies": [
+        "Cormorant Garamond",
+        "Almendra SC",
+        "Caudex"
+      ],
+      "notes": "Card title can be ornate; card rules text needs readable fallback."
+    },
+    {
+      "game": "potion-sorter",
+      "candidateFamilies": [
+        "Macondo",
+        "Almendra",
+        "Caudex"
+      ],
+      "notes": "Use magical label flavor without sacrificing sorting/timer readability."
+    },
+    {
+      "game": "tiny-farm-day",
+      "candidateFamilies": [
+        "Alegreya",
+        "Merienda"
+      ],
+      "notes": "Cozy labels only; do not over-decorate dense UI."
+    },
+    {
+      "game": "pet-campfire",
+      "candidateFamilies": [
+        "Merienda",
+        "Alegreya"
+      ],
+      "notes": "Warm storybook/care feel; state text should stay accessible."
+    },
+    {
+      "game": "dungeon-platformer",
+      "candidateFamilies": [
+        "MedievalSharp",
+        "Metamorphous"
+      ],
+      "notes": "Good for headings/title flavor, not dense UI."
+    },
+    {
+      "game": "top-down-slime-quest",
+      "candidateFamilies": [
+        "MedievalSharp",
+        "Uncial Antiqua",
+        "Metamorphous"
+      ],
+      "notes": "Runtime remains last/near-last; this is pantry planning only."
+    }
+  ],
+  "doNotUseOrDoNotIngest": [
+    {
+      "family": "ROG Lyons Type Regular 3",
+      "decision": "do-not-ingest",
+      "reason": "No nearby license proof found in H5.89."
+    },
+    {
+      "family": "Ubuntu",
+      "decision": "not-selected-for-now",
+      "reason": "Local UFL license exists, but the font does not currently fit the Tiny Goblin Academy personality direction."
+    },
+    {
+      "family": "Love Light",
+      "decision": "not-primary-ui",
+      "reason": "Too decorative for primary UI; may remain special decorative flavor only if later selected."
+    }
+  ],
+  "licenseVerificationNeeded": [
+    "Cinzel Decorative",
+    "Cinzel",
+    "Caudex",
+    "Alegreya",
+    "Uncial Antiqua",
+    "MedievalSharp",
+    "Almendra",
+    "Almendra SC",
+    "Macondo",
+    "Metamorphous",
+    "Fondamento",
+    "Cormorant Garamond",
+    "Grenze Gotisch",
+    "Eagle Lake",
+    "Merienda"
+  ],
+  "futureIntakeTargets": [
+    {
+      "priority": 1,
+      "families": [
+        "Cinzel Decorative",
+        "Cinzel",
+        "Caudex",
+        "Alegreya"
+      ],
+      "goal": "Shared academy identity and readable fantasy body candidates."
+    },
+    {
+      "priority": 2,
+      "families": [
+        "Fira Code",
+        "Space Mono",
+        "Atkinson Hyperlegible",
+        "Outfit"
+      ],
+      "goal": "Local OFL support fonts for mono/debug and accessibility/readability fallback."
+    },
+    {
+      "priority": 3,
+      "families": [
+        "Uncial Antiqua",
+        "MedievalSharp",
+        "Almendra",
+        "Almendra SC",
+        "Macondo",
+        "Metamorphous",
+        "Fondamento",
+        "Cormorant Garamond",
+        "Merienda"
+      ],
+      "goal": "Game flavor pantry after shared core is proven."
+    }
+  ],
+  "futurePreviewEvidenceNeeded": [
+    "shared title/banner sample",
+    "readable UI/body sample at small sizes",
+    "debug/coordinate mono sample",
+    "button-goblin-clicker impact text sample",
+    "card title plus small rules text sample",
+    "potion label sample",
+    "pet/farm cozy label sample",
+    "dungeon/slime heading sample",
+    "ransom-note-risk comparison showing why too many flavor fonts should not be combined in one UI"
+  ],
+  "runtimeBoundaries": [
+    "No font binaries are copied by H5.90.",
+    "No runtime font wiring is approved by H5.90.",
+    "No game code is changed by H5.90.",
+    "No package or lock files are changed by H5.90.",
+    "No dependency installation occurs in H5.90.",
+    "No font is runtime-approved until a later explicit promotion gate.",
+    "Candidate font names do not imply license approval until source and license files are captured."
+  ],
+  "nextLaneSequence": [
+    "H5.91 — Manifest Folder Reorganization Dry Run",
+    "H5.92 — Asset Docs Reorganization Dry Run",
+    "H5.93 — Stale Overview Docs Correction",
+    "H5.88F — GlyphForge Region Browser Image Preview Plan",
+    "future font binary intake and preview evidence lane"
+  ],
+  "notes": [
+    "This manifest records the font identity direction and candidate set only.",
+    "The future font pantry can be broad, but the actual runtime font set should stay tiny.",
+    "Existing local ebook fonts remain backup/support goblins, not the main academy handwriting."
+  ]
+}

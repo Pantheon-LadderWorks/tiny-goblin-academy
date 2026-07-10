@@ -1,0 +1,2581 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-cleanup-candidate",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "topdown-objects",
+  "operationalType": "topdown-object-cleanup-candidate",
+  "sourceSheet": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
+  "sourceRegionManifest": "manifests/academy/topdown/objects/academy.topdown.objects.regions.json",
+  "derivedSheet": "assets/academy/topdown/objects/derived/tga-topdown-objects-cleaned-v0.1.png",
+  "sourceDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "derivedDimensions": {
+    "w": 1024,
+    "h": 1024
+  },
+  "sourceSha256": "56690b639c8b2c53f6a57dcc9766dc0bf9764663086aa13ecf4d2f1e4423e657",
+  "transparencyFinding": "Source is RGB with no alpha channel; checker-style background is baked/fake transparency.",
+  "cleanupMethod": {
+    "type": "blank-cell-reference-background-removal",
+    "description": "Converted source to RGBA and used region 49 blank cell as the 128x128 background/checker reference. Pixels close to the blank-cell template at the same cell-relative coordinate were made transparent. Threshold was tightened after visual inspection to reduce gray-object damage.",
+    "referenceRegionIndex": 49,
+    "distanceThreshold": "euclidean rgb distance <= 18",
+    "sourcePngModified": false
+  },
+  "behaviorBoundary": {
+    "runtimeBehaviorApproved": false,
+    "placementApproved": false,
+    "collisionApproved": false,
+    "interactionApproved": false,
+    "chestLootApproved": false,
+    "keyPickupApproved": false,
+    "portalTeleportApproved": false,
+    "lightEmissionApproved": false,
+    "flameAnimationApproved": false,
+    "trapDamageApproved": false,
+    "slimeHazardApproved": false,
+    "pressurePlateApproved": false,
+    "shadowHoleApproved": false
+  },
+  "behaviorDeferredRegionIndexes": [
+    7,
+    9,
+    10,
+    17,
+    18,
+    47,
+    55,
+    57,
+    58,
+    60,
+    61,
+    62
+  ],
+  "cleanupRiskSummary": {
+    "high": 12,
+    "medium": 4,
+    "low": 47,
+    "none": 1
+  },
+  "regions": [
+    {
+      "index": 1,
+      "id": "topdown.objects.glowing-key-pedestal",
+      "label": "Glowing key pedestal",
+      "category": "key-item",
+      "objectRole": "key-or-pedestal-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 2,
+      "id": "topdown.objects.empty-stone-pedestal",
+      "label": "Empty stone pedestal",
+      "category": "pedestal-or-switch",
+      "objectRole": "pedestal-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 3,
+      "id": "topdown.objects.round-stone-seal",
+      "label": "Round stone seal",
+      "category": "portal-or-seal",
+      "objectRole": "seal-marker-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 4,
+      "id": "topdown.objects.glass-floor-plate",
+      "label": "Glass floor plate",
+      "category": "plate-or-marker",
+      "objectRole": "floor-marker-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 5,
+      "id": "topdown.objects.closed-treasure-chest",
+      "label": "Closed treasure chest",
+      "category": "chest",
+      "objectRole": "container-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 6,
+      "id": "topdown.objects.open-treasure-chest",
+      "label": "Open treasure chest",
+      "category": "chest",
+      "objectRole": "container-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 7,
+      "id": "topdown.objects.portal-swirl",
+      "label": "Portal swirl",
+      "category": "portal-or-seal",
+      "objectRole": "portal-visual-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 8,
+      "id": "topdown.objects.magic-lock-seal",
+      "label": "Magic lock seal",
+      "category": "portal-or-seal",
+      "objectRole": "lock-or-seal-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "medium",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 9,
+      "id": "topdown.objects.large-fire-brazier",
+      "label": "Large fire brazier",
+      "category": "fire-or-light",
+      "objectRole": "light-source-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 10,
+      "id": "topdown.objects.standing-torch",
+      "label": "Standing torch",
+      "category": "fire-or-light",
+      "objectRole": "light-source-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 11,
+      "id": "topdown.objects.rubble-blocks",
+      "label": "Rubble blocks",
+      "category": "rubble-or-rock",
+      "objectRole": "obstacle-prop-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 12,
+      "id": "topdown.objects.small-debris-stones",
+      "label": "Small debris stones",
+      "category": "rubble-or-rock",
+      "objectRole": "debris-prop-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 13,
+      "id": "topdown.objects.goblin-statue-bust",
+      "label": "Goblin statue bust",
+      "category": "statue-or-monument",
+      "objectRole": "monument-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 14,
+      "id": "topdown.objects.hanging-crest-banner",
+      "label": "Hanging crest banner",
+      "category": "banner-or-sign",
+      "objectRole": "banner-marker-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 15,
+      "id": "topdown.objects.wood-sign-left",
+      "label": "Wood sign left",
+      "category": "banner-or-sign",
+      "objectRole": "sign-marker-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 16,
+      "id": "topdown.objects.shield-crest-plaque",
+      "label": "Shield crest plaque",
+      "category": "shield-or-crest",
+      "objectRole": "crest-marker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 128,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 17,
+      "id": "topdown.objects.large-fire-brazier-alt",
+      "label": "Large fire brazier alternate",
+      "category": "fire-or-light",
+      "objectRole": "light-source-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 18,
+      "id": "topdown.objects.standing-torch-alt",
+      "label": "Standing torch alternate",
+      "category": "fire-or-light",
+      "objectRole": "light-source-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 19,
+      "id": "topdown.objects.mossy-rubble-blocks",
+      "label": "Mossy rubble blocks",
+      "category": "rubble-or-rock",
+      "objectRole": "obstacle-prop-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 20,
+      "id": "topdown.objects.flat-debris-stones",
+      "label": "Flat debris stones",
+      "category": "rubble-or-rock",
+      "objectRole": "debris-prop-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 21,
+      "id": "topdown.objects.small-stone-statue",
+      "label": "Small stone statue",
+      "category": "statue-or-monument",
+      "objectRole": "monument-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 22,
+      "id": "topdown.objects.hanging-crest-banner-alt",
+      "label": "Hanging crest banner alternate",
+      "category": "banner-or-sign",
+      "objectRole": "banner-marker-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 23,
+      "id": "topdown.objects.wood-sign-right",
+      "label": "Wood sign right",
+      "category": "banner-or-sign",
+      "objectRole": "sign-marker-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 24,
+      "id": "topdown.objects.wooden-shield-plaque",
+      "label": "Wooden shield plaque",
+      "category": "shield-or-crest",
+      "objectRole": "crest-marker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 256,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 25,
+      "id": "topdown.objects.round-bush",
+      "label": "Round bush",
+      "category": "bush-or-foliage",
+      "objectRole": "foliage-prop-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 26,
+      "id": "topdown.objects.large-bush",
+      "label": "Large bush",
+      "category": "bush-or-foliage",
+      "objectRole": "foliage-prop-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 27,
+      "id": "topdown.objects.gray-rock",
+      "label": "Gray rock",
+      "category": "rubble-or-rock",
+      "objectRole": "rock-prop-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 28,
+      "id": "topdown.objects.rock-cluster",
+      "label": "Rock cluster",
+      "category": "rubble-or-rock",
+      "objectRole": "rock-prop-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 29,
+      "id": "topdown.objects.tree-stump",
+      "label": "Tree stump",
+      "category": "tree-or-stump",
+      "objectRole": "stump-prop-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 30,
+      "id": "topdown.objects.small-tree-shrub",
+      "label": "Small tree shrub",
+      "category": "tree-or-stump",
+      "objectRole": "tree-prop-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 31,
+      "id": "topdown.objects.flower-patch-white",
+      "label": "White flower patch",
+      "category": "flower-or-plant",
+      "objectRole": "plant-prop-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 32,
+      "id": "topdown.objects.reeds-water-plant",
+      "label": "Reeds water plant",
+      "category": "reed-or-water-plant",
+      "objectRole": "water-plant-prop-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 384,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 33,
+      "id": "topdown.objects.round-bush-alt",
+      "label": "Round bush alternate",
+      "category": "bush-or-foliage",
+      "objectRole": "foliage-prop-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 34,
+      "id": "topdown.objects.large-bush-alt",
+      "label": "Large bush alternate",
+      "category": "bush-or-foliage",
+      "objectRole": "foliage-prop-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 35,
+      "id": "topdown.objects.tall-gray-rock",
+      "label": "Tall gray rock",
+      "category": "rubble-or-rock",
+      "objectRole": "rock-prop-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 36,
+      "id": "topdown.objects.rock-cluster-alt",
+      "label": "Rock cluster alternate",
+      "category": "rubble-or-rock",
+      "objectRole": "rock-prop-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 37,
+      "id": "topdown.objects.tree-stump-alt",
+      "label": "Tree stump alternate",
+      "category": "tree-or-stump",
+      "objectRole": "stump-prop-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 38,
+      "id": "topdown.objects.small-tree-shrub-alt",
+      "label": "Small tree shrub alternate",
+      "category": "tree-or-stump",
+      "objectRole": "tree-prop-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 39,
+      "id": "topdown.objects.flower-patch-mixed",
+      "label": "Mixed flower patch",
+      "category": "flower-or-plant",
+      "objectRole": "plant-prop-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 40,
+      "id": "topdown.objects.reeds-water-plant-alt",
+      "label": "Reeds water plant alternate",
+      "category": "reed-or-water-plant",
+      "objectRole": "water-plant-prop-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 512,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 41,
+      "id": "topdown.objects.wood-bridge",
+      "label": "Wood bridge",
+      "category": "bridge-or-plank",
+      "objectRole": "bridge-visual-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 42,
+      "id": "topdown.objects.wood-plank",
+      "label": "Wood plank",
+      "category": "bridge-or-plank",
+      "objectRole": "plank-prop-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 43,
+      "id": "topdown.objects.crate-stack",
+      "label": "Crate stack",
+      "category": "crate",
+      "objectRole": "container-or-obstacle-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 44,
+      "id": "topdown.objects.barrel",
+      "label": "Barrel",
+      "category": "barrel",
+      "objectRole": "container-or-obstacle-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 45,
+      "id": "topdown.objects.wood-fence-straight",
+      "label": "Wood fence straight",
+      "category": "fence",
+      "objectRole": "boundary-prop-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 46,
+      "id": "topdown.objects.wood-fence-corner",
+      "label": "Wood fence corner",
+      "category": "fence",
+      "objectRole": "boundary-prop-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 47,
+      "id": "topdown.objects.campfire",
+      "label": "Campfire",
+      "category": "campfire",
+      "objectRole": "fire-prop-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 48,
+      "id": "topdown.objects.round-plate-marker",
+      "label": "Round plate marker",
+      "category": "plate-or-marker",
+      "objectRole": "floor-marker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 640,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 49,
+      "id": "topdown.objects.blank-cell-row7-col1",
+      "label": "Blank cell row 7 col 1",
+      "category": "blank-empty-cell",
+      "objectRole": "blank-empty",
+      "sourceRect": {
+        "x": 0,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "none",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Blank placeholder cell; expected to become transparent checkerboard/background only.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 50,
+      "id": "topdown.objects.wood-plank-alt",
+      "label": "Wood plank alternate",
+      "category": "bridge-or-plank",
+      "objectRole": "plank-prop-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 51,
+      "id": "topdown.objects.crate-stack-alt",
+      "label": "Crate stack alternate",
+      "category": "crate",
+      "objectRole": "container-or-obstacle-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 52,
+      "id": "topdown.objects.barrel-alt",
+      "label": "Barrel alternate",
+      "category": "barrel",
+      "objectRole": "container-or-obstacle-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 53,
+      "id": "topdown.objects.wood-fence-straight-alt",
+      "label": "Wood fence straight alternate",
+      "category": "fence",
+      "objectRole": "boundary-prop-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 54,
+      "id": "topdown.objects.wood-fence-corner-alt",
+      "label": "Wood fence corner alternate",
+      "category": "fence",
+      "objectRole": "boundary-prop-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 55,
+      "id": "topdown.objects.campfire-alt",
+      "label": "Campfire alternate",
+      "category": "campfire",
+      "objectRole": "fire-prop-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 56,
+      "id": "topdown.objects.round-plate-marker-alt",
+      "label": "Round plate marker alternate",
+      "category": "plate-or-marker",
+      "objectRole": "floor-marker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 768,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 57,
+      "id": "topdown.objects.glowing-floor-disc",
+      "label": "Glowing floor disc",
+      "category": "plate-or-marker",
+      "objectRole": "floor-marker-candidate",
+      "sourceRect": {
+        "x": 0,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 0,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 58,
+      "id": "topdown.objects.spike-trap",
+      "label": "Spike trap",
+      "category": "hazard-or-trap",
+      "objectRole": "trap-visual-candidate",
+      "sourceRect": {
+        "x": 128,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 128,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 59,
+      "id": "topdown.objects.green-bedroll-or-mat",
+      "label": "Green bedroll or mat",
+      "category": "decorative-prop",
+      "objectRole": "rest-prop-candidate",
+      "sourceRect": {
+        "x": 256,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 256,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 60,
+      "id": "topdown.objects.glowing-pressure-plate",
+      "label": "Glowing pressure plate",
+      "category": "pedestal-or-switch",
+      "objectRole": "switch-or-plate-candidate",
+      "sourceRect": {
+        "x": 384,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 384,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 61,
+      "id": "topdown.objects.dark-shadow-hole",
+      "label": "Dark shadow hole",
+      "category": "hazard-or-trap",
+      "objectRole": "hole-or-shadow-candidate",
+      "sourceRect": {
+        "x": 512,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 512,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 62,
+      "id": "topdown.objects.slime-puddle-object",
+      "label": "Slime puddle object",
+      "category": "hazard-or-trap",
+      "objectRole": "slime-puddle-candidate",
+      "sourceRect": {
+        "x": 640,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 640,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "high",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Explicit H5.65 behavior/edge risk region; requires human review for glow/fire/portal/trap/slime/shadow/soft-edge artifacts.",
+        "Soft/bright/behavior-looking visual category; cleanup may leave halo artifacts or damage translucent-looking edges.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 63,
+      "id": "topdown.objects.hanging-pennant",
+      "label": "Hanging pennant",
+      "category": "banner-or-sign",
+      "objectRole": "banner-marker-candidate",
+      "sourceRect": {
+        "x": 768,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 768,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    },
+    {
+      "index": 64,
+      "id": "topdown.objects.metal-floor-plate",
+      "label": "Metal floor plate",
+      "category": "plate-or-marker",
+      "objectRole": "floor-marker-candidate",
+      "sourceRect": {
+        "x": 896,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "derivedRect": {
+        "x": 896,
+        "y": 896,
+        "w": 128,
+        "h": 128
+      },
+      "cleanupRisk": "low",
+      "correctionStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "behaviorBoundary": {
+        "runtimeBehaviorApproved": false,
+        "placementApproved": false,
+        "collisionApproved": false,
+        "interactionApproved": false,
+        "lootOrPickupApproved": false,
+        "portalTeleportApproved": false,
+        "lightEmissionApproved": false,
+        "trapDamageApproved": false,
+        "animationApproved": false
+      },
+      "notes": [
+        "Reference-background cleanup candidate; visual review still required before promotion.",
+        "Category name does not approve runtime behavior, placement, collision, interaction, loot, pickup, teleport, light, trap, damage, or animation."
+      ]
+    }
+  ],
+  "notes": [
+    "H5.65 creates a cleanup candidate only, not runtime approval.",
+    "H5.64 region review remains the accepted mapping baseline.",
+    "Behavior-bearing objects remain behavior-deferred even if cleanup looks visually acceptable.",
+    "This candidate intentionally preserves more gray/soft object material at the cost of possible checker residue; human review may exclude or correct affected regions later.",
+    "No source PNG or game/runtime files were modified."
+  ]
+}

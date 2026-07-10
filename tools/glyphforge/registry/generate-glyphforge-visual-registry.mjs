@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '../../..');
-const pantryPath = path.join(repoRoot, 'manifests/academy.visual-asset-pantry-index.json');
+const pantryPath = path.join(repoRoot, 'manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json');
 const outputPath = path.join(repoRoot, 'tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json');
 
 const knownToolModes = new Set([
@@ -224,7 +224,7 @@ function buildRegistry() {
     registryId: 'glyphforge-visual-registry.v0.1',
     generatedAt: new Date().toISOString(),
     generator: 'tools/glyphforge/registry/generate-glyphforge-visual-registry.mjs',
-    sourceOfTruth: 'manifests/academy.visual-asset-pantry-index.json',
+    sourceOfTruth: 'manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json',
     sourceSha256: sha256File(pantryPath),
     status: 'draft',
     reviewStatus: 'needs-human-review',

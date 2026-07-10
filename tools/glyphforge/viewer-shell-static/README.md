@@ -44,7 +44,7 @@ tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json
 That registry is generated from:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 Generator:
