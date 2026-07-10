@@ -1239,3 +1239,30 @@ Next recommended lane:
 ```text
 H5.88A — Tool Prototype Intake Decision
 ```
+
+## H5.88A Visual Tool Prototype Intake and Maturity Comparison Note
+
+H5.88A inspects and compares the existing visual tool prototypes before the unified GlyphForge shell is designed.
+
+Repo-local flipbook evidence prototypes remain in their evidence folders and are not moved or edited. They are the best current source for animation playback behavior: canvas playback, FPS control, action buttons, frame stepping, and loop/one-shot ideas.
+
+The user-held Downloads prototypes were copied into repo-local prototype/reference storage:
+
+```text
+tools/glyphforge/prototypes/sprite-box-annotator-prototype-v0.1.html
+tools/glyphforge/prototypes/particle-fx-viewer-prototype-v0.1.html
+tools/glyphforge/prototypes/README.md
+```
+
+These copied files are reference prototypes only. They are not canonical tools, not runtime tools, and not wired into games.
+
+H5.88A creates:
+
+```text
+manifests/academy.visual-tool-prototype-intake-comparison.json
+docs/assets/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md
+```
+
+Comparison result: Flipbook evidence prototypes should seed the future Flipbook Viewer; Sprite Box Annotator should seed the Sticker/Picture Book / region annotator surface; Particle FX Viewer should seed the Particle FX / preset authoring surface. H5.88B should design the unified GlyphForge viewer shell before implementation.
+
+H5.88A does not install dependencies, modify package/lock files, wire runtime, modify games, process images, modify PNGs, edit evidence flipbooks, move evidence flipbooks, reorganize manifests/docs, or promote prototype HTML into canonical tooling.

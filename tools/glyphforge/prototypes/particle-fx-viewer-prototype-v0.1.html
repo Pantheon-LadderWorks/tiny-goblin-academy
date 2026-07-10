@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Particle FX Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0f172a; /* Slate 900 */
+            color: white;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+        }
+        #ui-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .ui-panel {
+            pointer-events: auto;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+        select {
+            background: #1e293b;
+            color: white;
+            border: 1px solid #334155;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            outline: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="fxCanvas"></canvas>
+
+    <div id="ui-layer">
+        <div class="ui-panel max-w-sm">
+            <h1 class="text-xl font-bold mb-1 text-blue-400">FX Viewer</h1>
+            <p class="text-sm text-slate-300 mb-4">Click anywhere on the canvas to cast the selected effect.</p>
+            
+            <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Selected Effect</label>
+            <select id="effectSelect" class="mb-2">
+                <optgroup label="Electric">
+                    <option value="lightning">Force Lightning (Goblin Basic)</option>
+                    <option value="fx.static-zap-burst">Static Zap Burst</option>
+                    <option value="fx.electric-impact-pop">Electric Impact Pop</option>
+                </optgroup>
+                <optgroup label="Magic">
+                    <option value="fx.rainbow-arc-beam">Rainbow Arc Beam (Bouncing Ribbon)</option>
+                    <option value="fx.rainbow-gun">Rainbow Prism Gun (Ricochet)</option>
+                    <option value="fx.magic-summon-circle">Magic Summon Circle</option>
+                    <option value="fx.goblin-curse-smoke">Goblin Curse Smoke</option>
+                    <option value="fx.star-reward-pop">Star Reward Pop</option>
+                    <option value="fx.reward-ping">Reward Ping</option>
+                    <option value="fx.potion-splash-green">Potion Splash Green</option>
+                </optgroup>
+                <optgroup label="Environment">
+                    <option value="fx.wind-swipe">Wind Swipe</option>
+                    <option value="fx.ember-campfire-drift">Ember Campfire Drift</option>
+                    <option value="fx.poison-bubble-aura">Poison Bubble Aura</option>
+                </optgroup>
+                <optgroup label="UI / Cards">
+                    <option value="fx.card-selection-pulse">Card Selection Pulse</option>
+                    <option value="fx.shield-pop">Shield Pop</option>
+                </optgroup>
+            </select>
+            <p class="text-xs text-slate-500 italic" id="effectDesc">Jagged procedural lightning with branching paths and sparks.</p>
+        </div>
+        
+        <div class="ui-panel hidden sm:block">
+            <div class="text-xs text-slate-400">
+                <div>Active Particles: <span id="particleCount" class="text-white font-mono">0</span></div>
+                <div>Active Effects: <span id="effectCount" class="text-white font-mono">0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('fxCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let lastTime = performance.now();
+        
+        let effects = [];
+        let targets = [];
+        let casterPos = { x: 0, y: 0 };
+        
+        const effectSelect = document.getElementById('effectSelect');
+        const effectDesc = document.getElementById('effectDesc');
+        const particleCountEl = document.getElementById('particleCount');
+        const effectCountEl = document.getElementById('effectCount');
+
+        const fxRecipes = {
+            "fx.static-zap-burst": {
+                name: "Static Zap Burst", description: "Small electric sparks bursting around the caster hand.",
+                durationMs: 300,
+                spawn: { type: "radial", count: 28, origin: "casterHand", speedRange: [40, 130], angleRange: [0, 360], lifetimeRange: [120, 260] },
+                particles: { shape: "spark", sizeRange: [1, 3], alphaRange: [0.4, 1], colors: ["#ffffff", "#aeefff", "#8d7cff"], fade: "out", drag: 0.88 },
+                behavior: { flicker: true, jitterPx: 3 }
+            },
+            "fx.goblin-curse-smoke": {
+                name: "Goblin Curse Smoke", description: "Slow drifting green-purple smoke puffs.",
+                durationMs: 900,
+                spawn: { type: "burst", count: 18, origin: "impactPoint", speedRange: [12, 55], angleRange: [210, 330], lifetimeRange: [500, 1100] },
+                particles: { shape: "softCircle", sizeRange: [8, 24], alphaRange: [0.12, 0.45], colors: ["#91d66b", "#6b4aa0", "#d0ff95"], fade: "out", scaleOverLife: [0.5, 1.8], drag: 0.96 },
+                behavior: { drift: { x: 8, y: -18 }, swirl: 0.35 }
+            },
+            "fx.shield-pop": {
+                name: "Shield Pop", description: "Bright defensive bubble pop with outward motes.",
+                durationMs: 520,
+                spawn: { type: "ring", count: 54, origin: "targetCenter", radius: 22, speedRange: [70, 150], lifetimeRange: [260, 520] },
+                particles: { shape: "dot", sizeRange: [2, 6], alphaRange: [0.55, 1], colors: ["#ffffff", "#b8fff1", "#7fdcc8", "#aeefff"], fade: "out", drag: 0.88 },
+                overlays: [{ type: "expandingRing", radiusStart: 10, radiusEnd: 78, lineWidthStart: 7, lineWidthEnd: 1, alphaStart: 0.82, alphaEnd: 0 }]
+            },
+            "fx.potion-splash-green": {
+                name: "Potion Splash Green", description: "Goopy green potion droplets with a chunky impact burst.",
+                durationMs: 850,
+                spawn: { type: "arcBurst", count: 44, origin: "impactPoint", speedRange: [90, 260], angleRange: [200, 340], lifetimeRange: [420, 850] },
+                particles: { shape: "blob", sizeRange: [4, 13], alphaRange: [0.65, 1], colors: ["#83e66b", "#b6ff85", "#4cae54", "#d9ff8f"], fade: "out", gravity: 520, drag: 0.975 }
+            },
+            "fx.wind-swipe": {
+                name: "Wind Swipe", description: "Fast visible gust slashes that sweep from caster toward target.",
+                durationMs: 520,
+                spawn: { type: "streakLine", count: 26, origin: "casterForward", speedRange: [260, 460], lifetimeRange: [260, 520] },
+                particles: { shape: "curvedStreak", lengthRange: [70, 150], widthRange: [2, 5], alphaRange: [0.28, 0.82], colors: ["#ffffff", "#c8f3ff", "#a7ffd8"], fade: "out", drag: 0.96 },
+                behavior: { direction: "forward", sineWave: { amplitude: 18, frequency: 3.4 } }
+            },
+            "fx.star-reward-pop": {
+                name: "Star Reward Pop", description: "Cute reward stars popping outward and floating up.",
+                durationMs: 850,
+                spawn: { type: "radial", count: 16, origin: "targetCenter", speedRange: [35, 110], angleRange: [190, 350], lifetimeRange: [500, 850] },
+                particles: { shape: "star", sizeRange: [5, 13], alphaRange: [0.5, 1], colors: ["#fff2a8", "#ffd66b", "#ffffff"], fade: "out", gravity: -60, drag: 0.92, spinRange: [-8, 8] },
+                overlays: [{ type: "popRing", radiusStart: 4, radiusEnd: 38, alphaStart: 0.8, alphaEnd: 0 }]
+            },
+            "fx.poison-bubble-aura": {
+                name: "Poison Bubble Aura", description: "Looping toxic bubbles rising around a target.",
+                durationMs: 1600, loopable: true,
+                spawn: { type: "continuous", ratePerSecond: 18, origin: "targetArea", speedRange: [8, 35], angleRange: [250, 290], lifetimeRange: [700, 1400] },
+                particles: { shape: "hollowCircle", sizeRange: [4, 13], alphaRange: [0.18, 0.65], colors: ["#9cff72", "#62d96b", "#d9ff8f"], fade: "inOut", wobble: true },
+                behavior: { rise: true, horizontalWanderPx: 12 }
+            },
+            "fx.magic-summon-circle": {
+                name: "Magic Summon Circle", description: "Expanding rune circle with inward spark motes.",
+                durationMs: 950,
+                spawn: { type: "inwardRing", count: 48, origin: "targetFeet", radius: 54, speedRange: [35, 75], lifetimeRange: [550, 950] },
+                particles: { shape: "dot", sizeRange: [1, 4], alphaRange: [0.35, 0.9], colors: ["#d7b8ff", "#ffffff", "#8ee6ff"], fade: "out", drag: 0.96 },
+                overlays: [
+                    { type: "rotatingRing", radius: 44, lineWidth: 2, alphaStart: 0.65, alphaEnd: 0, rotationSpeed: 1.8 },
+                    { type: "expandingRing", radiusStart: 20, radiusEnd: 62, alphaStart: 0.35, alphaEnd: 0 }
+                ]
+            },
+            "fx.ember-campfire-drift": {
+                name: "Ember Campfire Drift", description: "Small warm embers drifting upward from a fire.",
+                durationMs: 2000, loopable: true,
+                spawn: { type: "continuous", ratePerSecond: 22, origin: "firePoint", speedRange: [18, 70], angleRange: [245, 295], lifetimeRange: [700, 1800] },
+                particles: { shape: "softCircle", sizeRange: [1, 5], alphaRange: [0.25, 0.95], colors: ["#ffd27a", "#ff9f4a", "#fff0b0"], fade: "out", gravity: -25, drag: 0.94 },
+                behavior: { horizontalWanderPx: 20, flicker: true }
+            },
+            "fx.card-selection-pulse": {
+                name: "Card Selection Pulse", description: "Soft rectangular pulse around a selected card.",
+                durationMs: 700, loopable: true,
+                spawn: { type: "edgeMotes", count: 20, origin: "rectBounds", lifetimeRange: [350, 700] },
+                particles: { shape: "dot", sizeRange: [1, 3], alphaRange: [0.25, 0.75], colors: ["#fff2a8", "#ffffff"], fade: "inOut", followRectEdge: true },
+                overlays: [{ type: "roundedRectPulse", padding: 6, radius: 10, lineWidthStart: 3, lineWidthEnd: 1, alphaStart: 0.65, alphaEnd: 0.15 }]
+            },
+            "fx.electric-impact-pop": {
+                name: "Electric Impact Pop", description: "Sharp electric burst at the target after a lightning hit.",
+                durationMs: 380,
+                spawn: { type: "radial", count: 38, origin: "targetCenter", speedRange: [90, 260], angleRange: [0, 360], lifetimeRange: [160, 380] },
+                particles: { shape: "spark", sizeRange: [2, 5], alphaRange: [0.65, 1], colors: ["#ffffff", "#aeefff", "#8d7cff", "#d8fbff"], fade: "out", drag: 0.86 },
+                behavior: { flicker: true, jitterPx: 4 },
+                overlays: [{ type: "expandingRing", radiusStart: 4, radiusEnd: 42, lineWidthStart: 4, lineWidthEnd: 1, alphaStart: 0.75, alphaEnd: 0 }]
+            },
+            "fx.reward-ping": {
+                name: "Reward Ping", description: "Small stars pop upward for success, coins, or card rewards.",
+                durationMs: 720,
+                spawn: { type: "radial", count: 24, origin: "targetCenter", speedRange: [45, 145], angleRange: [200, 340], lifetimeRange: [420, 720] },
+                particles: { shape: "star", sizeRange: [4, 11], alphaRange: [0.55, 1], colors: ["#fff2a8", "#ffd66b", "#ffffff"], fade: "out", gravity: -80, drag: 0.91, spinRange: [-10, 10] },
+                overlays: [{ type: "expandingRing", radiusStart: 5, radiusEnd: 35, lineWidthStart: 3, lineWidthEnd: 1, alphaStart: 0.65, alphaEnd: 0 }]
+            }
+        };
+
+        const beamRecipes = {
+            "fx.rainbow-gun": {
+                name: "Rainbow Gun",
+                description: "A glowing beam of ricocheting rainbow light.",
+                durationMs: 650,
+                maxBounces: 5,
+                beamStepPx: 14,
+                beamLengthPx: 1200,
+                beamWidth: 6,
+                glowWidth: 16,
+                sparkleRate: 6,
+                colors: ["#ff4d4d", "#ff9f1c", "#ffe45e", "#6eeb83", "#4dabf7", "#7b61ff", "#d633ff"]
+            },
+            "fx.rainbow-arc-beam": {
+                name: "Rainbow Arc Beam",
+                description: "A bouncing arched rainbow beam with fixed seven-color bands.",
+                durationMs: 1100,
+                bounceCount: 4,
+                initialArcHeight: 180,
+                initialHopLength: 220,
+                bounceHeightDecay: 0.65,
+                hopLengthDecay: 0.85,
+                stripeWidth: 4,
+                stripeGap: 0.5,
+                glowWidth: 20,
+                groundOffset: 40,
+                colors: ["#ff3b30", "#ff9500", "#ffcc00", "#34c759", "#0a84ff", "#5e5ce6", "#bf5af2"]
+            }
+        };
+
+        effectSelect.addEventListener('change', (e) => {
+            if(e.target.value === 'lightning') {
+                effectDesc.innerText = "Jagged procedural lightning with branching paths and sparks.";
+            } else if (e.target.value === 'fx.rainbow-gun') {
+                effectDesc.innerText = beamRecipes["fx.rainbow-gun"].description;
+            } else if (e.target.value === 'fx.rainbow-arc-beam') {
+                effectDesc.innerText = beamRecipes["fx.rainbow-arc-beam"].description;
+            } else {
+                effectDesc.innerText = fxRecipes[e.target.value]?.description || "";
+            }
+        });
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            casterPos = { x: width * 0.1, y: height * 0.6 };
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Target {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.w = 40;
+                this.h = 60;
+                this.hitFlashMs = 0;
+                this.life = 1000;
+            }
+            hit() {
+                this.hitFlashMs = 120;
+            }
+            update(dt) {
+                if (this.hitFlashMs > 0) this.hitFlashMs -= dt;
+                if (this.hitFlashMs <= 0) this.life -= dt;
+            }
+            draw(ctx) {
+                ctx.save();
+                ctx.fillStyle = `rgba(150, 40, 40, ${Math.min(1, this.life / 200)})`;
+                ctx.fillRect(this.x - this.w/2, this.y - this.h/2, this.w, this.h);
+                if (this.hitFlashMs > 0) {
+                    ctx.globalAlpha = 0.8;
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fillRect(this.x - this.w/2, this.y - this.h/2, this.w, this.h);
+                }
+                ctx.restore();
+            }
+        }
+
+        class ForceLightning {
+            constructor(start, end, duration = 350) {
+                this.start = start; this.end = end; this.duration = duration;
+                this.age = 0; this.points = []; this.sparks = [];
+                this.regenerate();
+            }
+            regenerate() {
+                const segments = 12;
+                const dx = this.end.x - this.start.x, dy = this.end.y - this.start.y;
+                const length = Math.hypot(dx, dy) || 1;
+                const nx = -dy / length, ny = dx / length;
+                this.points = [];
+                for (let i = 0; i <= segments; i++) {
+                    const t = i / segments;
+                    const edgeFade = Math.sin(Math.PI * t);
+                    const offset = (Math.random() - 0.5) * 34 * edgeFade;
+                    this.points.push({ x: this.start.x + dx * t + nx * offset, y: this.start.y + dy * t + ny * offset });
+                }
+            }
+            spawnSparks() {
+                for (let i = 0; i < 4; i++) {
+                    const p = this.points[Math.floor(Math.random() * this.points.length)];
+                    this.sparks.push({ x: p.x, y: p.y, vx: (Math.random() - 0.5) * 180, vy: (Math.random() - 0.5) * 180, life: 120 + Math.random() * 180, maxLife: 300, size: 1 + Math.random() * 3 });
+                }
+            }
+            update(dt) {
+                this.age += dt;
+                if (this.age < this.duration && Math.random() < 0.65) this.regenerate();
+                if (this.age < this.duration) this.spawnSparks();
+                for (const spark of this.sparks) {
+                    spark.x += spark.vx * dt / 1000; spark.y += spark.vy * dt / 1000;
+                    spark.vx *= 0.94; spark.vy *= 0.94; spark.life -= dt;
+                }
+                this.sparks = this.sparks.filter(s => s.life > 0);
+            }
+            draw(ctx) {
+                const alive = Math.max(1 - this.age / this.duration, 0);
+                ctx.save(); ctx.lineCap = "round"; ctx.lineJoin = "round";
+                if (alive > 0) {
+                    ctx.globalAlpha = 0.22 * alive; ctx.strokeStyle = "#8de7ff"; ctx.lineWidth = 12; this.drawPath(ctx);
+                    ctx.globalAlpha = 0.45 * alive; ctx.strokeStyle = "#6f7dff"; ctx.lineWidth = 6; this.drawPath(ctx);
+                    ctx.globalAlpha = 0.95 * alive; ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 2; this.drawPath(ctx);
+                    ctx.globalAlpha = 0.65 * alive; ctx.strokeStyle = "#d8fbff"; ctx.lineWidth = 1;
+                    for (let i = 2; i < this.points.length - 2; i += 3) {
+                        if (Math.random() < 0.45) {
+                            const p = this.points[i], angle = Math.random() * Math.PI * 2, len = 18 + Math.random() * 22;
+                            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x + Math.cos(angle) * len, p.y + Math.sin(angle) * len); ctx.stroke();
+                        }
+                    }
+                }
+                for (const spark of this.sparks) {
+                    ctx.globalAlpha = Math.max(spark.life / spark.maxLife, 0); ctx.fillStyle = "#ffffff";
+                    ctx.beginPath(); ctx.arc(spark.x, spark.y, spark.size, 0, Math.PI * 2); ctx.fill();
+                }
+                ctx.restore();
+            }
+            drawPath(ctx) {
+                if (this.points.length < 2) return;
+                ctx.beginPath(); ctx.moveTo(this.points[0].x, this.points[0].y);
+                for (let i = 1; i < this.points.length; i++) ctx.lineTo(this.points[i].x, this.points[i].y);
+                ctx.stroke();
+            }
+            get done() { return this.age >= this.duration && this.sparks.length === 0; }
+            get particleCount() { return this.sparks.length; }
+        }
+
+        class RainbowArcBeam {
+            constructor(start, target, config) {
+                this.start = start;
+                this.target = target;
+                this.config = config;
+                this.age = 0;
+                this.duration = config.durationMs;
+                this.points = [];
+                this.bouncePoints = [];
+                this.sparks = [];
+
+                this.buildPath();
+                this.spawnBounceSparks();
+            }
+
+            sampleQuadraticBezier(p0, p1, p2, segments) {
+                const pts = [];
+                for(let i=0; i<=segments; i++) {
+                    const t = i/segments;
+                    const invT = 1 - t;
+                    pts.push({
+                        x: invT*invT*p0.x + 2*invT*t*p1.x + t*t*p2.x,
+                        y: invT*invT*p0.y + 2*invT*t*p1.y + t*t*p2.y
+                    });
+                }
+                return pts;
+            }
+
+            buildPath() {
+                const startX = this.start.x;
+                const startY = this.start.y;
+                const targetX = this.target.x;
+                
+                let dir = targetX >= startX ? 1 : -1;
+                let groundY = height - this.config.groundOffset;
+
+                let arcStart = { x: startX, y: startY };
+                let hopLength = this.config.initialHopLength;
+                let arcHeight = this.config.initialArcHeight;
+
+                for (let bounce = 0; bounce < this.config.bounceCount; bounce++) {
+                    const arcEnd = {
+                        x: arcStart.x + dir * hopLength,
+                        y: groundY
+                    };
+
+                    const control = {
+                        x: (arcStart.x + arcEnd.x) / 2,
+                        y: Math.min(arcStart.y, arcEnd.y) - arcHeight
+                    };
+
+                    const segment = this.sampleQuadraticBezier(arcStart, control, arcEnd, 24);
+
+                    if (this.points.length > 0) segment.shift(); // Avoid duplicate join point
+                    this.points.push(...segment);
+                    
+                    if (bounce < this.config.bounceCount - 1) {
+                        this.bouncePoints.push({ x: arcEnd.x, y: arcEnd.y });
+                    }
+
+                    arcStart = arcEnd;
+                    hopLength *= this.config.hopLengthDecay;
+                    arcHeight *= this.config.bounceHeightDecay;
+                }
+            }
+            
+            spawnBounceSparks() {
+                for (const bp of this.bouncePoints) {
+                    for(let i=0; i<15; i++) {
+                        this.sparks.push({
+                            x: bp.x, y: bp.y,
+                            vx: (Math.random() - 0.5) * 180,
+                            vy: -Math.random() * 200, // Burst mostly upwards on bounce
+                            life: 200 + Math.random() * 400,
+                            maxLife: 600,
+                            size: 1.5 + Math.random() * 3,
+                            color: this.config.colors[Math.floor(Math.random() * this.config.colors.length)]
+                        });
+                    }
+                }
+            }
+
+            update(dt) {
+                this.age += dt;
+                
+                for (const s of this.sparks) {
+                    s.x += s.vx * dt / 1000;
+                    s.y += s.vy * dt / 1000;
+                    s.vy += 600 * dt / 1000; // gravity
+                    s.vx *= 0.94; // friction
+                    s.vy *= 0.94;
+                    s.life -= dt;
+                }
+                this.sparks = this.sparks.filter(s => s.life > 0);
+            }
+
+            offsetPolylineByNormal(points, offset) {
+                return points.map((p, i) => {
+                    const prev = points[Math.max(0, i - 1)];
+                    const next = points[Math.min(points.length - 1, i + 1)];
+                    const dx = next.x - prev.x;
+                    const dy = next.y - prev.y;
+                    const len = Math.hypot(dx, dy) || 1;
+                    const nx = -dy / len;
+                    const ny = dx / len;
+                    return { x: p.x + nx * offset, y: p.y + ny * offset };
+                });
+            }
+
+            draw(ctx) {
+                const alive = Math.max(1 - this.age / this.duration, 0);
+                if (alive <= 0 && this.sparks.length === 0) return;
+
+                ctx.save();
+                
+                if (alive > 0) {
+                    const { colors, stripeWidth, stripeGap, glowWidth } = this.config;
+                    const total = colors.length;
+                    const bandSpan = (total - 1) * (stripeWidth + stripeGap);
+                    
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+
+                    // 1. Soft wide glow underneath
+                    ctx.globalCompositeOperation = "screen";
+                    ctx.globalAlpha = 0.35 * alive;
+                    ctx.strokeStyle = "#ffffff";
+                    ctx.lineWidth = glowWidth;
+                    ctx.beginPath();
+                    ctx.moveTo(this.points[0].x, this.points[0].y);
+                    for (let i = 1; i < this.points.length; i++) {
+                        ctx.lineTo(this.points[i].x, this.points[i].y);
+                    }
+                    ctx.stroke();
+
+                    // 2. 7 Parallel Rainbow Stripes
+                    ctx.globalCompositeOperation = "source-over"; // normal blending to maintain strict colors
+                    ctx.globalAlpha = alive;
+                    for (let c = 0; c < total; c++) {
+                        const offset = c * (stripeWidth + stripeGap) - bandSpan / 2;
+                        const offsetPoints = this.offsetPolylineByNormal(this.points, offset);
+
+                        ctx.strokeStyle = colors[c];
+                        ctx.lineWidth = stripeWidth;
+
+                        ctx.beginPath();
+                        ctx.moveTo(offsetPoints[0].x, offsetPoints[0].y);
+                        for (let i = 1; i < offsetPoints.length; i++) {
+                            ctx.lineTo(offsetPoints[i].x, offsetPoints[i].y);
+                        }
+                        ctx.stroke();
+                    }
+                    
+                    // 3. Optional faint white core highlight
+                    ctx.globalAlpha = 0.8 * alive;
+                    ctx.strokeStyle = "rgba(255,255,255,0.6)";
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.moveTo(this.points[0].x, this.points[0].y);
+                    for (let i = 1; i < this.points.length; i++) {
+                        ctx.lineTo(this.points[i].x, this.points[i].y);
+                    }
+                    ctx.stroke();
+                }
+
+                // 4. Draw Bounce Sparks
+                ctx.globalCompositeOperation = "screen";
+                for (const s of this.sparks) {
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(s.life / s.maxLife, 0); 
+                    ctx.fillStyle = s.color;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                ctx.restore();
+            }
+
+            get done() { return this.age >= this.duration && this.sparks.length === 0; }
+            get particleCount() { return this.sparks.length; }
+        }
+
+        class RainbowBeam {
+            constructor(start, target, config = {}) {
+                this.start = start;
+                this.target = target;
+                this.age = 0;
+                this.duration = config.durationMs ?? 650;
+                this.maxBounces = config.maxBounces ?? 4;
+                this.beamStepPx = config.beamStepPx ?? 12;
+                this.beamLengthPx = config.beamLengthPx ?? 900;
+                this.beamWidth = config.beamWidth ?? 6;
+                this.glowWidth = config.glowWidth ?? 14;
+                this.sparkleRate = config.sparkleRate ?? 5;
+                this.colors = config.colors ?? [
+                    "#ff4d4d", "#ff9f1c", "#ffe45e",
+                    "#6eeb83", "#4dabf7", "#7b61ff", "#d633ff"
+                ];
+
+                this.points = [];
+                this.bouncePoints = [];
+                this.sparks = [];
+                this.rebuildPath();
+                
+                // Spawn impact bounce flashes! (Juice upgrade)
+                for (const bp of this.bouncePoints) {
+                    for(let i = 0; i < 18; i++) {
+                        this.sparks.push({
+                            x: bp.x, y: bp.y,
+                            vx: (Math.random() - 0.5) * 280,
+                            vy: (Math.random() - 0.5) * 280,
+                            life: 200 + Math.random() * 300,
+                            maxLife: 500,
+                            size: 2 + Math.random() * 4,
+                            color: this.colors[Math.floor(Math.random() * this.colors.length)]
+                        });
+                    }
+                }
+            }
+
+            rebuildPath() {
+                this.points = [{ x: this.start.x, y: this.start.y }];
+                let pos = { x: this.start.x, y: this.start.y };
+                let dx = this.target.x - this.start.x;
+                let dy = this.target.y - this.start.y;
+                let len = Math.hypot(dx, dy) || 1;
+                let dir = { x: dx / len, y: dy / len };
+                let traveled = 0;
+                let bounces = 0;
+
+                while (traveled < this.beamLengthPx && bounces <= this.maxBounces) {
+                    pos.x += dir.x * this.beamStepPx;
+                    pos.y += dir.y * this.beamStepPx;
+                    traveled += this.beamStepPx;
+                    let bounced = false;
+
+                    if (pos.x <= 0 || pos.x >= width) {
+                        dir.x *= -1;
+                        pos.x = Math.max(0, Math.min(width, pos.x));
+                        bounces++;
+                        bounced = true;
+                    }
+                    if (pos.y <= 0 || pos.y >= height) {
+                        dir.y *= -1;
+                        pos.y = Math.max(0, Math.min(height, pos.y));
+                        bounces++;
+                        bounced = true;
+                    }
+
+                    this.points.push({ x: pos.x, y: pos.y });
+                    if (bounced) {
+                        this.bouncePoints.push({ x: pos.x, y: pos.y });
+                        if (bounces > this.maxBounces) break;
+                    }
+                }
+            }
+
+            spawnSparkles() {
+                for (let i = 0; i < this.sparkleRate; i++) {
+                    const p = this.points[Math.floor(Math.random() * this.points.length)];
+                    if (!p) continue;
+                    this.sparks.push({
+                        x: p.x, y: p.y,
+                        vx: (Math.random() - 0.5) * 80,
+                        vy: (Math.random() - 0.5) * 80,
+                        life: 200 + Math.random() * 250,
+                        maxLife: 450,
+                        size: 1 + Math.random() * 3,
+                        color: this.colors[Math.floor(Math.random() * this.colors.length)]
+                    });
+                }
+            }
+
+            update(dt) {
+                this.age += dt;
+                if (this.age < this.duration) {
+                    this.spawnSparkles();
+                }
+                for (const s of this.sparks) {
+                    s.x += s.vx * dt / 1000;
+                    s.y += s.vy * dt / 1000;
+                    s.vx *= 0.94; // Drag
+                    s.vy *= 0.94;
+                    s.life -= dt;
+                }
+                this.sparks = this.sparks.filter(s => s.life > 0);
+            }
+
+            drawBeamStroke(ctx, lineWidth, alphaMul = 1) {
+                if (this.points.length < 2) return;
+                ctx.save();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                
+                // Animated color scroll based on age! (Juice upgrade)
+                const colorOffset = Math.floor(this.age / 35);
+                
+                for (let i = 0; i < this.points.length - 1; i++) {
+                    const a = this.points[i];
+                    const b = this.points[i + 1];
+                    const color = this.colors[(i + colorOffset) % this.colors.length];
+                    
+                    ctx.strokeStyle = color;
+                    ctx.globalAlpha = alphaMul;
+                    ctx.lineWidth = lineWidth;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+
+            draw(ctx) {
+                const alive = Math.max(1 - this.age / this.duration, 0);
+
+                ctx.save();
+                if (alive > 0) {
+                    ctx.globalCompositeOperation = 'screen';
+                    
+                    // outer glow
+                    this.drawBeamStroke(ctx, this.glowWidth, 0.25 * alive);
+                    // mid glow
+                    this.drawBeamStroke(ctx, this.beamWidth + 4, 0.5 * alive);
+                    // main beam
+                    this.drawBeamStroke(ctx, this.beamWidth, 0.9 * alive);
+
+                    // white hot inner core
+                    if (this.points.length >= 2) {
+                        ctx.save();
+                        ctx.lineCap = "round";
+                        ctx.lineJoin = "round";
+                        ctx.strokeStyle = "#ffffff";
+                        ctx.globalAlpha = 0.8 * alive;
+                        ctx.lineWidth = Math.max(2, this.beamWidth * 0.35);
+                        ctx.beginPath();
+                        ctx.moveTo(this.points[0].x, this.points[0].y);
+                        for (let i = 1; i < this.points.length; i++) {
+                            ctx.lineTo(this.points[i].x, this.points[i].y);
+                        }
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                }
+
+                // sparkles
+                ctx.globalCompositeOperation = 'screen';
+                for (const s of this.sparks) {
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(s.life / s.maxLife, 0);
+                    ctx.fillStyle = s.color;
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+                ctx.restore();
+            }
+
+            get done() { return this.age >= this.duration && this.sparks.length === 0; }
+            get particleCount() { return this.sparks.length; }
+        }
+
+        class GenericParticle {
+            constructor(x, y, recipe, casterPos, targetPos) {
+                this.recipe = recipe;
+                const pConfig = recipe.particles;
+                this.pConfig = pConfig;
+                this.x = x; this.y = y;
+                const speed = this.randomRange(recipe.spawn.speedRange || [0, 0]);
+                const angleDeg = this.randomRange(recipe.spawn.angleRange || [0, 360]);
+                let angleRad = angleDeg * Math.PI / 180;
+                
+                if (recipe.spawn.type === 'streakLine' && recipe.behavior?.direction === 'forward') {
+                    angleRad = Math.atan2(targetPos.y - casterPos.y, targetPos.x - casterPos.x);
+                    this.y += (Math.random() - 0.5) * 60;
+                    this.x += (Math.random() - 0.5) * 20;
+                } else if (recipe.spawn.type === 'inwardRing') {
+                    const radius = recipe.spawn.radius || 54;
+                    this.x = x + Math.cos(angleRad) * radius;
+                    this.y = y + Math.sin(angleRad) * radius;
+                    angleRad += Math.PI; 
+                } else if (recipe.spawn.type === 'edgeMotes') {
+                    const w = 40, h = 60; 
+                    if (Math.random() > 0.5) {
+                        this.x = x + (Math.random() - 0.5) * w;
+                        this.y = y + (Math.random() > 0.5 ? -h/2 : h/2);
+                    } else {
+                        this.x = x + (Math.random() > 0.5 ? -w/2 : w/2);
+                        this.y = y + (Math.random() - 0.5) * h;
+                    }
+                }
+                
+                this.vx = Math.cos(angleRad) * speed;
+                this.vy = Math.sin(angleRad) * speed;
+                this.life = this.randomRange(recipe.spawn.lifetimeRange || [500, 1000]);
+                this.maxLife = this.life;
+                this.age = 0;
+                this.size = this.randomRange(pConfig.sizeRange || [2, 5]);
+                this.baseSize = this.size;
+                this.color = pConfig.colors[Math.floor(Math.random() * pConfig.colors.length)];
+                this.baseAlpha = this.randomRange(pConfig.alphaRange || [1, 1]);
+                this.spin = pConfig.spinRange ? this.randomRange(pConfig.spinRange) : 0;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.gravity = pConfig.gravity || 0;
+                this.drag = pConfig.drag || 1;
+                this.wobblePhase = Math.random() * Math.PI * 2;
+                this.originX = this.x; this.originY = this.y;
+            }
+            randomRange(arr) { return arr[0] + Math.random() * (arr[1] - arr[0]); }
+            update(dt) {
+                this.age += dt; const dtSec = dt / 1000;
+                this.vy += this.gravity * dtSec;
+                this.vx *= Math.pow(this.drag, dtSec * 60); this.vy *= Math.pow(this.drag, dtSec * 60);
+                
+                if (this.recipe.behavior?.drift) {
+                    this.vx += this.recipe.behavior.drift.x * dtSec;
+                    this.vy += this.recipe.behavior.drift.y * dtSec;
+                }
+                if (this.recipe.behavior?.horizontalWanderPx || this.pConfig.wobble) {
+                    const wander = this.recipe.behavior?.horizontalWanderPx || 15;
+                    this.wobblePhase += dtSec * 3;
+                    this.vx += Math.cos(this.wobblePhase) * wander * dtSec * 60;
+                }
+                if (this.recipe.behavior?.sineWave) {
+                    this.wobblePhase += dtSec * this.recipe.behavior.sineWave.frequency * Math.PI * 2;
+                    this.vy += Math.cos(this.wobblePhase) * this.recipe.behavior.sineWave.amplitude * dtSec * 60;
+                }
+                if (this.recipe.behavior?.swirl) {
+                    const swirlAmt = this.recipe.behavior.swirl;
+                    const dx = this.x - this.originX, dy = this.y - this.originY;
+                    this.vx += -dy * swirlAmt * dtSec; this.vy += dx * swirlAmt * dtSec;
+                }
+                
+                this.x += this.vx * dtSec; this.y += this.vy * dtSec;
+                this.rotation += this.spin * dtSec;
+                
+                if (this.pConfig.scaleOverLife) {
+                    const progress = this.age / this.maxLife;
+                    const scale = this.pConfig.scaleOverLife[0] + progress * (this.pConfig.scaleOverLife[1] - this.pConfig.scaleOverLife[0]);
+                    this.size = this.baseSize * Math.max(0, scale);
+                }
+            }
+            draw(ctx) {
+                const progress = this.age / this.maxLife;
+                let currentAlpha = this.baseAlpha;
+                if (this.pConfig.fade === 'out') currentAlpha *= Math.max(0, 1 - progress);
+                else if (this.pConfig.fade === 'inOut') currentAlpha *= Math.sin(progress * Math.PI);
+                
+                if (this.recipe.behavior?.flicker && Math.random() < 0.2) currentAlpha *= 0.4;
+                if (currentAlpha <= 0.01) return;
+                
+                ctx.save();
+                ctx.translate(this.x, this.y); ctx.rotate(this.rotation); ctx.globalAlpha = currentAlpha;
+                const shp = this.pConfig.shape;
+                
+                if (shp === 'softCircle') {
+                    const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
+                    grad.addColorStop(0, this.color); grad.addColorStop(1, 'rgba(0,0,0,0)');
+                    ctx.fillStyle = grad; ctx.beginPath(); ctx.arc(0, 0, this.size, 0, Math.PI * 2); ctx.fill();
+                } else if (shp === 'dot' || shp === 'blob') {
+                    ctx.fillStyle = this.color; ctx.beginPath();
+                    if (shp === 'blob') {
+                        const angle = Math.atan2(this.vy, this.vx) - this.rotation;
+                        ctx.ellipse(0, 0, this.size * 1.5, this.size * 0.7, angle, 0, Math.PI * 2);
+                    } else ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (shp === 'hollowCircle') {
+                    ctx.strokeStyle = this.color; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(0, 0, this.size, 0, Math.PI * 2); ctx.stroke();
+                } else if (shp === 'spark' || shp === 'curvedStreak') {
+                    ctx.strokeStyle = this.color; ctx.lineWidth = this.pConfig.widthRange ? this.pConfig.widthRange[0] : 2;
+                    ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(0, 0);
+                    const speed = Math.hypot(this.vx, this.vy) || 1;
+                    const len = this.pConfig.lengthRange ? this.pConfig.lengthRange[0] + Math.random()*(this.pConfig.lengthRange[1]-this.pConfig.lengthRange[0]) : this.size * 4;
+                    const trailX = -(this.vx / speed) * len, trailY = -(this.vy / speed) * len;
+                    if (shp === 'curvedStreak') ctx.quadraticCurveTo(trailX * 0.5, trailY * 0.5 + 15, trailX, trailY);
+                    else ctx.lineTo(trailX, trailY);
+                    ctx.stroke();
+                } else if (shp === 'star') {
+                    ctx.fillStyle = this.color; ctx.beginPath();
+                    for(let i=0; i<10; i++) {
+                        const r = (i%2===0) ? this.size : this.size * 0.4;
+                        const a = (i * Math.PI) / 5;
+                        ctx.lineTo(Math.cos(a)*r, Math.sin(a)*r);
+                    }
+                    ctx.closePath(); ctx.fill();
+                }
+                ctx.restore();
+            }
+        }
+
+        class GenericRecipeEmitter {
+            constructor(casterPos, targetPos, recipeId) {
+                this.recipeId = recipeId;
+                this.recipe = fxRecipes[recipeId];
+                this.casterPos = casterPos; this.targetPos = targetPos;
+                const originType = this.recipe.spawn.origin;
+                this.originX = (originType === 'casterHand' || originType === 'casterForward') ? casterPos.x : targetPos.x;
+                this.originY = (originType === 'casterHand' || originType === 'casterForward') ? casterPos.y : targetPos.y;
+                if (originType === 'targetFeet') this.originY += 30;
+                
+                this.particles = []; this.age = 0;
+                this.durationMs = this.recipe.durationMs;
+                this.loopable = this.recipe.loopable;
+                
+                if (this.recipe.spawn.type !== 'continuous') {
+                    const count = this.recipe.spawn.count || 10;
+                    for (let i = 0; i < count; i++) this.spawnParticle();
+                }
+            }
+            spawnParticle() {
+                this.particles.push(new GenericParticle(this.originX, this.originY, this.recipe, this.casterPos, this.targetPos));
+            }
+            update(dt) {
+                this.age += dt;
+                
+                // Fixed logic: Continuous effects now obey durationMs even if loopable, to prevent canvas crashing
+                if (this.recipe.spawn.type === 'continuous' && this.age < this.durationMs) {
+                    const msPerParticle = 1000 / (this.recipe.spawn.ratePerSecond || 10);
+                    if (Math.random() < dt / msPerParticle) this.spawnParticle();
+                }
+                
+                for (let i = this.particles.length - 1; i >= 0; i--) {
+                    const p = this.particles[i]; p.update(dt);
+                    if (p.age >= p.maxLife) this.particles.splice(i, 1);
+                }
+            }
+            drawOverlays(ctx, alive) {
+                if (!this.recipe.overlays) return;
+                ctx.save();
+                for (const overlay of this.recipe.overlays) {
+                    const alpha = overlay.alphaStart + (1 - alive) * (overlay.alphaEnd - overlay.alphaStart);
+                    if (alpha <= 0.01) continue;
+                    ctx.globalAlpha = alpha;
+                    if (overlay.type === 'expandingRing' || overlay.type === 'popRing') {
+                        const r = overlay.radiusStart + (1 - alive) * (overlay.radiusEnd - overlay.radiusStart);
+                        ctx.beginPath(); ctx.arc(this.originX, this.originY, r, 0, Math.PI*2);
+                        if (overlay.type === 'expandingRing') {
+                            ctx.lineWidth = (overlay.lineWidthStart||2) + (1 - alive) * ((overlay.lineWidthEnd||1) - (overlay.lineWidthStart||2));
+                            ctx.strokeStyle = '#ffffff'; ctx.stroke();
+                        } else {
+                            ctx.fillStyle = '#ffffff'; ctx.fill();
+                        }
+                    } else if (overlay.type === 'rotatingRing') {
+                        ctx.translate(this.originX, this.originY);
+                        ctx.rotate(this.age / 1000 * (overlay.rotationSpeed || 1));
+                        ctx.beginPath(); ctx.arc(0, 0, overlay.radius, 0, Math.PI*2);
+                        ctx.lineWidth = overlay.lineWidth || 2; ctx.strokeStyle = '#d7b8ff';
+                        ctx.setLineDash([15, 15]); ctx.stroke(); ctx.setLineDash([]);
+                        ctx.translate(-this.originX, -this.originY);
+                    } else if (overlay.type === 'roundedRectPulse') {
+                        const w = 40 + overlay.padding * 2 + (1-alive) * 20, h = 60 + overlay.padding * 2 + (1-alive) * 20;
+                        ctx.lineWidth = (overlay.lineWidthStart||3) + (1 - alive) * ((overlay.lineWidthEnd||1) - (overlay.lineWidthStart||3));
+                        ctx.strokeStyle = '#fff2a8'; ctx.beginPath();
+                        ctx.roundRect(this.originX - w/2, this.originY - h/2, w, h, overlay.radius || 8); ctx.stroke();
+                    }
+                }
+                ctx.restore();
+            }
+            draw(ctx) {
+                let alive = 1;
+                // Fixed: everything ends now, even 'loopable' in preview
+                alive = Math.max(1 - this.age / this.durationMs, 0);
+                
+                ctx.save();
+                if (this.recipeId !== 'fx.goblin-curse-smoke' && this.recipeId !== 'fx.ember-campfire-drift') {
+                    ctx.globalCompositeOperation = 'screen';
+                }
+                this.drawOverlays(ctx, alive);
+                for (const p of this.particles) p.draw(ctx);
+                ctx.restore();
+            }
+            // Fixed: loopable items still expire when duration passes
+            get done() { return this.age >= this.durationMs && this.particles.length === 0; }
+            get particleCount() { return this.particles.length; }
+        }
+
+        function castEffect(targetPos) {
+            const effectType = effectSelect.value;
+            let effect;
+            
+            const newTarget = new Target(targetPos.x, targetPos.y);
+            targets.push(newTarget);
+
+            if (effectType === 'lightning') {
+                newTarget.hit(); 
+                effect = new ForceLightning(casterPos, targetPos, 420);
+            } else if (effectType === 'fx.rainbow-gun') {
+                newTarget.hit();
+                effect = new RainbowBeam(casterPos, targetPos, beamRecipes["fx.rainbow-gun"]);
+            } else if (effectType === 'fx.rainbow-arc-beam') {
+                newTarget.hit();
+                effect = new RainbowArcBeam(casterPos, targetPos, beamRecipes["fx.rainbow-arc-beam"]);
+            } else if (fxRecipes[effectType]) {
+                const hitTriggers = ['fx.shield-pop', 'fx.potion-splash-green', 'fx.wind-swipe', 'fx.electric-impact-pop'];
+                if (hitTriggers.includes(effectType)) newTarget.hit();
+                effect = new GenericRecipeEmitter(casterPos, targetPos, effectType);
+            }
+            if (effect) effects.push(effect);
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            castEffect({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        });
+        canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const rect = canvas.getBoundingClientRect();
+            castEffect({ x: e.touches[0].clientX - rect.left, y: e.touches[0].clientY - rect.top });
+        }, { passive: false });
+
+        function drawCaster(ctx) {
+            ctx.save();
+            ctx.beginPath(); ctx.arc(casterPos.x, casterPos.y, 8, 0, Math.PI * 2);
+            ctx.fillStyle = "#86efac"; ctx.shadowBlur = 15; ctx.shadowColor = "#22c55e"; ctx.fill();
+            ctx.beginPath(); ctx.arc(casterPos.x, casterPos.y, 4, 0, Math.PI * 2);
+            ctx.fillStyle = "#ffffff"; ctx.shadowBlur = 0; ctx.fill();
+            ctx.restore();
+        }
+
+        function animate(time) {
+            const dt = time - lastTime;
+            lastTime = time;
+            ctx.clearRect(0, 0, width, height);
+            
+            ctx.save(); ctx.strokeStyle = "rgba(255, 255, 255, 0.05)"; ctx.lineWidth = 1;
+            for(let x = 0; x < width; x += 50) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke(); }
+            for(let y = 0; y < height; y += 50) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(width, y); ctx.stroke(); }
+            ctx.restore();
+
+            for (let i = targets.length - 1; i >= 0; i--) {
+                targets[i].update(dt); targets[i].draw(ctx);
+                if (targets[i].life <= 0) targets.splice(i, 1);
+            }
+
+            drawCaster(ctx);
+            let totalParticles = 0;
+
+            for (let i = effects.length - 1; i >= 0; i--) {
+                const effect = effects[i];
+                effect.update(dt); effect.draw(ctx);
+                if (effect.particleCount) totalParticles += effect.particleCount;
+                if (effect.done) effects.splice(i, 1);
+            }
+
+            particleCountEl.innerText = totalParticles;
+            effectCountEl.innerText = effects.length;
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
