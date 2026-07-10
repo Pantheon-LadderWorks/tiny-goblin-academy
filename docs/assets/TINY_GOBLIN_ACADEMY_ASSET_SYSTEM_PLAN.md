@@ -419,7 +419,7 @@ H5.54 created a split-aware draft measured-grid-cell region manifest for `assets
   * Path: `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png`
   * Intended Use: Game 04 action icons, status badges, portrait tokens, feedback effects, and duel UI markers.
   * Status: concept / v0.1 / needs textless cleanup / needs manifest.
-  * Notes: Useful concept sheet, but includes baked “ACTIVE TURN” text on one token, so it should not be treated as production-ready until cleaned or regenerated.
+  * Notes: Useful concept sheet, but includes baked â€œACTIVE TURNâ€ text on one token, so it should not be treated as production-ready until cleaned or regenerated.
 
 * **Pet Campfire Ember Pup sheet**
   * Path: `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`
@@ -503,12 +503,12 @@ H5.54 created a split-aware draft measured-grid-cell region manifest for `assets
 ## Future Pet Candidates
 
 Future optional pet concepts:
-* **Lantern Toad** — glowing belly camp companion.
-* **Moss Ferret** — sneaky cozy academy pet.
-* **Root Pup** — plant-like dog companion with twig/leaf traits.
-* **Pebble Boarlet** — stubborn tiny boar with stone-like hide.
-* **Ash-Cat** — soot-colored familiar with ember eyes.
-* **Button Bat** — tiny cave/academy bat companion.
+* **Lantern Toad** â€” glowing belly camp companion.
+* **Moss Ferret** â€” sneaky cozy academy pet.
+* **Root Pup** â€” plant-like dog companion with twig/leaf traits.
+* **Pebble Boarlet** â€” stubborn tiny boar with stone-like hide.
+* **Ash-Cat** â€” soot-colored familiar with ember eyes.
+* **Button Bat** â€” tiny cave/academy bat companion.
 
 ## Background Needs
 
@@ -915,7 +915,7 @@ H5.74 also performs the provenance consistency check requested after review. The
 Cleanup remains a future lane:
 
 ```text
-H5.75 — Topdown Vertical Walls Cleanup Candidate
+H5.75 â€” Topdown Vertical Walls Cleanup Candidate
 ```
 
 H5.73A future floor tilesheet intake is unrelated and remains untouched.
@@ -1025,7 +1025,7 @@ Runtime, placement, collision, interaction, pickup, loot, chest/key behavior, tr
 Cleanup remains future work:
 
 ```text
-H5.79 — Topdown Non-FX Objects Regenerated Cleanup Candidate
+H5.79 â€” Topdown Non-FX Objects Regenerated Cleanup Candidate
 ```
 
 ## H5.79 Topdown Non-FX Objects Regenerated Cleanup Candidate Note
@@ -1080,7 +1080,7 @@ H5.80 does not rerun cleanup, regenerate evidence, modify source PNGs, modify de
 Next active lane:
 
 ```text
-H5.81 — Existing Topdown Terrain Cleanup Candidate
+H5.81 â€” Existing Topdown Terrain Cleanup Candidate
 ```
 
 ## H5.81 Existing Topdown Terrain Cleanup Candidate Note
@@ -1162,7 +1162,7 @@ H5.86 does not wire runtime, change game code, modify PNGs, process images, crea
 Next active lane:
 
 ```text
-H5.87 — Manifest and Asset Docs Organization Plan
+H5.87 â€” Manifest and Asset Docs Organization Plan
 ```
 
 ## H5.87 Manifest and Asset Docs Organization Plan Note
@@ -1192,7 +1192,7 @@ No physical reorganization occurred in H5.87. No manifests or docs were moved, v
 Next recommended lane:
 
 ```text
-H5.88 — Visual Tool Suite Registry Plan
+H5.88 â€” Visual Tool Suite Registry Plan
 ```
 
 ## H5.88 Visual Tool Suite Registry Plan Note
@@ -1237,7 +1237,7 @@ H5.88 does not build tools, move folders, reorganize manifests/docs, wire runtim
 Next recommended lane:
 
 ```text
-H5.88A — Tool Prototype Intake Decision
+H5.88A â€” Tool Prototype Intake Decision
 ```
 
 ## H5.88A Visual Tool Prototype Intake and Maturity Comparison Note
@@ -1289,7 +1289,7 @@ This addendum does not promote the prototype to canonical tooling, wire any game
 Recommended next lane:
 
 ```text
-H5.88B — GlyphForge Unified Viewer Shell Design
+H5.88B â€” GlyphForge Unified Viewer Shell Design
 ```
 
 ## H5.88B GlyphForge Unified Viewer Shell Design Note
@@ -1336,7 +1336,7 @@ H5.88B does not build tools, implement UI, wire runtime, modify game code, modif
 Next recommended lane:
 
 ```text
-H5.88C — GlyphForge Viewer Shell Static Prototype Plan
+H5.88C â€” GlyphForge Viewer Shell Static Prototype Plan
 ```
 
 ## H5.88C GlyphForge Viewer Shell Static Prototype Plan Note
@@ -1344,7 +1344,7 @@ H5.88C — GlyphForge Viewer Shell Static Prototype Plan
 H5.88C turns the H5.88B unified shell design into a build-ready static prototype plan for:
 
 ```text
-GlyphForge Visual Workbench — Static Prototype v0.1
+GlyphForge Visual Workbench â€” Static Prototype v0.1
 ```
 
 Planned future location:
@@ -1422,5 +1422,44 @@ H5.88D does not wire runtime, modify game code, modify package/lock files, insta
 Next recommended lane:
 
 ```text
-H5.88E — GlyphForge Static Viewer Shell Human Review
+H5.88E â€” GlyphForge Static Viewer Shell Human Review
+```
+
+## H5.88E GlyphForge Static Viewer Shell Human Review Note
+
+H5.88E records human/product review for the H5.88D static/offline GlyphForge Visual Workbench prototype.
+
+Review decision:
+
+```text
+passed-with-polish-notes
+```
+
+Accepted prototype scope:
+
+```text
+static HTML/CSS/JS shell
+local/offline visual review surface
+generated registry consumption
+24 registry entries
+asset entry list
+search/filter controls
+mode-tab routing surface
+metadata/path/warning panels
+raw selected registry entry preview
+visible runtime boundary strip
+first useful Region / Asset Browser summary mode
+placeholder panels for Flipbook, Scene Composition, Particle FX, and Audio Later
+```
+
+The main polish note is that mode tabs can display a selected entry even when the tab is not the entry's natural `toolMode`. This is acceptable for the v0.1 static prototype, but future maturity should add auto-routing, mismatch warnings, or explicit non-native placeholder labels.
+
+Region / Asset Browser remains the first useful mode and should be the next maturity target. Future work should add source/derived image previews, region rows, accepted/denied/deferred summaries, and eventually region highlight/inspection.
+
+H5.88E does not build new features, change app behavior, wire runtime, modify game code, modify package/lock files, install dependencies, process images, modify PNGs, mutate source/derived/evidence images, reorganize docs/manifests, or upgrade registry entry runtime eligibility. Runtime approval is never inferred. Button Goblin Clicker remains the first later runtime visual integration candidate, Top-Down Slime Quest remains last or near-last, and Audio remains future Tier 2.5.
+
+Next recommended lane:
+
+```text
+H5.88F — GlyphForge Region Browser Image Preview Plan
 ```

@@ -1,4 +1,4 @@
-# GlyphForge Visual Workbench — Static Prototype v0.1
+# GlyphForge Visual Workbench â€” Static Prototype v0.1
 
 This folder contains the first static/offline GlyphForge Visual Workbench prototype for Tiny Goblin Academy.
 
@@ -76,3 +76,20 @@ Alternatively, serve the repository with any already available local static serv
 Runtime approval is never inferred.
 
 The viewer displays pantry and manifest state. It does not promote assets, approve placement, approve animation cycles, approve particle behavior, approve audio triggers, approve collision/pathfinding/tilemaps, or wire any game.
+## H5.88E review status
+
+H5.88E passed this static/offline shell as a local visual review and planning prototype with polish notes.
+
+Accepted v0.1 scope:
+
+- registry loading;
+- entry listing and filters;
+- dashboard summary;
+- status/runtime boundary display;
+- metadata, paths, warnings, and raw JSON preview;
+- first useful Region / Asset Browser summary mode;
+- placeholder route panels for Flipbook, Scene Composition, Particle FX, and Audio Later.
+
+Known polish note: mode tabs can display non-native selected entries in placeholder views. A future maturity lane should add auto-routing, mismatch warnings, or explicit placeholder-only labels.
+
+Runtime approval is still never inferred from this shell.
