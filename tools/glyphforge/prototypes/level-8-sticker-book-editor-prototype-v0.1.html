@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Goblin Academy - Level Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc; /* Slate 50 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #game-board {
+            width: 800px;
+            height: 600px;
+            background-color: #1e293b; /* Slate 800 */
+            /* Creates a nice 32x32 pixel blueprint grid */
+            background-image: 
+                repeating-linear-gradient(#334155 0 1px, transparent 1px 100%),
+                repeating-linear-gradient(90deg, #334155 0 1px, transparent 1px 100%);
+            background-size: 32px 32px;
+            position: relative;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .sticker {
+            position: absolute;
+            cursor: grab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+            user-select: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            transition: border-color 0.1s;
+        }
+
+        .sticker:active {
+            cursor: grabbing;
+        }
+
+        .sticker.selected {
+            border-color: #fbbf24; /* Amber 400 */
+            box-shadow: 0 0 0 2px #fbbf24, 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        /* Entity Colors */
+        .entity-player { background-color: #3b82f6; } /* Blue 500 */
+        .entity-platform { background-color: #475569; } /* Slate 600 */
+        .entity-hazard { background-color: #ef4444; } /* Red 500 */
+        .entity-exit { background-color: #10b981; } /* Emerald 500 */
+
+        #json-output {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre;
+            background: #020617;
+            color: #10b981;
+            resize: none;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: #020617;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+        }
+        
+        .toast.show {
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col">
+
+    <!-- Top Navbar -->
+    <header class="bg-slate-800 border-b border-slate-700 p-4 flex justify-between items-center shrink-0">
+        <div>
+            <h1 class="text-xl font-bold text-amber-400">Level 8: One-Room Platformer</h1>
+            <p class="text-xs text-slate-400">Sticker Book Editor v0.1</p>
+        </div>
+        <div class="flex gap-4 items-center">
+            <label class="flex items-center gap-2 cursor-pointer text-sm">
+                <input type="checkbox" id="snap-toggle" checked class="w-4 h-4 accent-amber-400 rounded bg-slate-700 border-slate-600">
+                Snap to Grid (32px)
+            </label>
+            <button onclick="clearBoard()" class="px-4 py-2 bg-red-900/50 text-red-300 hover:bg-red-800/80 rounded-lg text-sm font-semibold transition-colors border border-red-700/50">
+                Clear Board
+            </button>
+        </div>
+    </header>
+
+    <main class="flex flex-1 overflow-hidden">
+        
+        <!-- Left Sidebar: Palette -->
+        <aside class="w-64 bg-slate-800 border-r border-slate-700 p-4 flex flex-col gap-4 shrink-0 overflow-y-auto">
+            <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Entity Palette</h2>
+            
+            <button onclick="spawnEntity('player')" class="flex items-center gap-3 w-full p-3 bg-slate-700/50 hover:bg-slate-700 rounded border border-slate-600 transition-colors text-left">
+                <div class="w-8 h-8 rounded bg-blue-500 shrink-0"></div>
+                <div>
+                    <div class="font-bold text-sm">Player (Goblin)</div>
+                    <div class="text-xs text-slate-400">64x64 Spawn Point</div>
+                </div>
+            </button>
+
+            <button onclick="spawnEntity('platform')" class="flex items-center gap-3 w-full p-3 bg-slate-700/50 hover:bg-slate-700 rounded border border-slate-600 transition-colors text-left">
+                <div class="w-8 h-4 rounded bg-slate-500 shrink-0"></div>
+                <div>
+                    <div class="font-bold text-sm">Platform</div>
+                    <div class="text-xs text-slate-400">128x32 Solid</div>
+                </div>
+            </button>
+
+            <button onclick="spawnEntity('hazard')" class="flex items-center gap-3 w-full p-3 bg-slate-700/50 hover:bg-slate-700 rounded border border-slate-600 transition-colors text-left">
+                <div class="w-8 h-4 rounded bg-red-500 shrink-0" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+                <div>
+                    <div class="font-bold text-sm">Spikes</div>
+                    <div class="text-xs text-slate-400">64x32 Hazard</div>
+                </div>
+            </button>
+
+            <button onclick="spawnEntity('exit')" class="flex items-center gap-3 w-full p-3 bg-slate-700/50 hover:bg-slate-700 rounded border border-slate-600 transition-colors text-left">
+                <div class="w-6 h-8 rounded bg-emerald-500 shrink-0"></div>
+                <div>
+                    <div class="font-bold text-sm">Door (Exit)</div>
+                    <div class="text-xs text-slate-400">64x96 Goal</div>
+                </div>
+            </button>
+
+            <div class="mt-auto p-4 bg-slate-900/50 rounded-lg text-xs text-slate-400 border border-slate-800">
+                <p class="font-bold text-slate-300 mb-1">Controls:</p>
+                <ul class="list-disc pl-4 space-y-1">
+                    <li>Click & Drag to move</li>
+                    <li>Select + Delete/Backspace to remove</li>
+                    <li>Width/Height are fixed for MVP</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Center: Game Board View -->
+        <div class="flex-1 bg-slate-900 flex items-center justify-center p-8 overflow-auto">
+            <!-- The 800x600 Level Canvas -->
+            <div id="game-board"></div>
+        </div>
+
+        <!-- Right Sidebar: JSON Output -->
+        <aside class="w-80 bg-slate-800 border-l border-slate-700 flex flex-col shrink-0">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center">
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Phaser JSON Data</h2>
+                <button onclick="copyJSON()" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-bold transition-colors">
+                    Copy
+                </button>
+            </div>
+            <textarea id="json-output" class="flex-1 w-full p-4 text-xs focus:outline-none" readonly></textarea>
+        </aside>
+
+    </main>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script>
+        // --- State Management ---
+        const state = {
+            entities: [],
+            nextId: 1,
+            selectedId: null,
+            isDragging: false,
+            dragOffset: { x: 0, y: 0 }
+        };
+
+        const boardEl = document.getElementById('game-board');
+        const jsonOutEl = document.getElementById('json-output');
+        const snapToggle = document.getElementById('snap-toggle');
+
+        // Entity configuration definitions
+        const ENTITY_DEFS = {
+            player:   { w: 64,  h: 64,  class: 'entity-player', label: 'Player' },
+            platform: { w: 128, h: 32,  class: 'entity-platform', label: 'Platform' },
+            hazard:   { w: 64,  h: 32,  class: 'entity-hazard', label: 'Spikes' },
+            exit:     { w: 64,  h: 96,  class: 'entity-exit', label: 'Door' }
+        };
+
+        // --- Core Functions ---
+        
+        function spawnEntity(type) {
+            const def = ENTITY_DEFS[type];
+            // Spawn in center of board
+            let spawnX = (800 / 2) - (def.w / 2);
+            let spawnY = (600 / 2) - (def.h / 2);
+
+            // Apply snap if enabled
+            if (snapToggle.checked) {
+                spawnX = Math.round(spawnX / 32) * 32;
+                spawnY = Math.round(spawnY / 32) * 32;
+            }
+
+            // Only allow 1 player spawn
+            if (type === 'player') {
+                const existingPlayer = state.entities.find(e => e.type === 'player');
+                if (existingPlayer) {
+                    selectEntity(existingPlayer.id);
+                    return; // Prevent multiple players
+                }
+            }
+
+            const entity = {
+                id: state.nextId++,
+                type: type,
+                x: spawnX,
+                y: spawnY,
+                w: def.w,
+                h: def.h
+            };
+
+            state.entities.push(entity);
+            selectEntity(entity.id);
+            render();
+        }
+
+        function removeEntity(id) {
+            state.entities = state.entities.filter(e => e.id !== id);
+            if (state.selectedId === id) state.selectedId = null;
+            render();
+        }
+
+        function clearBoard() {
+            if (state.entities.length === 0) return;
+            // Removed alert/confirm per rules. Just clearing directly.
+            state.entities = [];
+            state.selectedId = null;
+            render();
+        }
+
+        function selectEntity(id) {
+            state.selectedId = id;
+            updateDOMSelection();
+        }
+
+        // --- Interaction Logic (Mouse Events) ---
+
+        let dragTargetId = null;
+
+        boardEl.addEventListener('mousedown', (e) => {
+            const sticker = e.target.closest('.sticker');
+            if (sticker) {
+                const id = parseInt(sticker.dataset.id);
+                selectEntity(id);
+                dragTargetId = id;
+                state.isDragging = true;
+                
+                const entity = state.entities.find(en => en.id === id);
+                const rect = boardEl.getBoundingClientRect();
+                
+                // Calculate where inside the sticker we clicked
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+                state.dragOffset.x = mouseX - entity.x;
+                state.dragOffset.y = mouseY - entity.y;
+            } else {
+                selectEntity(null); // Clicked empty space
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!state.isDragging || !dragTargetId) return;
+
+            const rect = boardEl.getBoundingClientRect();
+            let newX = e.clientX - rect.left - state.dragOffset.x;
+            let newY = e.clientY - rect.top - state.dragOffset.y;
+
+            const entity = state.entities.find(en => en.id === dragTargetId);
+            
+            // Constrain to board bounds
+            newX = Math.max(0, Math.min(newX, 800 - entity.w));
+            newY = Math.max(0, Math.min(newY, 600 - entity.h));
+
+            // Grid snapping
+            if (snapToggle.checked) {
+                newX = Math.round(newX / 32) * 32;
+                newY = Math.round(newY / 32) * 32;
+            }
+
+            entity.x = newX;
+            entity.y = newY;
+
+            // Optimistic update of just this DOM node for smooth dragging
+            const node = document.getElementById(`entity-${entity.id}`);
+            if (node) {
+                node.style.left = `${entity.x}px`;
+                node.style.top = `${entity.y}px`;
+            }
+            
+            updateJSON(); // Keep JSON panel live
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (state.isDragging) {
+                state.isDragging = false;
+                dragTargetId = null;
+                render(); // Final snap render
+            }
+        });
+
+        // Handle Delete key
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'Delete' || e.key === 'Backspace') && state.selectedId !== null) {
+                // Ensure we aren't typing in an input field (though we don't have any right now)
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    removeEntity(state.selectedId);
+                }
+            }
+        });
+
+        // --- Rendering & Output ---
+
+        function render() {
+            // Rebuild DOM
+            boardEl.innerHTML = '';
+            
+            state.entities.forEach(entity => {
+                const def = ENTITY_DEFS[entity.type];
+                const div = document.createElement('div');
+                div.id = `entity-${entity.id}`;
+                div.dataset.id = entity.id;
+                div.className = `sticker ${def.class} ${state.selectedId === entity.id ? 'selected' : ''}`;
+                
+                div.style.left = `${entity.x}px`;
+                div.style.top = `${entity.y}px`;
+                div.style.width = `${entity.w}px`;
+                div.style.height = `${entity.h}px`;
+                
+                // Specific styling overrides
+                if (entity.type === 'hazard') {
+                    div.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+                    div.style.alignItems = 'flex-end';
+                    div.style.paddingBottom = '4px';
+                }
+
+                div.innerText = def.label;
+                boardEl.appendChild(div);
+            });
+
+            updateJSON();
+        }
+
+        function updateDOMSelection() {
+            document.querySelectorAll('.sticker').forEach(el => {
+                if (parseInt(el.dataset.id) === state.selectedId) {
+                    el.classList.add('selected');
+                } else {
+                    el.classList.remove('selected');
+                }
+            });
+        }
+
+        function updateJSON() {
+            // Group by category to make Phaser injection super clean
+            const levelData = {
+                player: null,
+                exit: null,
+                platforms: [],
+                hazards: []
+            };
+
+            state.entities.forEach(e => {
+                // We only need x, y, width, height for Phaser
+                const data = { x: e.x, y: e.y, w: e.w, h: e.h };
+                
+                if (e.type === 'player') levelData.player = data;
+                else if (e.type === 'exit') levelData.exit = data;
+                else if (e.type === 'platform') levelData.platforms.push(data);
+                else if (e.type === 'hazard') levelData.hazards.push(data);
+            });
+
+            jsonOutEl.value = JSON.stringify(levelData, null, 2);
+        }
+
+        function copyJSON() {
+            jsonOutEl.select();
+            document.execCommand('copy'); // Legacy fallback that works reliably in iframes
+            
+            // Show toast
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // Initialize empty
+        render();
+
+    </script>
+</body>
+</html>

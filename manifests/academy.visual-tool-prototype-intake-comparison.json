@@ -15,7 +15,8 @@
     "Not full tool-suite implementation.",
     "Not a docs/manifests reorganization lane.",
     "No existing evidence flipbooks are moved or edited.",
-    "Copied Downloads HTML files are prototype/reference tools, not canonical tools."
+    "Copied Downloads HTML files are prototype/reference tools, not canonical tools.",
+    "H5.88A2 adds a preserved scene-composition prototype reference only; it does not promote any prototype to canonical implementation or runtime wiring."
   ],
   "prototypeInputs": {
     "repoLocalFlipbookEvidence": {
@@ -80,6 +81,19 @@
         "exists": true,
         "copiedTo": "tools/glyphforge/prototypes/particle-fx-viewer-prototype-v0.1.html",
         "role": "procedural particle FX preview and parameter experimentation"
+      },
+      {
+        "prototypeId": "level-8-sticker-book-editor",
+        "requestedPath": "C:/Users/kryst/Downloads/level_8_sticker_book_editor.html",
+        "exists": true,
+        "copiedTo": "tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html",
+        "role": "scene composition / sticker placement / layout JSON export",
+        "usedFor": "One Room Dungeon Platformer / Level 8 layout design",
+        "toolFamily": "sticker-picture-book-viewer",
+        "prototypeRole": "scene-composition-layout-editor",
+        "implementationStatus": "preserved-reference-prototype",
+        "runtimeEligibility": "not-runtime-approved",
+        "pipelineUse": "visual-tool-prototype-comparison"
       }
     ]
   },
@@ -99,6 +113,18 @@
       "bytes": 50572,
       "sha256": "0287f7fc60f0df194071dbe2fa555c7873cc3182a9f692f0b0ae30b34bbaa411",
       "disposition": "preserve-as-reference-rebuild-later"
+    },
+    {
+      "prototypeId": "level-8-sticker-book-editor",
+      "copiedPath": "tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html",
+      "sourcePath": "C:/Users/kryst/Downloads/level_8_sticker_book_editor.html",
+      "bytes": 15847,
+      "sha256": "4fc609e155b6f6ec030f8fb346a85fa571feaad0eecb6adb9661ae1f9ebfb6b1",
+      "toolFamily": "sticker-picture-book-viewer",
+      "prototypeRole": "scene-composition-layout-editor",
+      "implementationStatus": "preserved-reference-prototype",
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "visual-tool-prototype-comparison"
     }
   ],
   "repoLocalPrototypeFindings": {
@@ -211,13 +237,84 @@
       "preservesAssetStatusReviewRuntimeBoundaries": "weak: future rebuild must clearly mark FX as preview/preset only until runtime-approved",
       "registryFedLater": true,
       "disposition": "preserve recipe/emitter ideas; rebuild as separate particle-fx-viewer and future particle preset authoring surface"
+    },
+    {
+      "toolFamily": "sticker-picture-book-viewer",
+      "prototypeId": "level-8-sticker-book-editor",
+      "displayName": "Level 8 Sticker Book Editor",
+      "prototypeRole": "scene-composition-layout-editor",
+      "purpose": "Place gameplay stickers/entities onto a fixed 800x600 board and export layout JSON for Level 8-style scene planning.",
+      "currentMaturity": "useful focused prototype / rebuild before canonical use",
+      "inputMethod": "button-spawned entity/sticker types on a fixed board; no manifest registry input yet",
+      "outputMethod": "live JSON textarea plus Copy button",
+      "exportFormat": {
+        "shape": "object with player, exit, platforms array, hazards array",
+        "coordinates": "board pixels",
+        "entityShape": "{ x, y, w, h }",
+        "exampleKeys": [
+          "player",
+          "exit",
+          "platforms",
+          "hazards"
+        ]
+      },
+      "manifestAwareness": "none; fixed hardcoded entity definitions",
+      "assetDiscoveryStyle": "hardcoded entity buttons, not pantry-fed",
+      "backgroundImageLoadingBehavior": "fixed 800x600 level board / visual editor surface; no general background image loader discovered",
+      "stickerPlacementBehavior": "spawn entity at board center, drag within bounds, snap to 32px grid when enabled",
+      "transformControls": {
+        "dragDrop": true,
+        "scale": false,
+        "rotate": false,
+        "delete": true,
+        "layering": false,
+        "reset": true,
+        "import": false,
+        "export": true,
+        "copy": true
+      },
+      "uiStrengths": [
+        "clear split between entity palette, board, and live JSON output",
+        "direct drag placement with snap grid",
+        "Delete/Backspace removal",
+        "single-player constraint",
+        "live layout JSON handoff"
+      ],
+      "uiWeaknesses": [
+        "hardcoded entity types and board size",
+        "no image/background asset loader",
+        "no pantry or manifest awareness",
+        "no import of previous layout JSON",
+        "no scale/rotate/layering controls",
+        "no runtime-boundary/status display"
+      ],
+      "portability": "single-file local HTML reference",
+      "offlineLocal": true,
+      "preservesAssetStatusReviewRuntimeBoundaries": false,
+      "registryFedLater": true,
+      "recommendation": "preserve and rebuild into Sticker/Picture Book scene composition mode after GlyphForge shell design",
+      "strongestFor": [
+        "placing sprites/props/stickers on a background",
+        "exporting placement/layout JSON",
+        "scene composition planning",
+        "background + object composition",
+        "future Sticker/Picture Book layout mode",
+        "future runtime draft layout handoff after later approval"
+      ],
+      "runtimeEligibility": "not-runtime-approved",
+      "pipelineUse": "visual-tool-prototype-comparison"
     }
   ],
   "reusableFeatureCandidates": [
     "Flipbook: canvas frame playback, FPS slider, play/pause, animation/action buttons, loop/one-shot handling, frame-rect driven canvas sizing.",
     "Sprite Box Annotator: drag/resize bbox editing, snap grid, zoom/fit, labels, status select, notes, coordinate fields, JSON copy/import.",
     "Particle FX Viewer: recipe-like effect definitions, effect selector, click/touch target casting, active particle/effect counters, generic emitter pattern, specialized lightning/rainbow effect classes.",
-    "All tools: single-file offline prototype portability is useful for fast evidence review and should inform dev ergonomics."
+    "All tools: single-file offline prototype portability is useful for fast evidence review and should inform dev ergonomics.",
+    {
+      "sourcePrototype": "level-8-sticker-book-editor",
+      "feature": "scene composition board with draggable stickers/entities, snap grid, delete/backspace removal, live JSON layout export, and copy-to-clipboard handoff",
+      "futureUse": "Sticker/Picture Book scene composition/layout mode for planning background anchors, prop placement, and runtime draft layouts after later approval"
+    }
   ],
   "rebuildCandidates": [
     {
@@ -235,6 +332,11 @@
     {
       "candidate": "Particle-fx-viewer / preset authoring surface",
       "reason": "Particle experiments should stay separate from sprite cleanup and eventually output explicit preset manifests."
+    },
+    {
+      "prototypeId": "level-8-sticker-book-editor",
+      "rebuildAs": "GlyphForge Sticker/Picture Book scene composition mode",
+      "reason": "Useful Level 8 layout workflow exists but must be rebuilt around pantry/manifest registry input, background anchors, asset status display, import/export schemas, and runtime-boundary warnings."
     }
   ],
   "retireOrArchiveCandidates": [
@@ -283,8 +385,30 @@
         "safe preview-only boundary display"
       ]
     },
-    "firstImplementationCandidate": "viewer-shell plus sticker-picture-book/region annotator seed, because manual region review/editing directly supports asset pipeline lanes and can reuse the Sprite Box Annotator strengths."
+    "firstImplementationCandidate": "viewer-shell plus sticker-picture-book/region annotator seed, because manual region review/editing directly supports asset pipeline lanes and can reuse the Sprite Box Annotator strengths.",
+    "stickerPictureBookModes": [
+      {
+        "mode": "region-asset-browser",
+        "sourceInspiration": "sprite-box-annotator plus pantry manifests",
+        "purpose": "inspect asset regions, bbox data, cleanup status, and review/runtime boundaries"
+      },
+      {
+        "mode": "scene-composition-layout-editor",
+        "sourceInspiration": "level-8-sticker-book-editor plus scene-anchor manifests",
+        "purpose": "place assets/stickers on backgrounds and export planning layout JSON without approving runtime placement"
+      }
+    ]
   },
   "recommendedFirstImplementationLane": "H5.88B — GlyphForge Unified Viewer Shell Design",
-  "nextAfterFirstImplementationDesign": "H5.88C — GlyphForge Sticker/Picture Book Region Annotator Prototype"
+  "nextAfterFirstImplementationDesign": "H5.88C — GlyphForge Sticker/Picture Book Region Browser + Scene Composition Design",
+  "laneAddenda": [
+    {
+      "laneId": "H5.88A2",
+      "title": "Level 8 Sticker Book Editor Prototype Addendum",
+      "purpose": "Add the missed scene-composition / sticker-placement / layout-export prototype to the H5.88A comparison before GlyphForge shell design.",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved"
+    }
+  ]
 }

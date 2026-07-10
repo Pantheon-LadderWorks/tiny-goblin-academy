@@ -1266,3 +1266,28 @@ docs/assets/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY
 Comparison result: Flipbook evidence prototypes should seed the future Flipbook Viewer; Sprite Box Annotator should seed the Sticker/Picture Book / region annotator surface; Particle FX Viewer should seed the Particle FX / preset authoring surface. H5.88B should design the unified GlyphForge viewer shell before implementation.
 
 H5.88A does not install dependencies, modify package/lock files, wire runtime, modify games, process images, modify PNGs, edit evidence flipbooks, move evidence flipbooks, reorganize manifests/docs, or promote prototype HTML into canonical tooling.
+
+## H5.88A2 Level 8 Sticker Book Editor Prototype Addendum Note
+
+H5.88A2 adds the missed Level 8 Sticker Book Editor prototype to the H5.88A visual tool prototype comparison.
+
+```text
+tools/glyphforge/prototypes/level-8-sticker-book-editor-prototype-v0.1.html
+```
+
+This prototype is distinct from the Sprite Box Annotator. Sprite Box Annotator answers: `what is the box around this asset?` The Level 8 Sticker Book Editor answers: `where does this asset/entity go in the scene?`
+
+The prototype was used for One Room Dungeon Platformer / Level 8 layout design. Its key value is scene composition and live JSON placement export: a fixed board, draggable stickers/entities, 32px snap grid, Delete/Backspace removal, and JSON output shaped around `player`, `exit`, `platforms`, and `hazards`.
+
+H5.88A2 strengthens the Sticker / Picture Book direction by splitting it into two future modes:
+
+- Region/asset browser mode, informed by Sprite Box Annotator and pantry manifests;
+- Scene composition/layout editor mode, informed by the Level 8 Sticker Book Editor and scene-anchor manifests.
+
+This addendum does not promote the prototype to canonical tooling, wire any game, approve runtime placement, process images, modify PNGs, install dependencies, or replace the pantry/manifest registry model. Runtime goblins still need a later approved lane.
+
+Recommended next lane:
+
+```text
+H5.88B — GlyphForge Unified Viewer Shell Design
+```
