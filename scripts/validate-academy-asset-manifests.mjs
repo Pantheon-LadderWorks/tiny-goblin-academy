@@ -6,10 +6,10 @@ const repoRoot = process.cwd();
 
 const manifestSpecs = [
   { path: 'manifests/academy/shared/academy.shared-core.regions.json', domain: 'shared-core' },
-  { path: 'manifests/academy/shared/academy.shared-fx.regions.json', domain: 'shared-fx' },
+  { path: 'manifests/academy/shared/deferred/academy.shared-fx.regions.json', domain: 'shared-fx' },
   { path: 'manifests/academy/shared/academy.ui-hud.regions.json', domain: 'ui-hud' },
   { path: 'manifests/academy/creatures/academy.goblin-expression-action.regions.json', domain: 'goblin-expression-action' },
-  { path: 'manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.regions.json', domain: 'pet-campfire-static-props-icons' }
+  { path: 'manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.static-props-icons.regions.json', domain: 'pet-campfire-static-props-icons' }
 ];
 
 let hasErrors = false;

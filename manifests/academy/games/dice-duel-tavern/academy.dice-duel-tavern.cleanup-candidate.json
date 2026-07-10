@@ -3,7 +3,7 @@
   "status": "reviewed",
   "domain": "dice-duel-tavern",
   "operationalType": "game-specific-cleanup-candidate",
-  "sourceRegionManifest": "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.regions.json",
+  "sourceRegionManifest": "manifests/academy/games/dice-duel-tavern/lineage/academy.dice-duel-tavern.regions.json",
   "sourceSheet": "assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png",
   "derivedSheet": "assets/academy/games/dice-duel-tavern/derived/tga-dice-duel-tavern-cleaned-v0.1.png",
   "cleanupMethod": {

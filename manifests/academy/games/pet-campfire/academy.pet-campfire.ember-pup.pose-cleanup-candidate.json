@@ -7,7 +7,7 @@
   "animationApproval": "none",
   "domain": "pet-campfire",
   "operationalType": "ember-pup-pose-cleanup-candidate",
-  "sourceManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-candidates.json",
+  "sourceManifest": "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.ember-pup.pose-candidates.json",
   "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
   "derivedSheet": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png",
   "cleanupMethod": {

@@ -3,7 +3,7 @@
   "status": "reviewed",
   "domain": "card-goblin-duel",
   "operationalType": "functional-surface-slot-map",
-  "sourceRegionManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.regions.json",
+  "sourceRegionManifest": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.card-frames.regions.json",
   "sourceCleanupManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
   "derivedSheet": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
   "reviewStatus": "human-review-passed",

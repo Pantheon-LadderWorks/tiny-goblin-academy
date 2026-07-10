@@ -7,7 +7,7 @@
   "domain": "topdown-objects-nonfx-regenerated",
   "operationalType": "topdown-nonfx-objects-regenerated-cleanup-candidate",
   "sourceSheet": "assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png",
-  "sourceRegionManifest": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.regions.json",
+  "sourceRegionManifest": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-regenerated.regions.json",
   "derivedSheet": "assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png",
   "runLog": "assets/academy/evidence/h5-79-topdown-nonfx-objects-cleanup-candidate/pipeline-run-log.json",
   "sourceDimensions": {

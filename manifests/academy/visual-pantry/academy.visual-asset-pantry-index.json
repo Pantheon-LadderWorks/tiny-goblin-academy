@@ -107,7 +107,7 @@
           "derived": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png",
           "regionsTotal": 32,
           "acceptedRegions": 32,
-          "functionalSurfaceManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.functional-slots.json",
+          "functionalSurfaceManifest": "manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json",
           "toolingTarget": "sticker-picture-book-viewer",
           "runtimeEligibility": "not-runtime-approved"
         },
@@ -193,9 +193,9 @@
           "derived": null,
           "regionsOrAnchors": 14,
           "placementGrammars": [
-            "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.state-placement-plan.json",
-            "manifests/academy/games/pet-campfire/academy.pet-campfire.ui-prop-care-placement-plan.json",
-            "manifests/academy/games/pet-campfire/academy.pet-campfire.layout-composition-plan.json"
+            "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
+            "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+            "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json"
           ],
           "toolingTarget": "sticker-picture-book-viewer",
           "runtimeEligibility": "not-runtime-approved"
@@ -295,7 +295,7 @@
           "assetType": "historical-nonfx-object-cleanup-fallback",
           "status": "reviewed",
           "reviewStatus": "human-review-passed",
-          "manifest": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json",
+          "manifest": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json",
           "source": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
           "derived": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
           "regionsTotal": 64,
@@ -376,7 +376,7 @@
     },
     {
       "assetType": "shared-fx",
-      "manifest": "manifests/academy/shared/academy.shared-fx.regions.json",
+      "manifest": "manifests/academy/shared/deferred/academy.shared-fx.regions.json",
       "source": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
       "derived": null,
       "status": "deferred-reference-only",

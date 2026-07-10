@@ -5,7 +5,7 @@
   "pipelineUse": "visual-tool-suite-planning",
   "runtimeEligibility": "not-runtime-approved",
   "indexSource": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
-  "organizationPlanSource": "manifests/academy/tooling/organization/academy.manifest-and-docs-organization-plan.json",
+  "organizationPlanSource": "manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json",
   "tier": 1.5,
   "futureAudioTier": 2.5,
   "blockedUntilHumanReview": true,
@@ -313,7 +313,7 @@
   "discoveryModel": {
     "primaryIndex": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
     "secondaryIndexes": [
-      "manifests/academy/tooling/organization/academy.manifest-and-docs-organization-plan.json"
+      "manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json"
     ],
     "rules": [
       "Tools read from a registry/pantry manifest before loading individual assets.",

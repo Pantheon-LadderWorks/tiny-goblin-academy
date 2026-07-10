@@ -4,7 +4,7 @@
   "domain": "farm-settlement",
   "operationalType": "cleanup-candidate",
   "sourceSheet": "assets/academy/games/farm-settlement/tga-farm-settlement-sheet-v0.1.png",
-  "sourceRegionManifest": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.regions.json",
+  "sourceRegionManifest": "manifests/academy/games/tiny-farm-day/lineage/academy.farm-settlement.regions.json",
   "derivedSheet": "assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png",
   "sourceDimensions": {
     "w": 1408,

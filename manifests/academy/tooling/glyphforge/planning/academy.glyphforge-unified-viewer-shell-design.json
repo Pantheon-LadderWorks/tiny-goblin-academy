@@ -5,8 +5,8 @@
   "pipelineUse": "glyphforge-viewer-shell-design",
   "runtimeEligibility": "not-runtime-approved",
   "blockedUntilHumanReview": true,
-  "relatedRegistryPlan": "manifests/academy/tooling/glyphforge/academy.visual-tool-suite-registry-plan.json",
-  "relatedPrototypeComparison": "manifests/academy/tooling/glyphforge/academy.visual-tool-prototype-intake-comparison.json",
+  "relatedRegistryPlan": "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json",
+  "relatedPrototypeComparison": "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
   "pantryIndex": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
   "shellName": "GlyphForge Visual Workbench",
   "purpose": "Design a unified registry-fed shell that routes Tiny Goblin Academy visual assets into the appropriate preview or planning mode without building the tool suite, approving runtime use, or replacing the preserved prototypes.",
@@ -191,9 +191,9 @@
   "registryDiscoveryModel": {
     "primaryRegistry": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
     "supportingPlans": [
-      "manifests/academy/tooling/glyphforge/academy.visual-tool-suite-registry-plan.json",
-      "manifests/academy/tooling/glyphforge/academy.visual-tool-prototype-intake-comparison.json",
-      "manifests/academy/tooling/organization/academy.manifest-and-docs-organization-plan.json"
+      "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json",
+      "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
+      "manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json"
     ],
     "discoveryLaw": [
       "Do not scan random folders as the first source of truth.",

@@ -1,0 +1,1050 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "manifest-maturity-classification",
+  "runtimeEligibility": "not-runtime-approved",
+  "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
+  "totalManifestCount": 63,
+  "movedFileCount": 29,
+  "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
+  "maturityClasses": {
+    "active": "Current preferred manifest for planning/tool discovery/use; never runtime approval by itself.",
+    "lineage": "Earlier intake, source inventory, region mapping, candidate, or superseded record kept for provenance.",
+    "planning": "Plans, selections, designs, placement plans, composition plans, font plans, organization plans, and tool plans.",
+    "generated": "Generated output derived from source manifests or tooling.",
+    "execution": "Move-pass or audit execution record.",
+    "deferred": "Explicitly deferred/reference-only manifest.",
+    "denied": "Denied/do-not-use guardrail record."
+  },
+  "activeCountsByCategory": {
+    "manifests/academy/core": 1,
+    "manifests/academy/creatures": 7,
+    "manifests/academy/fonts": 1,
+    "manifests/academy/games/button-goblin-clicker": 1,
+    "manifests/academy/games/card-goblin-duel": 2,
+    "manifests/academy/games/dice-duel-tavern": 1,
+    "manifests/academy/games/dungeon-platformer": 1,
+    "manifests/academy/games/one-room-platformer": 1,
+    "manifests/academy/games/pet-campfire": 3,
+    "manifests/academy/games/potion-sorter": 1,
+    "manifests/academy/games/tiny-farm-day": 1,
+    "manifests/academy/hub": 4,
+    "manifests/academy/shared": 2,
+    "manifests/academy/tooling/organization": 1,
+    "manifests/academy/topdown/future-floor-tilesheets": 1,
+    "manifests/academy/topdown/objects": 1,
+    "manifests/academy/topdown/terrain": 1,
+    "manifests/academy/topdown/walls": 2,
+    "manifests/academy/visual-pantry": 1,
+    "manifests/boot": 1
+  },
+  "sourceOfTruthByDomain": {
+    "academyCore": "manifests/academy/core/academy.games.json",
+    "hub": "manifests/academy/hub/hub.icons.json",
+    "hubRegions": "manifests/academy/hub/hub.icon-regions.json",
+    "visualPantry": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+    "fontDirection": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
+    "manifestMaturity": "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+    "petCampfireCurrentAssets": [
+      "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+      "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+      "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json"
+    ],
+    "topdownCurrentObjects": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+    "topdownCurrentTerrain": "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json",
+    "topdownCurrentWalls": [
+      "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
+      "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json"
+    ]
+  },
+  "activeManifests": [
+    "manifests/academy/core/academy.games.json",
+    "manifests/academy/creatures/academy.goblin-expression-action.regions.json",
+    "manifests/academy/creatures/academy.platformer-goblin-player.animations.json",
+    "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json",
+    "manifests/academy/creatures/academy.topdown-slime-player.animations.json",
+    "manifests/academy/creatures/academy.topdown-slime-v2-action.animations.json",
+    "manifests/academy/creatures/academy.topdown-slime-v2-idle-move.animations.json",
+    "manifests/academy/creatures/academy.topdown-soldier-enemy.animations.json",
+    "manifests/academy/fonts/academy.font-pantry-core-selection.json",
+    "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+    "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+    "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
+    "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json",
+    "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json",
+    "manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json",
+    "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json",
+    "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+    "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+    "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+    "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
+    "manifests/academy/hub/favicon.exports.json",
+    "manifests/academy/hub/hub.icon-regions.json",
+    "manifests/academy/hub/hub.icons.json",
+    "manifests/academy/hub/hub.identity-assets.json",
+    "manifests/academy/shared/academy.shared-core.regions.json",
+    "manifests/academy/shared/academy.ui-hud.regions.json",
+    "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+    "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
+    "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+    "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json",
+    "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
+    "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json",
+    "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+    "manifests/boot/boot.identity-assets.json"
+  ],
+  "lineageManifests": [
+    "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.card-frames.regions.json",
+    "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.ui-tokens.regions.json",
+    "manifests/academy/games/dice-duel-tavern/lineage/academy.dice-duel-tavern.regions.json",
+    "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.ember-pup.pose-candidates.json",
+    "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.intake-classification.json",
+    "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.static-props-icons.regions.json",
+    "manifests/academy/games/potion-sorter/lineage/academy.potion-sorter.regions.json",
+    "manifests/academy/games/tiny-farm-day/lineage/academy.farm-settlement.regions.json",
+    "manifests/academy/topdown/objects/lineage/academy.topdown.objects.cleanup-candidate.json",
+    "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json",
+    "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-regenerated.regions.json",
+    "manifests/academy/topdown/objects/lineage/academy.topdown.objects.regions.json",
+    "manifests/academy/topdown/terrain/lineage/academy.topdown.terrain.regions.json",
+    "manifests/academy/topdown/walls/lineage/academy.topdown.walls.regions.json",
+    "manifests/academy/topdown/walls/lineage/academy.topdown.walls.vertical.regions.json"
+  ],
+  "planningManifests": [
+    "manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json",
+    "manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json",
+    "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
+    "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
+    "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+    "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
+    "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
+    "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
+    "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json",
+    "manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json",
+    "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json",
+    "manifests/academy/topdown/source/planning/academy.topdown.source-inventory.json"
+  ],
+  "generatedManifests": [],
+  "executionManifests": [
+    "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json"
+  ],
+  "deferredManifests": [
+    "manifests/academy/shared/deferred/academy.shared-fx.regions.json"
+  ],
+  "deniedManifests": [],
+  "unknownManifests": [],
+  "unknownManifestCount": 0,
+  "manifestEntries": [
+    {
+      "path": "manifests/academy/core/academy.games.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/core",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.goblin-expression-action.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.platformer-goblin-player.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.platformer-training-dummy-enemy.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.topdown-slime-player.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.topdown-slime-v2-action.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.topdown-slime-v2-idle-move.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/creatures/academy.topdown-soldier-enemy.animations.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/creatures",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
+      "maturityClass": "active",
+      "authorityRole": "current font direction selection",
+      "categoryShelf": "manifests/academy/fonts",
+      "status": "draft",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "font-pantry-core-selection",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/fonts",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "font-pantry-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+      "maturityClass": "active",
+      "authorityRole": "current scene-anchor/background planning manifest",
+      "categoryShelf": "manifests/academy/games/button-goblin-clicker",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-scene-anchor-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/card-goblin-duel",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/card-goblin-duel",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.card-frames.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/card-goblin-duel",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.ui-tokens.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/card-goblin-duel",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/games/card-goblin-duel",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-functional-slot-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/dice-duel-tavern/academy.dice-duel-tavern.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/dice-duel-tavern",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/dice-duel-tavern/lineage/academy.dice-duel-tavern.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/dice-duel-tavern",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/dungeon-platformer/academy.dungeon-platformer.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/games/dungeon-platformer",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/games/one-room-platformer",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json",
+      "maturityClass": "active",
+      "authorityRole": "current scene-anchor/background planning manifest",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-placement-notes",
+      "pipelineUse": "accepted-for-draft-scene-anchor-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pose-state-symbol-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.ember-pup.pose-candidates.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-pose-cleanup-pipeline-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.intake-classification.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.static-props-icons.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-layout-composition-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-future-draft-layout-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/games/pet-campfire",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-layout-composition-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-exclusions",
+      "pipelineUse": "accepted-for-draft-pipeline-use-with-region-exclusions",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/lineage/academy.potion-sorter.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/games/tiny-farm-day",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-exclusions",
+      "pipelineUse": "accepted-for-draft-pipeline-use-with-exclusions",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/games/tiny-farm-day/lineage/academy.farm-settlement.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/games/tiny-farm-day",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/hub/favicon.exports.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/hub",
+      "status": "approved-for-tauri-integration",
+      "reviewStatus": "approved-by-human-review",
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/hub/hub.icon-regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/hub",
+      "status": null,
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/hub/hub.icons.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/hub",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/hub/hub.identity-assets.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/hub",
+      "status": "draft-candidate",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/shared/academy.shared-core.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/shared",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/shared/academy.ui-hud.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/shared",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/shared/deferred/academy.shared-fx.regions.json",
+      "maturityClass": "deferred",
+      "authorityRole": "deferred/reference-only manifest",
+      "categoryShelf": "manifests/academy/shared",
+      "status": "draft",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/tooling/glyphforge",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "glyphforge-static-prototype-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/tooling/glyphforge",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "glyphforge-viewer-shell-design",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/tooling/glyphforge",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "visual-tool-prototype-comparison",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/tooling/glyphforge",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "visual-tool-suite-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+      "maturityClass": "active",
+      "authorityRole": "manifest maturity classification index",
+      "categoryShelf": "manifests/academy/tooling/organization",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "manifest-maturity-classification",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "H5.91A active index for understanding manifest authority shelves."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json",
+      "maturityClass": "execution",
+      "authorityRole": "audit or move execution record",
+      "categoryShelf": "manifests/academy/tooling/organization",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "manifest-folder-reorganization",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/tooling/organization",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "organization-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/topdown/future-floor-tilesheets",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-future-pantry-region-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/topdown/objects",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.cleanup-candidate.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/objects",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "draft-cleanup-candidate",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/objects",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-regenerated.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/objects",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/objects",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/topdown/source",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "regenerated-source-intake-and-routing",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/source/planning/academy.topdown.source-inventory.json",
+      "maturityClass": "planning",
+      "authorityRole": "planning/design/placement/intake record",
+      "categoryShelf": "manifests/academy/topdown/source",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-lane-routing-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/topdown/terrain",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/topdown/terrain/lineage/academy.topdown.terrain.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/terrain",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/academy/topdown/walls",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-region-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json",
+      "maturityClass": "active",
+      "authorityRole": "current cleanup candidate for draft planning use",
+      "categoryShelf": "manifests/academy/topdown/walls",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/topdown/walls/lineage/academy.topdown.walls.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/walls",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/topdown/walls/lineage/academy.topdown.walls.vertical.regions.json",
+      "maturityClass": "lineage",
+      "authorityRole": "earlier mapping, source, or superseded candidate kept for provenance",
+      "categoryShelf": "manifests/academy/topdown/walls",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-draft-cleanup-and-planning-use",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
+      "maturityClass": "active",
+      "authorityRole": "current visual asset pantry index",
+      "categoryShelf": "manifests/academy/visual-pantry",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "accepted-for-tier-1-5-visual-integration-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/boot/boot.identity-assets.json",
+      "maturityClass": "active",
+      "authorityRole": "current category manifest",
+      "categoryShelf": "manifests/boot",
+      "status": "draft-candidate",
+      "reviewStatus": null,
+      "pipelineUse": null,
+      "runtimeEligibility": null,
+      "runtimeApproved": false,
+      "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    }
+  ],
+  "postMoveTreeSummary": [
+    {
+      "folder": "manifests/academy/core",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/creatures",
+      "jsonCount": 7
+    },
+    {
+      "folder": "manifests/academy/fonts",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/fonts/planning",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/button-goblin-clicker",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/card-goblin-duel",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/games/card-goblin-duel/lineage",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/games/card-goblin-duel/planning",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/dice-duel-tavern",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/dice-duel-tavern/lineage",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/dungeon-platformer",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/one-room-platformer",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/pet-campfire",
+      "jsonCount": 3
+    },
+    {
+      "folder": "manifests/academy/games/pet-campfire/lineage",
+      "jsonCount": 3
+    },
+    {
+      "folder": "manifests/academy/games/pet-campfire/planning",
+      "jsonCount": 3
+    },
+    {
+      "folder": "manifests/academy/games/potion-sorter",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/potion-sorter/lineage",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/tiny-farm-day",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/games/tiny-farm-day/lineage",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/hub",
+      "jsonCount": 4
+    },
+    {
+      "folder": "manifests/academy/shared",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/shared/deferred",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/tooling/glyphforge/planning",
+      "jsonCount": 4
+    },
+    {
+      "folder": "manifests/academy/tooling/organization",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/tooling/organization/execution",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/tooling/organization/planning",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/topdown/future-floor-tilesheets",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/topdown/objects",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/topdown/objects/lineage",
+      "jsonCount": 4
+    },
+    {
+      "folder": "manifests/academy/topdown/source/planning",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/topdown/terrain",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/topdown/terrain/lineage",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/academy/topdown/walls",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/topdown/walls/lineage",
+      "jsonCount": 2
+    },
+    {
+      "folder": "manifests/academy/visual-pantry",
+      "jsonCount": 1
+    },
+    {
+      "folder": "manifests/boot",
+      "jsonCount": 1
+    }
+  ],
+  "runtimeBoundaryNotes": [
+    "Active/current means shelf-current, not runtime-approved.",
+    "Reviewed does not imply runtime approval.",
+    "Lineage files are preserved provenance and must not be deleted casually.",
+    "Generated files are not automatically source of truth.",
+    "Runtime/game wiring remains outside H5.91A scope."
+  ],
+  "blockedUntilHumanReview": true
+}

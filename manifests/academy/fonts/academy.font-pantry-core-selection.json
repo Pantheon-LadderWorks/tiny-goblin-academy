@@ -8,7 +8,7 @@
   "tier": "1.5",
   "domain": "academy-fonts",
   "operationalType": "font-pantry-human-review-and-new-fantasy-core-selection",
-  "relatedPlan": "manifests/academy/fonts/academy.font-pantry-source-inventory-plan.json",
+  "relatedPlan": "manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json",
   "toolLanePausedAt": "H5.88E",
   "nextToolLaneReturnPoint": "H5.88F — GlyphForge Region Browser Image Preview Plan",
   "nextOrganizationLane": "H5.91 — Manifest Folder Reorganization Dry Run",

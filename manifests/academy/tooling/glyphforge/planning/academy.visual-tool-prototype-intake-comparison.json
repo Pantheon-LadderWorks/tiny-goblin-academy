@@ -6,7 +6,7 @@
   "runtimeEligibility": "not-runtime-approved",
   "laneId": "H5.88A",
   "title": "Visual Tool Prototype Intake and Maturity Comparison",
-  "relatedPlan": "manifests/academy/tooling/glyphforge/academy.visual-tool-suite-registry-plan.json",
+  "relatedPlan": "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json",
   "pantryIndex": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
   "blockedUntilHumanReview": true,
   "purpose": "Bring existing visual tool prototypes together for comparison and maturity analysis before designing the unified GlyphForge Visual Tool Suite.",

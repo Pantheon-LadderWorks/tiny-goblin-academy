@@ -1539,6 +1539,10 @@ H5.91 completed the manifest shelf cleanup as an actual move pass, not just a dr
 
 H5.91 also updated active machine-readable references and validators for the nested structure, including the GlyphForge visual registry generator. Historical lane reports were not broadly rewritten; old flat paths in historical docs remain historical record until the docs reorganization/correction lanes handle them deliberately. No runtime/game code, PNGs/images, package/lock files, dependency installs, `docs/assets` reorganization, or stale overview-doc correction occurred.
 
+H5.91A refined the manifest shelves by authority/maturity. Active/current manifests remain visible at category roots, while non-current records moved into `lineage/`, `planning/`, `execution/`, or `deferred/` subfolders. This preserves the quick-glance active count per category while preventing early maps, cleanup candidates, planning records, and execution logs from looking like equal authority.
+
+H5.91A created `manifests/academy/tooling/organization/academy.manifest-maturity-index.json`. The index records 63 total manifests after the index itself, 34 active/current manifests, 15 lineage manifests, 12 planning manifests, 1 execution manifest, 1 deferred manifest, and 0 unknown manifests. Pet Campfire now shows 3 active/current manifests at the shelf root, with early intake/region/pose records under `lineage/` and placement/composition plans under `planning/`.
+
 After the manifest shelf cleanup, the next planning priority is asset-doc shelf cleanup:
 
 ```text

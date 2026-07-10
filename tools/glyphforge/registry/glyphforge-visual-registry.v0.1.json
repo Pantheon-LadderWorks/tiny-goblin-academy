@@ -1,10 +1,10 @@
 {
   "schemaVersion": "0.1",
   "registryId": "glyphforge-visual-registry.v0.1",
-  "generatedAt": "2026-07-10T16:10:02.674Z",
+  "generatedAt": "2026-07-10T17:34:55.149Z",
   "generator": "tools/glyphforge/registry/generate-glyphforge-visual-registry.mjs",
   "sourceOfTruth": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
-  "sourceSha256": "1a5b414209901ac88f1fc1e14c647d49374785e10d31c0dd8c7bfc4e2f38e142",
+  "sourceSha256": "ebe11a250a20144dea03eaa82539458f945feba1e9b5177779957859433458fe",
   "status": "draft",
   "reviewStatus": "needs-human-review",
   "pipelineUse": "glyphforge-static-viewer-registry",
@@ -561,9 +561,9 @@
       "domain": "top-down-slime-quest",
       "assetFamily": "historical-nonfx-object-cleanup-fallback",
       "toolMode": "particle-fx-viewer",
-      "manifestPath": "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json",
+      "manifestPath": "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json",
       "manifestPaths": [
-        "manifests/academy/topdown/objects/academy.topdown.objects.nonfx-cleanup-candidate.json"
+        "manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json"
       ],
       "sourcePath": "assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png",
       "derivedPath": "assets/academy/topdown/objects/derived/tga-topdown-objects-nonfx-cleaned-v0.1.png",
@@ -759,9 +759,9 @@
       "domain": "shared",
       "assetFamily": "shared-fx",
       "toolMode": "particle-fx-viewer",
-      "manifestPath": "manifests/academy/shared/academy.shared-fx.regions.json",
+      "manifestPath": "manifests/academy/shared/deferred/academy.shared-fx.regions.json",
       "manifestPaths": [
-        "manifests/academy/shared/academy.shared-fx.regions.json"
+        "manifests/academy/shared/deferred/academy.shared-fx.regions.json"
       ],
       "sourcePath": "assets/academy/shared-fx/tga-shared-fx-feedback-sheet-concept-v0.1.png",
       "derivedPath": null,

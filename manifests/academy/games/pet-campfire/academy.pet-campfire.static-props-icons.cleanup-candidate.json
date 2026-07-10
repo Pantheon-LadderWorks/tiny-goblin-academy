@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "status": "reviewed",
-  "sourceManifest": "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.regions.json",
+  "sourceManifest": "manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.static-props-icons.regions.json",
   "sourceSheet": "assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png",
   "derivedSheet": "assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png",
   "cleanupMethod": "per-region edge-connected neutral-gray checkerboard flood removal; atlas composed from trimmed cleaned crops",

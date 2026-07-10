@@ -4,7 +4,7 @@
   "domain": "card-goblin-duel",
   "operationalType": "ui-token-cleanup-candidate",
   "sourceSheet": "assets/academy/games/card-goblin-duel/tga-card-goblin-duel-ui-tokens-concept-v0.1.png",
-  "sourceRegionManifest": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.ui-tokens.regions.json",
+  "sourceRegionManifest": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.ui-tokens.regions.json",
   "derivedSheet": "assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png",
   "sourceDimensions": {
     "w": 1024,

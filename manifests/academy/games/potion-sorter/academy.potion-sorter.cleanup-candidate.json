@@ -4,7 +4,7 @@
   "domain": "potion-sorter",
   "operationalType": "potion-sorter-cleanup-candidate",
   "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
-  "sourceRegionManifest": "manifests/academy/games/potion-sorter/academy.potion-sorter.regions.json",
+  "sourceRegionManifest": "manifests/academy/games/potion-sorter/lineage/academy.potion-sorter.regions.json",
   "derivedSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
   "sourceDimensions": {
     "w": 1698,

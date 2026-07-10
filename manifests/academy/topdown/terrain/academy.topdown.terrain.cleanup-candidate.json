@@ -7,7 +7,7 @@
   "domain": "topdown-terrain",
   "operationalType": "existing-topdown-terrain-cleanup-candidate",
   "sourceSheet": "assets/academy/topdown/terrain/tga-topdown-terrain-floor-construction-concept-v0.1.png",
-  "sourceRegionManifest": "manifests/academy/topdown/terrain/academy.topdown.terrain.regions.json",
+  "sourceRegionManifest": "manifests/academy/topdown/terrain/lineage/academy.topdown.terrain.regions.json",
   "derivedSheet": "assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png",
   "runLog": "assets/academy/evidence/h5-81-topdown-terrain-cleanup-candidate/pipeline-run-log.json",
   "sourceDimensions": {

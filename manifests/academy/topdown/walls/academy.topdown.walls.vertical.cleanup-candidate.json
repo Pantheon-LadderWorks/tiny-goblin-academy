@@ -7,7 +7,7 @@
   "domain": "topdown-walls",
   "operationalType": "vertical-wall-cleanup-candidate",
   "sourceSheet": "assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerated-v0.2.png",
-  "sourceRegionManifest": "manifests/academy/topdown/walls/academy.topdown.walls.vertical.regions.json",
+  "sourceRegionManifest": "manifests/academy/topdown/walls/lineage/academy.topdown.walls.vertical.regions.json",
   "derivedSheet": "assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png",
   "runLog": "assets/academy/evidence/h5-75-topdown-vertical-walls-cleanup-candidate/pipeline-run-log.json",
   "sourceDimensions": {
