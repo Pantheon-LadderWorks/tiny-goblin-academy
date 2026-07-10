@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "draft-scene-anchor-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "none",
+  "domain": "button-goblin-clicker",
+  "operationalType": "scene-anchor-background",
+  "sourceBackground": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+  "sourceOrigin": {
+    "intakeSource": "C:/Users/kryst/Downloads/ChatGPT Image Jul 9, 2026, 10_33_23 PM.png",
+    "intakePhase": "H5.85",
+    "sourceSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38"
+  },
+  "backgroundDimensions": {
+    "w": 1672,
+    "h": 941
+  },
+  "sourceMetadata": {
+    "format": "PNG",
+    "mode": "RGB",
+    "alphaFinding": "no-alpha-opaque-background-source",
+    "cleanupRequired": false,
+    "cleanupNote": "Full-scene opaque background; not a transparency cleanup lane."
+  },
+  "assetRole": "clicker-stage-background",
+  "toolingHints": {
+    "preferredPreviewTool": "sticker-picture-book",
+    "futureRuntimeSurface": "background-stage",
+    "largeCentralNegativeSpace": true,
+    "tapTitansLikeClickerStage": true
+  },
+  "anchors": [
+    {
+      "id": "button-goblin-clicker.background.anchor.central-click-stage",
+      "label": "Central goblin click stage",
+      "category": "primary-click-target-safe-zone",
+      "rect": {
+        "x": 502,
+        "y": 188,
+        "w": 669,
+        "h": 518
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Large clear warm negative space intended for current SVG goblin/click target. No runtime placement approved."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.lower-floor-stage",
+      "label": "Lower cavern floor stage",
+      "category": "grounding-zone",
+      "rect": {
+        "x": 468,
+        "y": 659,
+        "w": 736,
+        "h": 188
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Readable floor area below target; candidate for shadows/click feedback later. No runtime placement approved."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.upper-ceiling-frame",
+      "label": "Upper cavern ceiling frame",
+      "category": "decorative-frame-zone",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 169
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Decorative cave ceiling; avoid text/UI overlays without contrast treatment."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.left-prop-frame",
+      "label": "Left prop detail frame",
+      "category": "decorative-edge-zone",
+      "rect": {
+        "x": 0,
+        "y": 94,
+        "w": 418,
+        "h": 678
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Torch, mushrooms, crates, crystals, and clutter frame the click stage; not a click target zone."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.right-prop-frame",
+      "label": "Right prop detail frame",
+      "category": "decorative-edge-zone",
+      "rect": {
+        "x": 1254,
+        "y": 94,
+        "w": 418,
+        "h": 678
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Lantern, torch, barrel, crystals, and clutter frame the click stage; not a click target zone."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.left-torch-glow-risk",
+      "label": "Left torch glow/readability risk",
+      "category": "readability-risk-zone",
+      "rect": {
+        "x": 0,
+        "y": 320,
+        "w": 301,
+        "h": 207
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Bright torch/glow competes with small click feedback."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.right-torch-glow-risk",
+      "label": "Right torch glow/readability risk",
+      "category": "readability-risk-zone",
+      "rect": {
+        "x": 1371,
+        "y": 151,
+        "w": 301,
+        "h": 235
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Bright torch/glow competes with small click feedback."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.bottom-foreground-obstruction",
+      "label": "Bottom foreground obstruction band",
+      "category": "foreground-obstruction-zone",
+      "rect": {
+        "x": 0,
+        "y": 734,
+        "w": 1672,
+        "h": 207
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Foreground crystals/plants/rail can obscure low UI or click effects."
+    },
+    {
+      "id": "button-goblin-clicker.background.anchor.top-hud-safe-band",
+      "label": "Top-center HUD possible band",
+      "category": "ui-caution-zone",
+      "rect": {
+        "x": 468,
+        "y": 38,
+        "w": 736,
+        "h": 113
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "notes": "Potential slim HUD/status band if contrast treatment is added later; not runtime-approved."
+    }
+  ],
+  "evidence": {
+    "folder": "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/",
+    "files": [
+      "button-goblin-clicker-cavern-background-source-inspection-preview.png",
+      "button-goblin-clicker-cavern-background-anchor-overlay.png",
+      "button-goblin-clicker-cavern-background-anchor-table-preview.png"
+    ]
+  },
+  "notes": [
+    "H5.85 ingests the first Button Goblin Clicker-specific visual asset.",
+    "This background is suitable for future Tap Titans-like clicker staging because it leaves a large central negative space.",
+    "The current SVG goblin/click behavior is not replaced in this pass.",
+    "No runtime wiring, exact placement, UI layout, gameplay behavior, or click target change is approved.",
+    "No cleanup or derived image is created because this is a full opaque background, not a transparent sprite sheet."
+  ],
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "scene-anchor-background-planning",
+    "methodStatus": null,
+    "runLog": "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/pipeline-run-log.json",
+    "sourceSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+    "generatedAt": "2026-07-10T03:33:43.661Z",
+    "gitBaseline": "c268413 docs: review future topdown floor tilesheet regions",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  }
+}

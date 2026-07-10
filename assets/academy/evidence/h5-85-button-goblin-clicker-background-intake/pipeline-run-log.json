@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "map-regions",
+  "method": "scene-anchor-background-planning",
+  "methodStatus": null,
+  "methodParameters": {},
+  "laneId": null,
+  "agent": "Codex",
+  "gitBaseline": "c268413 docs: review future topdown floor tilesheet regions",
+  "startedAt": "2026-07-10T03:33:43.643Z",
+  "completedAt": "2026-07-10T03:33:43.661Z",
+  "sourcePath": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+  "sourceSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+  "manifestPath": "manifests/academy.button-goblin-clicker.background.scene-anchors.json",
+  "inputManifests": [
+    "manifests/academy.button-goblin-clicker.background.scene-anchors.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy.button-goblin-clicker.background.scene-anchors.json",
+      "sha256": "736e1e74c6ecb4740054d5dba8d4afb18f2e638b83583c636394e395f55e7a2d"
+    },
+    {
+      "path": "manifests/academy.visual-asset-pantry-index.json",
+      "sha256": "68a0c0f49030288f96fdf213bb488b7be2196ac0491cb8d9614dcc92fa4532b7"
+    },
+    {
+      "path": "docs/assets/TINY_GOBLIN_ACADEMY_H5_85_ACADEMY_VISUAL_ASSET_PANTRY_INDEX.md",
+      "sha256": "3e4915cdb693df2e0d85a738c064609d3dfa7adb66167884d637f311476ac373"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "manifests/academy.button-goblin-clicker.background.scene-anchors.json",
+      "sha256": "736e1e74c6ecb4740054d5dba8d4afb18f2e638b83583c636394e395f55e7a2d"
+    },
+    {
+      "path": "manifests/academy.visual-asset-pantry-index.json",
+      "sha256": "68a0c0f49030288f96fdf213bb488b7be2196ac0491cb8d9614dcc92fa4532b7"
+    },
+    {
+      "path": "docs/assets/TINY_GOBLIN_ACADEMY_H5_85_ACADEMY_VISUAL_ASSET_PANTRY_INDEX.md",
+      "sha256": "3e4915cdb693df2e0d85a738c064609d3dfa7adb66167884d637f311476ac373"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-source-inspection-preview.png",
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-anchor-overlay.png",
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-anchor-table-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-source-inspection-preview.png",
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-anchor-overlay.png",
+    "assets/academy/evidence/h5-85-button-goblin-clicker-background-intake/button-goblin-clicker-cavern-background-anchor-table-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate-provenance",
+    "node scripts/asset-pipeline/smoke-check.mjs"
+  ],
+  "warnings": [
+    "H5.85 is source intake, scene-anchor planning, and pantry indexing only; no runtime wiring or approval."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-10T03:33:43.677Z"
+}

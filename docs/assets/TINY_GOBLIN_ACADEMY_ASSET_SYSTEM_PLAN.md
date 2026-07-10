@@ -68,6 +68,34 @@ H5.84 does not regenerate evidence, rerun mapping, edit PNGs, create cleanup out
 
 The road/path overlay sheet remains excluded. The existing H5.81/H5.82 terrain cleanup lane remains separate and unchanged.
 
+## H5.85 Academy Visual Asset Pantry Index Note
+
+H5.85 creates the first global visual asset pantry index:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+```
+
+This index categorizes current visual assets by game/domain, operational type, source path, cleaned/derived path, accepted/deferred/denied counts, preferred preview tool, and runtime boundary. It is a planning index only and does not approve runtime use.
+
+H5.85 also ingests the first Button Goblin Clicker-specific visual asset:
+
+```text
+assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png
+```
+
+The background is recorded as a draft scene-anchor background in:
+
+```text
+manifests/academy.button-goblin-clicker.background.scene-anchors.json
+```
+
+It has 9 draft planning anchors, including a central click-target safe zone, lower floor grounding zone, decorative edge zones, torch/readability-risk zones, and a top HUD caution band. No Button Goblin Clicker runtime wiring occurred.
+
+Tier 1.5 visual integration should start with the easiest game first. Topdown pantry maturity does not make Top-Down Slime Quest the first runtime integration target; it remains last or near-last because animation, map behavior, collision, pathfinding, walkability, and placement decisions are still deferred.
+
+Known organization debt is now explicit: `manifests/` and `docs/assets/` need future categorical organization, and older root/docs notes contain stale Level 1 / Button Goblin Clicker restoration language. H5.85 records that debt without reorganizing those folders.
+
 ## H5.3 Shared Core Region Mapping Note
 
 H5.3 performs Shared Core lane region mapping for `assets/academy/shared-core/tga-shared-core-sheet-v0.1.png`. The mapping remains `draft-review`, and no runtime wiring occurred.
