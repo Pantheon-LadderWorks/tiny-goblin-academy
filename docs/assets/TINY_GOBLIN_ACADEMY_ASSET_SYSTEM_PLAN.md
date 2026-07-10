@@ -1338,3 +1338,36 @@ Next recommended lane:
 ```text
 H5.88C — GlyphForge Viewer Shell Static Prototype Plan
 ```
+
+## H5.88C GlyphForge Viewer Shell Static Prototype Plan Note
+
+H5.88C turns the H5.88B unified shell design into a build-ready static prototype plan for:
+
+```text
+GlyphForge Visual Workbench — Static Prototype v0.1
+```
+
+Planned future location:
+
+```text
+tools/glyphforge/viewer-shell-static/
+tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json
+```
+
+The pantry index remains the source of truth:
+
+```text
+manifests/academy.visual-asset-pantry-index.json
+```
+
+The future viewer should consume a smaller generated registry derived from the pantry index, not hand-invented entries. The first static prototype should prove registry loading, asset listing, mode routing, status/risk/runtime-boundary display, manifest/source/derived/evidence path display, and basic region/animation/anchor summaries.
+
+Recommended first useful mode:
+
+```text
+Region / Asset Browser / Sticker Picture Book Mode
+```
+
+Scene Composition remains distinct from Region Browser: Region Browser asks what an asset/box is, while Scene Composition asks where an asset/entity goes in a scene. Flipbook, Particle FX, and future Audio remain routed modes/placeholders.
+
+H5.88C does not build the shell, edit prototype HTML files, wire runtime, modify game code, modify PNGs, install dependencies, modify package/lock files, or reorganize docs/manifests. Button Goblin Clicker remains the first later runtime visual integration candidate, Top-Down Slime Quest remains last or near-last, and Audio remains future Tier 2.5.
