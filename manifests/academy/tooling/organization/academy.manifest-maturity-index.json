@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 63,
+  "totalManifestCount": 64,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -127,7 +127,8 @@
   ],
   "generatedManifests": [],
   "executionManifests": [
-    "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json"
+    "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json",
+    "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json"
   ],
   "deferredManifests": [
     "manifests/academy/shared/deferred/academy.shared-fx.regions.json"
@@ -891,6 +892,15 @@
       "runtimeEligibility": null,
       "runtimeApproved": false,
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json",
+      "maturityClass": "execution",
+      "authorityRole": "H5.92 asset docs reorganization execution record",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Records the docs/assets move pass and post-move shelf map."
     }
   ],
   "postMoveTreeSummary": [

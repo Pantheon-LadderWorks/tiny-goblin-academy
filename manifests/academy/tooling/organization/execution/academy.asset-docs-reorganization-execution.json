@@ -1,0 +1,803 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "asset-docs-reorganization-execution-record",
+  "runtimeEligibility": "not-runtime-approved",
+  "domain": "asset-docs",
+  "operationalType": "docs-assets-reorganization-execution",
+  "sourceBaselineCommit": "ae65a62f36ba3c57c9e08a9400edd2a9ff99844a",
+  "freshInventory": {
+    "trackedDocsAssets": 143,
+    "looseRootTrackedFilesBeforeMove": 128,
+    "alreadyNestedTrackedFilesBeforeMove": 15,
+    "movedFileCount": 128,
+    "unclassifiedLooseRootFiles": []
+  },
+  "movePolicy": {
+    "usedGitMv": true,
+    "deletedDocs": false,
+    "copiedThenDeletedTrackedDocs": false,
+    "reorganizedEvidenceImages": false,
+    "reorganizedManifests": false,
+    "changedRuntimeCode": false,
+    "changedImages": false,
+    "changedPackageOrLockFiles": false
+  },
+  "rootPolicy": {
+    "goal": "Keep docs/assets root small; use category shelves and nested lane folders before folders become junk drawers.",
+    "activeCurrentVisibility": "Current plan and pantry docs stay easy to find under pantry/visual-assets rather than buried as historical lineage.",
+    "folderLimitGuideline": "Avoid more than roughly ten loose working files in a category folder before splitting by category, game, lane, asset type, or authority."
+  },
+  "categorySummary": {
+    "docs/assets/doctrine": 5,
+    "docs/assets/game-assets": 46,
+    "docs/assets/hub-visuals": 16,
+    "docs/assets/pantry": 6,
+    "docs/assets/pipeline": 9,
+    "docs/assets/shared-assets": 8,
+    "docs/assets/tooling": 10,
+    "docs/assets/topdown": 28
+  },
+  "leafFolderSummary": [
+    {
+      "folder": "docs/assets/doctrine/asset-pipeline",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/doctrine/engine-tooling",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/doctrine/evidence",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/doctrine/functional-surfaces",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/doctrine/scene-anchors",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/game-assets/card-goblin-duel/card-frames",
+      "count": 7
+    },
+    {
+      "folder": "docs/assets/game-assets/card-goblin-duel/ui-tokens",
+      "count": 5
+    },
+    {
+      "folder": "docs/assets/game-assets/dice-duel-tavern",
+      "count": 4
+    },
+    {
+      "folder": "docs/assets/game-assets/dungeon-platformer",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/game-assets/one-room-platformer",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/game-assets/pet-campfire/cleanup-review",
+      "count": 5
+    },
+    {
+      "folder": "docs/assets/game-assets/pet-campfire/intake-mapping",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/game-assets/pet-campfire/placement-composition",
+      "count": 4
+    },
+    {
+      "folder": "docs/assets/game-assets/pet-campfire/scene-anchors",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/game-assets/potion-sorter",
+      "count": 6
+    },
+    {
+      "folder": "docs/assets/game-assets/tiny-farm-day",
+      "count": 6
+    },
+    {
+      "folder": "docs/assets/hub-visuals/h4/cartography",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/hub-visuals/h4/evidence-runtime",
+      "count": 7
+    },
+    {
+      "folder": "docs/assets/hub-visuals/h4/icons",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/hub-visuals/h4/identity",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/hub-visuals/icons",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/hub-visuals/identity",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/pantry/fonts",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/pantry/visual-assets",
+      "count": 4
+    },
+    {
+      "folder": "docs/assets/pipeline/cli",
+      "count": 4
+    },
+    {
+      "folder": "docs/assets/pipeline/intake",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/pipeline/prompts",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/pipeline/tutorials",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/pipeline/workflows",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/shared-assets/capability-matrix",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/shared-assets/creatures",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/shared-assets/overview",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/shared-assets/shared-core",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/shared-assets/shared-fx",
+      "count": 1
+    },
+    {
+      "folder": "docs/assets/shared-assets/shared-ui",
+      "count": 2
+    },
+    {
+      "folder": "docs/assets/tooling/glyphforge",
+      "count": 7
+    },
+    {
+      "folder": "docs/assets/tooling/organization",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/topdown/future-floor-tilesheets",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/topdown/objects/original",
+      "count": 5
+    },
+    {
+      "folder": "docs/assets/topdown/objects/regenerated-nonfx",
+      "count": 4
+    },
+    {
+      "folder": "docs/assets/topdown/source",
+      "count": 3
+    },
+    {
+      "folder": "docs/assets/topdown/terrain",
+      "count": 5
+    },
+    {
+      "folder": "docs/assets/topdown/walls",
+      "count": 8
+    }
+  ],
+  "folderLimitOverages": [],
+  "corrections": [
+    {
+      "file": "TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md",
+      "correction": "Moved to topdown/future-floor-tilesheets instead of topdown/walls."
+    }
+  ],
+  "movedFiles": [
+    {
+      "source": "docs/assets/doctrine/asset-pipeline/TINY_GOBLIN_ACADEMY_ASSET_PIPELINE_CLI_LOCKDOWN_DOCTRINE.md",
+      "destination": "docs/assets/doctrine/asset-pipeline/TINY_GOBLIN_ACADEMY_ASSET_PIPELINE_CLI_LOCKDOWN_DOCTRINE.md"
+    },
+    {
+      "source": "docs/assets/doctrine/engine-tooling/TINY_GOBLIN_ACADEMY_ENGINE_AND_TOOLING_LADDER_DOCTRINE.md",
+      "destination": "docs/assets/doctrine/engine-tooling/TINY_GOBLIN_ACADEMY_ENGINE_AND_TOOLING_LADDER_DOCTRINE.md"
+    },
+    {
+      "source": "docs/assets/doctrine/evidence/TINY_GOBLIN_ACADEMY_EVIDENCE_VAULT_ARCHITECTURE.md",
+      "destination": "docs/assets/doctrine/evidence/TINY_GOBLIN_ACADEMY_EVIDENCE_VAULT_ARCHITECTURE.md"
+    },
+    {
+      "source": "docs/assets/doctrine/functional-surfaces/TINY_GOBLIN_ACADEMY_FUNCTIONAL_SURFACE_SLOT_MAPPING_DOCTRINE.md",
+      "destination": "docs/assets/doctrine/functional-surfaces/TINY_GOBLIN_ACADEMY_FUNCTIONAL_SURFACE_SLOT_MAPPING_DOCTRINE.md"
+    },
+    {
+      "source": "docs/assets/doctrine/scene-anchors/TINY_GOBLIN_ACADEMY_SCENE_ANCHORS_BACKGROUND_INTELLIGENCE_DOCTRINE.md",
+      "destination": "docs/assets/doctrine/scene-anchors/TINY_GOBLIN_ACADEMY_SCENE_ANCHORS_BACKGROUND_INTELLIGENCE_DOCTRINE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_34_CARD_GOBLIN_DUEL_CARD_FRAMES_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_34_CARD_GOBLIN_DUEL_CARD_FRAMES_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_35_CARD_GOBLIN_DUEL_CARD_FRAMES_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_35_CARD_GOBLIN_DUEL_CARD_FRAMES_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_36_CARD_GOBLIN_DUEL_CARD_FRAMES_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_36_CARD_GOBLIN_DUEL_CARD_FRAMES_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_37_CARD_GOBLIN_DUEL_CARD_FRAMES_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_37_CARD_GOBLIN_DUEL_CARD_FRAMES_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_38_FUNCTIONAL_SURFACE_SLOT_MAPPING_CARD_FRAME_PILOT.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_38_FUNCTIONAL_SURFACE_SLOT_MAPPING_CARD_FRAME_PILOT.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_39_CARD_FRAME_FUNCTIONAL_SLOT_CORRECTIONS.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_39_CARD_FRAME_FUNCTIONAL_SLOT_CORRECTIONS.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_40_CARD_FRAME_FUNCTIONAL_SLOT_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/card-frames/TINY_GOBLIN_ACADEMY_H5_40_CARD_FRAME_FUNCTIONAL_SLOT_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_41_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_41_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_42_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_CORRECTIONS.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_42_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_CORRECTIONS.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_43_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_43_CARD_GOBLIN_DUEL_UI_TOKENS_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_44_CARD_GOBLIN_DUEL_UI_TOKENS_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_44_CARD_GOBLIN_DUEL_UI_TOKENS_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_45_CARD_GOBLIN_DUEL_UI_TOKENS_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/card-goblin-duel/ui-tokens/TINY_GOBLIN_ACADEMY_H5_45_CARD_GOBLIN_DUEL_UI_TOKENS_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_30_DICE_DUEL_TAVERN_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_30_DICE_DUEL_TAVERN_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_31_DICE_DUEL_TAVERN_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_31_DICE_DUEL_TAVERN_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_32_DICE_DUEL_TAVERN_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_32_DICE_DUEL_TAVERN_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_33_DICE_DUEL_TAVERN_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/dice-duel-tavern/TINY_GOBLIN_ACADEMY_H5_33_DICE_DUEL_TAVERN_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_54_DUNGEON_PLATFORMER_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_54_DUNGEON_PLATFORMER_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_55_DUNGEON_PLATFORMER_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_55_DUNGEON_PLATFORMER_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_56_DUNGEON_PLATFORMER_CLEANUP_DEFERRED.md",
+      "destination": "docs/assets/game-assets/dungeon-platformer/TINY_GOBLIN_ACADEMY_H5_56_DUNGEON_PLATFORMER_CLEANUP_DEFERRED.md"
+    },
+    {
+      "source": "docs/assets/game-assets/one-room-platformer/TINY_GOBLIN_ACADEMY_H5_7_PLATFORMER_GOBLIN_ANIMATION_CONTRACT.md",
+      "destination": "docs/assets/game-assets/one-room-platformer/TINY_GOBLIN_ACADEMY_H5_7_PLATFORMER_GOBLIN_ANIMATION_CONTRACT.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_18_PET_CAMPFIRE_STATIC_PROPS_ICONS_CLEANUP.md",
+      "destination": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_18_PET_CAMPFIRE_STATIC_PROPS_ICONS_CLEANUP.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_19_PET_CAMPFIRE_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_19_PET_CAMPFIRE_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_21_EMBER_PUP_POSE_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_21_EMBER_PUP_POSE_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_22_EMBER_PUP_POSE_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_22_EMBER_PUP_POSE_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_23_EMBER_PUP_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/cleanup-review/TINY_GOBLIN_ACADEMY_H5_23_EMBER_PUP_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_16_PET_CAMPFIRE_SPLIT_LANE_INTAKE.md",
+      "destination": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_16_PET_CAMPFIRE_SPLIT_LANE_INTAKE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_17_PET_CAMPFIRE_STATIC_PROPS_ICONS_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_17_PET_CAMPFIRE_STATIC_PROPS_ICONS_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_20_EMBER_PUP_POSE_ANIMATION_CANDIDATES.md",
+      "destination": "docs/assets/game-assets/pet-campfire/intake-mapping/TINY_GOBLIN_ACADEMY_H5_20_EMBER_PUP_POSE_ANIMATION_CANDIDATES.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_26_PET_CAMPFIRE_DUAL_PLACEMENT_GRAMMARS.md",
+      "destination": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_26_PET_CAMPFIRE_DUAL_PLACEMENT_GRAMMARS.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_27_PET_CAMPFIRE_PLACEMENT_GRAMMAR_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_27_PET_CAMPFIRE_PLACEMENT_GRAMMAR_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_28_PET_CAMPFIRE_DRAFT_LAYOUT_COMPOSITION_PLAN.md",
+      "destination": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_28_PET_CAMPFIRE_DRAFT_LAYOUT_COMPOSITION_PLAN.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_29_PET_CAMPFIRE_LAYOUT_COMPOSITION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/placement-composition/TINY_GOBLIN_ACADEMY_H5_29_PET_CAMPFIRE_LAYOUT_COMPOSITION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/scene-anchors/TINY_GOBLIN_ACADEMY_H5_24_PET_CAMPFIRE_BACKGROUND_SCENE_ANCHORS.md",
+      "destination": "docs/assets/game-assets/pet-campfire/scene-anchors/TINY_GOBLIN_ACADEMY_H5_24_PET_CAMPFIRE_BACKGROUND_SCENE_ANCHORS.md"
+    },
+    {
+      "source": "docs/assets/game-assets/pet-campfire/scene-anchors/TINY_GOBLIN_ACADEMY_H5_25_PET_CAMPFIRE_SCENE_ANCHOR_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/pet-campfire/scene-anchors/TINY_GOBLIN_ACADEMY_H5_25_PET_CAMPFIRE_SCENE_ANCHOR_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_46_POTION_SORTER_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_46_POTION_SORTER_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_47_POTION_SORTER_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_47_POTION_SORTER_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48B_POTION_SORTER_CLEANUP_TRANSPARENCY_CORRECTION.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48B_POTION_SORTER_CLEANUP_TRANSPARENCY_CORRECTION.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48C_POTION_SORTER_REGENERATED_SOURCE_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48C_POTION_SORTER_REGENERATED_SOURCE_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48_POTION_SORTER_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_48_POTION_SORTER_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_49_POTION_SORTER_REGENERATED_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_49_POTION_SORTER_REGENERATED_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_50B_FARM_SETTLEMENT_BOUNDS_CORRECTION.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_50B_FARM_SETTLEMENT_BOUNDS_CORRECTION.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_50_FARM_SETTLEMENT_REGION_MAPPING.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_50_FARM_SETTLEMENT_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_51_FARM_SETTLEMENT_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_51_FARM_SETTLEMENT_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_52B_FARM_SETTLEMENT_TARGETED_CLEANUP_CORRECTION.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_52B_FARM_SETTLEMENT_TARGETED_CLEANUP_CORRECTION.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_52_FARM_SETTLEMENT_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_52_FARM_SETTLEMENT_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_53_FARM_SETTLEMENT_CLEANUP_HUMAN_REVIEW_WITH_EXCLUSIONS.md",
+      "destination": "docs/assets/game-assets/tiny-farm-day/TINY_GOBLIN_ACADEMY_H5_53_FARM_SETTLEMENT_CLEANUP_HUMAN_REVIEW_WITH_EXCLUSIONS.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/cartography/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.json",
+      "destination": "docs/assets/hub-visuals/h4/cartography/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.json"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/cartography/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.md",
+      "destination": "docs/assets/hub-visuals/h4/cartography/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_3_HUB_BANNER_PLACEMENT_EVIDENCE.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_3_HUB_BANNER_PLACEMENT_EVIDENCE.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_4_GLYPHFORGE_BOOT_SURFACE_EVIDENCE_PLAN.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_4_GLYPHFORGE_BOOT_SURFACE_EVIDENCE_PLAN.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_5B_VISUAL_SMOKE_POLISH.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_5B_VISUAL_SMOKE_POLISH.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_5_HUB_BANNER_BOOT_RUNTIME_INTEGRATION.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_5_HUB_BANNER_BOOT_RUNTIME_INTEGRATION.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_6_HUB_SURFACE_CONTRACT_AND_SCALING_PLAN.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_6_HUB_SURFACE_CONTRACT_AND_SCALING_PLAN.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_7B_CONSOLE_LAUNCHER_MOCK_CORRECTION.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_7B_CONSOLE_LAUNCHER_MOCK_CORRECTION.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_7_CONSOLE_LAUNCHER_MOCK_EVIDENCE.md",
+      "destination": "docs/assets/hub-visuals/h4/evidence-runtime/TINY_GOBLIN_ACADEMY_H4_7_CONSOLE_LAUNCHER_MOCK_EVIDENCE.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2B_TAURI_APP_ICON_INTEGRATION.md",
+      "destination": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2B_TAURI_APP_ICON_INTEGRATION.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2C_WEB_ICO_SVG_ICON_SURFACE_AUDIT.md",
+      "destination": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2C_WEB_ICO_SVG_ICON_SURFACE_AUDIT.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2_FAVICON_APP_ICON_EXPORT_PIPELINE.md",
+      "destination": "docs/assets/hub-visuals/h4/icons/TINY_GOBLIN_ACADEMY_H4_2_FAVICON_APP_ICON_EXPORT_PIPELINE.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/identity/TINY_GOBLIN_ACADEMY_H4_1_HUB_VISUAL_IDENTITY_AND_BOOT_PLAN.md",
+      "destination": "docs/assets/hub-visuals/h4/identity/TINY_GOBLIN_ACADEMY_H4_1_HUB_VISUAL_IDENTITY_AND_BOOT_PLAN.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/h4/identity/TINY_GOBLIN_ACADEMY_H4_8_CURRENT_HUB_COMPRESSION.md",
+      "destination": "docs/assets/hub-visuals/h4/identity/TINY_GOBLIN_ACADEMY_H4_8_CURRENT_HUB_COMPRESSION.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/icons/TINY_GOBLIN_ACADEMY_H5_5_HUB_ICON_MANIFEST_QA.md",
+      "destination": "docs/assets/hub-visuals/icons/TINY_GOBLIN_ACADEMY_H5_5_HUB_ICON_MANIFEST_QA.md"
+    },
+    {
+      "source": "docs/assets/hub-visuals/identity/TINY_GOBLIN_ACADEMY_HUB_ASSET_PLAN.md",
+      "destination": "docs/assets/hub-visuals/identity/TINY_GOBLIN_ACADEMY_HUB_ASSET_PLAN.md"
+    },
+    {
+      "source": "docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md",
+      "destination": "docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md"
+    },
+    {
+      "source": "docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md",
+      "destination": "docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md"
+    },
+    {
+      "source": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+      "destination": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md"
+    },
+    {
+      "source": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_H5_85_ACADEMY_VISUAL_ASSET_PANTRY_INDEX.md",
+      "destination": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_H5_85_ACADEMY_VISUAL_ASSET_PANTRY_INDEX.md"
+    },
+    {
+      "source": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_H5_86_ACADEMY_VISUAL_ASSET_PANTRY_HUMAN_REVIEW.md",
+      "destination": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_H5_86_ACADEMY_VISUAL_ASSET_PANTRY_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_VISUAL_ASSET_PASS_PLAN.md",
+      "destination": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_VISUAL_ASSET_PASS_PLAN.md"
+    },
+    {
+      "source": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_FAKE_TRANSPARENCY_CLEANUP_TOOL.md",
+      "destination": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_FAKE_TRANSPARENCY_CLEANUP_TOOL.md"
+    },
+    {
+      "source": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_1_ASSET_PIPELINE_SCRIPT_TOOLKIT.md",
+      "destination": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_1_ASSET_PIPELINE_SCRIPT_TOOLKIT.md"
+    },
+    {
+      "source": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_66_ASSET_PIPELINE_CLI_LOCKDOWN_AUDIT.md",
+      "destination": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_66_ASSET_PIPELINE_CLI_LOCKDOWN_AUDIT.md"
+    },
+    {
+      "source": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_67_RUN_LOG_MANIFEST_PROVENANCE_CONTRACT.md",
+      "destination": "docs/assets/pipeline/cli/TINY_GOBLIN_ACADEMY_H5_67_RUN_LOG_MANIFEST_PROVENANCE_CONTRACT.md"
+    },
+    {
+      "source": "docs/assets/pipeline/intake/TINY_GOBLIN_ACADEMY_ASSET_SHEET_INTAKE_CHECKLIST.md",
+      "destination": "docs/assets/pipeline/intake/TINY_GOBLIN_ACADEMY_ASSET_SHEET_INTAKE_CHECKLIST.md"
+    },
+    {
+      "source": "docs/assets/pipeline/intake/TINY_GOBLIN_ACADEMY_NEW_SOURCE_ASSET_INTAKE_A0.md",
+      "destination": "docs/assets/pipeline/intake/TINY_GOBLIN_ACADEMY_NEW_SOURCE_ASSET_INTAKE_A0.md"
+    },
+    {
+      "source": "docs/assets/pipeline/prompts/TINY_GOBLIN_ACADEMY_ASSET_PIPELINE_PROMPT_TEMPLATES.md",
+      "destination": "docs/assets/pipeline/prompts/TINY_GOBLIN_ACADEMY_ASSET_PIPELINE_PROMPT_TEMPLATES.md"
+    },
+    {
+      "source": "docs/assets/pipeline/tutorials/TINY_GOBLIN_ACADEMY_HUMAN_MULTI_AGENT_ASSET_PIPELINE_TUTORIAL.md",
+      "destination": "docs/assets/pipeline/tutorials/TINY_GOBLIN_ACADEMY_HUMAN_MULTI_AGENT_ASSET_PIPELINE_TUTORIAL.md"
+    },
+    {
+      "source": "docs/assets/pipeline/workflows/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md",
+      "destination": "docs/assets/pipeline/workflows/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/capability-matrix/TINY_GOBLIN_ACADEMY_H5_4_SEMANTIC_DISCOVERY_AND_CAPABILITY_MATRIX_DEFERRED.md",
+      "destination": "docs/assets/shared-assets/capability-matrix/TINY_GOBLIN_ACADEMY_H5_4_SEMANTIC_DISCOVERY_AND_CAPABILITY_MATRIX_DEFERRED.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/creatures/TINY_GOBLIN_ACADEMY_H5_6_GOBLIN_EXPRESSION_ACTION_MAPPING.md",
+      "destination": "docs/assets/shared-assets/creatures/TINY_GOBLIN_ACADEMY_H5_6_GOBLIN_EXPRESSION_ACTION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/overview/TINY_GOBLIN_ACADEMY_H5_0B_SHARED_ASSET_EVIDENCE_REPAIR.md",
+      "destination": "docs/assets/shared-assets/overview/TINY_GOBLIN_ACADEMY_H5_0B_SHARED_ASSET_EVIDENCE_REPAIR.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/overview/TINY_GOBLIN_ACADEMY_H5_0_SHARED_ASSET_DOMAIN_MAPPING.md",
+      "destination": "docs/assets/shared-assets/overview/TINY_GOBLIN_ACADEMY_H5_0_SHARED_ASSET_DOMAIN_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/shared-core/TINY_GOBLIN_ACADEMY_H5_3_SHARED_CORE_REGION_MAPPING.md",
+      "destination": "docs/assets/shared-assets/shared-core/TINY_GOBLIN_ACADEMY_H5_3_SHARED_CORE_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/shared-fx/TINY_GOBLIN_ACADEMY_H5_57_SHARED_FX_FEEDBACK_DEFERRED.md",
+      "destination": "docs/assets/shared-assets/shared-fx/TINY_GOBLIN_ACADEMY_H5_57_SHARED_FX_FEEDBACK_DEFERRED.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_2B_REGION_EVIDENCE_METHOD.md",
+      "destination": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_2B_REGION_EVIDENCE_METHOD.md"
+    },
+    {
+      "source": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_2_UI_HUD_REGION_MAPPING.md",
+      "destination": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_2_UI_HUD_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A2_LEVEL_8_STICKER_BOOK_EDITOR_PROTOTYPE_ADDENDUM.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A2_LEVEL_8_STICKER_BOOK_EDITOR_PROTOTYPE_ADDENDUM.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88C_GLYPHFORGE_VIEWER_SHELL_STATIC_PROTOTYPE_PLAN.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88C_GLYPHFORGE_VIEWER_SHELL_STATIC_PROTOTYPE_PLAN.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88D_GLYPHFORGE_STATIC_VIEWER_SHELL_PROTOTYPE.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88D_GLYPHFORGE_STATIC_VIEWER_SHELL_PROTOTYPE.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88E_GLYPHFORGE_STATIC_VIEWER_SHELL_HUMAN_REVIEW.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88E_GLYPHFORGE_STATIC_VIEWER_SHELL_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md",
+      "destination": "docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md"
+    },
+    {
+      "source": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md",
+      "destination": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md"
+    },
+    {
+      "source": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_91A_MANIFEST_AUTHORITY_SUBFOLDER_REFINEMENT.md",
+      "destination": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_91A_MANIFEST_AUTHORITY_SUBFOLDER_REFINEMENT.md"
+    },
+    {
+      "source": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_91_MANIFEST_FOLDER_REORGANIZATION_MOVE_PASS.md",
+      "destination": "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_91_MANIFEST_FOLDER_REORGANIZATION_MOVE_PASS.md"
+    },
+    {
+      "source": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md",
+      "destination": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md"
+    },
+    {
+      "source": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_83_TOPDOWN_FUTURE_FLOOR_TILESHEETS_BATCH_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_83_TOPDOWN_FUTURE_FLOOR_TILESHEETS_BATCH_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_84_TOPDOWN_FUTURE_FLOOR_TILESHEETS_BATCH_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_84_TOPDOWN_FUTURE_FLOOR_TILESHEETS_BATCH_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_63_TOPDOWN_OBJECTS_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_63_TOPDOWN_OBJECTS_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_64_TOPDOWN_OBJECTS_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_64_TOPDOWN_OBJECTS_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_65_TOPDOWN_OBJECTS_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_65_TOPDOWN_OBJECTS_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_68_TOPDOWN_OBJECTS_NONFX_CLEANUP_RETRY.md",
+      "destination": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_68_TOPDOWN_OBJECTS_NONFX_CLEANUP_RETRY.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_69_TOPDOWN_OBJECTS_NONFX_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/objects/original/TINY_GOBLIN_ACADEMY_H5_69_TOPDOWN_OBJECTS_NONFX_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_77_TOPDOWN_NONFX_OBJECTS_REGENERATED_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_77_TOPDOWN_NONFX_OBJECTS_REGENERATED_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_78_TOPDOWN_NONFX_OBJECTS_REGENERATED_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_78_TOPDOWN_NONFX_OBJECTS_REGENERATED_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_79_TOPDOWN_NONFX_OBJECTS_REGENERATED_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_79_TOPDOWN_NONFX_OBJECTS_REGENERATED_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_80_TOPDOWN_NONFX_OBJECTS_REGENERATED_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/objects/regenerated-nonfx/TINY_GOBLIN_ACADEMY_H5_80_TOPDOWN_NONFX_OBJECTS_REGENERATED_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_58B_TOPDOWN_SOURCE_INVENTORY_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_58B_TOPDOWN_SOURCE_INVENTORY_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_58_TOP_DOWN_SLIME_QUEST_SOURCE_INVENTORY_AND_ROUTING.md",
+      "destination": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_58_TOP_DOWN_SLIME_QUEST_SOURCE_INVENTORY_AND_ROUTING.md"
+    },
+    {
+      "source": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_70_TOPDOWN_REGENERATED_SOURCE_INTAKE.md",
+      "destination": "docs/assets/topdown/source/TINY_GOBLIN_ACADEMY_H5_70_TOPDOWN_REGENERATED_SOURCE_INTAKE.md"
+    },
+    {
+      "source": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_59_TOPDOWN_TERRAIN_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_59_TOPDOWN_TERRAIN_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_60B_TOPDOWN_TERRAIN_BLANK_CELL_CORRECTION.md",
+      "destination": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_60B_TOPDOWN_TERRAIN_BLANK_CELL_CORRECTION.md"
+    },
+    {
+      "source": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_60_TOPDOWN_TERRAIN_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_60_TOPDOWN_TERRAIN_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_81_TOPDOWN_TERRAIN_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_81_TOPDOWN_TERRAIN_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_82_TOPDOWN_TERRAIN_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/terrain/TINY_GOBLIN_ACADEMY_H5_82_TOPDOWN_TERRAIN_CLEANUP_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_61_TOPDOWN_WALLS_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_61_TOPDOWN_WALLS_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_62_TOPDOWN_WALLS_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_62_TOPDOWN_WALLS_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_71_TOPDOWN_WALLS_TRUE_ALPHA_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_71_TOPDOWN_WALLS_TRUE_ALPHA_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_72_TOPDOWN_WALLS_TRUE_ALPHA_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_72_TOPDOWN_WALLS_TRUE_ALPHA_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_73_TOPDOWN_VERTICAL_WALLS_REGION_MAPPING.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_73_TOPDOWN_VERTICAL_WALLS_REGION_MAPPING.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_74_TOPDOWN_VERTICAL_WALLS_REGION_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_74_TOPDOWN_VERTICAL_WALLS_REGION_HUMAN_REVIEW.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_75_TOPDOWN_VERTICAL_WALLS_CLEANUP_CANDIDATE.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_75_TOPDOWN_VERTICAL_WALLS_CLEANUP_CANDIDATE.md"
+    },
+    {
+      "source": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_76_TOPDOWN_VERTICAL_WALLS_CLEANUP_HUMAN_REVIEW.md",
+      "destination": "docs/assets/topdown/walls/TINY_GOBLIN_ACADEMY_H5_76_TOPDOWN_VERTICAL_WALLS_CLEANUP_HUMAN_REVIEW.md"
+    }
+  ],
+  "validationResults": [
+    {
+      "command": "node scripts/asset-pipeline/cli.mjs validate-provenance",
+      "status": "passed",
+      "notes": "64 manifests inspected; legacy pre-H5.67 warnings remain expected."
+    },
+    {
+      "command": "node scripts/asset-pipeline/smoke-check.mjs",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/asset-pipeline/cli.mjs validate",
+      "status": "passed"
+    },
+    {
+      "check": "recursive-manifest-json-parse",
+      "status": "passed",
+      "manifestCount": 64,
+      "utf8BomToleratedFiles": [
+        "manifests/academy/hub/favicon.exports.json",
+        "manifests/academy/hub/hub.identity-assets.json",
+        "manifests/boot/boot.identity-assets.json"
+      ],
+      "errors": []
+    },
+    {
+      "check": "docs-assets-root-files",
+      "status": "passed",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "check": "folder-limit-guideline",
+      "status": "passed",
+      "overages": []
+    },
+    {
+      "check": "runtime-package-image-touch-guard",
+      "status": "passed",
+      "notes": "No PNG/image/runtime/package/lock changes detected in status guard."
+    }
+  ],
+  "runtimeBoundaryNotes": [
+    "Document location does not imply runtime approval.",
+    "Historical H4/H5 lane reports remain provenance unless a current active plan or manifest says otherwise.",
+    "H5.92 did not move or rewrite evidence images, source PNGs, runtime files, package files, or manifest shelves."
+  ],
+  "postMoveTreeSummary": {
+    "docsAssetsRootFiles": [
+      "README.md"
+    ],
+    "topLevelDirectories": [
+      "archive",
+      "doctrine",
+      "evidence",
+      "game-assets",
+      "hub-visuals",
+      "pantry",
+      "pipeline",
+      "shared-assets",
+      "tooling",
+      "topdown"
+    ],
+    "h573aDestination": "docs/assets/topdown/future-floor-tilesheets/TINY_GOBLIN_ACADEMY_H5_73A_TOPDOWN_FLOOR_TILESHEET_FUTURE_INTAKE.md"
+  }
+}

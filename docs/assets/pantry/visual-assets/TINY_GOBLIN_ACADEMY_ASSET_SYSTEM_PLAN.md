@@ -17,7 +17,7 @@ Tiny Goblin Academy now has a modular asset-sheet system for future visual passe
 
 Expanded reusable workflow:
 
-`docs/assets/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md`
+`docs/assets/pipeline/workflows/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md`
 
 Required sequence before any sheet is wired into hub/game code:
 
@@ -39,6 +39,19 @@ Required sequence before any sheet is wired into hub/game code:
 * No direct sheet-to-hub wiring.
 * Screenshots are required because visual artifacts (like baked backgrounds) can pass build/tests.
 * Human review decides whether the pixels are acceptable.
+
+
+## H5.92 Asset Docs Reorganization Note
+
+H5.92 moved the loose `docs/assets/` documentation shelf into categorized folders with `git mv`. The current asset system plan now lives at:
+
+`docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md`
+
+The reusable workflow now lives at:
+
+`docs/assets/pipeline/workflows/TINY_GOBLIN_ACADEMY_ASSET_PROCESSING_WORKFLOW.md`
+
+Root `docs/assets/` should stay small and discovery-oriented. Historical lane reports are nested under doctrine, hub visuals, shared assets, game assets, topdown lanes, pipeline, pantry, and tooling shelves. This was a documentation move only: no source assets, evidence images, manifests, runtime files, package files, or approvals were changed.
 
 ## H5.83 Future Topdown Floor Tilesheets Batch Mapping Note
 
@@ -303,7 +316,7 @@ The first pilot is `manifests/academy.card-goblin-duel.card-frames.functional-sl
 * Duplicate, imperfect, or unused sprites do not block intake as long as the sheet is clearly marked concept/v0.1.
 * Production implementation should rely on named manifest entries, not manual visual guessing.
 * Manifests should include `used`, `unused`, or `reserved` notes where helpful.
-* **H4.0 Update:** The operational classification for all assets is tracked in the [Operational Asset Cartography](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/docs/assets/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.md).
+* **H4.0 Update:** The operational classification for all assets is tracked in the [Operational Asset Cartography](file:///C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/docs/assets/hub-visuals/h4/cartography/TINY_GOBLIN_ACADEMY_H4_0_OPERATIONAL_ASSET_CARTOGRAPHY.md).
 
 ## Fake Transparency Cleanup Doctrine
 
@@ -1171,7 +1184,7 @@ H5.87 creates a draft planning manifest and report for organizing the now-large 
 
 ```text
 manifests/academy.manifest-and-docs-organization-plan.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md
+docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md
 ```
 
 Current inventory recorded:
@@ -1201,7 +1214,7 @@ H5.88 creates a draft planning registry for the future GlyphForge Visual Tool Su
 
 ```text
 manifests/academy.visual-tool-suite-registry-plan.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md
+docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md
 ```
 
 The planned tool surfaces are:
@@ -1260,7 +1273,7 @@ H5.88A creates:
 
 ```text
 manifests/academy.visual-tool-prototype-intake-comparison.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md
+docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md
 ```
 
 Comparison result: Flipbook evidence prototypes should seed the future Flipbook Viewer; Sprite Box Annotator should seed the Sticker/Picture Book / region annotator surface; Particle FX Viewer should seed the Particle FX / preset authoring surface. H5.88B should design the unified GlyphForge viewer shell before implementation.
@@ -1298,7 +1311,7 @@ H5.88B creates the unified GlyphForge Visual Workbench shell design:
 
 ```text
 manifests/academy.glyphforge-unified-viewer-shell-design.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md
+docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md
 ```
 
 The planned shell modes are:
@@ -1478,7 +1491,7 @@ H5.89 creates:
 
 ```text
 manifests/academy.font-pantry-source-inventory-plan.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md
+docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md
 ```
 
 Local font sources were inspected under:
@@ -1515,7 +1528,7 @@ H5.90 creates:
 
 ```text
 manifests/academy.font-pantry-core-selection.json
-docs/assets/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md
+docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md
 ```
 
 Selected shared core direction:
