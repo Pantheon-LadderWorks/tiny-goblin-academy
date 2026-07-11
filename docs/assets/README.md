@@ -28,3 +28,11 @@ Current primary planning document:
 ## H5.92 note
 
 H5.92 moved tracked asset documentation with `git mv`; it did not reorganize evidence images, source assets, manifests, runtime code, package files, or build outputs.
+
+## Current status notes
+
+- Runtime visual integration has not started.
+- Button Goblin Clicker is the first planned runtime visual integration candidate.
+- Top-Down Slime Quest remains last or near-last for runtime visual integration because animation, tile behavior, placement, collision, pathfinding, and map rules remain deferred.
+- GlyphForge tool work is paused after H5.88E; the next planned return point is H5.88F — GlyphForge Region Browser Image Preview Plan.
+- Font binary intake remains future work after the H5.89/H5.90 font pantry direction pass.

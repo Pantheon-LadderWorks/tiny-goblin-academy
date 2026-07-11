@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 64,
+  "totalManifestCount": 65,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -128,7 +128,8 @@
   "generatedManifests": [],
   "executionManifests": [
     "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json",
-    "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json"
+    "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json",
+    "manifests/academy/tooling/organization/execution/academy.active-stale-reference-update-execution.json"
   ],
   "deferredManifests": [
     "manifests/academy/shared/deferred/academy.shared-fx.regions.json"
@@ -901,6 +902,15 @@
       "reviewStatus": "human-review-passed",
       "runtimeEligibility": "not-runtime-approved",
       "reason": "Records the docs/assets move pass and post-move shelf map."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/execution/academy.active-stale-reference-update-execution.json",
+      "maturityClass": "execution",
+      "authorityRole": "H5.93 active stale reference update execution record",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Records active/current stale reference corrections after manifest and docs asset shelf reorganization."
     }
   ],
   "postMoveTreeSummary": [

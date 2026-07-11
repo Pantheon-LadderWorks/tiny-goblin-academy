@@ -18,5 +18,5 @@ Please open an issue to discuss the following *before* submitting a Pull Request
 ### Development Guidelines
 * **Use pnpm:** We use `pnpm` exclusively for package management, not `npm` or `yarn`.
 * **No Bloat:** Do not commit `node_modules`, `dist`, `.vite`, generated build outputs, secrets, or private seed concepts.
-* **Level 1 Restoration:** Do not attempt to rebuild Level 1 (`01-button-goblin-clicker`). It is intentionally deferred until the hub/runtime package architecture supports it.
+* **Level 1 / Button Goblin Clicker:** Level 1 is restored as source-available. Do not rebuild it from scratch or wire new runtime visuals without following the current asset pantry / runtime integration plan.
 * **Respect the Process:** Respect the project scope, the AI/Human collaboration history, and the explicit boundaries set by the maintainers.

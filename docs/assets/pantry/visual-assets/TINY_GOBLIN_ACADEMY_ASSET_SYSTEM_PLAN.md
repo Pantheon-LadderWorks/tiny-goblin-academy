@@ -57,7 +57,7 @@ Root `docs/assets/` should stay small and discovery-oriented. Historical lane re
 
 H5.83 maps the six H5.73A future Topdown floor / ground tilesheets as a batch future-pantry inventory.
 
-The batch manifest is `manifests/academy.topdown.floor-tilesheets.future.regions.json`. It records 6 sheets, 64 regions per sheet, and 384 total draft regions. Because the source PNGs are `1254x1254` while the semantic manifest uses an 8x8 `128x128` vocabulary, H5.83 records proportional real-image `sourceRect` values and preserves the original semantic coordinates separately as `semanticRect`.
+The batch manifest is `manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json`. It records 6 sheets, 64 regions per sheet, and 384 total draft regions. Because the source PNGs are `1254x1254` while the semantic manifest uses an 8x8 `128x128` vocabulary, H5.83 records proportional real-image `sourceRect` values and preserves the original semantic coordinates separately as `semanticRect`.
 
 This lane also matures the canonical asset pipeline with `node scripts/asset-pipeline/cli.mjs map-grid-batch`, backed by `scripts/asset-pipeline/map-grid-batch.py` and the standard provenance run-log contract. Future like-shaped tilesheet batches should use that path instead of one-off scripts.
 
@@ -68,7 +68,7 @@ No cleanup, derived cleaned PNGs, source PNG edits, runtime tilemaps, collision/
 H5.84 records batch human/product review for the H5.83 future topdown floor / ground tilesheet mapping:
 
 ```text
-manifests/academy.topdown.floor-tilesheets.future.regions.json
+manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json
 ```
 
 H5.84 accepts 6 sheets and 384 regions for future-pantry region planning use only. No correction pass is needed. No cleanup is needed in this review lane.
@@ -86,7 +86,7 @@ The road/path overlay sheet remains excluded. The existing H5.81/H5.82 terrain c
 H5.85 creates the first global visual asset pantry index:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 This index categorizes current visual assets by game/domain, operational type, source path, cleaned/derived path, accepted/deferred/denied counts, preferred preview tool, and runtime boundary. It is a planning index only and does not approve runtime use.
@@ -100,14 +100,14 @@ assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker
 The background is recorded as a draft scene-anchor background in:
 
 ```text
-manifests/academy.button-goblin-clicker.background.scene-anchors.json
+manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json
 ```
 
 It has 9 draft planning anchors, including a central click-target safe zone, lower floor grounding zone, decorative edge zones, torch/readability-risk zones, and a top HUD caution band. No Button Goblin Clicker runtime wiring occurred.
 
 Tier 1.5 visual integration should start with the easiest game first. Topdown pantry maturity does not make Top-Down Slime Quest the first runtime integration target; it remains last or near-last because animation, map behavior, collision, pathfinding, walkability, and placement decisions are still deferred.
 
-Known organization debt is now explicit: `manifests/` and `docs/assets/` need future categorical organization, and older root/docs notes contain stale Level 1 / Button Goblin Clicker restoration language. H5.85 records that debt without reorganizing those folders.
+Known organization debt from H5.85 has since been addressed by H5.91, H5.91A, H5.92, and H5.93. Manifests are now nested by subject and maturity/authority, `docs/assets/` is now categorized by shelf, and active overview docs now reflect restored Button Goblin Clicker / Level 1 status. Historical reports still preserve the older restoration-deferred context as fossil record.
 
 ## H5.3 Shared Core Region Mapping Note
 
@@ -153,7 +153,7 @@ H5.16 creates intake metadata, split-lane classification, and cleanup-risk evide
 
 H5.17 maps the static prop, environment prop, reward token, and status/mood icon lane from `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`.
 
-The resulting draft manifest is `manifests/academy.pet-campfire.static-props-icons.regions.json`, with synchronized bbox overlay, numbered contact sheet, and table preview evidence under `assets/academy/evidence/h5-17-pet-campfire-static-props-icons/`.
+The resulting draft manifest is `manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.static-props-icons.regions.json`, with synchronized bbox overlay, numbered contact sheet, and table preview evidence under `assets/academy/evidence/h5-17-pet-campfire-static-props-icons/`.
 
 This pass intentionally excludes Ember Pup character poses and animation/state decisions. It also keeps cleanup deferred: the source is RGB with baked checkerboard, no production cleaned sheet was created, and no runtime wiring occurred.
 
@@ -161,7 +161,7 @@ This pass intentionally excludes Ember Pup character poses and animation/state d
 
 H5.18 creates a derived transparent cleanup candidate for the 25 Pet Campfire static prop/icon regions mapped in H5.17.
 
-The source sheet remains untouched. The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png`, with cleanup evidence under `assets/academy/evidence/h5-18-pet-campfire-static-props-icons-cleanup/` and cleanup metadata in `manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json`.
+The source sheet remains untouched. The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-static-props-icons-cleaned-v0.1.png`, with cleanup evidence under `assets/academy/evidence/h5-18-pet-campfire-static-props-icons-cleanup/` and cleanup metadata in `manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json`.
 
 Cleanup remains draft-review. Runtime wiring did not occur, Ember Pup poses were not cleaned, and the background was used only for overlay preview evidence.
 
@@ -169,7 +169,7 @@ Cleanup remains draft-review. Runtime wiring did not occur, Ember Pup poses were
 
 H5.19 records Kryssie's human review acceptance of the H5.18 Pet Campfire static props/icons cleanup candidate.
 
-The cleanup candidate is accepted for draft pipeline use and recorded in `manifests/academy.pet-campfire.static-props-icons.cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`.
+The cleanup candidate is accepted for draft pipeline use and recorded in `manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, and `pipelineUse: accepted-for-draft-pipeline-use`.
 
 This does not mark the asset runtime-approved. Source PNGs remain untouched, runtime wiring did not occur, and Ember Pup poses remain deferred to a future character/state or animation candidate lane.
 
@@ -177,7 +177,7 @@ This does not mark the asset runtime-approved. Source PNGs remain untouched, run
 
 H5.20 maps 16 Ember Pup pose/state candidates from `assets/academy/games/pet-campfire/tga-pet-campfire-ember-pup-sheet-concept-v0.1.png`.
 
-The draft manifest is `manifests/academy.pet-campfire.ember-pup.pose-candidates.json`, with evidence under `assets/academy/evidence/h5-20-ember-pup-pose-candidates/`.
+The draft manifest is `manifests/academy/games/pet-campfire/lineage/academy.pet-campfire.ember-pup.pose-candidates.json`, with evidence under `assets/academy/evidence/h5-20-ember-pup-pose-candidates/`.
 
 This is a character/state lane, not a static prop lane. No cleanup occurred, no runtime animation timing was assigned, no pivots or hitboxes were created, and no gameplay/runtime wiring occurred. The human-accepted static props/icons cleanup candidate remains separate.
 
@@ -193,7 +193,7 @@ This does not mark any pose runtime-approved. No Ember Pup cleanup occurred, no 
 
 H5.22 creates a derived transparent cleanup candidate for the 16 reviewed Ember Pup pose/state candidates.
 
-The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png`, with cleanup metadata in `manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` and evidence under `assets/academy/evidence/h5-22-ember-pup-pose-cleanup/`.
+The derived candidate is `assets/academy/games/pet-campfire/derived/tga-pet-campfire-ember-pup-poses-cleaned-v0.1.png`, with cleanup metadata in `manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` and evidence under `assets/academy/evidence/h5-22-ember-pup-pose-cleanup/`.
 
 The current product interpretation is that these are pose/state symbols, not enough coherent frames for approved runtime animation cycles. Cleanup remains draft-review; source PNGs remain untouched; the H5.18/H5.19 static props/icons cleanup candidate remains untouched; no animation timing, pivots, anchors, hitboxes, gameplay states, or runtime wiring were approved.
 
@@ -201,7 +201,7 @@ The current product interpretation is that these are pose/state symbols, not eno
 
 H5.23 records Kryssie's human/product review acceptance of the H5.22 Ember Pup pose/state cleanup candidate.
 
-The cleanup candidate is accepted for draft pose/state-symbol pipeline use and recorded in `manifests/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, `pipelineUse: accepted-for-draft-pose-state-symbol-pipeline-use`, `runtimeEligibility: not-runtime-approved`, and `animationApproval: none`.
+The cleanup candidate is accepted for draft pose/state-symbol pipeline use and recorded in `manifests/academy/games/pet-campfire/academy.pet-campfire.ember-pup.pose-cleanup-candidate.json` as `status: reviewed`, `reviewStatus: human-review-passed`, `pipelineUse: accepted-for-draft-pose-state-symbol-pipeline-use`, `runtimeEligibility: not-runtime-approved`, and `animationApproval: none`.
 
 This promotion does not make Ember Pup a runtime animation sheet. The cleaned poses may support draft state symbols, portraits, pet moods, or future planning inputs, but animation cycles, timing, pivots, anchors, hitboxes, gameplay states, and runtime wiring remain unapproved.
 
@@ -209,7 +209,7 @@ This promotion does not make Ember Pup a runtime animation sheet. The cleaned po
 
 H5.24 audits `assets/academy/games/pet-campfire/backgrounds/tga-pet-campfire-background-source-v0.1.png` as a scene-anchor background.
 
-The draft scene-anchor manifest is `manifests/academy.pet-campfire.background.scene-anchors.json`, with evidence under `assets/academy/evidence/h5-24-pet-campfire-background-scene-anchors/`.
+The draft scene-anchor manifest is `manifests/academy/games/pet-campfire/academy.pet-campfire.background.scene-anchors.json`, with evidence under `assets/academy/evidence/h5-24-pet-campfire-background-scene-anchors/`.
 
 This pass maps 14 visual placement/readability zones for future planning, including the central campfire focal area, pet-safe lower clearings, tent/care cluster, stump/table interaction cluster, UI-safe upper sky, foreground obstruction zones, and lantern/sign readability risks. The background remains source-preserved; no sprite extraction, background prop cutouts, runtime placement data, game-code changes, or Pet Campfire wiring occurred.
 
@@ -225,8 +225,8 @@ The key correction is that the H5.24 ghost preview did not approve generic asset
 
 H5.26 creates two draft placement grammar manifests:
 
-* `manifests/academy.pet-campfire.ember-pup.state-placement-plan.json`
-* `manifests/academy.pet-campfire.ui-prop-care-placement-plan.json`
+* `manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json`
+* `manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json`
 
 The first grammar covers Ember Pup state-symbol placement: idle, happy, sad, sick, sleeping, eating, drinking, active, and excited pose-symbols. The second grammar covers UI/prop/care-symbol placement: care props, campfire/environment props, mood/status icons, feedback icons, reward markers, and quest/status markers.
 
@@ -242,7 +242,7 @@ The two-lane split remains required. The generic accepted-atlas dump pattern rem
 
 ## H5.28 Pet Campfire Draft Layout Composition Plan Note
 
-H5.28 creates `manifests/academy.pet-campfire.layout-composition-plan.json` as a draft visual composition plan for nine Pet Campfire scenarios: idle, happy greeting, hungry care, thirsty care, sleepy rest, sad comfort, sick recovery, active play, and quest/status.
+H5.28 creates `manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json` as a draft visual composition plan for nine Pet Campfire scenarios: idle, happy greeting, hungry care, thirsty care, sleepy rest, sad comfort, sick recovery, active play, and quest/status.
 
 The plan connects reviewed scene anchors and reviewed placement grammars using anchor references and named slots only. It does not approve exact runtime coordinates, runtime placement data, gameplay behavior, animation cycles, or Pet Campfire wiring.
 
@@ -254,7 +254,7 @@ The nine campsite composition scenarios are accepted for future draft visual/lay
 
 ## H5.30 Dice Duel Tavern Region Mapping Note
 
-H5.30 maps `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png` into `manifests/academy.dice-duel-tavern.regions.json` with 64 draft-review regions.
+H5.30 maps `assets/academy/games/dice-duel-tavern/tga-dice-duel-tavern-sheet-concept-v0.1.png` into `manifests/academy/games/dice-duel-tavern/lineage/academy.dice-duel-tavern.regions.json` with 64 draft-review regions.
 
 The Dice Duel Tavern source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, or game-code changes occurred.
 
@@ -280,7 +280,7 @@ The cleanup candidate is accepted for draft pipeline use as `status: reviewed`, 
 
 ## H5.34 Card Goblin Duel Card Frames Region Mapping Note
 
-H5.34 maps `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png` into `manifests/academy.card-goblin-duel.card-frames.regions.json` with 32 draft-review regions.
+H5.34 maps `assets/academy/games/card-goblin-duel/tga-card-goblin-duel-card-frames-concept-v0.1.png` into `manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.card-frames.regions.json` with 32 draft-review regions.
 
 The Card Goblin Duel card-frames source sheet is `1024x1024` RGB with no alpha and baked checkerboard / fake transparency. This pass creates mapping evidence only. The source PNG remains untouched; no derived cleanup asset, runtime wiring, game-code change, or Card Goblin Duel UI/tokens processing occurred.
 
@@ -306,7 +306,7 @@ The 32 cleaned card-frame regions are accepted for draft pipeline use as `status
 
 H5.38 introduces functional surface slot mapping as a reusable planning layer. Region mapping identifies an asset, cleanup prepares a visual candidate, and functional slot mapping defines where dynamic content may later belong inside the asset.
 
-The first pilot is `manifests/academy.card-goblin-duel.card-frames.functional-slots.json`, which maps 32 Card Goblin Duel card-frame functional surfaces and 122 draft slots using surface-relative percentages only. It also records a fit/overflow policy: future layout may scale a card or UI surface up within view/playfield budget, but H5.38 approves no runtime scaling, runtime UI, gameplay behavior, or Card Goblin Duel wiring. UI/HUD panels, dialogue panels, speech bubbles, buttons, progress bars, badges, and status panels should receive the same treatment later.
+The first pilot is `manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json`, which maps 32 Card Goblin Duel card-frame functional surfaces and 122 draft slots using surface-relative percentages only. It also records a fit/overflow policy: future layout may scale a card or UI surface up within view/playfield budget, but H5.38 approves no runtime scaling, runtime UI, gameplay behavior, or Card Goblin Duel wiring. UI/HUD panels, dialogue panels, speech bubbles, buttons, progress bars, badges, and status panels should receive the same treatment later.
 
 ## Asset Pantry Doctrine
 
@@ -692,7 +692,7 @@ H5.51 accepted the H5.50B corrected Farm Settlement region mapping for draft cle
 
 ## H5.52 Farm Settlement Cleanup Candidate Note
 
-H5.52 created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions at `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png`, with cleanup metadata recorded in `manifests/academy.farm-settlement.cleanup-candidate.json`. The source PNG remains untouched, the 1408x768 layout and reviewed sourceRects are preserved, and fragile glow/fire/weather/sun/moon/banner/goblin-edge cleanup risks remain flagged for human review. This is draft cleanup/planning evidence only: no scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, placement approval, or Farm Settlement game wiring occurred.
+H5.52 created a derived transparent cleanup candidate for the 32 H5.51-reviewed Farm Settlement regions at `assets/academy/games/farm-settlement/derived/tga-farm-settlement-cleaned-v0.1.png`, with cleanup metadata recorded in `manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json`. The source PNG remains untouched, the 1408x768 layout and reviewed sourceRects are preserved, and fragile glow/fire/weather/sun/moon/banner/goblin-edge cleanup risks remain flagged for human review. This is draft cleanup/planning evidence only: no scene-anchor planning, functional slot mapping, gameplay logic, runtime approval, placement approval, or Farm Settlement game wiring occurred.
 
 ## H5.52B Farm Settlement Targeted Cleanup Correction Note
 
@@ -726,11 +726,11 @@ The primary topdown processing lanes are now:
 2. `assets/academy/topdown/walls/tga-topdown-wall-boundary-construction-concept-v0.1.png`
 3. `assets/academy/topdown/objects/tga-topdown-environment-objects-concept-v0.1.png`
 
-All four inspected topdown sources are `1024x1024` RGB with no alpha, so later cleanup/mapping lanes must remain human-review gated. H5.58 created `manifests/academy.topdown.source-inventory.json` and lightweight source-inventory evidence only. It did not create cleanup outputs, region rectangles, runtime atlases, placement/collision/interaction rules, animation approval, or game wiring.
+All four inspected topdown sources are `1024x1024` RGB with no alpha, so later cleanup/mapping lanes must remain human-review gated. H5.58 created `manifests/academy/topdown/source/planning/academy.topdown.source-inventory.json` and lightweight source-inventory evidence only. It did not create cleanup outputs, region rectangles, runtime atlases, placement/collision/interaction rules, animation approval, or game wiring.
 
 ## H5.58B Topdown Source Inventory Human Review Note
 
-H5.58B records human review pass for the H5.58 topdown source inventory and lane-routing decision. `manifests/academy.topdown.source-inventory.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-lane-routing-use`, while `runtimeEligibility` remains `not-runtime-approved`.
+H5.58B records human review pass for the H5.58 topdown source inventory and lane-routing decision. `manifests/academy/topdown/source/planning/academy.topdown.source-inventory.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-lane-routing-use`, while `runtimeEligibility` remains `not-runtime-approved`.
 
 Accepted routing:
 
@@ -753,7 +753,7 @@ This is a semantic terrain inventory only. It does not create cleanup outputs, d
 
 H5.60 records human review pass for the H5.59 topdown terrain region mapping. H5.60B supersedes this note for exact blank-cell identities because H5.60 corrected the wrong cell.
 
-`manifests/academy.topdown.terrain.regions.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`. All 64 regions and all 128x128 sourceRects are retained. See H5.60B for the corrected final blank-cell list.
+`manifests/academy/topdown/terrain/lineage/academy.topdown.terrain.regions.json` is now `reviewed` / `human-review-passed` / `accepted-for-draft-cleanup-and-planning-use`, while `runtimeEligibility` remains `not-runtime-approved`. All 64 regions and all 128x128 sourceRects are retained. See H5.60B for the corrected final blank-cell list.
 
 Special marker/status-like tiles such as goblin crests, magic circles, glowing floors, caution stripes, portal swirls, arrows, and flag markers are accepted as inventory categories only. H5.60 does not approve runtime tilemap use, collision, pathfinding, terrain behavior, portal behavior, slime/hazard behavior, placement, cleanup, derived images, or game/runtime wiring.
 
@@ -821,7 +821,7 @@ No source PNGs, derived PNGs, evidence PNGs, production manifests, game/runtime 
 
 H5.68 retries Topdown Objects cleanup using the H5.67 CLI/provenance contract. The active cleanup candidate is now:
 
-`manifests/academy.topdown.objects.nonfx-cleanup-candidate.json`
+`manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-cleanup-candidate.json`
 
 The derived candidate is:
 
@@ -878,7 +878,7 @@ assets/academy/topdown/walls/tga-topdown-walls-horizontal-true-alpha-regenerated
 The sheet is `1536x1024` PNG / RGBA with alpha range `0-255`, so H5.71 performs variable-size alpha-assisted region mapping instead of 8x8 grid mapping or fake-background cleanup. The draft manifest is:
 
 ```text
-manifests/academy.topdown.walls.true-alpha-regions.json
+manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json
 ```
 
 H5.71 maps 58 draft regions across wall-horizontal, wall-ruin, rubble, wall-corner, wall-arch, fence, wall-vertical, pillar, column, rock, bush, door, and uncertain categories. These categories remain visual inventory labels only. No cleanup, derived cleanup image, source PNG edit, runtime asset approval, collision, placement, door/gate/lock behavior, wall autotiling, pathfinding, tilemap use, or game wiring is approved.
@@ -904,7 +904,7 @@ assets/academy/topdown/walls/tga-topdown-walls-vertical-cleanup-source-regenerat
 The sheet is `1448x1086` PNG / RGB with no alpha channel, so it remains a fake-background cleanup-source candidate rather than a true-alpha source. H5.73 performs contour-assisted variable-region mapping and records 72 draft regions in:
 
 ```text
-manifests/academy.topdown.walls.vertical.regions.json
+manifests/academy/topdown/walls/lineage/academy.topdown.walls.vertical.regions.json
 ```
 
 Mapped categories include wall-corner, wall-ruin, wall-vertical, wall-column, door, rubble, and wall-arch visual inventory labels. The manifest records H5.67-style pipeline provenance and links to the H5.73 evidence run log.
@@ -970,7 +970,7 @@ assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png
 The cleanup manifest is:
 
 ```text
-manifests/academy.topdown.walls.vertical.cleanup-candidate.json
+manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json
 ```
 
 H5.75 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
@@ -988,7 +988,7 @@ H5.75 does not approve runtime asset use, collision, placement, pathfinding, til
 H5.76 records human/product review for the H5.75 vertical wall cleanup candidate:
 
 ```text
-manifests/academy.topdown.walls.vertical.cleanup-candidate.json
+manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json
 assets/academy/topdown/walls/derived/tga-topdown-vertical-walls-cleaned-v0.1.png
 ```
 
@@ -1009,7 +1009,7 @@ assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated
 The source is `1254x1254` PNG / RGB with no alpha channel, so it remains a fake-background cleanup-source candidate rather than true alpha. The sheet is visually arranged as an 8x8 object pantry, but equal grid cells clipped or overlapped several objects. H5.77 therefore uses `contour-assisted-variable-region-mapping` and records 64 draft visual-inventory regions in:
 
 ```text
-manifests/academy.topdown.objects.nonfx-regenerated.regions.json
+manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-regenerated.regions.json
 ```
 
 The old H5.68/H5.69 object cleanup remains historical/usable for its accepted set. H5.77 starts the new regenerated non-FX object source lane and does not process the old H5.63/H5.68 source.
@@ -1021,7 +1021,7 @@ H5.77 does not create cleanup outputs, derived cleanup PNGs, runtime manifests, 
 H5.78 records human/product review for the H5.77 regenerated non-FX object region mapping:
 
 ```text
-manifests/academy.topdown.objects.nonfx-regenerated.regions.json
+manifests/academy/topdown/objects/lineage/academy.topdown.objects.nonfx-regenerated.regions.json
 assets/academy/topdown/objects/tga-topdown-environment-objects-nonfx-regenerated-v0.2.png
 ```
 
@@ -1058,7 +1058,7 @@ assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.pn
 The cleanup manifest is:
 
 ```text
-manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
+manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
 ```
 
 H5.79 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
@@ -1076,7 +1076,7 @@ H5.79 does not approve runtime asset use, placement, collision, interaction, pic
 H5.80 records human/product review for the H5.79 regenerated non-FX object cleanup candidate:
 
 ```text
-manifests/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
+manifests/academy/topdown/objects/academy.topdown.objects.nonfx-regenerated.cleanup-candidate.json
 assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png
 ```
 
@@ -1113,7 +1113,7 @@ assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png
 The cleanup manifest is:
 
 ```text
-manifests/academy.topdown.terrain.cleanup-candidate.json
+manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json
 ```
 
 H5.81 uses the registered `edge-connected-checker-cleanup` method through `scripts/asset-pipeline/cli.mjs` and records H5.67-style pipeline provenance in:
@@ -1139,7 +1139,7 @@ H5.81 does not process H5.73A future floor tilesheets, modify source PNGs, modif
 H5.82 records human/product review for the H5.81 existing terrain cleanup candidate:
 
 ```text
-manifests/academy.topdown.terrain.cleanup-candidate.json
+manifests/academy/topdown/terrain/academy.topdown.terrain.cleanup-candidate.json
 assets/academy/topdown/terrain/derived/tga-topdown-terrain-cleaned-v0.1.png
 ```
 
@@ -1160,8 +1160,8 @@ H5.82 does not rerun cleanup, edit source PNGs, edit derived PNGs, edit evidence
 H5.86 records human/product review for the H5.85 Academy Visual Asset Pantry Index and Button Goblin Clicker background scene-anchor manifest:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
-manifests/academy.button-goblin-clicker.background.scene-anchors.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
+manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json
 ```
 
 The pantry index is accepted as the Tier 1.5 visual integration planning source of truth. Button Goblin Clicker background anchors are accepted for planning use only, with 9 anchors retained.
@@ -1183,7 +1183,7 @@ H5.87 â€” Manifest and Asset Docs Organization Plan
 H5.87 creates a draft planning manifest and report for organizing the now-large manifest and asset documentation shelves:
 
 ```text
-manifests/academy.manifest-and-docs-organization-plan.json
+manifests/academy/tooling/organization/planning/academy.manifest-and-docs-organization-plan.json
 docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_87_MANIFEST_AND_ASSET_DOCS_ORGANIZATION_PLAN.md
 ```
 
@@ -1198,7 +1198,7 @@ The proposed manifest organization separates academy core, hub, shared assets, c
 
 The proposed `docs/assets` organization separates doctrine, pipeline/tutorial material, pantry summaries, game-specific reports, topdown reports, hub visuals, evidence architecture, and archive material.
 
-H5.87 also records stale/current-doc candidates, especially older Level 1 / Button Goblin Clicker restoration-deferred language in overview docs, while preserving historical reports as historical evidence.
+H5.87 recorded stale/current-doc candidates, especially older Level 1 / Button Goblin Clicker restoration-deferred language in overview docs. H5.93 later corrected active overview surfaces while preserving historical reports as historical evidence.
 
 No physical reorganization occurred in H5.87. No manifests or docs were moved, validators were not changed, stale docs were not corrected, runtime/game code was not touched, and no PNG/source/derived/evidence/package/lock files were modified.
 
@@ -1213,7 +1213,7 @@ H5.88 â€” Visual Tool Suite Registry Plan
 H5.88 creates a draft planning registry for the future GlyphForge Visual Tool Suite:
 
 ```text
-manifests/academy.visual-tool-suite-registry-plan.json
+manifests/academy/tooling/glyphforge/planning/academy.visual-tool-suite-registry-plan.json
 docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88_VISUAL_TOOL_SUITE_REGISTRY_PLAN.md
 ```
 
@@ -1229,7 +1229,7 @@ Future Audio / Sound Pipeline Viewer
 The discovery model is pantry-index-first:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 Tools should read reviewed manifests and pantry records before loading images. They should display `pipelineUse`, `reviewStatus`, `runtimeEligibility`, denied/deferred/future-pantry-only status, and relevant cleanup or exclusion notes. Tool display does not approve runtime use.
@@ -1272,7 +1272,7 @@ These copied files are reference prototypes only. They are not canonical tools, 
 H5.88A creates:
 
 ```text
-manifests/academy.visual-tool-prototype-intake-comparison.json
+manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json
 docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88A_VISUAL_TOOL_PROTOTYPE_INTAKE_AND_MATURITY_COMPARISON.md
 ```
 
@@ -1310,7 +1310,7 @@ H5.88B â€” GlyphForge Unified Viewer Shell Design
 H5.88B creates the unified GlyphForge Visual Workbench shell design:
 
 ```text
-manifests/academy.glyphforge-unified-viewer-shell-design.json
+manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json
 docs/assets/tooling/glyphforge/TINY_GOBLIN_ACADEMY_H5_88B_GLYPHFORGE_UNIFIED_VIEWER_SHELL_DESIGN.md
 ```
 
@@ -1339,7 +1339,7 @@ The Scene Composition / Layout Editor mode is informed by `tools/glyphforge/prot
 The shell discovery model remains registry-first:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 Supported assets are routed by manifest shape: animation manifests to Flipbook, region/cleanup manifests to Region Browser, scene-anchor/background manifests to Scene Composition, particle presets to Particle FX later, and future audio manifests to Tier 2.5 placeholder mode.
@@ -1370,7 +1370,7 @@ tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json
 The pantry index remains the source of truth:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 The future viewer should consume a smaller generated registry derived from the pantry index, not hand-invented entries. The first static prototype should prove registry loading, asset listing, mode routing, status/risk/runtime-boundary display, manifest/source/derived/evidence path display, and basic region/animation/anchor summaries.
@@ -1406,7 +1406,7 @@ tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json
 The registry is derived from:
 
 ```text
-manifests/academy.visual-asset-pantry-index.json
+manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json
 ```
 
 H5.88D registry result:
@@ -1490,7 +1490,7 @@ This pass opens the Tiny Goblin Academy font pantry lane as Tier 1.5 visual-supp
 H5.89 creates:
 
 ```text
-manifests/academy.font-pantry-source-inventory-plan.json
+manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json
 docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_89_FONT_PANTRY_SOURCE_INVENTORY_AND_INTAKE_PLAN.md
 ```
 
@@ -1527,7 +1527,7 @@ Existing local fonts are useful as support candidates, not primary identity. Atk
 H5.90 creates:
 
 ```text
-manifests/academy.font-pantry-core-selection.json
+manifests/academy/fonts/academy.font-pantry-core-selection.json
 docs/assets/pantry/fonts/TINY_GOBLIN_ACADEMY_H5_90_FONT_PANTRY_HUMAN_REVIEW_AND_NEW_FANTASY_CORE_SELECTION.md
 ```
 
@@ -1564,3 +1564,9 @@ H5.93 — Stale Overview Docs Correction
 ```
 
 H5.90 does not copy font binaries, fetch remote fonts, create `assets/academy/fonts/`, wire runtime fonts, change game code, modify package/lock files, install dependencies, modify PNGs/images, modify tool implementation files, or reorganize docs/manifests folders. Runtime font use remains not approved.
+
+## H5.93 Active/Stale Reference Update Note
+
+H5.93 corrected active/current overview references after H5.91, H5.91A, and H5.92. The live source of truth now reflects that Button Goblin Clicker / Level 1 is source-available and restored, while runtime visual integration remains future work. Button Goblin Clicker remains the first planned runtime visual integration candidate, and Top-Down Slime Quest remains last or near-last.
+
+Current discovery surfaces should point to nested manifest shelves and categorized `docs/assets/` shelves. Historical H reports and incident records remain preserved as historical fossil record and were not broadly rewritten.

@@ -59,6 +59,7 @@ manifests/
 - Font direction selection: `manifests/academy/fonts/academy.font-pantry-core-selection.json`
 - Manifest maturity index: `manifests/academy/tooling/organization/academy.manifest-maturity-index.json`
 - GlyphForge/tooling plans: `manifests/academy/tooling/glyphforge/planning/`
+- Latest organization execution records: `manifests/academy/tooling/organization/execution/`
 
 ## Active Counts By Category
 

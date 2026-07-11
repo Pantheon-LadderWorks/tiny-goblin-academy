@@ -16,14 +16,15 @@ This repository is a public, free, and open learning artifact serving as an evol
 ## Current Status
 
 * **Tier 1 Historical Completion:** 10/10 Human Review Passed.
-* **Current Source Availability:** Games 02–10 survive and are accessible under `games/tier-1/`.
-* **Incident Note:** The source code for Level 1 is missing due to a documented structural refactor incident. Its restoration is intentionally deferred until the upcoming hub/runtime package architecture is fully defined. This deferral does not reverse its historical "Human Review Passed" status.
+* **Current Source Availability:** Games 01–10 are accessible under `games/tier-1/`.
+* **Current Level 1 Status:** Button Goblin Clicker has been restored as a source-available, dev-runnable Tier 1 game. Older incident/restoration-deferred reports remain preserved as historical record.
+* **Visual Integration Status:** Runtime visual integration has not started. Button Goblin Clicker is the first planned runtime visual integration candidate; Top-Down Slime Quest remains last or near-last because its animation, tile behavior, placement, collision, pathfinding, and map rules remain more complex.
 
 ## What You Can Play / Study
 
 This ladder contains 10 distinct, tightly scoped games. Each focuses on one small loop and one core lesson.
 
-1. **Button Goblin Clicker** — The simplest reactive loop. *(Historical / Restoration Deferred)*
+1. **Button Goblin Clicker** — The simplest reactive loop. *(Source Available / First planned visual integration candidate)*
 2. **Potion Sorter** — State validation and visual feedback. *(Source Available)*
 3. **Dice Duel Tavern** — RNG, probability limits, and turn states. *(Source Available)*
 4. **Card Goblin Duel** — Hidden state, card resolution, and UI sync. *(Source Available)*
@@ -68,8 +69,9 @@ See [CONTENT_LICENSE.md](CONTENT_LICENSE.md) for full details on how the license
 
 * **Package Manager:** Use `pnpm`, not `npm`.
 * **Clean Commits:** Do not commit generated dependency folders (`node_modules`), `.vite`, or build outputs.
-* **Architecture Shift:** The hub/package architecture must be defined next before Level 1 restoration or the development of new games. 
+* **Architecture Shift:** The hub/package architecture and visual integration path remain future work. Level 1 is restored as source-available, but runtime visual wiring has not started.
 * **Artifact Philosophy:** The source games currently in this repository are *development artifacts*. Future hub builds will transition these into *playable runtime artifacts*.
+* **Asset Shelf Note:** Current asset docs begin at `docs/assets/README.md`; current manifests begin at `manifests/README.md`.
 
 ## Roadmap
 
@@ -78,8 +80,9 @@ See [CONTENT_LICENSE.md](CONTENT_LICENSE.md) for full details on how the license
 * [ ] Hub/runtime package architecture definition.
 * [ ] Tauri hub exploration.
 * [ ] itch.io free release path.
-* [ ] Level 1 restoration under the new package standard.
-* [ ] Future visual asset pass.
+* [x] Level 1 source restoration under the Tier 1 roster.
+* [x] Tier 1.5 visual asset pantry pass.
+* [ ] Button Goblin Clicker runtime visual integration.
 * [ ] Future per-game learning guide pair before itch release.
 
 ### Future Learning Path Guides

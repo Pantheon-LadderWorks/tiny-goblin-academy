@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "active-stale-reference-update",
+  "runtimeEligibility": "not-runtime-approved",
+  "sourceBaselineCommit": "35da51e",
+  "inspectedFiles": [
+    "README.md",
+    "docs/README.md",
+    "CONTRIBUTING.md",
+    "meta/progress-tracker.md",
+    "manifests/README.md",
+    "docs/assets/README.md",
+    "docs/manifests/TINY_GOBLIN_ACADEMY_MANIFEST_STRATEGY.md",
+    "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+    "manifests/academy/core/academy.games.json",
+    "scripts/validate-academy-manifest.mjs",
+    "tools/glyphforge/registry/glyphforge-visual-registry.v0.1.json"
+  ],
+  "updatedFiles": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "meta/progress-tracker.md",
+    "docs/README.md",
+    "docs/manifests/TINY_GOBLIN_ACADEMY_MANIFEST_STRATEGY.md",
+    "docs/assets/README.md",
+    "manifests/README.md",
+    "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+    "CHANGELOG.md",
+    "docs/assets/tooling/organization/TINY_GOBLIN_ACADEMY_H5_93_ACTIVE_STALE_REFERENCE_UPDATE_PASS.md",
+    "manifests/academy/tooling/organization/execution/academy.active-stale-reference-update-execution.json",
+    "manifests/academy/tooling/organization/academy.manifest-maturity-index.json"
+  ],
+  "intentionallyPreservedHistoricalFiles": [
+    "Historical H1/H2/H3/H4/H5 lane reports",
+    "Old incident/source-loss reports",
+    "Historical asset evidence reports that mention old flat paths",
+    "GlyphForge generated registry JSON, because its checked paths already matched active manifests/assets"
+  ],
+  "staleThemesFound": [
+    "Old Level 1 / Button Goblin Clicker source-missing and restoration-deferred language in active overview docs",
+    "Old flat academy manifest paths in active manifest strategy and asset system plan",
+    "Active docs missing H5.91/H5.91A/H5.92 nested shelf guidance",
+    "Active docs missing clear runtime visual integration boundary after the asset pantry pass"
+  ],
+  "staleThemesCorrected": [
+    "Button Goblin Clicker / Level 1 corrected to source-available/restored in active README, CONTRIBUTING, and progress tracker",
+    "Academy game roster path corrected to manifests/academy/core/academy.games.json",
+    "Visual pantry, font pantry, and GlyphForge planning manifest paths corrected to nested H5.91/H5.91A shelves",
+    "docs/assets and manifests README surfaces now point readers to categorized shelves and current execution records",
+    "Runtime visual integration remains future work; Button Goblin Clicker remains first planned candidate; Top-Down Slime Quest remains last or near-last",
+    "GlyphForge remains paused after H5.88E with H5.88F as the return point; font binary intake remains future work"
+  ],
+  "unresolvedItems": [
+    "Historical reports may still mention old paths or source-loss context as intended fossil record.",
+    "Runtime visual integration remains future H6 work.",
+    "Font binary intake remains future work.",
+    "GlyphForge implementation remains paused until H5.88F."
+  ],
+  "validationResults": [
+    {
+      "command": "node scripts/asset-pipeline/cli.mjs validate-provenance",
+      "status": "passed",
+      "notes": "65 manifests inspected; legacy pre-H5.67 warnings remain expected."
+    },
+    {
+      "command": "node scripts/asset-pipeline/smoke-check.mjs",
+      "status": "passed"
+    },
+    {
+      "command": "node scripts/asset-pipeline/cli.mjs validate",
+      "status": "passed"
+    },
+    {
+      "check": "recursive-manifest-json-parse",
+      "status": "passed",
+      "manifestCount": 65,
+      "utf8BomToleratedFiles": [
+        "manifests/academy/hub/favicon.exports.json",
+        "manifests/academy/hub/hub.identity-assets.json",
+        "manifests/boot/boot.identity-assets.json"
+      ],
+      "errors": []
+    },
+    {
+      "check": "no-file-moves",
+      "status": "passed",
+      "movedEntries": []
+    },
+    {
+      "check": "runtime-package-image-touch-guard",
+      "status": "passed",
+      "unsafeEntries": []
+    },
+    {
+      "check": "active-stale-pattern-scan",
+      "status": "passed",
+      "staleEntries": []
+    },
+    {
+      "check": "h5-93-report-bell-character",
+      "status": "passed"
+    }
+  ],
+  "safetyChecks": {
+    "movedFiles": false,
+    "reorganizedFolders": false,
+    "runtimeGameCodeChanged": false,
+    "pngImagesChanged": false,
+    "packageLockChanged": false,
+    "dependencyInstall": false,
+    "historicalReportsBroadlyRewritten": false
+  }
+}

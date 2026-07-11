@@ -7,7 +7,7 @@ All 10 games from the initial Tier 1 ladder have successfully reached the "Playt
 
 | Level | Title | Folder Path | Status | Tests Status | Evidence Status | Human Review Status | Primary Lesson | Notable Correction/Drift |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Button Goblin Clicker | `games/tier-1/01-button-goblin-clicker` (Source Missing) | Playtested / Human Review Passed (Historical) | Unknown | Captured (Assumed) | Passed | Basic state-to-UI reactivity | Source lost in refactor. Restoration deferred pending hub/package architecture. |
+| 1 | Button Goblin Clicker | `games/tier-1/01-button-goblin-clicker` | Playtested / Human Review Passed | Passed | Captured / historical + current visual-planning evidence | Passed | Basic state-to-UI reactivity | Source restored. First planned runtime visual integration candidate; older source-loss notes remain historical. |
 | 2 | Potion Sorter | `games/tier-1/02-potion-sorter` | Playtested / Human Review Passed | Unknown | Captured (Assumed) | Passed | Interactive matching and discrete state transitions | Enforced correct visual output for correct states |
 | 3 | Dice Duel Tavern | `games/tier-1/03-dice-duel-tavern` | Playtested / Human Review Passed | Unknown | Incomplete/Not run | Passed | Simple turn-based dice math and causal feedback | Clarifying duel bounds without expanding into RPG engine |
 | 4 | Card Goblin Duel | `games/tier-1/04-card-goblin-duel` | Playtested / Human Review Passed | Passed | Captured | Passed | State-machine phases | Failed spike initially rendered debug-page UI, caught in review |
