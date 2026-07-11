@@ -40,6 +40,20 @@ Required sequence before any sheet is wired into hub/game code:
 * Screenshots are required because visual artifacts (like baked backgrounds) can pass build/tests.
 * Human review decides whether the pixels are acceptable.
 
+## H6.0 Runtime Shell / UI Sourcing Note
+
+H6.0 starts the runtime visual integration planning layer without wiring assets yet.
+
+Before visual assets are attached to games, the Academy shell should be simplified into a minimal top bar plus game-owned in-stage HUD, with the Action Ledger behind a button and `L` shortcut, Help in a modal, and debug state in a Dev overlay. This prevents each game from having to place assets twice: once in the old side-panel laboratory layout and again after the shell refactor.
+
+UI sourcing policy:
+
+* Use asset-backed UI for reviewed frames, icons, badges, decorative backplates, card surfaces, and themed status symbols.
+* Use code-native DOM/CSS for text-heavy, responsive, accessibility-sensitive, modal, drawer, ledger, help, and dev-overlay surfaces.
+* Use hybrid UI when an asset provides the visual frame/backplate while code renders live data inside.
+* Use particle or code-generated FX for fire, glow, smoke, dust, sparkle, and other soft-edge effects instead of forcing every effect through sprite cleanup.
+* Shared UI pieces are optional ingredients, not a complete UI system.
+
 
 ## H5.92 Asset Docs Reorganization Note
 

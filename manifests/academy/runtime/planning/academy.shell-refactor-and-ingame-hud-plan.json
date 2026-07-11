@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "pipelineUse": "runtime-shell-refactor-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "sourceBaselineCommit": "f52c2da docs: update active references after shelf reorganization",
+  "tier": "H6",
+  "planId": "H6.0",
+  "domain": "academy-runtime",
+  "operationalType": "academy-shell-refactor-and-ingame-hud-plan",
+  "blockedUntilHumanReview": true,
+  "inspectedFiles": [
+    "hub/src/components/DevGameRuntimeView.tsx",
+    "hub/src/data/tier1Roster.ts",
+    "games/tier-1/01-button-goblin-clicker/src/main.ts",
+    "games/tier-1/01-button-goblin-clicker/src/style.css",
+    "games/tier-1/02-potion-sorter/src/main.ts",
+    "games/tier-1/02-potion-sorter/src/styles.css",
+    "games/tier-1/08-one-room-platformer/src/main.ts",
+    "games/tier-1/08-one-room-platformer/src/style.css"
+  ],
+  "currentShellFindings": [
+    {
+      "id": "outer-academy-shell",
+      "finding": "The hub runtime iframe wrapper already provides a top Academy bar with game title, dev mode indicator, URL, and Close Game / Return to Academy action.",
+      "source": "hub/src/components/DevGameRuntimeView.tsx"
+    },
+    {
+      "id": "inner-game-harnesses",
+      "finding": "Tier 1 games also define their own large lesson harnesses with mastheads, side panels, stat cards, help panels, ledgers, and below-stage controls.",
+      "source": "games/tier-1/*/src/main.ts and style files"
+    },
+    {
+      "id": "stale-roster-manifest-path",
+      "finding": "The hub Tier 1 roster still imports the pre-reorganization flat academy games manifest path.",
+      "source": "hub/src/data/tier1Roster.ts",
+      "risk": "Must be fixed before implementation lanes rely on current nested manifest shelves."
+    },
+    {
+      "id": "stale-platformer-manifest-paths",
+      "finding": "One-Room Platformer still imports old flat construction-piece and goblin animation manifest paths.",
+      "source": "games/tier-1/08-one-room-platformer/src/main.ts",
+      "risk": "Must be fixed before additional platformer visual wiring."
+    }
+  ],
+  "proposedShellArchitecture": {
+    "academyTopBar": {
+      "status": "planned",
+      "role": "minimal persistent Academy identity and navigation",
+      "persistentItems": [
+        "academy-title",
+        "current-game-title",
+        "ledger-button",
+        "help-button",
+        "dev-button-when-dev-mode",
+        "close-return-button"
+      ]
+    },
+    "gameStage": {
+      "status": "planned",
+      "role": "primary full-space game surface below the top bar",
+      "notes": [
+        "Side rails should not consume default stage space.",
+        "Each game owns its in-stage HUD and player-facing controls.",
+        "Shared shell should provide conventions without hardcoding every game HUD."
+      ]
+    },
+    "modalOverlayLayer": {
+      "status": "planned",
+      "role": "Ledger, Help, and Dev surfaces shown only when requested"
+    }
+  },
+  "dataMigrationPlan": [
+    {
+      "sourceSurface": "left status panels",
+      "newSurface": "in-stage HUD or dev overlay depending data type",
+      "examples": [
+        "Goblin/HP/Coins become player HUD",
+        "Position/velocity/grounded become Dev overlay"
+      ]
+    },
+    {
+      "sourceSurface": "right action ledger",
+      "newSurface": "Ledger modal or drawer",
+      "shortcut": "L"
+    },
+    {
+      "sourceSurface": "right help/how-to panels",
+      "newSurface": "Help modal"
+    },
+    {
+      "sourceSurface": "below-stage buttons",
+      "newSurface": "in-stage touch controls, in-stage control strip, Help/Pause, or Dev overlay depending control class"
+    }
+  ],
+  "modalPlan": {
+    "ledger": {
+      "status": "planned",
+      "openControls": [
+        "top-bar Ledger button",
+        "L key"
+      ],
+      "contents": [
+        "action log",
+        "run log",
+        "recent events"
+      ],
+      "notes": [
+        "Tab is not selected as a shortcut because it conflicts with browser focus and accessibility.",
+        "Iframe focus may require the first implementation to bind L inside the game runtime, with shell coordination later."
+      ]
+    },
+    "help": {
+      "status": "planned",
+      "contents": [
+        "objective",
+        "controls",
+        "rules",
+        "accessibility hints"
+      ]
+    }
+  },
+  "devOverlayPlan": {
+    "status": "planned",
+    "defaultVisibility": "hidden",
+    "contents": [
+      "debug state",
+      "position",
+      "velocity",
+      "grounded flag",
+      "manifest/source IDs",
+      "runtime flags"
+    ],
+    "runtimeEligibility": "not-runtime-approved"
+  },
+  "hudSurfacePlan": {
+    "policy": "game-owned in-stage HUD with shared conventions",
+    "buttonGoblinClicker": [
+      "Goblin count",
+      "HP",
+      "Coins",
+      "Upgrade/shop state"
+    ],
+    "potionSorter": [
+      "Timer",
+      "Score",
+      "Combo",
+      "Transient feedback"
+    ],
+    "oneRoomPlatformer": [
+      "Run status",
+      "Goal/defeat state",
+      "Optional compact hint/control overlay"
+    ]
+  },
+  "uiSourcingPolicy": {
+    "assetBackedUi": {
+      "useWhen": [
+        "the asset provides visual identity",
+        "a reviewed region manifest exists",
+        "the UI surface is a themed frame, icon, badge, token, backplate, or decorative panel"
+      ],
+      "examples": [
+        "card frames",
+        "HUD panel backplates",
+        "icons",
+        "badges",
+        "status symbols"
+      ]
+    },
+    "codeNativeUi": {
+      "useWhen": [
+        "the UI is text-heavy",
+        "the UI must be responsive",
+        "the UI needs accessibility/focus behavior",
+        "the UI contains dynamic long-form state",
+        "the UI is a modal, drawer, form, or standard button"
+      ],
+      "examples": [
+        "action ledger modal",
+        "help modal",
+        "dev overlay",
+        "live counters",
+        "scrolling text"
+      ]
+    },
+    "hybridUi": {
+      "useWhen": [
+        "an asset provides a frame or backplate while DOM/CSS renders live data inside"
+      ],
+      "examples": [
+        "card face with DOM text",
+        "themed stat panel with live value",
+        "shop card with asset icon and code-rendered price"
+      ]
+    },
+    "particleOrCodeFx": {
+      "useWhen": [
+        "effect is fire, glow, smoke, dust, sparkle, soft light, rain, magic aura, or other soft-edge FX"
+      ],
+      "notes": [
+        "Do not force every FX through sprite cleanup.",
+        "Shared UI pieces are optional ingredients, not a complete UI system."
+      ]
+    }
+  },
+  "inputControlPlan": {
+    "controlClasses": [
+      "primary-game-input",
+      "touch-accessibility-control",
+      "dev-test-control"
+    ],
+    "defaultRules": [
+      "Player-facing controls should become in-stage controls.",
+      "Touch controls should be overlays or compact in-stage strips.",
+      "Dev/test controls should move to Dev overlay.",
+      "Keyboard instructions should live in Help.",
+      "Reset must remain available somewhere explicit."
+    ],
+    "oneRoomPlatformer": {
+      "leftRightJump": "player-facing controls; convert to in-stage touch/control overlay or strip",
+      "reset": "must remain explicit; exact surface remains product choice",
+      "debugFields": "dev overlay"
+    }
+  },
+  "firstImplementationSlice": {
+    "recommendedLane": "H6.1 — Minimal Academy Runtime Shell Contract + Stale Manifest Path Cleanup",
+    "tasks": [
+      "Define top-bar button contract for Ledger, Help, Dev, Close.",
+      "Define modal contract for Ledger and Help.",
+      "Define dev overlay contract.",
+      "Fix active stale manifest import paths in hub roster and One-Room Platformer.",
+      "Do not wire visual assets until shell/HUD contract is ready."
+    ]
+  },
+  "risks": [
+    "Iframe focus may complicate a global L shortcut.",
+    "Removing side panels without migrating controls could strand touch/mouse players.",
+    "Asset-backed frames can make text layout brittle if code-native text surfaces are not preserved.",
+    "Topdown runtime remains harder than Button Goblin Clicker because collision, placement, pathfinding, tile behavior, and animation approvals remain deferred.",
+    "Current stale manifest paths can break implementation if not fixed before runtime lanes."
+  ],
+  "openQuestions": [
+    "Should Ledger pause gameplay by default or be game-specific?",
+    "Should Help and Pause be separate modals?",
+    "Should top-bar actions use icons, text, or both?",
+    "Should touch controls appear automatically on touch devices or behind a Show Controls option?",
+    "Should Button Goblin Clicker shop state be persistent in-stage or contextual?"
+  ],
+  "nonGoals": [
+    "no runtime code changes",
+    "no game code changes",
+    "no asset wiring",
+    "no Top-Down Slime Quest runtime conversion",
+    "no audio pipeline",
+    "no GlyphForge implementation",
+    "no package or lockfile changes",
+    "no PNG or image changes",
+    "no docs/assets or manifest reorganization"
+  ],
+  "validationResults": {
+    "planned": [
+      "asset-pipeline provenance validation",
+      "asset-pipeline smoke check",
+      "asset-pipeline validate",
+      "H6 manifest parse",
+      "bell/control-character check",
+      "no runtime/game code changed",
+      "no package/lock files changed",
+      "no PNG/image files changed",
+      "no file moves"
+    ]
+  }
+}

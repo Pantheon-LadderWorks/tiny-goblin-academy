@@ -46,6 +46,7 @@ manifests/
     topdown/
     visual-pantry/
     fonts/
+    runtime/
     tooling/
   boot/
 ```
@@ -58,6 +59,7 @@ manifests/
 - Visual asset pantry index: `manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json`
 - Font direction selection: `manifests/academy/fonts/academy.font-pantry-core-selection.json`
 - Manifest maturity index: `manifests/academy/tooling/organization/academy.manifest-maturity-index.json`
+- H6 runtime shell planning: `manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json`
 - GlyphForge/tooling plans: `manifests/academy/tooling/glyphforge/planning/`
 - Latest organization execution records: `manifests/academy/tooling/organization/execution/`
 

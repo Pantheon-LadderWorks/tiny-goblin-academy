@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 65,
+  "totalManifestCount": 66,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -56,7 +56,8 @@
     "topdownCurrentWalls": [
       "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
       "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json"
-    ]
+    ],
+    "runtimeShellPlanning": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -117,6 +118,7 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+    "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
     "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
@@ -583,6 +585,15 @@
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
     },
     {
+      "path": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
+      "maturityClass": "planning",
+      "authorityRole": "H6 runtime shell refactor and in-game HUD planning manifest",
+      "reason": "New H6.0 planning manifest for the Academy shell, HUD, modal, control, and UI sourcing policy before runtime visual integration.",
+      "runtimeEligibility": "not-runtime-approved",
+      "status": "draft",
+      "reviewStatus": "needs-human-review"
+    },
+    {
       "path": "manifests/academy/shared/academy.shared-core.regions.json",
       "maturityClass": "active",
       "authorityRole": "current category manifest",
@@ -677,6 +688,24 @@
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
       "notes": "H5.91A active index for understanding manifest authority shelves."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/execution/academy.active-stale-reference-update-execution.json",
+      "maturityClass": "execution",
+      "authorityRole": "H5.93 active stale reference update execution record",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Records active/current stale reference corrections after manifest and docs asset shelf reorganization."
+    },
+    {
+      "path": "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json",
+      "maturityClass": "execution",
+      "authorityRole": "H5.92 asset docs reorganization execution record",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Records the docs/assets move pass and post-move shelf map."
     },
     {
       "path": "manifests/academy/tooling/organization/execution/academy.manifest-folder-reorganization-execution.json",
@@ -893,24 +922,6 @@
       "runtimeEligibility": null,
       "runtimeApproved": false,
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
-    },
-    {
-      "path": "manifests/academy/tooling/organization/execution/academy.asset-docs-reorganization-execution.json",
-      "maturityClass": "execution",
-      "authorityRole": "H5.92 asset docs reorganization execution record",
-      "status": "reviewed",
-      "reviewStatus": "human-review-passed",
-      "runtimeEligibility": "not-runtime-approved",
-      "reason": "Records the docs/assets move pass and post-move shelf map."
-    },
-    {
-      "path": "manifests/academy/tooling/organization/execution/academy.active-stale-reference-update-execution.json",
-      "maturityClass": "execution",
-      "authorityRole": "H5.93 active stale reference update execution record",
-      "status": "reviewed",
-      "reviewStatus": "human-review-passed",
-      "runtimeEligibility": "not-runtime-approved",
-      "reason": "Records active/current stale reference corrections after manifest and docs asset shelf reorganization."
     }
   ],
   "postMoveTreeSummary": [
@@ -993,6 +1004,10 @@
     {
       "folder": "manifests/academy/hub",
       "jsonCount": 4
+    },
+    {
+      "folder": "manifests/academy/runtime/planning",
+      "jsonCount": 1
     },
     {
       "folder": "manifests/academy/shared",

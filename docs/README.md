@@ -15,4 +15,5 @@ To keep the root clean, documentation is categorized semantically:
 - **`manifests/`**: Manifest strategy and catalog truth docs. Current machine-readable manifests live under the nested `../manifests/` shelf; start with `../manifests/README.md`.
 - **`methodology/`**: Curriculum, loop-first protocol, and lessons synthesis.
 - **`roadmap/`**: Phase and tier planning docs.
+- **`runtime/`**: H6+ runtime shell, in-game HUD, modal/overlay, and visual integration planning.
 - **`workspace/`**: Dependency handling, installer audits, package census, and W-phase (Workspace) reports.
