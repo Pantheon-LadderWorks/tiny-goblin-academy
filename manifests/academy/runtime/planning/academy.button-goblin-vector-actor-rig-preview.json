@@ -95,7 +95,7 @@
                             "uiSpriteIntegrationApproved":  false,
                             "otherGameMigrationApproved":  false,
                             "runtimeAssetApproval":  "preview-only",
-                            "nextRuntimeLane":  "H6.3C — Button Goblin Runtime GoblinRig Replacement"
+                            "nextRuntimeLane":  "H6.3C â€” Button Goblin Runtime GoblinRig Replacement"
                         },
     "evidence":  {
                      "folder":  "games/tier-1/01-button-goblin-clicker/evidence/h6-3b-vector-actor-rig-preview/",
@@ -118,15 +118,22 @@
                              "buttonGoblinTests":  "passed-initial",
                              "buttonGoblinBuild":  "passed-initial-with-existing-vite-chunk-size-warning",
                              "previewEvidence":  "captured",
-                             "finalValidation":  "blocked-by-rust-toolchain-state-before-commit",
+                             "finalValidation":  "passed-after-h6-3b-rust-validation-correction",
                              "buttonGoblinTestsFinal":  "passed",
                              "buttonGoblinBuildFinal":  "passed-with-existing-vite-chunk-size-warning",
                              "hubTypeScriptCheck":  "passed",
-                             "cargoCheck":  "blocked-rust-toolchain-not-installed-invalid-channel-string",
+                             "cargoCheck":  "passed-after-machine-restart",
                              "assetPipelineFinal":  "passed",
-                             "diffCheck":  "passed"
+                             "diffCheck":  "passed",
+                             "cargoCheckCorrection":  {
+                                                          "status":  "passed",
+                                                          "command":  "cargo check",
+                                                          "workingDirectory":  "hub/src-tauri",
+                                                          "exitCode":  0,
+                                                          "note":  "Earlier blocked cargo check was caused by stale long-running MCP/Desktop Commander environment state. After full machine restart, MCP sees C:\\Users\\kryst\\.cargo\\bin tools, C:\\Users\\kryst\\.rustup, active/default 1.96.0-x86_64-pc-windows-msvc toolchain, and cargo check passes. No Rust/Tauri source correction was required."
+                                                      }
                          },
-    "recommendedNextLane":  "H6.3C — Button Goblin Runtime GoblinRig Replacement",
+    "recommendedNextLane":  "H6.3C â€” Button Goblin Runtime GoblinRig Replacement",
     "blockedUntilHumanReview":  false,
     "humanReview":  {
                         "status":  "passed",

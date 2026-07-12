@@ -1,4 +1,4 @@
-# Tiny Goblin Academy — H6.3B Button Goblin Code-Authored Vector Actor Rig Preview
+# Tiny Goblin Academy â€” H6.3B Button Goblin Code-Authored Vector Actor Rig Preview
 
 ## Purpose
 
@@ -43,22 +43,22 @@ The rig is built from Phaser vector primitives and nested containers:
 
 ```text
 GoblinRigRoot
-├── shadow
-├── rear arm
-├── rear leg
-├── front leg
-├── torso
-│   ├── ragged tunic
-│   └── belt
-├── front arm
-└── head
-    ├── left ear
-    ├── right ear
-    ├── round face
-    ├── normal eyes
-    ├── X eyes
-    ├── fang mouth
-    └── hurt mouth
+â”œâ”€â”€ shadow
+â”œâ”€â”€ rear arm
+â”œâ”€â”€ rear leg
+â”œâ”€â”€ front leg
+â”œâ”€â”€ torso
+â”‚   â”œâ”€â”€ ragged tunic
+â”‚   â””â”€â”€ belt
+â”œâ”€â”€ front arm
+â””â”€â”€ head
+    â”œâ”€â”€ left ear
+    â”œâ”€â”€ right ear
+    â”œâ”€â”€ round face
+    â”œâ”€â”€ normal eyes
+    â”œâ”€â”€ X eyes
+    â”œâ”€â”€ fang mouth
+    â””â”€â”€ hurt mouth
 ```
 
 Preserved identity:
@@ -177,7 +177,7 @@ Initial implementation validation passed:
 - preview evidence capture from the standalone Vite page;
 - no active `5101` listener remained after capture.
 
-Final validation was run before commit. Button Goblin tests/build, hub TypeScript, asset-pipeline validators, manifest parsing, source hash, runtime-import guard, port cleanup, package/lock diff, and git diff checks passed. `cargo check` from `hub/src-tauri` was attempted but blocked before code checking because local Rust toolchain state reports `error: target tuple in channel name '1.96.0-x86_64-pc-windows-msvc'` and `rustup toolchain list` reports no installed toolchains. No Rust install, build, or repair was performed in H6.3B.
+Final validation was run before commit. Button Goblin tests/build, hub TypeScript, asset-pipeline validators, manifest parsing, source hash, runtime-import guard, port cleanup, package/lock diff, and git diff checks passed. A follow-up H6.3B Rust-validation correction reran `cargo check` from `hub/src-tauri` after a full machine restart and the refreshed MCP/Desktop Commander environment reported the expected user Rust toolchain. `cargo check` passed with exit code 0. The earlier blocked result came from a stale long-running MCP/Desktop Commander environment and disappeared after restart. No Rust/Tauri source correction, Rust install, build repair, package change, or lockfile change was required.
 
 ## Human/Product Review Result
 
@@ -233,7 +233,7 @@ The player should be able to bonk the obvious goblin body: head, torso, arms, an
 Recommended next lane after accepted H6.3B review:
 
 ```text
-H6.3C — Button Goblin Runtime GoblinRig Replacement
+H6.3C â€” Button Goblin Runtime GoblinRig Replacement
 ```
 
 Proceed to H6.3C only after H6.3B is committed and the live-runtime replacement lane is explicitly opened.
