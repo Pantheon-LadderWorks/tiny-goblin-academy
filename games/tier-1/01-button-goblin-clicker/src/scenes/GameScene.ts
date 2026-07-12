@@ -2,8 +2,17 @@ import Phaser from 'phaser';
 import { GameController } from '../controller';
 import { GameState } from '../simulation';
 
+const CAVERN_BACKGROUND_KEY = 'button-goblin-cavern-background';
+const CAVERN_BACKGROUND_URL = new URL(
+  '../../../../../assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png',
+  import.meta.url
+).href;
+
 export class GameScene extends Phaser.Scene {
   private controller!: GameController;
+  private backgroundFallback!: Phaser.GameObjects.Rectangle;
+  private backgroundImage?: Phaser.GameObjects.Image;
+  private backgroundScrim!: Phaser.GameObjects.Rectangle;
   private goblinContainer!: Phaser.GameObjects.Container;
   private goblinGraphic!: Phaser.GameObjects.Graphics;
   private hpText!: Phaser.GameObjects.Text;
@@ -17,14 +26,26 @@ export class GameScene extends Phaser.Scene {
     this.controller = data.controller;
   }
 
+  preload() {
+    this.load.image(CAVERN_BACKGROUND_KEY, CAVERN_BACKGROUND_URL);
+
+    this.load.on(Phaser.Loader.Events.FILE_LOAD_ERROR, (file: Phaser.Loader.File) => {
+      if (file.key === CAVERN_BACKGROUND_KEY) {
+        console.error(
+          '[Button Goblin Clicker] Failed to load cavern stage background. Falling back to flat Academy stage.',
+          CAVERN_BACKGROUND_URL
+        );
+      }
+    });
+  }
+
   create() {
     const { width, height } = this.scale;
 
-    // Background - Dark Academy floor or slate
-    this.add.rectangle(0, 0, width, height, 0x1f1b24).setOrigin(0);
+    this.createBackground(width, height);
 
     // Goblin Container
-    this.goblinContainer = this.add.container(width / 2, height / 2 + 20);
+    this.goblinContainer = this.add.container(width / 2, height / 2 + 20).setDepth(10);
 
     // Goblin Visual (Placeholder)
     this.goblinGraphic = this.add.graphics();
@@ -61,6 +82,51 @@ export class GameScene extends Phaser.Scene {
 
     // Subscribe to state changes
     this.controller.subscribe((state: GameState) => this.updateState(state));
+
+    this.scale.on(Phaser.Scale.Events.RESIZE, (gameSize: Phaser.Structs.Size) => {
+      this.resizeBackground(gameSize.width, gameSize.height);
+    });
+  }
+
+  private createBackground(width: number, height: number) {
+    this.backgroundFallback = this.add
+      .rectangle(0, 0, width, height, 0x1f1b24)
+      .setOrigin(0)
+      .setDepth(0);
+
+    if (this.textures.exists(CAVERN_BACKGROUND_KEY)) {
+      this.backgroundImage = this.add
+        .image(width / 2, height / 2, CAVERN_BACKGROUND_KEY)
+        .setDepth(1)
+        .setOrigin(0.5);
+      this.resizeBackground(width, height);
+    } else {
+      console.warn(
+        '[Button Goblin Clicker] Cavern stage background texture was unavailable. Gameplay remains active on fallback stage.'
+      );
+    }
+
+    // A conservative contrast layer keeps the current SVG goblin, HP label,
+    // BONK feedback, and future HUD surfaces readable without mutating the art.
+    this.backgroundScrim = this.add
+      .rectangle(0, 0, width, height, 0x130f20, 0.2)
+      .setOrigin(0)
+      .setDepth(2);
+  }
+
+  private resizeBackground(width: number, height: number) {
+    this.backgroundFallback?.setSize(width, height);
+    this.backgroundScrim?.setSize(width, height);
+
+    if (!this.backgroundImage) return;
+
+    const texture = this.textures.get(CAVERN_BACKGROUND_KEY);
+    const sourceImage = texture.getSourceImage() as HTMLImageElement | HTMLCanvasElement;
+    const scale = Math.max(width / sourceImage.width, height / sourceImage.height);
+
+    this.backgroundImage
+      .setPosition(width / 2, height / 2)
+      .setScale(scale);
   }
 
   private drawGoblin(color: number, isHit: boolean = false) {

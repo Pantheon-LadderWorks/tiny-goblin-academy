@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "button-goblin-background-stage-runtime-integration-candidate",
+  "runtimeEligibility": "runtime-approved-for-button-goblin-background-stage",
+  "tier": "H6",
+  "planId": "H6.3",
+  "domain": "academy-runtime",
+  "gameId": "tga-01-button-goblin-clicker",
+  "operationalType": "per-game-background-stage-integration",
+  "sourceBaselineCommit": "f982b6b refactor: migrate button goblin to stage-first shell",
+  "sourceBackgroundManifest": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+  "sourceBackground": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+  "sourceSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+  "runtimeApproval": {
+    "status": "approved",
+    "approvedAssetRole": "button-goblin-clicker-decorative-phaser-background-stage",
+    "approvalScope": [
+      "Button Goblin Clicker only",
+      "background stage only",
+      "decorative visual layer behind existing goblin target",
+      "current SVG/Phaser goblin head remains active click target"
+    ],
+    "notApproved": [
+      "global visual pantry runtime approval",
+      "exact runtime coordinates",
+      "goblin sprite replacement",
+      "UI sprite sheet runtime use",
+      "FX or particle integration",
+      "other games",
+      "gameplay behavior",
+      "shared loader abstraction"
+    ],
+    "reviewNotes": [
+      "Human/product review accepted the background evidence as the first H6 runtime asset integration result.",
+      "Background anchor regions are accepted as the design contract, not as exact final pixel coordinates.",
+      "Current SVG/Phaser goblin head remains accepted for H6.3; full-body/code-authored goblin actor is deferred to H6.3B."
+    ]
+  },
+  "implementation": {
+    "changedRuntimeFiles": [
+      "games/tier-1/01-button-goblin-clicker/src/scenes/GameScene.ts"
+    ],
+    "backgroundLoadMethod": "Vite new URL import.meta.url asset URL",
+    "renderOwner": "Phaser GameScene",
+    "composition": [
+      "fallback slate background",
+      "cover-scaled cavern background image",
+      "conservative readability scrim",
+      "existing goblin click target and labels"
+    ],
+    "domLayersPreserved": [
+      "hud-layer",
+      "feedback-layer",
+      "action-layer"
+    ],
+    "fallbackBehavior": "If the texture is unavailable, the scene logs an error/warning and keeps the playable fallback stage active."
+  },
+  "scalingPolicy": {
+    "mode": "cover",
+    "anchor": "center",
+    "exactCoordinatesApproved": false,
+    "sourceAnchorRole": "central-click-stage remains focal planning anchor",
+    "notes": "Cover scaling preserves the central negative-space stage while allowing side/edge background detail to crop if the play surface aspect ratio differs."
+  },
+  "anchorReview": {
+    "status": "accepted-as-design-contract",
+    "exactCoordinatesApproved": false,
+    "acceptedAnchors": [
+      "button-goblin-clicker.background.anchor.central-click-stage",
+      "button-goblin-clicker.background.anchor.lower-floor-stage",
+      "button-goblin-clicker.background.anchor.left-torch-glow-risk",
+      "button-goblin-clicker.background.anchor.right-torch-glow-risk",
+      "button-goblin-clicker.background.anchor.bottom-foreground-obstruction",
+      "button-goblin-clicker.background.anchor.top-hud-safe-band"
+    ],
+    "notes": [
+      "Central region supports a large click target.",
+      "Lower floor region supports future grounded actor baseline.",
+      "Torch and foreground regions remain readability/obstruction warnings."
+    ]
+  },
+  "gameplayInvariants": {
+    "simulationChanged": false,
+    "controllerChanged": false,
+    "goblinSpriteReplacement": false,
+    "goblinCount": 10,
+    "startingHp": 5,
+    "hpIncreasePerGoblin": 2,
+    "startingDamage": 1,
+    "bonkStickCost": 3,
+    "bonkStickDamage": 2,
+    "victoryCondition": "defeat ten goblins"
+  },
+  "evidence": {
+    "folder": "games/tier-1/01-button-goblin-clicker/evidence/h6-3-background-stage-integration/",
+    "files": [
+      "button-goblin-background-desktop-initial.png",
+      "button-goblin-background-desktop-hit.png",
+      "button-goblin-background-desktop-upgrade-available.png",
+      "button-goblin-background-desktop-upgrade-purchased.png",
+      "button-goblin-background-desktop-victory.png",
+      "button-goblin-background-narrow-initial.png",
+      "button-goblin-background-narrow-hit.png",
+      "browser-evidence-capture-log.json"
+    ]
+  },
+  "validationStatus": {
+    "directBrowserEvidence": "captured",
+    "buttonGoblinBuild": "passed-with-existing-vite-chunk-size-warning",
+    "tauriHumanReview": "not-rerun-h6-2-shell-review-remains-current",
+    "finalValidation": "passed"
+  },
+  "boundaries": {
+    "ledgerHydration": "deferred",
+    "helpDataBridge": "deferred",
+    "devDataBridge": "deferred",
+    "statefulAcademyProgression": "future-only",
+    "assetBackedUi": "not-started",
+    "sharedBackgroundLoader": "not-started",
+    "otherGameMigration": "not-started"
+  },
+  "futureCharacterActor": {
+    "recommendedLane": "H6.3B — Button Goblin Code-Authored Vector Actor Rig Preview",
+    "status": "planned-not-implemented",
+    "doctrine": "The rig defines how a goblin moves. The skin defines which goblin is wearing it.",
+    "notes": [
+      "Do not force a large sprite sheet before the game needs it.",
+      "A future Phaser vector puppet can preserve code animation and later accept richer custom skins.",
+      "H6.3 does not implement this actor rig."
+    ]
+  },
+  "recommendedNextLane": "H6.3B — Button Goblin Code-Authored Vector Actor Rig Preview"
+}

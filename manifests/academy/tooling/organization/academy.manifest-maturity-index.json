@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 68,
+  "totalManifestCount": 69,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -59,7 +59,8 @@
     ],
     "runtimeShellPlanning": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
     "runtimeShellContract": "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
-    "runtimeButtonGoblinShellMigration": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json"
+    "runtimeButtonGoblinShellMigration": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
+    "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -120,6 +121,7 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+    "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
@@ -589,6 +591,18 @@
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
     },
     {
+      "path": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
+      "maturityClass": "planning",
+      "authorityRole": "Button Goblin Clicker background stage runtime integration candidate",
+      "categoryShelf": "manifests/academy/runtime",
+      "status": "draft",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "button-goblin-background-stage-runtime-integration-candidate",
+      "runtimeEligibility": "runtime-approved-for-button-goblin-background-stage",
+      "runtimeApproved": true,
+      "notes": "H6.3 record for the first narrow runtime visual asset integration. Approval scope is Button Goblin background-stage use only; exact coordinates and other pantry assets remain unapproved."
+    },
+    {
       "path": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
       "maturityClass": "planning",
       "authorityRole": "Button Goblin Clicker stage-first shell migration planning/review record",
@@ -1032,7 +1046,7 @@
     },
     {
       "folder": "manifests/academy/runtime/planning",
-      "jsonCount": 3
+      "jsonCount": 4
     },
     {
       "folder": "manifests/academy/shared",

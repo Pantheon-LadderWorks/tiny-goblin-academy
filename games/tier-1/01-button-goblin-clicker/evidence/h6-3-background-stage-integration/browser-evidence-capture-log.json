@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-07-12T15:14:16.489Z",
+  "url": "http://127.0.0.1:5101/",
+  "evidenceFiles": [
+    "button-goblin-background-desktop-initial.png",
+    "button-goblin-background-desktop-hit.png",
+    "button-goblin-background-desktop-upgrade-available.png",
+    "button-goblin-background-desktop-upgrade-purchased.png",
+    "button-goblin-background-desktop-victory.png",
+    "button-goblin-background-narrow-initial.png",
+    "button-goblin-background-narrow-hit.png"
+  ],
+  "note": "Direct browser evidence captured from explicit 5101 dev server. Server cleanup performed separately after capture."
+}

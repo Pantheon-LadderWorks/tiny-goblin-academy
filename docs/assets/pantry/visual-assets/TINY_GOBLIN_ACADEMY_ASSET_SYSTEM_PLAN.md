@@ -1584,3 +1584,31 @@ H5.90 does not copy font binaries, fetch remote fonts, create `assets/academy/fo
 H5.93 corrected active/current overview references after H5.91, H5.91A, and H5.92. The live source of truth now reflects that Button Goblin Clicker / Level 1 is source-available and restored, while runtime visual integration remains future work. Button Goblin Clicker remains the first planned runtime visual integration candidate, and Top-Down Slime Quest remains last or near-last.
 
 Current discovery surfaces should point to nested manifest shelves and categorized `docs/assets/` shelves. Historical H reports and incident records remain preserved as historical fossil record and were not broadly rewritten.
+
+## H6.3 Button Goblin Background Runtime Graduation Note
+
+H6.3 begins the narrow runtime visual integration pass by wiring the H5.85/H5.86 Button Goblin Clicker cavern background into the live Button Goblin Phaser play surface.
+
+The background source remains:
+
+```text
+assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png
+```
+
+H6.3 updates the active background manifest to record runtime approval for one role only:
+
+```text
+Button Goblin Clicker decorative Phaser background stage
+```
+
+Human/product review accepted the H5.85 background anchors as the design contract for this stage, while preserving the boundary that approved placement regions are not exact final pixel coordinates.
+
+This is not global runtime approval for the visual pantry. It does not approve exact coordinates, replacement goblin sprites, UI sprite sheets, FX, gameplay behavior, other games, or shared asset-loader abstraction. The current SVG/Phaser goblin head remains the active click target.
+
+The immediate follow-up lane should be:
+
+```text
+H6.3B — Button Goblin Code-Authored Vector Actor Rig Preview
+```
+
+The future actor-rig doctrine is: the rig defines how a goblin moves, and the skin defines which goblin is wearing it.

@@ -2,8 +2,8 @@
   "schemaVersion": "0.1",
   "status": "reviewed",
   "reviewStatus": "human-review-passed",
-  "pipelineUse": "accepted-for-scene-anchor-planning",
-  "runtimeEligibility": "not-runtime-approved",
+  "pipelineUse": "accepted-for-scene-anchor-planning-and-button-goblin-runtime-background-stage-use",
+  "runtimeEligibility": "runtime-approved-for-button-goblin-background-stage",
   "placementApproval": "none",
   "domain": "button-goblin-clicker",
   "operationalType": "scene-anchor-background",
@@ -218,6 +218,31 @@
       "large central negative space is appropriate for Tap Titans-like clicker staging",
       "edge props are decorative/readability-risk zones",
       "anchors are planning-only, not runtime placement approval"
+    ]
+  },
+  "runtimeApproval": {
+    "phase": "H6.3",
+    "status": "approved",
+    "approvedRole": "button-goblin-clicker-decorative-phaser-background-stage",
+    "approvedUse": "Render as the Button Goblin Clicker Phaser scene background behind the existing SVG/Phaser goblin click target.",
+    "scope": [
+      "Button Goblin Clicker only",
+      "background stage image only",
+      "decorative visual layer only"
+    ],
+    "notApproved": [
+      "exact runtime coordinate placement",
+      "goblin sprite replacement",
+      "UI sprite-sheet runtime use",
+      "other game background use",
+      "gameplay behavior"
+    ],
+    "sourceRuntimeManifest": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
+    "notes": [
+      "H5 marked this source not-runtime-approved because runtime wiring had not started yet.",
+      "H6.3 is the narrow runtime graduation gate for this specific background role.",
+      "Scene anchors are approved as a design contract; exact placement approval remains none.",
+      "Future full-body/code-authored goblin actor work belongs to H6.3B and does not change this background approval."
     ]
   }
 }
