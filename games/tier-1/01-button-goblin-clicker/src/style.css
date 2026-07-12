@@ -23,18 +23,19 @@ body {
 }
 
 .game-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1280px, calc(100% - 24px));
   height: 100vh;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
 }
 
 .masthead {
   max-width: 760px;
-  margin: 0 auto 16px;
+  margin: 0 auto 12px;
   text-align: center;
+  flex: 0 0 auto;
 }
 
 .eyebrow {
@@ -61,19 +62,33 @@ h1 {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
-.game-layout {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr) 190px;
-  gap: 16px;
-  align-items: stretch;
+.game-stage {
+  position: relative;
   flex: 1;
   min-height: 0;
+  overflow: hidden;
+  border: 3px solid var(--border-gold);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(83, 62, 111, 0.38), transparent 34%),
+    linear-gradient(180deg, rgba(46, 34, 66, 0.92), rgba(18, 14, 28, 0.98));
+  box-shadow: 0 16px 42px rgba(0, 0, 0, .36), inset 0 0 0 1px rgba(255, 241, 198, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
 }
 
-.stat-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.hud-layer {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+  gap: 10px;
+  pointer-events: none;
 }
 
 .stat-card, .upgrade-card {
@@ -84,20 +99,40 @@ h1 {
   padding: 14px;
 }
 
+.stat-card {
+  min-width: 0;
+  padding: 10px 12px;
+  backdrop-filter: blur(3px);
+}
+
 .stat-card span, .upgrade-kicker {
   display: block;
   color: #e4bb7c;
   font-family: ui-monospace, monospace;
-  font-size: .72rem;
+  font-size: clamp(.58rem, 1.4vw, .72rem);
   letter-spacing: .06em;
   text-transform: uppercase;
 }
 
 .stat-card strong {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   color: var(--text-light);
-  font-size: 1.35rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  white-space: nowrap;
+}
+
+.action-layer {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 5;
+  width: min(240px, calc(100% - 36px));
+  pointer-events: none;
+}
+
+.action-layer .upgrade-card {
+  pointer-events: auto;
 }
 
 .upgrade-card h2 {
@@ -113,15 +148,12 @@ h1 {
   line-height: 1.4;
 }
 
-.playfield-wrap {
+.play-surface {
   position: relative;
-  min-height: 0;
+  z-index: 1;
+  width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 3px solid var(--border-gold);
-  border-radius: 22px;
-  background: #1a1527;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, .36);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,20 +168,25 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 19px;
+}
+
+.feedback-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .instruction {
   position: absolute;
-  right: 20px;
-  bottom: 16px;
+  left: 20px;
+  bottom: 18px;
   max-width: 65%;
   margin: 0;
   color: var(--text-light);
   font-weight: 700;
-  text-align: right;
+  text-align: left;
   text-shadow: 2px 2px 0 #1a1527;
-  pointer-events: none;
 }
 
 button {
@@ -239,8 +276,65 @@ button:disabled {
 }
 
 @media (max-width: 840px) {
-  .game-layout { grid-template-columns: 1fr; }
-  .stat-stack { display: grid; grid-template-columns: repeat(3, 1fr); order: 1; }
-  .playfield-wrap { order: 2; min-height: 440px; }
-  .upgrade-card { order: 3; }
+  .game-shell {
+    width: min(100% - 16px, 760px);
+    padding: 8px 0;
+  }
+
+  .masthead {
+    margin-bottom: 8px;
+  }
+
+  .game-stage {
+    min-height: 560px;
+  }
+
+  .hud-layer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+
+  .action-layer {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+  }
+
+  .upgrade-card {
+    padding: 12px;
+  }
+
+  .upgrade-card h2 {
+    margin-top: 4px;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  .instruction {
+    left: 12px;
+    right: 12px;
+    bottom: 170px;
+    max-width: calc(100% - 24px);
+    text-align: center;
+  }
+}
+
+@media (max-height: 720px) {
+  .masthead h1 {
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+  }
+
+  .objective {
+    margin-top: 4px;
+  }
+
+  .upgrade-card {
+    padding: 12px;
+  }
 }

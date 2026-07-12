@@ -131,18 +131,18 @@ export class GameScene extends Phaser.Scene {
       }
     });
     
-    // Damage text popup
-    const stateAfterBonk = this.controller.getState();
+    // Damage text popup: keep temporary feedback in its own lane so it does not
+    // collide with the stable encounter label or HP readout.
     const damageText = this.add.text(
-      this.goblinContainer.x + Phaser.Math.Between(-50, 50),
-      this.goblinContainer.y - Phaser.Math.Between(50, 90),
+      this.goblinContainer.x + Phaser.Math.Between(105, 145),
+      this.goblinContainer.y - Phaser.Math.Between(10, 40),
       `-${state.damage} BONK!`,
       { fontSize: '36px', color: '#d94a4a', fontFamily: 'Georgia', fontStyle: 'bold', stroke: '#121015', strokeThickness: 4 }
     ).setOrigin(0.5);
 
     this.tweens.add({
       targets: damageText,
-      y: damageText.y - 60,
+      y: damageText.y - 45,
       alpha: 0,
       duration: 800,
       ease: 'Power2',

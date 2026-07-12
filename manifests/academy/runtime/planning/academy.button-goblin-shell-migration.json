@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "button-goblin-shell-migration-review-record",
+  "runtimeEligibility": "not-runtime-approved",
+  "tier": "H6",
+  "planId": "H6.2",
+  "domain": "academy-runtime",
+  "gameId": "tga-01-button-goblin-clicker",
+  "operationalType": "per-game-stage-first-shell-migration",
+  "sourceBaselineCommit": "d9ff848 fix: harden academy development runtime shell",
+  "blockedUntilHumanReview": false,
+  "purpose": "Migrate Button Goblin Clicker from permanent side-panel dashboard layout into a stage-first composition with in-stage HUD, feedback, and action layers.",
+  "layoutContract": {
+    "academyShell": "owned-by-hub-top-bar",
+    "gameStage": "owned-by-button-goblin-runtime",
+    "compositionModel": [
+      "visual-play-surface",
+      "dom-hud-layer",
+      "temporary-feedback-layer",
+      "interactive-action-layer"
+    ],
+    "canvasPolicy": "do-not-cram-everything-into-phaser-canvas",
+    "uiPolicy": "DOM overlays may float over the game surface while Phaser remains the click/feedback play surface"
+  },
+  "oldPanelClassification": [
+    {
+      "oldSurface": "left statistics panel",
+      "newSurface": "in-stage hud-layer",
+      "status": "migrated",
+      "notes": "Goblin progress, HP, coins, and bonk power are now compact status cards inside the stage."
+    },
+    {
+      "oldSurface": "center gameplay panel",
+      "newSurface": "play-surface",
+      "status": "migrated",
+      "notes": "The Phaser goblin click target remains the dominant center play surface."
+    },
+    {
+      "oldSurface": "right upgrade panel",
+      "newSurface": "in-stage action-layer",
+      "status": "migrated",
+      "notes": "Bonk Stick remains player-facing and interactive as a stage-owned action card."
+    },
+    {
+      "oldSurface": "instructions/hint text",
+      "newSurface": "feedback-layer plus future Help overlay",
+      "status": "partially-migrated",
+      "notes": "The short Bonk prompt remains in-stage; fuller rules belong in the shared Help overlay later."
+    },
+    {
+      "oldSurface": "event/history ledger",
+      "newSurface": "shared Ledger overlay",
+      "status": "future-bridge",
+      "notes": "Button Goblin does not yet emit shell ledger events; H6.2 preserves the H6.1 hydration boundary."
+    },
+    {
+      "oldSurface": "diagnostics/dev values",
+      "newSurface": "shared Dev overlay",
+      "status": "future-bridge",
+      "notes": "No new diagnostics were added to the game stage."
+    }
+  ],
+  "gameplayInvariants": {
+    "simulationSource": "games/tier-1/01-button-goblin-clicker/src/simulation.ts",
+    "controllerSource": "games/tier-1/01-button-goblin-clicker/src/controller.ts",
+    "simulationChanged": false,
+    "controllerChanged": false,
+    "goblinCount": 10,
+    "startingHp": 5,
+    "hpIncreasePerGoblin": 2,
+    "startingDamage": 1,
+    "bonkStickCost": 3,
+    "bonkStickDamage": 2,
+    "victoryCondition": "defeat ten goblins"
+  },
+  "runtimeBoundaries": {
+    "assetWiring": "not-started",
+    "buttonGoblinBackground": "not-started-H6.3",
+    "sharedHudAbstraction": "not-started-H6.4",
+    "ledgerHydration": "not-started",
+    "helpDataBridge": "not-started",
+    "devDataBridge": "not-started",
+    "statefulAcademyProgression": "not-started",
+    "generatorSinkProgression": "planning-only",
+    "runtimeApproval": "none"
+  },
+  "changedRuntimeFiles": [
+    "games/tier-1/01-button-goblin-clicker/src/main.ts",
+    "games/tier-1/01-button-goblin-clicker/src/style.css",
+    "games/tier-1/01-button-goblin-clicker/src/scenes/GameScene.ts"
+  ],
+  "validationResults": {
+    "buttonGoblinVitest": "passed",
+    "buttonGoblinBuild": "passed-with-existing-vite-chunk-size-warning",
+    "visualEvidence": "created",
+    "h6_2aFeedbackCorrection": "applied",
+    "h6_2aGameplayEvidence": "created",
+    "tauriHumanReview": "passed",
+    "humanReview": "passed"
+  },
+  "h6_2aCorrection": {
+    "status": "applied",
+    "reason": "Initial H6.2 hit feedback overlapped the stable Goblin encounter label.",
+    "changedFile": "games/tier-1/01-button-goblin-clicker/src/scenes/GameScene.ts",
+    "correction": "Damage popup now spawns in an upper-right feedback lane near the target and tweens upward less aggressively so it does not collide with Goblin label or HP readout.",
+    "gameplayTimingChanged": false,
+    "simulationChanged": false,
+    "controllerChanged": false
+  },
+  "evidenceFiles": [
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2-shell-migration/button-goblin-h6-2-desktop-stage.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2-shell-migration/button-goblin-h6-2-hit-feedback.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2-shell-migration/button-goblin-h6-2-narrow-stage.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/01-desktop-initial-stage.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/02-desktop-hit-feedback-separated.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/03-narrow-initial-stage.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/04-narrow-hit-feedback-separated.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/05-defeat-coin-reward.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/06-upgrade-available.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/07-upgrade-purchased.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/08-later-goblin-increased-hp.png",
+    "games/tier-1/01-button-goblin-clicker/evidence/h6-2a-final-review/09-victory-state.png"
+  ],
+  "recommendedNextLane": "H6.2 Human Review, then H6.3 — Button Goblin Clicker Background Integration",
+  "humanReview": {
+    "status": "passed",
+    "reviewer": "Kryssie / Mega visual review",
+    "accepted": [
+      "stage-first composition",
+      "desktop layout",
+      "narrow layout",
+      "corrected BONK feedback lane",
+      "Button Goblin gameplay invariants preserved",
+      "embedded Tauri review",
+      "Help/Ledger/Dev shell overlays reviewed"
+    ],
+    "boundaries": {
+      "ledgerHydration": "deferred",
+      "assetIntegration": "H6.3",
+      "sharedHudExtraction": "H6.4",
+      "generatorSinkProgression": "future-only",
+      "runtimeAssetApproval": "none"
+    }
+  }
+}
