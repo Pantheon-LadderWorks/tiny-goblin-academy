@@ -1,4 +1,4 @@
-import manifest from '../../../manifests/hub.icons.json';
+import manifest from '../../../manifests/academy/hub/hub.icons.json';
 import sheetImage from '../../../assets/academy/hub/tga-hub-game-icons-sheet-concept-v0.1.png';
 
 export interface HubIconMapSheet {

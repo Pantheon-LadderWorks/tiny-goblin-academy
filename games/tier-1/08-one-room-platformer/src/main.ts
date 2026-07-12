@@ -5,8 +5,8 @@ import { readKeyboardInput, type KeyboardInputKeys } from './inputControls';
 import { PLAYER_FRAME_HEIGHT, PLAYER_FRAME_WIDTH, PLAYER_VISUAL_SCALE } from './playerTuning';
 import levelData from './level8.json';
 
-import regionsManifest from '../../../../manifests/academy.platformer-construction-pieces.regions.json';
-import goblinManifest from '../../../../manifests/academy.platformer-goblin-player.animations.json';
+import regionsManifest from '../../../../manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json';
+import goblinManifest from '../../../../manifests/academy/creatures/academy.platformer-goblin-player.animations.json';
 
 import bgImageUrl from '../../../../assets/academy/games/one-room-platformer/tga-one-room-platformer-background-stage-concept-v0.1.png';
 import propsImageUrl from '../../../../assets/academy/games/one-room-platformer/tga-one-room-platformer-construction-pieces-cleaned-v0.2.png';

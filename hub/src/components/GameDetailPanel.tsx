@@ -7,12 +7,13 @@ import type { InstallDevDependenciesResult, UninstallDevDependenciesResult, DevG
 
 interface GameDetailPanelProps {
   game: GameManifest | null;
+  runtimeMode?: 'developer' | 'production' | null;
   onClose: () => void;
   onGameUpdate?: (gameId: string) => void;
   onLaunchDevBoot?: (game: GameManifest) => void;
 }
 
-export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose, onGameUpdate, onLaunchDevBoot }) => {
+export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, runtimeMode = 'developer', onClose, onGameUpdate, onLaunchDevBoot }) => {
   const [installing, setInstalling] = useState(false);
   const [installResult, setInstallResult] = useState<InstallDevDependenciesResult | null>(null);
   
@@ -150,6 +151,29 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
   }
 
   const iconRegion = hubIconRegions.find(r => r.gameId === game.id)
+  const currentRuntimeMode = runtimeMode ?? 'developer';
+  const isDeveloperMode = currentRuntimeMode === 'developer';
+  const isProductionMode = currentRuntimeMode === 'production';
+  const runtimeStatusLoaded = game.runtimeStatusLoaded === true;
+  const sourceDirectoryFound = game.sourceDirectoryExists === true;
+  const sourceDirectoryLabel = runtimeStatusLoaded
+    ? (sourceDirectoryFound ? 'Found' : 'Missing')
+    : 'Checking...';
+  const packageJsonLabel = runtimeStatusLoaded
+    ? (game.packageJsonExists ? 'Found' : 'Missing')
+    : 'Checking...';
+  const workspaceMemberLabel = runtimeStatusLoaded
+    ? (game.workspaceMember ? 'Yes' : 'No')
+    : 'Checking...';
+  const nodeModulesLabel = runtimeStatusLoaded
+    ? (game.nodeModulesExists ? 'Installed' : 'Missing')
+    : 'Checking...';
+  const devScriptLabel = runtimeStatusLoaded
+    ? (game.hasDevScript ? 'Yes' : 'No')
+    : 'Checking...';
+  const buildScriptLabel = runtimeStatusLoaded
+    ? (game.hasBuildScript ? 'Yes' : 'No')
+    : 'Checking...';
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -185,14 +209,14 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
         <h4>Status: {game.displayStatus}</h4>
         <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', listStyle: 'none', padding: 0 }}>
           <li><strong>Listed:</strong> {game.listed ? 'Yes' : 'No'}</li>
-          <li><strong>Workspace Member:</strong> {game.workspaceMember ? 'Yes' : 'No'}</li>
-          <li><strong>Source Directory:</strong> {game.sourceDirectoryExists ? 'Found' : 'Missing'}</li>
-          <li><strong>Package.json:</strong> {game.packageJsonExists ? 'Found' : 'Missing'}</li>
-          <li><strong>Node Modules:</strong> {game.nodeModulesExists ? 'Installed' : 'Missing'}</li>
-          <li><strong>Dev Script:</strong> {game.hasDevScript ? 'Yes' : 'No'}</li>
-          <li><strong>Build Script:</strong> {game.hasBuildScript ? 'Yes' : 'No'}</li>
-          <li><strong>Dist Exists:</strong> {game.distExists ? 'Yes' : 'No'}</li>
-          <li><strong>Static Entry (index.html):</strong> {game.distHasIndexHtml ? 'Found' : 'Missing'}</li>
+          <li><strong>Workspace Member:</strong> {workspaceMemberLabel}</li>
+          <li><strong>Source Directory:</strong> {sourceDirectoryLabel}</li>
+          <li><strong>Package.json:</strong> {packageJsonLabel}</li>
+          <li><strong>Node Modules:</strong> {nodeModulesLabel}</li>
+          <li><strong>Dev Script:</strong> {devScriptLabel}</li>
+          <li><strong>Build Script:</strong> {buildScriptLabel}</li>
+          <li><strong>Dist Exists:</strong> {runtimeStatusLoaded ? (game.distExists ? 'Yes' : 'No') : 'Checking...'}</li>
+          <li><strong>Static Entry (index.html):</strong> {runtimeStatusLoaded ? (game.distHasIndexHtml ? 'Found' : 'Missing') : 'Checking...'}</li>
           <li><strong>Dist Asset Count:</strong> {game.distAssetCount ?? 0}</li>
           <li><strong>Build Status:</strong> {game.buildStatus}</li>
           <li><strong>Playable Available:</strong> {game.playableAvailable ? 'Yes' : 'No'}</li>
@@ -221,9 +245,15 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
         </div>
       )}
       
+      {isDeveloperMode && (
       <div className="action-bar dev-actions">
         <h4>Developer Actions</h4>
-        {game.sourceDirectoryExists ? (
+        {!runtimeStatusLoaded ? (
+          <p className="launch-warning" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+            Checking runtime backend status before enabling dev actions.
+            {game.runtimeStatusError ? ` Error: ${game.runtimeStatusError}` : ''}
+          </p>
+        ) : sourceDirectoryFound ? (
           <div className="dev-button-group" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
             <button className="btn" disabled={!game.devInstallDepsAvailable || installing} onClick={handleInstallDeps}>
               {installing ? "Installing..." : (game.devInstallDepsAvailable ? "Install Dev Deps" : "Deps Installed")}
@@ -308,9 +338,14 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
           </p>
         )}
       </div>
+      )}
 
+      {isProductionMode && (
       <div className="action-bar prod-actions" style={{ marginTop: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
         <h4>Production Actions</h4>
+        <p className="launch-warning" style={{ width: '100%', margin: '0 0 0.75rem 0', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+          Production install/update/launch is reserved for future packaged distribution.
+        </p>
         <div className="dev-button-group" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
           <button className="btn" disabled>Install (Future)</button>
           <button className="btn" disabled>Update (Future)</button>
@@ -322,6 +357,7 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, onClose,
           </p>
         )}
       </div>
+      )}
       </div>
     </div>
   )

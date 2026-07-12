@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 66,
+  "totalManifestCount": 67,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -57,7 +57,8 @@
       "manifests/academy/topdown/walls/academy.topdown.walls.true-alpha-regions.json",
       "manifests/academy/topdown/walls/academy.topdown.walls.vertical.cleanup-candidate.json"
     ],
-    "runtimeShellPlanning": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json"
+    "runtimeShellPlanning": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
+    "runtimeShellContract": "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -118,6 +119,7 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+    "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
@@ -585,6 +587,15 @@
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
     },
     {
+      "path": "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
+      "maturityClass": "planning",
+      "authorityRole": "H6 minimal runtime shell contract implementation record",
+      "reason": "H6.1 runtime shell contract and stale manifest path cleanup record; planning/implementation bridge, not runtime asset approval.",
+      "runtimeEligibility": "not-runtime-approved",
+      "status": "draft",
+      "reviewStatus": "needs-human-review"
+    },
+    {
       "path": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
       "maturityClass": "planning",
       "authorityRole": "H6 runtime shell refactor and in-game HUD planning manifest",
@@ -1007,7 +1018,7 @@
     },
     {
       "folder": "manifests/academy/runtime/planning",
-      "jsonCount": 1
+      "jsonCount": 2
     },
     {
       "folder": "manifests/academy/shared",

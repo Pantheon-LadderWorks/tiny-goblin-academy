@@ -1,4 +1,4 @@
-import manifest from '../../../manifests/academy.games.json';
+import manifest from '../../../manifests/academy/core/academy.games.json';
 
 export interface GameManifest {
   id: string;
@@ -61,6 +61,11 @@ export interface GameManifest {
   lastChecked?: string | null;
   lastPlayed?: string | null;
   errorState?: string | null;
+
+  // Frontend merge diagnostic: true only after Tauri backend status has
+  // supplied live runtime/source readiness for this roster entry.
+  runtimeStatusLoaded?: boolean;
+  runtimeStatusError?: string | null;
 }
 
 export const tier1Roster: GameManifest[] = manifest.games;

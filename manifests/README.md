@@ -60,6 +60,7 @@ manifests/
 - Font direction selection: `manifests/academy/fonts/academy.font-pantry-core-selection.json`
 - Manifest maturity index: `manifests/academy/tooling/organization/academy.manifest-maturity-index.json`
 - H6 runtime shell planning: `manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json`
+- H6 minimal runtime shell contract: `manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json`
 - GlyphForge/tooling plans: `manifests/academy/tooling/glyphforge/planning/`
 - Latest organization execution records: `manifests/academy/tooling/organization/execution/`
 

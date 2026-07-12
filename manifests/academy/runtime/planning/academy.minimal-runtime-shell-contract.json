@@ -1,0 +1,285 @@
+{
+    "schemaVersion":  "0.1",
+    "status":  "reviewed",
+    "reviewStatus":  "human-review-passed",
+    "pipelineUse":  "runtime-shell-contract-implementation-record",
+    "runtimeEligibility":  "not-runtime-approved",
+    "sourceBaselineCommit":  "993338f docs: plan academy shell refactor",
+    "tier":  "H6",
+    "planId":  "H6.1",
+    "domain":  "academy-runtime",
+    "operationalType":  "minimal-runtime-shell-contract",
+    "blockedUntilHumanReview":  false,
+    "implementedSurfaces":  {
+                                "minimalTopBar":  {
+                                                      "status":  "draft-implemented",
+                                                      "location":  "hub/src/components/DevGameRuntimeView.tsx",
+                                                      "persistentControls":  [
+                                                                                 "ledger",
+                                                                                 "help",
+                                                                                 "dev",
+                                                                                 "close-return"
+                                                                             ]
+                                                  },
+                                "ledgerOverlay":  {
+                                                      "status":  "draft-implemented",
+                                                      "openControls":  [
+                                                                           "top-bar-button",
+                                                                           "L-key"
+                                                                       ],
+                                                      "gameDataMigration":  "not-started",
+                                                      "hydrationContract":  "shell-owns-ledger-surface-games-own-ledger-events"
+                                                  },
+                                "helpOverlay":  {
+                                                    "status":  "draft-implemented",
+                                                    "structuredGameHelpData":  "not-started"
+                                                },
+                                "devOverlay":  {
+                                                   "status":  "draft-implemented",
+                                                   "gameDebugDataMigration":  "not-started"
+                                               },
+                                "runtimeStatusLoadingGuard":  {
+                                                                  "status":  "draft-implemented",
+                                                                  "locations":  [
+                                                                                    "hub/src/components/HubShell.tsx",
+                                                                                    "hub/src/components/GameDetailPanel.tsx",
+                                                                                    "hub/src/data/tier1Roster.ts"
+                                                                                ],
+                                                                  "purpose":  "prevent static roster fallback from displaying as confirmed source-missing backend status before runtime status loads"
+                                                              },
+                                "launchButtonStateStyles":  {
+                                                                "status":  "draft-implemented",
+                                                                "location":  "hub/src/styles/hub.css",
+                                                                "purpose":  "enabled launch buttons now look enabled; disabled future production launch remains visibly disabled"
+                                                            },
+                                "runtimeModeActionVisibility":  {
+                                                                    "status":  "draft-implemented",
+                                                                    "location":  "hub/src/components/GameDetailPanel.tsx",
+                                                                    "developerMode":  "show developer source/dependency/dev-server actions and hide production actions",
+                                                                    "productionMode":  "hide developer actions and reserve production install/update/launch surfaces for future packaged distribution"
+                                                            }
+                            },
+    "staleManifestPathCleanup":  [
+                                     {
+                                         "file":  "hub/src/data/tier1Roster.ts",
+                                         "oldPath":  "../../../manifests/academy.games.json",
+                                         "newPath":  "../../../manifests/academy/core/academy.games.json"
+                                     },
+                                     {
+                                         "file":  "hub/src/data/hubIcons.ts",
+                                         "oldPath":  "../../../manifests/hub.icons.json",
+                                         "newPath":  "../../../manifests/academy/hub/hub.icons.json"
+                                     },
+                                     {
+                                         "file":  "games/tier-1/08-one-room-platformer/src/main.ts",
+                                         "oldPath":  "../../../../manifests/academy.platformer-construction-pieces.regions.json",
+                                         "newPath":  "../../../../manifests/academy/games/one-room-platformer/academy.platformer-construction-pieces.regions.json"
+                                     },
+                                     {
+                                         "file":  "games/tier-1/08-one-room-platformer/src/main.ts",
+                                         "oldPath":  "../../../../manifests/academy.platformer-goblin-player.animations.json",
+                                         "newPath":  "../../../../manifests/academy/creatures/academy.platformer-goblin-player.animations.json"
+                                     }
+                                 ],
+    "runtimeBoundary":  {
+                            "buttonGoblinMigration":  "not-started",
+                            "assetWiring":  "not-started",
+                            "perGameSidePanelRemoval":  "not-started",
+                            "sharedHudDataBridge":  "not-started",
+                            "statefulAcademyProgression":  "future-planning-only",
+                            "runtimeApproval":  "none"
+                        },
+    "ledgerHydrationContract":  {
+                                    "status":  "future-contract-note",
+                                    "surfaceOwner":  "academy-shell",
+                                    "eventOwner":  "active-game-runtime",
+                                    "currentImplementation":  "placeholder-ledger-overlay-only",
+                                    "gameDataMigration":  "not-started",
+                                    "activeGameScope":  "ledger-modal-displays-current-active-game-session-events",
+                                    "globalHistoryScope":  "not-started-explicit-future-feature",
+                                    "persistentProgression":  "not-automatic",
+                                    "runtimeApproval":  "none"
+                                },
+    "futureStatefulAcademyProgression":  {
+                                            "status":  "planning-doctrine-only",
+                                            "source":  "recovered Kryssie/Ace concept recorded during H6.1 review",
+                                            "launcherShell":  "may-remain-mostly-stateless",
+                                            "academyProgressionLayer":  "future-stateful-layer",
+                                            "doctrine":  "Games report what happened; the Academy decides what it means; the save file records what survived.",
+                                            "generatorGames":  "future games may create approved resources, tokens, badges, unlock signals, ingredients, or lesson progress",
+                                            "sinkGames":  "future games may consume approved resources for upgrades, crafting, decoration, unlocks, or meta-progression",
+                                            "rawSessionEvents":  "may feed Ledger and Dev surfaces",
+                                            "saveMutationPolicy":  "game session events are not automatically persistent save mutations",
+                                            "globalSaveAccessPolicy":  "games must not receive unrestricted write access to global Academy save state",
+                                            "progressionService":  "future validation layer required before events become rewards or unlocks",
+                                            "implementedInH6_1":  false,
+                                            "runtimeApproval":  "none"
+                                        },
+    "validationResults":  {
+                              "assetPipelineValidateProvenance":  "passed",
+                              "assetPipelineSmokeCheck":  "passed",
+                              "assetPipelineValidate":  "passed",
+                              "knownStaleImportScan":  "passed",
+                              "typescriptBuild":  "not-run-pending-human-tauri-test",
+                              "buildBlocker":  "backend manifest path corrected in H6.1A; H6.1B restored root workspace links after orphan cleanup; stale release app.exe still needs rebuild after human dev review",
+                              "dependencyTrackedFileDiff":  "empty",
+                              "dependencyTopologyAudit":  "completed-before-commit",
+                              "nodeModulesInventoryCount":  13,
+                              "unexpectedNewPerGameDependencyCaves":  0,
+                              "independentPerGameDependencyPayloadsFound":  0,
+                              "cleanupPerformed":  "targeted-tga-orphan-process-cleanup-only",
+                              "rolldownBindingAudit":  "prior EPERM resolved after terminating proven TGA-owned orphan dev-server process tree",
+                              "tauriBackendOldPathScan":  "passed-zero-active-source-hits",
+                              "allTenGameSourcePathResolution":  "passed",
+                              "rootPnpmInstallIgnoreScripts":  "passed-after-orphan-cleanup",
+                              "workspaceViteLinks":  "passed-hub-and-all-ten-games",
+                              "cargoCheck":  "passed-from-hub-src-tauri",
+                              "rustIncrementalPolicy":  "applied-project-local-incremental-false",
+                              "rustTargetDirectory":  "D:/DevCache/Rust/targets/tiny-goblin-academy",
+                              "rustHardLinkFallbackWarning":  "absent-after-h6-1d-cargo-check",
+                              "redXHumanTest":  "passed",
+                              "runtimeStatusLoadingGuard":  "implemented-human-review-passed",
+                              "humanTauriReview":  "passed"
+                          },
+    "devServerLifecycleOwnership":  {
+                                        "laneId":  "H6.1B",
+                                        "status":  "applied-in-working-tree",
+                                        "runtimeFile":  "hub/src-tauri/src/lib.rs",
+                                        "rootCause":  "closing app.exe with the red X bypassed Close Game cleanup and left a One-Room Platformer Vite process tree alive on port 5108",
+                                        "observedOrphanGameId":  "tga-08-one-room-platformer",
+                                        "observedPort":  5108,
+                                        "oneTimeCleanup":  {
+                                                               "status":  "completed",
+                                                               "method":  "targeted exact-PID taskkill for proven TGA-owned app/dev-server processes",
+                                                               "terminatedPids":  [
+                                                                                      1916,
+                                                                                      20828,
+                                                                                      20804,
+                                                                                      6564,
+                                                                                      24024,
+                                                                                      17940
+                                                                                  ],
+                                                               "unrelatedNodeProcessesKilled":  false,
+                                                               "portReleased":  true
+                                                           },
+                                        "ownershipStrategy":  {
+                                                                  "windows":  "Academy-owned Job Object with JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE",
+                                                                  "dependencyAdded":  false,
+                                                                  "normalStopPath":  "stop_dev_game delegates to shared backend cleanup",
+                                                                  "stopAllPath":  "stop_all_dev_games uses the same backend cleanup for every tracked game",
+                                                                  "redXPath":  "WindowEvent CloseRequested prevents close when active games exist, stops all tracked games, then exits",
+                                                                  "appExitFallback":  "RunEvent ExitRequested / Exit perform idempotent stop-all cleanup"
+                                                              },
+                                        "humanReview":  "passed-red-x-tauri-test",
+                                        "runtimeApproval":  "none"
+                                    },
+    "runtimeStatusLoadingGuard":  {
+                                      "laneId":  "H6.1C",
+                                      "status":  "applied-in-working-tree",
+                                      "observedIssue":  "detail modal could show Source Directory Missing and hide Developer Actions when backend runtime status had not loaded yet, while static manifest compatibility fields still said Playable Available dev",
+                                      "fix":  "frontend merge marks each game with runtimeStatusLoaded; GameDetailPanel shows checking state until live backend status is available",
+                                      "cssFix":  "launch button disabled styling moved to .launch-btn:disabled so enabled dev launch buttons do not look disabled",
+                                      "modeVisibilityFix":  "GameDetailPanel now receives runtimeMode and renders Developer Actions only in developer mode; future Production Actions are hidden in developer mode",
+                                      "humanReview":  "passed-tauri-dev-review",
+                                      "runtimeApproval":  "none"
+                                  },
+    "rustIncrementalPolicy":  {
+                                  "laneId":  "H6.1D",
+                                  "status":  "applied-in-working-tree",
+                                  "configFile":  "hub/src-tauri/.cargo/config.toml",
+                                  "targetDir":  "D:/DevCache/Rust/targets/tiny-goblin-academy",
+                                  "incremental":  false,
+                                  "storageFinding":  "C is NTFS with limited free space; D is exFAT and suitable for heavy ordinary build artifacts but not Rust incremental hard-link expectations",
+                                  "sourceCodeAndImagesRemainOnC":  true,
+                                  "heavyRustTargetArtifactsRemainOnD":  true,
+                                  "globalCargoHomeChanged":  false,
+                                  "globalRustupHomeChanged":  false,
+                                  "globalCargoTargetDirChanged":  false,
+                                  "cargoTomlChanged":  false,
+                                  "cargoLockChanged":  false,
+                                  "packageOrLockFilesChanged":  false,
+                                  "cacheFoldersMovedOrDeleted":  false,
+                                  "cargoMetadataTargetDirectory":  "D:/DevCache/Rust/targets/tiny-goblin-academy",
+                                  "cargoCheck":  "passed",
+                                  "cargoCheckSeconds":  115.17,
+                                  "warmCargoCheckSeconds":  39.82,
+                                  "hardLinkFallbackWarning":  "absent",
+                                  "oldDIncrementalCacheMb":  643.6,
+                                  "oldCProjectTargetCacheGb":  2.31,
+                                  "cacheCleanupRecommendation":  "defer deletion of old C target and D debug/incremental cache until after H6.1 human Tauri review",
+                                  "humanReview":  "passed-tauri-dev-review",
+                                  "runtimeApproval":  "none"
+                              },
+    "changedFiles":  [
+                         "hub/src/components/DevGameRuntimeView.tsx",
+                         "hub/src/components/GameDetailPanel.tsx",
+                         "hub/src/components/HubShell.tsx",
+                         "hub/src/styles/hub.css",
+                         "hub/src-tauri/src/lib.rs",
+                         "hub/src-tauri/.cargo/config.toml",
+                         "hub/src/data/tier1Roster.ts",
+                         "hub/src/data/hubIcons.ts",
+                         "games/tier-1/08-one-room-platformer/src/main.ts",
+                         "docs/runtime/TINY_GOBLIN_ACADEMY_H6_1_MINIMAL_RUNTIME_SHELL_CONTRACT.md",
+                         "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json"
+                     ],
+    "nonGoals":  [
+                     "no Button Goblin Clicker shell migration",
+                     "no visual asset wiring",
+                     "no package or lockfile changes",
+                     "no PNG or image changes",
+                     "no manifest or docs folder reorganization",
+                     "no Top-Down Slime Quest runtime conversion"
+                 ],
+    "recommendedNextLane":  "H6.2 — Button Goblin Clicker Shell Migration",
+    "tauriLauncherDiagnostic":  {
+                                    "diagnosticStatus":  "completed-before-commit",
+                                    "exactLiteralErrorFound":  false,
+                                    "closestActiveMessages":  [
+                                                                  "Source missing. Dev actions unavailable.",
+                                                                  "Source code missing",
+                                                                  "Source directory does not exist",
+                                                                  "Failed to load manifest"
+                                                              ],
+                                    "dataFlow":  [
+                                                     "tier1Roster imports academy/core/academy.games.json",
+                                                     "HubShell invokes list_game_statuses",
+                                                     "Tauri backend load_manifest reads manifest",
+                                                     "compute_game_status resolves root + source_path",
+                                                     "GameCard/GameDetailPanel display readiness and launch availability"
+                                                 ],
+                                    "rootCauseClassification":  "multiple-causes",
+                                    "staleAppBuild":  true,
+                                    "packagedPathResolutionBug":  true,
+                                    "staleBackendManifestPath":  true,
+                                    "incompleteWorkspaceToolchain":  true,
+                                    "runningExecutablePath":  "C:\\Users\\kryst\\Workspace\\game-development\\ai-game-studio-ladder\\hub\\src-tauri\\target\\release\\app.exe",
+                                    "runningExecutableLastWrite":  "2026-06-29 15:23:17",
+                                    "backendOldManifestPath":  "manifests/academy.games.json",
+                                    "backendCorrectManifestPath":  "manifests/academy/core/academy.games.json",
+                                    "rebuildDecision":  "yes-rebuild-required-after-code-path-fix-and-root-workspace-readiness",
+                                    "rootWorkspaceReadiness":  "requires-approved-root-workspace-repair",
+                                    "directGameCommandFinding":  "vite is not recognized because workspace .bin links are missing; no game-local install is allowed",
+                                    "humanTauriTest":  "passed",
+                                    "commitStatus":  "do-not-commit-before-user-review"
+                                },
+    "tauriBackendManifestPathCorrection":  {
+                                               "laneId":  "H6.1A",
+                                               "status":  "applied-in-working-tree",
+                                               "rustFile":  "hub/src-tauri/src/lib.rs",
+                                               "oldPath":  "manifests/academy.games.json",
+                                               "newPath":  "manifests/academy/core/academy.games.json",
+                                               "sharedConstant":  "ACADEMY_GAMES_MANIFEST_PATH",
+                                               "usedBy":  [
+                                                              "get_workspace_root current_dir ancestor discovery",
+                                                              "get_workspace_root current_exe fallback discovery",
+                                                              "load_manifest"
+                                                          ],
+                                               "oldPathActiveSourceHits":  0,
+                                               "newPathActiveSourceHits":  2,
+                                               "rebuildPerformed":  false,
+                                               "dependencyRepairPerformed":  false,
+                                               "productionBuildClaimed":  false,
+                                               "humanTauriReview":  "passed"
+                                           }
+}

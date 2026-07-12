@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 export interface ActiveDevGameRuntime {
   gameId: string;
@@ -15,39 +15,187 @@ interface DevGameRuntimeViewProps {
   isStopping: boolean;
 }
 
+type RuntimeOverlay = 'ledger' | 'help' | 'dev' | null;
+
+interface AcademyRuntimeShellContract {
+  version: 'H6.1';
+  persistentShell: 'minimal-top-bar';
+  ledgerShortcut: 'L';
+  overlaySurfaces: Array<Exclude<RuntimeOverlay, null>>;
+  runtimeBoundary: 'shell-contract-only';
+}
+
+const runtimeShellContract: AcademyRuntimeShellContract = {
+  version: 'H6.1',
+  persistentShell: 'minimal-top-bar',
+  ledgerShortcut: 'L',
+  overlaySurfaces: ['ledger', 'help', 'dev'],
+  runtimeBoundary: 'shell-contract-only',
+};
+
 export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime, onClose, isStopping }) => {
+  const [activeOverlay, setActiveOverlay] = useState<RuntimeOverlay>(null);
+
+  const closeOverlay = () => setActiveOverlay(null);
+  const toggleOverlay = (overlay: Exclude<RuntimeOverlay, null>) => {
+    setActiveOverlay((current) => (current === overlay ? null : overlay));
+  };
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented) return;
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.key.toLowerCase() === runtimeShellContract.ledgerShortcut.toLowerCase()) {
+        const target = event.target as HTMLElement | null;
+        const tagName = target?.tagName.toLowerCase();
+        if (tagName === 'input' || tagName === 'textarea' || target?.isContentEditable) return;
+        event.preventDefault();
+        toggleOverlay('ledger');
+      }
+      if (event.key === 'Escape') {
+        closeOverlay();
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  const overlayTitle = useMemo(() => {
+    if (activeOverlay === 'ledger') return 'Action Ledger';
+    if (activeOverlay === 'help') return 'Help / Controls';
+    if (activeOverlay === 'dev') return 'Dev Overlay';
+    return '';
+  }, [activeOverlay]);
+
   return (
-    <div className="dev-game-runtime-view" style={{ display: 'flex', flexDirection: 'column', flex: 1, width: '100%', backgroundColor: '#0a0a0c' }}>
-      <header className="runtime-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 1.5rem', backgroundColor: '#1a1a24', borderBottom: '1px solid #333' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
-          <h2 style={{ margin: 0, fontSize: '1.2rem', color: '#e0e0e0' }}>Tiny Goblin Academy</h2>
-          <span style={{ color: '#888', fontSize: '0.9rem' }}>/</span>
-          <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#fff' }}>{runtime.title}</h3>
-          <span style={{ marginLeft: '1rem', padding: '0.2rem 0.5rem', backgroundColor: '#1e3a1e', border: '1px solid #4caf50', borderRadius: '4px', fontSize: '0.8rem', color: '#81c784' }}>
-            Dev Mode
-          </span>
-          <span style={{ fontSize: '0.85rem', color: '#aaa', marginLeft: '0.5rem' }}>
-            {runtime.url}
-          </span>
+    <div className="dev-game-runtime-view">
+      <header className="runtime-header" aria-label="Academy runtime shell">
+        <div className="runtime-title-cluster">
+          <span className="runtime-academy-title">Tiny Goblin Academy</span>
+          <span className="runtime-title-separator">/</span>
+          <span className="runtime-game-title">{runtime.title}</span>
+          <span className="runtime-dev-pill">Dev Mode</span>
+          <span className="runtime-url">{runtime.url}</span>
         </div>
-        <button 
-          className="btn stop-btn" 
-          onClick={onClose} 
+
+        <div className="runtime-action-cluster">
+          <button
+            className="runtime-shell-btn"
+            type="button"
+            onClick={() => toggleOverlay('ledger')}
+            aria-pressed={activeOverlay === 'ledger'}
+            title="Open the action ledger (L)"
+          >
+            Ledger <span className="runtime-shortcut">L</span>
+          </button>
+          <button
+            className="runtime-shell-btn"
+            type="button"
+            onClick={() => toggleOverlay('help')}
+            aria-pressed={activeOverlay === 'help'}
+          >
+            Help
+          </button>
+          <button
+            className="runtime-shell-btn runtime-shell-btn-dev"
+            type="button"
+            onClick={() => toggleOverlay('dev')}
+            aria-pressed={activeOverlay === 'dev'}
+          >
+            Dev
+          </button>
+          <button
+          className="btn stop-btn"
+          onClick={onClose}
           disabled={isStopping}
-          style={{ backgroundColor: '#c62828', color: '#fff', border: 'none', padding: '0.5rem 1rem', borderRadius: '4px', cursor: isStopping ? 'wait' : 'pointer' }}
         >
           {isStopping ? "Stopping Server..." : "Close Game / Return to Academy"}
         </button>
+        </div>
       </header>
-      
-      <main className="runtime-content" style={{ flex: 1, position: 'relative', overflow: 'hidden', minHeight: 0 }}>
-        <iframe 
-          src={runtime.url} 
+
+      <main className="runtime-content">
+        <iframe
+          src={runtime.url}
           title={`Dev Game Runtime: ${runtime.title}`}
-          style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         />
+
+        {activeOverlay && (
+          <div className="runtime-overlay-backdrop" role="presentation" onMouseDown={closeOverlay}>
+            <section
+              className="runtime-overlay-panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label={overlayTitle}
+              onMouseDown={(event) => event.stopPropagation()}
+            >
+              <div className="runtime-overlay-header">
+                <div>
+                  <p className="runtime-overlay-kicker">Academy Shell · {runtimeShellContract.version}</p>
+                  <h2>{overlayTitle}</h2>
+                </div>
+                <button className="runtime-overlay-close" type="button" onClick={closeOverlay} aria-label="Close overlay">
+                  ×
+                </button>
+              </div>
+
+              {activeOverlay === 'ledger' && (
+                <div className="runtime-overlay-body">
+                  <p>
+                    The shared shell now owns the Ledger surface. This H6.1 contract proves the top-bar button and <kbd>L</kbd>
+                    shortcut without migrating per-game ledgers yet.
+                  </p>
+                  <div className="runtime-contract-card">
+                    <strong>Current boundary:</strong> games may still render their internal ledgers until their H6 migration lane.
+                  </div>
+                </div>
+              )}
+
+              {activeOverlay === 'help' && (
+                <div className="runtime-overlay-body">
+                  <p>
+                    Help is the future home for objectives, controls, and rules that used to sit in permanent side panels.
+                  </p>
+                  <ul>
+                    <li>Keyboard and touch controls should be listed here.</li>
+                    <li>Player-facing controls move into the game stage when needed.</li>
+                    <li>Dev/test controls move to the Dev overlay.</li>
+                  </ul>
+                </div>
+              )}
+
+              {activeOverlay === 'dev' && (
+                <div className="runtime-overlay-body">
+                  <p>
+                    Dev state stays available, but hidden by default. Position, velocity, grounded flags, and manifest IDs belong
+                    here instead of permanent player-facing rails.
+                  </p>
+                  <dl className="runtime-dev-list">
+                    <div>
+                      <dt>Game</dt>
+                      <dd>{runtime.gameId}</dd>
+                    </div>
+                    <div>
+                      <dt>Port</dt>
+                      <dd>{runtime.port}</dd>
+                    </div>
+                    <div>
+                      <dt>PID</dt>
+                      <dd>{runtime.pid ?? 'untracked'}</dd>
+                    </div>
+                    <div>
+                      <dt>Started</dt>
+                      <dd>{runtime.startedAt ?? 'unknown'}</dd>
+                    </div>
+                  </dl>
+                </div>
+              )}
+            </section>
+          </div>
+        )}
       </main>
     </div>
   );

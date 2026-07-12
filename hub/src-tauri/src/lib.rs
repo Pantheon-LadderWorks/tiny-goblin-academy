@@ -8,11 +8,190 @@ use std::fs;
 use std::process::{Command, Child, Stdio};
 use std::sync::Mutex;
 use std::collections::HashMap;
-use tauri::{State, Manager};
+use tauri::{State, Manager, RunEvent, WindowEvent};
+
+const ACADEMY_GAMES_MANIFEST_PATH: &str = "manifests/academy/core/academy.games.json";
+
+#[cfg(target_os = "windows")]
+mod process_group {
+    use std::ffi::c_void;
+    use std::mem::size_of;
+    use std::process::Child;
+    use std::ptr::null_mut;
+    use std::os::windows::io::AsRawHandle;
+
+    type Handle = *mut c_void;
+    type Bool = i32;
+    type Dword = u32;
+
+    const JOB_OBJECT_EXTENDED_LIMIT_INFORMATION_CLASS: i32 = 9;
+    const JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE: Dword = 0x0000_2000;
+
+    #[repr(C)]
+    struct IoCounters {
+        read_operation_count: u64,
+        write_operation_count: u64,
+        other_operation_count: u64,
+        read_transfer_count: u64,
+        write_transfer_count: u64,
+        other_transfer_count: u64,
+    }
+
+    #[repr(C)]
+    struct JobObjectBasicLimitInformation {
+        per_process_user_time_limit: i64,
+        per_job_user_time_limit: i64,
+        limit_flags: Dword,
+        minimum_working_set_size: usize,
+        maximum_working_set_size: usize,
+        active_process_limit: Dword,
+        affinity: usize,
+        priority_class: Dword,
+        scheduling_class: Dword,
+    }
+
+    #[repr(C)]
+    struct JobObjectExtendedLimitInformation {
+        basic_limit_information: JobObjectBasicLimitInformation,
+        io_info: IoCounters,
+        process_memory_limit: usize,
+        job_memory_limit: usize,
+        peak_process_memory_used: usize,
+        peak_job_memory_used: usize,
+    }
+
+    #[link(name = "kernel32")]
+    extern "system" {
+        fn CreateJobObjectW(lp_job_attributes: *mut c_void, lp_name: *const u16) -> Handle;
+        fn SetInformationJobObject(
+            job: Handle,
+            job_object_information_class: i32,
+            job_object_information: *const c_void,
+            job_object_information_length: Dword,
+        ) -> Bool;
+        fn AssignProcessToJobObject(job: Handle, process: Handle) -> Bool;
+        fn TerminateJobObject(job: Handle, exit_code: u32) -> Bool;
+        fn CloseHandle(handle: Handle) -> Bool;
+    }
+
+    pub struct ProcessGroup {
+        job_handle: usize,
+    }
+
+    unsafe impl Send for ProcessGroup {}
+
+    impl ProcessGroup {
+        pub fn new() -> Result<Self, String> {
+            let handle = unsafe { CreateJobObjectW(null_mut(), std::ptr::null()) };
+            if handle.is_null() {
+                return Err(format!("CreateJobObjectW failed: {}", std::io::Error::last_os_error()));
+            }
+
+            let mut limits = JobObjectExtendedLimitInformation {
+                basic_limit_information: JobObjectBasicLimitInformation {
+                    per_process_user_time_limit: 0,
+                    per_job_user_time_limit: 0,
+                    limit_flags: JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE,
+                    minimum_working_set_size: 0,
+                    maximum_working_set_size: 0,
+                    active_process_limit: 0,
+                    affinity: 0,
+                    priority_class: 0,
+                    scheduling_class: 0,
+                },
+                io_info: IoCounters {
+                    read_operation_count: 0,
+                    write_operation_count: 0,
+                    other_operation_count: 0,
+                    read_transfer_count: 0,
+                    write_transfer_count: 0,
+                    other_transfer_count: 0,
+                },
+                process_memory_limit: 0,
+                job_memory_limit: 0,
+                peak_process_memory_used: 0,
+                peak_job_memory_used: 0,
+            };
+
+            let ok = unsafe {
+                SetInformationJobObject(
+                    handle,
+                    JOB_OBJECT_EXTENDED_LIMIT_INFORMATION_CLASS,
+                    &mut limits as *mut _ as *const c_void,
+                    size_of::<JobObjectExtendedLimitInformation>() as Dword,
+                )
+            };
+
+            if ok == 0 {
+                let err = std::io::Error::last_os_error();
+                unsafe {
+                    CloseHandle(handle);
+                }
+                return Err(format!("SetInformationJobObject failed: {}", err));
+            }
+
+            Ok(Self {
+                job_handle: handle as usize,
+            })
+        }
+
+        pub fn assign_child(&self, child: &Child) -> Result<(), String> {
+            let process_handle = child.as_raw_handle() as Handle;
+            let ok = unsafe { AssignProcessToJobObject(self.job_handle as Handle, process_handle) };
+            if ok == 0 {
+                return Err(format!("AssignProcessToJobObject failed: {}", std::io::Error::last_os_error()));
+            }
+            Ok(())
+        }
+
+        pub fn terminate(&self) -> Result<(), String> {
+            let ok = unsafe { TerminateJobObject(self.job_handle as Handle, 1) };
+            if ok == 0 {
+                return Err(format!("TerminateJobObject failed: {}", std::io::Error::last_os_error()));
+            }
+            Ok(())
+        }
+    }
+
+    impl Drop for ProcessGroup {
+        fn drop(&mut self) {
+            if self.job_handle != 0 {
+                unsafe {
+                    CloseHandle(self.job_handle as Handle);
+                }
+                self.job_handle = 0;
+            }
+        }
+    }
+}
+
+#[cfg(not(target_os = "windows"))]
+mod process_group {
+    use std::process::Child;
+
+    pub struct ProcessGroup;
+
+    impl ProcessGroup {
+        pub fn new() -> Result<Self, String> {
+            Ok(Self)
+        }
+
+        pub fn assign_child(&self, _child: &Child) -> Result<(), String> {
+            Ok(())
+        }
+
+        pub fn terminate(&self) -> Result<(), String> {
+            Ok(())
+        }
+    }
+}
+
+use process_group::ProcessGroup;
 
 pub struct TrackedProcess {
     pub status: String,
     pub child: Option<Child>,
+    pub process_group: Option<ProcessGroup>,
     pub port: u16,
     pub started_at: String,
     pub package_name: String,
@@ -32,13 +211,14 @@ pub struct TrackedProcess {
 
 pub struct DevProcessManager {
     pub processes: Mutex<HashMap<String, TrackedProcess>>,
+    pub shutdown_in_progress: Mutex<bool>,
 }
 
 fn get_workspace_root() -> Option<PathBuf> {
     // 1. Try resolving from current_dir
     if let Ok(mut current) = std::env::current_dir() {
         for _ in 0..6 {
-            if current.join("manifests/academy.games.json").exists() {
+            if current.join(ACADEMY_GAMES_MANIFEST_PATH).exists() {
                 return Some(current);
             }
             if !current.pop() {
@@ -51,7 +231,7 @@ fn get_workspace_root() -> Option<PathBuf> {
     if let Ok(mut exe_path) = std::env::current_exe() {
         exe_path.pop(); // remove executable name
         for _ in 0..6 {
-            if exe_path.join("manifests/academy.games.json").exists() {
+            if exe_path.join(ACADEMY_GAMES_MANIFEST_PATH).exists() {
                 return Some(exe_path);
             }
             if !exe_path.pop() {
@@ -65,7 +245,7 @@ fn get_workspace_root() -> Option<PathBuf> {
 
 fn load_manifest() -> Option<AcademyManifest> {
     let root = get_workspace_root()?;
-    let manifest_path = root.join("manifests/academy.games.json");
+    let manifest_path = root.join(ACADEMY_GAMES_MANIFEST_PATH);
     let content = fs::read_to_string(manifest_path).ok()?;
     serde_json::from_str(&content).ok()
 }
@@ -562,6 +742,7 @@ fn launch_dev_game(
         processes.insert(game_id.clone(), TrackedProcess {
             status: "launching".to_string(),
             child: None,
+            process_group: None,
             port,
             started_at: started_at.clone(),
             package_name: package_name.clone(),
@@ -640,6 +821,52 @@ fn launch_dev_game(
 
         match cmd.spawn() {
             Ok(mut child) => {
+                let process_group = match ProcessGroup::new() {
+                    Ok(group) => {
+                        if let Err(e) = group.assign_child(&child) {
+                            #[cfg(target_os = "windows")]
+                            {
+                                use std::os::windows::process::CommandExt;
+                                let _ = Command::new("taskkill")
+                                    .args(["/PID", &child.id().to_string(), "/T", "/F"])
+                                    .creation_flags(0x08000000)
+                                    .output();
+                            }
+                            let _ = child.kill();
+                            let _ = child.wait();
+
+                            let mut processes = state.processes.lock().unwrap();
+                            if let Some(tracked) = processes.get_mut(&g_id) {
+                                tracked.status = "failed".to_string();
+                                tracked.error_state = Some(format!("Failed to assign process to Academy-owned process group: {}", e));
+                                tracked.last_readiness_error = Some("Process ownership setup failed".to_string());
+                            }
+                            return;
+                        }
+                        Some(group)
+                    }
+                    Err(e) => {
+                        #[cfg(target_os = "windows")]
+                        {
+                            use std::os::windows::process::CommandExt;
+                            let _ = Command::new("taskkill")
+                                .args(["/PID", &child.id().to_string(), "/T", "/F"])
+                                .creation_flags(0x08000000)
+                                .output();
+                        }
+                        let _ = child.kill();
+                        let _ = child.wait();
+
+                        let mut processes = state.processes.lock().unwrap();
+                        if let Some(tracked) = processes.get_mut(&g_id) {
+                            tracked.status = "failed".to_string();
+                            tracked.error_state = Some(format!("Failed to create Academy-owned process group: {}", e));
+                            tracked.last_readiness_error = Some("Process ownership setup failed".to_string());
+                        }
+                        return;
+                    }
+                };
+
                 {
                     let mut processes = state.processes.lock().unwrap();
                     if let Some(tracked) = processes.get_mut(&g_id) {
@@ -672,9 +899,13 @@ fn launch_dev_game(
                     let mut processes = state.processes.lock().unwrap();
                     if let Some(tracked) = processes.get_mut(&g_id) {
                         tracked.child = Some(child);
+                        tracked.process_group = process_group;
                         tracked.status = "running".to_string();
                     }
                 } else {
+                    if let Some(group) = process_group {
+                        let _ = group.terminate();
+                    }
                     #[cfg(target_os = "windows")]
                     {
                         use std::os::windows::process::CommandExt;
@@ -723,6 +954,13 @@ fn stop_dev_game(
     game_id: String,
     state: State<'_, DevProcessManager>,
 ) -> Result<StopDevGameResult, String> {
+    Ok(stop_dev_game_inner(game_id, &state))
+}
+
+fn stop_dev_game_inner(
+    game_id: String,
+    manager: &DevProcessManager,
+) -> StopDevGameResult {
     let mut result = StopDevGameResult {
         game_id: game_id.clone(),
         ok: false,
@@ -733,8 +971,19 @@ fn stop_dev_game(
         error_state: None,
     };
 
-    let mut processes = state.processes.lock().unwrap();
+    let mut processes = manager.processes.lock().unwrap();
     if let Some(mut tracked) = processes.remove(&game_id) {
+        if let Some(group) = tracked.process_group.take() {
+            result.stop_attempted = true;
+            if let Err(e) = group.terminate() {
+                result.error_state = Some(e);
+            }
+            // Dropping the job handle is the Windows safety net:
+            // JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE terminates any descendants
+            // still associated with this Academy-owned runtime.
+            drop(group);
+        }
+
         if let Some(mut child) = tracked.child {
             result.pid = Some(child.id());
             result.stop_attempted = true;
@@ -759,7 +1008,11 @@ fn stop_dev_game(
                         result.ok = true;
                         result.stopped_at = Some(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs().to_string());
                     } else {
-                        result.error_state = Some(format!("Failed to kill process: {}", e));
+                        let prior_error = result.error_state.take();
+                        result.error_state = Some(match prior_error {
+                            Some(existing) => format!("{}; Failed to kill process: {}", existing, e),
+                            None => format!("Failed to kill process: {}", e),
+                        });
                         tracked.child = Some(child);
                         tracked.status = "failed".to_string();
                         processes.insert(game_id, tracked);
@@ -775,7 +1028,24 @@ fn stop_dev_game(
         result.blocked_reason = Some("No tracked process running for this game".to_string());
     }
 
-    Ok(result)
+    result
+}
+
+fn stop_all_dev_games_inner(manager: &DevProcessManager) -> Vec<StopDevGameResult> {
+    let game_ids: Vec<String> = {
+        let processes = manager.processes.lock().unwrap();
+        processes.keys().cloned().collect()
+    };
+
+    game_ids
+        .into_iter()
+        .map(|game_id| stop_dev_game_inner(game_id, manager))
+        .collect()
+}
+
+#[tauri::command]
+fn stop_all_dev_games(state: State<'_, DevProcessManager>) -> Result<Vec<StopDevGameResult>, String> {
+    Ok(stop_all_dev_games_inner(&state))
 }
 
 #[tauri::command]
@@ -842,9 +1112,39 @@ fn list_dev_game_processes(state: State<'_, DevProcessManager>) -> Result<Vec<De
     Ok(statuses)
 }
 
+fn has_tracked_dev_games(manager: &DevProcessManager) -> bool {
+    let processes = manager.processes.lock().unwrap();
+    !processes.is_empty()
+}
+
+fn begin_exit_cleanup(app_handle: tauri::AppHandle) -> bool {
+    let manager = app_handle.state::<DevProcessManager>();
+
+    {
+        let mut shutdown_in_progress = manager.shutdown_in_progress.lock().unwrap();
+        if *shutdown_in_progress {
+            return false;
+        }
+
+        if !has_tracked_dev_games(&manager) {
+            return false;
+        }
+
+        *shutdown_in_progress = true;
+    }
+
+    std::thread::spawn(move || {
+        let manager = app_handle.state::<DevProcessManager>();
+        let _ = stop_all_dev_games_inner(&manager);
+        app_handle.exit(0);
+    });
+
+    true
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
-  tauri::Builder::default()
+  let builder = tauri::Builder::default()
     .invoke_handler(tauri::generate_handler![
         get_diagnostic_info,
         get_runtime_status,
@@ -854,11 +1154,21 @@ pub fn run() {
         uninstall_dev_dependencies,
         launch_dev_game,
         stop_dev_game,
+        stop_all_dev_games,
         list_dev_game_processes
     ])
+    .on_window_event(|window, event| {
+        if let WindowEvent::CloseRequested { api, .. } = event {
+            let app_handle = window.app_handle().clone();
+            if begin_exit_cleanup(app_handle) {
+                api.prevent_close();
+            }
+        }
+    })
     .setup(|app| {
       app.manage(DevProcessManager {
           processes: Mutex::new(HashMap::new()),
+          shutdown_in_progress: Mutex::new(false),
       });
       if cfg!(debug_assertions) {
         app.handle().plugin(
@@ -868,7 +1178,24 @@ pub fn run() {
         )?;
       }
       Ok(())
-    })
-    .run(tauri::generate_context!())
-    .expect("error while running tauri application");
+    });
+
+  let app = builder
+    .build(tauri::generate_context!())
+    .expect("error while building tauri application");
+
+  app.run(|app_handle, event| {
+      match event {
+          RunEvent::ExitRequested { api, .. } => {
+              if begin_exit_cleanup(app_handle.clone()) {
+                  api.prevent_exit();
+              }
+          }
+          RunEvent::Exit => {
+              let manager = app_handle.state::<DevProcessManager>();
+              let _ = stop_all_dev_games_inner(&manager);
+          }
+          _ => {}
+      }
+  });
 }

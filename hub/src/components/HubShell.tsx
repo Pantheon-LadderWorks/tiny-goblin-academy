@@ -12,6 +12,8 @@ export const HubShell: React.FC = () => {
   const [diagnostic, setDiagnostic] = useState<string | null>(null)
   const [runtimeStatus, setRuntimeStatus] = useState<HubRuntimeStatus | null>(null)
   const [gameStatuses, setGameStatuses] = useState<Record<string, GameStatus>>({})
+  const [gameStatusLoadComplete, setGameStatusLoadComplete] = useState(false)
+  const [gameStatusLoadError, setGameStatusLoadError] = useState<string | null>(null)
   const [activeRuntime, setActiveRuntime] = useState<ActiveDevGameRuntime | null>(null)
   const [isStoppingRuntime, setIsStoppingRuntime] = useState(false)
   const [bootingGame, setBootingGame] = useState<GameManifest | null>(null)
@@ -29,8 +31,12 @@ export const HubShell: React.FC = () => {
           statusMap[status.gameId] = status;
         }
         setGameStatuses(statusMap);
+        setGameStatusLoadComplete(true);
+        setGameStatusLoadError(null);
       } catch (e) {
         console.error("Tauri initialization failed", e);
+        setGameStatusLoadComplete(true);
+        setGameStatusLoadError(String(e));
       }
     }
     initTauri();
@@ -39,10 +45,18 @@ export const HubShell: React.FC = () => {
   // Merge static roster with dynamic statuses
   const mergedRoster = tier1Roster.map(game => {
     const dynamicStatus = gameStatuses[game.id];
-    if (!dynamicStatus) return game;
+    if (!dynamicStatus) {
+      return {
+        ...game,
+        runtimeStatusLoaded: false,
+        runtimeStatusError: gameStatusLoadComplete ? gameStatusLoadError : null,
+      };
+    }
     return {
       ...game,
-      ...dynamicStatus
+      ...dynamicStatus,
+      runtimeStatusLoaded: true,
+      runtimeStatusError: null,
     }
   });
 
@@ -51,15 +65,19 @@ export const HubShell: React.FC = () => {
       const { invoke } = await import('@tauri-apps/api/core');
       const status = await invoke<GameStatus>('get_game_status', { gameId });
       setGameStatuses(prev => ({ ...prev, [gameId]: status }));
+      setGameStatusLoadComplete(true);
+      setGameStatusLoadError(null);
     } catch (e) {
       console.error(`Failed to refresh status for ${gameId}`, e);
+      setGameStatusLoadComplete(true);
+      setGameStatusLoadError(String(e));
     }
   };
 
   const selectedGameMerged = selectedGame ? mergedRoster.find(g => g.id === selectedGame.id) || selectedGame : null;
 
   const historicalPassCount = tier1Roster.filter(g => g.historicallyPassed).length;
-  const sourceAvailableCount = mergedRoster.filter(g => g.sourceAvailable).length;
+  const sourceAvailableCount = mergedRoster.filter(g => g.sourceDirectoryExists ?? g.sourceAvailable).length;
 
   const handleCloseRuntime = async () => {
     if (!activeRuntime) return;
@@ -172,6 +190,7 @@ export const HubShell: React.FC = () => {
         
         <GameDetailPanel 
           game={selectedGameMerged} 
+          runtimeMode={runtimeStatus?.runtimeMode ?? 'developer'}
           onClose={() => setSelectedGame(null)} 
           onGameUpdate={refreshGameStatus}
           onLaunchDevBoot={(game) => {
