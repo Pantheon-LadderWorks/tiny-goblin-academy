@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:5101/goblin-rig-preview.html",
+  "captures": [
+    {
+      "file": "button-goblin-rig-preview-01-desktop-idle.png",
+      "label": "Desktop idle with cavern anchors and actor bounds"
+    },
+    {
+      "file": "button-goblin-rig-preview-02-hover.png",
+      "label": "Hover toggle showing subtle scale and angle"
+    },
+    {
+      "file": "button-goblin-rig-preview-03-bonk-minus-1.png",
+      "label": "Bonk minus one reaction and feedback lane"
+    },
+    {
+      "file": "button-goblin-rig-preview-04-bonk-minus-2.png",
+      "label": "Bonk minus two stronger squash and recoil"
+    },
+    {
+      "file": "button-goblin-rig-preview-05-defeat.png",
+      "label": "Defeated x-eyes and slumped pose"
+    },
+    {
+      "file": "button-goblin-rig-preview-06-reset.png",
+      "label": "Reset to baseline idle placement"
+    },
+    {
+      "file": "button-goblin-rig-preview-07-variant.png",
+      "label": "Next Goblin variant preview"
+    },
+    {
+      "file": "button-goblin-rig-preview-08-narrow-idle.png",
+      "label": "Narrow preview page with scaled canvas"
+    },
+    {
+      "file": "button-goblin-rig-preview-09-narrow-bonk.png",
+      "label": "Narrow bonk feedback remains visible"
+    }
+  ]
+}

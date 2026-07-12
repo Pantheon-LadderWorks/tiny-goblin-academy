@@ -1,0 +1,168 @@
+{
+    "schemaVersion":  "0.1",
+    "status":  "reviewed",
+    "reviewStatus":  "human-review-passed",
+    "pipelineUse":  "button-goblin-vector-actor-rig-preview",
+    "runtimeEligibility":  "preview-only-not-live-runtime-approved",
+    "tier":  "H6",
+    "planId":  "H6.3B",
+    "domain":  "academy-runtime",
+    "gameId":  "tga-01-button-goblin-clicker",
+    "operationalType":  "code-authored-vector-actor-rig-preview",
+    "sourceBaselineCommit":  "efafe34 feat: integrate button goblin background stage",
+    "sourceBackgroundManifest":  "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
+    "sourceBackground":  "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+    "sourceBackgroundSha256":  "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+    "previewFiles":  [
+                         "games/tier-1/01-button-goblin-clicker/src/actors/GoblinRig.ts",
+                         "games/tier-1/01-button-goblin-clicker/src/goblinRigPreview.ts",
+                         "games/tier-1/01-button-goblin-clicker/src/goblinRigPreview.css",
+                         "games/tier-1/01-button-goblin-clicker/goblin-rig-preview.html"
+                     ],
+    "liveRuntimeReplacement":  false,
+    "currentLiveRuntimeActor":  "existing H6.2/H6.3 Phaser head actor in GameScene.drawGoblin",
+    "actorContract":  {
+                          "owner":  "Phaser preview scene",
+                          "renderType":  "code-authored-vector-rig",
+                          "rootContainer":  "GoblinRigRoot",
+                          "defaultPlacement":  {
+                                                   "sceneWidth":  800,
+                                                   "sceneHeight":  600,
+                                                   "centerX":  400,
+                                                   "feetBaselineY":  500,
+                                                   "actorHeightApprox":  300,
+                                                   "hitArea":  "250x305 ellipse"
+                                               },
+                          "identityPreserved":  [
+                                                    "large round green goblin head",
+                                                    "triangular ears",
+                                                    "cream eyes",
+                                                    "dark pupils",
+                                                    "small fang",
+                                                    "simple Academy style"
+                                                ],
+                          "bodyParts":  [
+                                            "shadow",
+                                            "torso",
+                                            "ragged tunic",
+                                            "belt",
+                                            "left arm",
+                                            "right arm",
+                                            "left leg",
+                                            "right leg",
+                                            "broad feet",
+                                            "head",
+                                            "ears",
+                                            "normal eyes",
+                                            "X eyes",
+                                            "normal mouth",
+                                            "hurt mouth"
+                                        ],
+                          "previewActions":  [
+                                                 "idle",
+                                                 "hover-toggle",
+                                                 "bonk-minus-1",
+                                                 "bonk-minus-2",
+                                                 "defeat",
+                                                 "reset",
+                                                 "variant"
+                                             ]
+                      },
+    "anchorFit":  {
+                      "status":  "accepted-for-preview-planning",
+                      "exactCoordinatesApproved":  false,
+                      "notes":  [
+                                    "The actor is previewed against the approved H6.3 cavern background.",
+                                    "The actor sits in the central click-stage safe zone.",
+                                    "The feet baseline remains above the lower foreground obstruction band.",
+                                    "Anchor overlay, hit area, bounds, and baseline are visible in preview evidence."
+                                ],
+                      "acceptedFindings":  [
+                                               "central click-stage safe zone fit accepted",
+                                               "feet and shadow grounded on lower cavern floor",
+                                               "actor remains above foreground obstruction band",
+                                               "character and feedback stay in the calm center away from torch-risk regions"
+                                           ]
+                  },
+    "runtimeBoundary":  {
+                            "liveGoblinReplacementApproved":  false,
+                            "runtimeCoordinatesApproved":  false,
+                            "gameplayChangeApproved":  false,
+                            "controllerChangeApproved":  false,
+                            "simulationChangeApproved":  false,
+                            "spriteSheetCreated":  false,
+                            "customArtSkinApproved":  false,
+                            "uiSpriteIntegrationApproved":  false,
+                            "otherGameMigrationApproved":  false,
+                            "runtimeAssetApproval":  "preview-only",
+                            "nextRuntimeLane":  "H6.3C — Button Goblin Runtime GoblinRig Replacement"
+                        },
+    "evidence":  {
+                     "folder":  "games/tier-1/01-button-goblin-clicker/evidence/h6-3b-vector-actor-rig-preview/",
+                     "files":  [
+                                   "button-goblin-rig-preview-01-desktop-idle.png",
+                                   "button-goblin-rig-preview-02-hover.png",
+                                   "button-goblin-rig-preview-03-bonk-minus-1.png",
+                                   "button-goblin-rig-preview-04-bonk-minus-2.png",
+                                   "button-goblin-rig-preview-05-defeat.png",
+                                   "button-goblin-rig-preview-06-reset.png",
+                                   "button-goblin-rig-preview-07-variant.png",
+                                   "button-goblin-rig-preview-08-narrow-idle.png",
+                                   "button-goblin-rig-preview-09-narrow-bonk.png",
+                                   "button-goblin-rig-preview-sequence-sheet.png",
+                                   "button-goblin-rig-preview-capture-index.json",
+                                   "README.md"
+                               ]
+                 },
+    "validationStatus":  {
+                             "buttonGoblinTests":  "passed-initial",
+                             "buttonGoblinBuild":  "passed-initial-with-existing-vite-chunk-size-warning",
+                             "previewEvidence":  "captured",
+                             "finalValidation":  "blocked-by-rust-toolchain-state-before-commit",
+                             "buttonGoblinTestsFinal":  "passed",
+                             "buttonGoblinBuildFinal":  "passed-with-existing-vite-chunk-size-warning",
+                             "hubTypeScriptCheck":  "passed",
+                             "cargoCheck":  "blocked-rust-toolchain-not-installed-invalid-channel-string",
+                             "assetPipelineFinal":  "passed",
+                             "diffCheck":  "passed"
+                         },
+    "recommendedNextLane":  "H6.3C — Button Goblin Runtime GoblinRig Replacement",
+    "blockedUntilHumanReview":  false,
+    "humanReview":  {
+                        "status":  "passed",
+                        "reviewer":  "Kryssie / Mega visual review",
+                        "decision":  "accepted-for-H6.3C-planning",
+                        "acceptedFindings":  [
+                                                 "original Button Goblin identity preserved",
+                                                 "actor design accepted",
+                                                 "anchor-region fit accepted",
+                                                 "preview state vocabulary accepted",
+                                                 "variant/config boundary accepted",
+                                                 "preview tooling accepted",
+                                                 "simple vector style accepted"
+                                             ],
+                        "polishNotes":  [
+                                            "H6.3C runtime hit area should cover the full actor silhouette or a generous central capsule, not the old head-only circle.",
+                                            "Broad ears may be optional, but clicking obvious goblin body should count."
+                                        ]
+                    },
+    "previewStateVocabulary":  {
+                                   "status":  "accepted",
+                                   "states":  [
+                                                  "idle",
+                                                  "hover",
+                                                  "bonk-minus-1",
+                                                  "bonk-minus-2",
+                                                  "defeat",
+                                                  "reset",
+                                                  "variant"
+                                              ]
+                               },
+    "variantConfigBoundary":  {
+                                  "status":  "accepted",
+                                  "doctrine":  "The rig defines how a goblin moves. The skin defines which goblin is wearing it.",
+                                  "vectorPrimitives":  "first-skin-implementation",
+                                  "futureSegmentedArt":  "may replace individual parts while retaining pivots and animations",
+                                  "flattenedSpriteLimitation":  "cannot independently articulate parts without frames or overlays"
+                              }
+}

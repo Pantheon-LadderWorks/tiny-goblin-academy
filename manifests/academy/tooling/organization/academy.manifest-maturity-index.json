@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 69,
+  "totalManifestCount": 70,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -60,7 +60,8 @@
     "runtimeShellPlanning": "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
     "runtimeShellContract": "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "runtimeButtonGoblinShellMigration": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
-    "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json"
+    "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
+    "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -123,6 +124,7 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
     "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
+    "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
@@ -961,6 +963,18 @@
       "runtimeEligibility": null,
       "runtimeApproved": false,
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
+    },
+    {
+      "path": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
+      "maturityClass": "planning",
+      "authorityRole": "preview-only runtime actor planning record",
+      "categoryShelf": "manifests/academy/runtime",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "button-goblin-vector-actor-rig-preview",
+      "runtimeEligibility": "preview-only-not-live-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "H6.3B preview-only vector actor rig record. Live runtime replacement requires future H6.3C approval."
     }
   ],
   "postMoveTreeSummary": [
@@ -1046,7 +1060,7 @@
     },
     {
       "folder": "manifests/academy/runtime/planning",
-      "jsonCount": 4
+      "jsonCount": 5
     },
     {
       "folder": "manifests/academy/shared",
@@ -1066,7 +1080,7 @@
     },
     {
       "folder": "manifests/academy/tooling/organization/execution",
-      "jsonCount": 1
+      "jsonCount": 3
     },
     {
       "folder": "manifests/academy/tooling/organization/planning",
