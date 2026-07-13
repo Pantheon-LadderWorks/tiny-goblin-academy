@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "button-goblin-live-goblin-rig-runtime-integration",
+  "runtimeEligibility": "approved-for-button-goblin-runtime-use",
+  "tier": "H6",
+  "planId": "H6.3C",
+  "domain": "academy-runtime",
+  "gameId": "tga-01-button-goblin-clicker",
+  "operationalType": "live-runtime-vector-actor-rig-integration",
+  "baselineCommit": "bbde034 docs: correct h6.3b rust validation status",
+  "createdAt": "2026-07-12T23:25:42.192Z",
+  "sourceBackground": "assets/academy/games/button-goblin-clicker/backgrounds/tga-button-goblin-clicker-cavern-stage-background-v0.1.png",
+  "sourceBackgroundSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+  "expectedSourceBackgroundSha256": "6b397cc45ce762fcc831a083bba1c74c0b86fe337205bbf7a3542b5f0f369c38",
+  "approvedPreviewManifest": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
+  "changedRuntimeFiles": [
+    "games/tier-1/01-button-goblin-clicker/src/scenes/GameScene.ts",
+    "games/tier-1/01-button-goblin-clicker/src/actors/GoblinRig.ts"
+  ],
+  "unchangedAuthorityFiles": [
+    "games/tier-1/01-button-goblin-clicker/src/controller.ts",
+    "games/tier-1/01-button-goblin-clicker/src/simulation.ts"
+  ],
+  "actorPlacement": {
+    "centerX": 400,
+    "feetBaselineY": 500,
+    "scale": 1,
+    "hitArea": {
+      "shape": "ellipse",
+      "x": 0,
+      "y": -155,
+      "width": 250,
+      "height": 305
+    },
+    "hitBounds": {
+      "x": -125,
+      "y": -308,
+      "width": 250,
+      "height": 308
+    },
+    "anchorContract": "central click-stage safe zone with lower cavern floor grounding baseline"
+  },
+  "eventToAnimationMapping": {
+    "activeGoblin": "idle",
+    "pointerOver": "hover-on",
+    "pointerOut": "hover-off",
+    "oneDamage": "bonk-minus-1",
+    "twoDamage": "bonk-minus-2",
+    "hpZero": "defeat",
+    "nextGoblin": "reset-to-idle",
+    "victory": "final-defeated-victory-presentation-preserved"
+  },
+  "oldRendererRemoval": {
+    "activeOldHeadRendererRemoved": true,
+    "oldHeadOnlyHitCircleRemoved": true,
+    "standalonePreviewPreserved": true
+  },
+  "lifecycleHardening": [
+    "destroyed guard added to rig calls",
+    "tracked tween targets killed on reset and destroy",
+    "timer callbacks guard against destroyed rig",
+    "tween completion callbacks guard against destroyed rig",
+    "baseline scale preserved during live state transitions"
+  ],
+  "gameplayInvariants": {
+    "controllerChanged": false,
+    "simulationChanged": false,
+    "goblinHpProgressionChanged": false,
+    "clickDamageChanged": false,
+    "coinRewardsChanged": false,
+    "upgradeCostChanged": false,
+    "upgradeMultiplierChanged": false,
+    "goblinCountChanged": false,
+    "victoryConditionChanged": false,
+    "backgroundSourceChanged": false
+  },
+  "evidence": {
+    "folder": "games/tier-1/01-button-goblin-clicker/evidence/h6-3c-live-goblin-rig-integration/",
+    "captureIndex": "games/tier-1/01-button-goblin-clicker/evidence/h6-3c-live-goblin-rig-integration/button-goblin-live-rig-capture-index.json",
+    "captureKind": "live-gameplay-browser-evidence",
+    "route": "http://127.0.0.1:5101/",
+    "note": "Captured from live Button Goblin Clicker route, not goblin-rig-preview.html.",
+    "browserEvidenceFiles": [
+      "button-goblin-live-rig-01-desktop-idle.png",
+      "button-goblin-live-rig-02-desktop-hover.png",
+      "button-goblin-live-rig-03-bonk-minus-1.png",
+      "button-goblin-live-rig-04-defeat.png",
+      "button-goblin-live-rig-05-next-goblin-reset.png",
+      "button-goblin-live-rig-06-upgrade-purchased.png",
+      "button-goblin-live-rig-07-later-stronger-goblin.png",
+      "button-goblin-live-rig-08-bonk-minus-2.png",
+      "button-goblin-live-rig-09-victory.png",
+      "button-goblin-live-rig-10-debug-hit-area.png",
+      "button-goblin-live-rig-11-narrow-idle.png",
+      "button-goblin-live-rig-12-narrow-bonk.png"
+    ],
+    "evidenceFileCount": 13,
+    "inChatVisualInspection": "partial-desktop-idle-surfaced-by-user; full image-return path flaky in this conversation",
+    "embeddedTauriEvidenceFolder": "games/tier-1/01-button-goblin-clicker/evidence/h6-3c-embedded-tauri-review/",
+    "embeddedTauriEvidenceFiles": [
+      "tauri-embedded-00-academy-printwindow.png",
+      "tauri-embedded-01-button-goblin-idle.png",
+      "tauri-embedded-02-hover.png",
+      "tauri-embedded-03-bonk-minus-1.png",
+      "tauri-embedded-04-outside-click-check.png",
+      "tauri-embedded-05-defeat-transition.png",
+      "tauri-embedded-06-next-goblin-reset.png",
+      "tauri-embedded-07-upgrade-available-or-earned.png",
+      "tauri-embedded-08-upgrade-purchased.png",
+      "tauri-embedded-09-bonk-minus-2-after-upgrade.png",
+      "tauri-embedded-10-victory.png",
+      "tauri-embedded-14-close-game-return-to-academy.png"
+    ],
+    "embeddedTauriEvidence": "captured",
+    "embeddedOverlayEvidence": "not-recaptured-validly-in-h6-3c; h6-2-overlay-evidence-remains-shell-baseline"
+  },
+  "validationStatus": {
+    "finalValidation": "passed",
+    "embeddedTauriHumanReview": "kryssie-live-visual-review-passed",
+    "commitAllowed": true,
+    "validatedCommands": [
+      "pnpm --filter tga-01-button-goblin-clicker test",
+      "pnpm --filter tga-01-button-goblin-clicker build",
+      "pnpm --filter tiny-goblin-academy-hub exec tsc --noEmit --pretty false",
+      "cargo check from hub/src-tauri",
+      "node scripts/asset-pipeline/cli.mjs validate-provenance",
+      "node scripts/asset-pipeline/smoke-check.mjs",
+      "node scripts/asset-pipeline/cli.mjs validate",
+      "git diff --check"
+    ]
+  },
+  "humanReviewNotes": [
+    "Kryssie live-observed idle blink, occasional ear twitch, body breathing rhythm, hover scale, click scene jolt, and bonk reactions reading cleanly.",
+    "Full-body actor rig is accepted visually in embedded Tauri review.",
+    "Final H6.3C validation passed before commit."
+  ],
+  "nextStep": "Commit H6.3C, then proceed to the next approved TGA lane."
+}

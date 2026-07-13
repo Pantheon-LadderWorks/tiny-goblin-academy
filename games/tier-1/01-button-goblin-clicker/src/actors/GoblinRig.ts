@@ -71,6 +71,8 @@ export class GoblinRig {
   private earEvent?: Phaser.Time.TimerEvent;
   private baselineX: number;
   private baselineY: number;
+  private readonly baselineScale: number;
+  private destroyed = false;
 
   constructor(
     private readonly scene: Phaser.Scene,
@@ -81,23 +83,27 @@ export class GoblinRig {
     this.skin = { ...DEFAULT_SKIN, ...options.skin };
     this.baselineX = x;
     this.baselineY = y;
+    this.baselineScale = options.scale ?? 1;
     this.root = scene.add.container(x, y).setName('GoblinRigRoot');
-    this.root.setScale(options.scale ?? 1);
+    this.root.setScale(this.baselineScale);
     this.build();
     this.setExpression('normal');
     this.playIdle();
   }
 
   public setSkin(skin: Partial<GoblinSkin>) {
+    if (this.destroyed) return;
     this.skin = { ...this.skin, ...skin };
-    this.root.removeAll(true);
     this.stopIdle();
+    this.killAllTweens();
+    this.root.removeAll(true);
     this.build();
     this.setExpression('normal');
     this.playIdle();
   }
 
   public playIdle() {
+    if (this.destroyed) return;
     this.stopIdle();
     this.idleTweens = [
       this.scene.tweens.add({
@@ -139,13 +145,17 @@ export class GoblinRig {
     this.blinkEvent = this.scene.time.addEvent({
       delay: 3200,
       loop: true,
-      callback: () => this.blink(),
+      callback: () => {
+        if (!this.destroyed) this.blink();
+      },
     });
 
     this.earEvent = this.scene.time.addEvent({
       delay: 5200,
       loop: true,
-      callback: () => this.twitchEar(),
+      callback: () => {
+        if (!this.destroyed) this.twitchEar();
+      },
     });
   }
 
@@ -162,18 +172,21 @@ export class GoblinRig {
   }
 
   public setHover(active: boolean) {
+    if (this.destroyed) return;
     this.scene.tweens.killTweensOf(this.root);
     this.scene.tweens.add({
       targets: this.root,
-      scaleX: active ? 1.025 : 1,
-      scaleY: active ? 1.025 : 1,
+      scaleX: active ? this.baselineScale * 1.025 : this.baselineScale,
+      scaleY: active ? this.baselineScale * 1.025 : this.baselineScale,
       angle: active ? -1 : 0,
       duration: 140,
       ease: 'Sine.out',
     });
   }
 
-  public playBonkReaction(damage: 1 | 2 = 1) {
+  public playBonkReaction(damage: 1 | 2 = 1, returnToIdle = true) {
+    this.stopIdle();
+    this.resetPartTransforms();
     this.setExpression('hurt');
     this.scene.tweens.killTweensOf([this.root, this.head, this.torso, this.leftLeg, this.rightLeg]);
 
@@ -182,14 +195,14 @@ export class GoblinRig {
 
     this.scene.tweens.add({
       targets: this.root,
-      scaleX: damage === 2 ? 1.12 : 1.08,
-      scaleY: damage === 2 ? 0.88 : 0.92,
+      scaleX: this.baselineScale * (damage === 2 ? 1.12 : 1.08),
+      scaleY: this.baselineScale * (damage === 2 ? 0.88 : 0.92),
       y: this.root.y + (damage === 2 ? 14 : 9),
       duration: 75,
       yoyo: true,
       ease: 'Quad.out',
       onComplete: () => {
-        this.root.setScale(1);
+        this.root.setScale(this.baselineScale);
         this.root.y = this.baselineY;
       },
     });
@@ -201,7 +214,13 @@ export class GoblinRig {
       duration: 90,
       yoyo: true,
       ease: 'Back.out',
-      onComplete: () => this.setExpression('normal'),
+      onComplete: () => {
+        if (returnToIdle) {
+          this.setExpression('normal');
+          this.resetPartTransforms();
+          this.playIdle();
+        }
+      },
     });
 
     this.scene.tweens.add({
@@ -214,14 +233,16 @@ export class GoblinRig {
   }
 
   public playDefeat() {
+    if (this.destroyed) return;
     this.stopIdle();
     this.setExpression('defeated');
     this.scene.tweens.killTweensOf([this.root, this.head, this.torso, this.leftArm, this.rightArm]);
     this.scene.tweens.add({
       targets: this.root,
       angle: 9,
-      y: 518,
-      scaleY: 0.9,
+      y: this.baselineY + 18,
+      scaleX: this.baselineScale,
+      scaleY: this.baselineScale * 0.9,
       duration: 280,
       ease: 'Back.out',
     });
@@ -242,11 +263,12 @@ export class GoblinRig {
   }
 
   public reset(x = 400, y = 500) {
-    this.scene.tweens.killTweensOf(this.root);
+    if (this.destroyed) return;
+    this.killAllTweens();
     this.baselineX = x;
     this.baselineY = y;
     this.root.setPosition(x, y);
-    this.root.setScale(1);
+    this.root.setScale(this.baselineScale);
     this.root.setAngle(0);
     this.root.setAlpha(1);
     this.setExpression('normal');
@@ -254,8 +276,17 @@ export class GoblinRig {
     this.playIdle();
   }
 
+  public setBaseline(x: number, y: number) {
+    this.baselineX = x;
+    this.baselineY = y;
+    this.root.setPosition(x, y);
+  }
+
   public destroy() {
+    if (this.destroyed) return;
+    this.destroyed = true;
     this.stopIdle();
+    this.killAllTweens();
     this.root.destroy(true);
   }
 
@@ -430,7 +461,7 @@ export class GoblinRig {
   }
 
   private blink() {
-    if (!this.normalEyes.visible) return;
+    if (this.destroyed || !this.normalEyes.visible) return;
     this.scene.tweens.add({
       targets: this.normalEyes,
       scaleY: 0.08,
@@ -441,6 +472,7 @@ export class GoblinRig {
   }
 
   private twitchEar() {
+    if (this.destroyed) return;
     this.scene.tweens.add({
       targets: this.leftEar,
       angle: -7,
@@ -449,6 +481,26 @@ export class GoblinRig {
       repeat: 1,
       ease: 'Quad.out',
     });
+  }
+
+  private killAllTweens() {
+    const targets: Array<Phaser.GameObjects.GameObject | undefined> = [
+      this.root,
+      this.torso,
+      this.head,
+      this.leftArm,
+      this.rightArm,
+      this.leftLeg,
+      this.rightLeg,
+      this.normalEyes,
+      this.xEyes,
+      this.normalMouth,
+      this.hurtMouth,
+      this.leftEar,
+      this.rightEar,
+      this.shadow,
+    ];
+    this.scene.tweens.killTweensOf(targets.filter(Boolean));
   }
 
   private resetPartTransforms() {

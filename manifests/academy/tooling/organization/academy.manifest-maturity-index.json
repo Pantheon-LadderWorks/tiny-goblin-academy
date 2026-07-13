@@ -61,7 +61,8 @@
     "runtimeShellContract": "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "runtimeButtonGoblinShellMigration": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
     "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
-    "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json"
+    "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
+    "runtimeButtonGoblinLiveGoblinRigIntegration": "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -1134,5 +1135,8 @@
     "Generated files are not automatically source of truth.",
     "Runtime/game wiring remains outside H5.91A scope."
   ],
-  "blockedUntilHumanReview": true
+  "blockedUntilHumanReview": true,
+  "runtimePlanningCurrent": [
+    "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json"
+  ]
 }

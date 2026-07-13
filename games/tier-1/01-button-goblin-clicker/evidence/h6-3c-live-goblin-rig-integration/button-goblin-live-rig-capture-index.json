@@ -1,0 +1,212 @@
+{
+  "lane": "H6.3C",
+  "route": "http://127.0.0.1:5101/",
+  "captureKind": "live-gameplay-browser-evidence",
+  "note": "Captured from live Button Goblin Clicker route, not goblin-rig-preview.html.",
+  "captures": [
+    {
+      "filename": "button-goblin-live-rig-01-desktop-idle.png",
+      "label": "desktop idle live gameplay scene",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "5 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-02-desktop-hover.png",
+      "label": "desktop hover live gameplay scene",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "5 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-03-bonk-minus-1.png",
+      "label": "Bonk -1 live runtime reaction",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "4 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-04-defeat.png",
+      "label": "defeat state before next goblin reset",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "2 / 10",
+        "hp": "7 / 7",
+        "coins": "1",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-05-next-goblin-reset.png",
+      "label": "next goblin reset to idle",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "2 / 10",
+        "hp": "7 / 7",
+        "coins": "1",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-06-upgrade-purchased.png",
+      "label": "Bonk Stick upgrade purchased",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "4 / 10",
+        "hp": "11 / 11",
+        "coins": "0",
+        "damage": "2",
+        "shopText": "Purchased!",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-07-later-stronger-goblin.png",
+      "label": "later stronger goblin after upgrade",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "4 / 10",
+        "hp": "11 / 11",
+        "coins": "0",
+        "damage": "2",
+        "shopText": "Purchased!",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-08-bonk-minus-2.png",
+      "label": "Bonk -2 live runtime reaction",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "4 / 10",
+        "hp": "9 / 11",
+        "coins": "0",
+        "damage": "2",
+        "shopText": "Purchased!",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-09-victory.png",
+      "label": "victory overlay with final defeated goblin presentation",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "10 / 10",
+        "hp": "0 / 23",
+        "coins": "7",
+        "damage": "2",
+        "shopText": "Purchased!",
+        "victoryVisible": true
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-10-debug-hit-area.png",
+      "label": "debug hit-area outline on live gameplay scene",
+      "url": "http://127.0.0.1:5101/?debugHitArea=1",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "5 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-11-narrow-idle.png",
+      "label": "narrow idle live gameplay scene",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 420,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "5 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    },
+    {
+      "filename": "button-goblin-live-rig-12-narrow-bonk.png",
+      "label": "narrow bonk live gameplay scene",
+      "url": "http://127.0.0.1:5101/",
+      "viewport": {
+        "width": 420,
+        "height": 720
+      },
+      "hud": {
+        "goblin": "1 / 10",
+        "hp": "4 / 5",
+        "coins": "0",
+        "damage": "1",
+        "shopText": "Need 3 more coins",
+        "victoryVisible": false
+      }
+    }
+  ]
+}
