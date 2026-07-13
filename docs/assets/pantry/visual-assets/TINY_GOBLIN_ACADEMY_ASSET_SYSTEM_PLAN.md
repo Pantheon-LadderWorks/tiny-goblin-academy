@@ -54,6 +54,40 @@ UI sourcing policy:
 * Use particle or code-generated FX for fire, glow, smoke, dust, sparkle, and other soft-edge effects instead of forcing every effect through sprite cleanup.
 * Shared UI pieces are optional ingredients, not a complete UI system.
 
+## H5.94 Shared UI/HUD Internal Functional Slot Mapping Note
+
+H5.94 verifies that the shared UI/HUD sheet has H5.2/H5.2B outer crop mapping, but not prior internal functional-surface geometry.
+
+Current shared UI/HUD outer manifest:
+
+`manifests/academy/shared/academy.ui-hud.regions.json`
+
+H5.94 adds planning-only internal functional maps for shared UI/HUD host surfaces:
+
+`manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json`
+
+The H5.94 shared UI/HUD functional map classifies all 34 outer regions, separates dynamic host surfaces from fixed semantic displays, icon/control assets, and decorative-only pieces, and maps 11 dynamic host surfaces with surface-relative slot rectangles, safe insets, protected decoration zones, and fit/overflow notes.
+
+Button Goblin UI asset selection is explicitly deferred to a later planning lane. H5.94 does not choose shared UI pieces for any game, wire runtime UI, alter Button Goblin runtime files, modify source/derived UI PNGs, or approve exact runtime coordinates. Live text, dynamic counters, keyboard/focus behavior, accessibility, responsive layout, and shell overlays remain code-native unless a later reviewed runtime lane explicitly changes them. Shared UI assets are optional frames/backplates/decorative surfaces, not a blanket UI skin.
+
+## H5.95 Shared UI/HUD Functional Slot Human Review Note
+
+H5.95 accepts the H5.94/H5.94A shared UI/HUD internal functional slot mapping for draft planning use.
+
+Accepted:
+
+* 34 shared UI/HUD outer-region classifications;
+* 11 dynamic host-surface identifications;
+* 18 surface-relative internal draft slots;
+* protected border/decorative exclusion mapping;
+* corrected H5.94A evidence legibility.
+
+The reviewed manifest remains:
+
+`manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json`
+
+H5.95 does not approve runtime UI, exact runtime coordinates, Button Goblin asset selection, game-specific UI placement, nine-slice behavior, package/lock changes, or source/derived UI image changes. Button Goblin shared UI selection is deferred to H5.96.
+
 
 ## H5.92 Asset Docs Reorganization Note
 

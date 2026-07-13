@@ -1,0 +1,1977 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "domain": "shared-ui-hud",
+  "operationalType": "shared-ui-hud-internal-functional-slot-mapping",
+  "sourceRegionManifest": "manifests/academy/shared/academy.ui-hud.regions.json",
+  "sourceSheet": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
+  "derivedSheet": "assets/academy/derived-cleaned/ui/tga-ui-hud-sheet-cleaned-preview-v0.1.png",
+  "reviewStatus": "human-review-passed",
+  "runtimeEligibility": "not-runtime-approved",
+  "slotApproval": "accepted-for-draft-planning",
+  "gameSelectionApproval": "none",
+  "coordinatePolicy": "surface-relative-percentages-only-no-runtime-coordinates",
+  "fitPolicy": {
+    "overflowRisk": "review-required",
+    "allowedResponses": [
+      "scale-surface-instance-within-view-budget",
+      "scale-content-down",
+      "wrap-text",
+      "truncate-with-ellipsis",
+      "reduce-content-density",
+      "choose-code-native-ui-instead"
+    ],
+    "scaleUpAllowed": true,
+    "scaleUpApproval": "not-runtime-approved",
+    "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+  },
+  "sourceSha256": "a72091673b640e83a4e40b9f39857f2ce6391dafff98dfe1d8dd001e09e414c9",
+  "derivedSha256": "827ffa10f516d31e8faf2ddd0eb50a2f49a0ee8ae734ae0477812a170c5f5802",
+  "sourceRegionCount": 34,
+  "hostSurfaceCount": 11,
+  "classificationSummary": {
+    "dynamicHostSurfaces": 11,
+    "fixedSemanticDisplaysOrBakedStates": 10,
+    "iconOrControlAssets": 11,
+    "decorativeOnly": 2
+  },
+  "regionClassifications": [
+    {
+      "index": 1,
+      "id": "ui-hud.pill-panel.long-teal",
+      "label": "Long teal pill panel",
+      "category": "pill-panel",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 67,
+        "y": 124,
+        "w": 541,
+        "h": 174
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 2,
+      "id": "ui-hud.round-button.teal-star",
+      "label": "Round teal star button",
+      "category": "round-button",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 662,
+        "y": 106,
+        "w": 207,
+        "h": 213
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 3,
+      "id": "ui-hud.pill-panel.long-gold",
+      "label": "Long gold pill panel",
+      "category": "pill-panel",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 975,
+        "y": 96,
+        "w": 597,
+        "h": 226
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 4,
+      "id": "ui-hud.round-button.gold-star",
+      "label": "Round gold star button",
+      "category": "round-button",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 1570,
+        "y": 84,
+        "w": 257,
+        "h": 256
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 5,
+      "id": "ui-hud.dark-panel.long",
+      "label": "Long dark panel",
+      "category": "dark-panel",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 1925,
+        "y": 124,
+        "w": 574,
+        "h": 174
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 6,
+      "id": "ui-hud.icon-button.dark-star-square",
+      "label": "Dark square star button",
+      "category": "icon-button",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 2555,
+        "y": 114,
+        "w": 195,
+        "h": 197
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 7,
+      "id": "ui-hud.currency-icon.goblin-coin",
+      "label": "Goblin coin currency icon",
+      "category": "currency-icon",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 80,
+        "y": 412,
+        "w": 245,
+        "h": 238
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 8,
+      "id": "ui-hud.time-icon.clock",
+      "label": "Clock time icon",
+      "category": "time-icon",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 437,
+        "y": 409,
+        "w": 231,
+        "h": 232
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 9,
+      "id": "ui-hud.shield-icon.blue",
+      "label": "Blue shield badge",
+      "category": "shield-icon",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 801,
+        "y": 401,
+        "w": 210,
+        "h": 244
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 10,
+      "id": "ui-hud.lock-badge.shield",
+      "label": "Lock shield badge",
+      "category": "lock-badge",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 1152,
+        "y": 401,
+        "w": 211,
+        "h": 244
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 11,
+      "id": "ui-hud.check-badge.green-laurel",
+      "label": "Green check laurel badge",
+      "category": "check-badge",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 1468,
+        "y": 414,
+        "w": 258,
+        "h": 221
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 12,
+      "id": "ui-hud.check-badge.gold-laurel",
+      "label": "Gold check laurel badge",
+      "category": "check-badge",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 1814,
+        "y": 414,
+        "w": 259,
+        "h": 221
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 13,
+      "id": "ui-hud.crystal-icon.teal-shard",
+      "label": "Teal crystal shard icon",
+      "category": "crystal-icon",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 2163,
+        "y": 397,
+        "w": 220,
+        "h": 251
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 14,
+      "id": "ui-hud.damage-tile.red-cracked",
+      "label": "Red cracked damage tile",
+      "category": "damage-tile",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 2505,
+        "y": 412,
+        "w": 222,
+        "h": 223
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 15,
+      "id": "ui-hud.progress-bar.green",
+      "label": "Green progress bar",
+      "category": "progress-bar",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 69,
+        "y": 707,
+        "w": 629,
+        "h": 123
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 16,
+      "id": "ui-hud.progress-bar.orange",
+      "label": "Orange progress bar",
+      "category": "progress-bar",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 742,
+        "y": 707,
+        "w": 628,
+        "h": 123
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 17,
+      "id": "ui-hud.star-rating.three-gold",
+      "label": "Three gold star rating group",
+      "category": "star-rating",
+      "functionalType": "fixed-semantic-display-or-baked-state",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 1425,
+        "y": 711,
+        "w": 391,
+        "h": 116
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Reads as a specific icon/badge/progress/rating state; not a general text/content container.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 18,
+      "id": "ui-hud.frame-small.teal",
+      "label": "Small teal frame",
+      "category": "frame-small",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 68,
+        "y": 882,
+        "w": 308,
+        "h": 256
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 19,
+      "id": "ui-hud.frame-medium.teal",
+      "label": "Medium teal frame",
+      "category": "frame-medium",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 437,
+        "y": 881,
+        "w": 458,
+        "h": 267
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 20,
+      "id": "ui-hud.frame-large.teal",
+      "label": "Large teal frame",
+      "category": "frame-large",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 960,
+        "y": 881,
+        "w": 665,
+        "h": 401
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 21,
+      "id": "ui-hud.speech-bubble.small",
+      "label": "Small speech bubble",
+      "category": "speech-bubble",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 1688,
+        "y": 881,
+        "w": 466,
+        "h": 215
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 22,
+      "id": "ui-hud.dialogue-panel.feather-scroll",
+      "label": "Feather dialogue panel",
+      "category": "dialogue-panel",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 2216,
+        "y": 755,
+        "w": 541,
+        "h": 326
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 23,
+      "id": "ui-hud.play-control.triangle",
+      "label": "Play button",
+      "category": "play-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 68,
+        "y": 1194,
+        "w": 127,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 24,
+      "id": "ui-hud.play-control.pause",
+      "label": "Pause button",
+      "category": "play-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 228,
+        "y": 1194,
+        "w": 126,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 25,
+      "id": "ui-hud.navigation-control.back",
+      "label": "Back button",
+      "category": "navigation-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 388,
+        "y": 1193,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 26,
+      "id": "ui-hud.settings-control.gear",
+      "label": "Settings button",
+      "category": "settings-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 559,
+        "y": 1193,
+        "w": 126,
+        "h": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 27,
+      "id": "ui-hud.info-control.circle",
+      "label": "Info button",
+      "category": "info-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 68,
+        "y": 1347,
+        "w": 127,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 28,
+      "id": "ui-hud.close-control.red-x",
+      "label": "Close button",
+      "category": "close-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 228,
+        "y": 1347,
+        "w": 126,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 29,
+      "id": "ui-hud.reset-control.green-loop",
+      "label": "Reset button",
+      "category": "reset-control",
+      "functionalType": "icon-or-control-asset",
+      "hostCapability": "not-a-general-host-surface",
+      "sourceRect": {
+        "x": 388,
+        "y": 1347,
+        "w": 126,
+        "h": 125
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "A button/icon/control glyph candidate; behavior and use remain future review.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 30,
+      "id": "ui-hud.paper-label.small",
+      "label": "Small paper label",
+      "category": "paper-label",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 1075,
+        "y": 1338,
+        "w": 289,
+        "h": 132
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 31,
+      "id": "ui-hud.divider.thin-left",
+      "label": "Thin decorative divider",
+      "category": "divider",
+      "functionalType": "decorative-only",
+      "hostCapability": "no-content-hosting",
+      "sourceRect": {
+        "x": 1690,
+        "y": 1254,
+        "w": 174,
+        "h": 34
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Divider/flourish decoration only.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 32,
+      "id": "ui-hud.divider.flourish-right",
+      "label": "Flourish decorative divider",
+      "category": "divider",
+      "functionalType": "decorative-only",
+      "hostCapability": "no-content-hosting",
+      "sourceRect": {
+        "x": 1866,
+        "y": 1254,
+        "w": 207,
+        "h": 34
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Divider/flourish decoration only.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 33,
+      "id": "ui-hud.speech-bubble.small-tag",
+      "label": "Small speech tag",
+      "category": "speech-bubble",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 2121,
+        "y": 1222,
+        "w": 317,
+        "h": 196
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    },
+    {
+      "index": 34,
+      "id": "ui-hud.status-panel.vertical",
+      "label": "Vertical status panel",
+      "category": "status-panel",
+      "functionalType": "dynamic-host-surface",
+      "hostCapability": "can-host-live-content-after-future-review",
+      "sourceRect": {
+        "x": 2504,
+        "y": 1141,
+        "w": 246,
+        "h": 329
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Has an interior/backplate area that may later host live code-rendered content.",
+      "pipelineUse": "accepted-for-draft-functional-classification-planning"
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "ui-hud.functional-surface.pill-panel.long-teal",
+      "label": "Long teal pill panel",
+      "sourceRegionId": "ui-hud.pill-panel.long-teal",
+      "sourceRegionIndex": 1,
+      "sourceRect": {
+        "x": 67,
+        "y": 124,
+        "w": 541,
+        "h": 174
+      },
+      "surfaceType": "horizontal-pill-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.12,
+        "rightPct": 0.12,
+        "topPct": 0.28,
+        "bottomPct": 0.24
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.pill-panel.long-teal.primary-text",
+          "label": "Primary text/value field",
+          "slotType": "single-line-text-or-value-slot",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.3,
+            "wPct": 0.72,
+            "hPct": 0.4
+          },
+          "contentKind": "short-text-or-number",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Use for a compact label/value; avoid crowding rounded caps.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "left-cap",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 0.12,
+            "hPct": 1
+          },
+          "reason": "rounded cap/border"
+        },
+        {
+          "id": "right-cap",
+          "relativeRect": {
+            "xPct": 0.88,
+            "yPct": 0,
+            "wPct": 0.12,
+            "hPct": 1
+          },
+          "reason": "rounded cap/border"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.pill-panel.long-gold",
+      "label": "Long gold pill panel",
+      "sourceRegionId": "ui-hud.pill-panel.long-gold",
+      "sourceRegionIndex": 3,
+      "sourceRect": {
+        "x": 975,
+        "y": 96,
+        "w": 597,
+        "h": 226
+      },
+      "surfaceType": "horizontal-pill-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.13,
+        "rightPct": 0.13,
+        "topPct": 0.28,
+        "bottomPct": 0.24
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.pill-panel.long-gold.primary-text",
+          "label": "Primary text/value field",
+          "slotType": "single-line-text-or-value-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.31,
+            "wPct": 0.7,
+            "hPct": 0.38
+          },
+          "contentKind": "short-text-or-number",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Gold long pill has room for one compact label/value line.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "left-cap",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 0.13,
+            "hPct": 1
+          },
+          "reason": "rounded cap/border"
+        },
+        {
+          "id": "right-cap",
+          "relativeRect": {
+            "xPct": 0.87,
+            "yPct": 0,
+            "wPct": 0.13,
+            "hPct": 1
+          },
+          "reason": "rounded cap/border"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.dark-panel.long",
+      "label": "Long dark panel",
+      "sourceRegionId": "ui-hud.dark-panel.long",
+      "sourceRegionIndex": 5,
+      "sourceRect": {
+        "x": 1925,
+        "y": 124,
+        "w": 574,
+        "h": 174
+      },
+      "surfaceType": "horizontal-dark-panel-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.1,
+        "rightPct": 0.1,
+        "topPct": 0.22,
+        "bottomPct": 0.22
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.dark-panel.long.left-label",
+          "label": "Left label field",
+          "slotType": "label-slot",
+          "relativeRect": {
+            "xPct": 0.11,
+            "yPct": 0.25,
+            "wPct": 0.34,
+            "hPct": 0.46
+          },
+          "contentKind": "short-label",
+          "recommendedAlignment": "left",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Optional label side of a compact status pair.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.dark-panel.long.right-value",
+          "label": "Right value field",
+          "slotType": "value-slot",
+          "relativeRect": {
+            "xPct": 0.49,
+            "yPct": 0.25,
+            "wPct": 0.4,
+            "hPct": 0.46
+          },
+          "contentKind": "short-value-or-number",
+          "recommendedAlignment": "right",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Optional value side of a compact status pair.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "outer-border",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "border is visual frame; content should stay within safe inset"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.frame-small.teal",
+      "label": "Small teal frame",
+      "sourceRegionId": "ui-hud.frame-small.teal",
+      "sourceRegionIndex": 18,
+      "sourceRect": {
+        "x": 68,
+        "y": 882,
+        "w": 308,
+        "h": 256
+      },
+      "surfaceType": "small-framed-content-window",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.16,
+        "rightPct": 0.16,
+        "topPct": 0.18,
+        "bottomPct": 0.18
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.frame-small.teal.content-window",
+          "label": "Centered icon or tiny text window",
+          "slotType": "icon-or-tiny-text-slot",
+          "relativeRect": {
+            "xPct": 0.17,
+            "yPct": 0.18,
+            "wPct": 0.66,
+            "hPct": 0.64
+          },
+          "contentKind": "small-icon-or-very-short-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Small frame is too tight for dense text; use as icon/value badge host.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "frame-border",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "ornate frame border and corners"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.frame-medium.teal",
+      "label": "Medium teal frame",
+      "sourceRegionId": "ui-hud.frame-medium.teal",
+      "sourceRegionIndex": 19,
+      "sourceRect": {
+        "x": 437,
+        "y": 881,
+        "w": 458,
+        "h": 267
+      },
+      "surfaceType": "medium-framed-panel-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.13,
+        "rightPct": 0.13,
+        "topPct": 0.14,
+        "bottomPct": 0.14
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.frame-medium.teal.title-band",
+          "label": "Short title band",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.15,
+            "wPct": 0.7,
+            "hPct": 0.18
+          },
+          "contentKind": "short-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "One short title or stat name.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.frame-medium.teal.body-field",
+          "label": "Body/value field",
+          "slotType": "body-or-value-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.38,
+            "wPct": 0.7,
+            "hPct": 0.44
+          },
+          "contentKind": "short-body-text-or-large-value",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Use for one or two compact lines or a large central value.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "frame-border",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "frame border/corners"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.frame-large.teal",
+      "label": "Large teal frame",
+      "sourceRegionId": "ui-hud.frame-large.teal",
+      "sourceRegionIndex": 20,
+      "sourceRect": {
+        "x": 960,
+        "y": 881,
+        "w": 665,
+        "h": 401
+      },
+      "surfaceType": "large-framed-panel-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.11,
+        "rightPct": 0.11,
+        "topPct": 0.12,
+        "bottomPct": 0.12
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.frame-large.teal.title-band",
+          "label": "Title/header band",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.13,
+            "wPct": 0.74,
+            "hPct": 0.14
+          },
+          "contentKind": "short-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Header/title line.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.frame-large.teal.body-field",
+          "label": "Body content field",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.32,
+            "wPct": 0.74,
+            "hPct": 0.45
+          },
+          "contentKind": "short-body-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Multi-line planning slot; exact text renderer remains future/code-owned.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.frame-large.teal.footer-field",
+          "label": "Footer/action hint field",
+          "slotType": "footer-or-hint-slot",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.79,
+            "wPct": 0.64,
+            "hPct": 0.1
+          },
+          "contentKind": "tiny-text-or-status",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Optional footer/status hint; high overflow risk.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "frame-border",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "large frame border/corners"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.speech-bubble.small",
+      "label": "Small speech bubble",
+      "sourceRegionId": "ui-hud.speech-bubble.small",
+      "sourceRegionIndex": 21,
+      "sourceRect": {
+        "x": 1688,
+        "y": 881,
+        "w": 466,
+        "h": 215
+      },
+      "surfaceType": "speech-bubble-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.12,
+        "rightPct": 0.12,
+        "topPct": 0.16,
+        "bottomPct": 0.28
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.speech-bubble.small.bubble-text",
+          "label": "Bubble text field",
+          "slotType": "speech-text-slot",
+          "relativeRect": {
+            "xPct": 0.13,
+            "yPct": 0.16,
+            "wPct": 0.74,
+            "hPct": 0.48
+          },
+          "contentKind": "short-dialogue-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Tail/bottom area excluded; keep short.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "tail-zone",
+          "relativeRect": {
+            "xPct": 0.38,
+            "yPct": 0.64,
+            "wPct": 0.24,
+            "hPct": 0.31
+          },
+          "reason": "speech bubble tail / non-text area"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.dialogue-panel.feather-scroll",
+      "label": "Feather dialogue panel",
+      "sourceRegionId": "ui-hud.dialogue-panel.feather-scroll",
+      "sourceRegionIndex": 22,
+      "sourceRect": {
+        "x": 2216,
+        "y": 755,
+        "w": 541,
+        "h": 326
+      },
+      "surfaceType": "dialogue-panel-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.1,
+        "rightPct": 0.18,
+        "topPct": 0.18,
+        "bottomPct": 0.14
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.dialogue-panel.feather-scroll.title-band",
+          "label": "Dialogue title band",
+          "slotType": "title-slot",
+          "relativeRect": {
+            "xPct": 0.12,
+            "yPct": 0.19,
+            "wPct": 0.62,
+            "hPct": 0.17
+          },
+          "contentKind": "short-text",
+          "recommendedAlignment": "left",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Avoid feather/header ornament on right.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.dialogue-panel.feather-scroll.body-text",
+          "label": "Dialogue body field",
+          "slotType": "body-text-slot",
+          "relativeRect": {
+            "xPct": 0.12,
+            "yPct": 0.42,
+            "wPct": 0.7,
+            "hPct": 0.37
+          },
+          "contentKind": "short-body-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Two or three compact lines at most; live text remains code-owned.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "feather-ornament",
+          "relativeRect": {
+            "xPct": 0.76,
+            "yPct": 0.02,
+            "wPct": 0.23,
+            "hPct": 0.43
+          },
+          "reason": "feather/header decoration"
+        },
+        {
+          "id": "scroll-bottom",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0.84,
+            "wPct": 1,
+            "hPct": 0.16
+          },
+          "reason": "bottom scroll edge"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.paper-label.small",
+      "label": "Small paper label",
+      "sourceRegionId": "ui-hud.paper-label.small",
+      "sourceRegionIndex": 30,
+      "sourceRect": {
+        "x": 1075,
+        "y": 1338,
+        "w": 289,
+        "h": 132
+      },
+      "surfaceType": "paper-label-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.13,
+        "rightPct": 0.13,
+        "topPct": 0.24,
+        "bottomPct": 0.22
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.paper-label.small.short-label",
+          "label": "Short centered label",
+          "slotType": "single-line-label-slot",
+          "relativeRect": {
+            "xPct": 0.14,
+            "yPct": 0.27,
+            "wPct": 0.72,
+            "hPct": 0.42
+          },
+          "contentKind": "short-label",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Small paper label supports one short label; not a paragraph surface.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "paper-edge",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "paper outline and corner shading"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.speech-bubble.small-tag",
+      "label": "Small speech tag",
+      "sourceRegionId": "ui-hud.speech-bubble.small-tag",
+      "sourceRegionIndex": 33,
+      "sourceRect": {
+        "x": 2121,
+        "y": 1222,
+        "w": 317,
+        "h": 196
+      },
+      "surfaceType": "speech-tag-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.14,
+        "rightPct": 0.14,
+        "topPct": 0.2,
+        "bottomPct": 0.28
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.speech-bubble.small-tag.tag-text",
+          "label": "Small tag text",
+          "slotType": "speech-tag-text-slot",
+          "relativeRect": {
+            "xPct": 0.15,
+            "yPct": 0.2,
+            "wPct": 0.7,
+            "hPct": 0.42
+          },
+          "contentKind": "very-short-text",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Tail/notch makes lower area unsafe for text.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "tail-notch",
+          "relativeRect": {
+            "xPct": 0.39,
+            "yPct": 0.62,
+            "wPct": 0.22,
+            "hPct": 0.34
+          },
+          "reason": "tag tail/notch area"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "id": "ui-hud.functional-surface.status-panel.vertical",
+      "label": "Vertical status panel",
+      "sourceRegionId": "ui-hud.status-panel.vertical",
+      "sourceRegionIndex": 34,
+      "sourceRect": {
+        "x": 2504,
+        "y": 1141,
+        "w": 246,
+        "h": 329
+      },
+      "surfaceType": "vertical-status-panel-host-surface",
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "slotApproval": "accepted-for-draft-planning",
+      "safeInsets": {
+        "leftPct": 0.18,
+        "rightPct": 0.18,
+        "topPct": 0.12,
+        "bottomPct": 0.12
+      },
+      "slots": [
+        {
+          "id": "ui-hud.functional-surface.status-panel.vertical.top-icon",
+          "label": "Top icon/status slot",
+          "slotType": "icon-slot",
+          "relativeRect": {
+            "xPct": 0.28,
+            "yPct": 0.12,
+            "wPct": 0.44,
+            "hPct": 0.23
+          },
+          "contentKind": "small-icon",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Optional top status icon; not runtime selected.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.status-panel.vertical.value-band",
+          "label": "Middle value band",
+          "slotType": "value-slot",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.4,
+            "wPct": 0.64,
+            "hPct": 0.18
+          },
+          "contentKind": "short-value-or-number",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Primary numeric/stat display.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        },
+        {
+          "id": "ui-hud.functional-surface.status-panel.vertical.caption-band",
+          "label": "Lower caption band",
+          "slotType": "caption-slot",
+          "relativeRect": {
+            "xPct": 0.18,
+            "yPct": 0.64,
+            "wPct": 0.64,
+            "hPct": 0.17
+          },
+          "contentKind": "tiny-label",
+          "recommendedAlignment": "center",
+          "usage": "draft-review",
+          "reviewStatus": "human-review-passed",
+          "fitPolicy": {
+            "overflowRisk": "review-required",
+            "allowedResponses": [
+              "scale-surface-instance-within-view-budget",
+              "scale-content-down",
+              "wrap-text",
+              "truncate-with-ellipsis",
+              "reduce-content-density",
+              "choose-code-native-ui-instead"
+            ],
+            "scaleUpAllowed": true,
+            "scaleUpApproval": "not-runtime-approved",
+            "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+          },
+          "notes": "Optional tiny caption; high overflow risk.",
+          "slotApproval": "accepted-for-draft-planning",
+          "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+        }
+      ],
+      "protectedDecorativeZones": [
+        {
+          "id": "vertical-border",
+          "relativeRect": {
+            "xPct": 0,
+            "yPct": 0,
+            "wPct": 1,
+            "hPct": 1
+          },
+          "reason": "vertical frame border/corners"
+        }
+      ],
+      "fitPolicy": {
+        "overflowRisk": "review-required",
+        "allowedResponses": [
+          "scale-surface-instance-within-view-budget",
+          "scale-content-down",
+          "wrap-text",
+          "truncate-with-ellipsis",
+          "reduce-content-density",
+          "choose-code-native-ui-instead"
+        ],
+        "scaleUpAllowed": true,
+        "scaleUpApproval": "not-runtime-approved",
+        "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
+      },
+      "mappingConfidence": "draft-human-review-required",
+      "notes": [
+        "Slot rectangles are relative to this shared UI region crop, not global runtime coordinates.",
+        "This surface is a shared UI/HUD planning candidate only; no game-specific selection is approved by H5.94.",
+        "Future runtime lanes may choose code-native, asset-backed, hybrid, or no-use treatment after human review.",
+        "H5.95 human review accepted this shared host-surface slot mapping for draft planning only."
+      ],
+      "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    }
+  ],
+  "evidence": [
+    "assets/academy/evidence/h5-94-shared-ui-functional-surfaces-button-goblin/shared-ui-functional-slot-corrected-overlay.png",
+    "assets/academy/evidence/h5-94-shared-ui-functional-surfaces-button-goblin/shared-ui-functional-slot-table-preview.png",
+    "assets/academy/evidence/h5-94-shared-ui-functional-surfaces-button-goblin/shared-ui-region-functional-classification-preview.png"
+  ],
+  "notes": [
+    "H5.94 corrects the lane boundary to shared UI/HUD internal functional slot mapping only.",
+    "Button Goblin Clicker UI asset selection is explicitly deferred to a later H5.96-style planning lane.",
+    "No Button Goblin runtime files, background anchors, game screenshots, or runtime UI behavior are approved here.",
+    "H5.94 does not modify the shared UI source PNG, cleaned derivative, or outer H5.2/H5.2B region manifest."
+  ],
+  "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning",
+  "nineSliceApproval": "none",
+  "humanReview": {
+    "reviewId": "H5.95",
+    "decision": "passed",
+    "reviewer": "Kryssie + Mega",
+    "acceptedFindings": [
+      "all 34 outer regions classified",
+      "11 dynamic host surfaces identified",
+      "18 draft internal functional slots accepted",
+      "crop boundaries, protected decorative exclusions, and content slots are visually distinguishable",
+      "slot geometry is surface-relative and component-capability-aware",
+      "H5.94A evidence legibility accepted"
+    ],
+    "preservedBoundaries": [
+      "runtimeEligibility remains not-runtime-approved",
+      "gameSelectionApproval remains none",
+      "nineSliceApproval remains none",
+      "Button Goblin selection deferred to H5.96",
+      "runtime work remains H6 concern"
+    ],
+    "notes": "H5.95 accepts shared UI/HUD functional slot geometry as reusable asset intelligence. It does not approve runtime coordinates, game-specific selection, nine-slice behavior, or runtime UI wiring."
+  }
+}
