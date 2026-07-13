@@ -1,0 +1,591 @@
+{
+  "schemaVersion": "0.1",
+  "status": "draft",
+  "reviewStatus": "needs-human-review",
+  "domain": "academy-ui",
+  "operationalType": "academy-wide-ui-grammar-and-font-architecture-plan",
+  "pipelineUse": "planning-only-ui-grammar-font-architecture",
+  "runtimeEligibility": "not-runtime-approved",
+  "gameSelectionApproval": "none",
+  "fontIngestApproval": "none",
+  "uiAssetSelectionApproval": "none",
+  "nineSliceApproval": "none",
+  "sourceBaselineCommit": "fddcc0f",
+  "createdDate": "2026-07-13",
+  "sourceManifests": [
+    "manifests/academy/shared/academy.ui-hud.regions.json",
+    "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
+    "manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frame-functional-slots.json",
+    "manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json",
+    "manifests/academy/fonts/academy.font-pantry-core-selection.json"
+  ],
+  "auditedScope": {
+    "hubIncluded": true,
+    "tier1GameCount": 10,
+    "games": [
+      {
+        "id": "hub",
+        "label": "Academy Hub / Launcher",
+        "path": "hub",
+        "uiSummary": "launcher cards, boot screen, Help/Ledger/Dev shell overlays, dev/prod action surfaces",
+        "sharedNeeds": [
+          "academy top bar",
+          "modal shell",
+          "game cards",
+          "launch status"
+        ],
+        "gameSpecificNeeds": [
+          "dev source/runtime diagnostics",
+          "future production delivery actions"
+        ],
+        "conflicts": [
+          "dev and production controls must be mode-gated"
+        ]
+      },
+      {
+        "id": "button-goblin-clicker",
+        "label": "Button Goblin Clicker",
+        "path": "games/tier-1/01-button-goblin-clicker",
+        "uiSummary": "in-stage HUD rail, goblin target, action card, click feedback, victory state",
+        "sharedNeeds": [
+          "stat cards",
+          "action card",
+          "title/subtitle",
+          "feedback lane"
+        ],
+        "gameSpecificNeeds": [
+          "goblin target HP/bonk upgrade semantics"
+        ],
+        "conflicts": [
+          "background/actor must keep central readability"
+        ]
+      },
+      {
+        "id": "potion-sorter",
+        "label": "Potion Sorter",
+        "path": "games/tier-1/02-potion-sorter",
+        "uiSummary": "potion shelf/play area, status cards, selection label, result feedback",
+        "sharedNeeds": [
+          "stat/value cards",
+          "instruction hint",
+          "result banner"
+        ],
+        "gameSpecificNeeds": [
+          "sort destinations and potion selection grammar"
+        ],
+        "conflicts": [
+          "drag/drop targets need stronger game-owned layout than generic panels"
+        ]
+      },
+      {
+        "id": "dice-duel-tavern",
+        "label": "Dice Duel Tavern",
+        "path": "games/tier-1/03-dice-duel-tavern",
+        "uiSummary": "dice actions, player/enemy stats, result/round feedback, tavern framing",
+        "sharedNeeds": [
+          "action buttons",
+          "stat cards",
+          "result notice"
+        ],
+        "gameSpecificNeeds": [
+          "dice roll/reveal/status semantics"
+        ],
+        "conflicts": [
+          "future roll illusion uses sprite/FX planning, not generic UI"
+        ]
+      },
+      {
+        "id": "card-goblin-duel",
+        "label": "Card Goblin Duel",
+        "path": "games/tier-1/04-card-goblin-duel",
+        "uiSummary": "card frames, hand/board slots, status/action surfaces, token UI",
+        "sharedNeeds": [
+          "status headers",
+          "action buttons",
+          "modal/help surfaces"
+        ],
+        "gameSpecificNeeds": [
+          "card slots, card frame internal slots, token meaning"
+        ],
+        "conflicts": [
+          "card UI has its own functional-surface grammar and cannot be replaced by shared HUD frames"
+        ]
+      },
+      {
+        "id": "dungeon-key-run",
+        "label": "Dungeon Key Run",
+        "path": "games/tier-1/05-dungeon-key-run",
+        "uiSummary": "movement/key/exit status, instructions, reset/control hints",
+        "sharedNeeds": [
+          "compact HUD",
+          "help/control hint",
+          "failure/victory notice"
+        ],
+        "gameSpecificNeeds": [
+          "key/door/enemy/dungeon state"
+        ],
+        "conflicts": [
+          "visual icons must not imply behavior before collision/interaction is approved"
+        ]
+      },
+      {
+        "id": "tiny-farm-day",
+        "label": "Tiny Farm Day",
+        "path": "games/tier-1/06-tiny-farm-day",
+        "uiSummary": "farm resources, turn/action status, plot interaction controls",
+        "sharedNeeds": [
+          "resource cards",
+          "action card",
+          "timer/turn label"
+        ],
+        "gameSpecificNeeds": [
+          "crop/plot/weather/resource semantics"
+        ],
+        "conflicts": [
+          "resource panels can share grammar, but plot UI is game-specific"
+        ]
+      },
+      {
+        "id": "pet-campfire",
+        "label": "Pet Campfire",
+        "path": "games/tier-1/07-pet-campfire",
+        "uiSummary": "pet state/care meters, scene anchors, care action symbols, mood/status bubbles",
+        "sharedNeeds": [
+          "care/status cards",
+          "speech/status bubbles",
+          "action cards"
+        ],
+        "gameSpecificNeeds": [
+          "pet state-symbol placement and care grammar"
+        ],
+        "conflicts": [
+          "scene-anchor grammar controls placement; generic icon dumping remains rejected"
+        ]
+      },
+      {
+        "id": "one-room-platformer",
+        "label": "One-Room Platformer",
+        "path": "games/tier-1/08-one-room-platformer",
+        "uiSummary": "platforming stage, movement controls, reset, physics/debug state",
+        "sharedNeeds": [
+          "touch control overlay",
+          "help modal",
+          "debug overlay"
+        ],
+        "gameSpecificNeeds": [
+          "movement contract and route validation status"
+        ],
+        "conflicts": [
+          "controls are input surfaces and must not be stranded outside stage"
+        ]
+      },
+      {
+        "id": "top-down-slime-quest",
+        "label": "Top-Down Slime Quest",
+        "path": "games/tier-1/09-top-down-slime-quest",
+        "uiSummary": "topdown movement/combat status, health/resources, tile/object context, controls",
+        "sharedNeeds": [
+          "compact HUD",
+          "touch controls",
+          "debug overlay"
+        ],
+        "gameSpecificNeeds": [
+          "slime/soldier animation, terrain/wall/object behavior deferred"
+        ],
+        "conflicts": [
+          "topdown pantry availability does not imply runtime behavior approval"
+        ]
+      },
+      {
+        "id": "mini-settlement-sim",
+        "label": "Mini Settlement Sim",
+        "path": "games/tier-1/10-mini-settlement-sim",
+        "uiSummary": "resource/progression panels, building/action controls, event/status surfaces",
+        "sharedNeeds": [
+          "resource cards",
+          "action cards",
+          "ledger/status modal"
+        ],
+        "gameSpecificNeeds": [
+          "citizen/building/resource economy semantics"
+        ],
+        "conflicts": [
+          "sim panels may need denser data than decorative UI assets can safely host"
+        ]
+      }
+    ],
+    "allTenTier1GamesAudited": true
+  },
+  "ownershipClasses": [
+    "academy-shared",
+    "shared-skinnable",
+    "game-specific"
+  ],
+  "uiOwnershipEntries": [
+    {
+      "surface": "Academy top bar / return controls",
+      "classification": "academy-shared",
+      "renderingMode": "code-native",
+      "reason": "global navigation and shell identity must remain consistent across games",
+      "mappedSharedUiUse": "none required"
+    },
+    {
+      "surface": "Help / Ledger / Dev overlays",
+      "classification": "academy-shared",
+      "renderingMode": "code-native",
+      "reason": "shell-owned modals with game-hydrated content later",
+      "mappedSharedUiUse": "modal body may be skinned later"
+    },
+    {
+      "surface": "Keyboard shortcuts and focus rules",
+      "classification": "academy-shared",
+      "renderingMode": "code-native",
+      "reason": "accessibility and shell control law",
+      "mappedSharedUiUse": "none"
+    },
+    {
+      "surface": "Debug/status inspector",
+      "classification": "academy-shared",
+      "renderingMode": "code-native",
+      "reason": "development-only truth surface",
+      "mappedSharedUiUse": "none"
+    },
+    {
+      "surface": "Game title/subtitle treatment",
+      "classification": "shared-skinnable",
+      "renderingMode": "hybrid",
+      "reason": "shared hierarchy, game-specific wording and accent",
+      "mappedSharedUiUse": "host surfaces 1/3/19/20 possible later"
+    },
+    {
+      "surface": "Stat/value cards",
+      "classification": "shared-skinnable",
+      "renderingMode": "hybrid",
+      "reason": "recurs across clicker, farm, settlement, topdown, potion",
+      "mappedSharedUiUse": "host surfaces 5/18/34 possible later"
+    },
+    {
+      "surface": "Action/upgrade cards",
+      "classification": "shared-skinnable",
+      "renderingMode": "hybrid",
+      "reason": "shared card structure, game-owned action semantics",
+      "mappedSharedUiUse": "host surfaces 19/20/22 possible later"
+    },
+    {
+      "surface": "Instruction/hint surfaces",
+      "classification": "shared-skinnable",
+      "renderingMode": "code-native or hybrid",
+      "reason": "shared readability needs with optional fantasy frame",
+      "mappedSharedUiUse": "host surfaces 1/3/21/22 possible later"
+    },
+    {
+      "surface": "Progress/timer/resource bars",
+      "classification": "shared-skinnable",
+      "renderingMode": "code-native first",
+      "reason": "data-heavy and responsive; asset trim optional",
+      "mappedSharedUiUse": "outer UI regions only after slot validation"
+    },
+    {
+      "surface": "Victory/failure/result notices",
+      "classification": "shared-skinnable",
+      "renderingMode": "hybrid",
+      "reason": "common hierarchy, game-specific flavor",
+      "mappedSharedUiUse": "host surfaces 19/20/22 possible later"
+    },
+    {
+      "surface": "Touch/on-screen controls",
+      "classification": "shared-skinnable",
+      "renderingMode": "code-native first",
+      "reason": "input reliability beats decoration; skins optional",
+      "mappedSharedUiUse": "button/control regions after explicit game selection"
+    },
+    {
+      "surface": "Potion shelves and sort destinations",
+      "classification": "game-specific",
+      "renderingMode": "game-owned hybrid",
+      "reason": "game mechanics define placement and affordance",
+      "mappedSharedUiUse": "shared labels only"
+    },
+    {
+      "surface": "Dice roll/reveal/status language",
+      "classification": "game-specific",
+      "renderingMode": "game-owned hybrid",
+      "reason": "roll illusion and dice state are unique",
+      "mappedSharedUiUse": "shared result panel only"
+    },
+    {
+      "surface": "Card hand/board slots and card frames",
+      "classification": "game-specific",
+      "renderingMode": "asset-backed + code text",
+      "reason": "card frames already have their own slot grammar",
+      "mappedSharedUiUse": "do not replace card frame grammar"
+    },
+    {
+      "surface": "Pet care meters and state bubbles",
+      "classification": "game-specific",
+      "renderingMode": "game-owned hybrid",
+      "reason": "scene anchors and care grammar define meaning",
+      "mappedSharedUiUse": "shared bubbles/cards may skin later"
+    },
+    {
+      "surface": "Platformer movement controls",
+      "classification": "game-specific",
+      "renderingMode": "code-native first",
+      "reason": "input surfaces tied to movement contract",
+      "mappedSharedUiUse": "shared button skin optional"
+    },
+    {
+      "surface": "Topdown combat/movement HUD",
+      "classification": "game-specific",
+      "renderingMode": "code-native first",
+      "reason": "behavior and animation approvals deferred",
+      "mappedSharedUiUse": "shared stat cards optional"
+    },
+    {
+      "surface": "Settlement economy/building panels",
+      "classification": "game-specific",
+      "renderingMode": "code-native or hybrid",
+      "reason": "dense sim data may outgrow decorative frames",
+      "mappedSharedUiUse": "shared resource cards optional"
+    }
+  ],
+  "ownershipCounts": {
+    "academy-shared": 4,
+    "shared-skinnable": 7,
+    "game-specific": 7
+  },
+  "fontInventory": [
+    {
+      "name": "Georgia / Times New Roman / serif",
+      "status": "current-runtime-reference",
+      "location": "Tier 1 game CSS and Phaser text configs",
+      "roleToday": "fantasy-ish display/body fallback",
+      "note": "system/fallback stack, not a repo-ingested font asset"
+    },
+    {
+      "name": "Segoe UI / Tahoma / Geneva / Verdana / sans-serif",
+      "status": "current-runtime-reference",
+      "location": "One-Room Platformer, Top-Down Slime Quest, Mini Settlement Sim",
+      "roleToday": "plain readable UI fallback",
+      "note": "system/fallback stack"
+    },
+    {
+      "name": "Inter",
+      "status": "referenced-not-bundled",
+      "location": "hub/src/styles/hub.css",
+      "roleToday": "hub body preference before system fallback",
+      "note": "no repo font binary/import found in this audit"
+    },
+    {
+      "name": "ui-monospace / SFMono-Regular / Consolas / monospace",
+      "status": "current-runtime-reference",
+      "location": "Hub and several Tier 1 labels/debug displays",
+      "roleToday": "debug/data/labels",
+      "note": "system/fallback stack"
+    },
+    {
+      "name": "Cinzel Decorative / Cinzel",
+      "status": "planned-not-ingested",
+      "location": "H5.90 font direction",
+      "roleToday": "future academy-display/game-display candidate",
+      "note": "license/provenance and binaries still need future intake"
+    },
+    {
+      "name": "Caudex / Alegreya",
+      "status": "planned-not-ingested",
+      "location": "H5.90 font direction",
+      "roleToday": "future readable fantasy body/UI candidate",
+      "note": "license/provenance and binaries still need future intake"
+    },
+    {
+      "name": "Atkinson Hyperlegible / Outfit",
+      "status": "planned-not-ingested",
+      "location": "H5.90 font direction",
+      "roleToday": "future accessibility/body fallback candidate",
+      "note": "source candidates identified, no repo ingest yet"
+    },
+    {
+      "name": "Fira Code / Space Mono",
+      "status": "planned-not-ingested",
+      "location": "H5.89/H5.90 font direction",
+      "roleToday": "future debug-mono candidate",
+      "note": "source candidates identified, no repo ingest yet"
+    },
+    {
+      "name": "Macondo / Almendra / Merienda / MedievalSharp / related accents",
+      "status": "planned-optional-game-accent",
+      "location": "H5.90 optional flavor list",
+      "roleToday": "one accent per game at most",
+      "note": "must not be used for dense/tiny text"
+    },
+    {
+      "name": "ROGLyonsTypeRegular3.ttf",
+      "status": "do-not-ingest-without-license-proof",
+      "location": "H5.89 font inventory note",
+      "roleToday": "none",
+      "note": "explicitly not usable until provenance is proven"
+    }
+  ],
+  "fontRoles": [
+    {
+      "role": "academy-display",
+      "purpose": "Tiny Goblin Academy identity headings and major title moments",
+      "currentFallback": "Georgia/Cinzel-style serif fallback",
+      "futureCandidate": "Cinzel Decorative or Cinzel",
+      "constraints": "large sizes only; never dense body text"
+    },
+    {
+      "role": "game-display",
+      "purpose": "individual game title styling and splash headers",
+      "currentFallback": "Georgia/serif or game CSS fallback",
+      "futureCandidate": "Cinzel, Caudex, or game accent",
+      "constraints": "shared hierarchy; optional game flavor; no more than one accent per game"
+    },
+    {
+      "role": "ui-body",
+      "purpose": "readable instructions, modal copy, card body text",
+      "currentFallback": "system serif/sans fallback depending game",
+      "futureCandidate": "Caudex, Alegreya, Atkinson Hyperlegible, Outfit",
+      "constraints": "readability outranks ornament; narrow layouts must preserve line length"
+    },
+    {
+      "role": "ui-label",
+      "purpose": "small uppercase labels, stat names, compact HUD labels",
+      "currentFallback": "ui-monospace or system sans/serif",
+      "futureCandidate": "Outfit, Atkinson, Caudex small caps if legible",
+      "constraints": "must remain legible at tiny sizes"
+    },
+    {
+      "role": "ui-data",
+      "purpose": "numbers, counters, HP, coins, turns, timers",
+      "currentFallback": "Georgia bold or system mono",
+      "futureCandidate": "Atkinson/Outfit/Fira Code depending context",
+      "constraints": "tabular stability preferred; no decorative figures for core data"
+    },
+    {
+      "role": "debug-mono",
+      "purpose": "Dev overlay, diagnostics, source paths, raw ledger details",
+      "currentFallback": "ui-monospace/SFMono/Consolas/monospace",
+      "futureCandidate": "Fira Code or Space Mono",
+      "constraints": "developer truth surface; plain and stable"
+    },
+    {
+      "role": "optional-game-accent",
+      "purpose": "small flavor moments unique to a game",
+      "currentFallback": "none / current game display",
+      "futureCandidate": "Macondo, Almendra, Merienda, MedievalSharp, Uncial-like candidates",
+      "constraints": "one per game max; never required for comprehension"
+    }
+  ],
+  "futureFontIngestionPlan": {
+    "status": "planning-only",
+    "recommendedRepoShelf": "assets/academy/fonts/",
+    "recommendedManifest": "manifests/academy/shared/planning/academy.fonts.runtime-candidate.json",
+    "requiredFields": [
+      "family",
+      "style",
+      "weight",
+      "sourcePath",
+      "license",
+      "licenseUrl",
+      "provenance",
+      "format",
+      "sha256",
+      "runtimeEligibility",
+      "cssVariable",
+      "fallbackStack",
+      "intendedRoles",
+      "reviewStatus"
+    ],
+    "formatPolicy": [
+      "Prefer WOFF2 for web runtime.",
+      "Keep original TTF/OTF as source only when license permits.",
+      "No font binary is runtime-approved until intake, license review, and render testing pass."
+    ],
+    "cssPolicy": [
+      "Use @font-face only after repo ingest.",
+      "Use CSS variables for semantic roles.",
+      "Preload only the minimum Academy identity/body/mono faces after performance review."
+    ],
+    "phaserPolicy": [
+      "DOM HUD can use CSS fonts directly.",
+      "Phaser Text can use loaded web fonts after font loading gate.",
+      "BitmapText requires a separate bitmap font generation lane and is not assumed."
+    ],
+    "comparisonSetPolicy": [
+      "Slash-separated font groups are planning comparison sets, not single ingest units.",
+      "Future visual evaluation, licensing, provenance, and binary intake must occur per individual font family, style, and weight.",
+      "H5.96 does not approve any grouped font candidate for bundled runtime use."
+    ]
+  },
+  "renderingModePolicy": {
+    "codeNative": "Use for dynamic text, accessibility, layout, modal behavior, dense data, input controls, and debug truth surfaces.",
+    "assetBacked": "Use for decorative frames, icons, stable panels, and approved visual skins only after mapping/review.",
+    "hybrid": "Preferred for fantasy UI: asset/frame/backplate provides affordance, code renders text/data/icons into validated slots.",
+    "bakedTextPolicy": "No baked dynamic text in asset panels. Text remains code-rendered unless intentionally decorative and non-dynamic."
+  },
+  "crossGameResponsibilityMatrix": [
+    {
+      "responsibility": "shell navigation",
+      "defaultOwner": "academy-shared",
+      "games": "Hub plus all Tier 1 games",
+      "notes": "top bar/close/return remains shell-owned"
+    },
+    {
+      "responsibility": "player-facing stats",
+      "defaultOwner": "shared-skinnable",
+      "games": "Clicker, Farm, Settlement, Topdown, Potion, Dice",
+      "notes": "shared card grammar; game supplies data"
+    },
+    {
+      "responsibility": "action card/buttons",
+      "defaultOwner": "shared-skinnable",
+      "games": "Clicker, Potion, Dice, Farm, Settlement, Pet",
+      "notes": "structure shared, action semantics game-owned"
+    },
+    {
+      "responsibility": "modal help/ledger/dev",
+      "defaultOwner": "academy-shared",
+      "games": "Hub plus all Tier 1 games",
+      "notes": "content may hydrate from game later"
+    },
+    {
+      "responsibility": "game board/stage controls",
+      "defaultOwner": "game-specific",
+      "games": "Platformer, Topdown, Card, Potion, Pet",
+      "notes": "input/collision/placement rules prevent generic ownership"
+    },
+    {
+      "responsibility": "font semantic roles",
+      "defaultOwner": "academy-shared",
+      "games": "Hub plus all Tier 1 games",
+      "notes": "games can choose an optional accent only within grammar"
+    }
+  ],
+  "h5_97Recommendation": {
+    "lane": "H5.97 — Button Goblin Clicker UI Asset Selection Comparison",
+    "comparisonSet": [
+      "code-native only",
+      "hybrid shared stat/value cards",
+      "hybrid shared action card",
+      "limited decorative frame accents only"
+    ],
+    "requirement": "Compare without runtime wiring first; do not assume mapped shared UI hosts are automatically good for Button Goblin."
+  },
+  "nonGoals": [
+    "no runtime implementation",
+    "no Button Goblin UI asset selection",
+    "no font ingest",
+    "no font generation",
+    "no CSS/Phaser edits",
+    "no game logic edits",
+    "no source image edits",
+    "no package or lock changes",
+    "no nine-slice approval"
+  ],
+  "notes": [
+    "H5.96 is the bridge between shared UI functional-slot mapping and later H6 runtime integration.",
+    "Current font usage is mostly system/fallback references; no repo font binary intake is claimed.",
+    "Shared-skinnable means structure may be shared, not that every game should use the same crop or frame."
+  ]
+}

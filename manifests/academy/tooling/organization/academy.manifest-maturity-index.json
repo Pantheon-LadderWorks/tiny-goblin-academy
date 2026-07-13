@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 72,
+  "totalManifestCount": 73,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -63,7 +63,8 @@
     "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "runtimeButtonGoblinLiveGoblinRigIntegration": "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
-    "sharedUiFunctionalSurfaces": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json"
+    "sharedUiFunctionalSurfaces": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
+    "sharedUiGrammarFontArchitecture": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -130,6 +131,7 @@
     "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
+    "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
     "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
@@ -695,6 +697,17 @@
       "runtimeEligibility": null,
       "runtimeApproved": false,
       "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
+      "maturityClass": "planning",
+      "authorityRole": "Academy-wide UI grammar and font architecture planning record",
+      "categoryShelf": "manifests/academy/shared/planning",
+      "status": "draft",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "H5.96 defines Academy-wide UI ownership and font role grammar before Button Goblin shared UI asset selection; planning only, no runtime approval.",
+      "pipelineUse": "planning-only-ui-grammar-font-architecture"
     },
     {
       "path": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",

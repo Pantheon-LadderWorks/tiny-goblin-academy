@@ -88,6 +88,36 @@ The reviewed manifest remains:
 
 H5.95 does not approve runtime UI, exact runtime coordinates, Button Goblin asset selection, game-specific UI placement, nine-slice behavior, package/lock changes, or source/derived UI image changes. Button Goblin shared UI selection is deferred to H5.96.
 
+## H5.96 Academy UI Grammar and Font Architecture Note
+
+H5.96 defines Academy-wide UI ownership and font role grammar before Button Goblin Clicker chooses any shared UI/HUD assets.
+
+Planning manifest:
+
+`manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json`
+
+Report:
+
+`docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_96_ACADEMY_UI_GRAMMAR_AND_FONT_ARCHITECTURE.md`
+
+H5.96 classifies recurring interface responsibilities as:
+
+* `academy-shared` for global shell/navigation/help/ledger/dev/focus/debug truth surfaces;
+* `shared-skinnable` for common structures such as stat cards, action cards, result notices, title treatment, hints, resource panels, and touch-control skins;
+* `game-specific` for surfaces governed by a game's own mechanics, such as card frames, pet care/state grammar, potion destinations, platformer controls, topdown combat/movement HUD, and settlement economy panels.
+
+H5.96 also defines semantic font roles:
+
+* `academy-display`
+* `game-display`
+* `ui-body`
+* `ui-label`
+* `ui-data`
+* `debug-mono`
+* `optional-game-accent`
+
+Current typography is mostly system/fallback stack usage, not repo-ingested font binaries. H5.89/H5.90 font directions remain planned future intake only. H5.96 does not ingest fonts, select Button Goblin UI assets, approve shared UI runtime use, edit CSS/Phaser scenes, approve nine-slice behavior, change package/lock files, or wire any runtime UI.
+
 
 ## H5.92 Asset Docs Reorganization Note
 
