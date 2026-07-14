@@ -1497,10 +1497,10 @@
           "label": "Dialogue title band",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.12,
-            "yPct": 0.19,
-            "wPct": 0.62,
-            "hPct": 0.17
+            "xPct": 0.17,
+            "yPct": 0.14,
+            "wPct": 0.55,
+            "hPct": 0.15
           },
           "contentKind": "short-text",
           "recommendedAlignment": "left",
@@ -1520,7 +1520,7 @@
             "scaleUpApproval": "not-runtime-approved",
             "notes": "Future layout may scale a rendered UI surface up within view/stage budget, but H5.94 approves no runtime scaling or game-specific selection."
           },
-          "notes": "Avoid feather/header ornament on right.",
+          "notes": "Optically centered on the ribbon's quiet writing lane; inset from the decorative left start and kept clear of the feather plaque on the right.",
           "slotApproval": "accepted-for-draft-planning",
           "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
         },

@@ -118,6 +118,47 @@ H5.96 also defines semantic font roles:
 
 Current typography is mostly system/fallback stack usage, not repo-ingested font binaries. H5.89/H5.90 font directions remain planned future intake only. H5.96 does not ingest fonts, select Button Goblin UI assets, approve shared UI runtime use, edit CSS/Phaser scenes, approve nine-slice behavior, change package/lock files, or wire any runtime UI.
 
+## H5.97 Academy Visual Grammar Laboratory Note
+
+H5.97 creates a static visual grammar laboratory for Academy fonts and UI treatments before runtime implementation.
+
+Artifacts:
+
+```text
+manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json
+manifests/academy/shared/planning/academy.visual-grammar-laboratory.json
+manifests/academy/shared/planning/academy.material-aware-typography-recipes-h5-97d.json
+docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_97_ACADEMY_VISUAL_GRAMMAR_LABORATORY.md
+assets/academy/evidence/h5-97-academy-visual-grammar-laboratory/
+```
+
+This lane performs controlled fantasy font source intake for evaluation only. Candidate font files and OFL/license metadata from the Google Fonts GitHub repository are stored under:
+
+```text
+assets/academy/fonts/source/google-fonts/
+```
+
+These files are source pantry candidates, not runtime-approved fonts. H5.97 does not modify live Hub/game CSS, Phaser scenes, runtime source, package/lock files, or gameplay. It does not select final Academy fonts, approve Button Goblin UI assets, create shared runtime components, or approve nine-slice behavior.
+
+H5.97 compares:
+
+* semantic font role specimens;
+* code-native UI;
+* hybrid shared host surfaces;
+* decorative-only shared assets;
+* game-specific treatments;
+* narrow layout typography;
+* shared host-surface content fit;
+* material-aware typography recipes;
+* hover/focus, disabled, warning, success, and purchased states;
+* busy-background readability on the real Button Goblin cavern;
+* desktop/narrow protected text ranges;
+* DOM/CSS and Phaser treatment parity notes.
+
+H5.97 human visual review passed after Region 22's title lane was corrected from a geometrically safe but optically low/left-heavy rectangle to the approved ribbon writing band (`x 0.17 / y 0.14 / w 0.55 / h 0.15`). All H5.97D treatments are accepted as selectable variants. H5.97D's central doctrine is `semantic role × host material = rendered text treatment`: parchment behaves like ink, dark materials use restrained edge protection, and busy playfields gain a backplate when stroke/shadow alone remain scene-dependent. Shared UI assets remain promising as frames and accents, but several host surfaces still need future nine-slice/runtime primitives before they can safely own flexible live content.
+
+The inherited Macondo `OFL.txt` copyright line contains replacement-character damage. H5.97 preserves that debt honestly; H5.98 must verify or replace the license record from the authoritative source before Macondo can be runtime-eligible.
+
 
 ## H5.92 Asset Docs Reorganization Note
 

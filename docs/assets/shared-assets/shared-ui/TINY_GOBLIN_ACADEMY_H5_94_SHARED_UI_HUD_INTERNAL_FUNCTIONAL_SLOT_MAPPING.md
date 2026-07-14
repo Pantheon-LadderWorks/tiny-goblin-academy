@@ -166,7 +166,7 @@ Accepted findings:
 - crop boundaries, protected decorative exclusions, and content slots are visually distinguishable;
 - slot geometry remains surface-relative and differs appropriately by component capability;
 - evidence legibility is accepted after H5.94A;
-- no geometry discrepancy was found.
+- no geometry discrepancy was found during the original H5.95 review.
 
 Preserved boundaries:
 
@@ -183,3 +183,21 @@ H5.96 — Button Goblin Shared UI Asset Selection Planning
 ```
 
 H5.96 can now ask which Button Goblin interface roles actually need the approved capabilities of each shared UI component. H5.95 does not make that selection.
+
+## H5.97C Human-Review Optical Correction
+
+Later visual review found one optical discrepancy that the original geometry review did not catch: Region 22's title rectangle was safe from the feather plaque but sat too low and claimed too much of the decorative left ribbon start.
+
+The authoritative title slot in `manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json` changed from:
+
+```text
+x 0.12 / y 0.19 / w 0.62 / h 0.17
+```
+
+to:
+
+```text
+x 0.17 / y 0.14 / w 0.55 / h 0.15
+```
+
+The corrected slot is optically centered on the ribbon's quiet writing lane while keeping its right edge at `0.72` clear of the feather plaque. This remains draft planning geometry; runtime, game selection, and nine-slice approvals remain none.

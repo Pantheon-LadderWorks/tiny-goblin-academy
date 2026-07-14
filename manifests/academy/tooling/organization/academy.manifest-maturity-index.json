@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 73,
+  "totalManifestCount": 76,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -64,7 +64,9 @@
     "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "runtimeButtonGoblinLiveGoblinRigIntegration": "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
     "sharedUiFunctionalSurfaces": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
-    "sharedUiGrammarFontArchitecture": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json"
+    "sharedUiGrammarFontArchitecture": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
+    "h5_97FontSourceIntake": "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
+    "h5_97VisualGrammarLaboratory": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -121,6 +123,7 @@
   ],
   "planningManifests": [
     "manifests/academy/fonts/planning/academy.font-pantry-source-inventory-plan.json",
+    "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
     "manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
@@ -131,8 +134,10 @@
     "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
+    "manifests/academy/shared/planning/academy.material-aware-typography-recipes-h5-97d.json",
     "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
     "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
+    "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
     "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-unified-viewer-shell-design.json",
     "manifests/academy/tooling/glyphforge/planning/academy.visual-tool-prototype-intake-comparison.json",
@@ -273,6 +278,17 @@
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
       "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
+    },
+    {
+      "path": "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.97 font source intake and provenance record for visual evaluation",
+      "categoryShelf": "manifests/academy/fonts/planning",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-with-provenance-debt",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "H5.97 visual review passed. Records controlled fantasy font source intake from Google Fonts plus local/system evaluation sources; Macondo carries inherited license-text encoding debt for H5.98 resolution. No runtime font approval.",
+      "pipelineUse": "font-source-intake-for-visual-evaluation"
     },
     {
       "path": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
@@ -699,6 +715,17 @@
       "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
     },
     {
+      "path": "manifests/academy/shared/planning/academy.material-aware-typography-recipes-h5-97d.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.97D material-aware typography recipe contract and evidence manifest",
+      "categoryShelf": "manifests/academy/shared/planning",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Human review accepted all 15 semantic-role × host-material treatments after the Region 22 correction; recipes remain non-runtime planning evidence for H5.98 promotion.",
+      "pipelineUse": "material-aware-typography-visual-evaluation"
+    },
+    {
       "path": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
       "maturityClass": "planning",
       "authorityRole": "Academy-wide UI grammar and font architecture planning record",
@@ -719,6 +746,17 @@
       "runtimeEligibility": "not-runtime-approved",
       "reason": "H5.95 human review accepted H5.94/H5.94A shared UI/HUD functional slot mapping for draft planning only; no game selection or runtime approval.",
       "pipelineUse": "accepted-for-draft-shared-ui-functional-slot-planning"
+    },
+    {
+      "path": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.97 Academy visual grammar laboratory planning and evidence manifest",
+      "categoryShelf": "manifests/academy/shared/planning",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "reason": "Human review accepted the Academy-wide visual grammar after Region 22 title geometry was corrected to x 0.17 / y 0.14 / w 0.55 / h 0.15; remains non-runtime evidence for H5.98 promotion.",
+      "pipelineUse": "visual-grammar-font-ui-mode-evaluation"
     },
     {
       "path": "manifests/academy/tooling/glyphforge/planning/academy.glyphforge-static-prototype-plan.json",
@@ -1110,7 +1148,7 @@
     },
     {
       "folder": "manifests/academy/shared/planning",
-      "jsonCount": 1
+      "jsonCount": 4
     },
     {
       "folder": "manifests/academy/tooling/glyphforge/planning",
