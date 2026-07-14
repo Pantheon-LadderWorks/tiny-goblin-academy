@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "captureDate": "2026-07-14",
+  "captureAuthority": "actual Tauri desktop window with WebView2 and out-of-process game iframe",
+  "desktopContract": {
+    "primaryDisplay": "1920x1080",
+    "maximizedCapture": "1920x1032",
+    "defaultTauriContent": "1280x720",
+    "minimumTauriContent": "1024x640",
+    "minimumOuterWindowCapture": "1026x672",
+    "embeddedGamePolicy": "fluid remainder of shell; no independent fixed minimum"
+  },
+  "primaryDisplayEvidence": {
+    "directory": "tauri/primary-1920x1080",
+    "states": ["initial", "victory"]
+  },
+  "minimumDesktopEvidence": {
+    "directory": "tauri/minimum-1024x640",
+    "states": ["initial", "bonk", "upgrade-unavailable", "upgrade-available", "upgrade-purchased", "later-goblin", "victory"]
+  },
+  "materialTypography": {
+    "region30": { "recipe": "badge-label-on-paper", "face": "Outfit 600", "fontRangePx": "12-15", "hostWidthPx": 160, "fullLabelVisible": true },
+    "region20Title": { "recipe": "result-on-teal-frame", "face": "Cinzel 700", "fontRangePx": "22-38", "overflow": false },
+    "region20Body": { "recipe": "body-on-parchment", "face": "Caudex 700", "fontRangePx": "17-24", "overflow": false },
+    "region20Footer": { "recipe": "badge-label-on-paper", "face": "Outfit 600", "fontRangePx": "12-17", "overflow": false }
+  },
+  "codeNativeSurfaces": {
+    "mastheadTitleMaxPx": 42,
+    "hudLabelRangePx": "12-18",
+    "hudValueRangePx": "18-28",
+    "actionTitleRangePx": "18-28",
+    "actionBodyMinPx": 17,
+    "minimumWidthOptionalRemoval": ".hint only"
+  },
+  "runtimeAssertions": {
+    "region30FullLabelVisible": true,
+    "victoryTitleAboveHud": true,
+    "region20SlotsVisible": true,
+    "protectedBordersPreserved": true,
+    "uniformScalingOnly": true,
+    "independentDomText": true,
+    "codeNativeFallbacksPresent": true,
+    "gameplaySemanticsChanged": false
+  }
+}

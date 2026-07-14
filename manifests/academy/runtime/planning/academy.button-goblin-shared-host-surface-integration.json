@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "status": "implemented-ready-for-human-review",
+  "reviewStatus": "ready-for-human-visual-review",
+  "pipelineUse": "button-goblin-shared-host-surface-runtime-proof",
+  "runtimeEligibility": "button-goblin-candidate-ready-for-human-review",
+  "tier": "H6",
+  "planId": "H6.4A",
+  "domain": "academy-runtime-ui",
+  "gameId": "tga-01-button-goblin-clicker",
+  "operationalType": "shared-physical-host-surface-and-material-typography-integration",
+  "baselineCommit": "bfd0bb264054c2ae18449f6718f8ac125d8b9398",
+  "createdDate": "2026-07-14",
+  "authority": {
+    "sourceRegionManifest": "manifests/academy/shared/academy.ui-hud.regions.json",
+    "functionalSlotManifest": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
+    "contentFitEvidenceManifest": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json",
+    "tauriWindowContract": "hub/src-tauri/tauri.conf.json",
+    "sourceSheet": "assets/academy/ui/tga-ui-hud-sheet-v0.1.png",
+    "cleanedSheet": "assets/academy/derived-cleaned/ui/tga-ui-hud-sheet-cleaned-preview-v0.1.png",
+    "cleanedSheetSha256": "827ffa10f516d31e8faf2ddd0eb50a2f49a0ee8ae734ae0477812a170c5f5802"
+  },
+  "desktopContract": {
+    "primaryDisplay": "1920x1080",
+    "defaultTauriContent": "1280x720",
+    "minimumTauriContent": "1024x640",
+    "resizable": true,
+    "embeddedGame": "fluid remainder of shell; no independent fixed minimum"
+  },
+  "sharedPrimitive": {
+    "module": "assets/academy/ui/runtime/academy-shared-host-surfaces.ts",
+    "styles": "assets/academy/ui/runtime/academy-shared-host-surfaces.css",
+    "scalePolicy": "uniform-contain-no-stretch",
+    "independentLiveText": true,
+    "protectedZoneAware": true,
+    "codeNativeFallback": true,
+    "nineSliceUsed": false
+  },
+  "surfaceDecisions": [
+    {
+      "regionIndex": 5,
+      "regionId": "ui-hud.dark-panel.long",
+      "intendedRole": "four-card live HUD candidate",
+      "actualUse": "none; existing HUD remains code-native",
+      "verdict": "rejected",
+      "naturalSize": "574x174",
+      "primaryDisplayFit": "individual label/value pair fits",
+      "minimumDesktopFit": "four uniform instances crowd actor and encounter-label lanes",
+      "overflow": "avoided by rejection",
+      "protectedZones": ["outer-border"],
+      "reason": "One surface has only a label/value pair; four surfaces are too dense at the actual minimum desktop contract."
+    },
+    {
+      "regionIndex": 20,
+      "regionId": "ui-hud.frame-large.teal",
+      "intendedRole": "victory/result surface",
+      "actualUse": "victory title, body, and footer host",
+      "verdict": "used",
+      "naturalSize": "665x401",
+      "crop": "assets/academy/ui/runtime/crops/tga-ui-hud-region-20-large-teal-frame-v0.1.png",
+      "cropSha256": "cb1d902093301d9937dd30349a33c1648e6a02b4274f63139c029ba432be0d11",
+      "scalePolicy": "uniform-contain-no-stretch",
+      "primaryDisplayFit": "665x401 natural-size render; zero slot overflow",
+      "minimumDesktopFit": "uniform fit inside configured 1024x640 Tauri content contract; zero slot overflow",
+      "overflow": false,
+      "protectedZones": ["frame-border"],
+      "typography": {
+        "title": "result-on-teal-frame / Cinzel 700 / 22-38px",
+        "body": "body-on-parchment / Caudex 700 / 17-24px",
+        "footer": "badge-label-on-paper / Outfit 600 / 12-17px"
+      }
+    },
+    {
+      "regionIndex": 30,
+      "regionId": "ui-hud.paper-label.small",
+      "intendedRole": "one short upgrade label",
+      "actualUse": "ONE UPGRADE label inside code-owned Bonk card",
+      "verdict": "constrained",
+      "naturalSize": "289x132",
+      "crop": "assets/academy/ui/runtime/crops/tga-ui-hud-region-30-small-paper-label-v0.1.png",
+      "cropSha256": "7637b4dd516326e0c9ce5b519c3208bb989dcf35a6782efecb0a69a150a58411",
+      "scalePolicy": "uniform-contain-no-stretch",
+      "primaryDisplayFit": "160x73.08 uniform render",
+      "minimumDesktopFit": "160x73.08 uniform render; full label visible",
+      "overflow": false,
+      "protectedZones": ["paper-edge"],
+      "typography": "badge-label-on-paper / Outfit 600 / 12-15px"
+    }
+  ],
+  "evidence": {
+    "root": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime",
+    "readme": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/README.md",
+    "usageMatrix": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/shared-surface-usage-matrix.md",
+    "runtimeAssertions": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/runtime-assertions.json",
+    "typographyAudit": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/runtime-typography-audit.md",
+    "beforeAfter": "games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/material-typography-before-after.md",
+    "captureAuthority": "actual Tauri desktop window with WebView2 and out-of-process game iframe",
+    "primaryDisplayStates": ["initial", "victory"],
+    "minimumDesktopStates": ["initial", "bonk", "upgrade-unavailable", "upgrade-available", "upgrade-purchased", "later-goblin", "victory"]
+  },
+  "preservedInvariants": {
+    "controllerChanged": false,
+    "simulationChanged": false,
+    "gameplayValuesChanged": false,
+    "goblinRigChanged": false,
+    "hitAreaChanged": false,
+    "animationsChanged": false,
+    "backgroundChanged": false,
+    "academyShellChanged": false,
+    "rustTauriChanged": false,
+    "packageOrLockChanged": false,
+    "sourceSheetChanged": false
+  },
+  "commitBoundary": {
+    "staged": false,
+    "committed": false,
+    "nextGate": "Human visual review; H6.4A remains unstaged."
+  }
+}

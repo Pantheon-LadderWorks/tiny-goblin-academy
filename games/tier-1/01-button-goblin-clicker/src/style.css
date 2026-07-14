@@ -48,8 +48,7 @@ body {
 }
 
 .eyebrow,
-.stat-card span,
-.upgrade-kicker {
+.stat-card span {
   --academy-type-color: #e4bb7c;
 }
 
@@ -65,6 +64,7 @@ h1 {
   --academy-type-color: var(--text-light);
   --academy-type-stroke: 1px #39231a;
   --academy-type-shadow: 4px 4px 0 #6e4057;
+  font-size: clamp(28px, calc(28px + 14 * ((100vw - 360px) / 1080)), 42px);
 }
 
 .objective {
@@ -73,12 +73,8 @@ h1 {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
-.objective,
-.upgrade-desc,
-.hint,
-.victory-text {
+.objective {
   --academy-type-color: #d7c9b2;
-  font-size: inherit;
 }
 
 .game-stage {
@@ -127,8 +123,9 @@ h1 {
 .stat-card span, .upgrade-kicker {
   display: block;
   color: #e4bb7c;
-  font-size: clamp(.58rem, 1.4vw, .72rem);
-  letter-spacing: .06em;
+  font-size: clamp(12px, calc(12px + 6 * ((100vw - 360px) / 1080)), 18px);
+  line-height: 1.15;
+  letter-spacing: .055em;
   text-transform: uppercase;
 }
 
@@ -136,13 +133,14 @@ h1 {
   display: block;
   margin-top: 5px;
   color: var(--text-light);
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-size: clamp(18px, calc(18px + 10 * ((100vw - 360px) / 1080)), 28px);
   white-space: nowrap;
 }
 
 .stat-card strong {
   --academy-type-color: var(--text-light);
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  --academy-type-stroke: 1px rgba(35, 23, 20, .7);
+  --academy-type-shadow: 0 2px 3px rgba(0, 0, 0, .8);
 }
 
 .action-layer {
@@ -159,22 +157,29 @@ h1 {
 }
 
 .upgrade-card h2 {
-  margin: 8px 0 4px;
-  font-size: 1.35rem;
+  margin: 4px 0;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(18px, calc(18px + 10 * ((100vw - 360px) / 1080)), 28px);
+  line-height: 1.15;
+  letter-spacing: .015em;
   color: var(--text-light);
 }
 
 .upgrade-card h2 {
   --academy-type-color: var(--text-light);
   --academy-type-shadow: 0 2px 2px rgba(0, 0, 0, .45);
-  font-size: 1.35rem;
 }
 
 .upgrade-desc {
-  font-size: 0.85rem;
+  --academy-type-color: #d7c9b2;
+  font-family: 'Caudex', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(17px, calc(17px + 7 * ((100vw - 360px) / 1080)), 24px);
   color: #d7c9b2;
   margin-bottom: 12px;
   line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .45);
 }
 
 .play-surface {
@@ -272,10 +277,15 @@ button:disabled[data-typography-role] {
 }
 
 .hint {
+  --academy-type-color: #d7c9b2;
   margin-top: 12px;
-  font-size: .8rem;
+  font-family: 'Caudex', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(17px, calc(17px + 7 * ((100vw - 360px) / 1080)), 24px);
+  line-height: 1.4;
   font-style: italic;
   color: #d7c9b2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .45);
 }
 
 .victory-overlay {
@@ -296,35 +306,119 @@ button:disabled[data-typography-role] {
   backdrop-filter: blur(4px);
 }
 
-.victory-panel {
-  background: linear-gradient(145deg, #39263d, #21182c);
-  border: 4px solid var(--border-gold);
-  border-radius: 14px;
-  padding: 40px;
+.victory-overlay .victory-panel {
+  width: min(665px, calc(100% - 32px));
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .7));
 }
 
 .victory-title {
-  font-size: 3rem;
-  color: var(--text-light);
-  margin: 0 0 10px 0;
-  text-shadow: 0 2px 2px #6e4057;
+  width: 100%;
+  margin: 0;
+  padding: .1em .14em;
+  color: #5b361f;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(22px, calc(22px + 16 * ((100vw - 360px) / 1080)), 38px);
+  line-height: 1.1;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #f7e2b0;
+  text-shadow: 0 3px 3px rgba(77, 44, 26, .3);
 }
 
 .victory-title {
-  --academy-type-color: var(--text-light);
-  --academy-type-stroke: 1px #6e4057;
-  --academy-type-shadow: 0 2px 2px #6e4057;
+  --academy-type-color: #5b361f;
+  --academy-type-stroke: 1px #f7e2b0;
+  --academy-type-shadow: 0 3px 3px rgba(77, 44, 26, .3);
 }
 
 .victory-text {
-  font-size: 1.5rem;
-  color: #d7c9b2;
+  max-width: 92%;
+  padding: .12em .14em;
+  color: #3d291d;
+  font-family: 'Caudex', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(17px, calc(17px + 7 * ((100vw - 360px) / 1080)), 24px);
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(55, 31, 18, .14);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.victory-panel .victory-text {
+  --academy-type-color: #3d291d;
+  --academy-type-shadow: 0 1px 2px rgba(55, 31, 18, .14);
+}
+
+.victory-footer {
+  width: 100%;
+  padding: .08em .12em;
+  color: #3d291d;
+  font-family: 'Outfit', Arial, sans-serif;
+  font-weight: 600;
+  font-size: clamp(12px, calc(12px + 5 * ((100vw - 360px) / 1080)), 17px);
+  line-height: 1.1;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(55, 31, 18, .15);
+  white-space: nowrap;
+}
+
+.victory-footer {
+  --academy-type-color: #3d291d;
+  --academy-type-stroke: 0 transparent;
+  --academy-type-shadow: 0 1px 1px rgba(55, 31, 18, .15);
+}
+
+.upgrade-card .upgrade-label-surface {
+  width: 160px;
+  margin: -6px auto -2px;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .35));
+}
+
+.upgrade-label-surface .upgrade-kicker {
+  width: 100%;
+  padding: .08em .12em;
+  color: #3d291d;
+  font-family: 'Outfit', Arial, sans-serif;
+  font-weight: 600;
+  font-size: clamp(12px, calc(12px + 3 * ((100vw - 360px) / 1080)), 15px);
+  line-height: 1.1;
+  letter-spacing: .045em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(55, 31, 18, .15);
+  white-space: nowrap;
+}
+
+.upgrade-label-surface .upgrade-kicker {
+  --academy-type-color: #3d291d;
+  --academy-type-stroke: 0 transparent;
+  --academy-type-shadow: 0 1px 1px rgba(55, 31, 18, .15);
+}
+
+.upgrade-label-surface[data-asset-state='fallback'] .upgrade-kicker {
+  --academy-type-color: #e4bb7c;
+  color: #e4bb7c;
 }
 
 .victory-overlay.visible {
   display: flex;
+}
+
+.game-stage:has(.victory-overlay.visible) .play-surface {
+  z-index: 6;
+}
+
+.game-stage:has(.victory-overlay.visible) .action-layer,
+.game-stage:has(.victory-overlay.visible) .feedback-layer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .hint { display: none; }
 }
 
 @media (max-width: 840px) {
@@ -361,8 +455,10 @@ button:disabled[data-typography-role] {
   }
 
   .upgrade-card h2 {
-    margin-top: 4px;
+    margin-top: 2px;
   }
+
+  .upgrade-card .upgrade-label-surface { margin-top: -8px; }
 
   .hint {
     display: none;
@@ -371,7 +467,7 @@ button:disabled[data-typography-role] {
   .instruction {
     left: 12px;
     right: 12px;
-    bottom: 170px;
+    bottom: 190px;
     max-width: calc(100% - 24px);
     text-align: center;
   }
@@ -379,7 +475,7 @@ button:disabled[data-typography-role] {
 
 @media (max-height: 720px) {
   .masthead h1 {
-    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    font-size: clamp(28px, 3vw, 40px);
   }
 
   .objective {

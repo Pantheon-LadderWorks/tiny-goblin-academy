@@ -1,13 +1,30 @@
 import './style.css';
 import '../../../../assets/academy/fonts/runtime/academy-typography.css';
+import '../../../../assets/academy/ui/runtime/academy-shared-host-surfaces.css';
 import Phaser from 'phaser';
 import { GameController } from './controller';
 import { GameScene } from './scenes/GameScene';
 import { setupUI } from './ui';
 import { waitForAcademyFonts } from '../../../../assets/academy/fonts/runtime/academy-typography';
+import {
+  academyCssVariablesToString,
+  bindAcademyHostSurfaceFallbacks,
+  getAcademyHostSurface,
+  getAcademyHostSurfaceCssVariables,
+  getAcademyHostSurfaceSlotCssVariables,
+} from '../../../../assets/academy/ui/runtime/academy-shared-host-surfaces';
 
 // 1. Initialize Controller
 const controller = new GameController();
+
+const victorySurface = getAcademyHostSurface('ui-hud.frame-large.teal')!;
+const upgradeLabelSurface = getAcademyHostSurface('ui-hud.paper-label.small')!;
+const surfaceStyle = (surface: typeof victorySurface) => academyCssVariablesToString(getAcademyHostSurfaceCssVariables(surface));
+const slotStyle = (surface: typeof victorySurface, name: string) => {
+  const slot = surface.slots.find((candidate) => candidate.name === name);
+  if (!slot) throw new Error(`Missing Academy host-surface slot: ${surface.id}.${name}`);
+  return academyCssVariablesToString(getAcademyHostSurfaceSlotCssVariables(slot));
+};
 
 // 2. Inject DOM UI
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -42,9 +59,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div id="game-canvas"></div>
         
         <div id="victory-overlay" class="victory-overlay">
-          <div class="victory-panel">
-            <h1 class="victory-title" data-typography-role="result-state">Academy Graduate!</h1>
-            <div class="victory-text" data-typography-role="body-instruction">You survived 10 overly enthusiastic goblins.</div>
+          <div class="victory-panel academy-host-surface" data-academy-host-surface="${victorySurface.id}" data-region-index="20" data-asset-state="loaded" style="${surfaceStyle(victorySurface)}">
+            <img class="academy-host-surface__asset" data-academy-host-asset src="${victorySurface.assetUrl}" alt="" aria-hidden="true">
+            <div class="academy-host-surface__slot victory-title-slot" data-slot="title" style="${slotStyle(victorySurface, 'title')}">
+              <h1 class="victory-title" data-typography-role="result-state" data-typography-recipe="result-on-teal-frame">Academy Graduate!</h1>
+            </div>
+            <div class="academy-host-surface__slot victory-body-slot" data-slot="body" style="${slotStyle(victorySurface, 'body')}">
+              <div class="victory-text" data-typography-role="body-instruction" data-typography-recipe="body-on-parchment">You survived 10 overly enthusiastic goblins.</div>
+            </div>
+            <div class="academy-host-surface__slot victory-footer-slot" data-slot="footer" style="${slotStyle(victorySurface, 'footer')}">
+              <div class="victory-footer" data-typography-role="compact-label" data-typography-recipe="badge-label-on-paper">10 / 10 GOBLINS · COURSE COMPLETE</div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,7 +80,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <div class="action-layer" aria-label="Upgrade actions">
         <div class="upgrade-card">
-          <span class="upgrade-kicker" data-typography-role="compact-label">ONE UPGRADE ONLY</span>
+          <div class="upgrade-label-surface academy-host-surface" data-academy-host-surface="${upgradeLabelSurface.id}" data-region-index="30" data-asset-state="loaded" style="${surfaceStyle(upgradeLabelSurface)}">
+            <img class="academy-host-surface__asset" data-academy-host-asset src="${upgradeLabelSurface.assetUrl}" alt="" aria-hidden="true">
+            <div class="academy-host-surface__slot" data-slot="label" style="${slotStyle(upgradeLabelSurface, 'label')}">
+              <span class="upgrade-kicker" data-typography-role="compact-label" data-typography-recipe="badge-label-on-paper">ONE UPGRADE</span>
+            </div>
+          </div>
           <h2 data-typography-role="panel-heading">Bonk Stick</h2>
           <p class="upgrade-desc" data-typography-role="body-instruction">Costs 3 coins · doubles your bonk power.</p>
           <button id="shop-btn" data-typography-role="compact-label" disabled>Need 3 more coins</button>
@@ -65,6 +95,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
   </div>
 `;
+
+bindAcademyHostSurfaceFallbacks();
 
 async function bootGame() {
   // 3. Initialize UI binding

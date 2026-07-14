@@ -1,5 +1,7 @@
 # Changelog
 
+* **H6.4A Button Goblin Material Typography and Desktop Contract**: Added the smallest reusable shared host-surface primitive and selectively integrated real Academy UI/HUD physical assets into Button Goblin Clicker. Region 20 hosts the victory title/body/footer; Region 30 hosts only the `ONE UPGRADE` label; Region 5 remains rejected because four uniform HUD instances crowd the actor/name lanes and one cannot host all four values. Material-aware recipes now use Cinzel on the result title, Caudex on parchment body copy, and Outfit on paper labels; the Region 30 host is 160px wide, the masthead/HUD hierarchy is quieter, and the victory plaque layers above the HUD at minimum size. Actual Tauri evidence covers all seven states at the configured `1024×640` minimum content contract plus clean initial/victory anchors on the `1920×1080` primary display. Evidence now lives with the game under `games/tier-1/01-button-goblin-clicker/evidence/`. No gameplay, controller/simulation, GoblinRig, hit area, animation, background, Academy shell, Rust/Tauri, package/lock, source-sheet, remap, or other game changes occurred. Ready for human visual review; nothing staged or committed.
+
 All notable changes to this project will be documented in this file.
 
 ## Unreleased

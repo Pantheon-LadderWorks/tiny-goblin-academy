@@ -63,6 +63,7 @@
     "runtimeButtonGoblinBackgroundStageIntegration": "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "runtimeButtonGoblinVectorActorRigPreview": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "runtimeButtonGoblinLiveGoblinRigIntegration": "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
+    "runtimeButtonGoblinSharedHostSurfaceIntegration": "manifests/academy/runtime/planning/academy.button-goblin-shared-host-surface-integration.json",
     "sharedUiFunctionalSurfaces": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
     "sharedUiGrammarFontArchitecture": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
     "h5_97FontSourceIntake": "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
@@ -136,6 +137,7 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
     "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
+    "manifests/academy/runtime/planning/academy.button-goblin-shared-host-surface-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
@@ -653,6 +655,18 @@
       "reviewStatus": "human-review-passed",
       "runtimeEligibility": "approved-for-button-goblin-runtime-use",
       "reason": "Added after H5.91A as planning metadata; not an active runtime approval."
+    },
+    {
+      "path": "manifests/academy/runtime/planning/academy.button-goblin-shared-host-surface-integration.json",
+      "maturityClass": "planning",
+      "authorityRole": "H6.4A Button Goblin shared physical host-surface and material typography runtime proof",
+      "categoryShelf": "manifests/academy/runtime/planning",
+      "status": "implemented-ready-for-human-review",
+      "reviewStatus": "ready-for-human-visual-review",
+      "pipelineUse": "button-goblin-shared-host-surface-runtime-proof",
+      "runtimeEligibility": "button-goblin-candidate-ready-for-human-review",
+      "runtimeApproved": false,
+      "notes": "Region 20 is used, Region 30 is constrained, and Region 5 is rejected. Actual minimum-contract and primary-display Tauri evidence lives with the game; no broader shared UI or game approval is implied."
     },
     {
       "path": "manifests/academy/runtime/planning/academy.button-goblin-shell-migration.json",
@@ -1254,11 +1268,13 @@
     "Lineage files are preserved provenance and must not be deleted casually.",
     "Generated files are not automatically source of truth.",
     "Runtime/game wiring remains outside H5.91A scope.",
-    "H5.99 wires typography only in the Hub and Button Goblin with human visual review passed; no broader game/runtime approval is implied."
+    "H5.99 wires typography only in the Hub and Button Goblin with human visual review passed; no broader game/runtime approval is implied.",
+    "H6.4 selectively proves shared host surfaces in Button Goblin only; Region 20 and Region 30 remain human-review gated and Region 5 remains rejected."
   ],
   "blockedUntilHumanReview": false,
   "runtimePlanningCurrent": [
     "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
+    "manifests/academy/runtime/planning/academy.button-goblin-shared-host-surface-integration.json",
     "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json"
   ]
 }

@@ -1733,3 +1733,11 @@ H5.99 promotes the H5.98 canonical typography defaults into exactly two live con
 Live evidence confirms all inspected canonical faces loaded, Button Phaser text used the shared recipe factory, the Tauri minimum Hub window and Button narrow layout fit without clipping, and the real cavern surface retained readable labels, HP, Bonk feedback, upgrade state, and victory text. Caudex 700 remained acceptable in the live Help/Ledger surfaces, so the registered long-body alternate remains unwired.
 
 This is not global font runtime approval for the other nine Tier 1 games, not shared decorative UI integration, and not permission to collapse game-specific material treatments into a universal theme. Human review passed for the Hub, Button Goblin, and DOM/CSS-to-Phaser parity evidence; H5.99A closes the exact approved commit before H6.4 begins.
+
+## H6.4 Button Goblin Shared Host-Surface Runtime Integration Note
+
+H6.4 adds the first selective runtime use of the reviewed shared UI/HUD physical surfaces. Region 20 (`ui-hud.frame-large.teal`) is used as the Button Goblin victory/result host with independent title, body, and footer text. Region 30 (`ui-hud.paper-label.small`) is constrained to the one-line `ONE UPGRADE` accent inside the existing game-owned Bonk card.
+
+Region 5 (`ui-hud.dark-panel.long`) was evaluated and rejected for the live four-card HUD: four natural-aspect instances crowd the actor and encounter-label lanes at narrow width, while one instance cannot represent all four statuses within its reviewed two-slot contract. The HUD remains code-native.
+
+The shared runtime primitive preserves natural aspect ratio, H5.95 percentage slots, protected zones, independent text, and code-native fallback. H6.4A adds material-aware type recipes, a fully readable 160px Region 30 label host, and correct result-over-HUD layering. No nine-slice, stretch, source edit, remap, repaint, gameplay change, package/lock change, or other game integration is approved. Actual Tauri evidence covers the configured `1024×640` minimum content contract and the `1920×1080` primary display under `games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/`. Human visual review remains the gate; H6.4A is unstaged.
