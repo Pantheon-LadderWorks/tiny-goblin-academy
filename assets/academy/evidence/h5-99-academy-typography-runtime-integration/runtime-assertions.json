@@ -1,0 +1,167 @@
+{
+  "hubMinimumWindow": {
+    "viewport": {
+      "width": 1024,
+      "height": 640
+    },
+    "documentWidth": 1024,
+    "horizontalOverflow": false
+  },
+  "hubDevelopmentSurface": {
+    "helpButtonPresent": true,
+    "ledgerButtonPresent": true,
+    "devButtonPresent": true
+  },
+  "hubProductionGating": {
+    "runtimeMode": "production",
+    "developerActionsCount": 0,
+    "productionActionsCount": 1
+  },
+  "buttonRuntime": {
+    "fontLoads": [
+      {
+        "family": "Cinzel Decorative",
+        "weight": 700,
+        "descriptor": "700 16px \"Cinzel Decorative\"",
+        "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+        "loaded": true
+      },
+      {
+        "family": "Cinzel",
+        "weight": 600,
+        "descriptor": "600 16px \"Cinzel\"",
+        "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+        "loaded": true
+      },
+      {
+        "family": "Cinzel",
+        "weight": 700,
+        "descriptor": "700 16px \"Cinzel\"",
+        "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+        "loaded": true
+      },
+      {
+        "family": "Caudex",
+        "weight": 700,
+        "descriptor": "700 16px \"Caudex\"",
+        "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+        "loaded": true
+      },
+      {
+        "family": "Outfit",
+        "weight": 600,
+        "descriptor": "600 16px \"Outfit\"",
+        "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+        "loaded": true
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": 700,
+        "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+        "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+        "loaded": true
+      },
+      {
+        "family": "Fira Code",
+        "weight": 400,
+        "descriptor": "400 16px \"Fira Code\"",
+        "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+        "loaded": true
+      },
+      {
+        "family": "Macondo",
+        "weight": 400,
+        "descriptor": "400 16px \"Macondo\"",
+        "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+        "loaded": true
+      }
+    ],
+    "phaserTypography": [
+      {
+        "role": "panel-heading",
+        "recipeId": "panel-heading-on-parchment",
+        "renderer": "phaser",
+        "family": "Cinzel",
+        "weight": 600,
+        "fallbackStack": "Georgia, serif",
+        "style": {
+          "fontFamily": "\"Cinzel\", Georgia, serif",
+          "fontStyle": "600",
+          "fontSize": "28px",
+          "color": "#e8dfc7",
+          "stroke": "transparent",
+          "strokeThickness": 0,
+          "shadow": {
+            "color": "#000",
+            "fill": true,
+            "offsetX": 0,
+            "offsetY": 2,
+            "blur": 4
+          },
+          "align": "left",
+          "lineSpacing": 3
+        }
+      },
+      {
+        "role": "data-value",
+        "recipeId": "data-on-metal",
+        "renderer": "phaser",
+        "family": "Atkinson Hyperlegible",
+        "weight": 700,
+        "fallbackStack": "Arial, sans-serif",
+        "style": {
+          "fontFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "fontStyle": "700",
+          "fontSize": "24px",
+          "color": "#d94a4a",
+          "stroke": "rgba(35,23,20,0.7)",
+          "strokeThickness": 1,
+          "shadow": {
+            "color": "#000",
+            "fill": true,
+            "offsetX": 0,
+            "offsetY": 2,
+            "blur": 4
+          },
+          "align": "right",
+          "lineSpacing": 1
+        }
+      },
+      {
+        "role": "result-state",
+        "recipeId": "result-on-teal-frame",
+        "renderer": "phaser",
+        "family": "Cinzel",
+        "weight": 700,
+        "fallbackStack": "Georgia, serif",
+        "style": {
+          "fontFamily": "\"Cinzel\", Georgia, serif",
+          "fontStyle": "700",
+          "fontSize": "34px",
+          "color": "#d94a4a",
+          "stroke": "#121015",
+          "strokeThickness": 4,
+          "shadow": {
+            "color": "rgba(77,44,26,0.3)",
+            "offsetX": 0,
+            "offsetY": 3,
+            "blur": 3,
+            "fill": true
+          },
+          "align": "center",
+          "lineSpacing": 2
+        }
+      }
+    ],
+    "finalHud": {
+      "goblin": "10 / 10",
+      "hp": "0 / 23",
+      "damage": "2",
+      "victoryVisible": true
+    }
+  },
+  "network": {
+    "requestCount": 23,
+    "externalFontOrAssetRequests": []
+  }
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './styles/hub.css'
+import '../../assets/academy/fonts/runtime/academy-typography.css'
 import { BootScreen } from './components/BootScreen'
 import { HubShell } from './components/HubShell'
 

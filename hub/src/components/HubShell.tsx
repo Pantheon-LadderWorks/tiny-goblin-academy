@@ -139,22 +139,23 @@ export const HubShell: React.FC = () => {
           <div className="hub-title-banner-frame">
             <img src={tgaBanner} alt="Tiny Goblin Academy" className="hub-title-banner" />
           </div>
-          <div className="tier-summary">
-            <span>Level 1-10</span> &bull; <span>{historicalPassCount}/10 Passed</span> &bull; <span>{sourceAvailableCount}/10 Source</span>
+          <div className="tier-summary" data-typography-role="compact-label">
+            <span>Level 1-10</span> &bull; <span data-typography-role="data-value">{historicalPassCount}/10 Passed</span> &bull; <span data-typography-role="data-value">{sourceAvailableCount}/10 Source</span>
           </div>
         </div>
         
         <div className="hub-header-right">
-          <span className="hub-studio-label">Glyphforge Games</span>
+          <span className="hub-studio-label" data-typography-role="compact-label">Glyphforge Games</span>
           <div className="hub-status-pills">
             {runtimeStatus && (
-              <span className="status-pill mode-pill">
+              <span className="status-pill mode-pill" data-typography-role="compact-label">
                 {runtimeStatus.runtimeMode}
               </span>
             )}
             
             <button 
               className={`status-pill ping-btn ${diagnostic ? 'connected' : ''}`}
+              data-typography-role="compact-label"
               onClick={async () => {
                 if (diagnostic) return; // already connected
                 try {

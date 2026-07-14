@@ -53,12 +53,12 @@ export function GameLaunchBootScreen({ game, onCancel, onReady }: Props) {
       justifyContent: 'center', alignItems: 'center',
       padding: '2rem'
     }}>
-      <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem', fontFamily: 'serif' }}>Tiny Goblin Academy</h1>
-      <h2 style={{ fontSize: '1.5rem', color: '#e0c090', marginBottom: '1rem', fontFamily: 'serif' }}>
+      <h1 data-typography-role="academy-title" style={{ marginBottom: '0.5rem' }}>Tiny Goblin Academy</h1>
+      <h2 data-typography-role="game-title" style={{ color: '#e0c090', marginBottom: '1rem' }}>
         {game.title} <span style={{ fontSize: '1rem', color: '#888' }}>- Level {game.level}</span>
       </h2>
       
-      <span style={{
+      <span data-typography-role="compact-label" style={{
         backgroundColor: '#4a3a60', color: '#fff',
         padding: '0.25rem 0.75rem', borderRadius: '12px',
         fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '2rem'
@@ -71,11 +71,11 @@ export function GameLaunchBootScreen({ game, onCancel, onReady }: Props) {
         backgroundColor: '#262230', padding: '2rem',
         borderRadius: '8px', border: '1px solid #3c334d'
       }}>
-        <h3 style={{ marginTop: 0, marginBottom: '1rem', borderBottom: '1px solid #3c334d', paddingBottom: '0.5rem' }}>
+        <h3 data-typography-role="panel-heading" style={{ marginTop: 0, marginBottom: '1rem', borderBottom: '1px solid #3c334d', paddingBottom: '0.5rem', color: '#e0c090' }}>
           Launch Status
         </h3>
         
-        <p style={{ fontSize: '1.2rem', marginBottom: '1rem', color: status?.status === 'failed' ? '#ff8a80' : '#4db6ac' }}>
+        <p data-typography-role="body-instruction" style={{ marginBottom: '1rem', color: status?.status === 'failed' ? '#ff8a80' : '#4db6ac' }}>
           {getStage()}
         </p>
 

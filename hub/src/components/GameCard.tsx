@@ -43,7 +43,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game, onClick, isSelected })
         )}
       </div>
       <div className="game-card-meta">
-        <span className="game-level">Level {game.level}</span>
+        <span className="game-level" data-typography-role="data-value">Level {game.level}</span>
         <StatusBadge type={readinessType} label={readinessLabel} />
       </div>
     </div>

@@ -5,8 +5,27 @@
   "domain": "academy-fonts",
   "operationalType": "canonical-academy-font-inventory",
   "pipelineUse": "canonical-font-source-and-role-authority",
-  "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
-  "runtimeWiringStatus": "none",
+  "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+  "runtimeWiringStatus": "h5-99-hub-and-button-goblin-only-human-review-passed",
+  "h5_99RuntimeIntegration": {
+    "status": "reviewed-and-accepted",
+    "surfaces": [
+      "Tiny Goblin Academy Hub",
+      "Button Goblin Clicker"
+    ],
+    "runtimeFaceIds": [
+      "cinzeldecorative.cinzeldecorative-bold-ttf",
+      "cinzel.cinzel-wght-ttf",
+      "caudex.caudex-bold-ttf",
+      "outfit.outfit-wght-ttf",
+      "atkinsonhyperlegible.atkinsonhyperlegible-bold-ttf",
+      "firacode.firacode-wght-ttf",
+      "macondo.macondo-regular-ttf"
+    ],
+    "registeredButUnwiredFacesRemainEligible": true,
+    "evidence": "assets/academy/evidence/h5-99-academy-typography-runtime-integration/computed-style-font-load-evidence.json",
+    "scopeBoundary": "Runtime approval is limited to the Academy Hub and Button Goblin. It does not extend to the other nine Tier 1 games or to shared decorative UI assets."
+  },
   "promotedFrom": [
     "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
     "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json"

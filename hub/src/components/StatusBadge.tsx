@@ -7,7 +7,7 @@ interface StatusBadgeProps {
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ type, label }) => {
   return (
-    <span className={`status-badge badge-${type}`}>
+    <span className={`status-badge badge-${type}`} data-typography-role="compact-label">
       {label}
     </span>
   )

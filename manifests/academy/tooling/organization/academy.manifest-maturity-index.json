@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 78,
+  "totalManifestCount": 79,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -69,7 +69,8 @@
     "h5_97VisualGrammarLaboratory": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json",
     "fontDirectionLineage": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
     "academyTypographyRecipes": "manifests/academy/shared/academy.typography-recipe-registry.json",
-    "h5_98Report": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_98_ACADEMY_TYPOGRAPHY_PROMOTION.md"
+    "h5_98Report": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_98_ACADEMY_TYPOGRAPHY_PROMOTION.md",
+    "runtimeTypographyIntegration": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -139,6 +140,7 @@
     "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
     "manifests/academy/runtime/planning/academy.minimal-runtime-shell-contract.json",
     "manifests/academy/runtime/planning/academy.shell-refactor-and-ingame-hud-plan.json",
+    "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json",
     "manifests/academy/shared/planning/academy.material-aware-typography-recipes-h5-97d.json",
     "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
     "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
@@ -267,8 +269,8 @@
       "categoryShelf": "manifests/academy/fonts",
       "status": "active",
       "reviewStatus": "human-visual-review-passed-and-provenance-verified",
-      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
-      "reason": "H5.98 promotes verified local font files, hashes, licenses, role assignments, defaults, and alternates without live runtime wiring.",
+      "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+      "reason": "H5.98 promoted verified local font authority; H5.99 wired and human-reviewed the Hub and Button Goblin only.",
       "pipelineUse": "canonical-font-source-and-role-authority"
     },
     {
@@ -665,6 +667,18 @@
       "notes": "Nested by maturity/authority as the H6.2 Button Goblin stage-first shell migration review record. Does not imply runtime asset approval."
     },
     {
+      "path": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.99 limited Academy typography runtime integration and evidence record",
+      "categoryShelf": "manifests/academy/runtime/planning",
+      "status": "reviewed",
+      "reviewStatus": "human-visual-review-passed",
+      "pipelineUse": "limited-hub-and-button-goblin-typography-runtime-proof",
+      "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+      "runtimeApproved": true,
+      "notes": "Hub and Button Goblin implementation and DOM/CSS-to-Phaser parity passed human review. No broader runtime approval is implied."
+    },
+    {
       "path": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
       "maturityClass": "planning",
       "authorityRole": "preview-only runtime actor planning record",
@@ -713,8 +727,8 @@
       "categoryShelf": "manifests/academy/shared",
       "status": "active",
       "reviewStatus": "human-visual-review-passed",
-      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
-      "reason": "H5.98 designates exactly one initial default per semantic role and retains approved material and length variants with complete DOM/Phaser/accessibility contracts.",
+      "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+      "reason": "H5.98 designated the canonical defaults; H5.99 wired and human-reviewed those defaults in the Hub and Button Goblin only.",
       "pipelineUse": "canonical-typography-default-and-variant-authority"
     },
     {
@@ -1163,7 +1177,7 @@
     },
     {
       "folder": "manifests/academy/runtime/planning",
-      "jsonCount": 6
+      "jsonCount": 7
     },
     {
       "folder": "manifests/academy/shared",
@@ -1240,10 +1254,11 @@
     "Lineage files are preserved provenance and must not be deleted casually.",
     "Generated files are not automatically source of truth.",
     "Runtime/game wiring remains outside H5.91A scope.",
-    "H5.98 typography authorities are eligible inputs for H5.99 only; active status does not mean fonts are already wired."
+    "H5.99 wires typography only in the Hub and Button Goblin with human visual review passed; no broader game/runtime approval is implied."
   ],
   "blockedUntilHumanReview": false,
   "runtimePlanningCurrent": [
-    "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json"
+    "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
+    "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json"
   ]
 }

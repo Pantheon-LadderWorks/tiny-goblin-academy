@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { GoblinRig } from '../actors/GoblinRig';
 import { GameController } from '../controller';
 import { GameState } from '../simulation';
+import { createAcademyPhaserTextStyle } from '../../../../../assets/academy/fonts/runtime/academy-typography';
 
 const CAVERN_BACKGROUND_KEY = 'button-goblin-cavern-background';
 const CAVERN_BACKGROUND_URL = new URL(
@@ -108,21 +109,17 @@ export class GameScene extends Phaser.Scene {
     this.goblinRig.root.on(Phaser.Input.Events.GAMEOBJECT_POINTER_OVER, () => this.handlePointerOver());
     this.goblinRig.root.on(Phaser.Input.Events.GAMEOBJECT_POINTER_OUT, () => this.handlePointerOut());
 
-    this.nameText = this.add.text(this.actorX, this.actorFeetY - 348, 'Goblin #1', {
+    this.nameText = this.add.text(this.actorX, this.actorFeetY - 348, 'Goblin #1', createAcademyPhaserTextStyle('panel-heading', {
       fontSize: '28px',
       color: '#e8dfc7',
-      fontFamily: 'Georgia, serif',
-      fontStyle: 'bold',
-      shadow: { color: '#000', fill: true, offsetY: 2, blur: 4 }
-    }).setOrigin(0.5).setDepth(30);
+      shadow: { color: '#000', fill: true, offsetX: 0, offsetY: 2, blur: 4 }
+    })).setOrigin(0.5).setDepth(30);
 
-    this.hpText = this.add.text(this.actorX, this.actorFeetY + 54, 'HP: 5/5', {
+    this.hpText = this.add.text(this.actorX, this.actorFeetY + 54, 'HP: 5/5', createAcademyPhaserTextStyle('data-value', {
       fontSize: '24px',
       color: '#d94a4a',
-      fontFamily: 'Georgia, serif',
-      fontStyle: 'bold',
-      shadow: { color: '#000', fill: true, offsetY: 2, blur: 4 }
-    }).setOrigin(0.5).setDepth(30);
+      shadow: { color: '#000', fill: true, offsetX: 0, offsetY: 2, blur: 4 }
+    })).setOrigin(0.5).setDepth(30);
 
     if (this.debugHitArea) {
       this.hitAreaDebug = this.add.graphics().setDepth(35);
@@ -225,14 +222,12 @@ export class GameScene extends Phaser.Scene {
       this.actorX + Phaser.Math.Between(112, 148),
       this.actorFeetY - Phaser.Math.Between(228, 260),
       `-${damage} BONK!`,
-      {
+      createAcademyPhaserTextStyle('result-state', {
         fontSize: '34px',
         color: '#d94a4a',
-        fontFamily: 'Georgia',
-        fontStyle: 'bold',
         stroke: '#121015',
         strokeThickness: 4
-      }
+      })
     ).setOrigin(0.5).setDepth(32);
 
     this.tweens.add({

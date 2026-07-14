@@ -188,26 +188,26 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, runtimeM
             />
           </div>
         )}
-        <h2 className="detail-title">{game.title}</h2>
+        <h2 className="detail-title" data-typography-role="game-title">{game.title}</h2>
       
       <div className="detail-section">
-        <h4>Level {game.level} • Tier {game.tier}</h4>
-        <p>{game.shortDescription}</p>
+        <h4 data-typography-role="panel-heading">Level <span data-typography-role="data-value">{game.level}</span> • Tier <span data-typography-role="data-value">{game.tier}</span></h4>
+        <p data-typography-role="body-instruction">{game.shortDescription}</p>
       </div>
       
       <div className="detail-section">
-        <h4>Core Lesson</h4>
-        <p>{game.coreLesson}</p>
+        <h4 data-typography-role="panel-heading">Core Lesson</h4>
+        <p data-typography-role="body-instruction">{game.coreLesson}</p>
       </div>
 
       <div className="detail-section">
-        <h4>Controls</h4>
-        <p>{game.controls}</p>
+        <h4 data-typography-role="panel-heading">Controls</h4>
+        <p data-typography-role="body-instruction">{game.controls}</p>
       </div>
 
       <div className="detail-section">
-        <h4>Status: {game.displayStatus}</h4>
-        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', listStyle: 'none', padding: 0 }}>
+        <h4 data-typography-role="panel-heading">Status: {game.displayStatus}</h4>
+        <ul data-typography-role="debug-information" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', listStyle: 'none', padding: 0 }}>
           <li><strong>Listed:</strong> {game.listed ? 'Yes' : 'No'}</li>
           <li><strong>Workspace Member:</strong> {workspaceMemberLabel}</li>
           <li><strong>Source Directory:</strong> {sourceDirectoryLabel}</li>
@@ -227,27 +227,27 @@ export const GameDetailPanel: React.FC<GameDetailPanelProps> = ({ game, runtimeM
 
       {game.sourcePath && (
         <div className="detail-section">
-          <h4>Source Path</h4>
-          <p><code className="source-path">{game.sourcePath}</code></p>
+          <h4 data-typography-role="panel-heading">Source Path</h4>
+          <p><code className="source-path" data-typography-role="debug-information">{game.sourcePath}</code></p>
         </div>
       )}
 
       {game.restorationDeferred && (
-        <div className="deferred-note">
+        <div className="deferred-note" data-typography-role="body-instruction">
           <strong>Restoration Deferred:</strong> Source restoration deferred until Hub/package model is ready.
         </div>
       )}
 
       {!game.restorationDeferred && (
         <div className="detail-section">
-          <h4>Notes</h4>
-          <p>{game.notes}</p>
+          <h4 data-typography-role="panel-heading">Notes</h4>
+          <p data-typography-role="body-instruction">{game.notes}</p>
         </div>
       )}
       
       {isDeveloperMode && (
       <div className="action-bar dev-actions">
-        <h4>Developer Actions</h4>
+        <h4 data-typography-role="panel-heading">Developer Actions</h4>
         {!runtimeStatusLoaded ? (
           <p className="launch-warning" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
             Checking runtime backend status before enabling dev actions.

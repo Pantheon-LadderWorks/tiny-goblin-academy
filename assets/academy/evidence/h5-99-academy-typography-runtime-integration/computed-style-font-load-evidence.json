@@ -1,0 +1,7421 @@
+[
+  {
+    "surface": "Hub boot",
+    "index": 0,
+    "tag": "h1",
+    "className": "boot-title-hero",
+    "semanticRole": "academy-title",
+    "sample": "Tiny Goblin Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Cinzel Decorative\", Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "68px",
+    "actualLineHeight": "71.4px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel Decorative",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 911.48,
+      "height": 71.39
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 911,
+      "clientHeight": 71,
+      "scrollWidth": 911,
+      "scrollHeight": 81
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub boot",
+    "index": 1,
+    "tag": "div",
+    "className": "boot-loading-phrase",
+    "semanticRole": "body-instruction",
+    "sample": "Opening the Academy...",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "24px",
+    "actualLineHeight": "33.6px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 303.92,
+      "height": 49.59
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 304,
+      "clientHeight": 50,
+      "scrollWidth": 304,
+      "scrollHeight": 50
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub boot",
+    "index": 2,
+    "tag": "button",
+    "className": "boot-skip-button modern",
+    "semanticRole": "compact-label",
+    "sample": "Skip",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 108.39,
+      "height": 41.88
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 106,
+      "clientHeight": 40,
+      "scrollWidth": 106,
+      "scrollHeight": 40
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 0,
+    "tag": "div",
+    "className": "tier-summary",
+    "semanticRole": "compact-label",
+    "sample": "Level 1-10 • 10/10 Passed • 10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 343.19,
+      "height": 30.28
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 343,
+      "clientHeight": 30,
+      "scrollWidth": 343,
+      "scrollHeight": 30
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 1,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Passed",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 95.48,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 95,
+      "clientHeight": 21,
+      "scrollWidth": 95,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 2,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 93.38,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 93,
+      "clientHeight": 21,
+      "scrollWidth": 93,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 3,
+    "tag": "span",
+    "className": "hub-studio-label",
+    "semanticRole": "compact-label",
+    "sample": "Glyphforge Games",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 113.58,
+      "height": 13.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 114,
+      "clientHeight": 14,
+      "scrollWidth": 114,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 4,
+    "tag": "span",
+    "className": "status-pill mode-pill",
+    "semanticRole": "compact-label",
+    "sample": "developer",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 96.77,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 95,
+      "clientHeight": 23,
+      "scrollWidth": 95,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 5,
+    "tag": "button",
+    "className": "status-pill ping-btn ",
+    "semanticRole": "compact-label",
+    "sample": "Backend: Ping",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 120.98,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 119,
+      "clientHeight": 23,
+      "scrollWidth": 119,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 6,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 7,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 8,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 2",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 9,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 10,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 3",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 11,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 12,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 4",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 13,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 14,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 15,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 16,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 6",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 17,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 18,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 7",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 19,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 20,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 8",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 21,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 22,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 9",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 23,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 24,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 66.42,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 66,
+      "clientHeight": 17,
+      "scrollWidth": 66,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub desktop",
+    "index": 25,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 0,
+    "tag": "div",
+    "className": "tier-summary",
+    "semanticRole": "compact-label",
+    "sample": "Level 1-10 • 10/10 Passed • 10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "15.6889px",
+    "actualLineHeight": "18.0422px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 329.92,
+      "height": 27.63
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 330,
+      "clientHeight": 28,
+      "scrollWidth": 330,
+      "scrollHeight": 28
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 1,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Passed",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 95.48,
+      "height": 18.03
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 95,
+      "clientHeight": 18,
+      "scrollWidth": 95,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 2,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 93.38,
+      "height": 18.03
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 93,
+      "clientHeight": 18,
+      "scrollWidth": 93,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 3,
+    "tag": "span",
+    "className": "hub-studio-label",
+    "semanticRole": "compact-label",
+    "sample": "Glyphforge Games",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 113.58,
+      "height": 13.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 114,
+      "clientHeight": 14,
+      "scrollWidth": 114,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 4,
+    "tag": "span",
+    "className": "status-pill mode-pill",
+    "semanticRole": "compact-label",
+    "sample": "developer",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 96.77,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 95,
+      "clientHeight": 23,
+      "scrollWidth": 95,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 5,
+    "tag": "button",
+    "className": "status-pill ping-btn ",
+    "semanticRole": "compact-label",
+    "sample": "Backend: Ping",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 120.98,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 119,
+      "clientHeight": 23,
+      "scrollWidth": 119,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 6,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 7,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 8,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 2",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 9,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 10,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 3",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 11,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 12,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 4",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 13,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 14,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 15,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 16,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 6",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 17,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 18,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 7",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 19,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 20,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 8",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 21,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 22,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 9",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 23,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 24,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 66.42,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 66,
+      "clientHeight": 17,
+      "scrollWidth": 66,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub narrow",
+    "index": 25,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 0,
+    "tag": "span",
+    "className": "runtime-academy-title",
+    "semanticRole": "compact-label",
+    "sample": "Tiny Goblin Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 132.84,
+      "height": 14.34
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 133,
+      "clientHeight": 14,
+      "scrollWidth": 133,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 1,
+    "tag": "span",
+    "className": "runtime-game-title",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "28px",
+    "actualLineHeight": "30.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 371.73,
+      "height": 30.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 372,
+      "clientHeight": 31,
+      "scrollWidth": 372,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 2,
+    "tag": "span",
+    "className": "runtime-dev-pill",
+    "semanticRole": "compact-label",
+    "sample": "Dev Mode",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 80.23,
+      "height": 22.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 78,
+      "clientHeight": 21,
+      "scrollWidth": 78,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 3,
+    "tag": "span",
+    "className": "runtime-url",
+    "semanticRole": "debug-information",
+    "sample": "http://127.0.0.1:5173",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 201.61,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 202,
+      "clientHeight": 21,
+      "scrollWidth": 202,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 4,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Ledger L",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 83.25,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 81,
+      "clientHeight": 29,
+      "scrollWidth": 81,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 5,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Help",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 53.3,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 51,
+      "clientHeight": 29,
+      "scrollWidth": 51,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 6,
+    "tag": "button",
+    "className": "runtime-shell-btn runtime-shell-btn-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 48.94,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 47,
+      "clientHeight": 29,
+      "scrollWidth": 47,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 7,
+    "tag": "button",
+    "className": "btn stop-btn",
+    "semanticRole": "compact-label",
+    "sample": "Close Game / Return to Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 230.47,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 228,
+      "clientHeight": 29,
+      "scrollWidth": 228,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 8,
+    "tag": "p",
+    "className": "runtime-overlay-kicker",
+    "semanticRole": "compact-label",
+    "sample": "Academy Shell · H6.1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 251.44,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 251,
+      "clientHeight": 21,
+      "scrollWidth": 251,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 9,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Help / Controls",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "28px",
+    "actualLineHeight": "32.2px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 251.44,
+      "height": 32.19
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 251,
+      "clientHeight": 32,
+      "scrollWidth": 251,
+      "scrollHeight": 34
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Help overlay",
+    "index": 10,
+    "tag": "div",
+    "className": "runtime-overlay-body",
+    "semanticRole": "body-instruction",
+    "sample": "Help is the future home for objectives, controls, and rules that used to sit in permanent side panels.Keyboard and touch controls should be ",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 460,
+      "height": 252.77
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 460,
+      "clientHeight": 253,
+      "scrollWidth": 460,
+      "scrollHeight": 253
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 0,
+    "tag": "span",
+    "className": "runtime-academy-title",
+    "semanticRole": "compact-label",
+    "sample": "Tiny Goblin Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 132.84,
+      "height": 14.34
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 133,
+      "clientHeight": 14,
+      "scrollWidth": 133,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 1,
+    "tag": "span",
+    "className": "runtime-game-title",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "28px",
+    "actualLineHeight": "30.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 371.73,
+      "height": 30.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 372,
+      "clientHeight": 31,
+      "scrollWidth": 372,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 2,
+    "tag": "span",
+    "className": "runtime-dev-pill",
+    "semanticRole": "compact-label",
+    "sample": "Dev Mode",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 80.23,
+      "height": 22.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 78,
+      "clientHeight": 21,
+      "scrollWidth": 78,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 3,
+    "tag": "span",
+    "className": "runtime-url",
+    "semanticRole": "debug-information",
+    "sample": "http://127.0.0.1:5173",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 201.61,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 202,
+      "clientHeight": 21,
+      "scrollWidth": 202,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 4,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Ledger L",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 83.25,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 81,
+      "clientHeight": 29,
+      "scrollWidth": 81,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 5,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Help",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 53.3,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 51,
+      "clientHeight": 29,
+      "scrollWidth": 51,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 6,
+    "tag": "button",
+    "className": "runtime-shell-btn runtime-shell-btn-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 48.94,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 47,
+      "clientHeight": 29,
+      "scrollWidth": 47,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 7,
+    "tag": "button",
+    "className": "btn stop-btn",
+    "semanticRole": "compact-label",
+    "sample": "Close Game / Return to Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 230.47,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 228,
+      "clientHeight": 29,
+      "scrollWidth": 228,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 8,
+    "tag": "p",
+    "className": "runtime-overlay-kicker",
+    "semanticRole": "compact-label",
+    "sample": "Academy Shell · H6.1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 227.84,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 228,
+      "clientHeight": 21,
+      "scrollWidth": 228,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 9,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Action Ledger",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "28px",
+    "actualLineHeight": "32.2px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 227.84,
+      "height": 32.19
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 228,
+      "clientHeight": 32,
+      "scrollWidth": 228,
+      "scrollHeight": 34
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Ledger overlay",
+    "index": 10,
+    "tag": "div",
+    "className": "runtime-overlay-body",
+    "semanticRole": "body-instruction",
+    "sample": "The shared shell now owns the Ledger surface. This H6.1 contract proves the top-bar button and Lshortcut without migrating per-game ledgers ",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 460,
+      "height": 215.77
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 460,
+      "clientHeight": 216,
+      "scrollWidth": 460,
+      "scrollHeight": 216
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 0,
+    "tag": "span",
+    "className": "runtime-academy-title",
+    "semanticRole": "compact-label",
+    "sample": "Tiny Goblin Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 132.84,
+      "height": 14.34
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 133,
+      "clientHeight": 14,
+      "scrollWidth": 133,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 1,
+    "tag": "span",
+    "className": "runtime-game-title",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "28px",
+    "actualLineHeight": "30.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 371.73,
+      "height": 30.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 372,
+      "clientHeight": 31,
+      "scrollWidth": 372,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 2,
+    "tag": "span",
+    "className": "runtime-dev-pill",
+    "semanticRole": "compact-label",
+    "sample": "Dev Mode",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 80.23,
+      "height": 22.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 78,
+      "clientHeight": 21,
+      "scrollWidth": 78,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 3,
+    "tag": "span",
+    "className": "runtime-url",
+    "semanticRole": "debug-information",
+    "sample": "http://127.0.0.1:5173",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 201.61,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 202,
+      "clientHeight": 21,
+      "scrollWidth": 202,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 4,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Ledger L",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 83.25,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 81,
+      "clientHeight": 29,
+      "scrollWidth": 81,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 5,
+    "tag": "button",
+    "className": "runtime-shell-btn",
+    "semanticRole": "compact-label",
+    "sample": "Help",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 53.3,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 51,
+      "clientHeight": 29,
+      "scrollWidth": 51,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 6,
+    "tag": "button",
+    "className": "runtime-shell-btn runtime-shell-btn-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 48.94,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 47,
+      "clientHeight": 29,
+      "scrollWidth": 47,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 7,
+    "tag": "button",
+    "className": "btn stop-btn",
+    "semanticRole": "compact-label",
+    "sample": "Close Game / Return to Academy",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.48px",
+    "actualLineHeight": "14.352px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 230.47,
+      "height": 30.72
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 228,
+      "clientHeight": 29,
+      "scrollWidth": 228,
+      "scrollHeight": 29
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 8,
+    "tag": "p",
+    "className": "runtime-overlay-kicker",
+    "semanticRole": "compact-label",
+    "sample": "Academy Shell · H6.1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 209.05,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 209,
+      "clientHeight": 21,
+      "scrollWidth": 209,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 9,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Dev Overlay",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "28px",
+    "actualLineHeight": "32.2px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 209.05,
+      "height": 32.19
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 209,
+      "clientHeight": 32,
+      "scrollWidth": 209,
+      "scrollHeight": 34
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 10,
+    "tag": "div",
+    "className": "runtime-overlay-body",
+    "semanticRole": "body-instruction",
+    "sample": "Dev state stays available, but hidden by default. Position, velocity, grounded flags, and manifest IDs belong here instead of permanent play",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 460,
+      "height": 254.94
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 460,
+      "clientHeight": 255,
+      "scrollWidth": 460,
+      "scrollHeight": 255
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 11,
+    "tag": "dt",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Game",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 90,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 90,
+      "clientHeight": 21,
+      "scrollWidth": 90,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 12,
+    "tag": "dd",
+    "className": "",
+    "semanticRole": "debug-information",
+    "sample": "tga-01",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 322.81,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 323,
+      "clientHeight": 21,
+      "scrollWidth": 323,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 13,
+    "tag": "dt",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Port",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 90,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 90,
+      "clientHeight": 21,
+      "scrollWidth": 90,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 14,
+    "tag": "dd",
+    "className": "",
+    "semanticRole": "debug-information",
+    "sample": "5173",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 322.81,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 323,
+      "clientHeight": 21,
+      "scrollWidth": 323,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 15,
+    "tag": "dt",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "PID",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 90,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 90,
+      "clientHeight": 21,
+      "scrollWidth": 90,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 16,
+    "tag": "dd",
+    "className": "",
+    "semanticRole": "debug-information",
+    "sample": "599",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 322.81,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 323,
+      "clientHeight": 21,
+      "scrollWidth": 323,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 17,
+    "tag": "dt",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Started",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 90,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 90,
+      "clientHeight": 21,
+      "scrollWidth": 90,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub Dev overlay",
+    "index": 18,
+    "tag": "dd",
+    "className": "",
+    "semanticRole": "debug-information",
+    "sample": "H5.99-live-evidence",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 322.81,
+      "height": 20.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 323,
+      "clientHeight": 21,
+      "scrollWidth": 323,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 0,
+    "tag": "div",
+    "className": "tier-summary",
+    "semanticRole": "compact-label",
+    "sample": "Level 1-10 • 10/10 Passed • 10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 343.19,
+      "height": 30.28
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 343,
+      "clientHeight": 30,
+      "scrollWidth": 343,
+      "scrollHeight": 30
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 1,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Passed",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 95.48,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 95,
+      "clientHeight": 21,
+      "scrollWidth": 95,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 2,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10/10 Source",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "14.08px",
+    "actualLineHeight": "14.784px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 93.38,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 93,
+      "clientHeight": 21,
+      "scrollWidth": 93,
+      "scrollHeight": 21
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 3,
+    "tag": "span",
+    "className": "hub-studio-label",
+    "semanticRole": "compact-label",
+    "sample": "Glyphforge Games",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 113.58,
+      "height": 13.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 114,
+      "clientHeight": 14,
+      "scrollWidth": 114,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 4,
+    "tag": "span",
+    "className": "status-pill mode-pill",
+    "semanticRole": "compact-label",
+    "sample": "production",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 106.77,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 105,
+      "clientHeight": 23,
+      "scrollWidth": 105,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 5,
+    "tag": "button",
+    "className": "status-pill ping-btn ",
+    "semanticRole": "compact-label",
+    "sample": "Backend: Ping",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 120.98,
+      "height": 25.39
+    },
+    "boxMetrics": {
+      "display": "flex",
+      "clientWidth": 119,
+      "clientHeight": 23,
+      "scrollWidth": 119,
+      "scrollHeight": 23
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 6,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 7,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 8,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 2",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 9,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 10,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 3",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 11,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 12,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 4",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 13,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 14,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 15,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 16,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 6",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 17,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 18,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 7",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 19,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 20,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 8",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 21,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 22,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 9",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 56.16,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 56,
+      "clientHeight": 17,
+      "scrollWidth": 56,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 23,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 24,
+    "tag": "span",
+    "className": "game-level",
+    "semanticRole": "data-value",
+    "sample": "Level 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16px",
+    "actualLineHeight": "16.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 66.42,
+      "height": 16.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 66,
+      "clientHeight": 17,
+      "scrollWidth": 66,
+      "scrollHeight": 18
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 25,
+    "tag": "span",
+    "className": "status-badge badge-dev",
+    "semanticRole": "compact-label",
+    "sample": "Dev Ready",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12px",
+    "actualLineHeight": "13.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 89.09,
+      "height": 21.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 89,
+      "clientHeight": 22,
+      "scrollWidth": 89,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 26,
+    "tag": "h2",
+    "className": "detail-title",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "46px",
+    "actualLineHeight": "50.6px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 101.19
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 101,
+      "scrollWidth": 600,
+      "scrollHeight": 107
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 27,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Level 1 • Tier 1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 28,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "18px",
+    "actualLineHeight": "18.9px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 11.56,
+      "height": 22
+    },
+    "boxMetrics": {
+      "display": "inline",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 29,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "18px",
+    "actualLineHeight": "18.9px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 11.56,
+      "height": 22
+    },
+    "boxMetrics": {
+      "display": "inline",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 30,
+    "tag": "p",
+    "className": "",
+    "semanticRole": "body-instruction",
+    "sample": "A simple clicker game about an overly enthusiastic goblin.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 23.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 24,
+      "scrollWidth": 600,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 31,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Core Lesson",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 32,
+    "tag": "p",
+    "className": "",
+    "semanticRole": "body-instruction",
+    "sample": "State management and basic interactivity.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 23.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 24,
+      "scrollWidth": 600,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 33,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Controls",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 34,
+    "tag": "p",
+    "className": "",
+    "semanticRole": "body-instruction",
+    "sample": "Mouse click",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 23.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 24,
+      "scrollWidth": 600,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 35,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Status: Source Available",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 36,
+    "tag": "ul",
+    "className": "",
+    "semanticRole": "debug-information",
+    "sample": "Listed: YesWorkspace Member: YesSource Directory: FoundPackage.json: FoundNode Modules: InstalledDev Script: YesBuild Script: YesDist Exists",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 235.17
+    },
+    "boxMetrics": {
+      "display": "grid",
+      "clientWidth": 600,
+      "clientHeight": 235,
+      "scrollWidth": 600,
+      "scrollHeight": 235
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 37,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Source Path",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 38,
+    "tag": "code",
+    "className": "source-path",
+    "semanticRole": "debug-information",
+    "sample": "games/tier-1/01-button-goblin-clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Fira Code\", Consolas, monospace",
+    "actualWeight": "400",
+    "actualSize": "16px",
+    "actualLineHeight": "20.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Fira Code",
+        "weight": "300 700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 367.98,
+      "height": 27.38
+    },
+    "boxMetrics": {
+      "display": "inline",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 39,
+    "tag": "h4",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Notes",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "18px",
+    "actualLineHeight": "20.7px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 20.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 21,
+      "scrollWidth": 600,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Hub production gating",
+    "index": 40,
+    "tag": "p",
+    "className": "",
+    "semanticRole": "body-instruction",
+    "sample": "Restored v0.1. Human Review Passed.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17px",
+    "actualLineHeight": "23.8px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "unloaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 600,
+      "height": 23.8
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 600,
+      "clientHeight": 24,
+      "scrollWidth": 600,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 0,
+    "tag": "div",
+    "className": "eyebrow",
+    "semanticRole": "compact-label",
+    "sample": "TINY GOBLIN ACADEMY · LEVEL 01",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "17.1111px",
+    "actualLineHeight": "19.6778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 19.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 20,
+      "scrollWidth": 715,
+      "scrollHeight": 20
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 1,
+    "tag": "h1",
+    "className": "",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "43.3333px",
+    "actualLineHeight": "47.6667px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 47.66
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 48,
+      "scrollWidth": 715,
+      "scrollHeight": 52
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 2,
+    "tag": "p",
+    "className": "objective",
+    "semanticRole": "body-instruction",
+    "sample": "Bonk 10 goblins. Buy one upgrade. Earn your extremely small legend.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 32.16
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 32,
+      "scrollWidth": 715,
+      "scrollHeight": 32
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 3,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 4,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1 / 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 5,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin HP",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 6,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "5 / 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 7,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 8,
+    "tag": "strong",
+    "className": "coins",
+    "semanticRole": "data-value",
+    "sample": "0",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 9,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Bonk Power",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 10,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 11,
+    "tag": "h1",
+    "className": "victory-title",
+    "semanticRole": "result-state",
+    "sample": "Academy Graduate!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "35.6296px",
+    "actualLineHeight": "39.1926px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 12,
+    "tag": "div",
+    "className": "victory-text",
+    "semanticRole": "body-instruction",
+    "sample": "You survived 10 overly enthusiastic goblins.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 13,
+    "tag": "p",
+    "className": "instruction",
+    "semanticRole": "optional-game-accent",
+    "sample": "Bonk the goblin!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Macondo, Georgia, serif",
+    "actualWeight": "400",
+    "actualSize": "24.8148px",
+    "actualLineHeight": "29.7778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Macondo",
+        "weight": "400",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 171.3,
+      "height": 29.77
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 171,
+      "clientHeight": 30,
+      "scrollWidth": 171,
+      "scrollHeight": 30
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 14,
+    "tag": "span",
+    "className": "upgrade-kicker",
+    "semanticRole": "compact-label",
+    "sample": "ONE UPGRADE ONLY",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "17.1111px",
+    "actualLineHeight": "19.6778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 19.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 20,
+      "scrollWidth": 208,
+      "scrollHeight": 20
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 15,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Bonk Stick",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "21.6px",
+    "actualLineHeight": "24.84px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 24.83
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 25,
+      "scrollWidth": 208,
+      "scrollHeight": 26
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 16,
+    "tag": "p",
+    "className": "upgrade-desc",
+    "semanticRole": "body-instruction",
+    "sample": "Costs 3 coins · doubles your bonk power.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 96.47
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 96,
+      "scrollWidth": 208,
+      "scrollHeight": 96
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 17,
+    "tag": "button",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Need 3 more coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "15.2px",
+    "actualLineHeight": "17.48px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 37.47
+    },
+    "boxMetrics": {
+      "display": "inline-block",
+      "clientWidth": 204,
+      "clientHeight": 33,
+      "scrollWidth": 204,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button desktop initial",
+    "index": 18,
+    "tag": "p",
+    "className": "hint",
+    "semanticRole": "body-instruction",
+    "sample": "Tap the goblin. It knows what it did.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 64.31
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 64,
+      "scrollWidth": 208,
+      "scrollHeight": 64
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 0,
+    "tag": "div",
+    "className": "eyebrow",
+    "semanticRole": "compact-label",
+    "sample": "TINY GOBLIN ACADEMY · LEVEL 01",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "17.1111px",
+    "actualLineHeight": "19.6778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 19.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 20,
+      "scrollWidth": 715,
+      "scrollHeight": 20
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 1,
+    "tag": "h1",
+    "className": "",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "43.3333px",
+    "actualLineHeight": "47.6667px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 47.66
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 48,
+      "scrollWidth": 715,
+      "scrollHeight": 52
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 2,
+    "tag": "p",
+    "className": "objective",
+    "semanticRole": "body-instruction",
+    "sample": "Bonk 10 goblins. Buy one upgrade. Earn your extremely small legend.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 715.11,
+      "height": 32.16
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 715,
+      "clientHeight": 32,
+      "scrollWidth": 715,
+      "scrollHeight": 32
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 3,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 4,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "10 / 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 5,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin HP",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 6,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "0 / 23",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 7,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 8,
+    "tag": "strong",
+    "className": "coins",
+    "semanticRole": "data-value",
+    "sample": "7",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 9,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Bonk Power",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "11.52px",
+    "actualLineHeight": "13.248px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 13.23
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 13,
+      "scrollWidth": 270,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 10,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "2",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "21.6px",
+    "actualLineHeight": "22.68px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 270,
+      "height": 22.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 270,
+      "clientHeight": 23,
+      "scrollWidth": 270,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 11,
+    "tag": "h1",
+    "className": "victory-title",
+    "semanticRole": "result-state",
+    "sample": "Academy Graduate!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "35.6296px",
+    "actualLineHeight": "39.1926px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 447.58,
+      "height": 39.19
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 448,
+      "clientHeight": 39,
+      "scrollWidth": 448,
+      "scrollHeight": 43
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 12,
+    "tag": "div",
+    "className": "victory-text",
+    "semanticRole": "body-instruction",
+    "sample": "You survived 10 overly enthusiastic goblins.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 447.58,
+      "height": 32.16
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 448,
+      "clientHeight": 32,
+      "scrollWidth": 448,
+      "scrollHeight": 32
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 13,
+    "tag": "p",
+    "className": "instruction",
+    "semanticRole": "optional-game-accent",
+    "sample": "Bonk the goblin!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Macondo, Georgia, serif",
+    "actualWeight": "400",
+    "actualSize": "24.8148px",
+    "actualLineHeight": "29.7778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Macondo",
+        "weight": "400",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 171.3,
+      "height": 29.77
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 171,
+      "clientHeight": 30,
+      "scrollWidth": 171,
+      "scrollHeight": 30
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 14,
+    "tag": "span",
+    "className": "upgrade-kicker",
+    "semanticRole": "compact-label",
+    "sample": "ONE UPGRADE ONLY",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "17.1111px",
+    "actualLineHeight": "19.6778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 19.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 20,
+      "scrollWidth": 208,
+      "scrollHeight": 20
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 15,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Bonk Stick",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "21.6px",
+    "actualLineHeight": "24.84px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 24.83
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 25,
+      "scrollWidth": 208,
+      "scrollHeight": 26
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 16,
+    "tag": "p",
+    "className": "upgrade-desc",
+    "semanticRole": "body-instruction",
+    "sample": "Costs 3 coins · doubles your bonk power.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 96.47
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 96,
+      "scrollWidth": 208,
+      "scrollHeight": 96
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 17,
+    "tag": "button",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Purchased!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "15.2px",
+    "actualLineHeight": "17.48px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 37.47
+    },
+    "boxMetrics": {
+      "display": "inline-block",
+      "clientWidth": 204,
+      "clientHeight": 33,
+      "scrollWidth": 204,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button victory",
+    "index": 18,
+    "tag": "p",
+    "className": "hint",
+    "semanticRole": "body-instruction",
+    "sample": "Tap the goblin. It knows what it did.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.963px",
+    "actualLineHeight": "32.1481px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 208,
+      "height": 64.31
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 208,
+      "clientHeight": 64,
+      "scrollWidth": 208,
+      "scrollHeight": 64
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 0,
+    "tag": "div",
+    "className": "eyebrow",
+    "semanticRole": "compact-label",
+    "sample": "TINY GOBLIN ACADEMY · LEVEL 01",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.3333px",
+    "actualLineHeight": "14.1833px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 14.17
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 14,
+      "scrollWidth": 404,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 1,
+    "tag": "h1",
+    "className": "",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "29px",
+    "actualLineHeight": "31.9px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 31.89
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 32,
+      "scrollWidth": 404,
+      "scrollHeight": 35
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 2,
+    "tag": "p",
+    "className": "objective",
+    "semanticRole": "body-instruction",
+    "sample": "Bonk 10 goblins. Buy one upgrade. Earn your extremely small legend.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 48.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 49,
+      "scrollWidth": 404,
+      "scrollHeight": 49
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 3,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 4,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1 / 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 5,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin HP",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 6,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "5 / 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 7,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 8,
+    "tag": "strong",
+    "className": "coins",
+    "semanticRole": "data-value",
+    "sample": "0",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 9,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Bonk Power",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 10,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 11,
+    "tag": "h1",
+    "className": "victory-title",
+    "semanticRole": "result-state",
+    "sample": "Academy Graduate!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.8889px",
+    "actualLineHeight": "25.1778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 12,
+    "tag": "div",
+    "className": "victory-text",
+    "semanticRole": "body-instruction",
+    "sample": "You survived 10 overly enthusiastic goblins.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 13,
+    "tag": "p",
+    "className": "instruction",
+    "semanticRole": "optional-game-accent",
+    "sample": "Bonk the goblin!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Macondo, Georgia, serif",
+    "actualWeight": "400",
+    "actualSize": "18.4444px",
+    "actualLineHeight": "22.1333px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Macondo",
+        "weight": "400",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 374,
+      "height": 22.13
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 374,
+      "clientHeight": 22,
+      "scrollWidth": 374,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 14,
+    "tag": "span",
+    "className": "upgrade-kicker",
+    "semanticRole": "compact-label",
+    "sample": "ONE UPGRADE ONLY",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.3333px",
+    "actualLineHeight": "14.1833px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 14.17
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 14,
+      "scrollWidth": 350,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 15,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Bonk Stick",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "21.6px",
+    "actualLineHeight": "24.84px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 24.83
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 25,
+      "scrollWidth": 350,
+      "scrollHeight": 26
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 16,
+    "tag": "p",
+    "className": "upgrade-desc",
+    "semanticRole": "body-instruction",
+    "sample": "Costs 3 coins · doubles your bonk power.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 24.34
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 24,
+      "scrollWidth": 350,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 17,
+    "tag": "button",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Need 3 more coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "15.2px",
+    "actualLineHeight": "17.48px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 37.47
+    },
+    "boxMetrics": {
+      "display": "inline-block",
+      "clientWidth": 346,
+      "clientHeight": 33,
+      "scrollWidth": 346,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow initial",
+    "index": 18,
+    "tag": "p",
+    "className": "hint",
+    "semanticRole": "body-instruction",
+    "sample": "Tap the goblin. It knows what it did.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "none",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 0,
+    "tag": "div",
+    "className": "eyebrow",
+    "semanticRole": "compact-label",
+    "sample": "TINY GOBLIN ACADEMY · LEVEL 01",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.3333px",
+    "actualLineHeight": "14.1833px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 14.17
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 14,
+      "scrollWidth": 404,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 1,
+    "tag": "h1",
+    "className": "",
+    "semanticRole": "game-title",
+    "sample": "Button Goblin Clicker",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "29px",
+    "actualLineHeight": "31.9px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 31.89
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 32,
+      "scrollWidth": 404,
+      "scrollHeight": 35
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 2,
+    "tag": "p",
+    "className": "objective",
+    "semanticRole": "body-instruction",
+    "sample": "Bonk 10 goblins. Buy one upgrade. Earn your extremely small legend.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 404,
+      "height": 48.69
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 404,
+      "clientHeight": 49,
+      "scrollWidth": 404,
+      "scrollHeight": 49
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 3,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 4,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1 / 10",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 5,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Goblin HP",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 6,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "4 / 5",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 7,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 8,
+    "tag": "strong",
+    "className": "coins",
+    "semanticRole": "data-value",
+    "sample": "0",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 9,
+    "tag": "span",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Bonk Power",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "9.28px",
+    "actualLineHeight": "10.672px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 10.67
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 11,
+      "scrollWidth": 157,
+      "scrollHeight": 11
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 10,
+    "tag": "strong",
+    "className": "",
+    "semanticRole": "data-value",
+    "sample": "1",
+    "renderer": "DOM/CSS",
+    "actualFamily": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+    "actualWeight": "700",
+    "actualSize": "16.8px",
+    "actualLineHeight": "17.64px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "700",
+        "status": "loaded"
+      },
+      {
+        "family": "Atkinson Hyperlegible",
+        "weight": "400",
+        "status": "unloaded"
+      }
+    ],
+    "rect": {
+      "width": 157,
+      "height": 17.63
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 157,
+      "clientHeight": 18,
+      "scrollWidth": 157,
+      "scrollHeight": 19
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 11,
+    "tag": "h1",
+    "className": "victory-title",
+    "semanticRole": "result-state",
+    "sample": "Academy Graduate!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "22.8889px",
+    "actualLineHeight": "25.1778px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 12,
+    "tag": "div",
+    "className": "victory-text",
+    "semanticRole": "body-instruction",
+    "sample": "You survived 10 overly enthusiastic goblins.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 13,
+    "tag": "p",
+    "className": "instruction",
+    "semanticRole": "optional-game-accent",
+    "sample": "Bonk the goblin!",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Macondo, Georgia, serif",
+    "actualWeight": "400",
+    "actualSize": "18.4444px",
+    "actualLineHeight": "22.1333px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Macondo",
+        "weight": "400",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 374,
+      "height": 22.13
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 374,
+      "clientHeight": 22,
+      "scrollWidth": 374,
+      "scrollHeight": 22
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 14,
+    "tag": "span",
+    "className": "upgrade-kicker",
+    "semanticRole": "compact-label",
+    "sample": "ONE UPGRADE ONLY",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "12.3333px",
+    "actualLineHeight": "14.1833px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 14.17
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 14,
+      "scrollWidth": 350,
+      "scrollHeight": 14
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 15,
+    "tag": "h2",
+    "className": "",
+    "semanticRole": "panel-heading",
+    "sample": "Bonk Stick",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Cinzel, Georgia, serif",
+    "actualWeight": "600",
+    "actualSize": "21.6px",
+    "actualLineHeight": "24.84px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Cinzel",
+        "weight": "400 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 24.83
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 25,
+      "scrollWidth": 350,
+      "scrollHeight": 26
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 16,
+    "tag": "p",
+    "className": "upgrade-desc",
+    "semanticRole": "body-instruction",
+    "sample": "Costs 3 coins · doubles your bonk power.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 24.34
+    },
+    "boxMetrics": {
+      "display": "block",
+      "clientWidth": 350,
+      "clientHeight": 24,
+      "scrollWidth": 350,
+      "scrollHeight": 24
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 17,
+    "tag": "button",
+    "className": "",
+    "semanticRole": "compact-label",
+    "sample": "Need 3 more coins",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Outfit, Arial, sans-serif",
+    "actualWeight": "600",
+    "actualSize": "15.2px",
+    "actualLineHeight": "17.48px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Outfit",
+        "weight": "100 900",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 350,
+      "height": 37.47
+    },
+    "boxMetrics": {
+      "display": "inline-block",
+      "clientWidth": 346,
+      "clientHeight": 33,
+      "scrollWidth": 346,
+      "scrollHeight": 33
+    },
+    "overflowOrClipping": false
+  },
+  {
+    "surface": "Button narrow active",
+    "index": 18,
+    "tag": "p",
+    "className": "hint",
+    "semanticRole": "body-instruction",
+    "sample": "Tap the goblin. It knows what it did.",
+    "renderer": "DOM/CSS",
+    "actualFamily": "Caudex, Georgia, serif",
+    "actualWeight": "700",
+    "actualSize": "17.3889px",
+    "actualLineHeight": "24.3444px",
+    "canonicalFaceLoaded": true,
+    "registeredFaces": [
+      {
+        "family": "Caudex",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Caudex",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "rect": {
+      "width": 0,
+      "height": 0
+    },
+    "boxMetrics": {
+      "display": "none",
+      "clientWidth": 0,
+      "clientHeight": 0,
+      "scrollWidth": 0,
+      "scrollHeight": 0
+    },
+    "overflowOrClipping": false
+  }
+]

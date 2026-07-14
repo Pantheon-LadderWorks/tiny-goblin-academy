@@ -5,8 +5,29 @@
   "domain": "academy-ui",
   "operationalType": "canonical-academy-typography-recipe-registry",
   "pipelineUse": "canonical-typography-default-and-variant-authority",
-  "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
-  "runtimeWiringStatus": "none",
+  "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+  "runtimeWiringStatus": "h5-99-hub-and-button-goblin-only-human-review-passed",
+  "h5_99RuntimeIntegration": {
+    "status": "reviewed-and-accepted",
+    "wiredDefaultRoles": [
+      "academy-title",
+      "game-title",
+      "panel-heading",
+      "body-instruction",
+      "compact-label",
+      "data-value",
+      "result-state",
+      "debug-information",
+      "optional-game-accent"
+    ],
+    "unwiredDefaultRoles": [
+      "dialogue-title",
+      "dialogue-speech"
+    ],
+    "registeredAlternateRecipesRemainUnwired": true,
+    "evidence": "assets/academy/evidence/h5-99-academy-typography-runtime-integration/semantic-role-implementation-matrix.md",
+    "scopeBoundary": "Runtime approval is limited to the Academy Hub and Button Goblin Clicker; the other nine Tier 1 games and alternate recipes remain unwired."
+  },
   "createdDate": "2026-07-14",
   "doctrine": "semantic role × host material = rendered text treatment",
   "antiDoctrine": "semantic role is not one universal CSS class",

@@ -246,7 +246,36 @@ body {
 
 .runtime-dev-list dd {
   margin: 0;
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.runtime-header [data-typography-role] {
+  --academy-type-color: var(--text-main);
+}
+
+.runtime-academy-title[data-typography-role],
+.runtime-dev-pill[data-typography-role],
+.runtime-shell-btn[data-typography-role],
+.stop-btn[data-typography-role] {
+  font-size: 0.78rem;
+}
+
+.runtime-game-title[data-typography-role] {
+  font-size: 1.75rem;
+}
+
+.runtime-overlay-panel [data-typography-role='panel-heading'] {
+  --academy-type-color: var(--accent-gold);
+  --academy-type-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.runtime-overlay-panel [data-typography-role='body-instruction'] {
+  --academy-type-color: var(--text-main);
+  --academy-type-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  font-size: clamp(17px, 1.15vw, 20px);
+}
+
+.runtime-overlay-panel [data-typography-role='compact-label'] {
+  --academy-type-color: var(--text-muted);
 }
 
 @media (max-width: 860px) {
@@ -324,6 +353,11 @@ body {
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
   backdrop-filter: blur(2px);
+}
+
+.boot-loading-phrase[data-typography-role] {
+  --academy-type-color: #f6edda;
+  --academy-type-shadow: 0 2px 6px rgba(0, 0, 0, 0.82);
 }
 
 @keyframes pulse {
@@ -417,6 +451,11 @@ body {
   margin: 0;
 }
 
+.tier-summary [data-typography-role='data-value'] {
+  --academy-type-color: var(--accent-teal);
+  font-size: 0.88rem;
+}
+
 .hub-header-right {
   display: flex;
   align-items: center;
@@ -429,6 +468,12 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   white-space: nowrap;
+}
+
+.hub-studio-label[data-typography-role],
+.status-pill[data-typography-role] {
+  --academy-type-color: var(--text-muted);
+  font-size: 0.75rem;
 }
 
 .hub-status-pills {
@@ -455,6 +500,8 @@ body {
   color: #8bb4f7;
 }
 
+.mode-pill[data-typography-role] { --academy-type-color: #8bb4f7; }
+
 .ping-btn {
   background: transparent;
   cursor: pointer;
@@ -472,6 +519,8 @@ body {
   color: #81c784;
   cursor: default;
 }
+
+.ping-btn.connected[data-typography-role] { --academy-type-color: #81c784; }
 
 .hub-main {
   display: flex;
@@ -590,6 +639,11 @@ body {
   font-size: 0.9rem;
 }
 
+.game-level[data-typography-role] {
+  --academy-type-color: var(--text-muted);
+  font-size: 1rem;
+}
+
 .status-badges {
   display: flex;
   gap: 0.25rem;
@@ -604,6 +658,12 @@ body {
   border-radius: 4px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.status-badge[data-typography-role] {
+  --academy-type-color: #fff;
+  --academy-type-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  font-size: 0.75rem;
 }
 
 .badge-source { background-color: #2e7d32; color: #fff; }
@@ -663,6 +723,27 @@ body {
 .detail-title {
   color: var(--accent-gold);
   margin-top: 0;
+}
+
+.modal-content [data-typography-role='game-title'] {
+  --academy-type-color: var(--accent-gold);
+}
+
+.modal-content [data-typography-role='panel-heading'] {
+  --academy-type-color: var(--text-muted);
+  --academy-type-shadow: none;
+  font-size: clamp(18px, 1.25vw, 21px);
+}
+
+.modal-content [data-typography-role='body-instruction'] {
+  --academy-type-color: var(--text-main);
+  --academy-type-shadow: none;
+  font-size: clamp(17px, 1.15vw, 20px);
+}
+
+.modal-content [data-typography-role='data-value'] {
+  --academy-type-color: var(--accent-gold);
+  font-size: inherit;
 }
 
 .detail-section {

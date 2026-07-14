@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0",
+  "status": "reviewed",
+  "reviewStatus": "human-visual-review-passed",
+  "domain": "academy-runtime-typography",
+  "operationalType": "h5-99-runtime-integration-plan-and-evidence-record",
+  "pipelineUse": "limited-hub-and-button-goblin-typography-runtime-proof",
+  "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+  "baselineCommit": "a541b3cbb88f77be234df135e5b3e06f7eb59e30",
+  "createdDate": "2026-07-14",
+  "authority": {
+    "fontInventory": "manifests/academy/fonts/academy.font-inventory.json",
+    "recipeRegistry": "manifests/academy/shared/academy.typography-recipe-registry.json",
+    "humanAuthority": "H5.97 visual review and H5.98 canonical typography promotion",
+    "implementationPolicy": "Canonical defaults only unless live evidence proves an approved alternate is required."
+  },
+  "sharedRuntimePrimitive": {
+    "recipeModule": "assets/academy/fonts/runtime/academy-typography.ts",
+    "fontFaceAndDomStyles": "assets/academy/fonts/runtime/academy-typography.css",
+    "properties": [
+      "repository-local @font-face sources",
+      "semantic DOM role selectors",
+      "Phaser-equivalent TextStyle factory",
+      "explicit serif, sans-serif, and monospace fallback stacks",
+      "font readiness before Phaser text creation",
+      "runtime font and Phaser style audit data",
+      "protected responsive minimums",
+      "reduced-motion-safe typography behavior"
+    ]
+  },
+  "implementedSurfaces": {
+    "hub": {
+      "root": "hub/src",
+      "roles": [
+        "academy-title",
+        "game-title",
+        "panel-heading",
+        "body-instruction",
+        "compact-label",
+        "data-value",
+        "debug-information"
+      ],
+      "preservedBehavior": [
+        "shell structure",
+        "Help, Ledger, Dev, and Close Game controls",
+        "development and production gating",
+        "keyboard behavior",
+        "launcher card layout",
+        "game launch flow",
+        "Tauri minimum-window contract"
+      ]
+    },
+    "buttonGoblin": {
+      "root": "games/tier-1/01-button-goblin-clicker/src",
+      "roles": [
+        "game-title",
+        "panel-heading",
+        "body-instruction",
+        "compact-label",
+        "data-value",
+        "result-state",
+        "optional-game-accent"
+      ],
+      "phaserRoles": [
+        "panel-heading",
+        "data-value",
+        "result-state"
+      ],
+      "preservedBehavior": [
+        "simulation and controller authority",
+        "gameplay values",
+        "GoblinRig behavior and animation states",
+        "hit area",
+        "cavern background and stage composition",
+        "HUD and action-card placement",
+        "upgrade and victory flow",
+        "narrow layout"
+      ]
+    }
+  },
+  "liveEvidence": {
+    "root": "assets/academy/evidence/h5-99-academy-typography-runtime-integration",
+    "computedStyleAndFontLoad": "assets/academy/evidence/h5-99-academy-typography-runtime-integration/computed-style-font-load-evidence.json",
+    "runtimeAssertions": "assets/academy/evidence/h5-99-academy-typography-runtime-integration/runtime-assertions.json",
+    "semanticMatrix": "assets/academy/evidence/h5-99-academy-typography-runtime-integration/semantic-role-implementation-matrix.md",
+    "observed": {
+      "domSamples": 213,
+      "unloadedCanonicalFaces": 0,
+      "clippingFindings": 0,
+      "hubMinimumViewport": "1024x640",
+      "hubMinimumViewportHorizontalOverflow": false,
+      "productionDeveloperActionCount": 0,
+      "productionActionCount": 1,
+      "buttonFontReadinessFacesLoaded": 8,
+      "buttonPhaserRecipesObserved": 3,
+      "externalFontOrAssetRequests": 0
+    }
+  },
+  "evidenceBackedAdjustments": [
+    "Kept Caudex 700 for Help, Ledger, and Button body copy after live readability review; no alternate recipe was required.",
+    "Constrained Help and Ledger body size to 17-20px, inside the approved 17-24px recipe range.",
+    "Used component color and shadow variables to adapt canonical recipes to dark runtime materials without changing semantic ownership.",
+    "Used the Tauri-declared 1024x640 minimum window for narrow Hub proof rather than an unsupported phone viewport."
+  ],
+  "nonGoalsPreserved": [
+    "no shared decorative panel assets",
+    "no layout redesign",
+    "no gameplay or controller changes",
+    "no remaining Tier 1 game changes",
+    "no dependency or lockfile changes",
+    "no external font CDN"
+  ],
+  "reviewClosure": {
+    "fontLoading": "passed",
+    "hubImplementation": "passed",
+    "buttonGoblinImplementation": "passed",
+    "domCssToPhaserParity": "passed",
+    "alternateRecipeRequired": false,
+    "h6_4ReadyAfterCommit": true
+  },
+  "commitBoundary": {
+    "closureAction": "H5.99A exact staging and commit",
+    "closureStatus": "committed-by-this-changeset",
+    "commitMessage": "feat: integrate academy typography runtime",
+    "nextGate": "Clean-tree verification before H6.4 begins."
+  }
+}

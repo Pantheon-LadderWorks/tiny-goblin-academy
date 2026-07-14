@@ -1725,3 +1725,11 @@ H6.3B — Button Goblin Code-Authored Vector Actor Rig Preview
 ```
 
 The future actor-rig doctrine is: the rig defines how a goblin moves, and the skin defines which goblin is wearing it.
+
+## H5.99 Academy Typography Runtime Integration Note
+
+H5.99 promotes the H5.98 canonical typography defaults into exactly two live consumers: the Academy Hub and Button Goblin Clicker. The shared implementation lives under `assets/academy/fonts/runtime/` and owns repository-local font registration, semantic DOM roles, Phaser-equivalent styles, fallback stacks, and font readiness.
+
+Live evidence confirms all inspected canonical faces loaded, Button Phaser text used the shared recipe factory, the Tauri minimum Hub window and Button narrow layout fit without clipping, and the real cavern surface retained readable labels, HP, Bonk feedback, upgrade state, and victory text. Caudex 700 remained acceptable in the live Help/Ledger surfaces, so the registered long-body alternate remains unwired.
+
+This is not global font runtime approval for the other nine Tier 1 games, not shared decorative UI integration, and not permission to collapse game-specific material treatments into a universal theme. Human review passed for the Hub, Button Goblin, and DOM/CSS-to-Phaser parity evidence; H5.99A closes the exact approved commit before H6.4 begins.

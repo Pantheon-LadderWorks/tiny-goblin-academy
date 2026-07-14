@@ -72,16 +72,17 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
     <div className="dev-game-runtime-view">
       <header className="runtime-header" aria-label="Academy runtime shell">
         <div className="runtime-title-cluster">
-          <span className="runtime-academy-title">Tiny Goblin Academy</span>
+          <span className="runtime-academy-title" data-typography-role="compact-label">Tiny Goblin Academy</span>
           <span className="runtime-title-separator">/</span>
-          <span className="runtime-game-title">{runtime.title}</span>
-          <span className="runtime-dev-pill">Dev Mode</span>
-          <span className="runtime-url">{runtime.url}</span>
+          <span className="runtime-game-title" data-typography-role="game-title">{runtime.title}</span>
+          <span className="runtime-dev-pill" data-typography-role="compact-label">Dev Mode</span>
+          <span className="runtime-url" data-typography-role="debug-information">{runtime.url}</span>
         </div>
 
         <div className="runtime-action-cluster">
           <button
             className="runtime-shell-btn"
+            data-typography-role="compact-label"
             type="button"
             onClick={() => toggleOverlay('ledger')}
             aria-pressed={activeOverlay === 'ledger'}
@@ -91,6 +92,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
           </button>
           <button
             className="runtime-shell-btn"
+            data-typography-role="compact-label"
             type="button"
             onClick={() => toggleOverlay('help')}
             aria-pressed={activeOverlay === 'help'}
@@ -99,6 +101,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
           </button>
           <button
             className="runtime-shell-btn runtime-shell-btn-dev"
+            data-typography-role="compact-label"
             type="button"
             onClick={() => toggleOverlay('dev')}
             aria-pressed={activeOverlay === 'dev'}
@@ -107,6 +110,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
           </button>
           <button
           className="btn stop-btn"
+          data-typography-role="compact-label"
           onClick={onClose}
           disabled={isStopping}
         >
@@ -134,8 +138,8 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
             >
               <div className="runtime-overlay-header">
                 <div>
-                  <p className="runtime-overlay-kicker">Academy Shell · {runtimeShellContract.version}</p>
-                  <h2>{overlayTitle}</h2>
+                  <p className="runtime-overlay-kicker" data-typography-role="compact-label">Academy Shell · {runtimeShellContract.version}</p>
+                  <h2 data-typography-role="panel-heading">{overlayTitle}</h2>
                 </div>
                 <button className="runtime-overlay-close" type="button" onClick={closeOverlay} aria-label="Close overlay">
                   ×
@@ -143,7 +147,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
               </div>
 
               {activeOverlay === 'ledger' && (
-                <div className="runtime-overlay-body">
+                <div className="runtime-overlay-body" data-typography-role="body-instruction">
                   <p>
                     The shared shell now owns the Ledger surface. This H6.1 contract proves the top-bar button and <kbd>L</kbd>
                     shortcut without migrating per-game ledgers yet.
@@ -155,7 +159,7 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
               )}
 
               {activeOverlay === 'help' && (
-                <div className="runtime-overlay-body">
+                <div className="runtime-overlay-body" data-typography-role="body-instruction">
                   <p>
                     Help is the future home for objectives, controls, and rules that used to sit in permanent side panels.
                   </p>
@@ -168,27 +172,27 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
               )}
 
               {activeOverlay === 'dev' && (
-                <div className="runtime-overlay-body">
+                <div className="runtime-overlay-body" data-typography-role="body-instruction">
                   <p>
                     Dev state stays available, but hidden by default. Position, velocity, grounded flags, and manifest IDs belong
                     here instead of permanent player-facing rails.
                   </p>
                   <dl className="runtime-dev-list">
                     <div>
-                      <dt>Game</dt>
-                      <dd>{runtime.gameId}</dd>
+                      <dt data-typography-role="compact-label">Game</dt>
+                      <dd data-typography-role="debug-information">{runtime.gameId}</dd>
                     </div>
                     <div>
-                      <dt>Port</dt>
-                      <dd>{runtime.port}</dd>
+                      <dt data-typography-role="compact-label">Port</dt>
+                      <dd data-typography-role="debug-information">{runtime.port}</dd>
                     </div>
                     <div>
-                      <dt>PID</dt>
-                      <dd>{runtime.pid ?? 'untracked'}</dd>
+                      <dt data-typography-role="compact-label">PID</dt>
+                      <dd data-typography-role="debug-information">{runtime.pid ?? 'untracked'}</dd>
                     </div>
                     <div>
-                      <dt>Started</dt>
-                      <dd>{runtime.startedAt ?? 'unknown'}</dd>
+                      <dt data-typography-role="compact-label">Started</dt>
+                      <dd data-typography-role="debug-information">{runtime.startedAt ?? 'unknown'}</dd>
                     </div>
                   </dl>
                 </div>
