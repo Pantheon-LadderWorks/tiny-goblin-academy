@@ -159,6 +159,14 @@ H5.97 human visual review passed after Region 22's title lane was corrected from
 
 The inherited Macondo `OFL.txt` copyright line contains replacement-character damage. H5.97 preserves that debt honestly; H5.98 must verify or replace the license record from the authoritative source before Macondo can be runtime-eligible.
 
+## H5.98 Academy Typography Promotion Note
+
+H5.98 promotes the reviewed font and recipe system into `manifests/academy/fonts/academy.font-inventory.json` and `manifests/academy/shared/academy.typography-recipe-registry.json`. Exactly one initial default is designated for each approved semantic role, while the long-body, paper-badge, playfield-label, and playfield-data alternatives remain registered.
+
+The core implementation set is Cinzel Decorative, Cinzel, Caudex, Outfit, Atkinson Hyperlegible, Fira Code, and Macondo, with Alegreya as the long-form body alternate. The broader licensed accent pantry remains selectable but is not part of the initial runtime bundle by default.
+
+Macondo provenance is resolved: the official Google Fonts `OFL.txt` carried the same damaged characters, while official `METADATA.pb` preserved the clean identity. H5.98 repaired only the header, retained the OFL 1.1 body, and recorded the repaired hash. Live Hub and game wiring remains deferred to H5.99.
+
 
 ## H5.92 Asset Docs Reorganization Note
 

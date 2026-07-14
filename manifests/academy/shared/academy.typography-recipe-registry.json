@@ -1,0 +1,1763 @@
+{
+  "schemaVersion": "1.0",
+  "status": "active",
+  "reviewStatus": "human-visual-review-passed",
+  "domain": "academy-ui",
+  "operationalType": "canonical-academy-typography-recipe-registry",
+  "pipelineUse": "canonical-typography-default-and-variant-authority",
+  "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+  "runtimeWiringStatus": "none",
+  "createdDate": "2026-07-14",
+  "doctrine": "semantic role × host material = rendered text treatment",
+  "antiDoctrine": "semantic role is not one universal CSS class",
+  "promotedFrom": "manifests/academy/shared/planning/academy.material-aware-typography-recipes-h5-97d.json",
+  "fontInventory": "manifests/academy/fonts/academy.font-inventory.json",
+  "defaultPolicy": "Exactly one initial default recipe is designated per semantic role; approved material and long-form alternatives remain registered.",
+  "semanticRoleAliases": [
+    {
+      "alias": "academy-display",
+      "resolvesTo": "academy-title"
+    },
+    {
+      "alias": "game-display",
+      "resolvesTo": "game-title"
+    },
+    {
+      "alias": "short-story-text",
+      "resolvesTo": "body-instruction"
+    },
+    {
+      "alias": "critical-number",
+      "resolvesTo": "data-value"
+    },
+    {
+      "alias": "developer-debug-text",
+      "resolvesTo": "debug-information"
+    }
+  ],
+  "semanticRoleDefaults": [
+    {
+      "semanticRole": "academy-title",
+      "defaultRecipeId": "academy-title-on-shell",
+      "family": "Cinzel Decorative",
+      "weight": 700,
+      "hostMaterial": "academy-shell"
+    },
+    {
+      "semanticRole": "game-title",
+      "defaultRecipeId": "game-title-on-dark",
+      "family": "Cinzel",
+      "weight": 700,
+      "hostMaterial": "dark-stage"
+    },
+    {
+      "semanticRole": "panel-heading",
+      "defaultRecipeId": "panel-heading-on-parchment",
+      "family": "Cinzel",
+      "weight": 600,
+      "hostMaterial": "parchment"
+    },
+    {
+      "semanticRole": "body-instruction",
+      "defaultRecipeId": "body-on-parchment",
+      "family": "Caudex",
+      "weight": 700,
+      "hostMaterial": "parchment"
+    },
+    {
+      "semanticRole": "compact-label",
+      "defaultRecipeId": "compact-label-on-metal",
+      "family": "Outfit",
+      "weight": 600,
+      "hostMaterial": "dark-metal-stone"
+    },
+    {
+      "semanticRole": "data-value",
+      "defaultRecipeId": "data-on-metal",
+      "family": "Atkinson Hyperlegible",
+      "weight": 700,
+      "hostMaterial": "dark-metal-stone"
+    },
+    {
+      "semanticRole": "result-state",
+      "defaultRecipeId": "result-on-teal-frame",
+      "family": "Cinzel",
+      "weight": 700,
+      "hostMaterial": "teal-ornamental-frame"
+    },
+    {
+      "semanticRole": "dialogue-title",
+      "defaultRecipeId": "dialogue-title-on-scroll",
+      "family": "Cinzel",
+      "weight": 600,
+      "hostMaterial": "dialogue-scroll"
+    },
+    {
+      "semanticRole": "dialogue-speech",
+      "defaultRecipeId": "dialogue-body-on-scroll",
+      "family": "Caudex",
+      "weight": 700,
+      "hostMaterial": "dialogue-scroll"
+    },
+    {
+      "semanticRole": "debug-information",
+      "defaultRecipeId": "debug-on-dev-overlay",
+      "family": "Fira Code",
+      "weight": 400,
+      "hostMaterial": "developer-overlay"
+    },
+    {
+      "semanticRole": "optional-game-accent",
+      "defaultRecipeId": "accent-on-parchment",
+      "family": "Macondo",
+      "weight": 400,
+      "hostMaterial": "parchment"
+    }
+  ],
+  "registeredAlternateRecipeIds": [
+    "long-body-on-parchment",
+    "badge-label-on-paper",
+    "label-over-playfield",
+    "data-over-playfield"
+  ],
+  "recipes": [
+    {
+      "id": "academy-title-on-shell",
+      "semanticRole": "academy-title",
+      "hostMaterial": "academy-shell",
+      "fontFamily": "Cinzel Decorative",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        36,
+        68
+      ],
+      "lineHeight": 1.05,
+      "letterSpacing": "0.04em",
+      "fill": "#ead19a",
+      "stroke": {
+        "widthPx": 2,
+        "color": "#4a2d1d",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "two-stage downward depth",
+        "layers": [
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 0,
+            "color": "#2d1b13"
+          },
+          {
+            "x": 0,
+            "y": 4,
+            "blur": 7,
+            "color": "rgba(0,0,0,0.55)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.14em",
+      "alignment": "center",
+      "caseTreatment": "authored uppercase/title case; never CSS-forced for names",
+      "maximumLines": 1,
+      "overflowBehavior": "use approved short Academy title; no scale below 36 px",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes large-text target on dark shell with stroke; manual motion review required",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Academy identity and major graduation/result moments only",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 36,
+        "lineHeight": 1.05,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 36px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Cinzel Decorative', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(36px, calc(36px + 32 * ((100vw - 360px) / 1080)), 68px)",
+        "lineHeight": 1.05,
+        "letterSpacing": "0.04em",
+        "color": "#ead19a",
+        "webkitTextStroke": "2px #4a2d1d",
+        "textShadow": "0px 2px 0px #2d1b13, 0px 4px 7px rgba(0,0,0,0.55)",
+        "textAlign": "center",
+        "padding": "0.08em 0.14em",
+        "textTransform": "authored uppercase/title case; never CSS-forced for names",
+        "overflow": "use approved short Academy title; no scale below 36 px"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Cinzel Decorative",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          36,
+          68
+        ],
+        "color": "#ead19a",
+        "stroke": "#4a2d1d",
+        "strokeThickness": 2,
+        "shadow": {
+          "x": 0,
+          "y": 2,
+          "blur": 0,
+          "color": "#2d1b13"
+        },
+        "align": "center",
+        "lineSpacingPx": 2,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA large text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "game-title-on-dark",
+      "semanticRole": "game-title",
+      "hostMaterial": "dark-stage",
+      "fontFamily": "Cinzel",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/cinzel/Cinzel[wght].ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        28,
+        46
+      ],
+      "lineHeight": 1.1,
+      "letterSpacing": "0.025em",
+      "fill": "#f1dfae",
+      "stroke": {
+        "widthPx": 1,
+        "color": "#39231a",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "soft dark depth",
+        "layers": [
+          {
+            "x": 0,
+            "y": 3,
+            "blur": 4,
+            "color": "rgba(0,0,0,0.8)"
+          }
+        ]
+      },
+      "padding": "0.06em 0.1em",
+      "alignment": "center",
+      "caseTreatment": "authored title case",
+      "maximumLines": 2,
+      "overflowBehavior": "wrap once at word boundary; then use approved short title",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes large-text target on controlled dark stage; backplate required on busy scenes",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Shared game heading with one optional game accent outside critical text",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 28,
+        "lineHeight": 1.1,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 28px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Cinzel', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(28px, calc(28px + 18 * ((100vw - 360px) / 1080)), 46px)",
+        "lineHeight": 1.1,
+        "letterSpacing": "0.025em",
+        "color": "#f1dfae",
+        "webkitTextStroke": "1px #39231a",
+        "textShadow": "0px 3px 4px rgba(0,0,0,0.8)",
+        "textAlign": "center",
+        "padding": "0.06em 0.1em",
+        "textTransform": "authored title case",
+        "overflow": "wrap once at word boundary; then use approved short title"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Cinzel",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          28,
+          46
+        ],
+        "color": "#f1dfae",
+        "stroke": "#39231a",
+        "strokeThickness": 1,
+        "shadow": {
+          "x": 0,
+          "y": 3,
+          "blur": 4,
+          "color": "rgba(0,0,0,0.8)"
+        },
+        "align": "center",
+        "lineSpacingPx": 3,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA large text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "panel-heading-on-parchment",
+      "semanticRole": "panel-heading",
+      "hostMaterial": "parchment",
+      "fontFamily": "Cinzel",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/cinzel/Cinzel[wght].ttf",
+      "style": "normal",
+      "weight": 600,
+      "sizeRangePx": [
+        18,
+        28
+      ],
+      "lineHeight": 1.15,
+      "letterSpacing": "0.015em",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "warm paper relief",
+        "layers": [
+          {
+            "x": 0,
+            "y": -1,
+            "blur": 0,
+            "color": "rgba(255,244,214,0.65)"
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 2,
+            "color": "rgba(55,31,18,0.18)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.1em",
+      "alignment": "center or left by component",
+      "caseTreatment": "title case or brief uppercase",
+      "maximumLines": 2,
+      "overflowBehavior": "wrap once; shorten before scaling below range",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes on pale parchment; no thick outline",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Parchment headings and short result labels",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 18,
+        "lineHeight": 1.15,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 18px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Cinzel', serif",
+        "fontWeight": 600,
+        "fontSize": "clamp(18px, calc(18px + 10 * ((100vw - 360px) / 1080)), 28px)",
+        "lineHeight": 1.15,
+        "letterSpacing": "0.015em",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px -1px 0px rgba(255,244,214,0.65), 0px 2px 2px rgba(55,31,18,0.18)",
+        "textAlign": "center or left by component",
+        "padding": "0.08em 0.1em",
+        "textTransform": "title case or brief uppercase",
+        "overflow": "wrap once; shorten before scaling below range"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Cinzel",
+        "fontStyle": "600",
+        "fontSizeRangePx": [
+          18,
+          28
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": -1,
+          "blur": 0,
+          "color": "rgba(255,244,214,0.65)"
+        },
+        "align": "center or left by component",
+        "lineSpacingPx": 3,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "body-on-parchment",
+      "semanticRole": "body-instruction",
+      "hostMaterial": "parchment",
+      "fontFamily": "Caudex",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/caudex/Caudex-Bold.ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        17,
+        24
+      ],
+      "lineHeight": 1.4,
+      "letterSpacing": "0",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "extremely subtle warm shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 2,
+            "color": "rgba(55,31,18,0.14)"
+          }
+        ]
+      },
+      "padding": "0.12em 0.14em",
+      "alignment": "left",
+      "caseTreatment": "sentence case",
+      "maximumLines": 4,
+      "overflowBehavior": "wrap; reflow component; never ellipsize instructions",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes body-text target on pale parchment at protected minimum",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Instructions, short lore, help, and captions",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 17,
+        "lineHeight": 1.4,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 17px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Caudex', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(17px, calc(17px + 7 * ((100vw - 360px) / 1080)), 24px)",
+        "lineHeight": 1.4,
+        "letterSpacing": "0",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 2px rgba(55,31,18,0.14)",
+        "textAlign": "left",
+        "padding": "0.12em 0.14em",
+        "textTransform": "sentence case",
+        "overflow": "wrap; reflow component; never ellipsize instructions"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Caudex",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          17,
+          24
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "color": "rgba(55,31,18,0.14)"
+        },
+        "align": "left",
+        "lineSpacingPx": 7,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "long-body-on-parchment",
+      "semanticRole": "body-instruction",
+      "hostMaterial": "parchment",
+      "fontFamily": "Alegreya",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/alegreya/Alegreya[wght].ttf",
+      "style": "normal",
+      "weight": 500,
+      "sizeRangePx": [
+        17,
+        23
+      ],
+      "lineHeight": 1.45,
+      "letterSpacing": "0",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "extremely subtle warm shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 2,
+            "color": "rgba(55,31,18,0.12)"
+          }
+        ]
+      },
+      "padding": "0.12em 0.16em",
+      "alignment": "left",
+      "caseTreatment": "sentence case",
+      "maximumLines": 8,
+      "overflowBehavior": "wrap; scroll or paginate long Help/Ledger copy",
+      "readability": {
+        "verdict": "provisional-selection-required",
+        "minimumContrastPolicy": "provisional alternate; requires H5.98 prose-rhythm selection",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Longer Help/Ledger prose where Caudex feels too formal",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "registered-selectable-variant",
+      "defaultForSemanticRole": false,
+      "responsiveMinimums": {
+        "fontSizePx": 17,
+        "lineHeight": 1.45,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 17px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Alegreya', serif",
+        "fontWeight": 500,
+        "fontSize": "clamp(17px, calc(17px + 6 * ((100vw - 360px) / 1080)), 23px)",
+        "lineHeight": 1.45,
+        "letterSpacing": "0",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 2px rgba(55,31,18,0.12)",
+        "textAlign": "left",
+        "padding": "0.12em 0.16em",
+        "textTransform": "sentence case",
+        "overflow": "wrap; scroll or paginate long Help/Ledger copy"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Alegreya",
+        "fontStyle": "500",
+        "fontSizeRangePx": [
+          17,
+          23
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "color": "rgba(55,31,18,0.12)"
+        },
+        "align": "left",
+        "lineSpacingPx": 8,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "compact-label-on-metal",
+      "semanticRole": "compact-label",
+      "hostMaterial": "dark-metal-stone",
+      "fontFamily": "Outfit",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/outfit/Outfit[wght].ttf",
+      "style": "normal",
+      "weight": 600,
+      "sizeRangePx": [
+        12,
+        18
+      ],
+      "lineHeight": 1.15,
+      "letterSpacing": "0.055em",
+      "fill": "#d2ad57",
+      "stroke": {
+        "widthPx": 1,
+        "color": "rgba(35,23,20,0.45)",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "small grounding shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 2,
+            "color": "rgba(0,0,0,0.65)"
+          }
+        ]
+      },
+      "padding": "0.1em 0.14em",
+      "alignment": "left or center by slot",
+      "caseTreatment": "uppercase",
+      "maximumLines": 1,
+      "overflowBehavior": "approved abbreviation, then ellipsis; never thin weight",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes compact-label target with semibold weight; Outfit 100 rejected for critical use",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "HUD labels, compact controls, short metadata",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 12,
+        "lineHeight": 1.15,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": 44,
+        "policy": "Do not scale below 12px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Outfit', serif",
+        "fontWeight": 600,
+        "fontSize": "clamp(12px, calc(12px + 6 * ((100vw - 360px) / 1080)), 18px)",
+        "lineHeight": 1.15,
+        "letterSpacing": "0.055em",
+        "color": "#d2ad57",
+        "webkitTextStroke": "1px rgba(35,23,20,0.45)",
+        "textShadow": "0px 2px 2px rgba(0,0,0,0.65)",
+        "textAlign": "left or center by slot",
+        "padding": "0.1em 0.14em",
+        "textTransform": "uppercase",
+        "overflow": "approved abbreviation, then ellipsis; never thin weight"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Outfit",
+        "fontStyle": "600",
+        "fontSizeRangePx": [
+          12,
+          18
+        ],
+        "color": "#d2ad57",
+        "stroke": "rgba(35,23,20,0.45)",
+        "strokeThickness": 1,
+        "shadow": {
+          "x": 0,
+          "y": 2,
+          "blur": 2,
+          "color": "rgba(0,0,0,0.65)"
+        },
+        "align": "left or center by slot",
+        "lineSpacingPx": 2,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "data-on-metal",
+      "semanticRole": "data-value",
+      "hostMaterial": "dark-metal-stone",
+      "fontFamily": "Atkinson Hyperlegible",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        18,
+        32
+      ],
+      "lineHeight": 1.05,
+      "letterSpacing": "0.01em",
+      "fill": "#f1dfae",
+      "stroke": {
+        "widthPx": 1,
+        "color": "rgba(35,23,20,0.7)",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "dark separation shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 3,
+            "color": "rgba(0,0,0,0.8)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.12em",
+      "alignment": "right or stable column",
+      "caseTreatment": "preserve authored symbols",
+      "maximumLines": 1,
+      "overflowBehavior": "tabular figures where available; compact notation before truncation",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes; readability outranks ornament",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "HP, timers, coins, scores, fractions, and counters",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 18,
+        "lineHeight": 1.05,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": 44,
+        "policy": "Do not scale below 18px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Atkinson Hyperlegible', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(18px, calc(18px + 14 * ((100vw - 360px) / 1080)), 32px)",
+        "lineHeight": 1.05,
+        "letterSpacing": "0.01em",
+        "color": "#f1dfae",
+        "webkitTextStroke": "1px rgba(35,23,20,0.7)",
+        "textShadow": "0px 2px 3px rgba(0,0,0,0.8)",
+        "textAlign": "right or stable column",
+        "padding": "0.08em 0.12em",
+        "textTransform": "preserve authored symbols",
+        "overflow": "tabular figures where available; compact notation before truncation"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Atkinson Hyperlegible",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          18,
+          32
+        ],
+        "color": "#f1dfae",
+        "stroke": "rgba(35,23,20,0.7)",
+        "strokeThickness": 1,
+        "shadow": {
+          "x": 0,
+          "y": 2,
+          "blur": 3,
+          "color": "rgba(0,0,0,0.8)"
+        },
+        "align": "right or stable column",
+        "lineSpacingPx": 1,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "result-on-teal-frame",
+      "semanticRole": "result-state",
+      "hostMaterial": "teal-ornamental-frame",
+      "fontFamily": "Cinzel",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/cinzel/Cinzel[wght].ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        22,
+        38
+      ],
+      "lineHeight": 1.1,
+      "letterSpacing": "0.02em",
+      "fill": "#5b361f",
+      "stroke": {
+        "widthPx": 1,
+        "color": "#f7e2b0",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "inked result with restrained depth",
+        "layers": [
+          {
+            "x": 0,
+            "y": 3,
+            "blur": 3,
+            "color": "rgba(77,44,26,0.3)"
+          }
+        ]
+      },
+      "padding": "0.1em 0.14em",
+      "alignment": "center",
+      "caseTreatment": "uppercase heading; authored data",
+      "maximumLines": 2,
+      "overflowBehavior": "short result + value only; use larger result surface for detail",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes on pale center; ornament remains outside content slots",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Victory, purchase, graduation, and compact results",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 22,
+        "lineHeight": 1.1,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 22px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Cinzel', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(22px, calc(22px + 16 * ((100vw - 360px) / 1080)), 38px)",
+        "lineHeight": 1.1,
+        "letterSpacing": "0.02em",
+        "color": "#5b361f",
+        "webkitTextStroke": "1px #f7e2b0",
+        "textShadow": "0px 3px 3px rgba(77,44,26,0.3)",
+        "textAlign": "center",
+        "padding": "0.1em 0.14em",
+        "textTransform": "uppercase heading; authored data",
+        "overflow": "short result + value only; use larger result surface for detail"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Cinzel",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          22,
+          38
+        ],
+        "color": "#5b361f",
+        "stroke": "#f7e2b0",
+        "strokeThickness": 1,
+        "shadow": {
+          "x": 0,
+          "y": 3,
+          "blur": 3,
+          "color": "rgba(77,44,26,0.3)"
+        },
+        "align": "center",
+        "lineSpacingPx": 2,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "dialogue-title-on-scroll",
+      "semanticRole": "dialogue-title",
+      "hostMaterial": "dialogue-scroll",
+      "fontFamily": "Cinzel",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/cinzel/Cinzel[wght].ttf",
+      "style": "normal",
+      "weight": 600,
+      "sizeRangePx": [
+        17,
+        24
+      ],
+      "lineHeight": 1.15,
+      "letterSpacing": "0.015em",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "paper-grounded shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 1,
+            "color": "rgba(55,31,18,0.16)"
+          }
+        ]
+      },
+      "padding": "0.1em 0.12em",
+      "alignment": "left",
+      "caseTreatment": "title case or speaker uppercase",
+      "maximumLines": 1,
+      "overflowBehavior": "approved short speaker/title; preserve feather exclusion zone",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes in H5.95 title slot",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Speaker name or short dialogue title",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 17,
+        "lineHeight": 1.15,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 17px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Cinzel', serif",
+        "fontWeight": 600,
+        "fontSize": "clamp(17px, calc(17px + 7 * ((100vw - 360px) / 1080)), 24px)",
+        "lineHeight": 1.15,
+        "letterSpacing": "0.015em",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 1px rgba(55,31,18,0.16)",
+        "textAlign": "left",
+        "padding": "0.1em 0.12em",
+        "textTransform": "title case or speaker uppercase",
+        "overflow": "approved short speaker/title; preserve feather exclusion zone"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Cinzel",
+        "fontStyle": "600",
+        "fontSizeRangePx": [
+          17,
+          24
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 1,
+          "color": "rgba(55,31,18,0.16)"
+        },
+        "align": "left",
+        "lineSpacingPx": 3,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "dialogue-body-on-scroll",
+      "semanticRole": "dialogue-speech",
+      "hostMaterial": "dialogue-scroll",
+      "fontFamily": "Caudex",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/caudex/Caudex-Bold.ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        17,
+        22
+      ],
+      "lineHeight": 1.38,
+      "letterSpacing": "0",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "paper-grounded shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 2,
+            "color": "rgba(55,31,18,0.12)"
+          }
+        ]
+      },
+      "padding": "0.12em 0.14em",
+      "alignment": "left or centered for one short utterance",
+      "caseTreatment": "sentence case",
+      "maximumLines": 3,
+      "overflowBehavior": "wrap; advance/paginate; never shrink below range",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes for compact dialogue; live text remains code-owned",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Short NPC dialogue and speech bubbles",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 17,
+        "lineHeight": 1.38,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 17px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Caudex', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(17px, calc(17px + 5 * ((100vw - 360px) / 1080)), 22px)",
+        "lineHeight": 1.38,
+        "letterSpacing": "0",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 2px rgba(55,31,18,0.12)",
+        "textAlign": "left or centered for one short utterance",
+        "padding": "0.12em 0.14em",
+        "textTransform": "sentence case",
+        "overflow": "wrap; advance/paginate; never shrink below range"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Caudex",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          17,
+          22
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "color": "rgba(55,31,18,0.12)"
+        },
+        "align": "left or centered for one short utterance",
+        "lineSpacingPx": 6,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "badge-label-on-paper",
+      "semanticRole": "compact-label",
+      "hostMaterial": "small-paper-badge",
+      "fontFamily": "Outfit",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/outfit/Outfit[wght].ttf",
+      "style": "normal",
+      "weight": 600,
+      "sizeRangePx": [
+        12,
+        17
+      ],
+      "lineHeight": 1.1,
+      "letterSpacing": "0.045em",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "tiny paper grounding",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 1,
+            "color": "rgba(55,31,18,0.15)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.12em",
+      "alignment": "center",
+      "caseTreatment": "uppercase",
+      "maximumLines": 1,
+      "overflowBehavior": "one approved short label; otherwise choose a larger component",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes only for short labels; unsuitable for body copy",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Ready, owned, new, run, and similarly short labels",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "registered-selectable-variant",
+      "defaultForSemanticRole": false,
+      "responsiveMinimums": {
+        "fontSizePx": 12,
+        "lineHeight": 1.1,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": 44,
+        "policy": "Do not scale below 12px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Outfit', serif",
+        "fontWeight": 600,
+        "fontSize": "clamp(12px, calc(12px + 5 * ((100vw - 360px) / 1080)), 17px)",
+        "lineHeight": 1.1,
+        "letterSpacing": "0.045em",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 1px rgba(55,31,18,0.15)",
+        "textAlign": "center",
+        "padding": "0.08em 0.12em",
+        "textTransform": "uppercase",
+        "overflow": "one approved short label; otherwise choose a larger component"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Outfit",
+        "fontStyle": "600",
+        "fontSizeRangePx": [
+          12,
+          17
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 1,
+          "color": "rgba(55,31,18,0.15)"
+        },
+        "align": "center",
+        "lineSpacingPx": 1,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "label-over-playfield",
+      "semanticRole": "compact-label",
+      "hostMaterial": "transparent-playfield-overlay",
+      "fontFamily": "Outfit",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/outfit/Outfit[wght].ttf",
+      "style": "normal",
+      "weight": 600,
+      "sizeRangePx": [
+        13,
+        18
+      ],
+      "lineHeight": 1.15,
+      "letterSpacing": "0.045em",
+      "fill": "#ead19a",
+      "stroke": {
+        "widthPx": 2,
+        "color": "rgba(25,17,16,0.85)",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "strong separation shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 3,
+            "color": "rgba(0,0,0,0.85)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.12em",
+      "alignment": "left",
+      "caseTreatment": "uppercase",
+      "maximumLines": 1,
+      "overflowBehavior": "shorten; if scene remains busy, add restrained backplate",
+      "readability": {
+        "verdict": "constrained",
+        "minimumContrastPolicy": "constrained without backplate; H5.97D cavern test requires plate when texture wins",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Sparse corner HUD labels over live playfields",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "registered-selectable-variant",
+      "defaultForSemanticRole": false,
+      "responsiveMinimums": {
+        "fontSizePx": 13,
+        "lineHeight": 1.15,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": 44,
+        "policy": "Do not scale below 13px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Outfit', serif",
+        "fontWeight": 600,
+        "fontSize": "clamp(13px, calc(13px + 5 * ((100vw - 360px) / 1080)), 18px)",
+        "lineHeight": 1.15,
+        "letterSpacing": "0.045em",
+        "color": "#ead19a",
+        "webkitTextStroke": "2px rgba(25,17,16,0.85)",
+        "textShadow": "0px 2px 3px rgba(0,0,0,0.85)",
+        "textAlign": "left",
+        "padding": "0.08em 0.12em",
+        "textTransform": "uppercase",
+        "overflow": "shorten; if scene remains busy, add restrained backplate"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Outfit",
+        "fontStyle": "600",
+        "fontSizeRangePx": [
+          13,
+          18
+        ],
+        "color": "#ead19a",
+        "stroke": "rgba(25,17,16,0.85)",
+        "strokeThickness": 2,
+        "shadow": {
+          "x": 0,
+          "y": 2,
+          "blur": 3,
+          "color": "rgba(0,0,0,0.85)"
+        },
+        "align": "left",
+        "lineSpacingPx": 2,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Use the registered restrained backplate when scene contrast is unstable."
+      }
+    },
+    {
+      "id": "data-over-playfield",
+      "semanticRole": "data-value",
+      "hostMaterial": "transparent-playfield-overlay",
+      "fontFamily": "Atkinson Hyperlegible",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+      "style": "normal",
+      "weight": 700,
+      "sizeRangePx": [
+        18,
+        28
+      ],
+      "lineHeight": 1.05,
+      "letterSpacing": "0.01em",
+      "fill": "#f1dfae",
+      "stroke": {
+        "widthPx": 2,
+        "color": "rgba(25,17,16,0.85)",
+        "purpose": "edge protection"
+      },
+      "shadow": {
+        "summary": "strong separation shadow",
+        "layers": [
+          {
+            "x": 0,
+            "y": 2,
+            "blur": 3,
+            "color": "rgba(0,0,0,0.85)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.12em",
+      "alignment": "right or stable column",
+      "caseTreatment": "preserve authored symbols",
+      "maximumLines": 1,
+      "overflowBehavior": "compact notation; backplate if measured scene contrast fails",
+      "readability": {
+        "verdict": "constrained",
+        "minimumContrastPolicy": "constrained without plate; passes with restrained dark plate",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Critical counters over motion or textured scenes",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "registered-selectable-variant",
+      "defaultForSemanticRole": false,
+      "responsiveMinimums": {
+        "fontSizePx": 18,
+        "lineHeight": 1.05,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": 44,
+        "policy": "Do not scale below 18px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Atkinson Hyperlegible', serif",
+        "fontWeight": 700,
+        "fontSize": "clamp(18px, calc(18px + 10 * ((100vw - 360px) / 1080)), 28px)",
+        "lineHeight": 1.05,
+        "letterSpacing": "0.01em",
+        "color": "#f1dfae",
+        "webkitTextStroke": "2px rgba(25,17,16,0.85)",
+        "textShadow": "0px 2px 3px rgba(0,0,0,0.85)",
+        "textAlign": "right or stable column",
+        "padding": "0.08em 0.12em",
+        "textTransform": "preserve authored symbols",
+        "overflow": "compact notation; backplate if measured scene contrast fails"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Atkinson Hyperlegible",
+        "fontStyle": "700",
+        "fontSizeRangePx": [
+          18,
+          28
+        ],
+        "color": "#f1dfae",
+        "stroke": "rgba(25,17,16,0.85)",
+        "strokeThickness": 2,
+        "shadow": {
+          "x": 0,
+          "y": 2,
+          "blur": 3,
+          "color": "rgba(0,0,0,0.85)"
+        },
+        "align": "right or stable column",
+        "lineSpacingPx": 1,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Use the registered restrained backplate when scene contrast is unstable."
+      }
+    },
+    {
+      "id": "debug-on-dev-overlay",
+      "semanticRole": "debug-information",
+      "hostMaterial": "developer-overlay",
+      "fontFamily": "Fira Code",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/firacode/FiraCode[wght].ttf",
+      "style": "normal",
+      "weight": 400,
+      "sizeRangePx": [
+        12,
+        16
+      ],
+      "lineHeight": 1.3,
+      "letterSpacing": "0",
+      "fill": "#e8e1d1",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "none",
+        "layers": []
+      },
+      "padding": "0.06em 0.08em",
+      "alignment": "left",
+      "caseTreatment": "preserve source case",
+      "maximumLines": 8,
+      "overflowBehavior": "wrap or scroll in dev overlay; never expose in player UI",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes on opaque dev surface; intentionally unornamented",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Developer truth, event traces, and debug values",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 12,
+        "lineHeight": 1.3,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 12px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Fira Code', serif",
+        "fontWeight": 400,
+        "fontSize": "clamp(12px, calc(12px + 4 * ((100vw - 360px) / 1080)), 16px)",
+        "lineHeight": 1.3,
+        "letterSpacing": "0",
+        "color": "#e8e1d1",
+        "webkitTextStroke": "none",
+        "textShadow": "",
+        "textAlign": "left",
+        "padding": "0.06em 0.08em",
+        "textTransform": "preserve source case",
+        "overflow": "wrap or scroll in dev overlay; never expose in player UI"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Fira Code",
+        "fontStyle": "400",
+        "fontSizeRangePx": [
+          12,
+          16
+        ],
+        "color": "#e8e1d1",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": null,
+        "align": "left",
+        "lineSpacingPx": 4,
+        "wordWrapPolicy": "use-layout-width-and-max-lines",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    },
+    {
+      "id": "accent-on-parchment",
+      "semanticRole": "optional-game-accent",
+      "hostMaterial": "parchment",
+      "fontFamily": "Macondo",
+      "fontSourcePath": "assets/academy/fonts/source/google-fonts/macondo/Macondo-Regular.ttf",
+      "style": "normal",
+      "weight": 400,
+      "sizeRangePx": [
+        18,
+        26
+      ],
+      "lineHeight": 1.2,
+      "letterSpacing": "0.01em",
+      "fill": "#3d291d",
+      "stroke": {
+        "widthPx": 0,
+        "color": "transparent",
+        "purpose": "none; material metaphor does not require an outline"
+      },
+      "shadow": {
+        "summary": "subtle paper grounding",
+        "layers": [
+          {
+            "x": 0,
+            "y": 1,
+            "blur": 2,
+            "color": "rgba(55,31,18,0.14)"
+          }
+        ]
+      },
+      "padding": "0.08em 0.1em",
+      "alignment": "center or left",
+      "caseTreatment": "authored case",
+      "maximumLines": 1,
+      "overflowBehavior": "one brief name; replace with semantic family for longer copy",
+      "readability": {
+        "verdict": "passes-provisional-review",
+        "minimumContrastPolicy": "passes only at accent scale; forbidden for critical text",
+        "measurementStatus": "solid-reference plus manual textured-background review; runtime measurement pending"
+      },
+      "recommendedUse": "Item names, brief spell names, and flavor labels only",
+      "status": "registered-h5-98",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "selectionStatus": "initial-default-for-semantic-role",
+      "defaultForSemanticRole": true,
+      "responsiveMinimums": {
+        "fontSizePx": 18,
+        "lineHeight": 1.2,
+        "reflowBeforeShrink": true,
+        "touchTargetPx": null,
+        "policy": "Do not scale below 18px; reflow or choose the registered compact material variant."
+      },
+      "domCssExpression": {
+        "fontFamily": "'Macondo', serif",
+        "fontWeight": 400,
+        "fontSize": "clamp(18px, calc(18px + 8 * ((100vw - 360px) / 1080)), 26px)",
+        "lineHeight": 1.2,
+        "letterSpacing": "0.01em",
+        "color": "#3d291d",
+        "webkitTextStroke": "none",
+        "textShadow": "0px 1px 2px rgba(55,31,18,0.14)",
+        "textAlign": "center or left",
+        "padding": "0.08em 0.1em",
+        "textTransform": "authored case",
+        "overflow": "one brief name; replace with semantic family for longer copy"
+      },
+      "phaserEquivalentExpression": {
+        "fontFamily": "Macondo",
+        "fontStyle": "400",
+        "fontSizeRangePx": [
+          18,
+          26
+        ],
+        "color": "#3d291d",
+        "stroke": "transparent",
+        "strokeThickness": 0,
+        "shadow": {
+          "x": 0,
+          "y": 1,
+          "blur": 2,
+          "color": "rgba(55,31,18,0.14)"
+        },
+        "align": "center or left",
+        "lineSpacingPx": 4,
+        "wordWrapPolicy": "single-line-bounds-with-approved-overflow-response",
+        "parityRule": "Match hierarchy, contrast, edge protection, alignment, and overflow behavior; pixel identity is not required."
+      },
+      "stateBehavior": {
+        "default": "Use the registered base treatment.",
+        "hoverFocus": "Increase edge or backplate clarity and show a non-color focus shape; do not change layout metrics.",
+        "disabled": "Reduce emphasis while retaining readable contrast and a non-color disabled cue.",
+        "warning": "Add warning icon or word plus warm edge cue; color alone is insufficient.",
+        "successPurchased": "Add confirmation icon or word plus stable edge cue; preserve text width where practical.",
+        "reducedMotion": "No animated shadow, tracking, or scale is required for meaning."
+      },
+      "accessibilityRequirements": {
+        "contrastTarget": "WCAG AA normal text or stronger",
+        "colorIndependence": true,
+        "readableZoom": "Must survive 200% DOM zoom or equivalent responsive reflow.",
+        "motionIndependence": true,
+        "authoredCase": true,
+        "screenReaderTextOwner": "DOM/accessible overlay owns semantic text when Phaser canvas alone cannot expose it.",
+        "busyBackgroundPolicy": "Validate against the actual host material."
+      }
+    }
+  ],
+  "stateModifiers": [
+    {
+      "state": "hover-focus",
+      "treatment": "brighter edge, visible focus ring, and restrained depth; not color alone",
+      "runtimeApproval": "none"
+    },
+    {
+      "state": "disabled",
+      "treatment": "reduced contrast plus explicit unavailable semantics; preserve legibility",
+      "runtimeApproval": "none"
+    },
+    {
+      "state": "warning",
+      "treatment": "amber edge plus symbol or warning word; remain distinct in grayscale",
+      "runtimeApproval": "none"
+    },
+    {
+      "state": "success",
+      "treatment": "green edge plus check/result language; reduced-motion-safe",
+      "runtimeApproval": "none"
+    },
+    {
+      "state": "purchased",
+      "treatment": "persistent seal or owned label, not a transient color flash",
+      "runtimeApproval": "none"
+    }
+  ],
+  "rendererParityPolicy": {
+    "status": "planning-only",
+    "principle": "DOM/CSS and Phaser treatments preserve semantic hierarchy, protected size ranges, edge separation, state semantics, and overflow policy; pixel identity is not required.",
+    "domPreferredFor": [
+      "text-heavy menus",
+      "Help/Ledger copy",
+      "accessible controls",
+      "dense responsive layout"
+    ],
+    "phaserAcceptableFor": [
+      "short stage-owned labels",
+      "critical in-scene counters",
+      "brief result text",
+      "playfield-attached prompts"
+    ],
+    "runtimeWork": "future H6 implementation lane after H5.98 promotion"
+  },
+  "implementationBoundary": [
+    "H5.99 may consume this registry.",
+    "H5.98 does not wire Hub or game runtime code."
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
+  "status": "reviewed-direction-realized",
   "reviewStatus": "human-review-passed",
-  "pipelineUse": "font-pantry-core-selection",
+  "pipelineUse": "font-pantry-core-selection-lineage-to-canonical-inventory",
   "runtimeEligibility": "not-runtime-approved",
   "blockedUntilHumanReview": false,
   "tier": "1.5",
@@ -330,6 +330,22 @@
     "H5.88F — GlyphForge Region Browser Image Preview Plan",
     "future font binary intake and preview evidence lane"
   ],
+  "h5_98Promotion": {
+    "status": "promoted",
+    "canonicalInventory": "manifests/academy/fonts/academy.font-inventory.json",
+    "canonicalRecipeRegistry": "manifests/academy/shared/academy.typography-recipe-registry.json",
+    "initialDefaults": {
+      "academyDisplay": "Cinzel Decorative",
+      "gameDisplayPanelHeadingDialogueTitle": "Cinzel",
+      "bodyDialogueShortStory": "Caudex 700",
+      "longFormBodyAlternate": "Alegreya",
+      "compactLabels": "Outfit 600",
+      "criticalData": "Atkinson Hyperlegible 700",
+      "debug": "Fira Code 400",
+      "optionalAccent": "Macondo 400"
+    },
+    "runtimeWiring": "none; deferred to H5.99"
+  },
   "notes": [
     "This manifest records the font identity direction and candidate set only.",
     "The future font pantry can be broad, but the actual runtime font set should stay tiny.",

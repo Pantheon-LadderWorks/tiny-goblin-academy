@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 76,
+  "totalManifestCount": 78,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -20,7 +20,7 @@
   "activeCountsByCategory": {
     "manifests/academy/core": 1,
     "manifests/academy/creatures": 7,
-    "manifests/academy/fonts": 1,
+    "manifests/academy/fonts": 2,
     "manifests/academy/games/button-goblin-clicker": 1,
     "manifests/academy/games/card-goblin-duel": 2,
     "manifests/academy/games/dice-duel-tavern": 1,
@@ -30,7 +30,7 @@
     "manifests/academy/games/potion-sorter": 1,
     "manifests/academy/games/tiny-farm-day": 1,
     "manifests/academy/hub": 4,
-    "manifests/academy/shared": 2,
+    "manifests/academy/shared": 3,
     "manifests/academy/tooling/organization": 1,
     "manifests/academy/topdown/future-floor-tilesheets": 1,
     "manifests/academy/topdown/objects": 1,
@@ -44,7 +44,7 @@
     "hub": "manifests/academy/hub/hub.icons.json",
     "hubRegions": "manifests/academy/hub/hub.icon-regions.json",
     "visualPantry": "manifests/academy/visual-pantry/academy.visual-asset-pantry-index.json",
-    "fontDirection": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
+    "fontDirection": "manifests/academy/fonts/academy.font-inventory.json",
     "manifestMaturity": "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
     "petCampfireCurrentAssets": [
       "manifests/academy/games/pet-campfire/academy.pet-campfire.static-props-icons.cleanup-candidate.json",
@@ -66,7 +66,10 @@
     "sharedUiFunctionalSurfaces": "manifests/academy/shared/planning/academy.ui-hud.functional-surfaces.json",
     "sharedUiGrammarFontArchitecture": "manifests/academy/shared/planning/academy.ui-grammar-font-architecture.json",
     "h5_97FontSourceIntake": "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
-    "h5_97VisualGrammarLaboratory": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json"
+    "h5_97VisualGrammarLaboratory": "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json",
+    "fontDirectionLineage": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
+    "academyTypographyRecipes": "manifests/academy/shared/academy.typography-recipe-registry.json",
+    "h5_98Report": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_98_ACADEMY_TYPOGRAPHY_PROMOTION.md"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -77,6 +80,7 @@
     "manifests/academy/creatures/academy.topdown-slime-v2-action.animations.json",
     "manifests/academy/creatures/academy.topdown-slime-v2-idle-move.animations.json",
     "manifests/academy/creatures/academy.topdown-soldier-enemy.animations.json",
+    "manifests/academy/fonts/academy.font-inventory.json",
     "manifests/academy/fonts/academy.font-pantry-core-selection.json",
     "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json",
     "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.card-frames.cleanup-candidate.json",
@@ -94,6 +98,7 @@
     "manifests/academy/hub/hub.icons.json",
     "manifests/academy/hub/hub.identity-assets.json",
     "manifests/academy/shared/academy.shared-core.regions.json",
+    "manifests/academy/shared/academy.typography-recipe-registry.json",
     "manifests/academy/shared/academy.ui-hud.regions.json",
     "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
     "manifests/academy/topdown/future-floor-tilesheets/academy.topdown.floor-tilesheets.future.regions.json",
@@ -256,6 +261,17 @@
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
     },
     {
+      "path": "manifests/academy/fonts/academy.font-inventory.json",
+      "maturityClass": "active",
+      "authorityRole": "canonical Academy font inventory and provenance authority",
+      "categoryShelf": "manifests/academy/fonts",
+      "status": "active",
+      "reviewStatus": "human-visual-review-passed-and-provenance-verified",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "reason": "H5.98 promotes verified local font files, hashes, licenses, role assignments, defaults, and alternates without live runtime wiring.",
+      "pipelineUse": "canonical-font-source-and-role-authority"
+    },
+    {
       "path": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
       "maturityClass": "active",
       "authorityRole": "current font direction selection",
@@ -285,9 +301,9 @@
       "authorityRole": "H5.97 font source intake and provenance record for visual evaluation",
       "categoryShelf": "manifests/academy/fonts/planning",
       "status": "reviewed",
-      "reviewStatus": "human-review-passed-with-provenance-debt",
+      "reviewStatus": "human-review-passed-provenance-debt-resolved-h5-98",
       "runtimeEligibility": "not-runtime-approved",
-      "reason": "H5.97 visual review passed. Records controlled fantasy font source intake from Google Fonts plus local/system evaluation sources; Macondo carries inherited license-text encoding debt for H5.98 resolution. No runtime font approval.",
+      "reason": "H5.97 visual review passed; H5.98 resolved the inherited Macondo license-header encoding debt and promoted the canonical inventory. No live runtime wiring.",
       "pipelineUse": "font-source-intake-for-visual-evaluation"
     },
     {
@@ -691,6 +707,17 @@
       "notes": "Visible at category root because it is the current manifest for this shelf. Active does not imply runtime approval."
     },
     {
+      "path": "manifests/academy/shared/academy.typography-recipe-registry.json",
+      "maturityClass": "active",
+      "authorityRole": "canonical Academy typography default and selectable-variant registry",
+      "categoryShelf": "manifests/academy/shared",
+      "status": "active",
+      "reviewStatus": "human-visual-review-passed",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+      "reason": "H5.98 designates exactly one initial default per semantic role and retains approved material and length variants with complete DOM/Phaser/accessibility contracts.",
+      "pipelineUse": "canonical-typography-default-and-variant-authority"
+    },
+    {
       "path": "manifests/academy/shared/academy.ui-hud.regions.json",
       "maturityClass": "active",
       "authorityRole": "current category manifest",
@@ -730,10 +757,10 @@
       "maturityClass": "planning",
       "authorityRole": "Academy-wide UI grammar and font architecture planning record",
       "categoryShelf": "manifests/academy/shared/planning",
-      "status": "draft",
-      "reviewStatus": "needs-human-review",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed-and-promoted-h5-98",
       "runtimeEligibility": "not-runtime-approved",
-      "reason": "H5.96 defines Academy-wide UI ownership and font role grammar before Button Goblin shared UI asset selection; planning only, no runtime approval.",
+      "reason": "H5.96 planning direction was visually accepted in H5.97 and promoted into canonical font and recipe authorities in H5.98; runtime wiring remains deferred.",
       "pipelineUse": "planning-only-ui-grammar-font-architecture"
     },
     {
@@ -1064,7 +1091,7 @@
     },
     {
       "folder": "manifests/academy/fonts",
-      "jsonCount": 1
+      "jsonCount": 2
     },
     {
       "folder": "manifests/academy/fonts/planning",
@@ -1140,7 +1167,7 @@
     },
     {
       "folder": "manifests/academy/shared",
-      "jsonCount": 2
+      "jsonCount": 3
     },
     {
       "folder": "manifests/academy/shared/deferred",
@@ -1212,9 +1239,10 @@
     "Reviewed does not imply runtime approval.",
     "Lineage files are preserved provenance and must not be deleted casually.",
     "Generated files are not automatically source of truth.",
-    "Runtime/game wiring remains outside H5.91A scope."
+    "Runtime/game wiring remains outside H5.91A scope.",
+    "H5.98 typography authorities are eligible inputs for H5.99 only; active status does not mean fonts are already wired."
   ],
-  "blockedUntilHumanReview": true,
+  "blockedUntilHumanReview": false,
   "runtimePlanningCurrent": [
     "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json"
   ]

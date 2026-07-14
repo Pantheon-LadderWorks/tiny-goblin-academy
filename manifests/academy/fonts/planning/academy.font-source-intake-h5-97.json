@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "status": "reviewed",
-  "reviewStatus": "human-review-passed-with-provenance-debt",
+  "reviewStatus": "human-review-passed-provenance-debt-resolved-h5-98",
   "domain": "academy-fonts",
   "operationalType": "font-source-intake-h5-97",
   "pipelineUse": "font-source-intake-for-visual-evaluation",
@@ -509,11 +509,11 @@
       "slug": "macondo",
       "file": "OFL.txt",
       "path": "assets/academy/fonts/source/google-fonts/macondo/OFL.txt",
-      "bytes": 4443,
-      "sha256": "0d75673e4c98de3e11337dbd90b05d0232edfcade5c1c02fbc0118c85aea25da",
+      "bytes": 4447,
+      "sha256": "e0342b07b13326edea4a89f04596645ea19ebf36846bffd72260c43e0533c522",
       "sourceType": "repository-license-or-metadata",
       "sourceUrl": "https://github.com/google/fonts/tree/main/ofl/macondo",
-      "licenseStatus": "OFL-captured-with-inherited-text-encoding-damage",
+      "licenseStatus": "OFL-verified-and-header-repaired-from-authoritative-METADATA.pb",
       "runtimeEligibility": "not-runtime-approved"
     },
     {
@@ -669,7 +669,7 @@
       "sourcePath": "assets/academy/fonts/source/google-fonts/cinzeldecorative/CinzelDecorative-Regular.ttf",
       "sha256": "5b862be329103ad287a10f0a53e27a40e8cc519999253f1a0223e2dc330b10b8",
       "licensePath": "assets/academy/fonts/source/google-fonts/cinzeldecorative/OFL.txt",
-      "licenseStatus": "OFL source identified; local license text has inherited encoding damage pending authoritative replacement in H5.98",
+      "licenseStatus": "OFL verified; inherited header encoding damage resolved in H5.98 from official Google Fonts METADATA.pb",
       "evaluationStatus": "evaluated",
       "runtimeEligibility": "not-runtime-approved"
     },
@@ -963,9 +963,18 @@
   "blockedFonts": [
     "ROG Lyons Type Regular 3"
   ],
+  "h5_98TechnicalDebtResolution": {
+    "status": "resolved",
+    "finding": "The official Google Fonts Macondo OFL.txt also contains replacement characters, while the official METADATA.pb retains the clean copyright identity.",
+    "action": "Repaired only the damaged copyright header from the official METADATA.pb identity and preserved the SIL OFL 1.1 body.",
+    "officialLicenseUrl": "https://github.com/google/fonts/blob/main/ofl/macondo/OFL.txt",
+    "officialMetadataUrl": "https://github.com/google/fonts/blob/main/ofl/macondo/METADATA.pb",
+    "metadataPath": "assets/academy/fonts/source/google-fonts/macondo/METADATA.pb",
+    "repairedLicenseSha256": "e0342b07b13326edea4a89f04596645ea19ebf36846bffd72260c43e0533c522"
+  },
   "notes": [
     "Font source intake and visual use passed H5.97 human review; runtime promotion remains H5.98 work.",
-    "Macondo OFL.txt contains inherited replacement-character damage in its copyright line. The source URL and font binary are preserved, but Macondo remains technical provenance debt until H5.98 verifies or replaces the license text from the authoritative google/fonts source.",
+    "Macondo license-text provenance debt was preserved in the H5.97 commit and resolved during H5.98 using official Google Fonts OFL and METADATA records.",
     "No runtime CSS wiring or package changes are approved.",
     "Slash-separated H5.96 font groups are comparison sets; intake/evaluation remains per family/style/weight."
   ]

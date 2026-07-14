@@ -1,0 +1,410 @@
+{
+  "schemaVersion": "1.0",
+  "status": "active",
+  "reviewStatus": "human-visual-review-passed-and-provenance-verified",
+  "domain": "academy-fonts",
+  "operationalType": "canonical-academy-font-inventory",
+  "pipelineUse": "canonical-font-source-and-role-authority",
+  "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired",
+  "runtimeWiringStatus": "none",
+  "promotedFrom": [
+    "manifests/academy/fonts/planning/academy.font-source-intake-h5-97.json",
+    "manifests/academy/shared/planning/academy.visual-grammar-laboratory.json"
+  ],
+  "createdDate": "2026-07-14",
+  "sourceRoot": "assets/academy/fonts/source/google-fonts",
+  "authoritativeSourcePolicy": "Repository-local binaries and licenses must match recorded SHA-256 values and trace to the official Google Fonts repository.",
+  "macondoProvenanceResolution": {
+    "status": "resolved",
+    "finding": "The official Google Fonts OFL text carried replacement characters; its official METADATA.pb retained the clean copyright identity.",
+    "action": "Repaired only the damaged copyright header using the official METADATA.pb identity while preserving the SIL OFL 1.1 body.",
+    "officialLicenseUrl": "https://github.com/google/fonts/blob/main/ofl/macondo/OFL.txt",
+    "officialMetadataUrl": "https://github.com/google/fonts/blob/main/ofl/macondo/METADATA.pb",
+    "metadataPath": "assets/academy/fonts/source/google-fonts/macondo/METADATA.pb",
+    "metadataSha256": "23c33759a72a39fdde85e94c0dc9c69cc73b229ff88037f904b71c7ad25403ac",
+    "repairedLicensePath": "assets/academy/fonts/source/google-fonts/macondo/OFL.txt",
+    "repairedLicenseSha256": "e0342b07b13326edea4a89f04596645ea19ebf36846bffd72260c43e0533c522"
+  },
+  "fonts": [
+    {
+      "id": "cinzeldecorative.cinzeldecorative-bold-ttf",
+      "family": "Cinzel Decorative",
+      "style": "normal",
+      "weight": 700,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+      "bytes": 62300,
+      "sha256": "e854e68a388aa50d742a4415c1ae5c17a617ef7956c95a70021d0a4a44f20518",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/cinzeldecorative",
+      "licensePath": "assets/academy/fonts/source/google-fonts/cinzeldecorative/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "1e5d6660366ddcfca4f2fc10e2acfba9fa4d97d40aec80d7dbfd41d730a420ae",
+      "semanticRoles": [
+        "academy-title"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "cinzel.cinzel-wght-ttf",
+      "family": "Cinzel",
+      "style": "normal",
+      "weight": "400-900-variable; initial 700",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/cinzel/Cinzel[wght].ttf",
+      "bytes": 125468,
+      "sha256": "f4d83d34d1f6c741193e4acf4b3dff9531e5a67b6aa65228d00a7db72a4e0f34",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/cinzel",
+      "licensePath": "assets/academy/fonts/source/google-fonts/cinzel/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "f2b3029aba64c378bf0963b62945eee15e564fe4330b934c8f2eb058282b5e83",
+      "semanticRoles": [
+        "game-title",
+        "panel-heading",
+        "dialogue-title",
+        "result-state"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "caudex.caudex-regular-ttf",
+      "family": "Caudex",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/caudex/Caudex-Regular.ttf",
+      "bytes": 466324,
+      "sha256": "dbb493e1adc50aaec52071535e6fccf4176793c79545f54d95a812cbfb85169b",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/caudex",
+      "licensePath": "assets/academy/fonts/source/google-fonts/caudex/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "1e5bf8207a40678bc401e2e5456d0db1f2a183b550a30976b48dcdd6a4e4c46c",
+      "semanticRoles": [
+        "readable-body-alternate"
+      ],
+      "defaultOrAlternateStatus": "registered-style-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "caudex.caudex-bold-ttf",
+      "family": "Caudex",
+      "style": "normal",
+      "weight": 700,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/caudex/Caudex-Bold.ttf",
+      "bytes": 471708,
+      "sha256": "880fb67901ce94573ed0262d152b87115a08f928c72fc6c1101375a1223d390a",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/caudex",
+      "licensePath": "assets/academy/fonts/source/google-fonts/caudex/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "1e5bf8207a40678bc401e2e5456d0db1f2a183b550a30976b48dcdd6a4e4c46c",
+      "semanticRoles": [
+        "body-instruction",
+        "dialogue-speech",
+        "short-story-text"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "alegreya.alegreya-wght-ttf",
+      "family": "Alegreya",
+      "style": "normal",
+      "weight": "400-900-variable; initial 500",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/alegreya/Alegreya[wght].ttf",
+      "bytes": 425288,
+      "sha256": "ba5564634b93a8f8ba57b48cd4f1ae7417d2b4656fbac779028679b00de3cf12",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/alegreya",
+      "licensePath": "assets/academy/fonts/source/google-fonts/alegreya/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "f6f60d5d4cf4f4b1fc4e41353c897a2f5a16e6396c0cd8fa8bdfd2f4586a9a68",
+      "semanticRoles": [
+        "long-form-body"
+      ],
+      "defaultOrAlternateStatus": "registered-role-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "outfit.outfit-wght-ttf",
+      "family": "Outfit",
+      "style": "normal",
+      "weight": "100-900-variable; initial 600",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/outfit/Outfit[wght].ttf",
+      "bytes": 110884,
+      "sha256": "fc7287273e66929776e2ba54f144fe699080bec29f61bf649d70d871468aeade",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/outfit",
+      "licensePath": "assets/academy/fonts/source/google-fonts/outfit/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "e2a6bbb2589b85bac1690ec8f220b22a9c3af9bfda56df6391f7ab491c7a039f",
+      "semanticRoles": [
+        "compact-label"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "atkinsonhyperlegible.atkinsonhyperlegible-bold-ttf",
+      "family": "Atkinson Hyperlegible",
+      "style": "normal",
+      "weight": 700,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+      "bytes": 55256,
+      "sha256": "5a3b0c8cc8ca545155150b4512a1fa248298df121c50d6557e651e61fbdab92f",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/atkinsonhyperlegible",
+      "licensePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "64b9cae8727cb41ea9e8843103e69647c82383f3a902e2bb39b2c5d92083b6e1",
+      "semanticRoles": [
+        "data-value",
+        "critical-number"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "atkinsonhyperlegible.atkinsonhyperlegible-regular-ttf",
+      "family": "Atkinson Hyperlegible",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Regular.ttf",
+      "bytes": 54348,
+      "sha256": "7fb917c89019896d0b52ee84b7cbb3304c18cb90b19a62f5e32712bd23e97669",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/atkinsonhyperlegible",
+      "licensePath": "assets/academy/fonts/source/google-fonts/atkinsonhyperlegible/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "64b9cae8727cb41ea9e8843103e69647c82383f3a902e2bb39b2c5d92083b6e1",
+      "semanticRoles": [
+        "accessible-body-fallback"
+      ],
+      "defaultOrAlternateStatus": "registered-accessibility-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "firacode.firacode-wght-ttf",
+      "family": "Fira Code",
+      "style": "normal",
+      "weight": "300-700-variable; initial 400",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/firacode/FiraCode[wght].ttf",
+      "bytes": 260364,
+      "sha256": "9335b082b3c7850d98a64b584f3417f65355f3471278bb5eeb8c6c0e8657aeeb",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/firacode",
+      "licensePath": "assets/academy/fonts/source/google-fonts/firacode/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "11776fe42290450d306f085e4369e89bcf30cee9abc01f959e7e196f1c87515e",
+      "semanticRoles": [
+        "debug-information",
+        "developer-data"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "macondo.macondo-regular-ttf",
+      "family": "Macondo",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/macondo/Macondo-Regular.ttf",
+      "bytes": 48776,
+      "sha256": "1910fe29b60588799474ea6281b59e131e33e96c77bfb80722a4c7f8133db4aa",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/macondo",
+      "licensePath": "assets/academy/fonts/source/google-fonts/macondo/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "e0342b07b13326edea4a89f04596645ea19ebf36846bffd72260c43e0533c522",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "default",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "almendra.almendra-regular-ttf",
+      "family": "Almendra",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/almendra/Almendra-Regular.ttf",
+      "bytes": 68684,
+      "sha256": "b127a6121209353b53da9ce73bf9d350f74190d8384c28ede179e4fb9440f946",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/almendra",
+      "licensePath": "assets/academy/fonts/source/google-fonts/almendra/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "b7eae5e3c3447f70caa14e0c43f5e0d953f54ee59df406f6362863bcee1a0a95",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "almendrasc.almendrasc-regular-ttf",
+      "family": "Almendra SC",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/almendrasc/AlmendraSC-Regular.ttf",
+      "bytes": 35988,
+      "sha256": "dca733b5b03e4ea52c666365777c8f6b360d55de04efc9d834cf9f82b68308be",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/almendrasc",
+      "licensePath": "assets/academy/fonts/source/google-fonts/almendrasc/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "b7eae5e3c3447f70caa14e0c43f5e0d953f54ee59df406f6362863bcee1a0a95",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "medievalsharp.medievalsharp-ttf",
+      "family": "MedievalSharp",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/medievalsharp/MedievalSharp.ttf",
+      "bytes": 148712,
+      "sha256": "74cb2e6738bd7703adf120802f68fba0c9ddb9147a08e6847f1005b1e55df5a5",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/medievalsharp",
+      "licensePath": "assets/academy/fonts/source/google-fonts/medievalsharp/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "45b1f44d2cb859ea4b7be2f322c57b8ff7be55075c336744e62b5550cd0a97eb",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "merienda.merienda-wght-ttf",
+      "family": "Merienda",
+      "style": "normal",
+      "weight": "300-900-variable; initial 500",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/merienda/Merienda[wght].ttf",
+      "bytes": 226360,
+      "sha256": "a91e4d88a50b4f80c7b1f31fe46e376eb87b72247d2a216f5e5be1881340deea",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/merienda",
+      "licensePath": "assets/academy/fonts/source/google-fonts/merienda/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "61470db03bfdf0616932a086346acf8eddaddbdffbac9c468f0d88ac72ccb151",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "metamorphous.metamorphous-regular-ttf",
+      "family": "Metamorphous",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/metamorphous/Metamorphous-Regular.ttf",
+      "bytes": 135740,
+      "sha256": "55939a5664e06807e87fa4af64f52039ead12f002dda8317393fdce2f7ff57fe",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/metamorphous",
+      "licensePath": "assets/academy/fonts/source/google-fonts/metamorphous/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "4fece81b541808b40293b0cd3f5b1990274e1100e1c20455dc2987cd96639d3f",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "fondamento.fondamento-regular-ttf",
+      "family": "Fondamento",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/fondamento/Fondamento-Regular.ttf",
+      "bytes": 87160,
+      "sha256": "ee03a7ccb3b7cdf3cd095d0cc34f9e70c16b1779cbc7c466bf9077323a6ea764",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/fondamento",
+      "licensePath": "assets/academy/fonts/source/google-fonts/fondamento/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "382232d1add5623ba5b06394afa071f4eeecccb6d2b2bd02cfecff4a8a45065a",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "uncialantiqua.uncialantiqua-regular-ttf",
+      "family": "Uncial Antiqua",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/uncialantiqua/UncialAntiqua-Regular.ttf",
+      "bytes": 63404,
+      "sha256": "33a5128b59d1c95d4f3788164f4ab3a1196f0a982263cb2cd278c47418366766",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/uncialantiqua",
+      "licensePath": "assets/academy/fonts/source/google-fonts/uncialantiqua/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "244ca4ef7b106d8c660e9a00cecf5d581b6a222f447d7d59a8f61711b2ad3400",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "cormorantgaramond.cormorantgaramond-wght-ttf",
+      "family": "Cormorant Garamond",
+      "style": "normal",
+      "weight": "300-700-variable; initial 500",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/cormorantgaramond/CormorantGaramond[wght].ttf",
+      "bytes": 1195560,
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+      "licensePath": "assets/academy/fonts/source/google-fonts/cormorantgaramond/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956",
+      "semanticRoles": [
+        "long-form-body",
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-experimental-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "grenzegotisch.grenzegotisch-wght-ttf",
+      "family": "Grenze Gotisch",
+      "style": "normal",
+      "weight": "100-900-variable; initial 600",
+      "localFilePath": "assets/academy/fonts/source/google-fonts/grenzegotisch/GrenzeGotisch[wght].ttf",
+      "bytes": 193492,
+      "sha256": "701b299d8dc002a2b4bea2ff0f1272c0e4081a2835914354804565c410d0c637",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/grenzegotisch",
+      "licensePath": "assets/academy/fonts/source/google-fonts/grenzegotisch/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "bca29af2c3c9e142d11f523f414902ab8fb9ab8ffa3c34c63b6b72aa4e7d6acc",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    },
+    {
+      "id": "eaglelake.eaglelake-regular-ttf",
+      "family": "Eagle Lake",
+      "style": "normal",
+      "weight": 400,
+      "localFilePath": "assets/academy/fonts/source/google-fonts/eaglelake/EagleLake-Regular.ttf",
+      "bytes": 78000,
+      "sha256": "53a4e929c9ea3584f2432157fd549c7604e6be7e6c4b39873f34fae7f6823928",
+      "authoritativeSource": "https://github.com/google/fonts/tree/main/ofl/eaglelake",
+      "licensePath": "assets/academy/fonts/source/google-fonts/eaglelake/OFL.txt",
+      "licenseType": "SIL Open Font License 1.1",
+      "licenseSha256": "3184f6a99f589c78740fbff6ddaaabb43b8cc2f3852da36e60aeb024ea8d6f00",
+      "semanticRoles": [
+        "optional-game-accent"
+      ],
+      "defaultOrAlternateStatus": "registered-accent-alternate",
+      "runtimeEligibility": "eligible-for-h5-99-implementation-not-yet-wired"
+    }
+  ],
+  "blockedFonts": [
+    {
+      "family": "ROG Lyons Type Regular 3",
+      "reason": "No license proof; not ingested and not eligible."
+    }
+  ],
+  "nonGoals": [
+    "no @font-face wiring",
+    "no Hub CSS changes",
+    "no Phaser preload or TextStyle changes",
+    "no game runtime changes"
+  ]
+}

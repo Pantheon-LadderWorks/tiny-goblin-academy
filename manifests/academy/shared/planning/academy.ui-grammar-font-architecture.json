@@ -1,13 +1,13 @@
 {
   "schemaVersion": "0.1",
-  "status": "draft",
-  "reviewStatus": "needs-human-review",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed-and-promoted-h5-98",
   "domain": "academy-ui",
   "operationalType": "academy-wide-ui-grammar-and-font-architecture-plan",
   "pipelineUse": "planning-only-ui-grammar-font-architecture",
   "runtimeEligibility": "not-runtime-approved",
   "gameSelectionApproval": "none",
-  "fontIngestApproval": "none",
+  "fontIngestApproval": "canonical-font-inventory-promoted-no-runtime-wiring",
   "uiAssetSelectionApproval": "none",
   "nineSliceApproval": "none",
   "sourceBaselineCommit": "fddcc0f",
@@ -571,6 +571,14 @@
       "limited decorative frame accents only"
     ],
     "requirement": "Compare without runtime wiring first; do not assume mapped shared UI hosts are automatically good for Button Goblin."
+  },
+  "h5_98Promotion": {
+    "fontInventory": "manifests/academy/fonts/academy.font-inventory.json",
+    "typographyRecipeRegistry": "manifests/academy/shared/academy.typography-recipe-registry.json",
+    "defaultPolicy": "one evidence-backed initial default per semantic role with approved alternates retained",
+    "rendererPolicy": "DOM/CSS and Phaser preserve behavioral parity rather than pixel identity",
+    "implementationLane": "H5.99 Hub plus Button Goblin typography implementation",
+    "runtimeWiringStatus": "none"
   },
   "nonGoals": [
     "no runtime implementation",
