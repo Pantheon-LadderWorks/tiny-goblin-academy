@@ -1,7 +1,25 @@
 {
   "schemaVersion": "0.1",
   "laneId": "H5.100C",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "runtimeEligibility": "not-runtime-approved",
   "runtimeApproved": false,
+  "pantryEligibility": "approved-for-reusable-glyphforge-source-pantry",
+  "humanReviewVerdict": {
+    "passed": true,
+    "verdict": "approved-for-reusable-glyphforge-stylized-fantasy-material-pantry",
+    "approvedFamilies": [
+      "fantasy-timber",
+      "chunky-masonry",
+      "painted-dark-metal",
+      "illustrated-parchment",
+      "hand-painted-grime-wear",
+      "magical-surface-helper"
+    ],
+    "hybridAccentApproval": "H5.100 Metal008 may be auditioned as a restrained realistic brass focal accent for warm contrast and material pop.",
+    "runtimeBoundary": "No material is runtime-approved; H5.101 neutral-specimen audition remains required."
+  },
   "strategy": {
     "primaryIdentity": "Stylized fantasy textures establish shape language and readable material character.",
     "hybridSupport": "H5.100 realistic CC0 sources may contribute restrained grain, wear, and material truth.",

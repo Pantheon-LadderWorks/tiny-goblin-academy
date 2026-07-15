@@ -2,7 +2,7 @@
 
 ## Status
 
-Intake Complete / Awaiting Human Review / No Runtime Approval
+Human Review Passed / Reusable Pantry Accepted / No Runtime Approval
 
 ## Purpose and Boundary
 
@@ -39,3 +39,15 @@ Kenney is the primary fantasy construction vocabulary. DeadKir contributes genui
 ## Governance Verdict
 
 All accepted originals, selected extractions, licenses, metadata, hashes, classification records, and evidence belong to the reusable GlyphForge source pantry. Pantry acceptance does not imply Potion Sorter selection. H5.101 must audition these materials on neutral specimens before any runtime approval.
+
+## Human Review Verdict
+
+Human review approves the provenance-clean H5.100C sources for the reusable GlyphForge stylized-fantasy material pantry:
+
+- Kenney Retro Textures Fantasy for primary fantasy construction candidates;
+- DeadKir wood, riveted metal, and ooze for painted identity and alchemical support;
+- Luke.RUSTLTD parchment for illustrated paper identity;
+- Kenney dirt/wear helpers for authored placement and masks;
+- H5.100 Metal008 as a restrained realistic brass focal accent for warm contrast and material pop.
+
+The recorded Kenney Modular Dungeon rejection and Quaternius/model-first deferrals remain correct. Research and rendered previews remain evidence-only. Potion Sorter's active palette remains provisional until H5.101, and no source or material is runtime-approved by this review.

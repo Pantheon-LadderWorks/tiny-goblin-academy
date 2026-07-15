@@ -76,7 +76,36 @@ for name in required_evidence:
     check(f"evidence exists: {name}", path.exists() and path.stat().st_size > 0, str(path))
 
 manifest = json.loads(json_paths[0].read_text(encoding="utf-8"))
-check("no runtime approval", manifest["runtimeApproved"] is False and manifest["runtimeEligibility"] == "not-runtime-approved", "H5.100C remains planning/source pantry only")
+classification = json.loads(json_paths[1].read_text(encoding="utf-8"))
+check(
+    "source intake human review closure",
+    manifest.get("status") == "reviewed"
+    and manifest.get("reviewStatus") == "human-review-passed"
+    and manifest.get("pantryEligibility") == "approved-for-reusable-glyphforge-source-pantry",
+    f"status={manifest.get('status')} reviewStatus={manifest.get('reviewStatus')} pantryEligibility={manifest.get('pantryEligibility')}",
+)
+check(
+    "material classification human review closure",
+    classification.get("status") == "reviewed"
+    and classification.get("reviewStatus") == "human-review-passed"
+    and classification.get("pantryEligibility") == "approved-for-reusable-glyphforge-source-pantry",
+    f"status={classification.get('status')} reviewStatus={classification.get('reviewStatus')} pantryEligibility={classification.get('pantryEligibility')}",
+)
+check(
+    "no runtime approval",
+    manifest.get("runtimeApproved") is False
+    and manifest.get("runtimeEligibility") == "not-runtime-approved"
+    and classification.get("runtimeApproved") is False
+    and classification.get("runtimeEligibility") == "not-runtime-approved",
+    "H5.100C remains planning/source pantry only",
+)
+check(
+    "Metal008 focal-accent boundary retained",
+    classification["families"][3]["family"] == "warm-stylized-brass-bronze"
+    and classification["families"][3]["gap"] is True
+    and "small high-value mechanism accents" in classification["families"][3]["usageBoundary"],
+    classification["families"][3]["usageBoundary"],
+)
 check("stylized bronze gap retained", manifest["familyCandidateCounts"]["warm-stylized-brass-bronze"] == 0, "no false bronze classification")
 check("candidate bound", all(value <= 2 for value in manifest["familyCandidateCounts"].values()), str(manifest["familyCandidateCounts"]))
 

@@ -1,9 +1,23 @@
 {
   "schemaVersion": "0.1",
   "laneId": "H5.100C",
-  "status": "intake-complete-awaiting-human-review",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
   "runtimeEligibility": "not-runtime-approved",
   "runtimeApproved": false,
+  "pantryEligibility": "approved-for-reusable-glyphforge-source-pantry",
+  "humanReviewVerdict": {
+    "passed": true,
+    "verdict": "approved-for-reusable-glyphforge-stylized-fantasy-material-pantry",
+    "scope": "all provenance-clean accepted H5.100C source families, original packages, selected extractions, licenses, metadata, hashes, classifications, and evidence",
+    "boundaries": [
+      "Potion Sorter material selection remains provisional until H5.101 neutral-specimen audition",
+      "no H5.100C source is runtime-approved",
+      "research and rendered previews remain evidence-only",
+      "deferred and rejected candidate dispositions remain unchanged",
+      "H5.100 Metal008 is approved only as a restrained realistic brass focal accent"
+    ]
+  },
   "sourceBaselineCommit": "c2058e4e682d9e7e5ecfab8ede06c5b5f7989af8",
   "canonicalGamePath": "games/tier-1/02-potion-sorter",
   "evidenceRoot": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum",

@@ -613,24 +613,24 @@
       "maturityClass": "planning",
       "authorityRole": "H5.100C stylized-fantasy material classification and hybrid-use boundary",
       "categoryShelf": "manifests/academy/games/potion-sorter",
-      "status": "intake-complete",
-      "reviewStatus": "needs-human-review",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
       "pipelineUse": "stylized-fantasy-material-classification",
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
-      "notes": "Stylized sources establish identity; H5.100 realistic sources remain restrained support. Metal008 is an intentional small focal accent for warm contrast, not broad room coverage."
+      "notes": "Human review approved the provenance-clean stylized families for the reusable GlyphForge pantry. Stylized sources establish identity; H5.100 realistic sources remain restrained support. Metal008 is an intentional small focal accent for warm contrast, not broad room coverage. H5.101 remains required before runtime selection."
     },
     {
       "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
       "maturityClass": "planning",
       "authorityRole": "H5.100C bounded stylized-fantasy source intake record",
       "categoryShelf": "manifests/academy/games/potion-sorter",
-      "status": "intake-complete",
-      "reviewStatus": "needs-human-review",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
       "pipelineUse": "stylized-fantasy-texture-source-intake",
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
-      "notes": "Preserves accepted CC0 originals and explicit source gaps. No Potion Sorter selection or runtime use is implied."
+      "notes": "Human review approved the provenance-clean accepted sources for the reusable GlyphForge pantry while preserving source gaps, evidence-only previews, and deferred/rejected dispositions. No Potion Sorter selection or runtime use is implied; H5.101 remains required."
     },
     {
       "path": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",

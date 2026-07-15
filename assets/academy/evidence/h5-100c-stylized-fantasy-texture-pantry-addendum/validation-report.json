@@ -104,9 +104,24 @@
       "detail": "C:\\Users\\kryst\\Workspace\\game-development\\ai-game-studio-ladder\\assets\\academy\\evidence\\h5-100c-stylized-fantasy-texture-pantry-addendum\\candidate-defer-reject-table.jpg"
     },
     {
+      "name": "source intake human review closure",
+      "passed": true,
+      "detail": "status=reviewed reviewStatus=human-review-passed pantryEligibility=approved-for-reusable-glyphforge-source-pantry"
+    },
+    {
+      "name": "material classification human review closure",
+      "passed": true,
+      "detail": "status=reviewed reviewStatus=human-review-passed pantryEligibility=approved-for-reusable-glyphforge-source-pantry"
+    },
+    {
       "name": "no runtime approval",
       "passed": true,
       "detail": "H5.100C remains planning/source pantry only"
+    },
+    {
+      "name": "Metal008 focal-accent boundary retained",
+      "passed": true,
+      "detail": "Use on small high-value mechanism accents; do not allow photographic brass coverage to become the room's primary visual identity."
     },
     {
       "name": "stylized bronze gap retained",
