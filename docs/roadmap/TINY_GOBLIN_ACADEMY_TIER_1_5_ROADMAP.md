@@ -23,6 +23,11 @@ Each game owns one new headline visual discipline while retaining permission to
 reuse every earlier technique. The private GlyphForge Studios Library remains a
 separate future project to establish after Tier 1.5 and before Tier 2.
 
+The future tier-integration examination is governed by
+`docs/roadmap/TINY_GOBLIN_ACADEMY_TIER_MASTERY_GAME_ARCHITECTURE.md`. This
+records mastery-game curriculum doctrine only; no mastery implementation,
+repository, title, or schedule is authorized.
+
 ## Sequencing Recommendation
 1. Finish archive hardening.
 2. Create hub concept contract.
