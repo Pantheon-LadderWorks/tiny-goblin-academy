@@ -17,6 +17,12 @@ Tier 1.5 is a bridge between the completed ten-level ladder and future Tier 2 wo
 4. Itch.io / Butler deployment learning.
 5. Tier 2 planning.
 
+The ten-game visual-pass curriculum is defined in
+`docs/roadmap/TINY_GOBLIN_ACADEMY_TIER_1_5_VISUAL_INTEGRATION_CURRICULUM_PLAN.md`.
+Each game owns one new headline visual discipline while retaining permission to
+reuse every earlier technique. The private GlyphForge Studios Library remains a
+separate future project to establish after Tier 1.5 and before Tier 2.
+
 ## Sequencing Recommendation
 1. Finish archive hardening.
 2. Create hub concept contract.
