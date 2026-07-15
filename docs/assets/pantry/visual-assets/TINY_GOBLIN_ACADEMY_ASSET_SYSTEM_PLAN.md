@@ -1799,3 +1799,9 @@ The intended strategy is now explicit: stylized sources establish the room's pri
 No stylized brass source is falsely promoted. Quaternius model-first packs, Kenney Modular Dungeon palette atlases, rendered previews, and overlapping audition sources remain deferred or rejected as recorded. H5.100C adds no runtime selection, room, SceneRig, shader, derived recolor, material binding, or gameplay change. H5.101 neutral-specimen review remains the next gate.
 
 Human review passed for the provenance-clean H5.100C pantry. Kenney Retro Textures Fantasy, DeadKir wood/metal/ooze, Luke.RUSTLTD parchment, and the stylized dirt/wear helper are accepted for reusable pantry audition. H5.100 Metal008 is accepted as a restrained realistic brass focal accent only. Potion Sorter's final palette remains provisional, research previews remain evidence-only, and no material is runtime-approved before H5.101.
+
+## H5.101 Neutral Material Specimen Audition Note
+
+H5.101 places the H5.100/H5.100C candidates on identical code-authored beams, arches, conveyor slats, rails, gears, parchment surfaces, bottles, and FX boards under neutral and warm light. The provisional direction is stylized fantasy material identity with realistic sources restricted to quiet grain, wear, small hardware, and focal response. Metal008 brass passes as a constrained hub, valve rim, fastener, or fitting because it adds contrast and material pop; broad brass coverage is rejected because its photographic response overtakes the authored form.
+
+The laboratory, recipe manifest, specimen inventory, verdict table, and fourteen captures are evidence-only. Human review passed and approves the selected recipes for H5.102 runtime preparation only. Every recipe remains `runtimeApproved: false`; H5.101 does not authorize the Potion Sorter room, SceneRig, runtime binding, particle emitters, shaders, or gameplay changes. H5.102 readiness is `ready`.

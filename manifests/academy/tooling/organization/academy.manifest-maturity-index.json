@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 84,
+  "totalManifestCount": 86,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -76,7 +76,9 @@
     "h5_100PotionSorterTextureMaterialProvenance": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
     "h5_100PotionSorterMaterialClassification": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
     "h5_100cPotionSorterStylizedFantasySourceIntake": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
-    "h5_100cPotionSorterStylizedFantasyClassification": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json"
+    "h5_100cPotionSorterStylizedFantasyClassification": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json",
+    "h5_101PotionSorterMaterialRecipes": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-recipes-h5-101.json",
+    "h5_101PotionSorterMaterialSpecimenInventory": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-specimen-inventory-h5-101.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -141,6 +143,8 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
     "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-recipes-h5-101.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-specimen-inventory-h5-101.json",
     "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json",
     "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
     "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
@@ -631,6 +635,30 @@
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
       "notes": "Human review approved the provenance-clean accepted sources for the reusable GlyphForge pantry while preserving source gaps, evidence-only previews, and deferred/rejected dispositions. No Potion Sorter selection or runtime use is implied; H5.101 remains required."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-recipes-h5-101.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.101 provisional material recipe audition and use-boundary record",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed-provisional-selection",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "neutral-material-specimen-audition",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Human review passed the eighteen reproducible recipe selections for H5.102 runtime preparation only. Stylized identity, restrained realistic support, and constrained brass remain not runtime-approved. H5.102 readiness is ready."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-specimen-inventory-h5-101.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.101 resolved source, specimen, lighting-condition, and evidence inventory",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "neutral-material-specimen-inventory",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Human review passed the 25-source, eight-specimen, fourteen-capture inventory for H5.102 runtime preparation. No runtime material was approved and the SceneRig was not begun."
     },
     {
       "path": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",

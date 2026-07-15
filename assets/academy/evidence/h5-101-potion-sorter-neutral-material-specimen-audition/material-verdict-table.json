@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.101",
+  "status": "human-review-passed",
+  "selectionUse": "approved-for-runtime-preparation-only",
+  "runtimeApproved": false,
+  "h5_102Readiness": "ready",
+  "recommendations": [
+    {
+      "role": "primary-structural-timber",
+      "recipeId": "timber.kenney-hybrid-default",
+      "status": "recommended-default",
+      "neutral": "Readable chunky timber with low repetition noise.",
+      "warm": "Keeps silhouette and gains restrained grain depth."
+    },
+    {
+      "role": "timber-alternate",
+      "recipeId": "timber.deadkir-painted-alternate",
+      "status": "registered-alternate",
+      "neutral": "Painterly and rich, but busier at small scale.",
+      "warm": "Warm and characterful for hero furniture."
+    },
+    {
+      "role": "timber-control",
+      "recipeId": "timber.realistic-control",
+      "status": "deferred",
+      "neutral": "Material truth is clear but identity is too photographic alone.",
+      "warm": "Useful only as restrained support."
+    },
+    {
+      "role": "primary-masonry",
+      "recipeId": "masonry.kenney-stone-hybrid-default",
+      "status": "recommended-default",
+      "neutral": "Chunky blocks remain geometry-led.",
+      "warm": "Amber light preserves block rhythm and adds quiet depth."
+    },
+    {
+      "role": "masonry-alternate",
+      "recipeId": "masonry.rock-alternate",
+      "status": "registered-alternate",
+      "neutral": "Irregular and cave-like without losing the arch.",
+      "warm": "Warmer, rougher option for frontier walls."
+    },
+    {
+      "role": "masonry-control",
+      "recipeId": "masonry.realistic-control",
+      "status": "deferred",
+      "neutral": "Readable but too photographic as the main identity.",
+      "warm": "Grain competes with authored voussoirs."
+    },
+    {
+      "role": "primary-dark-iron",
+      "recipeId": "iron.deadkir-hybrid-default",
+      "status": "recommended-default",
+      "neutral": "Painted plate language reads immediately.",
+      "warm": "Edges remain legible beside brass accents."
+    },
+    {
+      "role": "constrained-realistic-iron-alternate",
+      "recipeId": "iron.realistic-alternate",
+      "status": "registered-alternate",
+      "neutral": "Convincing dirty iron on small hardware.",
+      "warm": "Strong contrast but too real for broad plates."
+    },
+    {
+      "role": "rust-heavy-iron-alternate",
+      "recipeId": "iron.rust-heavy-alternate",
+      "status": "deferred",
+      "neutral": "Rust dominates the form.",
+      "warm": "Useful only for neglected machinery storytelling."
+    },
+    {
+      "role": "realistic-brass-focal-accent",
+      "recipeId": "brass.metal008-focal",
+      "status": "constrained-accent",
+      "neutral": "High material response makes focal hardware pop.",
+      "warm": "Excellent amber highlight when coverage stays small."
+    },
+    {
+      "role": "primary-parchment",
+      "recipeId": "parchment.luke-default",
+      "status": "recommended-default",
+      "neutral": "Illustrated field supports live text without looking sterile.",
+      "warm": "Warmth remains readable with restrained edge dirt."
+    },
+    {
+      "role": "parchment-alternate",
+      "recipeId": "parchment.paper006-alternate",
+      "status": "registered-alternate",
+      "neutral": "Clean fiber truth but less authored.",
+      "warm": "Useful for tiny labels where the illustration is too busy."
+    },
+    {
+      "role": "grime-wear-helper",
+      "recipeId": "wear.kenney-mask-default",
+      "status": "recommended-default",
+      "neutral": "Readable authored dirt placement.",
+      "warm": "Adds age without graying the entire object."
+    },
+    {
+      "role": "code-authored-glass",
+      "recipeId": "glass.code-authored-default",
+      "status": "recommended-default",
+      "neutral": "Transparent fill, rim, highlight, and shadow communicate glass without a texture.",
+      "warm": "Preserves potion color and catches amber edge light."
+    },
+    {
+      "role": "potion-liquid-glow",
+      "recipeId": "liquid.ooze-glow-default",
+      "status": "recommended-default",
+      "neutral": "Ooze texture remains subordinate to classification color.",
+      "warm": "Glow lifts the liquid without washing out red, blue, or green."
+    },
+    {
+      "role": "steam-smoke-helper",
+      "recipeId": "fx.smoke06-default",
+      "status": "recommended-default",
+      "neutral": "Soft alpha reads as steam rather than a sticker.",
+      "warm": "Accepts warm tint and stays restrained."
+    },
+    {
+      "role": "spark-helper",
+      "recipeId": "fx.spark01-default",
+      "status": "recommended-default",
+      "neutral": "Compact impact spark with clean alpha.",
+      "warm": "Bright enough for mechanism feedback without dominating."
+    },
+    {
+      "role": "dust-debris-helper",
+      "recipeId": "fx.dirt02-default",
+      "status": "recommended-default",
+      "neutral": "Sparse debris reads at small scale.",
+      "warm": "Works as dusty release under amber light."
+    }
+  ]
+}

@@ -1,0 +1,624 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.101",
+  "status": "reviewed-provisional-selection",
+  "reviewStatus": "human-review-passed",
+  "selectionUse": "approved-for-runtime-preparation-only",
+  "h5_102Readiness": "ready",
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApproved": false,
+  "strategy": {
+    "primaryIdentity": "Stylized fantasy textures establish shape language and readable material character.",
+    "hybridSupport": "H5.100 realistic CC0 sources may contribute restrained grain, wear, and material truth.",
+    "academyAuthoredLater": "Stains, soot, rivets, edge accents, bronze warmth, crooked goblin wear, and alchemical residue remain future authored layers."
+  },
+  "recipes": [
+    {
+      "recipeId": "timber.kenney-hybrid-default",
+      "semanticMaterialRole": "primary-structural-timber",
+      "specimenTarget": "beam and conveyor slat",
+      "primarySource": "kenney-wall-timber",
+      "supportSource": "WoodSiding008",
+      "textureScale": 2.6,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": "kenney-ground-dirt",
+      "wearStrength": 0.14,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "beams",
+        "shelves",
+        "conveyor slats",
+        "counter faces"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Readable chunky timber with low repetition noise.",
+      "warmLightVerdict": "Keeps silhouette and gains restrained grain depth.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "timber.deadkir-painted-alternate",
+      "semanticMaterialRole": "timber-alternate",
+      "specimenTarget": "beam",
+      "primarySource": "deadkir-wood",
+      "supportSource": null,
+      "textureScale": 1.35,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "hero beam",
+        "counter face",
+        "cabinet panel"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Painterly and rich, but busier at small scale.",
+      "warmLightVerdict": "Warm and characterful for hero furniture.",
+      "provisionalStatus": "registered-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "timber.realistic-control",
+      "semanticMaterialRole": "timber-control",
+      "specimenTarget": "beam",
+      "primarySource": "WoodSiding008",
+      "supportSource": null,
+      "textureScale": 0.72,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "detail overlay"
+      ],
+      "prohibitedBroadUses": [
+        "broad structural identity"
+      ],
+      "neutralLightVerdict": "Material truth is clear but identity is too photographic alone.",
+      "warmLightVerdict": "Useful only as restrained support.",
+      "provisionalStatus": "deferred",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "masonry.kenney-stone-hybrid-default",
+      "semanticMaterialRole": "primary-masonry",
+      "specimenTarget": "masonry arch",
+      "primarySource": "kenney-wall-stone",
+      "supportSource": "Bricks089",
+      "textureScale": 2.25,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": "SurfaceImperfections015",
+      "wearStrength": 0.1,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "arches",
+        "wall fields",
+        "machine foundations"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Chunky blocks remain geometry-led.",
+      "warmLightVerdict": "Amber light preserves block rhythm and adds quiet depth.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "masonry.rock-alternate",
+      "semanticMaterialRole": "masonry-alternate",
+      "specimenTarget": "masonry arch",
+      "primarySource": "kenney-wall-rock",
+      "supportSource": "Bricks100",
+      "textureScale": 2.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "cave wall",
+        "rough foundation"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Irregular and cave-like without losing the arch.",
+      "warmLightVerdict": "Warmer, rougher option for frontier walls.",
+      "provisionalStatus": "registered-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "masonry.realistic-control",
+      "semanticMaterialRole": "masonry-control",
+      "specimenTarget": "masonry arch",
+      "primarySource": "Bricks089",
+      "supportSource": null,
+      "textureScale": 0.75,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "subtle grain overlay"
+      ],
+      "prohibitedBroadUses": [
+        "full arch identity"
+      ],
+      "neutralLightVerdict": "Readable but too photographic as the main identity.",
+      "warmLightVerdict": "Grain competes with authored voussoirs.",
+      "provisionalStatus": "deferred",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "iron.deadkir-hybrid-default",
+      "semanticMaterialRole": "primary-dark-iron",
+      "specimenTarget": "rail and bracket",
+      "primarySource": "deadkir-metal",
+      "supportSource": "Metal046B",
+      "textureScale": 1.55,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": "SurfaceImperfections015",
+      "wearStrength": 0.12,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "rails",
+        "brackets",
+        "mechanism plates",
+        "chain housings"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Painted plate language reads immediately.",
+      "warmLightVerdict": "Edges remain legible beside brass accents.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "iron.realistic-alternate",
+      "semanticMaterialRole": "constrained-realistic-iron-alternate",
+      "specimenTarget": "small bracket",
+      "primarySource": "Metal046B",
+      "supportSource": null,
+      "textureScale": 0.82,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "small bracket",
+        "fastener",
+        "rail wear"
+      ],
+      "prohibitedBroadUses": [
+        "broad mechanism housing"
+      ],
+      "neutralLightVerdict": "Convincing dirty iron on small hardware.",
+      "warmLightVerdict": "Strong contrast but too real for broad plates.",
+      "provisionalStatus": "registered-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "iron.rust-heavy-alternate",
+      "semanticMaterialRole": "rust-heavy-iron-alternate",
+      "specimenTarget": "small bracket",
+      "primarySource": "Metal053C",
+      "supportSource": null,
+      "textureScale": 0.82,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "damaged alternate"
+      ],
+      "prohibitedBroadUses": [
+        "default machinery"
+      ],
+      "neutralLightVerdict": "Rust dominates the form.",
+      "warmLightVerdict": "Useful only for neglected machinery storytelling.",
+      "provisionalStatus": "deferred",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "brass.metal008-focal",
+      "semanticMaterialRole": "realistic-brass-focal-accent",
+      "specimenTarget": "gear rim, valve ring, and fasteners",
+      "primarySource": "Metal008",
+      "supportSource": null,
+      "textureScale": 0.68,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "gear rim",
+        "valve ring",
+        "hub",
+        "fasteners",
+        "trim"
+      ],
+      "prohibitedBroadUses": [
+        "broad structural coverage",
+        "full wall",
+        "full machine housing"
+      ],
+      "neutralLightVerdict": "High material response makes focal hardware pop.",
+      "warmLightVerdict": "Excellent amber highlight when coverage stays small.",
+      "provisionalStatus": "constrained-accent",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "parchment.luke-default",
+      "semanticMaterialRole": "primary-parchment",
+      "specimenTarget": "label and recipe card",
+      "primarySource": "luke-parchment",
+      "supportSource": "Paper006",
+      "textureScale": 0.85,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": "kenney-ground-dirt",
+      "wearStrength": 0.08,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "bin labels",
+        "recipe cards",
+        "sorting notices"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Illustrated field supports live text without looking sterile.",
+      "warmLightVerdict": "Warmth remains readable with restrained edge dirt.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "parchment.paper006-alternate",
+      "semanticMaterialRole": "parchment-alternate",
+      "specimenTarget": "small label",
+      "primarySource": "Paper006",
+      "supportSource": null,
+      "textureScale": 0.7,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 1.0,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "small label",
+        "utility note"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Clean fiber truth but less authored.",
+      "warmLightVerdict": "Useful for tiny labels where the illustration is too busy.",
+      "provisionalStatus": "registered-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "wear.kenney-mask-default",
+      "semanticMaterialRole": "grime-wear-helper",
+      "specimenTarget": "edge and contact masks",
+      "primarySource": "kenney-ground-dirt",
+      "supportSource": "SurfaceImperfections015",
+      "textureScale": 2.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.26,
+      "blendMode": "multiply",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "edge wear",
+        "floor dirt",
+        "soot boundary",
+        "contact mask"
+      ],
+      "prohibitedBroadUses": [
+        "full-opacity broad fill"
+      ],
+      "neutralLightVerdict": "Readable authored dirt placement.",
+      "warmLightVerdict": "Adds age without graying the entire object.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "glass.code-authored-default",
+      "semanticMaterialRole": "code-authored-glass",
+      "specimenTarget": "potion bottle",
+      "primarySource": null,
+      "supportSource": null,
+      "textureScale": 1.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "not-applicable",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.34,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored rim, inner highlight, refraction stripe, and grounded shadow",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "bottles",
+        "vials",
+        "small windows"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Transparent fill, rim, highlight, and shadow communicate glass without a texture.",
+      "warmLightVerdict": "Preserves potion color and catches amber edge light.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "liquid.ooze-glow-default",
+      "semanticMaterialRole": "potion-liquid-glow",
+      "specimenTarget": "masked potion liquid",
+      "primarySource": "deadkir-ooze",
+      "supportSource": "kenney-particle-light_01",
+      "textureScale": 1.8,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.62,
+      "blendMode": "soft-light",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "bottle liquid mask",
+        "spill mask",
+        "alchemical residue"
+      ],
+      "prohibitedBroadUses": [
+        "unmasked broad fill"
+      ],
+      "neutralLightVerdict": "Ooze texture remains subordinate to classification color.",
+      "warmLightVerdict": "Glow lifts the liquid without washing out red, blue, or green.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "fx.smoke06-default",
+      "semanticMaterialRole": "steam-smoke-helper",
+      "specimenTarget": "FX helper board",
+      "primarySource": "kenney-particle-smoke_06",
+      "supportSource": null,
+      "textureScale": 1.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.72,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "steam vent",
+        "machine exhaust",
+        "cauldron vapor"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Soft alpha reads as steam rather than a sticker.",
+      "warmLightVerdict": "Accepts warm tint and stays restrained.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "fx.spark01-default",
+      "semanticMaterialRole": "spark-helper",
+      "specimenTarget": "FX helper board",
+      "primarySource": "kenney-particle-spark_01",
+      "supportSource": null,
+      "textureScale": 1.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.9,
+      "blendMode": "screen",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "machinery spark",
+        "correct-sort accent",
+        "metal impact"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Compact impact spark with clean alpha.",
+      "warmLightVerdict": "Bright enough for mechanism feedback without dominating.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    },
+    {
+      "recipeId": "fx.dirt02-default",
+      "semanticMaterialRole": "dust-debris-helper",
+      "specimenTarget": "FX helper board",
+      "primarySource": "kenney-particle-dirt_02",
+      "supportSource": null,
+      "textureScale": 1.0,
+      "orientation": "geometry-aligned",
+      "wrapMode": "repeat",
+      "tint": "identity-preserving warm-neutral",
+      "opacity": 0.64,
+      "blendMode": "source-over",
+      "contrastTreatment": "quiet midtones with authored edge contrast",
+      "authoredEdgeTreatment": "code-authored bevel, outline, and shadow planes",
+      "wearMaskSource": null,
+      "wearStrength": 0.0,
+      "lightingAssumptions": [
+        "neutral inspection light",
+        "warm amber alchemy-room light"
+      ],
+      "repetitionMitigation": "offset repetition and geometry-led edge breaks",
+      "performanceNotes": "one primary pattern plus at most one restrained support layer",
+      "permittedSceneRigTargets": [
+        "conveyor impact",
+        "crate movement",
+        "wrong-sort dust"
+      ],
+      "prohibitedBroadUses": [],
+      "neutralLightVerdict": "Sparse debris reads at small scale.",
+      "warmLightVerdict": "Works as dusty release under amber light.",
+      "provisionalStatus": "recommended-default",
+      "runtimeApproved": false
+    }
+  ]
+}

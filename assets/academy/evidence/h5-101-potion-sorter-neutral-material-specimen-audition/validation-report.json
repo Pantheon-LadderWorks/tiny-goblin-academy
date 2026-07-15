@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.101",
+  "passed": true,
+  "checkCount": 40,
+  "failed": [],
+  "checks": [
+    {
+      "name": "required file: README.md",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\README.md"
+    },
+    {
+      "name": "required file: index.html",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\index.html"
+    },
+    {
+      "name": "required file: styles.css",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\styles.css"
+    },
+    {
+      "name": "required file: app.js",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\app.js"
+    },
+    {
+      "name": "required file: materials.generated.js",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\materials.generated.js"
+    },
+    {
+      "name": "required file: generate_h5_101_lab.py",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\generate_h5_101_lab.py"
+    },
+    {
+      "name": "required file: capture_h5_101_evidence.mjs",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\capture_h5_101_evidence.mjs"
+    },
+    {
+      "name": "required file: specimen-inventory.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\specimen-inventory.json"
+    },
+    {
+      "name": "required file: material-verdict-table.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-101-potion-sorter-neutral-material-specimen-audition\\material-verdict-table.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.material-recipes-h5-101.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.material-recipes-h5-101.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.material-specimen-inventory-h5-101.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.material-specimen-inventory-h5-101.json"
+    },
+    {
+      "name": "required file: TINY_GOBLIN_ACADEMY_H5_101_NEUTRAL_MATERIAL_SPECIMEN_AUDITION.md",
+      "passed": true,
+      "detail": "docs\\assets\\game-assets\\potion-sorter\\TINY_GOBLIN_ACADEMY_H5_101_NEUTRAL_MATERIAL_SPECIMEN_AUDITION.md"
+    },
+    {
+      "name": "recipe manifest parses",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.material-recipes-h5-101.json"
+    },
+    {
+      "name": "specimen inventory manifest parses",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.material-specimen-inventory-h5-101.json"
+    },
+    {
+      "name": "material recipe completeness",
+      "passed": true,
+      "detail": "18 recipes"
+    },
+    {
+      "name": "one recommended default per required role",
+      "passed": true,
+      "detail": "{'code-authored-glass': 1, 'steam-smoke-helper': 1, 'dust-debris-helper': 1, 'primary-masonry': 1, 'primary-parchment': 1, 'primary-structural-timber': 1, 'spark-helper': 1, 'primary-dark-iron': 1, 'potion-liquid-glow': 1, 'grime-wear-helper': 1}"
+    },
+    {
+      "name": "constrained brass rule",
+      "passed": true,
+      "detail": "1 brass recipes"
+    },
+    {
+      "name": "runtime approval remains false",
+      "passed": true,
+      "detail": "18 recipes"
+    },
+    {
+      "name": "source path resolution",
+      "passed": true,
+      "detail": "25 sources"
+    },
+    {
+      "name": "source hash resolution",
+      "passed": true,
+      "detail": "25 sources"
+    },
+    {
+      "name": "source license resolution",
+      "passed": true,
+      "detail": "25 sources"
+    },
+    {
+      "name": "no new external source families",
+      "passed": true,
+      "detail": "H5.100/H5.100C only"
+    },
+    {
+      "name": "specimen inventory runtime boundary",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "capture dimensions: 01-timber-comparison.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 02-masonry-comparison.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 03-conveyor-repetition.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 04-iron-rail-bracket.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 05-gear-brass-accent.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 06-parchment-labels.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 07-potion-bottles.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 08-fx-helper-board.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 09-neutral-vs-warm-light.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 10-provisional-palette.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 11-material-recipe-verdicts.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 12-constrained-rejected.png",
+      "passed": true,
+      "detail": "expected=(1600, 900) actual=(1600, 900)"
+    },
+    {
+      "name": "capture dimensions: 13-coherence-1920x1080.png",
+      "passed": true,
+      "detail": "expected=(1920, 1080) actual=(1920, 1080)"
+    },
+    {
+      "name": "capture dimensions: 14-coherence-1024x640.png",
+      "passed": true,
+      "detail": "expected=(1024, 640) actual=(1024, 640)"
+    },
+    {
+      "name": "generator reproducibility",
+      "passed": true,
+      "detail": "{\n  \"reproducible\": true,\n  \"outputCount\": 5,\n  \"sourceCount\": 25,\n  \"recipeCount\": 18\n}"
+    },
+    {
+      "name": "scope boundary",
+      "passed": true,
+      "detail": "32 changed paths"
+    },
+    {
+      "name": "no staged files",
+      "passed": true,
+      "detail": "none"
+    }
+  ]
+}
