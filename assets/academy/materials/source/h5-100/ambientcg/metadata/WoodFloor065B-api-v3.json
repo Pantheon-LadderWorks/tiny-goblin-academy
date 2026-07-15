@@ -1,0 +1,98 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=woodfloor065b\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "WoodFloor065B",
+                       "type":  "material",
+                       "releaseDate":  "2025-08-30",
+                       "title":  "Wood Floor 065 B",
+                       "url":  "https://ambientcg.com/a/WoodFloor065B",
+                       "tags":  [
+                                    "065",
+                                    "65",
+                                    "brown",
+                                    "classic",
+                                    "damaged",
+                                    "dirty",
+                                    "floor",
+                                    "indoor",
+                                    "natural",
+                                    "old",
+                                    "parquet",
+                                    "rough",
+                                    "rustic",
+                                    "scratched",
+                                    "striped",
+                                    "vintage",
+                                    "warm",
+                                    "wood",
+                                    "worn"
+                                ],
+                       "dimensions":  {
+                                          "width":  0,
+                                          "height":  0,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "ambient-occlusion"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_1K-JPG.zip",
+                                             "size":  6915059
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_2K-JPG.zip",
+                                             "size":  26906916
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_4K-JPG.zip",
+                                             "size":  114583776
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_8K-JPG.zip",
+                                             "size":  524614198
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_1K-PNG.zip",
+                                             "size":  16024510
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_2K-PNG.zip",
+                                             "size":  62667821
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_4K-PNG.zip",
+                                             "size":  254230961
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodFloor065B_8K-PNG.zip",
+                                             "size":  1063938902
+                                         }
+                                     ]
+                   }
+               ]
+}

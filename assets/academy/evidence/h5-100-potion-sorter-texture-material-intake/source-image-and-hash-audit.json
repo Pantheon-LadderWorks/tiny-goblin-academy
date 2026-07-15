@@ -1,0 +1,367 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.100",
+  "generatedAt": "2026-07-15T00:32:05Z",
+  "archiveAggregateSha256": "6b14f8f91a38bcee4c9d2ca163ca5d4473b1fb3a91832894b69b00d7b11ade3b",
+  "archives": [
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks089_1K-JPG.zip",
+      "bytes": 5317280,
+      "sha256": "54b2d7bfcd51f36b638a86738b23cb65db7c44304bc1eec23dbbb2989088fd87"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks100_1K-JPG.zip",
+      "bytes": 4827385,
+      "sha256": "46551bf55181bce3ed0d5c56757ed9d89bbf9960d4f22efef18e090b072f6df4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal008_1K-JPG.zip",
+      "bytes": 5205954,
+      "sha256": "d8f6b8492944cfdcb9044016b7a73f2a7e7d8c36009778585bd2f88570ca0ba2"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal046B_1K-JPG.zip",
+      "bytes": 6827203,
+      "sha256": "b4fc855a414f7a1e415af6edaef24c0dc114f7802b3879a3db88e6ba1c97cda0"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal053C_1K-JPG.zip",
+      "bytes": 6327290,
+      "sha256": "ca2073be9915e8a6d48ec707d03b068854eff4364f6dd9eec0487895664065a5"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Paper006_1K-JPG.zip",
+      "bytes": 4754836,
+      "sha256": "cd21850eb598b374f16c4ff2eaf2e22d8b56e0fe0b4b94d83db807a928bfce57"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/SurfaceImperfections015_1K-JPG.zip",
+      "bytes": 8203156,
+      "sha256": "c5e80884a2dbfa155b86aded24444dac186215f477161d1fde1ca305308f6a74"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/WoodFloor065B_1K-JPG.zip",
+      "bytes": 6915059,
+      "sha256": "c6f3037d5a30d5adb3873ac7644a302b9ce0727d518c8ff61cf0fb10c0548bb0"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/WoodSiding008_1K-JPG.zip",
+      "bytes": 6941998,
+      "sha256": "d8bd0c00724eadc5eba0f738b382500d154ed67ba240f7567f6df74887e790b4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/kenney/archives/kenney_particle-pack.zip",
+      "bytes": 15001764,
+      "sha256": "b631d4b07f7002549fdcf155f01141ad482f79f3440e4e301eed49ce5f1d8958"
+    }
+  ],
+  "images": [
+    {
+      "id": "WoodSiding008",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/WoodSiding008/WoodSiding008_1K-JPG_Color.jpg",
+      "sha256": "f1c21920bec1104bfd93aa30858d5a3cea8e67147741403790f1ef69a88bde66",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.018,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 5.02
+    },
+    {
+      "id": "WoodFloor065B",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/WoodFloor065B/WoodFloor065B_1K-JPG_Color.jpg",
+      "sha256": "67246647d72a7d9a70f5dad1c96c0ce82bea4cfc1241e0bd83c8ade6e7aba6f0",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0337,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 9.32
+    },
+    {
+      "id": "Bricks089",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Bricks089/Bricks089_1K-JPG_Color.jpg",
+      "sha256": "d400167a3133b3933ff7cd9bbb4db93361cd2c48cd08e640da16b5913d740c2b",
+      "width": 1024,
+      "height": 512,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0899,
+      "observedEdgeContinuity": "moderate-seam-risk",
+      "luminanceStdDev": 30.63
+    },
+    {
+      "id": "Bricks100",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Bricks100/Bricks100_1K-JPG_Color.jpg",
+      "sha256": "e5596ce79d9a63d6b9a9e9ac15a0bb60d8a5c39b684999a872467641bc91d30d",
+      "width": 1024,
+      "height": 512,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0587,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 21.57
+    },
+    {
+      "id": "Metal046B",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal046B/Metal046B_1K-JPG_Color.jpg",
+      "sha256": "7caf8ddbd06aa730e41db993ff344eb60d872ff698e5da117b3527f09ba1877e",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0282,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 8.55
+    },
+    {
+      "id": "Metal053C",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal053C/Metal053C_1K-JPG_Color.jpg",
+      "sha256": "2157ee987444ac4ed20fea04380a1e1489ae72df367140312d6fb4f406f0b269",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0812,
+      "observedEdgeContinuity": "moderate-seam-risk",
+      "luminanceStdDev": 33.48
+    },
+    {
+      "id": "Metal008",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal008/Metal008_1K-JPG_Color.jpg",
+      "sha256": "89e08ccdd93901f03556b37d6361e39dee1ce614b13a10a13c73030ba6375c59",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0289,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 11.8
+    },
+    {
+      "id": "Paper006",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Paper006/Paper006_1K-JPG_Color.jpg",
+      "sha256": "7e8c8940b7d6bd4896c29f5cdbccd08eb6014099860ac1d863ec09b289bac51e",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0198,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 4.6
+    },
+    {
+      "id": "SurfaceImperfections015",
+      "path": "assets/academy/materials/source/h5-100/ambientcg/extracted-color/SurfaceImperfections015/SurfaceImperfections015_1K-JPG_Color.jpg",
+      "sha256": "f515b7e050415edb59e51bd1c0331b8dd8acfbf1a2b321d64aa466fa8cc087a3",
+      "width": 1024,
+      "height": 1024,
+      "format": "JPEG",
+      "colorMode": "RGB",
+      "alphaPresent": false,
+      "meaningfulTransparency": false,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "edgeDifferenceScore": 0.0916,
+      "observedEdgeContinuity": "moderate-seam-risk",
+      "luminanceStdDev": 26.6
+    },
+    {
+      "id": "kenney-particle-smoke_06",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/smoke_06.png",
+      "sha256": "d988b03bb46797be913333f06b26ff2aad55ec082cfb7d3d18ce86ccb71559b5",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        190
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 51.02
+    },
+    {
+      "id": "kenney-particle-dirt_02",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/dirt_02.png",
+      "sha256": "fcecc70b561f80568b3391c3dc1180126d86ce4fbd4d1b01518e6045203e10a3",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        244
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 63.6
+    },
+    {
+      "id": "kenney-particle-spark_01",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/spark_01.png",
+      "sha256": "5902da3a324cad0a4b5a88ce1e3c9cc18fee50922c358ce93d8c9f1ad7708f0a",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 47.29
+    },
+    {
+      "id": "kenney-particle-light_01",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/light_01.png",
+      "sha256": "caedcc5df5bcac4470244d2520d6a64b45b20c1ccf4d918da516c55e3fa365a6",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        251
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 69.43
+    },
+    {
+      "id": "kenney-particle-smoke_03",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/smoke_03.png",
+      "sha256": "a71f8abcac64f8d73a94625cc9a10033dbeafa7eaea750560cba0daa73fe8752",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        185
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 39.2
+    },
+    {
+      "id": "kenney-particle-dirt_03",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/dirt_03.png",
+      "sha256": "427d6dcad5a8d16b8143d412a5a48ce859716150a074ea5bb36eca577c0ae541",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        238
+      ],
+      "edgeDifferenceScore": 0.0014,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 85.72
+    },
+    {
+      "id": "kenney-particle-spark_05",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/spark_05.png",
+      "sha256": "9624ea2017b8b2767a9d3b82e978b7fdf5154d83e6756cd919da51447bb97138",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "edgeDifferenceScore": 0.0032,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 40.24
+    },
+    {
+      "id": "kenney-particle-magic_04",
+      "path": "assets/academy/materials/source/h5-100/kenney/extracted-selected/magic_04.png",
+      "sha256": "8255a4a3bd9209a0d3a45f0636524ff0d2953adc7d6819041703107379ab63ba",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "colorMode": "P",
+      "alphaPresent": false,
+      "meaningfulTransparency": true,
+      "alphaRange": [
+        0,
+        211
+      ],
+      "edgeDifferenceScore": 0.0,
+      "observedEdgeContinuity": "likely-continuous",
+      "luminanceStdDev": 35.55
+    }
+  ],
+  "duplicateHashGroups": {}
+}

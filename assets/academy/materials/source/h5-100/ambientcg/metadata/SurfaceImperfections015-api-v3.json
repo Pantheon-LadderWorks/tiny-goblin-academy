@@ -1,0 +1,83 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=surfaceimperfections015\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "SurfaceImperfections015",
+                       "type":  "material",
+                       "releaseDate":  "2023-01-04",
+                       "title":  "Surface Imperfections 015",
+                       "url":  "https://ambientcg.com/a/SurfaceImperfections015",
+                       "tags":  [
+                                    "15",
+                                    "dust",
+                                    "imperfections",
+                                    "surface"
+                                ],
+                       "dimensions":  {
+                                          "width":  65,
+                                          "height":  65,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "opacity"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_1K-JPG.zip",
+                                             "size":  8203156
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_2K-JPG.zip",
+                                             "size":  31351965
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_4K-JPG.zip",
+                                             "size":  132413482
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_8K-JPG.zip",
+                                             "size":  583626437
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_1K-PNG.zip",
+                                             "size":  18280895
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_2K-PNG.zip",
+                                             "size":  70564483
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_4K-PNG.zip",
+                                             "size":  284838428
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=SurfaceImperfections015_8K-PNG.zip",
+                                             "size":  1149513871
+                                         }
+                                     ]
+                   }
+               ]
+}

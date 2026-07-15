@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "0.1",
+  "sourceTitle": "large parchment texture",
+  "creator": "Luke.RUSTLTD",
+  "sourcePage": "https://opengameart.org/content/large-parchment-texture",
+  "directSource": "https://opengameart.org/sites/default/files/parchment.png",
+  "retrievalDate": "2026-07-14",
+  "license": "CC0 1.0",
+  "attributionRequired": false,
+  "commercialUseAllowed": true,
+  "file": {
+    "name": "parchment.png",
+    "bytes": 11905272,
+    "sha256": "1a5864e3549355d83607b0dfd6a2093106b13df0a42227f17cb28bf488ab9207"
+  },
+  "sourceClaim": "Creator page describes a 1920x1080 slightly weathered parchment texture and marks the submission CC0.",
+  "runtimeApproved": false
+}

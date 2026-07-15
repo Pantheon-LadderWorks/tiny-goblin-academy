@@ -5,7 +5,7 @@
   "pipelineUse": "manifest-maturity-classification",
   "runtimeEligibility": "not-runtime-approved",
   "sourceBaselineCommit": "b323fb7 chore: reorganize manifest folders",
-  "totalManifestCount": 79,
+  "totalManifestCount": 84,
   "movedFileCount": 29,
   "activeRootPolicy": "Active/current manifests stay visible at the category root. Non-current, planning, lineage, deferred, generated, denied, and execution records are nested by maturity class.",
   "maturityClasses": {
@@ -71,7 +71,12 @@
     "fontDirectionLineage": "manifests/academy/fonts/academy.font-pantry-core-selection.json",
     "academyTypographyRecipes": "manifests/academy/shared/academy.typography-recipe-registry.json",
     "h5_98Report": "docs/assets/shared-assets/shared-ui/TINY_GOBLIN_ACADEMY_H5_98_ACADEMY_TYPOGRAPHY_PROMOTION.md",
-    "runtimeTypographyIntegration": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json"
+    "runtimeTypographyIntegration": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json",
+    "h5_100PotionSorterTextureMaterialSourceIntake": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
+    "h5_100PotionSorterTextureMaterialProvenance": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+    "h5_100PotionSorterMaterialClassification": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+    "h5_100cPotionSorterStylizedFantasySourceIntake": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
+    "h5_100cPotionSorterStylizedFantasyClassification": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json"
   },
   "activeManifests": [
     "manifests/academy/core/academy.games.json",
@@ -135,6 +140,11 @@
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ember-pup.state-placement-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.layout-composition-plan.json",
     "manifests/academy/games/pet-campfire/planning/academy.pet-campfire.ui-prop-care-placement-plan.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
     "manifests/academy/runtime/planning/academy.button-goblin-background-stage-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-live-goblin-rig-integration.json",
     "manifests/academy/runtime/planning/academy.button-goblin-shared-host-surface-integration.json",
@@ -292,8 +302,8 @@
       "maturityClass": "planning",
       "authorityRole": "planning/design/placement/intake record",
       "categoryShelf": "manifests/academy/fonts",
-      "status": "draft",
-      "reviewStatus": "needs-human-review",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
       "pipelineUse": "font-pantry-planning",
       "runtimeEligibility": "not-runtime-approved",
       "runtimeApproved": false,
@@ -563,6 +573,66 @@
       "notes": "Nested by maturity/authority so it is not mistaken for the current shelf manifest."
     },
     {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.100 source intake, provenance, or material-classification planning record",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "texture-material-technical-classification",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested under planning. Human review approved the provenance-clean source families for the reusable GlyphForge pantry; research previews remain evidence-only and the provisional shortlist does not imply runtime approval. H5.101 neutral-specimen audition remains required."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.100 source intake, provenance, or material-classification planning record",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "texture-material-source-provenance",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested under planning. Human review approved the provenance-clean source families for the reusable GlyphForge pantry; research previews remain evidence-only and the provisional shortlist does not imply runtime approval. H5.101 neutral-specimen audition remains required."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.100 source intake, provenance, or material-classification planning record",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "reviewed",
+      "reviewStatus": "human-review-passed",
+      "pipelineUse": "texture-material-source-intake-planning",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Nested under planning. Human review approved the provenance-clean source families for the reusable GlyphForge pantry; research previews remain evidence-only and the provisional shortlist does not imply runtime approval. H5.101 neutral-specimen audition remains required."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.100C stylized-fantasy material classification and hybrid-use boundary",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "intake-complete",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "stylized-fantasy-material-classification",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Stylized sources establish identity; H5.100 realistic sources remain restrained support. Metal008 is an intentional small focal accent for warm contrast, not broad room coverage."
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.100C bounded stylized-fantasy source intake record",
+      "categoryShelf": "manifests/academy/games/potion-sorter",
+      "status": "intake-complete",
+      "reviewStatus": "needs-human-review",
+      "pipelineUse": "stylized-fantasy-texture-source-intake",
+      "runtimeEligibility": "not-runtime-approved",
+      "runtimeApproved": false,
+      "notes": "Preserves accepted CC0 originals and explicit source gaps. No Potion Sorter selection or runtime use is implied."
+    },
+    {
       "path": "manifests/academy/games/tiny-farm-day/academy.farm-settlement.cleanup-candidate.json",
       "maturityClass": "active",
       "authorityRole": "current cleanup candidate for draft planning use",
@@ -681,18 +751,6 @@
       "notes": "Nested by maturity/authority as the H6.2 Button Goblin stage-first shell migration review record. Does not imply runtime asset approval."
     },
     {
-      "path": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json",
-      "maturityClass": "planning",
-      "authorityRole": "H5.99 limited Academy typography runtime integration and evidence record",
-      "categoryShelf": "manifests/academy/runtime/planning",
-      "status": "reviewed",
-      "reviewStatus": "human-visual-review-passed",
-      "pipelineUse": "limited-hub-and-button-goblin-typography-runtime-proof",
-      "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
-      "runtimeApproved": true,
-      "notes": "Hub and Button Goblin implementation and DOM/CSS-to-Phaser parity passed human review. No broader runtime approval is implied."
-    },
-    {
       "path": "manifests/academy/runtime/planning/academy.button-goblin-vector-actor-rig-preview.json",
       "maturityClass": "planning",
       "authorityRole": "preview-only runtime actor planning record",
@@ -721,6 +779,18 @@
       "runtimeEligibility": "not-runtime-approved",
       "status": "draft",
       "reviewStatus": "needs-human-review"
+    },
+    {
+      "path": "manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json",
+      "maturityClass": "planning",
+      "authorityRole": "H5.99 limited Academy typography runtime integration and evidence record",
+      "categoryShelf": "manifests/academy/runtime/planning",
+      "status": "reviewed",
+      "reviewStatus": "human-visual-review-passed",
+      "pipelineUse": "limited-hub-and-button-goblin-typography-runtime-proof",
+      "runtimeEligibility": "approved-for-hub-and-button-goblin-runtime-use",
+      "runtimeApproved": true,
+      "notes": "Hub and Button Goblin implementation and DOM/CSS-to-Phaser parity passed human review. No broader runtime approval is implied."
     },
     {
       "path": "manifests/academy/shared/academy.shared-core.regions.json",
@@ -1178,6 +1248,10 @@
       "jsonCount": 1
     },
     {
+      "folder": "manifests/academy/games/potion-sorter/planning",
+      "jsonCount": 5
+    },
+    {
       "folder": "manifests/academy/games/tiny-farm-day",
       "jsonCount": 1
     },
@@ -1269,7 +1343,9 @@
     "Generated files are not automatically source of truth.",
     "Runtime/game wiring remains outside H5.91A scope.",
     "H5.99 wires typography only in the Hub and Button Goblin with human visual review passed; no broader game/runtime approval is implied.",
-    "H6.4 selectively proves shared host surfaces in Button Goblin only; Region 20 and Region 30 remain human-review gated and Region 5 remains rejected."
+    "H6.4 selectively proves shared host surfaces in Button Goblin only; Region 20 and Region 30 remain human-review gated and Region 5 remains rejected.",
+    "H5.100 records a licensed Potion Sorter source-material shortlist for H5.101 neutral-specimen audition only; it does not approve runtime textures, SceneRig composition, shaders/PBR, particles, glass/liquid implementation, or room construction.",
+    "H5.100C adds stylized-fantasy source identity beside H5.100 realistic support. Metal008 is a restrained focal contrast accent; no H5.100C source is runtime-approved before H5.101 neutral-specimen review."
   ],
   "blockedUntilHumanReview": false,
   "runtimePlanningCurrent": [

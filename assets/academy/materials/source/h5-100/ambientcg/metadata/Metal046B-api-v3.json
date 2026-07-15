@@ -1,0 +1,84 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=metal046b\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "Metal046B",
+                       "type":  "material",
+                       "releaseDate":  "2022-11-28",
+                       "title":  "Metal 046 B",
+                       "url":  "https://ambientcg.com/a/Metal046B",
+                       "tags":  [
+                                    "46",
+                                    "black",
+                                    "dark",
+                                    "dirty",
+                                    "metal"
+                                ],
+                       "dimensions":  {
+                                          "width":  0,
+                                          "height":  0,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "metalness"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_1K-JPG.zip",
+                                             "size":  6827203
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_2K-JPG.zip",
+                                             "size":  22225772
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_4K-JPG.zip",
+                                             "size":  82704308
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_8K-JPG.zip",
+                                             "size":  378249320
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_1K-PNG.zip",
+                                             "size":  16006884
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_2K-PNG.zip",
+                                             "size":  58647236
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_4K-PNG.zip",
+                                             "size":  232026622
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal046B_8K-PNG.zip",
+                                             "size":  970801258
+                                         }
+                                     ]
+                   }
+               ]
+}

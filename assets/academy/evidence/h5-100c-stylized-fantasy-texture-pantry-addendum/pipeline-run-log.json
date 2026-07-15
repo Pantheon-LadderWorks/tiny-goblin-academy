@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "Python 3 + Pillow",
+  "command": "make-evidence",
+  "method": "h5-100c-accepted-source-truth-contact-sheets-and-hybrid-comparison",
+  "methodStatus": "pilot-only",
+  "laneId": "H5.100C",
+  "agent": "Codex",
+  "gitBaseline": "c2058e4e682d9e7e5ecfab8ede06c5b5f7989af8",
+  "startedAt": "2026-07-15T01:39:22Z",
+  "completedAt": "2026-07-15T01:39:22Z",
+  "sourcePath": "assets/academy/materials/source/h5-100c",
+  "sourceSha256": "255496001f64affc6774a72379540f3155a533183b9d7307e16bd5b481b9073e",
+  "inputManifests": [
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+    "manifests/academy/tooling/organization/academy.manifest-maturity-index.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-texture-source-intake-h5-100c.json",
+      "sha256": "84df103cc3c3753a29cfa48d339f028cc65403eef9d6ae144b9a2770148b3427"
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.stylized-fantasy-material-classification-h5-100c.json",
+      "sha256": "33e2c6a1bf788e5f7b18b7bed7eb2726f08b16fbff416a50185a6354bad99395"
+    },
+    {
+      "path": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_100C_STYLIZED_FANTASY_TEXTURE_PANTRY_ADDENDUM.md",
+      "sha256": "a814bebb3122ddcab502987cd9a32294540ba61175c8b6b5a3e1b3bffea54787"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/README.md",
+      "sha256": "76c2f79bc479607032d52358af6dafc05910340c3ffbcedf753cc1ff1d1b27e7"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/generate_h5_100c_evidence.py",
+      "sha256": "5e2175393c877cea70556320bec794b03a96896059b0218866ea08c84bfb0504"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/validate_h5_100c_intake.py",
+      "sha256": "185f87720fccab1fe264ec0cd8b72f5a71af811656e944273cb315985283fc62"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/source-image-and-hash-audit.json",
+      "sha256": "20d97b1f78977d7e7c85d8e3109d72450a8cb0803956e58cc1d588a7a76929b8"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/README.md",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/candidate-defer-reject-table.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/family-chunky-masonry-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/family-fantasy-timber-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/family-painted-metal-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/family-parchment-wear-magic-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/generate_h5_100c_evidence.py",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/realistic-vs-stylized-vs-hybrid-comparison.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/source-image-and-hash-audit.json",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/source-inventory-overview.jpg",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/validate_h5_100c_intake.py",
+    "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/validation-report.json"
+  ],
+  "validationCommands": [
+    "python assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/generate_h5_100c_evidence.py",
+    "python assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum/validate_h5_100c_intake.py",
+    "node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok",
+    "node scripts/validate-academy-asset-manifests.mjs",
+    "node scripts/validate-academy-manifest.mjs",
+    "node scripts/asset-pipeline/smoke-check.mjs",
+    "git diff --check"
+  ],
+  "warnings": [
+    "Evidence shows source specimens and planning comparisons only; no room composition is approved.",
+    "Metal008 is a restrained hybrid focal accent, not permission for broad photographic brass coverage.",
+    "The warm stylized brass source gap remains explicit pending future authored treatment."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed"
+}

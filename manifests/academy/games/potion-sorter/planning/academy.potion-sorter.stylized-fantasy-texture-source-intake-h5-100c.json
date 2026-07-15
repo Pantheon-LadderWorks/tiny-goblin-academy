@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.100C",
+  "status": "intake-complete-awaiting-human-review",
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApproved": false,
+  "sourceBaselineCommit": "c2058e4e682d9e7e5ecfab8ede06c5b5f7989af8",
+  "canonicalGamePath": "games/tier-1/02-potion-sorter",
+  "evidenceRoot": "assets/academy/evidence/h5-100c-stylized-fantasy-texture-pantry-addendum",
+  "sourceRoot": "assets/academy/materials/source/h5-100c",
+  "purpose": "Add a bounded stylized-fantasy identity layer without replacing the neutral H5.100 material pantry.",
+  "acceptedSources": [
+    {
+      "id": "kenney-retro-textures-fantasy-1.0",
+      "creator": "Kenney",
+      "sourcePage": "https://kenney.nl/assets/retro-textures-fantasy",
+      "directDownload": "https://kenney.nl/media/pages/assets/retro-textures-fantasy/db459aee90-1774770433/kenney_retro-textures-fantasy.zip",
+      "license": "CC0 1.0",
+      "originalPackage": "assets/academy/materials/source/h5-100c/kenney/archives/kenney_retro-textures-fantasy.zip",
+      "packageBytes": 1203276,
+      "packageSha256": "46f30f2411dafa011f8e52e32d80be197f8ccfe1164818e664358ae6c78a38b9",
+      "selectionRole": "primary-identity",
+      "families": ["fantasy-timber", "chunky-masonry", "painted-wear"]
+    },
+    {
+      "id": "deadkir-handpainted-tileables",
+      "creator": "DeadKir",
+      "sourcePage": "https://opengameart.org/content/handpainted-tileable-textures-512%D1%85512",
+      "license": "CC0 1.0",
+      "originalFiles": [
+        "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/metal_plates.png",
+        "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/wooden.png",
+        "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/ooz_slime.png"
+      ],
+      "selectionRole": "primary-identity-and-support-alternate",
+      "families": ["painted-dark-metal", "fantasy-timber", "magical-surface-helper"]
+    },
+    {
+      "id": "luke-rustltd-large-parchment",
+      "creator": "Luke.RUSTLTD",
+      "sourcePage": "https://opengameart.org/content/large-parchment-texture",
+      "license": "CC0 1.0",
+      "originalFile": "assets/academy/materials/source/h5-100c/opengameart/luke-rustltd-parchment/originals/parchment.png",
+      "bytes": 11905272,
+      "sha256": "1a5864e3549355d83607b0dfd6a2093106b13df0a42227f17cb28bf488ab9207",
+      "selectionRole": "primary-identity",
+      "families": ["illustrated-parchment"]
+    }
+  ],
+  "familyCandidateCounts": {
+    "fantasy-timber": 2,
+    "chunky-masonry": 1,
+    "painted-dark-metal": 1,
+    "warm-stylized-brass-bronze": 0,
+    "illustrated-parchment": 1,
+    "hand-painted-grime-wear": 1,
+    "magical-surface-helper": 1
+  },
+  "researchDecisions": [
+    {
+      "candidate": "Kenney Modular Dungeon Kit",
+      "disposition": "reject-for-texture-pantry",
+      "reason": "The actual 512x512 images are model color/palette atlases, not reusable dungeon surface textures; rendered previews are evidence only."
+    },
+    {
+      "candidate": "Quaternius Ultimate Stylized Nature Pack",
+      "disposition": "defer",
+      "reason": "The actual shared texture folder contains tree bark, leaves, grass, flowers, and rock maps; useful for a future nature pantry but not enough core alchemy-room coverage to justify ingesting the model pack here."
+    },
+    {
+      "candidate": "Quaternius Medieval Village MegaKit",
+      "disposition": "defer",
+      "reason": "Large model-first package; source page proves textured CC0 models but not a bounded standalone material family worth importing in this lane."
+    },
+    {
+      "candidate": "rubberduck 8 handpainted style textures",
+      "disposition": "defer-after-audition",
+      "reason": "Valid CC0 texture package, but its filtered wood/stone/fabric set overlaps the sharper accepted roster and would exceed the two-source exceptional hand-painted bound once parchment is included."
+    },
+    {
+      "candidate": "warm stylized brass/bronze",
+      "disposition": "gap-retained",
+      "reason": "No provenance-clean stylized source survived the bounded audition; use H5.100 Metal008 intentionally as a restrained warm focal accent for contrast and material pop, while Academy-authored shapes, rivets, and edge accents preserve the stylized identity."
+    }
+  ],
+  "scopeExclusions": [
+    "Potion Sorter runtime selection",
+    "SceneRig or room implementation",
+    "shader or material authoring",
+    "derived recolors",
+    "runtime asset registration",
+    "replacement of H5.100 sources"
+  ]
+}

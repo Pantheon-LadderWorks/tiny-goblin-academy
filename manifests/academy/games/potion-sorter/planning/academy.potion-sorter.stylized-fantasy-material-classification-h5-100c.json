@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.100C",
+  "runtimeApproved": false,
+  "strategy": {
+    "primaryIdentity": "Stylized fantasy textures establish shape language and readable material character.",
+    "hybridSupport": "H5.100 realistic CC0 sources may contribute restrained grain, wear, and material truth.",
+    "academyAuthoredLater": "Stains, soot, rivets, edge accents, bronze warmth, crooked goblin wear, and alchemical residue remain future authored layers."
+  },
+  "families": [
+    {
+      "family": "fantasy-timber",
+      "primaryIdentity": ["Kenney floor_wood_planks.png", "Kenney wall_timber.png"],
+      "supportAlternate": ["DeadKir wooden.png", "Kenney damaged plank variants"],
+      "hybridOverlayPartner": "H5.100 WoodSiding008 or WoodFloor065B at restrained opacity",
+      "futureTargets": ["beams", "shelves", "conveyor slats", "counter faces"]
+    },
+    {
+      "family": "chunky-masonry",
+      "primaryIdentity": ["Kenney wall_brick_stone_center.png", "Kenney wall_stone.png", "Kenney wall_rock.png"],
+      "supportAlternate": ["Kenney floor_stone_pattern.png", "Kenney floor_stone_pattern_small.png"],
+      "hybridOverlayPartner": "H5.100 Bricks089 or Bricks100 for quiet grain only",
+      "futureTargets": ["walls", "arches", "floor fields", "machine foundations"]
+    },
+    {
+      "family": "painted-dark-metal",
+      "primaryIdentity": ["DeadKir metal_plates.png"],
+      "supportAlternate": [],
+      "hybridOverlayPartner": "H5.100 Metal046B or Metal053C for restrained wear",
+      "futureTargets": ["mechanism plates", "rails", "brackets", "chain housings"]
+    },
+    {
+      "family": "warm-stylized-brass-bronze",
+      "primaryIdentity": [],
+      "supportAlternate": [],
+      "hybridOverlayPartner": "H5.100 Metal008 as an intentional restrained focal accent for warm contrast and material pop",
+      "futureTargets": ["gears", "rims", "valves", "small fittings"],
+      "gap": true,
+      "usageBoundary": "Use on small high-value mechanism accents; do not allow photographic brass coverage to become the room's primary visual identity."
+    },
+    {
+      "family": "illustrated-parchment",
+      "primaryIdentity": ["Luke.RUSTLTD parchment.png"],
+      "supportAlternate": [],
+      "hybridOverlayPartner": "H5.100 Paper006 for subtle fiber truth if needed",
+      "futureTargets": ["labels", "recipe cards", "sorting notices", "scroll surfaces"]
+    },
+    {
+      "family": "hand-painted-grime-wear",
+      "primaryIdentity": ["Kenney floor_ground_dirt.png", "Kenney damaged plank variants"],
+      "supportAlternate": [],
+      "hybridOverlayPartner": "H5.100 SurfaceImperfections015",
+      "futureTargets": ["dust masks", "edge wear", "floor dirt", "soot boundaries"]
+    },
+    {
+      "family": "magical-surface-helper",
+      "primaryIdentity": ["DeadKir ooz_slime.png"],
+      "supportAlternate": [],
+      "hybridOverlayPartner": "H5.100 Kenney light_01.png and smoke_06.png",
+      "futureTargets": ["potion liquid field", "spill mask", "alchemical residue", "glow support"]
+    }
+  ]
+}

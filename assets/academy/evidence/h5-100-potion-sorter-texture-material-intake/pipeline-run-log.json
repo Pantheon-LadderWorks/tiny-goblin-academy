@@ -1,0 +1,299 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "Python 3 + Pillow via MCP Orchestrator / Desktop Commander",
+  "command": "make-evidence",
+  "method": "h5-100-source-truth-material-contact-sheets",
+  "methodStatus": "pilot-only",
+  "laneId": "H5.100",
+  "agent": "Mega through MCP Orchestrator and Desktop Commander",
+  "gitBaseline": "c2058e4e682d9e7e5ecfab8ede06c5b5f7989af8",
+  "startedAt": "2026-07-15T00:32:05Z",
+  "completedAt": "2026-07-15T00:32:05Z",
+  "sourcePath": "assets/academy/materials/source/h5-100",
+  "sourceSha256": "6b14f8f91a38bcee4c9d2ca163ca5d4473b1fb3a91832894b69b00d7b11ade3b",
+  "inputManifests": [
+    "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+    "manifests/academy/games/potion-sorter/lineage/academy.potion-sorter.regions.json",
+    "manifests/academy/tooling/organization/academy.manifest-maturity-index.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
+      "sha256": "b8b60384a342c2827b27f49e6371a4c4eddf1a33d8f71119cba937db2b0fe97d"
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+      "sha256": "c655cdb855a9d0a2f503ab4ec66d5be46b7af6e129093496ca45ea61552e1e92"
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+      "sha256": "b369886027f730b1a8c1ee6d87ec87279f6c6dd724bbc056ddfd4ed718258540"
+    },
+    {
+      "path": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_100_POTION_SORTER_TEXTURE_MATERIAL_INTAKE_AND_PROVENANCE.md",
+      "sha256": "0287aa4c5af8c4dc0f822fae0b9d14677a41fbed63ba0356fc911cd0deab068c"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/README.md",
+      "sha256": "ac51cab41f08cb1b505fadb3039fb5bfd24c21e996b577680ba6e70b31e1a8ff"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-image-and-hash-audit.json",
+      "sha256": "79782194828d5597aca3eff19862c37c9351342f8912fd175d50b73a7b06bf83"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/generate_h5_100_evidence.py",
+      "sha256": "7725326d33544f8ade530a08e583da856088b5f8f4ce8d95732ccf4e1874faa2"
+    },
+    {
+      "path": "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+      "sha256": "704d1b298e80ad36ab47f403079d74aeb214a069440897dacdb4ad539aaf4b7d"
+    },
+    {
+      "path": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+      "sha256": "8c39cbb3ef51ce493ec6624b973fe4ed1c004767dd6b578415bd37b30dd640ca"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "8428bd5972392fcb52ba39a7c664f70dfbdd705ab46a7e7a749b015fb880a924"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validate_h5_100_intake.py",
+      "sha256": "8efdd6cf781d5c012f9a7f405d4d278c6f929e2990251ff9e1c27107b5782193"
+    }
+  ],
+  "evidenceFiles": [
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/candidate-defer-reject-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/core-material-palette-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-aged-brass-bronze-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-dark-iron-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-fx-helpers-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-grime-wear-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-parchment-paper-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-rough-stone-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-structural-wood-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/material-to-future-scenerig-mapping-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/provenance-status-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/README.md",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/ambientcg-candidate-research-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks089-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks100-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/dark-iron-replacement-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/kenney-fx-candidate-research-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Leaking006-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal008-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal019-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal046B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal053C-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal055B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal063-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper004-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper006-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/SurfaceImperfections015-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodFloor065B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodSiding008-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-image-and-hash-audit.json",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-inventory-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/support-material-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validation-report.json"
+  ],
+  "outputFileHashes": [
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json",
+      "sha256": "b8b60384a342c2827b27f49e6371a4c4eddf1a33d8f71119cba937db2b0fe97d"
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+      "sha256": "c655cdb855a9d0a2f503ab4ec66d5be46b7af6e129093496ca45ea61552e1e92"
+    },
+    {
+      "path": "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+      "sha256": "b369886027f730b1a8c1ee6d87ec87279f6c6dd724bbc056ddfd4ed718258540"
+    },
+    {
+      "path": "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_100_POTION_SORTER_TEXTURE_MATERIAL_INTAKE_AND_PROVENANCE.md",
+      "sha256": "0287aa4c5af8c4dc0f822fae0b9d14677a41fbed63ba0356fc911cd0deab068c"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/README.md",
+      "sha256": "ac51cab41f08cb1b505fadb3039fb5bfd24c21e996b577680ba6e70b31e1a8ff"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-image-and-hash-audit.json",
+      "sha256": "79782194828d5597aca3eff19862c37c9351342f8912fd175d50b73a7b06bf83"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/generate_h5_100_evidence.py",
+      "sha256": "7725326d33544f8ade530a08e583da856088b5f8f4ce8d95732ccf4e1874faa2"
+    },
+    {
+      "path": "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+      "sha256": "704d1b298e80ad36ab47f403079d74aeb214a069440897dacdb4ad539aaf4b7d"
+    },
+    {
+      "path": "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+      "sha256": "8c39cbb3ef51ce493ec6624b973fe4ed1c004767dd6b578415bd37b30dd640ca"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "8428bd5972392fcb52ba39a7c664f70dfbdd705ab46a7e7a749b015fb880a924"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validate_h5_100_intake.py",
+      "sha256": "8efdd6cf781d5c012f9a7f405d4d278c6f929e2990251ff9e1c27107b5782193"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/candidate-defer-reject-table.jpg",
+      "sha256": "372cb5b750360d20d492ff730f7db42c811f89115e9ac554e78835a84a02a042"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/core-material-palette-overview.jpg",
+      "sha256": "19e30ab2860328cbddc675ee04dfaa94f6bdd9eaa426397e977c8b4b2d4320a0"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-aged-brass-bronze-contact-sheet.jpg",
+      "sha256": "694feb8bd474063474c8838d3245e3145b36fd3764fd6facee8033bebd104ad7"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-dark-iron-contact-sheet.jpg",
+      "sha256": "9eb2a618d36de0b97f583e05c4f509df3be2aa05531746f367b4487e5318ced6"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-fx-helpers-contact-sheet.jpg",
+      "sha256": "a4d087e14379598a3b6876fabe91f379796bf8a0ad29b351204abe997f6abbc4"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-grime-wear-contact-sheet.jpg",
+      "sha256": "4aa7151a42127a69771c6dc733176d7fc37dd88e7f0caaee0b6de1ca63fe37af"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-parchment-paper-contact-sheet.jpg",
+      "sha256": "59e4941053cdcb62d334c77739baca5314a8e842c853587cf54d67cf8965a8d2"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-rough-stone-contact-sheet.jpg",
+      "sha256": "99e033e35bbfec1293c55e15bcacfd28035ff0f46b477e8528f3eeff375b7f9d"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-structural-wood-contact-sheet.jpg",
+      "sha256": "e392ce3e6ee91a4ff9bc5fae2a13c6b3522e9de62600640a222ef8d14a639525"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/material-to-future-scenerig-mapping-table.jpg",
+      "sha256": "f2eea3fac6a0e3731afcc4cd2b065b01c83f50a9a25191b532a0b72c076ce37f"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/provenance-status-table.jpg",
+      "sha256": "bb09fafa658b6b85b8ea2b6993ccfbc797e86d871925310e3da0030dc70ce991"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/README.md",
+      "sha256": "ac51cab41f08cb1b505fadb3039fb5bfd24c21e996b577680ba6e70b31e1a8ff"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/ambientcg-candidate-research-contact-sheet.png",
+      "sha256": "cec03e43c5d5cb1c3b1159c065f9f5ede8aa81da84dbcd5dd38f92e0cb5f7524"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks089-official-thumbnail.png",
+      "sha256": "5b825684e942a231a73e1a52524fb1faaff45bafb650b6b147c7b36a9ebaeb89"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks100-official-thumbnail.png",
+      "sha256": "1a3272a1ee01508c50c4381d4fdd15607cc53d4f6895eeaf2b0962021bce5562"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/dark-iron-replacement-contact-sheet.png",
+      "sha256": "8c218603aff79356b3947816fcb54d6cb78243db6a22405e66f22ea091b65ed3"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/kenney-fx-candidate-research-contact-sheet.png",
+      "sha256": "5a019ff2afb3e5d326bf0579a0a4233599d1bc33796783a693faee81dc062ec1"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Leaking006-official-thumbnail.png",
+      "sha256": "8ca72e8c27725d7698fbdcb85e15dd7ccb4e29cc010086a236af9df3bcd9b163"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal008-official-thumbnail.png",
+      "sha256": "6ba7daffbcf9170145ce2ab3175ef3933097d93460ea32d47dec05cf67dd296e"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal019-official-thumbnail.png",
+      "sha256": "5ca8f11949741004bd15a1c6895fd6dc94f5c3ced096dd9c91efe220f086173e"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal046B-official-thumbnail.png",
+      "sha256": "8cd2289dccccbf441694bbdc81941282e907d9ae1c13effab7e6320f3df91b8d"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal053C-official-thumbnail.png",
+      "sha256": "81de7d3ee6d8dc0d75d91004ffd7eb986c55d23b89927a110ba06a8c5ef0bd86"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal055B-official-thumbnail.png",
+      "sha256": "8df20485bb1c063ff8dde1278df7ec85e5385fa0c9050839441f2d06fd569219"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal063-official-thumbnail.png",
+      "sha256": "3a287b3a8131da2e3f2c0756b99c8f8d08f2fbddcc5de17e8363a627fd8c7e65"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper004-official-thumbnail.png",
+      "sha256": "ce91213c04fc493e88d7862f27756e705dd486b9b627c847c37cb306243c3517"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper006-official-thumbnail.png",
+      "sha256": "9f14842424d26c25c341a036ccc9e99bb1f432635c48476c5fe5e5a8b824ac3d"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/SurfaceImperfections015-official-thumbnail.png",
+      "sha256": "7dac6dd209b85ebcc1ebd85fb0cc0023f4a200c87ce94f9545d4a76b5c265ea9"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodFloor065B-official-thumbnail.png",
+      "sha256": "05c8fd6ca9398a6a4a440146a4cebbb1ca268ff62b851033f473d5743fa9643a"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodSiding008-official-thumbnail.png",
+      "sha256": "fa2b8ca48fee45eff64223a0e0549375577cfc9fc1912a840c98ced2143615c7"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-image-and-hash-audit.json",
+      "sha256": "79782194828d5597aca3eff19862c37c9351342f8912fd175d50b73a7b06bf83"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-inventory-overview.jpg",
+      "sha256": "53e6cceae32ee91571b5b5745c5d1fc0aa7e366945b8076f0071942d7a47facc"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/support-material-overview.jpg",
+      "sha256": "6efed533532a2521fe83d7579525c80d6cbc5e334384fc8ae4a798a5fa16057b"
+    },
+    {
+      "path": "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validation-report.json",
+      "sha256": "36e2e02994be61ec8ae4c5c1d44f963f19fcad86cfcebc81fe9ad3e29d823ddd"
+    }
+  ],
+  "validationCommands": [
+    "python assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/generate_h5_100_evidence.py",
+    "python assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validate_h5_100_intake.py",
+    "node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok",
+    "node scripts/validate-academy-asset-manifests.mjs",
+    "node scripts/validate-academy-shared-asset-regions.mjs",
+    "node scripts/validate-academy-manifest.mjs",
+    "node scripts/validate-hub-icons.mjs",
+    "node scripts/asset-pipeline/smoke-check.mjs",
+    "git diff --check"
+  ],
+  "warnings": [
+    "Evidence shows flat source specimens only; no room composition is approved.",
+    "Observed edge-continuity scores are screening measurements, not runtime tiling approval.",
+    "Kenney audition alternates remain extracted for review but only four helpers are shortlisted.",
+    "Glass and potion-liquid treatment remain code-authored H5.101 decisions."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed"
+}

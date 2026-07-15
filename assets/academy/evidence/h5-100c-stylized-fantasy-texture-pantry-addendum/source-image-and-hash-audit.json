@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.100C",
+  "aggregateSha256": "255496001f64affc6774a72379540f3155a533183b9d7307e16bd5b481b9073e",
+  "sourceFiles": [
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/archives/kenney_retro-textures-fantasy.zip",
+      "bytes": 1203276,
+      "sha256": "46f30f2411dafa011f8e52e32d80be197f8ccfe1164818e664358ae6c78a38b9"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_ground_dirt.png",
+      "bytes": 4520,
+      "sha256": "76e138b4a850dead179b70522c34957439439d0d06bbc2dd1aae1f40b0e30795"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_stone_pattern.png",
+      "bytes": 4150,
+      "sha256": "4990dd8c19b69366977485629bb84b895562ca9c18c323d86a966b51265e0e7b"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_stone_pattern_small.png",
+      "bytes": 4396,
+      "sha256": "410849e18545bc24f77ab2c29e60070443191abd88b82d5c58bc8cf66f2918b1"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks.png",
+      "bytes": 4430,
+      "sha256": "56a7ea5713833dcde33e9ac11b3fc524cee7e8d9a195e2f8a42f94c59ac06185"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_damaged.png",
+      "bytes": 4841,
+      "sha256": "a42fb3d2bd65579fc899b089b7ec08581695645dcc1283372466bc11d460cc13"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_wide.png",
+      "bytes": 4187,
+      "sha256": "80d8a9bdb1833da70d44feb568d75b7aab8f546aa01c34aba24c968a82ceb445"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_wide_damaged.png",
+      "bytes": 4562,
+      "sha256": "8a19be19a756798956dd60e5e4701e6e8e6b28cd362f3ff83f2d9b9a460a8e9e"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_brick_stone_center.png",
+      "bytes": 8396,
+      "sha256": "8cef45b1e877ef261f5dac68a5bc09ba678cc764882d0645f5258617da29b200"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_rock.png",
+      "bytes": 8870,
+      "sha256": "5ecf541e1102a4bc0dda941ff5116fa6a424c3f0fd455ce55516167e836fa80b"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_stone.png",
+      "bytes": 8260,
+      "sha256": "009009b4d0a9ce16dda10ed6df8a81456d6992fa32fb834bd08d84b04be35f8c"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber.png",
+      "bytes": 5522,
+      "sha256": "0b3a32e15151ed4b564651ae6ee7255129920f215bf4169cf20e7d2965c3b9d3"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber_structure.png",
+      "bytes": 7150,
+      "sha256": "af81534e154aad57d9f6d9c031c55207006c0b9c0f1c3c92dea82ea0c0b003e4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/license/CC0-1.0-legalcode.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/license/License.txt",
+      "bytes": 714,
+      "sha256": "06181c29335bb6d4238c01984c7ee58d8383ae5a2d6fdcfd3e49154889d016af"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/metal_plates.png",
+      "bytes": 286830,
+      "sha256": "2f19bc3b8868c8739149d2eecc9c1341ed6e18cdb5032f7fd32f8c4dfaae0420"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/ooz_slime.png",
+      "bytes": 229304,
+      "sha256": "f4d5567d543522726b9d6e6acc3ce83073e9a442ae6e4f8970ad2eeaf55f415d"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/wooden.png",
+      "bytes": 389658,
+      "sha256": "385650a45f36b97bef73afff6454310d4d34cfb4ac81046ecae6a4ef3d062d5f"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/license/CC0-1.0-legalcode.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/luke-rustltd-parchment/originals/parchment.png",
+      "bytes": 11905272,
+      "sha256": "1a5864e3549355d83607b0dfd6a2093106b13df0a42227f17cb28bf488ab9207"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/metadata/deadkir-handpainted-tileables.json",
+      "bytes": 1202,
+      "sha256": "0e0c064a5d2f6b565efacc3974f2bfb44d100dd5795ccf9b0b9fca5f2277a272"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/metadata/luke-rustltd-large-parchment.json",
+      "bytes": 677,
+      "sha256": "9d02a7d01183eeadb403234c331cdae27da0a83f2c53d83a33f5e3fa6463ce0a"
+    }
+  ],
+  "images": [
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_ground_dirt.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "76e138b4a850dead179b70522c34957439439d0d06bbc2dd1aae1f40b0e30795"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_stone_pattern.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "4990dd8c19b69366977485629bb84b895562ca9c18c323d86a966b51265e0e7b"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_stone_pattern_small.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "410849e18545bc24f77ab2c29e60070443191abd88b82d5c58bc8cf66f2918b1"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "56a7ea5713833dcde33e9ac11b3fc524cee7e8d9a195e2f8a42f94c59ac06185"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_damaged.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "a42fb3d2bd65579fc899b089b7ec08581695645dcc1283372466bc11d460cc13"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_wide.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "80d8a9bdb1833da70d44feb568d75b7aab8f546aa01c34aba24c968a82ceb445"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/floor_wood_planks_wide_damaged.png",
+      "width": 64,
+      "height": 64,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "8a19be19a756798956dd60e5e4701e6e8e6b28cd362f3ff83f2d9b9a460a8e9e"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_brick_stone_center.png",
+      "width": 64,
+      "height": 128,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "8cef45b1e877ef261f5dac68a5bc09ba678cc764882d0645f5258617da29b200"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_rock.png",
+      "width": 64,
+      "height": 128,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "5ecf541e1102a4bc0dda941ff5116fa6a424c3f0fd455ce55516167e836fa80b"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_stone.png",
+      "width": 64,
+      "height": 128,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "009009b4d0a9ce16dda10ed6df8a81456d6992fa32fb834bd08d84b04be35f8c"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber.png",
+      "width": 64,
+      "height": 128,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "0b3a32e15151ed4b564651ae6ee7255129920f215bf4169cf20e7d2965c3b9d3"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber_structure.png",
+      "width": 64,
+      "height": 128,
+      "format": "PNG",
+      "mode": "P",
+      "sha256": "af81534e154aad57d9f6d9c031c55207006c0b9c0f1c3c92dea82ea0c0b003e4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/metal_plates.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "mode": "RGB",
+      "sha256": "2f19bc3b8868c8739149d2eecc9c1341ed6e18cdb5032f7fd32f8c4dfaae0420"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/ooz_slime.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "mode": "RGB",
+      "sha256": "f4d5567d543522726b9d6e6acc3ce83073e9a442ae6e4f8970ad2eeaf55f415d"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/wooden.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "mode": "RGB",
+      "sha256": "385650a45f36b97bef73afff6454310d4d34cfb4ac81046ecae6a4ef3d062d5f"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100c/opengameart/luke-rustltd-parchment/originals/parchment.png",
+      "width": 1920,
+      "height": 1080,
+      "format": "PNG",
+      "mode": "RGBA",
+      "sha256": "1a5864e3549355d83607b0dfd6a2093106b13df0a42227f17cb28bf488ab9207"
+    }
+  ]
+}

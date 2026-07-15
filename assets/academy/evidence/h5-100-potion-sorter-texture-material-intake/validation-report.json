@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.100",
+  "status": "passed",
+  "baseline": "c2058e4e682d9e7e5ecfab8ede06c5b5f7989af8",
+  "changedPathCount": 84,
+  "changedPaths": [
+    "CHANGELOG.md",
+    "docs/assets/pantry/visual-assets/TINY_GOBLIN_ACADEMY_ASSET_SYSTEM_PLAN.md",
+    "manifests/academy/tooling/organization/academy.manifest-maturity-index.json",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/README.md",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/candidate-defer-reject-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/core-material-palette-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-aged-brass-bronze-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-dark-iron-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-fx-helpers-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-grime-wear-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-parchment-paper-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-rough-stone-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/family-structural-wood-contact-sheet.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/generate_h5_100_evidence.py",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/material-to-future-scenerig-mapping-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/pipeline-run-log.json",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/provenance-status-table.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks089-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Bricks100-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Leaking006-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal008-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal019-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal046B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal053C-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal055B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Metal063-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper004-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/Paper006-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/SurfaceImperfections015-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodFloor065B-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/WoodSiding008-official-thumbnail.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/ambientcg-candidate-research-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/dark-iron-replacement-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/research-previews/kenney-fx-candidate-research-contact-sheet.png",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-image-and-hash-audit.json",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/source-inventory-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/support-material-overview.jpg",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validate_h5_100_intake.py",
+    "assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/validation-report.json",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks089_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks100_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Metal008_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Metal046B_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Metal053C_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/Paper006_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/SurfaceImperfections015_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/WoodFloor065B_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/archives/WoodSiding008_1K-JPG.zip",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Bricks089/Bricks089_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Bricks100/Bricks100_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal008/Metal008_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal046B/Metal046B_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal053C/Metal053C_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/Paper006/Paper006_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/SurfaceImperfections015/SurfaceImperfections015_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/WoodFloor065B/WoodFloor065B_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/extracted-color/WoodSiding008/WoodSiding008_1K-JPG_Color.jpg",
+    "assets/academy/materials/source/h5-100/ambientcg/license/CC0-1.0-legalcode.txt",
+    "assets/academy/materials/source/h5-100/ambientcg/license/ambientcg-license-page.html",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Bricks089-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Bricks100-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Metal008-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Metal046B-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Metal053C-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/Paper006-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/SurfaceImperfections015-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/WoodFloor065B-api-v3.json",
+    "assets/academy/materials/source/h5-100/ambientcg/metadata/WoodSiding008-api-v3.json",
+    "assets/academy/materials/source/h5-100/kenney/archives/kenney_particle-pack.zip",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/dirt_02.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/dirt_03.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/light_01.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/magic_04.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/smoke_03.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/smoke_06.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/spark_01.png",
+    "assets/academy/materials/source/h5-100/kenney/extracted-selected/spark_05.png",
+    "assets/academy/materials/source/h5-100/kenney/license/CC0-1.0-legalcode.txt",
+    "assets/academy/materials/source/h5-100/kenney/license/License.txt",
+    "assets/academy/materials/source/h5-100/kenney/license/kenney-particle-pack-source-page.html",
+    "docs/assets/game-assets/potion-sorter/TINY_GOBLIN_ACADEMY_H5_100_POTION_SORTER_TEXTURE_MATERIAL_INTAKE_AND_PROVENANCE.md",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json",
+    "manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json"
+  ],
+  "jsonFilesParsed": 16,
+  "sourceRecordCount": 17,
+  "archiveCount": 10,
+  "archiveAggregateSha256": "6b14f8f91a38bcee4c9d2ca163ca5d4473b1fb3a91832894b69b00d7b11ade3b",
+  "archives": [
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks089_1K-JPG.zip",
+      "bytes": 5317280,
+      "sha256": "54b2d7bfcd51f36b638a86738b23cb65db7c44304bc1eec23dbbb2989088fd87"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Bricks100_1K-JPG.zip",
+      "bytes": 4827385,
+      "sha256": "46551bf55181bce3ed0d5c56757ed9d89bbf9960d4f22efef18e090b072f6df4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal008_1K-JPG.zip",
+      "bytes": 5205954,
+      "sha256": "d8f6b8492944cfdcb9044016b7a73f2a7e7d8c36009778585bd2f88570ca0ba2"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal046B_1K-JPG.zip",
+      "bytes": 6827203,
+      "sha256": "b4fc855a414f7a1e415af6edaef24c0dc114f7802b3879a3db88e6ba1c97cda0"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Metal053C_1K-JPG.zip",
+      "bytes": 6327290,
+      "sha256": "ca2073be9915e8a6d48ec707d03b068854eff4364f6dd9eec0487895664065a5"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/Paper006_1K-JPG.zip",
+      "bytes": 4754836,
+      "sha256": "cd21850eb598b374f16c4ff2eaf2e22d8b56e0fe0b4b94d83db807a928bfce57"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/SurfaceImperfections015_1K-JPG.zip",
+      "bytes": 8203156,
+      "sha256": "c5e80884a2dbfa155b86aded24444dac186215f477161d1fde1ca305308f6a74"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/WoodFloor065B_1K-JPG.zip",
+      "bytes": 6915059,
+      "sha256": "c6f3037d5a30d5adb3873ac7644a302b9ce0727d518c8ff61cf0fb10c0548bb0"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/ambientcg/archives/WoodSiding008_1K-JPG.zip",
+      "bytes": 6941998,
+      "sha256": "d8bd0c00724eadc5eba0f738b382500d154ed67ba240f7567f6df74887e790b4"
+    },
+    {
+      "path": "assets/academy/materials/source/h5-100/kenney/archives/kenney_particle-pack.zip",
+      "bytes": 15001764,
+      "sha256": "b631d4b07f7002549fdcf155f01141ad482f79f3440e4e301eed49ce5f1d8958"
+    }
+  ],
+  "archiveBytes": 70321925,
+  "sourceShelfBytes": 80612352,
+  "extractedImageCount": 17,
+  "intentionalDuplicateGroups": [
+    [
+      "assets/academy/materials/source/h5-100/kenney/license/CC0-1.0-legalcode.txt",
+      "assets/academy/materials/source/h5-100/ambientcg/license/CC0-1.0-legalcode.txt"
+    ]
+  ],
+  "maturityIndex": {
+    "totalManifestCount": 82,
+    "planningManifestCount": 28,
+    "manifestEntryCount": 83
+  },
+  "scopeChecks": {
+    "runtimePathsChanged": false,
+    "packageOrLockChanged": false,
+    "stagedFiles": false,
+    "outOfScopePaths": []
+  },
+  "checks": [
+    "Git baseline",
+    "unstaged-only state",
+    "changed-path scope",
+    "all changed JSON parses",
+    "human pantry-review boundary",
+    "research-preview evidence-only policy",
+    "archive and extracted-member SHA-256",
+    "license records",
+    "duplicate scan",
+    "dimensions/formats/alpha",
+    "classification parity",
+    "evidence references",
+    "run-log output hashes",
+    "maturity-index consistency",
+    "control-character and mojibake scan"
+  ]
+}

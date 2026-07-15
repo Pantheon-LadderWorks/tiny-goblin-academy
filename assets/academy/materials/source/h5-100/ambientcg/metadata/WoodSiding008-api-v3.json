@@ -1,0 +1,89 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=woodsiding008\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "WoodSiding008",
+                       "type":  "material",
+                       "releaseDate":  "2018-12-12",
+                       "title":  "Wood Siding 008",
+                       "url":  "https://ambientcg.com/a/WoodSiding008",
+                       "tags":  [
+                                    "8",
+                                    "dark",
+                                    "grunge",
+                                    "moss",
+                                    "nails",
+                                    "planks",
+                                    "siding",
+                                    "wall",
+                                    "wood"
+                                ],
+                       "dimensions":  {
+                                          "width":  0,
+                                          "height":  0,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "ambient-occlusion",
+                                    "metalness"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_1K-JPG.zip",
+                                             "size":  6941998
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_2K-JPG.zip",
+                                             "size":  21910270
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_4K-JPG.zip",
+                                             "size":  76698883
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_8K-JPG.zip",
+                                             "size":  301152436
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_1K-PNG.zip",
+                                             "size":  15190147
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_2K-PNG.zip",
+                                             "size":  54164495
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_4K-PNG.zip",
+                                             "size":  202391763
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=WoodSiding008_8K-PNG.zip",
+                                             "size":  786636098
+                                         }
+                                     ]
+                   }
+               ]
+}

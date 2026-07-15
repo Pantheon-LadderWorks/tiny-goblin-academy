@@ -1,0 +1,88 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=bricks089\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "Bricks089",
+                       "type":  "material",
+                       "releaseDate":  "2023-11-17",
+                       "title":  "Bricks 089",
+                       "url":  "https://ambientcg.com/a/Bricks089",
+                       "tags":  [
+                                    "89",
+                                    "brick",
+                                    "bricks",
+                                    "dark",
+                                    "gray",
+                                    "medieval",
+                                    "random",
+                                    "stone",
+                                    "wall"
+                                ],
+                       "dimensions":  {
+                                          "width":  220,
+                                          "height":  110,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "ambient-occlusion"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_1K-JPG.zip",
+                                             "size":  5317280
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_2K-JPG.zip",
+                                             "size":  16445459
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_4K-JPG.zip",
+                                             "size":  59014330
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_8K-JPG.zip",
+                                             "size":  213096530
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_1K-PNG.zip",
+                                             "size":  9888419
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_2K-PNG.zip",
+                                             "size":  34761634
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_4K-PNG.zip",
+                                             "size":  132821693
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Bricks089_8K-PNG.zip",
+                                             "size":  515023118
+                                         }
+                                     ]
+                   }
+               ]
+}

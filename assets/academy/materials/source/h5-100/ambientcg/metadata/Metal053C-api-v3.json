@@ -1,0 +1,85 @@
+{
+    "totalResults":  1,
+    "nextPageHttp":  null,
+    "currentPageHttp":  "https://ambientcg.com/api/v3/assets?id=metal053c\u0026sort=popular\u0026limit=1\u0026include=type%2CreleaseDate%2Ctitle%2Curl%2Ctags%2Cdimensions%2Cmaps%2Cdownloads",
+    "previousPageHttp":  null,
+    "assets":  [
+                   {
+                       "id":  "Metal053C",
+                       "type":  "material",
+                       "releaseDate":  "2024-08-10",
+                       "title":  "Metal 053 C",
+                       "url":  "https://ambientcg.com/a/Metal053C",
+                       "tags":  [
+                                    "53",
+                                    "damaged",
+                                    "iron",
+                                    "metal",
+                                    "old",
+                                    "rusted"
+                                ],
+                       "dimensions":  {
+                                          "width":  0,
+                                          "height":  0,
+                                          "depth":  0
+                                      },
+                       "maps":  [
+                                    "color",
+                                    "displacement",
+                                    "normal",
+                                    "roughness",
+                                    "metalness"
+                                ],
+                       "downloads":  [
+                                         {
+                                             "attributes":  "1K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_1K-JPG.zip",
+                                             "size":  6327290
+                                         },
+                                         {
+                                             "attributes":  "2K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_2K-JPG.zip",
+                                             "size":  17869051
+                                         },
+                                         {
+                                             "attributes":  "4K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_4K-JPG.zip",
+                                             "size":  58416460
+                                         },
+                                         {
+                                             "attributes":  "8K-JPG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_8K-JPG.zip",
+                                             "size":  235754543
+                                         },
+                                         {
+                                             "attributes":  "1K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_1K-PNG.zip",
+                                             "size":  14127822
+                                         },
+                                         {
+                                             "attributes":  "2K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_2K-PNG.zip",
+                                             "size":  49523598
+                                         },
+                                         {
+                                             "attributes":  "4K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_4K-PNG.zip",
+                                             "size":  186781342
+                                         },
+                                         {
+                                             "attributes":  "8K-PNG",
+                                             "extension":  "zip",
+                                             "url":  "https://ambientcg.com/get?file=Metal053C_8K-PNG.zip",
+                                             "size":  753932792
+                                         }
+                                     ]
+                   }
+               ]
+}

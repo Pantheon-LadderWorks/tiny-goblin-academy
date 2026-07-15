@@ -1741,3 +1741,59 @@ H6.4 adds the first selective runtime use of the reviewed shared UI/HUD physical
 Region 5 (`ui-hud.dark-panel.long`) was evaluated and rejected for the live four-card HUD: four natural-aspect instances crowd the actor and encounter-label lanes at narrow width, while one instance cannot represent all four statuses within its reviewed two-slot contract. The HUD remains code-native.
 
 The shared runtime primitive preserves natural aspect ratio, H5.95 percentage slots, protected zones, independent text, and code-native fallback. H6.4A adds material-aware type recipes, a fully readable 160px Region 30 label host, and correct result-over-HUD layering. No nine-slice, stretch, source edit, remap, repaint, gameplay change, package/lock change, or other game integration is approved. Actual Tauri evidence covers the configured `1024×640` minimum content contract and the `1920×1080` primary display under `games/tier-1/01-button-goblin-clicker/evidence/h6-4-button-goblin-shared-host-surface-runtime/`. Human visual review remains the gate; H6.4A is unstaged.
+
+
+## H5.100 Potion Sorter Texture Material Source Pantry Note
+
+H5.100 establishes the Academy's first reusable texture/material **source pantry** for a future code-authored Potion Sorter medieval alchemy production room.
+
+The source shelf is:
+
+```text
+assets/academy/materials/source/h5-100/
+```
+
+The evidence shelf is:
+
+```text
+assets/academy/evidence/h5-100-potion-sorter-texture-material-intake/
+```
+
+The current H5.100 planning records are:
+
+```text
+manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-source-intake-h5-100.json
+manifests/academy/games/potion-sorter/planning/academy.potion-sorter.texture-material-provenance-h5-100.json
+manifests/academy/games/potion-sorter/planning/academy.potion-sorter.material-classification-h5-100.json
+```
+
+H5.100 preserves original downloaded archives unchanged. For ambientCG material candidates, only the 1K color/albedo map is extracted into the review layer; normal, roughness, metallic, displacement, and other advanced maps remain sealed in the original archive and are not approved by this lane. Kenney Particle Pack sources remain preserved as one original archive while only a bounded transparent-PNG audition set is extracted.
+
+Human review approves the provenance-clean ambientCG and Kenney source families, including useful retained alternatives, for the reusable GlyphForge texture/material pantry. This is pantry acceptance, not mandatory Potion Sorter use and not runtime approval. Official thumbnails and research contact sheets remain evidence-only. Potion Sorter's active palette remains provisional until H5.101 neutral-specimen audition.
+
+The provisional H5.101 neutral-specimen shortlist is:
+
+```text
+wood: WoodSiding008
+stone: Bricks089
+dark iron: Metal046B
+brass/bronze: Metal008
+parchment: Paper006
+grime/wear: SurfaceImperfections015
+steam/smoke: smoke_06.png
+dust: dirt_02.png
+sparks: spark_01.png
+glow/noise: light_01.png
+```
+
+`Metal053C` remains a rust-heavy iron alternate. No external glass texture or potion-liquid texture is promoted; H5.101 should audition code-authored transparency, color, alpha, and glow treatment on neutral bottle/liquid specimens.
+
+This is source-intake and planning authority only. It does not approve Potion Sorter runtime textures, SceneRig composition, room construction, shaders/PBR, particle implementation, a flattened room background, runtime registry entries, or any gameplay/runtime change. H5.101 human-reviewed neutral specimens remain required before H6 can bind materials into the room and conveyor SceneRig.
+
+## H5.100C Stylized Fantasy Pantry Addendum Note
+
+H5.100C preserves H5.100 unchanged and adds a second source shelf at `assets/academy/materials/source/h5-100c/`. The addendum accepts Kenney Retro Textures Fantasy for primary fantasy timber and chunky masonry, DeadKir's hand-painted tileables for dark iron, a timber alternate, and magical ooze, and Luke.RUSTLTD's large parchment for illustrated paper identity. Original files, licenses, metadata, hashes, selected extractions, and evidence are preserved under the H5.100C source and evidence shelves.
+
+The intended strategy is now explicit: stylized sources establish the room's primary visual identity; realistic H5.100 materials supply restrained grain, wear, and material truth; Academy-authored stains, soot, rivets, edges, crooked goblin wear, and alchemical accents complete the later composition. Metal008 is an intentional exception with a positive job: small brass gears, valve rims, fasteners, and mechanism focal points may use its realistic material response to create warm contrast and pop, but broad photographic brass coverage must not take over the scene.
+
+No stylized brass source is falsely promoted. Quaternius model-first packs, Kenney Modular Dungeon palette atlases, rendered previews, and overlapping audition sources remain deferred or rejected as recorded. H5.100C adds no runtime selection, room, SceneRig, shader, derived recolor, material binding, or gameplay change. H5.101 neutral-specimen review remains the next gate.
