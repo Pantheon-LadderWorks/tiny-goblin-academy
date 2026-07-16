@@ -1,0 +1,36 @@
+{
+  "laneId": "H5.102",
+  "proof": "pointer click outside visible bounds and inside interaction bounds",
+  "clickPoint": {
+    "x": 600,
+    "y": 250
+  },
+  "visibleBounds": {
+    "x": 731,
+    "y": 280,
+    "w": 138,
+    "h": 330
+  },
+  "interactionBounds": {
+    "x": 540,
+    "y": 235,
+    "w": 360,
+    "h": 430
+  },
+  "maskBounds": {
+    "x": 690,
+    "y": 350,
+    "w": 220,
+    "h": 260
+  },
+  "sortingDropBounds": {
+    "x": 925,
+    "y": 485,
+    "w": 230,
+    "h": 130
+  },
+  "insideInteractionBounds": true,
+  "insideVisibleBounds": false,
+  "browserEventObserved": true,
+  "passed": true
+}

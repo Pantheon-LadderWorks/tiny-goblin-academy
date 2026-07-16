@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.102",
+  "reviewCycle": "H5.102A",
+  "status": "reviewed-runtime-preparation-approved",
+  "humanReviewVerdict": {
+    "status": "passed",
+    "scope": "runtime-preparation-only",
+    "runtimeAssetsApproved": false,
+    "h6SceneRigPreviewReady": true
+  },
+  "scope": "evidence-harness-not-potion-sorter-runtime",
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApproved": false,
+  "phaserVersion": "4.2.0",
+  "cleanedSpriteSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+  "inventoryLayoutPolicy": {
+    "primaryColumns": 4,
+    "minimumColumns": 2,
+    "minimumRoleFontPx": 18,
+    "minimumCapturedRoleFontPxAt1024": 11.52,
+    "minimumPlates": 2,
+    "requiredChecks": [
+      "text-overflow",
+      "card-content-collision",
+      "title-image-overlap",
+      "title-badge-overlap",
+      "minimum-font-size"
+    ]
+  },
+  "demonstrations": [
+    {
+      "id": "conveyor-cradle",
+      "method": "depth-layering",
+      "maskUsed": false,
+      "skin": "potion-sorter.red-round-potion-bottle"
+    },
+    {
+      "id": "foreground-rail",
+      "method": "depth-layering",
+      "maskUsed": false,
+      "skin": "potion-sorter.blue-tall-vial"
+    },
+    {
+      "id": "three-color-single-destination-receivers",
+      "method": "geometry-mask",
+      "maskUsed": true,
+      "presentationMaskVisible": false,
+      "holderSkins": [
+        "potion-sorter.red-sorter-slot",
+        "potion-sorter.blue-sorter-slot",
+        "potion-sorter.green-sorter-slot"
+      ],
+      "states": [
+        "approach",
+        "partial",
+        "accepted"
+      ],
+      "forbiddenHolderSkin": "potion-sorter.sorting-bin-labeled"
+    },
+    {
+      "id": "machine-aperture",
+      "method": "geometry-mask",
+      "maskUsed": true,
+      "presentationMaskVisible": false,
+      "skin": "potion-sorter.purple-square-potion",
+      "states": [
+        "approach",
+        "partial",
+        "exit"
+      ],
+      "interactionBoundsIndependent": true
+    },
+    {
+      "id": "irregular-opening-assessment",
+      "method": "geometry-mask-with-painted-foreground",
+      "maskUsed": true,
+      "alphaMaskUsed": false,
+      "holderSkin": "potion-sorter.red-sorter-slot"
+    },
+    {
+      "id": "interaction-bounds",
+      "method": "independent-bounds",
+      "pointerProbeRequired": true,
+      "skin": "potion-sorter.blue-tall-vial"
+    }
+  ],
+  "evidenceSheets": [
+    {
+      "id": "materials",
+      "file": "01-runtime-prepared-material-inventory.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/01-runtime-prepared-material-inventory.png"
+    },
+    {
+      "id": "materials-min-1",
+      "file": "01a-material-inventory-1024x640-plate-1.png",
+      "size": [
+        1024,
+        640
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/01a-material-inventory-1024x640-plate-1.png"
+    },
+    {
+      "id": "materials-min-2",
+      "file": "01b-material-inventory-1024x640-plate-2.png",
+      "size": [
+        1024,
+        640
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/01b-material-inventory-1024x640-plate-2.png"
+    },
+    {
+      "id": "skins",
+      "file": "02-potion-prop-skin-inventory.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/02-potion-prop-skin-inventory.png"
+    },
+    {
+      "id": "diagram",
+      "file": "03-layering-first-containment-diagram.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/03-layering-first-containment-diagram.png"
+    },
+    {
+      "id": "cradle",
+      "file": "04-conveyor-cradle-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/04-conveyor-cradle-proof.png"
+    },
+    {
+      "id": "rail",
+      "file": "05-foreground-rail-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/05-foreground-rail-proof.png"
+    },
+    {
+      "id": "bin",
+      "file": "06-deep-containment-three-state-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/06-deep-containment-three-state-proof.png"
+    },
+    {
+      "id": "aperture",
+      "file": "07-machine-aperture-three-state-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/07-machine-aperture-three-state-proof.png"
+    },
+    {
+      "id": "bounds",
+      "file": "08-interaction-bounds-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/08-interaction-bounds-proof.png"
+    },
+    {
+      "id": "irregular",
+      "file": "09-irregular-opening-mask-verdict.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/09-irregular-opening-mask-verdict.png"
+    },
+    {
+      "id": "binding",
+      "file": "10-material-binding-proof.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/10-material-binding-proof.png"
+    },
+    {
+      "id": "harness",
+      "file": "11-harness-1920x1080.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/11-harness-1920x1080.png"
+    },
+    {
+      "id": "harness",
+      "file": "12-harness-1024x640.png",
+      "size": [
+        1024,
+        640
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/12-harness-1024x640.png"
+    },
+    {
+      "id": "verdicts",
+      "file": "13-runtime-preparation-verdicts.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/13-runtime-preparation-verdicts.png"
+    },
+    {
+      "id": "rejected",
+      "file": "14-rejected-deferred-containment.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/14-rejected-deferred-containment.png"
+    },
+    {
+      "id": "destinations",
+      "file": "15-three-color-destination-containment-board.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/15-three-color-destination-containment-board.png"
+    },
+    {
+      "id": "deep-debug",
+      "file": "16-deep-containment-presentation-debug.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/16-deep-containment-presentation-debug.png"
+    },
+    {
+      "id": "aperture-debug",
+      "file": "17-machine-aperture-three-state-debug.png",
+      "size": [
+        1600,
+        900
+      ],
+      "path": "assets/academy/evidence/h5-102-potion-sorter-runtime-material-containment-preparation/captures/17-machine-aperture-three-state-debug.png"
+    }
+  ]
+}

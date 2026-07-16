@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.102",
+  "reviewCycle": "H5.102A",
+  "status": "reviewed-runtime-preparation-approved",
+  "humanReviewVerdict": {
+    "status": "passed",
+    "scope": "runtime-preparation-only",
+    "runtimeAssetsApproved": false,
+    "h6SceneRigPreviewReady": true
+  },
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApproved": false,
+  "doctrine": "The rig defines movement and scene participation; the skin defines illustrated identity.",
+  "methodHierarchy": [
+    "depth-layering",
+    "geometry-mask",
+    "alpha-mask-only-if-required"
+  ],
+  "PotionActorRig": {
+    "owns": [
+      "visual-skin",
+      "anchor-state",
+      "scale",
+      "depth",
+      "lighting-tint",
+      "hover-active-sorted-error-presentation",
+      "optional-glow-fx-sockets",
+      "presentation-bounds",
+      "interaction-bounds-reference"
+    ],
+    "doesNotOwn": [
+      "queue-truth",
+      "potion-classification-truth",
+      "scoring",
+      "sorting-decisions",
+      "simulation-state"
+    ]
+  },
+  "PotionHolderRig": {
+    "owns": [
+      "back-plate",
+      "potion-anchor",
+      "optional-local-clip-geometry",
+      "foreground-rim-lip-rail",
+      "label-anchor",
+      "feedback-fx-anchor",
+      "visible-bounds",
+      "mask-bounds",
+      "interaction-bounds",
+      "sorting-drop-bounds"
+    ],
+    "doesNotOwn": [
+      "potion-classification-truth",
+      "sorting-decision",
+      "score-change",
+      "simulation-state"
+    ]
+  },
+  "boundsSeparation": {
+    "visibleBounds": "renderer-presentation-extent",
+    "maskBounds": "holder-local-clip-extent",
+    "interactionBounds": "generous-pointer-drag-extent",
+    "sortingDropBounds": "controller-owned-resolution-extent"
+  },
+  "rules": [
+    "Foreground occlusion is not automatically a mask.",
+    "Potion source pixels remain unmodified.",
+    "Masks belong to holder or station rigs and transform with them.",
+    "Mask bounds never silently become interaction bounds.",
+    "Partially hidden bottles retain generous interaction bounds.",
+    "Sorting and drop regions remain simulation or controller owned."
+  ],
+  "irregularOpeningVerdict": {
+    "testedSkin": "potion-sorter.red-sorter-slot",
+    "foregroundLayeringEnoughForShallowSeat": true,
+    "geometryMaskEnoughForDeepEntry": true,
+    "alphaMaskRequired": false,
+    "reason": "The accepted painted opening is visually irregular, but its functional interior is adequately represented by holder-local rounded geometry plus the painted foreground frame."
+  },
+  "primaryDeepContainmentProof": {
+    "holderType": "bounded-single-color-destination-receiving-rig",
+    "forbiddenPrimaryProp": "potion-sorter.sorting-bin-labeled",
+    "destinationFaceplates": [
+      "potion-sorter.red-sorter-slot",
+      "potion-sorter.blue-sorter-slot",
+      "potion-sorter.green-sorter-slot"
+    ],
+    "states": [
+      "approach",
+      "partial",
+      "accepted"
+    ],
+    "presentationMaskVisible": false,
+    "debugContourSeparate": true
+  }
+}

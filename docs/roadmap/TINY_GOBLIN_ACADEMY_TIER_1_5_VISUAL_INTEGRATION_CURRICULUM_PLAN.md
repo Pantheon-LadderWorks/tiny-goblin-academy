@@ -58,7 +58,7 @@ Every visual integration pass must:
 | Level | Game | Primary new discipline | New acquisition category | Previously learned systems reused | Status |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Button Goblin Clicker | Code-authored ActorRig, material typography, and selective physical UI surfaces | Local open fonts and modular actor/UI presentation ingredients | Cleaned sprite regions, scene anchors, responsive shell composition | Completed and documented |
-| 2 | Potion Sorter | SceneRig and layered material composition | Stylized and realistic textures, material surfaces, grime, parchment, glass-support ingredients | Typography, physical UI surfaces, actor/prop placement | H5.101 approved; H5.102 runtime preparation ready |
+| 2 | Potion Sorter | SceneRig and layered material composition | Stylized and realistic textures, material surfaces, grime, parchment, glass-support ingredients | Typography, physical UI surfaces, actor/prop placement | H5.102A human review passed; preview-only H6 SceneRig ready |
 | 3 | Dice Duel Tavern | Procedural motion choreography and readable interaction feedback | Dice faces, action glyphs, cursors, and input prompts | Typography, SceneRig layering, restrained material treatment | Planned |
 | 4 | Card Goblin Duel | Authored particle/VFX recipes synchronized to gameplay events | Particle sprites, glows, impacts, trails, card ornament, and repeatable patterns | Motion choreography, typography, physical card/UI surfaces | Planned |
 | 5 | Dungeon Key Run | Spatial readability through masks, lighting, occlusion, and decals | Light/shadow overlays, cracks, soot, tracks, danger marks, and navigation decals | Particles for restrained pickup/impact feedback, motion, materials | Planned |
@@ -118,7 +118,7 @@ Potion Sorter teaches material selection, tiling, scaling, tinting, masks, layer
 
 ### Current gate
 
-H5.101 auditioned the accepted pantry on neutral code-authored specimens and passed human review. Its approved preparation direction uses stylized materials for primary identity and realistic textures only for restrained support, including Metal008 brass as a small focal accent. H5.102 runtime material and containment preparation is ready; no recipe is runtime-approved, and the SceneRig remains separately gated.
+H5.101 auditioned the accepted pantry on neutral code-authored specimens and passed human review. H5.102A preserves the provisionally accepted preparation architecture while correcting inventory readability, destination selection, bottle seating, presentation/debug separation, and transition evidence. The corrected evidence-only Phaser harness uses regions 17–19 for single-color receivers and proves synchronized local containment without region 23 as the primary holder. Human review passed runtime preparation only; no recipe or skin is runtime-approved, and the room/conveyor SceneRig remains a separately bounded preview-only H6 implementation.
 
 ## Level 3 — Dice Duel Tavern
 

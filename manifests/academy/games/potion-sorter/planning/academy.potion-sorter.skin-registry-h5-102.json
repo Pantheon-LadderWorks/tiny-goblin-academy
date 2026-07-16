@@ -1,0 +1,1113 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H5.102",
+  "reviewCycle": "H5.102A",
+  "status": "reviewed-runtime-preparation-approved",
+  "reviewStatus": "human-review-passed",
+  "humanReviewVerdict": {
+    "status": "passed",
+    "scope": "runtime-preparation-only",
+    "runtimeAssetsApproved": false,
+    "h6SceneRigPreviewReady": true
+  },
+  "runtimeEligibility": "not-runtime-approved",
+  "runtimeApproved": false,
+  "authorityManifest": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
+  "humanReviewAuthority": "H5.49",
+  "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+  "cleanedSheet": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+  "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+  "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+  "acceptedPreparedCount": 30,
+  "deniedReferenceCount": 2,
+  "skins": [
+    {
+      "index": 1,
+      "sourceRegionId": "potion-sorter.red-round-potion-bottle",
+      "label": "Red round potion bottle",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 45,
+        "y": 29,
+        "w": 146,
+        "h": 191
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 146,
+        "h": 191
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "core-classification-potion-skin",
+      "runtimePreparationStatus": "initial-prepared-default",
+      "runtimeApproved": false
+    },
+    {
+      "index": 2,
+      "sourceRegionId": "potion-sorter.blue-tall-vial",
+      "label": "Blue tall vial",
+      "category": "vial",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 271,
+        "y": 29,
+        "w": 115,
+        "h": 191
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 115,
+        "h": 191
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "core-classification-potion-skin",
+      "runtimePreparationStatus": "initial-prepared-default",
+      "runtimeApproved": false
+    },
+    {
+      "index": 3,
+      "sourceRegionId": "potion-sorter.green-round-potion-bottle",
+      "label": "Green round potion bottle",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 466,
+        "y": 29,
+        "w": 142,
+        "h": 191
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 142,
+        "h": 191
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "core-classification-potion-skin",
+      "runtimePreparationStatus": "initial-prepared-default",
+      "runtimeApproved": false
+    },
+    {
+      "index": 4,
+      "sourceRegionId": "potion-sorter.hourglass-potion-timer",
+      "label": "Hourglass potion timer",
+      "category": "sorter-token",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 679,
+        "y": 29,
+        "w": 135,
+        "h": 193
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 135,
+        "h": 193
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "round-timer-prop-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 5,
+      "sourceRegionId": "potion-sorter.purple-square-potion",
+      "label": "Purple square potion bottle",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 884,
+        "y": 29,
+        "w": 145,
+        "h": 191
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 145,
+        "h": 191
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 6,
+      "sourceRegionId": "potion-sorter.teal-flask",
+      "label": "Teal flask",
+      "category": "flask",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1083,
+        "y": 29,
+        "w": 166,
+        "h": 186
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 166,
+        "h": 186
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 7,
+      "sourceRegionId": "potion-sorter.broken-spilled-purple-potion",
+      "label": "Broken spilled purple potion",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1288,
+        "y": 34,
+        "w": 183,
+        "h": 187
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 183,
+        "h": 187
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 8,
+      "sourceRegionId": "potion-sorter.mystery-question-bottle",
+      "label": "Mystery question bottle",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1513,
+        "y": 29,
+        "w": 139,
+        "h": 193
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 139,
+        "h": 193
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 9,
+      "sourceRegionId": "potion-sorter.glowing-green-potion",
+      "label": "Glowing green potion",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 19,
+        "y": 229,
+        "w": 193,
+        "h": 229
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 193,
+        "h": 229
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "hard-denied",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 denied. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "denied-guardrail-only",
+      "runtimePreparationStatus": "denied-reference-only",
+      "runtimeApproved": false
+    },
+    {
+      "index": 10,
+      "sourceRegionId": "potion-sorter.bubbling-smoke-potion",
+      "label": "Bubbling smoke potion",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 247,
+        "y": 229,
+        "w": 169,
+        "h": 229
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 169,
+        "h": 229
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 11,
+      "sourceRegionId": "potion-sorter.empty-glass-bottle",
+      "label": "Empty glass bottle",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 466,
+        "y": 265,
+        "w": 140,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 140,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 12,
+      "sourceRegionId": "potion-sorter.cork-stopper",
+      "label": "Cork stopper",
+      "category": "cork",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 685,
+        "y": 285,
+        "w": 121,
+        "h": 127
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 121,
+        "h": 127
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "potion-accessory-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 13,
+      "sourceRegionId": "potion-sorter.spilled-green-flask",
+      "label": "Spilled green flask",
+      "category": "potion-liquid",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 850,
+        "y": 253,
+        "w": 211,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 211,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 14,
+      "sourceRegionId": "potion-sorter.gold-sparkle-potion",
+      "label": "Gold sparkle potion",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1079,
+        "y": 241,
+        "w": 181,
+        "h": 212
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 181,
+        "h": 212
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "hard-denied",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 denied. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "denied-guardrail-only",
+      "runtimePreparationStatus": "denied-reference-only",
+      "runtimeApproved": false
+    },
+    {
+      "index": 15,
+      "sourceRegionId": "potion-sorter.cracked-purple-potion",
+      "label": "Cracked purple potion",
+      "category": "potion-bottle",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1302,
+        "y": 247,
+        "w": 145,
+        "h": 199
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 145,
+        "h": 199
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "bottom-center-liquid-vessel",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.92
+      },
+      "interactionRecommendation": "generous independent actor bounds",
+      "likelyDepthLayer": "potion-actor",
+      "containmentCompatibility": "layering-and-local-geometry-mask",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "alternate-potion-skin",
+      "runtimePreparationStatus": "prepared-alternate",
+      "runtimeApproved": false
+    },
+    {
+      "index": 16,
+      "sourceRegionId": "potion-sorter.red-award-potion-medal",
+      "label": "Red award potion medal",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1507,
+        "y": 241,
+        "w": 151,
+        "h": 199
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 151,
+        "h": 199
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 17,
+      "sourceRegionId": "potion-sorter.red-sorter-slot",
+      "label": "Red sorter slot",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 24,
+        "y": 482,
+        "w": 187,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 187,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "red-destination-station-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 18,
+      "sourceRegionId": "potion-sorter.blue-sorter-slot",
+      "label": "Blue sorter slot",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 234,
+        "y": 482,
+        "w": 187,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 187,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "blue-destination-station-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 19,
+      "sourceRegionId": "potion-sorter.green-sorter-slot",
+      "label": "Green sorter slot",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 443,
+        "y": 482,
+        "w": 187,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 187,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "green-destination-station-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 20,
+      "sourceRegionId": "potion-sorter.wood-sorter-slot",
+      "label": "Wood sorter slot",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 651,
+        "y": 482,
+        "w": 187,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 187,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "neutral-holder-station-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 21,
+      "sourceRegionId": "potion-sorter.potion-crate",
+      "label": "Potion crate",
+      "category": "background-prop",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 856,
+        "y": 476,
+        "w": 199,
+        "h": 199
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 199,
+        "h": 199
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "queue-source-prop-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 22,
+      "sourceRegionId": "potion-sorter.alchemy-tray-labeled",
+      "label": "Alchemy tray",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1061,
+        "y": 482,
+        "w": 211,
+        "h": 169
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 211,
+        "h": 169
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "conveyor-cradle-prop-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 23,
+      "sourceRegionId": "potion-sorter.sorting-bin-labeled",
+      "label": "Sorting bin",
+      "category": "sorter-slot",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1272,
+        "y": 488,
+        "w": 211,
+        "h": 157
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 211,
+        "h": 157
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "independent station drop bounds",
+      "likelyDepthLayer": "station-surface",
+      "containmentCompatibility": "candidate-holder-surface",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "deep-sorting-bin-prop-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 24,
+      "sourceRegionId": "potion-sorter.round-complete-chest-labeled",
+      "label": "Round-complete chest",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1483,
+        "y": 482,
+        "w": 205,
+        "h": 160
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 205,
+        "h": 160
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "round-complete-prop-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 25,
+      "sourceRegionId": "potion-sorter.success-check-sparkle",
+      "label": "Success check sparkle",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 30,
+        "y": 711,
+        "w": 175,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 175,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "success-feedback-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 26,
+      "sourceRegionId": "potion-sorter.failure-x-smoke",
+      "label": "Failure X smoke",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 247,
+        "y": 711,
+        "w": 181,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 181,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "failure-feedback-skin",
+      "runtimePreparationStatus": "initial-prepared-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 27,
+      "sourceRegionId": "potion-sorter.blue-fire-icon",
+      "label": "Blue fire icon",
+      "category": "fx-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 461,
+        "y": 711,
+        "w": 151,
+        "h": 187
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 151,
+        "h": 187
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 28,
+      "sourceRegionId": "potion-sorter.small-hourglass-icon",
+      "label": "Small hourglass icon",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 675,
+        "y": 711,
+        "w": 139,
+        "h": 193
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 139,
+        "h": 193
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 29,
+      "sourceRegionId": "potion-sorter.potion-coin-token",
+      "label": "Potion coin token",
+      "category": "ui-token",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 862,
+        "y": 711,
+        "w": 187,
+        "h": 181
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 187,
+        "h": 181
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 30,
+      "sourceRegionId": "potion-sorter.star-x3-reward",
+      "label": "Star x3 reward",
+      "category": "ui-token",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1073,
+        "y": 711,
+        "w": 193,
+        "h": 187
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 193,
+        "h": 187
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 31,
+      "sourceRegionId": "potion-sorter.gold-potion-badge",
+      "label": "Gold potion badge",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1296,
+        "y": 711,
+        "w": 169,
+        "h": 193
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 169,
+        "h": 193
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "bounded-cleanup-risk",
+      "edgeRiskNotes": "H5.48C medium-high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    },
+    {
+      "index": 32,
+      "sourceRegionId": "potion-sorter.cracked-potion-fail-badge",
+      "label": "Cracked potion fail badge",
+      "category": "status-icon",
+      "cleanedAssetPath": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+      "frameRect": {
+        "x": 1501,
+        "y": 711,
+        "w": 169,
+        "h": 193
+      },
+      "sourceSheet": "assets/academy/games/potion-sorter/tga-potion-sorter-sheet-regenerated-v0.2.png",
+      "sourceHash": "39691c068b0a5bef5f4da0169e1eb9caaac75fe2755af6fba51e1e6626917e3b",
+      "cleanupHash": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+      "dimensions": {
+        "w": 169,
+        "h": 193
+      },
+      "alphaStatus": "true-alpha-transparent-to-opaque",
+      "visualPivot": "visual-center",
+      "defaultAnchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "interactionRecommendation": "presentation-only unless later contract promotes interaction",
+      "likelyDepthLayer": "feedback-overlay",
+      "containmentCompatibility": "not-a-container",
+      "glowHaloRisk": "high-review-risk",
+      "edgeRiskNotes": "H5.48C high cleanup risk; H5.49 accepted for draft preparation. Preserve alpha and inspect at runtime scale.",
+      "initialSceneRigRole": "optional-feedback-or-token-skin",
+      "runtimePreparationStatus": "prepared-optional-prop",
+      "runtimeApproved": false
+    }
+  ]
+}

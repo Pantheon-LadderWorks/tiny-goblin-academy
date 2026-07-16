@@ -1,0 +1,45 @@
+{
+  "laneId": "H5.102A",
+  "passed": true,
+  "proofs": [
+    {
+      "sheet": "materials",
+      "file": "01-runtime-prepared-material-inventory.png",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "layout": "four-column-primary",
+      "minimumFontSize": 18,
+      "cardCount": 18,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "sheet": "materials-min-1",
+      "file": "01a-material-inventory-1024x640-plate-1.png",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "layout": "minimum-plate-1",
+      "minimumFontSize": 18,
+      "cardCount": 9,
+      "failures": [],
+      "passed": true
+    },
+    {
+      "sheet": "materials-min-2",
+      "file": "01b-material-inventory-1024x640-plate-2.png",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "layout": "minimum-plate-2",
+      "minimumFontSize": 18,
+      "cardCount": 9,
+      "failures": [],
+      "passed": true
+    }
+  ]
+}

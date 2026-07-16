@@ -1,0 +1,433 @@
+{
+  "laneId": "H5.102",
+  "passed": true,
+  "checkCount": 85,
+  "failed": [],
+  "checks": [
+    {
+      "name": "required file: README.md",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\README.md"
+    },
+    {
+      "name": "required file: index.html",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\index.html"
+    },
+    {
+      "name": "required file: styles.css",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\styles.css"
+    },
+    {
+      "name": "required file: app.js",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\app.js"
+    },
+    {
+      "name": "required file: prepared.generated.js",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\prepared.generated.js"
+    },
+    {
+      "name": "required file: generate_h5_102_preparation.py",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\generate_h5_102_preparation.py"
+    },
+    {
+      "name": "required file: capture_h5_102_evidence.mjs",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\capture_h5_102_evidence.mjs"
+    },
+    {
+      "name": "required file: runtime-prepared-material-inventory.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\runtime-prepared-material-inventory.json"
+    },
+    {
+      "name": "required file: potion-prop-skin-inventory.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\potion-prop-skin-inventory.json"
+    },
+    {
+      "name": "required file: containment-contract.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\containment-contract.json"
+    },
+    {
+      "name": "required file: runtime-preparation-verdict-table.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\runtime-preparation-verdict-table.json"
+    },
+    {
+      "name": "required file: interaction-proof.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\interaction-proof.json"
+    },
+    {
+      "name": "required file: evidence-layout-proof.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\evidence-layout-proof.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.runtime-material-preparation-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.runtime-material-preparation-h5-102.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.skin-registry-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.skin-registry-h5-102.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.containment-contract-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.containment-contract-h5-102.json"
+    },
+    {
+      "name": "required file: academy.potion-sorter.proof-harness-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.proof-harness-h5-102.json"
+    },
+    {
+      "name": "required file: TINY_GOBLIN_ACADEMY_H5_102_RUNTIME_MATERIAL_CONTAINMENT_PREPARATION.md",
+      "passed": true,
+      "detail": "docs\\assets\\game-assets\\potion-sorter\\TINY_GOBLIN_ACADEMY_H5_102_RUNTIME_MATERIAL_CONTAINMENT_PREPARATION.md"
+    },
+    {
+      "name": "JSON parses: academy.potion-sorter.runtime-material-preparation-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.runtime-material-preparation-h5-102.json"
+    },
+    {
+      "name": "JSON parses: academy.potion-sorter.skin-registry-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.skin-registry-h5-102.json"
+    },
+    {
+      "name": "JSON parses: academy.potion-sorter.containment-contract-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.containment-contract-h5-102.json"
+    },
+    {
+      "name": "JSON parses: academy.potion-sorter.proof-harness-h5-102.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\planning\\academy.potion-sorter.proof-harness-h5-102.json"
+    },
+    {
+      "name": "material record completeness",
+      "passed": true,
+      "detail": "18 records"
+    },
+    {
+      "name": "exactly one prepared record per required material role",
+      "passed": true,
+      "detail": "{'constrained-realistic-brass-focal-accent': 1, 'constrained-realistic-iron': 1, 'dust-debris-source-helper': 1, 'masonry-alternate': 1, 'ooze-liquid-helper': 1, 'parchment-alternate': 1, 'potion-glow-helper': 1, 'primary-masonry': 1, 'primary-painted-iron': 1, 'primary-parchment': 1, 'primary-structural-timber': 1, 'spark-source-helper': 1, 'steam-smoke-source-helper': 1, 'timber-alternate': 1, 'wear-mask-helper': 1}"
+    },
+    {
+      "name": "material runtime approvals remain false",
+      "passed": true,
+      "detail": "18 records"
+    },
+    {
+      "name": "material evidence labels are concise and human readable",
+      "passed": true,
+      "detail": "['Fantasy timber', 'Timber grain support', 'Painted wood alternate', 'Chunky masonry', 'Masonry grain support', 'Rough stone alternate', 'Painted dark iron', 'Realistic iron accent', 'Focal brass accent', 'Illustrated parchment', 'Quiet paper alternate', 'Placed wear helper', 'Realistic wear support', 'Potion glow helper', 'Steam source helper', 'Spark source helper', 'Dust source helper', 'Ooze and liquid helper']"
+    },
+    {
+      "name": "prepared material source resolution",
+      "passed": true,
+      "detail": "18 sources"
+    },
+    {
+      "name": "prepared material hash resolution",
+      "passed": true,
+      "detail": "18 sources"
+    },
+    {
+      "name": "prepared material license resolution",
+      "passed": true,
+      "detail": "18 sources"
+    },
+    {
+      "name": "prepared material dimensions resolution",
+      "passed": true,
+      "detail": "18 sources"
+    },
+    {
+      "name": "skin record completeness",
+      "passed": true,
+      "detail": "32 records"
+    },
+    {
+      "name": "skin runtime approvals remain false",
+      "passed": true,
+      "detail": "32 records"
+    },
+    {
+      "name": "H5.49 denials preserved exactly",
+      "passed": true,
+      "detail": "['potion-sorter.glowing-green-potion', 'potion-sorter.gold-sparkle-potion']"
+    },
+    {
+      "name": "three classification bottles prepared",
+      "passed": true,
+      "detail": "['potion-sorter.blue-tall-vial', 'potion-sorter.green-round-potion-bottle', 'potion-sorter.red-round-potion-bottle']"
+    },
+    {
+      "name": "cleaned sheet hash resolution",
+      "passed": true,
+      "detail": "assets\\academy\\games\\potion-sorter\\derived\\tga-potion-sorter-cleaned-regenerated-v0.2.png"
+    },
+    {
+      "name": "source sheet hash resolution",
+      "passed": true,
+      "detail": "assets\\academy\\games\\potion-sorter\\tga-potion-sorter-sheet-regenerated-v0.2.png"
+    },
+    {
+      "name": "cleaned sheet alpha truth",
+      "passed": true,
+      "detail": "RGBA (1698, 926)"
+    },
+    {
+      "name": "JSON parses: academy.potion-sorter.cleanup-candidate.json",
+      "passed": true,
+      "detail": "manifests\\academy\\games\\potion-sorter\\academy.potion-sorter.cleanup-candidate.json"
+    },
+    {
+      "name": "skin IDs resolve through H5.48C authority",
+      "passed": true,
+      "detail": "32 authority regions"
+    },
+    {
+      "name": "skin dimensions resolve through H5.48C authority",
+      "passed": true,
+      "detail": "32 records"
+    },
+    {
+      "name": "containment hierarchy is layering then geometry then alpha",
+      "passed": true,
+      "detail": "['depth-layering', 'geometry-mask', 'alpha-mask-only-if-required']"
+    },
+    {
+      "name": "PotionActorRig excludes simulation truth",
+      "passed": true,
+      "detail": "['queue-truth', 'potion-classification-truth', 'scoring', 'sorting-decisions', 'simulation-state']"
+    },
+    {
+      "name": "PotionHolderRig contract completeness",
+      "passed": true,
+      "detail": "['back-plate', 'potion-anchor', 'optional-local-clip-geometry', 'foreground-rim-lip-rail', 'label-anchor', 'feedback-fx-anchor', 'visible-bounds', 'mask-bounds', 'interaction-bounds', 'sorting-drop-bounds']"
+    },
+    {
+      "name": "visible mask interaction and drop bounds remain separate",
+      "passed": true,
+      "detail": "{'visibleBounds': 'renderer-presentation-extent', 'maskBounds': 'holder-local-clip-extent', 'interactionBounds': 'generous-pointer-drag-extent', 'sortingDropBounds': 'controller-owned-resolution-extent'}"
+    },
+    {
+      "name": "alpha mask not fabricated",
+      "passed": true,
+      "detail": "{'testedSkin': 'potion-sorter.red-sorter-slot', 'foregroundLayeringEnoughForShallowSeat': True, 'geometryMaskEnoughForDeepEntry': True, 'alphaMaskRequired': False, 'reason': 'The accepted painted opening is visually irregular, but its functional interior is adequately represented by holder-local rounded geometry plus the painted foreground frame.'}"
+    },
+    {
+      "name": "proof cases use expected containment methods",
+      "passed": true,
+      "detail": "{'conveyor-cradle': 'depth-layering', 'foreground-rail': 'depth-layering', 'three-color-single-destination-receivers': 'geometry-mask', 'machine-aperture': 'geometry-mask'}"
+    },
+    {
+      "name": "proof harness is explicitly non-runtime",
+      "passed": true,
+      "detail": "evidence-harness-not-potion-sorter-runtime"
+    },
+    {
+      "name": "primary deep proof excludes four-slot region 23",
+      "passed": true,
+      "detail": "{'id': 'three-color-single-destination-receivers', 'method': 'geometry-mask', 'maskUsed': True, 'presentationMaskVisible': False, 'holderSkins': ['potion-sorter.red-sorter-slot', 'potion-sorter.blue-sorter-slot', 'potion-sorter.green-sorter-slot'], 'states': ['approach', 'partial', 'accepted'], 'forbiddenHolderSkin': 'potion-sorter.sorting-bin-labeled'}"
+    },
+    {
+      "name": "three destination faces represented",
+      "passed": true,
+      "detail": "['potion-sorter.red-sorter-slot', 'potion-sorter.blue-sorter-slot', 'potion-sorter.green-sorter-slot']"
+    },
+    {
+      "name": "deep containment has approach partial accepted states",
+      "passed": true,
+      "detail": "['approach', 'partial', 'accepted']"
+    },
+    {
+      "name": "presentation masks remain invisible",
+      "passed": true,
+      "detail": "deep and aperture presentation masks"
+    },
+    {
+      "name": "machine aperture proves approach partial exit",
+      "passed": true,
+      "detail": "['approach', 'partial', 'exit']"
+    },
+    {
+      "name": "machine aperture interaction remains independent",
+      "passed": true,
+      "detail": "{'id': 'machine-aperture', 'method': 'geometry-mask', 'maskUsed': True, 'presentationMaskVisible': False, 'skin': 'potion-sorter.purple-square-potion', 'states': ['approach', 'partial', 'exit'], 'interactionBoundsIndependent': True}"
+    },
+    {
+      "name": "JSON parses: evidence-layout-proof.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\evidence-layout-proof.json"
+    },
+    {
+      "name": "inventory evidence layout audits pass",
+      "passed": true,
+      "detail": "[{'sheet': 'materials', 'file': '01-runtime-prepared-material-inventory.png', 'viewport': {'width': 1600, 'height': 900}, 'layout': 'four-column-primary', 'minimumFontSize': 18, 'cardCount': 18, 'failures': [], 'passed': True}, {'sheet': 'materials-min-1', 'file': '01a-material-inventory-1024x640-plate-1.png', 'viewport': {'width': 1024, 'height': 640}, 'layout': 'minimum-plate-1', 'minimumFontSize': 18, 'cardCount': 9, 'failures': [], 'passed': True}, {'sheet': 'materials-min-2', 'file': '01b-material-inventory-1024x640-plate-2.png', 'viewport': {'width': 1024, 'height': 640}, 'layout': 'minimum-plate-2', 'minimumFontSize': 18, 'cardCount': 9, 'failures': [], 'passed': True}]"
+    },
+    {
+      "name": "inventory layout includes primary and two minimum plates",
+      "passed": true,
+      "detail": "['materials', 'materials-min-1', 'materials-min-2']"
+    },
+    {
+      "name": "inventory typography meets configured minimum",
+      "passed": true,
+      "detail": "[18, 18, 18]"
+    },
+    {
+      "name": "JSON parses: interaction-proof.json",
+      "passed": true,
+      "detail": "assets\\academy\\evidence\\h5-102-potion-sorter-runtime-material-containment-preparation\\interaction-proof.json"
+    },
+    {
+      "name": "partially occluded interaction probe passes",
+      "passed": true,
+      "detail": "{'laneId': 'H5.102', 'proof': 'pointer click outside visible bounds and inside interaction bounds', 'clickPoint': {'x': 600, 'y': 250}, 'visibleBounds': {'x': 731, 'y': 280, 'w': 138, 'h': 330}, 'interactionBounds': {'x': 540, 'y': 235, 'w': 360, 'h': 430}, 'maskBounds': {'x': 690, 'y': 350, 'w': 220, 'h': 260}, 'sortingDropBounds': {'x': 925, 'y': 485, 'w': 230, 'h': 130}, 'insideInteractionBounds': True, 'insideVisibleBounds': False, 'browserEventObserved': True, 'passed': True}"
+    },
+    {
+      "name": "capture dimensions: 01-runtime-prepared-material-inventory.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 01a-material-inventory-1024x640-plate-1.png",
+      "passed": true,
+      "detail": "expected 1024x640"
+    },
+    {
+      "name": "capture dimensions: 01b-material-inventory-1024x640-plate-2.png",
+      "passed": true,
+      "detail": "expected 1024x640"
+    },
+    {
+      "name": "capture dimensions: 02-potion-prop-skin-inventory.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 03-layering-first-containment-diagram.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 04-conveyor-cradle-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 05-foreground-rail-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 06-deep-containment-three-state-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 07-machine-aperture-three-state-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 08-interaction-bounds-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 09-irregular-opening-mask-verdict.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 10-material-binding-proof.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 11-harness-1920x1080.png",
+      "passed": true,
+      "detail": "expected 1920x1080"
+    },
+    {
+      "name": "capture dimensions: 12-harness-1024x640.png",
+      "passed": true,
+      "detail": "expected 1024x640"
+    },
+    {
+      "name": "capture dimensions: 13-runtime-preparation-verdicts.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 14-rejected-deferred-containment.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 15-three-color-destination-containment-board.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 16-deep-containment-presentation-debug.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "capture dimensions: 17-machine-aperture-three-state-debug.png",
+      "passed": true,
+      "detail": "expected 1600x900"
+    },
+    {
+      "name": "generator reproduces exact outputs",
+      "passed": true,
+      "detail": "{\n  \"reproducible\": true,\n  \"mismatches\": [],\n  \"outputCount\": 9,\n  \"materialCount\": 18,\n  \"skinCount\": 32\n}"
+    },
+    {
+      "name": "H5.101 committed baseline preserved",
+      "passed": true,
+      "detail": "baseline=22cf2cd124f50ff1a9278f26ed9db8212d07a6d1; ancestor-of-current-head=True"
+    },
+    {
+      "name": "H5.101 committed paths unchanged since baseline",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "H5.101 committed paths remain unchanged",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no staged files",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "runtime package and gameplay scope preserved",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "no superseded H5.102 captures remain",
+      "passed": true,
+      "detail": "[]"
+    }
+  ]
+}

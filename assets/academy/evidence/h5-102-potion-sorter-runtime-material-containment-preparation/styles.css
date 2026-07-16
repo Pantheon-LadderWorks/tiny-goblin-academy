@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  font-family: "Outfit", system-ui, sans-serif;
+  background: #100b17;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #harness {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #100b17;
+}
+
+canvas { display: block; }
+
+#sheet-nav {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  max-width: min(820px, calc(100vw - 36px));
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 9px;
+  border: 1px solid rgba(216, 164, 78, 0.35);
+  border-radius: 12px;
+  background: rgba(16, 11, 23, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+#sheet-nav a {
+  color: #c7b9bd;
+  font-size: 12px;
+  line-height: 1;
+  text-decoration: none;
+  padding: 7px 9px;
+  border-radius: 7px;
+  background: #2a1d34;
+}
+
+#sheet-nav a[aria-current="page"] {
+  color: #18101b;
+  background: #d8a44e;
+}
+
+body[data-capture="true"] #sheet-nav { display: none; }
