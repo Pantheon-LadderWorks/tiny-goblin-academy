@@ -1,0 +1,43 @@
+{
+  "laneId": "H6",
+  "passed": true,
+  "strategy": "uniform cover scaling with limited decorative side crop",
+  "proofs": [
+    {
+      "file": "01-initial-queue-1920x1080.png",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "logicalStage": {
+        "width": 1600,
+        "height": 900,
+        "centerX": 800,
+        "centerY": 450
+      },
+      "zoom": 1.2,
+      "horizontalCrop": 0,
+      "verticalCrop": 0,
+      "protectedCenterVisible": true,
+      "blackVoid": false
+    },
+    {
+      "file": "02-initial-queue-1024x640.png",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "logicalStage": {
+        "width": 1600,
+        "height": 900,
+        "centerX": 800,
+        "centerY": 450
+      },
+      "zoom": 0.7111111111111111,
+      "horizontalCrop": 160,
+      "verticalCrop": 0,
+      "protectedCenterVisible": true,
+      "blackVoid": false
+    }
+  ]
+}

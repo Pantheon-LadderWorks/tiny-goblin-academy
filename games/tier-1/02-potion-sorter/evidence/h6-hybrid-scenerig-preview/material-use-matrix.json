@@ -1,0 +1,22 @@
+{
+  "laneId": "H6",
+  "passed": true,
+  "rule": "Stylized materials establish room identity; realistic brass is a restrained focal accent.",
+  "materials": [
+    { "id": "kenney-fantasy-timber", "role": "primary identity", "uses": ["room wings", "conveyor slats", "sorting bench"] },
+    { "id": "kenney-fantasy-masonry", "role": "primary identity", "uses": ["alchemy-room wall field"] },
+    { "id": "deadkir-painted-iron", "role": "primary identity", "uses": ["inspection housing"] },
+    { "id": "ambientcg-metal008-brass", "role": "focal accent", "uses": ["aperture trim", "rails", "machine fasteners"], "coverage": "limited" },
+    { "id": "luke-rustltd-parchment", "role": "information surface", "uses": ["receiver labels", "instruction plaque"] }
+  ],
+  "broadPhotorealCoverage": false,
+  "sourcePixelsMutated": false,
+  "spriteSheet": {
+    "path": "assets/academy/games/potion-sorter/derived/tga-potion-sorter-cleaned-regenerated-v0.2.png",
+    "sha256": "8daa626200dba20a14c1bd6c511d0ac3bc1eabb55c1b17cacd69ea7b3c9f10a5",
+    "potionRegions": [1, 2, 3],
+    "destinationRegions": [17, 18, 19],
+    "h5_49DeniedRegionsPresent": false,
+    "deniedRegions": [9, 14]
+  }
+}

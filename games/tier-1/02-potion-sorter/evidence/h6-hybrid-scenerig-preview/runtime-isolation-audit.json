@@ -1,0 +1,37 @@
+{
+  "laneId": "H6",
+  "baseline": "fc48cf92d01e0af260d474c096257245eedea7d0",
+  "passed": true,
+  "liveRuntimeIntegrated": false,
+  "packageOrLockChanges": false,
+  "paths": [
+    {
+      "path": "games/tier-1/02-potion-sorter/src/main.ts",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "games/tier-1/02-potion-sorter/src/potion-scene.ts",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "games/tier-1/02-potion-sorter/src/styles.css",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "games/tier-1/02-potion-sorter/src/controller.ts",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "games/tier-1/02-potion-sorter/src/simulation.ts",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "games/tier-1/02-potion-sorter/package.json",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "unchangedFromBaseline": true
+    }
+  ]
+}

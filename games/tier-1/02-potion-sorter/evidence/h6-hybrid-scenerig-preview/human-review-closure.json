@@ -1,0 +1,28 @@
+{
+  "laneId": "H6-hybrid-scenerig-preview",
+  "passed": true,
+  "humanReviewStatus": "passed",
+  "visualTargetStatus": "approved",
+  "productionIntegrated": false,
+  "runtimeApproved": false,
+  "productionIntegrationReady": true,
+  "reviewedOn": "2026-07-17",
+  "approvedAuthority": [
+    "Composition C centered perspective",
+    "continuous rear-to-middle-to-inspection depth spine",
+    "widening conveyor and open inspection gantry",
+    "rear bottle passing behind and beneath the upper gantry",
+    "exactly three persistent potion actors",
+    "foreground red, blue, and green receivers",
+    "local geometry containment",
+    "stylized primary materials with restrained realistic hardware accents",
+    "responsive 1920x1080 and 1024x640 presentations",
+    "deterministic complete-cycle evidence"
+  ],
+  "productionTuningNotes": [
+    "soften or feather the local inspection focus field",
+    "polish motion curves and receiver-entry choreography",
+    "tune exact depth anchors and occlusion where evidence requires it",
+    "preserve the approved spatial composition"
+  ]
+}

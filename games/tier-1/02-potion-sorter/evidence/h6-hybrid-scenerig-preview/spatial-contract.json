@@ -1,0 +1,91 @@
+{
+  "laneId": "H6-composition-c-recovery",
+  "passed": true,
+  "authority": "Composition C companion frame",
+  "vanishingPoint": {
+    "x": 800,
+    "y": 225
+  },
+  "apertureCenter": {
+    "x": 800,
+    "y": 570
+  },
+  "queueAnchors": [
+    {
+      "role": "rear",
+      "x": 800,
+      "y": 310,
+      "scale": 0.34,
+      "depth": 27
+    },
+    {
+      "role": "middle",
+      "x": 800,
+      "y": 430,
+      "scale": 0.5,
+      "depth": 30
+    },
+    {
+      "x": 800,
+      "y": 550,
+      "scale": 0.68,
+      "depth": 31
+    }
+  ],
+  "conveyor": {
+    "farLeft": {
+      "x": 700,
+      "y": 245
+    },
+    "farRight": {
+      "x": 900,
+      "y": 245
+    },
+    "nearLeft": {
+      "x": 215,
+      "y": 900
+    },
+    "nearRight": {
+      "x": 1385,
+      "y": 900
+    },
+    "farWidth": 200,
+    "nearWidth": 1170
+  },
+  "branchPoint": {
+    "x": 800,
+    "y": 680,
+    "scale": 0.88
+  },
+  "destinationCenters": [
+    {
+      "id": "red",
+      "x": 340,
+      "y": 755
+    },
+    {
+      "id": "blue",
+      "x": 800,
+      "y": 755
+    },
+    {
+      "id": "green",
+      "x": 1260,
+      "y": 755
+    }
+  ],
+  "detachedSideModule": false,
+  "dominantDiagonalFeed": false,
+  "continuousPath": true,
+  "inspectionGantry": {
+    "corridor": 16,
+    "boundedFocus": 26,
+    "rearPotion": 27,
+    "upperCrossbar": 28,
+    "middlePotion": 30,
+    "activePotion": 32,
+    "foregroundRim": 34,
+    "broadOpaqueInterior": false,
+    "continuousConveyor": true
+  }
+}

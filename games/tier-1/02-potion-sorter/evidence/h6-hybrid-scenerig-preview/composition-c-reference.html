@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composition C Spatial Authority</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body, .stage { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+      body { background: #100b18; font-family: Georgia, serif; color: #f3e8cf; }
+      .stage { position: relative; background: #21152a; border: 4px solid #9b7047; }
+      .hud { position: absolute; z-index: 50; inset: 3% 3% auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2%; }
+      .hud span { padding: 14px; border: 3px solid #9b7047; border-radius: 999px; background: #21152a; text-align: center; font-size: 26px; }
+      .room-wing { position: absolute; top: 17%; bottom: 8%; width: 22%; z-index: 2; border-inline: 18px solid #67452f; }
+      .wing-left { left: 2%; } .wing-right { right: 2%; }
+      .shelf { position: absolute; left: 8%; right: 14%; height: 3%; background: #8c5d38; }
+      .shelf.one { top: 27%; } .shelf.two { top: 57%; }
+      .jar { position: absolute; width: 12%; aspect-ratio: .7; bottom: 44%; border-radius: 40% 40% 22% 22%; border: 2px solid currentColor; background: #4c8ba6; }
+      .j1 { left: 18%; } .j2 { left: 39%; color: #65c879; } .j3 { left: 60%; color: #ef5e58; }
+      .arch { position: absolute; z-index: 3; left: 29%; right: 29%; top: 17%; height: 47%; border: 26px solid #574655; border-bottom: 0; border-radius: 48% 48% 8% 8% / 58% 58% 8% 8%; background: #150e1e; }
+      .conveyor { position: absolute; z-index: 10; left: 25%; right: 25%; top: 36%; bottom: -9%; clip-path: polygon(39% 0, 61% 0, 100% 100%, 0 100%); background: repeating-linear-gradient(to bottom, #563727 0 9%, #93663f 9% 12%); }
+      .rail { position: absolute; z-index: 18; top: 43%; bottom: 2%; width: 4%; background: #574655; border: 2px solid #9b7047; }
+      .rail.left { left: 25%; transform: rotate(-10deg); transform-origin: bottom; } .rail.right { right: 25%; transform: rotate(10deg); transform-origin: bottom; }
+      .aperture { position: absolute; z-index: 15; left: 36%; right: 36%; top: 39%; height: 37%; border: 24px solid #574655; border-radius: 48% 48% 22% 22% / 42% 42% 20% 20%; background: #100b18cc; box-shadow: inset 0 0 0 5px #d39b4a; }
+      .bottle { position: absolute; z-index: 19; transform: translate(-50%, -100%); border: 3px solid currentColor; border-radius: 32% 32% 40% 40% / 18% 18% 48% 48%; box-shadow: 0 0 20px currentColor; }
+      .bottle::before { content: ''; position: absolute; left: 34%; right: 34%; top: -18%; height: 25%; border: 3px solid currentColor; background: #21152a; border-radius: 4px; }
+      .green { left: 50%; top: 42%; width: 4%; aspect-ratio: .72; color: #65c879; background: #65c87999; }
+      .blue { left: 50%; top: 54%; width: 5.2%; aspect-ratio: .72; color: #4bb9e8; background: #4bb9e899; }
+      .red { left: 50%; top: 71%; width: 8%; aspect-ratio: .72; color: #ef5e58; background: #ef5e5899; }
+      .station-row { position: absolute; z-index: 25; left: 5%; right: 5%; bottom: 2%; display: flex; justify-content: space-between; align-items: end; }
+      .station { width: 20%; aspect-ratio: 1.35; border: 5px solid currentColor; border-radius: 16px 16px 34px 34px; background: #21152a; box-shadow: inset 0 -18px 0 #100b18; }
+      .station.red-station { color: #ef5e58; } .station.blue-station { color: #4bb9e8; } .station.green-station { color: #65c879; }
+      .instruction { position: absolute; z-index: 60; left: 30%; right: 30%; bottom: 2%; padding: 12px; border-radius: 999px; background: #21152ae8; text-align: center; font-size: 23px; }
+    </style>
+  </head>
+  <body>
+    <main class="stage" aria-label="Original Composition C spatial authority reconstruction">
+      <div class="hud"><span>Time 30s</span><span>Score 0</span><span>Combo ×1</span></div>
+      <div class="room-wing wing-left"><div class="shelf one"></div><div class="shelf two"></div><div class="jar j1"></div><div class="jar j2"></div><div class="jar j3"></div></div>
+      <div class="room-wing wing-right"><div class="shelf one"></div><div class="shelf two"></div><div class="jar j1"></div><div class="jar j2"></div><div class="jar j3"></div></div>
+      <div class="arch"></div><div class="conveyor"></div><div class="rail left"></div><div class="rail right"></div><div class="aperture"></div>
+      <div class="bottle green"></div><div class="bottle blue"></div><div class="bottle red"></div>
+      <div class="station-row"><div class="station red-station"></div><div class="station blue-station"></div><div class="station green-station"></div></div>
+      <div class="instruction">Select potion · choose destination</div>
+    </main>
+  </body>
+</html>

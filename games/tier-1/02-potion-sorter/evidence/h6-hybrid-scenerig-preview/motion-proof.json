@@ -1,0 +1,27 @@
+{
+  "laneId": "H6",
+  "passed": true,
+  "file": "captures/13-complete-demo-cycle.webm",
+  "bytes": 1657515,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "sequence": [
+    "green rear / blue middle / red inspection",
+    "red receiver",
+    "blue inspection",
+    "blue receiver",
+    "green inspection",
+    "green receiver",
+    "queue empty"
+  ],
+  "deterministic": true,
+  "deterministicRunsCompared": 2,
+  "reducedMotionAlternative": "captures/12-reduced-motion.png",
+  "continuity": "The same three stable PotionActorRig instances move through queue, aperture, foreground branch, and receiver. No actor cloning, replacement, hiding, or parked-replica handoff occurs.",
+  "contactSheets": [
+    "captures/10-aperture-approach-continuity-contact-sheet.png",
+    "captures/11-receiver-handoff-continuity-contact-sheet.png"
+  ]
+}

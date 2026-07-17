@@ -1,0 +1,533 @@
+{
+  "laneId": "H6-potion-actor-continuity",
+  "passed": true,
+  "deterministicRunsCompared": 2,
+  "stableActorIds": [
+    "potion-green",
+    "potion-blue",
+    "potion-red"
+  ],
+  "presentationActorCount": 3,
+  "finalOccupancy": {
+    "destination.green": "green",
+    "destination.blue": "blue",
+    "destination.red": "red"
+  },
+  "clonesCreated": false,
+  "invisibleHandoffs": false,
+  "timelineAudit": [
+    {
+      "phase": "initial",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "depth": 27,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "depth": 32,
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        }
+      ],
+      "occupancy": {
+        "queue.rear": "green",
+        "queue.middle": "blue",
+        "inspection": "red"
+      }
+    },
+    {
+      "phase": "red-receiver-entry",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "depth": 27,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "ForegroundTransferPath",
+          "anchorState": "transit.red",
+          "depth": 46,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 680
+          },
+          "scale": 0.88
+        }
+      ],
+      "occupancy": {
+        "queue.rear": "green",
+        "queue.middle": "blue",
+        "transit.red": "red"
+      }
+    },
+    {
+      "phase": "blue-approach",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "gantry-crossing.green",
+          "depth": 27,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "gantry-crossing.green": "green",
+        "queue.middle": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "red-accepted",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "depth": 32,
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "queue.middle": "green",
+        "inspection": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "blue-receiver-entry",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "ForegroundTransferPath",
+          "anchorState": "transit.blue",
+          "depth": 46,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 680
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "queue.middle": "green",
+        "transit.blue": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "green-approach",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "depth": 30,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.blue",
+          "depth": 42,
+          "activeMask": "destination-blue-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 755
+          },
+          "scale": 0.78
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "queue.middle": "green",
+        "destination.blue": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "blue-accepted",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "depth": 32,
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.blue",
+          "depth": 42,
+          "activeMask": "destination-blue-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 755
+          },
+          "scale": 0.78
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "inspection": "green",
+        "destination.blue": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "green-receiver-entry",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "ForegroundTransferPath",
+          "anchorState": "transit.green",
+          "depth": 46,
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 680
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.blue",
+          "depth": 42,
+          "activeMask": "destination-blue-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 755
+          },
+          "scale": 0.78
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "transit.green": "green",
+        "destination.blue": "blue",
+        "destination.red": "red"
+      }
+    },
+    {
+      "phase": "finished",
+      "passed": true,
+      "errors": [],
+      "actors": [
+        {
+          "actorId": "potion-green",
+          "potionId": "green",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.green",
+          "depth": 42,
+          "activeMask": "destination-green-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 1260,
+            "y": 755
+          },
+          "scale": 0.78
+        },
+        {
+          "actorId": "potion-blue",
+          "potionId": "blue",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.blue",
+          "depth": 42,
+          "activeMask": "destination-blue-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 800,
+            "y": 755
+          },
+          "scale": 0.78
+        },
+        {
+          "actorId": "potion-red",
+          "potionId": "red",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "destination.red",
+          "depth": 42,
+          "activeMask": "destination-red-local",
+          "visible": true,
+          "alpha": 1,
+          "position": {
+            "x": 340,
+            "y": 755
+          },
+          "scale": 0.78
+        }
+      ],
+      "occupancy": {
+        "destination.green": "green",
+        "destination.blue": "blue",
+        "destination.red": "red"
+      }
+    }
+  ]
+}
