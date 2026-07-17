@@ -1,88 +1,191 @@
 import Phaser from 'phaser';
 
 import type { RoundController } from './controller';
+import { AlchemyLightingRig, PotionRoomRig } from './scene-rig/environment-rigs';
+import { ASSET_KEYS, ASSET_URLS, POTION_FRAMES, RECEIVER_FRAMES, STAGE } from './scene-rig/config';
+import { ConveyorRig, InspectionApertureRig, SortingStationRig } from './scene-rig/machine-rigs';
+import { PotionQueuePresentation } from './scene-rig/potion-rigs';
+import { PointerDragGesture } from './scene-rig/drag-interaction';
 import type { PotionType, RoundState } from './simulation';
 
-const POTION_COLORS: Record<PotionType, number> = {
-  sun: 0xf5b942,
-  moon: 0x9e9bff,
-  star: 0x57d8c1
-};
+interface SceneDiagnostics {
+  getActorContinuitySnapshot(): object[];
+  getRoundState(): RoundState;
+  getDragState(): { pointerId: number | null; dragging: boolean };
+  getEnvironmentDepthSnapshot(): object;
+  getInteractionAudit(): object[];
+}
 
 export class PotionScene extends Phaser.Scene {
   private readonly controller: RoundController;
-  private art!: Phaser.GameObjects.Graphics;
-  private potionHitbox!: Phaser.GameObjects.Arc;
-  private shelfHitboxes: Array<{ type: PotionType; hitbox: Phaser.GameObjects.Rectangle }> = [];
-  private selectionLabel!: Phaser.GameObjects.Text;
+  private queue!: PotionQueuePresentation;
+  private stations!: SortingStationRig;
+  private isRouting = false;
+  private pendingState: RoundState | null = null;
+  private readonly dragGesture = new PointerDragGesture(14);
+  private readonly interactionAudit: object[] = [];
+  private readonly reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   constructor(controller: RoundController) {
     super('PotionScene');
     this.controller = controller;
   }
 
-  create(): void {
-    this.art = this.add.graphics();
-    this.potionHitbox = this.add.circle(0, 0, 62, 0x000000, 0).setInteractive({ useHandCursor: true });
-    this.potionHitbox.on('pointerdown', () => this.controller.selectPotion());
-
-    (['sun', 'moon', 'star'] as PotionType[]).forEach((type) => {
-      const hitbox = this.add.rectangle(0, 0, 160, 108, 0x000000, 0).setInteractive({ useHandCursor: true });
-      hitbox.on('pointerdown', () => this.controller.placePotion(type));
-      this.shelfHitboxes.push({ type, hitbox });
-    });
-
-    this.selectionLabel = this.add.text(0, 0, 'TAP ME', {
-      color: '#fff4cd',
-      fontFamily: 'Georgia, serif',
-      fontSize: '18px',
-      fontStyle: 'bold'
-    }).setOrigin(0.5);
-
-    this.controller.subscribe((state) => this.render(state));
-    this.scale.on('resize', () => this.render(this.controller.getState()));
+  preload(): void {
+    this.load.image(ASSET_KEYS.potionSheet, ASSET_URLS.potionSheet);
+    this.load.image(ASSET_KEYS.timber, ASSET_URLS.timber);
+    this.load.image(ASSET_KEYS.masonry, ASSET_URLS.masonry);
+    this.load.image(ASSET_KEYS.iron, ASSET_URLS.iron);
+    this.load.image(ASSET_KEYS.brass, ASSET_URLS.brass);
+    this.load.image(ASSET_KEYS.parchment, ASSET_URLS.parchment);
   }
 
-  private render(state: RoundState): void {
-    const width = this.scale.width;
-    const height = this.scale.height;
-    const potionX = width / 2;
-    const potionY = height * 0.34;
-    const shelfY = height * 0.72;
-    const shelfWidth = Math.min(190, width * 0.25);
-    const shelfHeight = 112;
+  create(): void {
+    this.registerApprovedFrames();
+    const room = new PotionRoomRig(this, this.reducedMotion);
+    new ConveyorRig(this);
+    const aperture = new InspectionApertureRig(this);
+    this.stations = new SortingStationRig(this, (type) => void this.chooseDestination(type));
+    this.queue = new PotionQueuePresentation(this, aperture, this.stations, (pointer) => this.handlePointerDown(pointer));
+    new AlchemyLightingRig(this, this.reducedMotion);
+    this.input.on('pointermove', (pointer: Phaser.Input.Pointer) => this.handlePointerMove(pointer));
+    this.input.on('pointerup', (pointer: Phaser.Input.Pointer) => void this.handlePointerUp(pointer));
+    this.input.on('pointerupoutside', (pointer: Phaser.Input.Pointer) => void this.cancelPointer(pointer));
+    this.input.on('gameout', () => void this.cancelOwnedPointer());
 
-    this.art.clear();
-    this.art.fillStyle(0x1a1527, 1).fillRect(0, 0, width, height);
-    this.art.fillStyle(0x2b2240, 1).fillRect(0, height * 0.58, width, height * 0.42);
-    this.art.fillStyle(0x453354, 1).fillRect(0, height * 0.58, width, 10);
-    this.art.fillStyle(0xf4d394, 0.18).fillCircle(width * 0.16, height * 0.16, 3).fillCircle(width * 0.8, height * 0.25, 2).fillCircle(width * 0.68, height * 0.1, 2);
+    this.controller.subscribe((state) => {
+      if (state.roundComplete && this.dragGesture.snapshot().pointerId !== null) {
+        const pointerId = this.dragGesture.snapshot().pointerId!;
+        this.dragGesture.cancel(pointerId);
+        this.stations.setDragHover(null);
+        this.interactionAudit.push({ kind: 'drag-disabled-round-complete', pointerId });
+      }
+      if (this.isRouting) this.pendingState = state;
+      else this.queue.sync(state);
+    });
+    this.scale.on('resize', () => this.fitComposition());
+    this.fitComposition();
 
-    if (state.activePotion) {
-      const color = POTION_COLORS[state.activePotion];
-      if (state.selectedPotion) this.art.fillStyle(color, 0.18).fillCircle(potionX, potionY, 96);
-      this.art.fillStyle(0xd7c3ad, 1).fillRoundedRect(potionX - 34, potionY - 58, 68, 94, 18);
-      this.art.fillStyle(color, 1).fillRoundedRect(potionX - 28, potionY - 20, 56, 52, 14);
-      this.art.fillStyle(0xf4dfac, 1).fillRect(potionX - 17, potionY - 70, 34, 16);
-      this.art.fillStyle(0x241d33, 1).fillCircle(potionX - 11, potionY + 7, 4).fillCircle(potionX + 11, potionY + 7, 4);
-      this.potionHitbox.setPosition(potionX, potionY).setInteractive({ useHandCursor: true });
-      this.potionHitbox.input!.enabled = !state.roundComplete;
-      this.selectionLabel.setPosition(potionX, potionY + 58).setText(state.selectedPotion ? 'NOW PICK A SHELF' : 'TAP THE POTION').setAlpha(1);
-    } else {
-      this.potionHitbox.input!.enabled = false;
-      this.selectionLabel.setAlpha(0);
+    const diagnostics: SceneDiagnostics = {
+      getActorContinuitySnapshot: () => this.queue.snapshot(),
+      getRoundState: () => this.controller.getState(),
+      getDragState: () => this.dragGesture.snapshot(),
+      getEnvironmentDepthSnapshot: () => room.snapshot(),
+      getInteractionAudit: () => [...this.interactionAudit]
+    };
+    (window as unknown as { __TGA_POTION_SCENE__: SceneDiagnostics }).__TGA_POTION_SCENE__ = diagnostics;
+  }
+
+  private registerApprovedFrames(): void {
+    const texture = this.textures.get(ASSET_KEYS.potionSheet);
+    (Object.entries(POTION_FRAMES) as Array<[PotionType, (typeof POTION_FRAMES)[PotionType]]>).forEach(([type, frame]) => {
+      texture.add(type, 0, frame.x, frame.y, frame.width, frame.height);
+    });
+    (Object.entries(RECEIVER_FRAMES) as Array<[PotionType, (typeof RECEIVER_FRAMES)[PotionType]]>).forEach(([type, frame]) => {
+      texture.add(`${type}-receiver`, 0, frame.x, frame.y, frame.width, frame.height);
+    });
+  }
+
+  private async chooseDestination(destination: PotionType, fromDrag = false): Promise<void> {
+    const before = this.controller.getState();
+    if (before.roundComplete || before.activePotion === null || this.isRouting) return;
+    if (!before.selectedPotion) {
+      this.controller.placePotion(destination);
+      return;
     }
 
-    const shelfPositions = [width * 0.2, width * 0.5, width * 0.8];
-    this.shelfHitboxes.forEach(({ type, hitbox }, index) => {
-      const x = shelfPositions[index];
-      const color = POTION_COLORS[type];
-      this.art.fillStyle(0x36263c, 1).fillRoundedRect(x - shelfWidth / 2, shelfY - shelfHeight / 2, shelfWidth, shelfHeight, 14);
-      this.art.lineStyle(3, color, 1).strokeRoundedRect(x - shelfWidth / 2, shelfY - shelfHeight / 2, shelfWidth, shelfHeight, 14);
-      this.art.fillStyle(color, 0.75).fillCircle(x, shelfY - 12, 20);
-      this.art.fillStyle(0xf4dfac, 1).fillRect(x - 24, shelfY + 24, 48, 8);
-      hitbox.setPosition(x, shelfY).setSize(shelfWidth, shelfHeight).setInteractive({ useHandCursor: !state.roundComplete });
-      hitbox.input!.enabled = !state.roundComplete;
+    this.isRouting = true;
+    this.pendingState = null;
+    this.stations.setEnabled(false);
+    this.queue.setInputEnabled(false);
+    this.stations.setDragHover(null);
+    const correct = destination === before.activePotion;
+    this.controller.placePotion(destination);
+    const after = this.controller.getState();
+    this.interactionAudit.push({
+      kind: 'resolution',
+      mode: fromDrag ? 'drag' : 'tap',
+      actorId: before.activePotionId,
+      destination,
+      correct,
+      potionIndexBefore: before.potionIndex,
+      potionIndexAfter: after.potionIndex
     });
+    await this.queue.routeActive(destination, correct, this.reducedMotion, fromDrag);
+    this.isRouting = false;
+    this.stations.setEnabled(!this.controller.getState().roundComplete);
+    this.queue.sync(this.pendingState ?? this.controller.getState());
+    this.queue.setInputEnabled(!this.controller.getState().roundComplete);
+    this.pendingState = null;
+  }
+
+  private handlePointerDown(pointer: Phaser.Input.Pointer): void {
+    const state = this.controller.getState();
+    this.dragGesture.pointerDown(pointer.id, pointer.worldX, pointer.worldY,
+      !this.isRouting && !state.roundComplete && state.activePotionId !== null);
+  }
+
+  private handlePointerMove(pointer: Phaser.Input.Pointer): void {
+    if (this.controller.getState().roundComplete) {
+      this.dragGesture.cancel(pointer.id);
+      this.stations.setDragHover(null);
+      return;
+    }
+    const event = this.dragGesture.pointerMove(pointer.id, pointer.worldX, pointer.worldY);
+    if (event.kind !== 'drag-start' && event.kind !== 'drag-move') return;
+    if (event.kind === 'drag-start' && !this.controller.getState().selectedPotion) this.controller.selectPotion();
+    if (event.kind === 'drag-start') {
+      this.interactionAudit.push({ kind: 'drag-start', actorId: this.controller.getState().activePotionId, pointerId: pointer.id });
+      this.queue.beginActiveDrag(event.x, event.y);
+    }
+    else this.queue.moveActiveDrag(event.x, event.y);
+    this.stations.setDragHover(this.stations.receiverAt(event.x, event.y));
+  }
+
+  private async handlePointerUp(pointer: Phaser.Input.Pointer): Promise<void> {
+    if (this.controller.getState().roundComplete) {
+      this.dragGesture.cancel(pointer.id);
+      this.stations.setDragHover(null);
+      return;
+    }
+    const event = this.dragGesture.pointerUp(pointer.id, pointer.worldX, pointer.worldY);
+    if (event.kind === 'tap') {
+      this.interactionAudit.push({ kind: 'tap-select', actorId: this.controller.getState().activePotionId, pointerId: pointer.id });
+      this.controller.selectPotion();
+      return;
+    }
+    if (event.kind !== 'drop') return;
+    const destination = this.stations.receiverAt(event.x, event.y);
+    this.stations.setDragHover(null);
+    if (destination) await this.chooseDestination(destination, true);
+    else {
+      const actorId = this.controller.getState().activePotionId;
+      await this.queue.returnActiveToInspection(this.reducedMotion);
+      this.interactionAudit.push({ kind: 'drag-return', actorId, destination: null });
+    }
+  }
+
+  private async cancelPointer(pointer: Phaser.Input.Pointer): Promise<void> {
+    if (this.dragGesture.cancel(pointer.id).kind === 'cancel') {
+      this.stations.setDragHover(null);
+      await this.queue.returnActiveToInspection(this.reducedMotion);
+      this.interactionAudit.push({ kind: 'drag-cancel', actorId: this.controller.getState().activePotionId, pointerId: pointer.id });
+    }
+  }
+
+  private async cancelOwnedPointer(): Promise<void> {
+    const pointerId = this.dragGesture.snapshot().pointerId;
+    if (pointerId !== null && this.dragGesture.cancel(pointerId).kind === 'cancel') {
+      this.stations.setDragHover(null);
+      await this.queue.returnActiveToInspection(this.reducedMotion);
+      this.interactionAudit.push({ kind: 'drag-cancel', actorId: this.controller.getState().activePotionId, pointerId });
+    }
+  }
+
+  private fitComposition(): void {
+    const camera = this.cameras.main;
+    const zoom = Math.max(this.scale.width / STAGE.width, this.scale.height / STAGE.height);
+    camera.setZoom(zoom);
+    camera.centerOn(STAGE.centerX, STAGE.centerY);
   }
 }

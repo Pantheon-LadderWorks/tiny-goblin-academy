@@ -1,0 +1,2146 @@
+{
+  "passed": true,
+  "capturedAt": "2026-07-17T17:46:02.004Z",
+  "audits": [
+    {
+      "label": "desktop-initial-corrected-gearbox",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "feedback": "Select the potion, then choose its receiver.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "sun",
+        "activePotionId": "potion-0",
+        "upcomingPotions": [
+          {
+            "id": "potion-1",
+            "type": "moon"
+          },
+          {
+            "id": "potion-2",
+            "type": "star"
+          },
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Select the potion, then choose its receiver.",
+        "potionIndex": 0
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          15.07,
+          -19.17,
+          29.34
+        ]
+      },
+      "interactions": []
+    },
+    {
+      "label": "tap-correct",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "10",
+        "combo": "×1",
+        "feedback": "Correct! +10 points",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "moon",
+        "activePotionId": "potion-1",
+        "upcomingPotions": [
+          {
+            "id": "potion-2",
+            "type": "star"
+          },
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 10,
+        "combo": 1,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Correct! +10 points",
+        "potionIndex": 1
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          127.26,
+          -161.83,
+          -112.24
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        }
+      ]
+    },
+    {
+      "label": "tap-wrong",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "10",
+        "combo": "×0",
+        "feedback": "Wrong receiver — try the next potion.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "star",
+        "activePotionId": "potion-2",
+        "upcomingPotions": [
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 10,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Wrong receiver — try the next potion.",
+        "potionIndex": 2
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          179.26,
+          132.03,
+          -10.99
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        }
+      ]
+    },
+    {
+      "label": "drag-start",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "10",
+        "combo": "×0",
+        "feedback": "Potion selected — choose a receiver.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "star",
+        "activePotionId": "potion-2",
+        "upcomingPotions": [
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": true,
+        "score": 10,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Potion selected — choose a receiver.",
+        "potionIndex": 2
+      },
+      "drag": {
+        "pointerId": 0,
+        "dragging": true
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "drag.owned",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 835,
+            "y": 610
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          -135.88,
+          75,
+          76.33
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        }
+      ]
+    },
+    {
+      "label": "drag-hover-correct",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "10",
+        "combo": "×0",
+        "feedback": "Potion selected — choose a receiver.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "star",
+        "activePotionId": "potion-2",
+        "upcomingPotions": [
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": true,
+        "score": 10,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Potion selected — choose a receiver.",
+        "potionIndex": 2
+      },
+      "drag": {
+        "pointerId": 0,
+        "dragging": true
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "drag.owned",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 734
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          -87.48,
+          13.44,
+          170.57
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        }
+      ]
+    },
+    {
+      "label": "drag-correct-contained",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "20",
+        "combo": "×1",
+        "feedback": "Correct! +10 points",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "sun",
+        "activePotionId": "potion-3",
+        "upcomingPotions": [
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 20,
+        "combo": 1,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Correct! +10 points",
+        "potionIndex": 3
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.accepted",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          -49.37,
+          -35.02,
+          -115.23
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-2",
+          "destination": "star",
+          "correct": true,
+          "potionIndexBefore": 2,
+          "potionIndexAfter": 3
+        }
+      ]
+    },
+    {
+      "label": "drag-wrong-combo-break",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "20",
+        "combo": "×0",
+        "feedback": "Wrong receiver — try the next potion.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "moon",
+        "activePotionId": "potion-4",
+        "upcomingPotions": [
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 20,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Wrong receiver — try the next potion.",
+        "potionIndex": 4
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.accepted",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "moon.rejected",
+          "activeMask": "receiver-moon-local",
+          "visible": true,
+          "alpha": 0.01,
+          "depth": 46,
+          "position": {
+            "x": 800,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          33.41,
+          -140.3,
+          45.94
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-2",
+          "destination": "star",
+          "correct": true,
+          "potionIndexBefore": 2,
+          "potionIndexAfter": 3
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-3",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-3",
+          "destination": "moon",
+          "correct": false,
+          "potionIndexBefore": 3,
+          "potionIndexAfter": 4
+        }
+      ]
+    },
+    {
+      "label": "outside-drop-return",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "20",
+        "combo": "×0",
+        "feedback": "Potion selected — choose a receiver.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "moon",
+        "activePotionId": "potion-4",
+        "upcomingPotions": [
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": true,
+        "score": 20,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Potion selected — choose a receiver.",
+        "potionIndex": 4
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.accepted",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "moon.rejected-resolved",
+          "activeMask": "receiver-moon-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 800,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection.selected",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          107.41,
+          125.6,
+          -170
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-2",
+          "destination": "star",
+          "correct": true,
+          "potionIndexBefore": 2,
+          "potionIndexAfter": 3
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-3",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-3",
+          "destination": "moon",
+          "correct": false,
+          "potionIndexBefore": 3,
+          "potionIndexAfter": 4
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-4",
+          "pointerId": 0
+        },
+        {
+          "kind": "drag-return",
+          "actorId": "potion-4",
+          "destination": null
+        }
+      ]
+    },
+    {
+      "label": "mixed-input-round-complete",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "40",
+        "combo": "×2",
+        "feedback": "Round complete! Score: 40",
+        "resultHidden": false
+      },
+      "round": {
+        "activePotion": null,
+        "activePotionId": null,
+        "upcomingPotions": [],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 40,
+        "combo": 2,
+        "timeRemaining": 30,
+        "roundComplete": true,
+        "feedback": "Round complete! Score: 40",
+        "potionIndex": 6
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "sun.accepted",
+          "activeMask": "receiver-sun-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 340,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.rejected-resolved",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.accepted",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "moon.rejected-resolved",
+          "activeMask": "receiver-moon-local",
+          "visible": true,
+          "alpha": 0,
+          "depth": 46,
+          "position": {
+            "x": 800,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "moon.accepted",
+          "activeMask": "receiver-moon-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 800,
+            "y": 747
+          },
+          "scale": 0.62
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "SortingStationRig",
+          "anchorState": "star.accepted",
+          "activeMask": "receiver-star-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 46,
+          "position": {
+            "x": 1260,
+            "y": 747
+          },
+          "scale": 0.62
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          -114.28,
+          -50.28,
+          99.27
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "tap-select",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-0",
+          "destination": "sun",
+          "correct": true,
+          "potionIndexBefore": 0,
+          "potionIndexAfter": 1
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-1",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-1",
+          "destination": "star",
+          "correct": false,
+          "potionIndexBefore": 1,
+          "potionIndexAfter": 2
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-2",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-2",
+          "destination": "star",
+          "correct": true,
+          "potionIndexBefore": 2,
+          "potionIndexAfter": 3
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-3",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-3",
+          "destination": "moon",
+          "correct": false,
+          "potionIndexBefore": 3,
+          "potionIndexAfter": 4
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-4",
+          "pointerId": 0
+        },
+        {
+          "kind": "drag-return",
+          "actorId": "potion-4",
+          "destination": null
+        },
+        {
+          "kind": "drag-start",
+          "actorId": "potion-4",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "drag",
+          "actorId": "potion-4",
+          "destination": "moon",
+          "correct": true,
+          "potionIndexBefore": 4,
+          "potionIndexAfter": 5
+        },
+        {
+          "kind": "tap-select",
+          "actorId": "potion-5",
+          "pointerId": 0
+        },
+        {
+          "kind": "resolution",
+          "mode": "tap",
+          "actorId": "potion-5",
+          "destination": "star",
+          "correct": true,
+          "potionIndexBefore": 5,
+          "potionIndexAfter": 6
+        }
+      ]
+    },
+    {
+      "label": "minimum-initial-corrected-gearbox",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "canvas": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "hud": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "feedback": "Select the potion, then choose its receiver.",
+        "resultHidden": true
+      },
+      "round": {
+        "activePotion": "sun",
+        "activePotionId": "potion-0",
+        "upcomingPotions": [
+          {
+            "id": "potion-1",
+            "type": "moon"
+          },
+          {
+            "id": "potion-2",
+            "type": "star"
+          },
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Select the potion, then choose its receiver.",
+        "potionIndex": 0
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "activeMask": "aperture-local",
+          "visible": true,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": true,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          14.25,
+          -18.12,
+          27.75
+        ]
+      },
+      "interactions": []
+    },
+    {
+      "label": "timer-expired-drag-disabled",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "canvas": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "hud": {
+        "timer": "0s",
+        "score": "0",
+        "combo": "×0",
+        "feedback": "Time! Round complete.",
+        "resultHidden": false
+      },
+      "round": {
+        "activePotion": null,
+        "activePotionId": null,
+        "upcomingPotions": [],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 0,
+        "roundComplete": true,
+        "feedback": "Time! Round complete.",
+        "potionIndex": 0
+      },
+      "drag": {
+        "pointerId": null,
+        "dragging": false
+      },
+      "actors": [
+        {
+          "actorId": "potion-0",
+          "potionType": "sun",
+          "ownerRig": "InspectionApertureRig",
+          "anchorState": "inspection",
+          "activeMask": "aperture-local",
+          "visible": false,
+          "alpha": 1,
+          "depth": 32,
+          "position": {
+            "x": 800,
+            "y": 570
+          },
+          "scale": 0.88
+        },
+        {
+          "actorId": "potion-1",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.middle",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 30,
+          "position": {
+            "x": 800,
+            "y": 430
+          },
+          "scale": 0.5
+        },
+        {
+          "actorId": "potion-2",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "queue.rear",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 27,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 0.34
+        },
+        {
+          "actorId": "potion-3",
+          "potionType": "sun",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-4",
+          "potionType": "moon",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        },
+        {
+          "actorId": "potion-5",
+          "potionType": "star",
+          "ownerRig": "PotionQueuePresentation",
+          "anchorState": "hidden.future",
+          "activeMask": null,
+          "visible": false,
+          "alpha": 1,
+          "depth": 0,
+          "position": {
+            "x": 800,
+            "y": 310
+          },
+          "scale": 1
+        }
+      ],
+      "environment": {
+        "rearDepth": 3,
+        "mechanismDepth": 5,
+        "housingDepth": 6,
+        "serviceBayDepth": 7,
+        "gearAngles": [
+          91.78,
+          145.48,
+          159.58
+        ]
+      },
+      "interactions": [
+        {
+          "kind": "drag-start",
+          "actorId": "potion-0",
+          "pointerId": 0
+        },
+        {
+          "kind": "drag-disabled-round-complete",
+          "pointerId": 0
+        }
+      ]
+    }
+  ]
+}

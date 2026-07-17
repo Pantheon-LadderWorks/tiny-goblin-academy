@@ -14,12 +14,20 @@ describe('Potion Sorter simulation', () => {
       combo: 0,
       timeRemaining: 30,
       roundComplete: false,
-      feedback: 'Select the potion, then choose its shelf.'
+      feedback: 'Select the potion, then choose its receiver.'
     });
     expect(state.shelves).toEqual(['sun', 'moon', 'star']);
+    expect(state.activePotionId).toBe('potion-0');
+    expect(state.upcomingPotions).toEqual([
+      { id: 'potion-1', type: 'moon' },
+      { id: 'potion-2', type: 'star' },
+      { id: 'potion-3', type: 'sun' },
+      { id: 'potion-4', type: 'moon' },
+      { id: 'potion-5', type: 'star' }
+    ]);
   });
 
-  it('requires potion selection before a shelf placement can resolve', () => {
+  it('requires potion selection before a receiver placement can resolve', () => {
     const state = placePotion(createRoundState(), 'sun');
 
     expect(state).toMatchObject({
@@ -30,10 +38,10 @@ describe('Potion Sorter simulation', () => {
     });
   });
 
-  it('shows selected state before the player chooses a shelf', () => {
+  it('shows selected state before the player chooses a receiver', () => {
     const state = selectPotion(createRoundState());
 
-    expect(state).toMatchObject({ selectedPotion: true, feedback: 'Potion selected — choose a shelf.' });
+    expect(state).toMatchObject({ selectedPotion: true, feedback: 'Potion selected — choose a receiver.' });
   });
 
   it('rewards a correct selected placement with score and combo', () => {
@@ -42,11 +50,13 @@ describe('Potion Sorter simulation', () => {
 
     expect(state).toMatchObject({
       activePotion: 'moon',
+      activePotionId: 'potion-1',
       selectedPotion: false,
       score: 10,
       combo: 1,
       feedback: 'Correct! +10 points'
     });
+    expect(state.upcomingPotions[0]).toEqual({ id: 'potion-2', type: 'star' });
   });
 
   it('resets combo and gives immediate feedback for an incorrect placement', () => {
@@ -58,7 +68,7 @@ describe('Potion Sorter simulation', () => {
       selectedPotion: false,
       score: 0,
       combo: 0,
-      feedback: 'Wrong shelf — try the next potion.'
+      feedback: 'Wrong receiver — try the next potion.'
     });
   });
 

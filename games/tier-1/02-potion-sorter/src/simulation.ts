@@ -1,7 +1,14 @@
 export type PotionType = 'sun' | 'moon' | 'star';
 
+export interface RoundPotion {
+  id: string;
+  type: PotionType;
+}
+
 export interface RoundState {
   activePotion: PotionType | null;
+  activePotionId: string | null;
+  upcomingPotions: RoundPotion[];
   shelves: PotionType[];
   selectedPotion: boolean;
   score: number;
@@ -13,6 +20,7 @@ export interface RoundState {
 }
 
 const ROUND_POTIONS: PotionType[] = ['sun', 'moon', 'star', 'sun', 'moon', 'star'];
+const ROUND_QUEUE: RoundPotion[] = ROUND_POTIONS.map((type, index) => ({ id: `potion-${index}`, type }));
 const ROUND_SECONDS = 30;
 
 function nextPotionState(state: RoundState, score: number, combo: number, feedback: string): RoundState {
@@ -21,6 +29,8 @@ function nextPotionState(state: RoundState, score: number, combo: number, feedba
     return {
       ...state,
       activePotion: null,
+      activePotionId: null,
+      upcomingPotions: [],
       selectedPotion: false,
       score,
       combo,
@@ -33,6 +43,8 @@ function nextPotionState(state: RoundState, score: number, combo: number, feedba
   return {
     ...state,
     activePotion: ROUND_POTIONS[potionIndex],
+    activePotionId: ROUND_QUEUE[potionIndex].id,
+    upcomingPotions: ROUND_QUEUE.slice(potionIndex + 1),
     selectedPotion: false,
     score,
     combo,
@@ -44,20 +56,22 @@ function nextPotionState(state: RoundState, score: number, combo: number, feedba
 export function createRoundState(): RoundState {
   return {
     activePotion: ROUND_POTIONS[0],
+    activePotionId: ROUND_QUEUE[0].id,
+    upcomingPotions: ROUND_QUEUE.slice(1),
     shelves: ['sun', 'moon', 'star'],
     selectedPotion: false,
     score: 0,
     combo: 0,
     timeRemaining: ROUND_SECONDS,
     roundComplete: false,
-    feedback: 'Select the potion, then choose its shelf.',
+    feedback: 'Select the potion, then choose its receiver.',
     potionIndex: 0
   };
 }
 
 export function selectPotion(state: RoundState): RoundState {
   if (state.roundComplete || state.activePotion === null) return state;
-  return { ...state, selectedPotion: true, feedback: 'Potion selected — choose a shelf.' };
+  return { ...state, selectedPotion: true, feedback: 'Potion selected — choose a receiver.' };
 }
 
 export function placePotion(state: RoundState, shelf: PotionType): RoundState {
@@ -68,7 +82,7 @@ export function placePotion(state: RoundState, shelf: PotionType): RoundState {
     return nextPotionState(state, state.score + 10, state.combo + 1, 'Correct! +10 points');
   }
 
-  return nextPotionState(state, state.score, 0, 'Wrong shelf — try the next potion.');
+  return nextPotionState(state, state.score, 0, 'Wrong receiver — try the next potion.');
 }
 
 export function tick(state: RoundState, seconds: number): RoundState {
@@ -79,6 +93,8 @@ export function tick(state: RoundState, seconds: number): RoundState {
   return {
     ...state,
     activePotion: null,
+    activePotionId: null,
+    upcomingPotions: [],
     selectedPotion: false,
     timeRemaining: 0,
     roundComplete: true,

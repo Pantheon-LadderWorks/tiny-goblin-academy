@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1",
+  "laneId": "H6.6B-potion-sorter-live-composition-c-human-review-closure",
+  "reviewedOn": "2026-07-17",
+  "humanReviewPassed": true,
+  "compositionCApproved": true,
+  "productionIntegrated": true,
+  "runtimeApproved": true,
+  "tapInputApproved": true,
+  "additiveDragInputApproved": true,
+  "stableActorContinuityApproved": true,
+  "openGantryApproved": true,
+  "mechanicalServiceBayApproved": true,
+  "duplicateRightRackRemoved": true,
+  "sourceGameplayAuthorityPreserved": true,
+  "canonicalSpatialComposition": "Composition C",
+  "designFindings": [
+    "Left wing = botanicals and ingredient storage.",
+    "Center = conveyor, inspection, and sorting authority.",
+    "Right wing = machinery and service apparatus.",
+    "The right wing must not regain a colorful bottle rack or duplicate storage board.",
+    "Tap and drag are parallel presentation inputs into the same controller command path.",
+    "SceneRig remains presentation architecture; simulation/controller remain gameplay authority.",
+    "Composition C is now the canonical live Potion Sorter spatial composition."
+  ],
+  "rejectedRegressions": [
+    "detached destination rack",
+    "diagonal side-feed composition",
+    "cloned or recreated potion actors",
+    "hidden active-potion swap",
+    "disappearing transit or receiver handoff",
+    "solid black inspection portal",
+    "duplicate right-side potion or tool rack",
+    "separate scoring paths for tap and drag",
+    "duplicate drag resolution",
+    "gameplay authority inside SceneRig"
+  ]
+}
