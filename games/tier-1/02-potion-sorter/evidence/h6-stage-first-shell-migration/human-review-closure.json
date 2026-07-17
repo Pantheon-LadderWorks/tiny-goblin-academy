@@ -1,0 +1,19 @@
+{
+  "laneId": "H6.5-potion-sorter-stage-first-shell-migration",
+  "passed": true,
+  "humanReviewStatus": "passed",
+  "reviewedOn": "2026-07-17",
+  "shellStatus": "approved",
+  "productionSceneRigIntegrated": false,
+  "runtimeGameplayAuthorityChanged": false,
+  "approvedAuthority": [
+    "permanent left statistics rail removed",
+    "permanent right How To Play rail removed",
+    "Time, Score, and Combo live inside the expanding game stage",
+    "transient instruction and completion feedback remain in-stage",
+    "Potion Sorter rules live in the shared Help modal",
+    "click-potion then click-destination gameplay remains intact",
+    "stage fills the supported iframe area at 1920x1080 and 1024x640"
+  ],
+  "nextLaneBoundary": "Composition C may replace the temporary interior presentation without duplicating the outer lesson title or changing simulation/controller authority."
+}

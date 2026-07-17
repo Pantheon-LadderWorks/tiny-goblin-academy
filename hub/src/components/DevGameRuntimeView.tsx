@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { getRuntimeHelpContent } from '../data/runtimeHelp';
 
 export interface ActiveDevGameRuntime {
   gameId: string;
@@ -35,6 +36,7 @@ const runtimeShellContract: AcademyRuntimeShellContract = {
 
 export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime, onClose, isStopping }) => {
   const [activeOverlay, setActiveOverlay] = useState<RuntimeOverlay>(null);
+  const helpContent = useMemo(() => getRuntimeHelpContent(runtime.gameId), [runtime.gameId]);
 
   const closeOverlay = () => setActiveOverlay(null);
   const toggleOverlay = (overlay: Exclude<RuntimeOverlay, null>) => {
@@ -160,14 +162,10 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
 
               {activeOverlay === 'help' && (
                 <div className="runtime-overlay-body" data-typography-role="body-instruction">
-                  <p>
-                    Help is the future home for objectives, controls, and rules that used to sit in permanent side panels.
-                  </p>
-                  <ul>
-                    <li>Keyboard and touch controls should be listed here.</li>
-                    <li>Player-facing controls move into the game stage when needed.</li>
-                    <li>Dev/test controls move to the Dev overlay.</li>
-                  </ul>
+                  <p><strong>Objective:</strong> {helpContent.objective}</p>
+                  <p><strong>Controls:</strong> {helpContent.controls}</p>
+                  <ul>{helpContent.rules.map((rule) => <li key={rule}>{rule}</li>)}</ul>
+                  {helpContent.hint && <div className="runtime-contract-card">{helpContent.hint}</div>}
                 </div>
               )}
 

@@ -12,11 +12,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="masthead">
       <div class="eyebrow">TINY GOBLIN ACADEMY · LEVEL 02</div>
       <h1>Potion Sorter</h1>
-      <p class="objective">Sort the correctly colored potions into the cauldron. You have 30 seconds.</p>
+      <p class="objective">Select each potion, then send it to the matching destination before time runs out.</p>
     </div>
-    
-    <div class="game-layout">
-      <div class="stat-stack">
+
+    <div class="game-stage" aria-label="Potion Sorter game stage">
+      <div class="hud-layer" aria-label="Current round status">
         <div class="stat-card">
           <span>Time</span>
           <strong id="timer">30s</strong>
@@ -30,21 +30,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <strong id="combo">×1</strong>
         </div>
       </div>
-      
-      <div class="playfield-wrap">
+
+      <div class="play-surface">
         <div id="game-canvas"></div>
+      </div>
+
+      <div class="feedback-layer" aria-live="polite">
         <p id="instruction" class="instruction">Sort the potions!</p>
         <div id="round-result" class="round-result" hidden></div>
-      </div>
-      
-      <div class="how-to">
-        <span class="how-to-kicker">HOW TO PLAY</span>
-        <ol>
-            <li>Check the cauldron color</li>
-            <li>Find matching potions</li>
-            <li>Drag them in before time runs out</li>
-        </ol>
-        <p class="hint">Wrong color breaks your combo.</p>
       </div>
     </div>
   </div>

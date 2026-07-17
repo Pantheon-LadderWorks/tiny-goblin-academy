@@ -1,0 +1,306 @@
+{
+  "passed": true,
+  "capturedAt": "2026-07-17T15:55:55.015Z",
+  "audits": [
+    {
+      "label": "desktop-initial",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "bodyScroll": {
+        "width": 1920,
+        "height": 1080
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1896,
+        "height": 1080
+      },
+      "stage": {
+        "x": 12,
+        "y": 123,
+        "width": 1896,
+        "height": 945
+      },
+      "hud": {
+        "x": 29,
+        "y": 140,
+        "width": 1862,
+        "height": 71
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "instruction": "Select the potion, then choose its shelf.",
+        "roundResult": "",
+        "roundResultHidden": true
+      }
+    },
+    {
+      "label": "desktop-selected",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "bodyScroll": {
+        "width": 1920,
+        "height": 1080
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1896,
+        "height": 1080
+      },
+      "stage": {
+        "x": 12,
+        "y": 123,
+        "width": 1896,
+        "height": 945
+      },
+      "hud": {
+        "x": 29,
+        "y": 140,
+        "width": 1862,
+        "height": 71
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "instruction": "Potion selected — choose a shelf.",
+        "roundResult": "",
+        "roundResultHidden": true
+      }
+    },
+    {
+      "label": "desktop-correct-placement",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "bodyScroll": {
+        "width": 1920,
+        "height": 1080
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1896,
+        "height": 1080
+      },
+      "stage": {
+        "x": 12,
+        "y": 123,
+        "width": 1896,
+        "height": 945
+      },
+      "hud": {
+        "x": 29,
+        "y": 140,
+        "width": 1862,
+        "height": 71
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "10",
+        "combo": "×1",
+        "instruction": "Correct! +10 points",
+        "roundResult": "",
+        "roundResultHidden": true
+      }
+    },
+    {
+      "label": "desktop-round-complete",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "bodyScroll": {
+        "width": 1920,
+        "height": 1080
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1896,
+        "height": 1080
+      },
+      "stage": {
+        "x": 12,
+        "y": 123,
+        "width": 1896,
+        "height": 945
+      },
+      "hud": {
+        "x": 29,
+        "y": 140,
+        "width": 1862,
+        "height": 71
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "canvas": {
+        "x": 15,
+        "y": 126,
+        "width": 1890,
+        "height": 939
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "60",
+        "combo": "×6",
+        "instruction": "Round complete! Score: 60",
+        "roundResult": "Round complete · 60 points",
+        "roundResultHidden": false
+      }
+    },
+    {
+      "label": "minimum-initial",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "bodyScroll": {
+        "width": 1024,
+        "height": 640
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1000,
+        "height": 640
+      },
+      "stage": {
+        "x": 12,
+        "y": 104,
+        "width": 1000,
+        "height": 524
+      },
+      "hud": {
+        "x": 29,
+        "y": 121,
+        "width": 966,
+        "height": 70
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "canvas": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "instruction": "Select the potion, then choose its shelf.",
+        "roundResult": "",
+        "roundResultHidden": true
+      }
+    },
+    {
+      "label": "minimum-selected",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "bodyScroll": {
+        "width": 1024,
+        "height": 640
+      },
+      "shell": {
+        "x": 12,
+        "y": 0,
+        "width": 1000,
+        "height": 640
+      },
+      "stage": {
+        "x": 12,
+        "y": 104,
+        "width": 1000,
+        "height": 524
+      },
+      "hud": {
+        "x": 29,
+        "y": 121,
+        "width": 966,
+        "height": 70
+      },
+      "playSurface": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "canvas": {
+        "x": 15,
+        "y": 107,
+        "width": 994,
+        "height": 518
+      },
+      "permanentSideRails": 0,
+      "status": {
+        "timer": "30s",
+        "score": "0",
+        "combo": "×0",
+        "instruction": "Potion selected — choose a shelf.",
+        "roundResult": "",
+        "roundResultHidden": true
+      }
+    }
+  ]
+}
