@@ -54,17 +54,6 @@ body {
 
 h1 {
   margin: 0;
-  color: var(--text-light);
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  line-height: .95;
-  text-shadow: 4px 4px 0 #6e4057;
-}
-
-.masthead h1 {
-  --academy-type-color: var(--text-light);
-  --academy-type-stroke: 1px #39231a;
-  --academy-type-shadow: 4px 4px 0 #6e4057;
-  font-size: clamp(28px, calc(28px + 14 * ((100vw - 360px) / 1080)), 42px);
 }
 
 .objective {
@@ -316,21 +305,7 @@ button:disabled[data-typography-role] {
   width: 100%;
   margin: 0;
   padding: .1em .14em;
-  color: #5b361f;
-  font-family: 'Cinzel', Georgia, serif;
-  font-weight: 700;
-  font-size: clamp(22px, calc(22px + 16 * ((100vw - 360px) / 1080)), 38px);
-  line-height: 1.1;
-  letter-spacing: .02em;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px #f7e2b0;
-  text-shadow: 0 3px 3px rgba(77, 44, 26, .3);
-}
-
-.victory-title {
-  --academy-type-color: #5b361f;
-  --academy-type-stroke: 1px #f7e2b0;
-  --academy-type-shadow: 0 3px 3px rgba(77, 44, 26, .3);
 }
 
 .victory-text {
@@ -474,10 +449,6 @@ button:disabled[data-typography-role] {
 }
 
 @media (max-height: 720px) {
-  .masthead h1 {
-    font-size: clamp(28px, 3vw, 40px);
-  }
-
   .objective {
     margin-top: 4px;
   }

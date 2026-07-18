@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { createAcademyPhaserTextStyle } from '../../../../../assets/academy/fonts/runtime/academy-typography';
 
 import { STAGE } from './config';
 
@@ -183,9 +184,9 @@ export class PotionRoomRig {
   }
 
   private shelfTitle(label: string): Phaser.GameObjects.Text {
-    return this.scene.add.text(125, 23, label, {
-      fontFamily: 'Cinzel, Georgia, serif', fontSize: '15px', color: '#e1b768', fontStyle: 'bold'
-    }).setOrigin(0.5);
+    return this.scene.add.text(125, 23, label, createAcademyPhaserTextStyle('compact-label', {
+      fontSize: '15px', color: '#e1b768', align: 'center'
+    })).setOrigin(0.5);
   }
 
   private addBottleGrid(root: Phaser.GameObjects.Container, all = true): void {

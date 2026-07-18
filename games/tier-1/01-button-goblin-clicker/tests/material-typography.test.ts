@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest';
 const gameRoot = resolve(import.meta.dirname, '..');
 const repoRoot = resolve(gameRoot, '../../..');
 const style = readFileSync(resolve(gameRoot, 'src/style.css'), 'utf8');
+const sharedStyle = readFileSync(resolve(repoRoot, 'assets/academy/fonts/runtime/academy-typography.css'), 'utf8');
 const markup = readFileSync(resolve(gameRoot, 'src/main.ts'), 'utf8');
 const tauriConfig = JSON.parse(readFileSync(resolve(repoRoot, 'hub/src-tauri/tauri.conf.json'), 'utf8'));
 
@@ -45,7 +46,7 @@ describe('H6.4A supported desktop and material typography contract', () => {
     expect(markup).toContain('data-typography-recipe="result-on-teal-frame"');
     expect(markup).toContain('data-typography-recipe="body-on-parchment"');
 
-    expect(rule('.victory-title')).toContain('font-size: clamp(22px');
+    expect(sharedStyle).toMatch(/\[data-typography-role='result-state'\][^{]*\{[^}]*font-size:\s*clamp\(24px[^}]*39px\)/);
     expect(rule('.victory-text')).toContain('font-size: clamp(17px');
     expect(rule('.victory-footer')).toContain('font-size: clamp(12px');
   });
@@ -58,7 +59,7 @@ describe('H6.4A supported desktop and material typography contract', () => {
   });
 
   it('keeps the page title and HUD values subordinate at the primary desktop size', () => {
-    expect(rule('.masthead h1')).toContain('42px)');
+    expect(sharedStyle).toMatch(/\[data-typography-role='game-title'\][^{]*\{[^}]*font-size:\s*clamp\(30px, 3\.8vw, 50px\)/);
     expect(rule('.stat-card strong')).toContain('28px)');
   });
 

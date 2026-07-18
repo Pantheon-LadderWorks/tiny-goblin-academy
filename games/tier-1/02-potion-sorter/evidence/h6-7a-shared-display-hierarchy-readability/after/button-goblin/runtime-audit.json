@@ -1,0 +1,378 @@
+{
+  "passed": true,
+  "capturedAt": "2026-07-17T22:35:35.756Z",
+  "audits": [
+    {
+      "label": "desktop-initial",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "title": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "50px",
+        "weight": "800",
+        "tracking": "1px",
+        "color": "rgb(241, 223, 174)",
+        "shadow": "rgb(110, 64, 87) 3px 3px 0px, rgb(36, 19, 38) 6px 6px 0px"
+      },
+      "resultTitle": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "39px",
+        "weight": "800",
+        "tracking": "0.195px",
+        "color": "rgb(59, 33, 25)",
+        "shadow": "rgba(247, 226, 176, 0.62) 1px 1px 0px, rgba(55, 28, 35, 0.34) 3px 3px 0px"
+      },
+      "victoryVisible": false
+    },
+    {
+      "label": "desktop-victory",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "title": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "50px",
+        "weight": "800",
+        "tracking": "1px",
+        "color": "rgb(241, 223, 174)",
+        "shadow": "rgb(110, 64, 87) 3px 3px 0px, rgb(36, 19, 38) 6px 6px 0px"
+      },
+      "resultTitle": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "39px",
+        "weight": "800",
+        "tracking": "0.195px",
+        "color": "rgb(59, 33, 25)",
+        "shadow": "rgba(247, 226, 176, 0.62) 1px 1px 0px, rgba(55, 28, 35, 0.34) 3px 3px 0px"
+      },
+      "victoryVisible": true
+    },
+    {
+      "label": "minimum-initial",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "title": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "38.912px",
+        "weight": "800",
+        "tracking": "0.77824px",
+        "color": "rgb(241, 223, 174)",
+        "shadow": "rgb(110, 64, 87) 3px 3px 0px, rgb(36, 19, 38) 6px 6px 0px"
+      },
+      "resultTitle": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "33.2222px",
+        "weight": "800",
+        "tracking": "0.166111px",
+        "color": "rgb(59, 33, 25)",
+        "shadow": "rgba(247, 226, 176, 0.62) 1px 1px 0px, rgba(55, 28, 35, 0.34) 3px 3px 0px"
+      },
+      "victoryVisible": false
+    },
+    {
+      "label": "minimum-victory",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "title": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "38.912px",
+        "weight": "800",
+        "tracking": "0.77824px",
+        "color": "rgb(241, 223, 174)",
+        "shadow": "rgb(110, 64, 87) 3px 3px 0px, rgb(36, 19, 38) 6px 6px 0px"
+      },
+      "resultTitle": {
+        "family": "Cinzel, Georgia, serif",
+        "size": "33.2222px",
+        "weight": "800",
+        "tracking": "0.166111px",
+        "color": "rgb(59, 33, 25)",
+        "shadow": "rgba(247, 226, 176, 0.62) 1px 1px 0px, rgba(55, 28, 35, 0.34) 3px 3px 0px"
+      },
+      "victoryVisible": true
+    }
+  ]
+}

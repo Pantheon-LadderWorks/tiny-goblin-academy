@@ -23,6 +23,19 @@ describe('Academy runtime typography contract', () => {
       family: 'Atkinson Hyperlegible',
       weight: 700,
     });
+    expect(getAcademyTypographyRecipe('game-title')).toMatchObject({
+      recipeId: 'game-title-on-dark',
+      family: 'Cinzel',
+      weight: 800,
+      sizeRangePx: [30, 50],
+    });
+    expect(getAcademyTypographyRecipe('result-state')).toMatchObject({
+      recipeId: 'result-on-teal-frame',
+      family: 'Cinzel',
+      weight: 800,
+      sizeRangePx: [24, 39],
+      letterSpacing: '.005em',
+    });
     expect(getAcademyTypographyRecipe('debug-information')).toMatchObject({
       recipeId: 'debug-on-dev-overlay',
       family: 'Fira Code',

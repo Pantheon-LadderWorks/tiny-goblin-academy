@@ -1,7 +1,7 @@
 :root {
   color: #f6ebcf;
   background: #130f20;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Caudex', Georgia, 'Times New Roman', serif;
 }
 
 * { box-sizing: border-box; }
@@ -33,24 +33,19 @@ body {
 .eyebrow {
   margin: 0 0 4px;
   color: #e7bd6b;
-  font-family: ui-monospace, monospace;
-  font-size: .72rem;
-  font-weight: 700;
+  font-size: clamp(12px, 1.25vw, 16px);
   letter-spacing: .12em;
 }
 
 h1 {
   margin: 0;
-  color: #fff1c6;
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  line-height: .95;
-  text-shadow: 4px 4px 0 #6e4057;
 }
 
 .objective {
   margin: 8px 0 0;
   color: #d7c9b2;
-  font-size: clamp(.9rem, 2vw, 1.1rem);
+  font-size: clamp(17px, 1.7vw, 21px);
+  line-height: 1.25;
 }
 
 .game-stage {
@@ -90,8 +85,7 @@ h1 {
 .stat-card span {
   display: block;
   color: #e4bb7c;
-  font-family: ui-monospace, monospace;
-  font-size: clamp(.68rem, 1.4vw, .82rem);
+  font-size: clamp(12px, 1.25vw, 16px);
   letter-spacing: .06em;
   text-transform: uppercase;
 }
@@ -100,7 +94,7 @@ h1 {
   display: block;
   margin-top: 5px;
   color: #fff1c6;
-  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  font-size: clamp(18px, 2vw, 28px);
   white-space: nowrap;
   text-shadow: 0 2px 3px rgba(0, 0, 0, .8);
 }
@@ -139,7 +133,7 @@ h1 {
   border-radius: 999px;
   background: rgba(19, 15, 32, .72);
   color: #fff1c6;
-  font-weight: 700;
+  font-size: clamp(17px, 1.55vw, 22px);
   text-align: center;
   text-shadow: 2px 2px 0 #1a1527;
   white-space: nowrap;
@@ -148,18 +142,41 @@ h1 {
 .round-result {
   position: absolute;
   inset: 50% auto auto 50%;
-  width: min(420px, calc(100% - 32px));
+  width: min(600px, calc(100% - 32px));
   margin: 0;
-  padding: 24px;
-  transform: translate(-50%, -50%) rotate(-2deg);
-  border: 3px solid #e7bd6b;
-  border-radius: 16px;
-  background: #56344e;
-  color: #fff1c6;
-  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
-  font-weight: 700;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .52));
+}
+
+.round-result-title,
+.round-result-score,
+.round-result-footer {
+  margin: 0;
+  width: 100%;
   text-align: center;
-  box-shadow: 0 8px 0 #271728;
+}
+
+.round-result-title {
+  white-space: nowrap;
+}
+
+.round-result-score {
+  font-size: clamp(17px, 2vw, 23px);
+}
+
+.round-result-footer {
+  color: #3d291d;
+  font-size: clamp(12px, 1.25vw, 16px);
+  line-height: 1.05;
+  text-shadow: 0 1px 1px rgba(55, 31, 18, .16);
+  white-space: nowrap;
+}
+
+.round-result[data-asset-state='fallback'] .round-result-title,
+.round-result[data-asset-state='fallback'] .round-result-score,
+.round-result[data-asset-state='fallback'] .round-result-footer {
+  color: #fff1c6;
+  -webkit-text-stroke: 0;
 }
 
 @media (max-width: 640px) {
@@ -188,6 +205,6 @@ h1 {
 }
 
 @media (max-height: 720px) {
-  .masthead h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
   .objective { margin-top: 4px; }
+  .round-result { width: min(530px, calc(100% - 32px)); }
 }

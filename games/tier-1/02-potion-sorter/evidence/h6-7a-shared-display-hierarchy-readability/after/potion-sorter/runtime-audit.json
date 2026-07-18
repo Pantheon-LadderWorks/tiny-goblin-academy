@@ -1,0 +1,753 @@
+{
+  "passed": true,
+  "capturedAt": "2026-07-17T22:32:01.230Z",
+  "audits": [
+    {
+      "label": "desktop-initial",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "typography": {
+        "title": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "50px",
+          "weight": "800",
+          "color": "rgb(241, 223, 174)"
+        },
+        "hudLabel": {
+          "family": "Outfit, Arial, sans-serif",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(228, 187, 124)"
+        },
+        "hudValue": {
+          "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "size": "28px",
+          "weight": "700",
+          "color": "rgb(255, 241, 198)"
+        },
+        "instruction": {
+          "family": "Macondo, Georgia, serif",
+          "size": "22px",
+          "weight": "400",
+          "color": "rgb(255, 241, 198)"
+        },
+        "resultTitle": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "39px",
+          "weight": "800",
+          "color": "rgb(59, 33, 25)"
+        },
+        "phaserRoles": [
+          "compact-label"
+        ]
+      },
+      "result": {
+        "hidden": true,
+        "assetState": "loaded",
+        "surface": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "title": "Alchemy Complete!",
+        "score": "Final score · 0 points",
+        "footer": "ALL POTIONS PROCESSED · SHIFT COMPLETE"
+      },
+      "round": {
+        "activePotion": "sun",
+        "activePotionId": "potion-0",
+        "upcomingPotions": [
+          {
+            "id": "potion-1",
+            "type": "moon"
+          },
+          {
+            "id": "potion-2",
+            "type": "star"
+          },
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Select the potion, then choose its receiver.",
+        "potionIndex": 0
+      }
+    },
+    {
+      "label": "desktop-round-complete",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "typography": {
+        "title": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "50px",
+          "weight": "800",
+          "color": "rgb(241, 223, 174)"
+        },
+        "hudLabel": {
+          "family": "Outfit, Arial, sans-serif",
+          "size": "16px",
+          "weight": "600",
+          "color": "rgb(228, 187, 124)"
+        },
+        "hudValue": {
+          "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "size": "28px",
+          "weight": "700",
+          "color": "rgb(255, 241, 198)"
+        },
+        "instruction": {
+          "family": "Macondo, Georgia, serif",
+          "size": "22px",
+          "weight": "400",
+          "color": "rgb(255, 241, 198)"
+        },
+        "resultTitle": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "39px",
+          "weight": "800",
+          "color": "rgb(59, 33, 25)"
+        },
+        "phaserRoles": [
+          "compact-label"
+        ]
+      },
+      "result": {
+        "hidden": false,
+        "assetState": "loaded",
+        "surface": {
+          "x": 660,
+          "y": 421,
+          "width": 600,
+          "height": 362
+        },
+        "title": "Alchemy Complete!",
+        "score": "Final score · 60 points",
+        "footer": "ALL POTIONS PROCESSED · SHIFT COMPLETE"
+      },
+      "round": {
+        "activePotion": null,
+        "activePotionId": null,
+        "upcomingPotions": [],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 60,
+        "combo": 6,
+        "timeRemaining": 30,
+        "roundComplete": true,
+        "feedback": "Round complete! Score: 60",
+        "potionIndex": 6
+      }
+    },
+    {
+      "label": "minimum-initial",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "typography": {
+        "title": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "38.912px",
+          "weight": "800",
+          "color": "rgb(241, 223, 174)"
+        },
+        "hudLabel": {
+          "family": "Outfit, Arial, sans-serif",
+          "size": "12.8px",
+          "weight": "600",
+          "color": "rgb(228, 187, 124)"
+        },
+        "hudValue": {
+          "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "size": "20.48px",
+          "weight": "700",
+          "color": "rgb(255, 241, 198)"
+        },
+        "instruction": {
+          "family": "Macondo, Georgia, serif",
+          "size": "17px",
+          "weight": "400",
+          "color": "rgb(255, 241, 198)"
+        },
+        "resultTitle": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "33.2222px",
+          "weight": "800",
+          "color": "rgb(59, 33, 25)"
+        },
+        "phaserRoles": [
+          "compact-label"
+        ]
+      },
+      "result": {
+        "hidden": true,
+        "assetState": "loaded",
+        "surface": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "title": "Alchemy Complete!",
+        "score": "Final score · 0 points",
+        "footer": "ALL POTIONS PROCESSED · SHIFT COMPLETE"
+      },
+      "round": {
+        "activePotion": "sun",
+        "activePotionId": "potion-0",
+        "upcomingPotions": [
+          {
+            "id": "potion-1",
+            "type": "moon"
+          },
+          {
+            "id": "potion-2",
+            "type": "star"
+          },
+          {
+            "id": "potion-3",
+            "type": "sun"
+          },
+          {
+            "id": "potion-4",
+            "type": "moon"
+          },
+          {
+            "id": "potion-5",
+            "type": "star"
+          }
+        ],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 30,
+        "roundComplete": false,
+        "feedback": "Select the potion, then choose its receiver.",
+        "potionIndex": 0
+      }
+    },
+    {
+      "label": "minimum-round-complete",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "typography": {
+        "title": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "38.912px",
+          "weight": "800",
+          "color": "rgb(241, 223, 174)"
+        },
+        "hudLabel": {
+          "family": "Outfit, Arial, sans-serif",
+          "size": "12.8px",
+          "weight": "600",
+          "color": "rgb(228, 187, 124)"
+        },
+        "hudValue": {
+          "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "size": "20.48px",
+          "weight": "700",
+          "color": "rgb(255, 241, 198)"
+        },
+        "instruction": {
+          "family": "Macondo, Georgia, serif",
+          "size": "17px",
+          "weight": "400",
+          "color": "rgb(255, 241, 198)"
+        },
+        "resultTitle": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "33.2222px",
+          "weight": "800",
+          "color": "rgb(59, 33, 25)"
+        },
+        "phaserRoles": [
+          "compact-label"
+        ]
+      },
+      "result": {
+        "hidden": false,
+        "assetState": "loaded",
+        "surface": {
+          "x": 247,
+          "y": 210,
+          "width": 530,
+          "height": 320
+        },
+        "title": "Alchemy Complete!",
+        "score": "Final score · 60 points",
+        "footer": "ALL POTIONS PROCESSED · SHIFT COMPLETE"
+      },
+      "round": {
+        "activePotion": null,
+        "activePotionId": null,
+        "upcomingPotions": [],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 60,
+        "combo": 6,
+        "timeRemaining": 30,
+        "roundComplete": true,
+        "feedback": "Round complete! Score: 60",
+        "potionIndex": 6
+      }
+    },
+    {
+      "label": "minimum-timer-expired",
+      "viewport": {
+        "width": 1024,
+        "height": 640
+      },
+      "documentSize": {
+        "width": 1024,
+        "height": 640
+      },
+      "fonts": [
+        {
+          "family": "Cinzel Decorative",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel Decorative\"",
+          "sourcePath": "../source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 600,
+          "descriptor": "600 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 700,
+          "descriptor": "700 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Cinzel",
+          "weight": 800,
+          "descriptor": "800 16px \"Cinzel\"",
+          "sourcePath": "../source/google-fonts/cinzel/Cinzel[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Caudex",
+          "weight": 700,
+          "descriptor": "700 16px \"Caudex\"",
+          "sourcePath": "../source/google-fonts/caudex/Caudex-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Outfit",
+          "weight": 600,
+          "descriptor": "600 16px \"Outfit\"",
+          "sourcePath": "../source/google-fonts/outfit/Outfit[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Atkinson Hyperlegible",
+          "weight": 700,
+          "descriptor": "700 16px \"Atkinson Hyperlegible\"",
+          "sourcePath": "../source/google-fonts/atkinsonhyperlegible/AtkinsonHyperlegible-Bold.ttf",
+          "loaded": true
+        },
+        {
+          "family": "Fira Code",
+          "weight": 400,
+          "descriptor": "400 16px \"Fira Code\"",
+          "sourcePath": "../source/google-fonts/firacode/FiraCode[wght].ttf",
+          "loaded": true
+        },
+        {
+          "family": "Macondo",
+          "weight": 400,
+          "descriptor": "400 16px \"Macondo\"",
+          "sourcePath": "../source/google-fonts/macondo/Macondo-Regular.ttf",
+          "loaded": true
+        }
+      ],
+      "typography": {
+        "title": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "38.912px",
+          "weight": "800",
+          "color": "rgb(241, 223, 174)"
+        },
+        "hudLabel": {
+          "family": "Outfit, Arial, sans-serif",
+          "size": "12.8px",
+          "weight": "600",
+          "color": "rgb(228, 187, 124)"
+        },
+        "hudValue": {
+          "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+          "size": "20.48px",
+          "weight": "700",
+          "color": "rgb(255, 241, 198)"
+        },
+        "instruction": {
+          "family": "Macondo, Georgia, serif",
+          "size": "17px",
+          "weight": "400",
+          "color": "rgb(255, 241, 198)"
+        },
+        "resultTitle": {
+          "family": "Cinzel, Georgia, serif",
+          "size": "33.2222px",
+          "weight": "800",
+          "color": "rgb(59, 33, 25)"
+        },
+        "phaserRoles": [
+          "compact-label"
+        ]
+      },
+      "result": {
+        "hidden": false,
+        "assetState": "loaded",
+        "surface": {
+          "x": 247,
+          "y": 210,
+          "width": 530,
+          "height": 320
+        },
+        "title": "Shift Ended!",
+        "score": "Final score · 0 points",
+        "footer": "TIMER EXPIRED · POTIONS REMAIN"
+      },
+      "round": {
+        "activePotion": null,
+        "activePotionId": null,
+        "upcomingPotions": [],
+        "shelves": [
+          "sun",
+          "moon",
+          "star"
+        ],
+        "selectedPotion": false,
+        "score": 0,
+        "combo": 0,
+        "timeRemaining": 0,
+        "roundComplete": true,
+        "feedback": "Time! Round complete.",
+        "potionIndex": 0
+      }
+    }
+  ]
+}

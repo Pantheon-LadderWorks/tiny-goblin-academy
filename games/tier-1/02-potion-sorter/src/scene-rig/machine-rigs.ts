@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { createAcademyPhaserTextStyle } from '../../../../../assets/academy/fonts/runtime/academy-typography';
 
 import type { PotionType } from '../simulation';
 import { DESTINATIONS, PERSPECTIVE, RECEIVER_FRAMES } from './config';
@@ -84,7 +85,9 @@ export class SortingStationRig {
           .lineStyle(5, spec.color, 0.96).strokeRoundedRect(-115, -80, 230, 170, 28),
         scene.add.image(0, 0, 'potion-sheet', `${spec.type}-receiver`).setDisplaySize(165, 159).setAlpha(0.94),
         scene.add.tileSprite(0, 105, 180, 42, 'parchment').setTint(0xe1bd7c),
-        scene.add.text(0, 104, spec.label, { fontFamily: 'Cinzel, Georgia, serif', fontSize: '17px', color: '#2c1c18', fontStyle: 'bold' }).setOrigin(0.5)
+        scene.add.text(0, 104, spec.label, createAcademyPhaserTextStyle('compact-label', {
+          fontSize: '17px', color: '#2c1c18', align: 'center', stroke: 'transparent', strokeThickness: 0
+        })).setOrigin(0.5)
       ]);
       this.root.add(stationRoot);
       const mask = scene.add.graphics().setVisible(false).fillRoundedRect(spec.x - 76, spec.y - 70, 152, 142, 42).createGeometryMask();
