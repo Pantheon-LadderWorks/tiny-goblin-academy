@@ -43,14 +43,14 @@
       "historicallyPassed": true,
       "sourceAvailable": true,
       "devRunnable": true,
-      "buildAvailable": false,
+      "buildAvailable": true,
       "playableAvailable": true,
       "playableMode": "dev",
       "restorationDeferred": false,
-      "coreLesson": "Drag and drop logic, basic state checking.",
+      "coreLesson": "Interactive matching, explicit input mapping, and discrete state transitions.",
       "shortDescription": "Sort magical potions before they explode.",
-      "controls": "Mouse drag and drop",
-      "notes": "Ready for future asset integration."
+      "controls": "Mouse click/tap-select or drag and drop",
+      "notes": "Composition C SceneRig and shared typography integration passed human visual review."
     },
     {
       "id": "tga-03",

@@ -8,7 +8,7 @@ All 10 games from the initial Tier 1 ladder have successfully reached the "Playt
 | Level | Title | Folder Path | Status | Tests Status | Evidence Status | Human Review Status | Primary Lesson | Notable Correction/Drift |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Button Goblin Clicker | `games/tier-1/01-button-goblin-clicker` | Playtested / Human Review Passed | Passed | Captured / historical + current visual-planning evidence | Passed | Basic state-to-UI reactivity | Source restored. First planned runtime visual integration candidate; older source-loss notes remain historical. |
-| 2 | Potion Sorter | `games/tier-1/02-potion-sorter` | Playtested / Human Review Passed | Unknown | Captured (Assumed) | Passed | Interactive matching and discrete state transitions | Enforced correct visual output for correct states |
+| 2 | Potion Sorter | `games/tier-1/02-potion-sorter` | Playtested / Human Review Passed; Visual Integration Passed | 26 tests passed | Current runtime/evidence captured at 1920x1080 and 1024x640 | Passed | Interactive matching and discrete state transitions | Built the Composition C SceneRig while preserving simulation authority; corrected material, containment, perspective, actor ownership, service-bay, and shared display hierarchy defects through review. |
 | 3 | Dice Duel Tavern | `games/tier-1/03-dice-duel-tavern` | Playtested / Human Review Passed | Unknown | Incomplete/Not run | Passed | Simple turn-based dice math and causal feedback | Clarifying duel bounds without expanding into RPG engine |
 | 4 | Card Goblin Duel | `games/tier-1/04-card-goblin-duel` | Playtested / Human Review Passed | Passed | Captured | Passed | State-machine phases | Failed spike initially rendered debug-page UI, caught in review |
 | 5 | 10x10 Dungeon Key Run | `games/tier-1/05-dungeon-key-run` | Playtested / Human Review Passed | Passed | Captured | Passed | Spatial navigation and hazards | Hazard irrelevance initially (was easily bypassed) |
@@ -25,7 +25,9 @@ All 10 games from the initial Tier 1 ladder have successfully reached the "Playt
 - Standardize capture script
 - Formal postmortem/case study
 
-## Future Phase Candidates (NOT STARTED)
-- Tauri-based Hub/Launcher (`hub/`)
-- Butler/Itch deployment pipeline (`scripts/`)
-- Tier 2 (v0.2 enhancements / new game types)
+## Current and Future Phase Boundaries
+- Tauri development Hub/Launcher: active and validated
+- Tier 1.5 visual integration: Levels 1 and 2 complete; Level 3 next
+- Fresh packaged Academy executable: pending the current Potion Sorter documentation closure
+- Butler/Itch deployment pipeline: future release lane
+- Tier 2 (v0.2 enhancements / new game types): not started

@@ -246,6 +246,13 @@ Semantic recipes bound Cinzel to result/title authority, Caudex to parchment bod
 - `manifests/academy/runtime/planning/academy.typography-runtime-integration-h5-99.json`
 - `a541b3c` — Academy typography system promotion.
 - `bfd0bb2` — Button Goblin typography runtime integration.
+- `20c0b0f` — shared display hierarchy correction proven in Button Goblin and Potion Sorter.
+
+H6.7A later strengthened the live shared `game-title` and `result-state`
+recipes after Potion Sorter exposed that the correct family was still too
+delicate. Because the fix belonged to shared authority, Button Goblin received
+the same Cinzel 800 weight and crisp plum/result shadow correction with fresh
+desktop and minimum-window evidence rather than a game-local patch.
 
 ### Inheritance passed to Potion Sorter
 

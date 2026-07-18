@@ -114,7 +114,7 @@ manifest.games.forEach((game, index) => {
     assert(game.historicallyPassed === true, `Game ${game.id} historicallyPassed must be true`);
     assert(game.sourceAvailable === true, `Game ${game.id} sourceAvailable must be true`);
     assert(game.devRunnable === true, `Game ${game.id} devRunnable must be true`);
-    assert(game.buildAvailable === false, `Game ${game.id} buildAvailable must be false`);
+    assert(typeof game.buildAvailable === 'boolean', `Game ${game.id} buildAvailable must be a boolean`);
     assert(game.playableAvailable === true, `Game ${game.id} playableAvailable must be true`);
     assert(game.playableMode === 'dev', `Game ${game.id} playableMode must be dev`);
     assert(game.restorationDeferred === false, `Game ${game.id} restorationDeferred must be false`);
