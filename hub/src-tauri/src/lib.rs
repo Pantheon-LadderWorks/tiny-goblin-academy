@@ -239,6 +239,19 @@ fn get_workspace_root() -> Option<PathBuf> {
             }
         }
     }
+
+    // 3. Local developer release builds may place app.exe outside the repository.
+    // Cargo still provides the source manifest directory used to compile the Hub,
+    // so validate that path against the canonical Academy manifest before using it.
+    let mut source_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    for _ in 0..6 {
+        if source_path.join(ACADEMY_GAMES_MANIFEST_PATH).exists() {
+            return source_path.canonicalize().ok().or(Some(source_path));
+        }
+        if !source_path.pop() {
+            break;
+        }
+    }
     
     None
 }
@@ -1198,4 +1211,31 @@ pub fn run() {
           _ => {}
       }
   });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn resolves_workspace_when_process_is_launched_outside_repository() {
+        let original_dir = std::env::current_dir().expect("current directory should resolve");
+        let external_dir = std::env::temp_dir().join(format!(
+            "tiny-goblin-academy-external-launch-{}",
+            std::process::id()
+        ));
+        fs::create_dir_all(&external_dir).expect("external launch directory should exist");
+
+        std::env::set_current_dir(&external_dir)
+            .expect("test should simulate launching outside the repository");
+        let resolved = get_workspace_root();
+        std::env::set_current_dir(&original_dir).expect("original directory should be restored");
+        fs::remove_dir_all(&external_dir).expect("test launch directory should be removed");
+
+        let expected = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("../..")
+            .canonicalize()
+            .expect("compiled Hub source workspace should resolve");
+        assert_eq!(resolved, Some(expected));
+    }
 }
