@@ -1,0 +1,52 @@
+{
+  "ready": true,
+  "source": "deterministic-evidence",
+  "controller": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 1,
+    "mode": "full",
+    "busyState": "terminal",
+    "fallbackCount": 0
+  },
+  "presentation": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 1,
+    "mode": "full",
+    "busy": false,
+    "ready": false,
+    "settledRatio": 0.24499999999999997,
+    "settledScale": 0.4477442093835101,
+    "launchScale": 0.47908630404035585,
+    "trayInnerWidthCss": 690.725830078125,
+    "projectedWidthCss": 169.2278283691406,
+    "requestCount": 4,
+    "completionCount": 4,
+    "impactCount": 8,
+    "phase": "confirmation"
+  },
+  "state": {
+    "playerHp": 0,
+    "enemyHp": 6,
+    "phase": "lost",
+    "roll": null,
+    "log": [
+      "Your turn. Roll the d6.",
+      "You rolled 1.",
+      "You chose Attack for 1 damage.",
+      "Goblin Brawler attacks for 3.",
+      "You rolled 1.",
+      "You chose Attack for 1 damage.",
+      "Goblin Brawler attacks for 3.",
+      "You rolled 1.",
+      "You chose Attack for 1 damage.",
+      "Goblin Brawler attacks for 3.",
+      "You rolled 1.",
+      "You chose Attack for 1 damage.",
+      "Goblin Brawler attacks for 3."
+    ]
+  }
+}

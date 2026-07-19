@@ -20,14 +20,17 @@ const labFiles = [
 ];
 
 describe('H6.10 DieRig laboratory source contract', () => {
-  it('creates an isolated laboratory without changing the protected live runtime', () => {
+  it('keeps every approved H6.10 laboratory source byte-identical during live integration', () => {
     expect(labFiles.filter((path) => !existsSync(repoFile(path)))).toEqual([]);
-    expect(sha256('games/tier-1/03-dice-duel-tavern/src/simulation.ts')).toBe('ac5df7c97d6281a40e282e9c28a1ef922aa571f31d5fd4c503f4607254f8ae46');
-    expect(sha256('games/tier-1/03-dice-duel-tavern/src/main.ts')).toBe('971922160e934e1049369108637f5281471ac0cc7a428f8fee a9674ace9796b2'.replace(' ', ''));
-    expect(sha256('games/tier-1/03-dice-duel-tavern/src/styles.css')).toBe('a0fd2fe18b4fd498af61975e485a2f5989e724bb65164a4905ff0d692a84b5da');
-    expect(sha256('games/tier-1/03-dice-duel-tavern/index.html')).toBe('e62fd925b9124179f67ed1c9705c3c781a66c2735da3615b27017101572333a7');
-    expect(sha256('games/tier-1/03-dice-duel-tavern/package.json')).toBe('f47d002e87dc3a6da13e571a8bf0086c977d8f5f92ff0a9dc55c98c8cee20798');
-    expect(sha256('pnpm-lock.yaml')).toBe('af2e59974669109a578974d3314cbf429510de88fe5eb497ba424b05228acf26');
+    expect(sha256(labFiles[0])).toBe('b43b543e1a2d745b371e396d96cdfac33011c99543792eda4cef9932838d72b2');
+    expect(sha256(labFiles[1])).toBe('0c57be0d8fb3c3b96eb2739d37acee6547029961dad37232f50f24779103f3d7');
+    expect(sha256(labFiles[2])).toBe('3667c89ad4f4898770bf9d8e1954132bc79d51225ad50340d3c4858733cb5717');
+    expect(sha256(labFiles[3])).toBe('20f7064a7268bbe33bc1444ad0eca9f01bdb0f0212a6694d6ac0877e2dbb2eb0');
+    expect(sha256(labFiles[4])).toBe('6bbcf59547b2fac976800ccd0433124dc49b241661f5a3821cb3a84e609f2e3b');
+    expect(sha256(labFiles[5])).toBe('04643756f7fb9bf8e26f96a527377c0f1357355c370b2c53fb1c62b54b4e08cf');
+    expect(sha256(labFiles[6])).toBe('1f0ef15d7b961774315f6b8c5d15af4c215908fd2be65dadd2287c198f0cc67c');
+    expect(sha256(labFiles[7])).toBe('cf644a10e04c39d28aacd5c35b3966aab0b2f7952d83369702750e7ce5d60e67');
+    expect(sha256(labFiles[8])).toBe('b1b9ecdf0b4f8c9dd5fc6d54f6240ab79670ed1f6f995c84736201e6c0c243b7');
   });
 
   it('maps only the six canonical flat-face identities from the reviewed derivative', () => {

@@ -1,0 +1,12 @@
+{
+  "buildEntry": "dist/index.html",
+  "queryAttempted": "?evidenceRolls=4,3&motion=reduced",
+  "reportedSource": "production-crypto",
+  "reportedMode": "full",
+  "settledFace": 2,
+  "settledFaceInRange": true,
+  "deterministicEvidenceOverrideIgnored": true,
+  "developmentMotionOverrideIgnored": true,
+  "consoleErrors": [],
+  "status": "passed"
+}

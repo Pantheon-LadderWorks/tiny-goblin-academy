@@ -1,0 +1,40 @@
+{
+  "ready": true,
+  "source": "deterministic-evidence",
+  "controller": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": null,
+    "mode": "full",
+    "busyState": "ready",
+    "fallbackCount": 0
+  },
+  "presentation": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 1,
+    "mode": "full",
+    "busy": false,
+    "ready": true,
+    "settledRatio": 0.245,
+    "settledScale": 0.554988550118129,
+    "launchScale": 0.593837748626398,
+    "trayInnerWidthCss": 455.1787109375,
+    "projectedWidthCss": 111.5187841796875,
+    "requestCount": 0,
+    "completionCount": 0,
+    "impactCount": 0,
+    "phase": "idle"
+  },
+  "state": {
+    "playerHp": 10,
+    "enemyHp": 10,
+    "phase": "roll",
+    "roll": null,
+    "log": [
+      "Your turn. Roll the d6."
+    ]
+  }
+}

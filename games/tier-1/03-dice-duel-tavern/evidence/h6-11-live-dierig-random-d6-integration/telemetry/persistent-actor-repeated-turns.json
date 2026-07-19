@@ -1,0 +1,44 @@
+{
+  "ready": true,
+  "source": "deterministic-evidence",
+  "controller": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 3,
+    "mode": "full",
+    "busyState": "action",
+    "fallbackCount": 0
+  },
+  "presentation": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 3,
+    "mode": "full",
+    "busy": false,
+    "ready": false,
+    "settledRatio": 0.24499999999999997,
+    "settledScale": 0.4477442093835101,
+    "launchScale": 0.47908630404035585,
+    "trayInnerWidthCss": 690.725830078125,
+    "projectedWidthCss": 169.2278283691406,
+    "requestCount": 2,
+    "completionCount": 2,
+    "impactCount": 4,
+    "phase": "confirmation"
+  },
+  "state": {
+    "playerHp": 7,
+    "enemyHp": 10,
+    "phase": "action",
+    "roll": 3,
+    "log": [
+      "Your turn. Roll the d6.",
+      "You rolled 4.",
+      "You chose Heal for 4.",
+      "Goblin Brawler attacks for 3.",
+      "You rolled 3."
+    ]
+  }
+}

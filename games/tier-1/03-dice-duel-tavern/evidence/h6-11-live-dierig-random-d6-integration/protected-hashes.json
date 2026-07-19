@@ -1,0 +1,14 @@
+{
+  "labHashes": {
+    "dierig-lab.html": "b43b543e1a2d745b371e396d96cdfac33011c99543792eda4cef9932838d72b2",
+    "vite.config.ts": "0c57be0d8fb3c3b96eb2739d37acee6547029961dad37232f50f24779103f3d7",
+    "src/dierig/cube-projection.ts": "26ff9e7186d31ed49db74bec76d9983985ea5324bf7881b34c16958b031c2b93",
+    "src/dierig/dierig-authority.ts": "04643756f7fb9bf8e26f96a527377c0f1357355c370b2c53fb1c62b54b4e08cf",
+    "src/dierig/dierig-model.ts": "20f7064a7268bbe33bc1444ad0eca9f01bdb0f0212a6694d6ac0877e2dbb2eb0",
+    "src/dierig/dierig.ts": "1f0ef15d7b961774315f6b8c5d15af4c215908fd2be65dadd2287c198f0cc67c",
+    "src/dierig/face-mapping.ts": "3667c89ad4f4898770bf9d8e1954132bc79d51225ad50340d3c4858733cb5717",
+    "src/dierig/lab-main.ts": "cf644a10e04c39d28aacd5c35b3966aab0b2f7952d83369702750e7ce5d60e67",
+    "src/dierig/lab-styles.css": "b1b9ecdf0b4f8c9dd5fc6d54f6240ab79670ed1f6f995c84736201e6c0c243b7",
+    "src/dierig/motion-plan.ts": "6bbcf59547b2fac976800ccd0433124dc49b241661f5a3821cb3a84e609f2e3b"
+  }
+}

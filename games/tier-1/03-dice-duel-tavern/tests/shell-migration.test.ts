@@ -58,16 +58,14 @@ describe('Dice Duel Tavern H6.9 stage-first shell contract', () => {
     expect(helpData).toContain('Block reduces the immediate Goblin Brawler response');
   });
 
-  it('preserves the v0.1 roll source and defers DieRig, assets, randomness, and replay', () => {
+  it('preserves the H6.9 room while H6.11 replaces only the bounded die layer and roll source', () => {
     const simulation = readRepoFile('games/tier-1/03-dice-duel-tavern/src/simulation.ts');
     const source = readRepoFile('games/tier-1/03-dice-duel-tavern/src/main.ts');
 
-    expect(simulation).toContain('const dice=[4,3,6,2,5]');
+    expect(simulation).not.toContain('const dice=[4,3,6,2,5]');
     expect(source).not.toContain('Math.random');
-    expect(source).not.toContain('DieRig');
-    expect(source).not.toContain('assets/academy/games/dice-duel-tavern');
+    expect(source).toContain('LiveDieRigPresentation');
     expect(source).not.toContain('sprite');
-    expect(source).not.toContain('tween');
     expect(source).not.toMatch(/reset|replay/i);
   });
 
