@@ -1,0 +1,8 @@
+{
+  "lane": "H6.12",
+  "status": "passed",
+  "browserErrors": [],
+  "pngCountBeforeComparisons": 21,
+  "webmCount": 4,
+  "note": "Before/after comparison plates 03 and 04 are composed separately from protected H6.11 initial captures and H6.12 captures 01."
+}

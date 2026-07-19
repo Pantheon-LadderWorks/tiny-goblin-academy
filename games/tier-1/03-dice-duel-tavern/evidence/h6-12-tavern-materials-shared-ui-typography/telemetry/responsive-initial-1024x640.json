@@ -1,0 +1,266 @@
+{
+  "viewport": {
+    "width": 1024,
+    "height": 640
+  },
+  "documentOverflowX": false,
+  "stage": {
+    "left": 8,
+    "top": 91.484375,
+    "right": 1016,
+    "bottom": 632,
+    "width": 1008,
+    "height": 540.515625
+  },
+  "tray": {
+    "left": 275.44287109375,
+    "top": 319.36590576171875,
+    "right": 748.55712890625,
+    "bottom": 452.8105773925781,
+    "width": 473.1142578125,
+    "height": 133.44467163085938
+  },
+  "canvas": {
+    "left": 18,
+    "top": 94.484375,
+    "right": 1004.796875,
+    "bottom": 629,
+    "width": 986.796875,
+    "height": 534.515625
+  },
+  "causal": {
+    "left": 21,
+    "top": 539,
+    "right": 321.59375,
+    "bottom": 619,
+    "width": 300.59375,
+    "height": 80
+  },
+  "actions": {
+    "left": 335,
+    "top": 567,
+    "right": 689,
+    "bottom": 619,
+    "width": 354,
+    "height": 52
+  },
+  "causalActionOverlap": false,
+  "fonts": [
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "600",
+      "size": "10px"
+    },
+    {
+      "role": "game-title",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "800",
+      "size": "38.912px"
+    },
+    {
+      "role": "body-instruction",
+      "family": "Caudex, Georgia, serif",
+      "weight": "700",
+      "size": "13px"
+    },
+    {
+      "role": "panel-heading",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "700",
+      "size": "14px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "600",
+      "size": "7px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "600",
+      "size": "15.6889px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "700",
+      "size": "9px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "700",
+      "size": "10px"
+    },
+    {
+      "role": "dialogue-title",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "600",
+      "size": "14px"
+    },
+    {
+      "role": "data-value",
+      "family": "\"Atkinson Hyperlegible\", Arial, sans-serif",
+      "weight": "700",
+      "size": "18px"
+    },
+    {
+      "role": "panel-heading",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "600",
+      "size": "14px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "600",
+      "size": "12px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "700",
+      "size": "12px"
+    },
+    {
+      "role": "dialogue-speech",
+      "family": "Caudex, Georgia, serif",
+      "weight": "700",
+      "size": "12px"
+    },
+    {
+      "role": "result-state",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "800",
+      "size": "22px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "700",
+      "size": "15.6889px"
+    },
+    {
+      "role": "debug-information",
+      "family": "\"Fira Code\", Consolas, monospace",
+      "weight": "400",
+      "size": "10px"
+    },
+    {
+      "role": "compact-label",
+      "family": "Outfit, Arial, sans-serif",
+      "weight": "600",
+      "size": "11px"
+    },
+    {
+      "role": "dialogue-title",
+      "family": "Cinzel, Georgia, serif",
+      "weight": "600",
+      "size": "22px"
+    },
+    {
+      "role": "dialogue-speech",
+      "family": "Caudex, Georgia, serif",
+      "weight": "700",
+      "size": "14px"
+    }
+  ],
+  "diagnostics": {
+    "ready": true,
+    "source": "deterministic-evidence",
+    "visualAuthority": {
+      "promotedRegionIds": [
+        "dice-duel-tavern.duel-token.sword-token-red",
+        "dice-duel-tavern.duel-token.heal-token-green",
+        "dice-duel-tavern.duel-token.shield-token-teal-gold",
+        "dice-duel-tavern.tavern-prop.dice-cup-a",
+        "dice-duel-tavern.tavern-prop.tavern-mug",
+        "dice-duel-tavern.reward-token.coin-stacks",
+        "dice-duel-tavern.tavern-prop.candle-lit"
+      ],
+      "rejectedRegionIds": [
+        "dice-duel-tavern.dice-token.glowing-die",
+        "dice-duel-tavern.dice-token.paired-dice",
+        "dice-duel-tavern.roll-effect.rolling-die-left",
+        "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+        "dice-duel-tavern.roll-effect.tilted-die-glow",
+        "dice-duel-tavern.roll-effect.rolling-die-small",
+        "dice-duel-tavern.dice-token.dice-cluster",
+        "dice-duel-tavern.feedback-icon.sparkle-large-a",
+        "dice-duel-tavern.feedback-icon.sparkle-large-b",
+        "dice-duel-tavern.feedback-icon.sparkle-small-a",
+        "dice-duel-tavern.feedback-icon.sparkle-small-b",
+        "dice-duel-tavern.roll-effect.dust-puff-a",
+        "dice-duel-tavern.roll-effect.dust-puff-b",
+        "dice-duel-tavern.roll-effect.dust-puff-c",
+        "dice-duel-tavern.roll-effect.spiral-effect-a",
+        "dice-duel-tavern.roll-effect.spiral-effect-b",
+        "dice-duel-tavern.feedback-icon.burst-effect-a",
+        "dice-duel-tavern.feedback-icon.burst-effect-b",
+        "dice-duel-tavern.roll-effect.smoke-wisps"
+      ],
+      "rejectedPropDecisions": [
+        {
+          "id": "dice-duel-tavern.background-prop.hanging-sign",
+          "reason": "Too small for the existing hero tavern sign and redundant with its readable live lettering."
+        },
+        {
+          "id": "dice-duel-tavern.background-prop.wood-table-corner",
+          "reason": "Would compete with the approved perspective table geometry."
+        },
+        {
+          "id": "dice-duel-tavern.tavern-prop.food-plate",
+          "reason": "Adds clutter beside the protected die path without clarifying either station."
+        },
+        {
+          "id": "dice-duel-tavern.reward-token.coin-pouch",
+          "reason": "Duplicates the clearer coin-stack wager identity."
+        }
+      ],
+      "materialUrls": {
+        "structuralTimber": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber.png",
+        "heroTableWood": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/wooden.png",
+        "paintedIron": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/metal_plates.png",
+        "focalBrass": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal008/Metal008_1K-JPG_Color.jpg"
+      }
+    },
+    "controller": {
+      "actorId": "dierig-h6-10-actor-001",
+      "activeRequestId": null,
+      "requestedFace": null,
+      "settledFace": null,
+      "mode": "full",
+      "busyState": "ready",
+      "fallbackCount": 0
+    },
+    "presentation": {
+      "actorId": "dierig-h6-10-actor-001",
+      "activeRequestId": null,
+      "requestedFace": null,
+      "settledFace": 1,
+      "mode": "full",
+      "busy": false,
+      "ready": true,
+      "settledRatio": 0.245,
+      "settledScale": 0.5549099639594735,
+      "launchScale": 0.5937536614366367,
+      "trayInnerWidthCss": 455.1142578125,
+      "projectedWidthCss": 111.5029931640625,
+      "requestCount": 0,
+      "completionCount": 0,
+      "impactCount": 0,
+      "phase": "idle"
+    },
+    "state": {
+      "playerHp": 10,
+      "enemyHp": 10,
+      "phase": "roll",
+      "roll": null,
+      "log": [
+        "Your turn. Roll the d6."
+      ]
+    }
+  }
+}

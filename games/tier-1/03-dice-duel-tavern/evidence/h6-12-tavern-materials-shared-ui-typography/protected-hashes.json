@@ -1,0 +1,81 @@
+{
+  "baseline": "022afcecf64e11d80491c45a0ef566f13cec51e7",
+  "protectedFiles": {
+    "dierig-lab.html": {
+      "baselineSha256": "b43b543e1a2d745b371e396d96cdfac33011c99543792eda4cef9932838d72b2",
+      "currentSha256": "b43b543e1a2d745b371e396d96cdfac33011c99543792eda4cef9932838d72b2",
+      "unchanged": true
+    },
+    "vite.config.ts": {
+      "baselineSha256": "0c57be0d8fb3c3b96eb2739d37acee6547029961dad37232f50f24779103f3d7",
+      "currentSha256": "0c57be0d8fb3c3b96eb2739d37acee6547029961dad37232f50f24779103f3d7",
+      "unchanged": true
+    },
+    "src/dierig/cube-projection.ts": {
+      "baselineSha256": "26ff9e7186d31ed49db74bec76d9983985ea5324bf7881b34c16958b031c2b93",
+      "currentSha256": "26ff9e7186d31ed49db74bec76d9983985ea5324bf7881b34c16958b031c2b93",
+      "unchanged": true
+    },
+    "src/dierig/dierig-authority.ts": {
+      "baselineSha256": "04643756f7fb9bf8e26f96a527377c0f1357355c370b2c53fb1c62b54b4e08cf",
+      "currentSha256": "04643756f7fb9bf8e26f96a527377c0f1357355c370b2c53fb1c62b54b4e08cf",
+      "unchanged": true
+    },
+    "src/dierig/dierig-model.ts": {
+      "baselineSha256": "20f7064a7268bbe33bc1444ad0eca9f01bdb0f0212a6694d6ac0877e2dbb2eb0",
+      "currentSha256": "20f7064a7268bbe33bc1444ad0eca9f01bdb0f0212a6694d6ac0877e2dbb2eb0",
+      "unchanged": true
+    },
+    "src/dierig/dierig.ts": {
+      "baselineSha256": "1f0ef15d7b961774315f6b8c5d15af4c215908fd2be65dadd2287c198f0cc67c",
+      "currentSha256": "1f0ef15d7b961774315f6b8c5d15af4c215908fd2be65dadd2287c198f0cc67c",
+      "unchanged": true
+    },
+    "src/dierig/face-mapping.ts": {
+      "baselineSha256": "3667c89ad4f4898770bf9d8e1954132bc79d51225ad50340d3c4858733cb5717",
+      "currentSha256": "3667c89ad4f4898770bf9d8e1954132bc79d51225ad50340d3c4858733cb5717",
+      "unchanged": true
+    },
+    "src/dierig/lab-main.ts": {
+      "baselineSha256": "cf644a10e04c39d28aacd5c35b3966aab0b2f7952d83369702750e7ce5d60e67",
+      "currentSha256": "cf644a10e04c39d28aacd5c35b3966aab0b2f7952d83369702750e7ce5d60e67",
+      "unchanged": true
+    },
+    "src/dierig/lab-styles.css": {
+      "baselineSha256": "b1b9ecdf0b4f8c9dd5fc6d54f6240ab79670ed1f6f995c84736201e6c0c243b7",
+      "currentSha256": "b1b9ecdf0b4f8c9dd5fc6d54f6240ab79670ed1f6f995c84736201e6c0c243b7",
+      "unchanged": true
+    },
+    "src/dierig/motion-plan.ts": {
+      "baselineSha256": "6bbcf59547b2fac976800ccd0433124dc49b241661f5a3821cb3a84e609f2e3b",
+      "currentSha256": "6bbcf59547b2fac976800ccd0433124dc49b241661f5a3821cb3a84e609f2e3b",
+      "unchanged": true
+    },
+    "src/live-die-layout.ts": {
+      "baselineSha256": "5aeadb608a144e74e78efb99ecd9bcc4e28a686e0c7abc00cc289102e0850590",
+      "currentSha256": "5aeadb608a144e74e78efb99ecd9bcc4e28a686e0c7abc00cc289102e0850590",
+      "unchanged": true
+    },
+    "src/live-dierig-presentation.ts": {
+      "baselineSha256": "6d98ce1a45bdca6dda1b2edff5c9d12a6f182cd40d6eb570fa31c8b8382a6bd7",
+      "currentSha256": "6d98ce1a45bdca6dda1b2edff5c9d12a6f182cd40d6eb570fa31c8b8382a6bd7",
+      "unchanged": true
+    },
+    "src/live-duel-controller.ts": {
+      "baselineSha256": "96e33185c0bf1a4717d8d8eacb2d5582467936a450cf4182ba85fb0467ee4daf",
+      "currentSha256": "96e33185c0bf1a4717d8d8eacb2d5582467936a450cf4182ba85fb0467ee4daf",
+      "unchanged": true
+    },
+    "src/roll-source.ts": {
+      "baselineSha256": "0eae88bbaece5093f6a7d129fca5e4bfef3bddbecb9da7705f4efb70d7d45081",
+      "currentSha256": "0eae88bbaece5093f6a7d129fca5e4bfef3bddbecb9da7705f4efb70d7d45081",
+      "unchanged": true
+    },
+    "src/simulation.ts": {
+      "baselineSha256": "c3c4271f932bd2ef546f009e8513a5300cab64cf0a22a465758eb2fb4f02b973",
+      "currentSha256": "c3c4271f932bd2ef546f009e8513a5300cab64cf0a22a465758eb2fb4f02b973",
+      "unchanged": true
+    }
+  },
+  "allProtectedFilesUnchanged": true
+}

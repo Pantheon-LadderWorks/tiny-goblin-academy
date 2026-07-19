@@ -1,0 +1,99 @@
+{
+  "ready": true,
+  "source": "deterministic-evidence",
+  "visualAuthority": {
+    "promotedRegionIds": [
+      "dice-duel-tavern.duel-token.sword-token-red",
+      "dice-duel-tavern.duel-token.heal-token-green",
+      "dice-duel-tavern.duel-token.shield-token-teal-gold",
+      "dice-duel-tavern.tavern-prop.dice-cup-a",
+      "dice-duel-tavern.tavern-prop.tavern-mug",
+      "dice-duel-tavern.reward-token.coin-stacks",
+      "dice-duel-tavern.tavern-prop.candle-lit"
+    ],
+    "rejectedRegionIds": [
+      "dice-duel-tavern.dice-token.glowing-die",
+      "dice-duel-tavern.dice-token.paired-dice",
+      "dice-duel-tavern.roll-effect.rolling-die-left",
+      "dice-duel-tavern.roll-effect.tumbling-die-shadow",
+      "dice-duel-tavern.roll-effect.tilted-die-glow",
+      "dice-duel-tavern.roll-effect.rolling-die-small",
+      "dice-duel-tavern.dice-token.dice-cluster",
+      "dice-duel-tavern.feedback-icon.sparkle-large-a",
+      "dice-duel-tavern.feedback-icon.sparkle-large-b",
+      "dice-duel-tavern.feedback-icon.sparkle-small-a",
+      "dice-duel-tavern.feedback-icon.sparkle-small-b",
+      "dice-duel-tavern.roll-effect.dust-puff-a",
+      "dice-duel-tavern.roll-effect.dust-puff-b",
+      "dice-duel-tavern.roll-effect.dust-puff-c",
+      "dice-duel-tavern.roll-effect.spiral-effect-a",
+      "dice-duel-tavern.roll-effect.spiral-effect-b",
+      "dice-duel-tavern.feedback-icon.burst-effect-a",
+      "dice-duel-tavern.feedback-icon.burst-effect-b",
+      "dice-duel-tavern.roll-effect.smoke-wisps"
+    ],
+    "rejectedPropDecisions": [
+      {
+        "id": "dice-duel-tavern.background-prop.hanging-sign",
+        "reason": "Too small for the existing hero tavern sign and redundant with its readable live lettering."
+      },
+      {
+        "id": "dice-duel-tavern.background-prop.wood-table-corner",
+        "reason": "Would compete with the approved perspective table geometry."
+      },
+      {
+        "id": "dice-duel-tavern.tavern-prop.food-plate",
+        "reason": "Adds clutter beside the protected die path without clarifying either station."
+      },
+      {
+        "id": "dice-duel-tavern.reward-token.coin-pouch",
+        "reason": "Duplicates the clearer coin-stack wager identity."
+      }
+    ],
+    "materialUrls": {
+      "structuralTimber": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/kenney/extracted-selected/wall_timber.png",
+      "heroTableWood": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/wooden.png",
+      "paintedIron": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100c/opengameart/deadkir-handpainted-tileables/originals/metal_plates.png",
+      "focalBrass": "http://127.0.0.1:4315/@fs/C:/Users/kryst/Workspace/game-development/ai-game-studio-ladder/assets/academy/materials/source/h5-100/ambientcg/extracted-color/Metal008/Metal008_1K-JPG_Color.jpg"
+    }
+  },
+  "controller": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 4,
+    "mode": "full",
+    "busyState": "ready",
+    "fallbackCount": 0
+  },
+  "presentation": {
+    "actorId": "dierig-h6-10-actor-001",
+    "activeRequestId": null,
+    "requestedFace": null,
+    "settledFace": 4,
+    "mode": "full",
+    "busy": false,
+    "ready": true,
+    "settledRatio": 0.245,
+    "settledScale": 0.4476904018295401,
+    "launchScale": 0.479028729957608,
+    "trayInnerWidthCss": 690.642822265625,
+    "projectedWidthCss": 169.20749145507813,
+    "requestCount": 1,
+    "completionCount": 1,
+    "impactCount": 2,
+    "phase": "confirmation"
+  },
+  "state": {
+    "playerHp": 7,
+    "enemyHp": 6,
+    "phase": "roll",
+    "roll": null,
+    "log": [
+      "Your turn. Roll the d6.",
+      "You rolled 4.",
+      "You chose Attack for 4 damage.",
+      "Goblin Brawler attacks for 3."
+    ]
+  }
+}
