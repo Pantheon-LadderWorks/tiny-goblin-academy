@@ -59,7 +59,7 @@ Every visual integration pass must:
 | --- | --- | --- | --- | --- | --- |
 | 1 | Button Goblin Clicker | Code-authored ActorRig, material typography, and selective physical UI surfaces | Local open fonts and modular actor/UI presentation ingredients | Cleaned sprite regions, scene anchors, responsive shell composition | Completed and documented |
 | 2 | Potion Sorter | SceneRig and layered material composition | Stylized and realistic textures, material surfaces, grime, parchment, glass-support ingredients | Typography, physical UI surfaces, actor/prop placement | Completed and documented; game ledger pending human review |
-| 3 | Dice Duel Tavern | Procedural motion choreography and readable interaction feedback | Dice faces, action glyphs, cursors, and input prompts | Typography, SceneRig layering, restrained material treatment | Planned |
+| 3 | Dice Duel Tavern | Procedural motion choreography and readable interaction feedback | Dice faces, action glyphs, cursors, and input prompts | Typography, SceneRig layering, restrained material treatment | Completed and documented |
 | 4 | Card Goblin Duel | Authored particle/VFX recipes synchronized to gameplay events | Particle sprites, glows, impacts, trails, card ornament, and repeatable patterns | Motion choreography, typography, physical card/UI surfaces | Planned |
 | 5 | Dungeon Key Run | Spatial readability through masks, lighting, occlusion, and decals | Light/shadow overlays, cracks, soot, tracks, danger marks, and navigation decals | Particles for restrained pickup/impact feedback, motion, materials | Planned |
 | 6 | Tiny Farm Day | Stateful tile grammar, patterns, and palette discipline | Terrain and crop-state tiles, transition pieces, patterns, and palette families | Decals, materials, motion, readable state feedback | Planned |
@@ -149,6 +149,10 @@ Teach interaction presentation through anticipation, roll, tumble, bounce, settl
 ### Lesson boundary
 
 Dice Duel may use small visual accents, but it does not own the particle-system lesson. Its proof is a readable motion timeline whose final state always agrees with simulation truth.
+
+### Closure state
+
+Completed. H5.30–H5.33 prepared and reviewed 64 mapped source regions without confusing preparation with runtime approval. H6.9 established the Crooked Six stage before actor integration; H6.10 proved one persistent six-face Mesh2D DieRig in isolation; H6.11 integrated production Web Crypto authority, explicit rolling/input gates, full and reduced motion, production scale, and continuous actor ownership; H6.12 added restrained materials, semantic typography, selective mapped action/prop assets, and terminal tavern plaques. Runtime, evidence, human visual review, human runtime review, and both mechanical/visual lessons records passed. The evidence-size inventory and D-drive warehouse lane remains intentionally incomplete and precedes Level 4.
 
 ## Level 4 — Card Goblin Duel
 

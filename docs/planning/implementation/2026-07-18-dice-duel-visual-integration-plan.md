@@ -1,5 +1,7 @@
 # Dice Duel Tavern Visual Integration Plan
 
+**Execution status:** Completed through H6.12. Stage-first shell, persistent DieRig laboratory, production-random live integration, materials/UI/typography, human runtime review, and human visual review passed. The separate curriculum closure records the completed lesson; evidence-warehouse migration remains outside this plan.
+
 Date: 2026-07-18
 Status: human-approved implementation runway; H6.9 is the next bounded implementation lane.
 

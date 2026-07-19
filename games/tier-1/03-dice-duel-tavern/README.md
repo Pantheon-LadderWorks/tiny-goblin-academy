@@ -1,31 +1,59 @@
 # Dice Duel Tavern
 
-> **Status:** Playtested — Kryssie manually reviewed and accepted the v0.1 loop. It is not Released and no v0.2 work is authorized.
+> **Current status:** Playable, build-capable, human runtime reviewed, human visual reviewed, and runtime-approved. The v0.1 mechanical lesson and Tier 1.5 visual-integration lesson are closed. Dice Duel has no standalone game executable and has not been tested as a production/distribution catalog entry.
 
-## v0.1 premise
+## Current duel
 
-Win one compact tavern duel against the Goblin Brawler: roll dice, choose Attack, Heal, or Block, then survive its deterministic response.
+Dice Duel Tavern is one compact turn-based fight against the Goblin Brawler inside the Crooked Six tavern.
 
-## Primary player verb
+Each player turn follows one explicit authority sequence:
 
-Choose one turn action after a roll.
+`roll → rolling → action → enemy response → next roll or terminal result`
 
-## Planned loop
+One shared authoritative d6 determines the value of exactly one player choice:
 
-Start turn → roll dice → choose Attack, Heal, or Block → resolve player/enemy state → enemy responds → repeat until win or loss.
+- **Attack** deals the rolled value.
+- **Heal** restores the rolled value, capped at 10 HP.
+- **Block** reduces the immediate deterministic three-damage Goblin Brawler response.
 
-## Cross-game lesson
+The simulation owns HP, action legality, the committed roll, logs, and victory/defeat. Production rolls come from Web Crypto with unbiased rejection sampling. Tests and evidence use injected deterministic roll sources without changing production authority.
 
-Game 1 proved one-click progression. Game 2 proved bounded alternate input and feedback. Level 3 tests whether an AI can manage a readable turn loop, enemy response, and win/loss state without expanding into a larger RPG.
+## Presentation
 
-## Planning documents
+- One persistent six-face Phaser Mesh2D `DieRig` leaves the player-side ready station, tumbles through two bounded impacts, settles in the shared tray, and returns as the same actor.
+- Full and reduced-motion paths reveal the same already-committed result.
+- The stage-first Crooked Six tavern keeps compact HP plaques, the dark shared rolling tray, asymmetric wager props, and deliberate negative space around motion.
+- The latest causal exchange remains visible; complete simulation history opens in a contextual drawer.
+- Terminal victory and defeat plaques preserve both HP authorities and the final settled die.
+- Academy-local typography and existing approved timber, wood, dark-metal, brass, and mapped Dice Duel assets provide the final visual grammar.
+- No replay/reset, particles, shaders, audio, equipment, extra dice, or expanded combat system is present.
 
-- `PLAYABLE_LOOP_CONTRACT.md` — v0.1 scope, turn clarity, and evidence boundary.
-- `AGENT_TASKS.md` — future implementation prompt; not current authorization.
-- `PLAYTEST_REPORT.md` — future browser evidence record.
-- `RELEASE_CHECKLIST.md` — decision gate after v0.1 is playtested.
-- `HUMAN_REVIEW.md` — future manual acceptance guide.
+## Development
 
-## Next approval required
+From this folder:
 
-Kryssie must approve the Dice Duel Tavern Playable Loop Contract and explicitly authorize bounded v0.1 implementation before any runtime, package, source, asset, or build file is created.
+```powershell
+pnpm dev
+```
+
+Production web build, including the protected DieRig laboratory entry:
+
+```powershell
+pnpm build
+```
+
+The repository’s packaged or development Academy Hub can launch Dice Duel in repository/developer mode by locating this source workspace and managing its local game server. That behavior is intentional for people working from the public repository. It is not a standalone Dice Duel executable, and the separate production/distribution catalog mode was not tested as part of Dice Duel’s closure.
+
+## Learning records
+
+- `PLAYABLE_LOOP_CONTRACT.md` — preserved historical v0.1 mechanical authority.
+- `LESSONS_LEARNED.md` — reconstructed mechanical/playable-loop lesson.
+- `LESSONS_LEARNED_VISUAL_INTEGRATION.md` — H5.30–H6.12 visual/runtime chapter.
+- `PLAYTEST_REPORT.md` — corrected historical v0.1 manual-review record.
+- `RELEASE_CHECKLIST.md` — v0.1 archival next-state record; no separate game release claimed.
+- `CURRICULUM_CLOSURE.json` — machine-readable current closure flags.
+- `evidence/` — committed H6.9–H6.12 responsive, motion, authority, material, and terminal-state proof.
+
+## Authority boundary
+
+The original v0.1 lesson proved a bounded causal turn loop using a fixed test-friendly sequence and primitive presentation. Later H6 work added production randomness, explicit rolling authority, the persistent DieRig, stage-first tavern presentation, materials, typography, and mapped assets. Those later capabilities do not retroactively belong to the first prototype.

@@ -4,6 +4,8 @@
 
 Playtested / Human Review Passed — Kryssie manually verified the v0.1 duel and accepted it as a playable game. No release or v0.2 authorization is implied.
 
+This contract remains the historical mechanical authority. Later H6.9–H6.12 work added the stage-first tavern, production Web Crypto source, explicit `rolling` phase, persistent DieRig choreography, reduced motion, typography, materials, and mapped assets. Those later capabilities are recorded in `LESSONS_LEARNED_VISUAL_INTEGRATION.md` and do not retroactively change the v0.1 scope below.
+
 ## Player fantasy
 
 I win a small, readable tavern duel by making one good choice after each dice roll.

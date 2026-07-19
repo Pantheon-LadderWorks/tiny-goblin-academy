@@ -8,7 +8,11 @@ Tier 1.5 is a bridge between the completed ten-level ladder and future Tier 2 wo
 * All ten reached Playtested / Human Review Passed.
 * Root archive docs now exist.
 * Monorepo strategy is preferred.
-* No release, hub implementation, v0.2, or Tier 2 work has started yet.
+* The Tauri Academy Hub and repository/developer launch path are active.
+* Tier 1.5 visual integration is complete through Level 3: Button Goblin Clicker, Potion Sorter, and Dice Duel Tavern.
+* Dice Duel’s mechanical and visual curriculum records are closed; no standalone game release or production-distribution-mode proof is claimed.
+* The immediate next lane is evidence-size inventory and D-drive warehouse planning before Level 4 begins.
+* No v0.2 or Tier 2 game implementation has started.
 
 ## Tier 1.5 Pillars
 1. Archive hardening.
@@ -28,14 +32,14 @@ The future tier-integration examination is governed by
 records mastery-game curriculum doctrine only; no mastery implementation,
 repository, title, or schedule is authorized.
 
-## Sequencing Recommendation
-1. Finish archive hardening.
-2. Create hub concept contract.
-3. Prototype Tauri launcher as its own bounded project.
-4. Plan visual asset pass.
-5. Decide whether visual pass happens before or after hub MVP.
-6. Draft Tier 2 plan.
-7. Only then start v0.2 or Level 11 work.
+## Current Sequence
+1. Preserve the completed Hub and Levels 1–3 visual/runtime authorities.
+2. Inventory repository and untracked heavy evidence without rewriting tracked Git history.
+3. Establish the approved D-drive evidence warehouse taxonomy and redirect future heavy captures.
+4. Continue Tier 1.5 with Card Goblin Duel’s hidden-state, synchronization, and particle/VFX lesson.
+5. Complete the remaining per-game visual passes and their separate learning records.
+6. Establish the private GlyphForge Studios Library after Tier 1.5 and before Tier 2.
+7. Begin no v0.2, Level 11, or Tier 2 implementation without a separate contract.
 
 ## Non-Goals
 * No Level 11 yet.

@@ -2,9 +2,9 @@
 
 > **Current status:** Playtested / Human Review Passed on 2026-06-23. This does not authorize v0.2 or release work.
 
-## Future review focus
+## Historical review focus
 
-When implementation is approved, verify that:
+The accepted v0.1 manual review verified that:
 
 1. The player always knows whose turn it is and what action is currently available.
 2. Dice roll results and their effect on action resolution are visible.
@@ -13,14 +13,13 @@ When implementation is approved, verify that:
 5. Victory and defeat are clear, not merely a number reaching zero.
 6. The duel feels like a compact tavern fight, not an RPG dashboard.
 
-## Future evidence locations
+## Historical and current evidence
 
-- Screenshots: `evidence/screenshots/`
-- Video: `evidence/videos/`
-- Notes: `evidence/playtest-notes/`
+- Original manual findings: `PLAYTEST_REPORT.md`
+- Current stage-first, DieRig, authority, responsive, and material evidence: `evidence/h6-9-stage-first-shell-migration/` through `evidence/h6-12-tavern-materials-shared-ui-typography/`
 
-## Future Human Review Gate
+## Human Review Gate
 
 **Recorded result:** Accepted. Kryssie manually verified Attack, Heal, Block, enemy response, victory, combat-log clarity, and recovery from 1 HP to victory. Sasha QA captured defeat-state evidence, satisfying the readable loss-state requirement without requiring Kryssie to lose.
 
-Accept only if the duel loop is visible, coherent, and causally legible enough to count as a game. Otherwise document the exact turn-clarity blocker in `PLAYTEST_REPORT.md` and return to the approved v0.1 scope.
+The original duel passed this gate. H6.9–H6.12 later passed separate runtime and visual gates without changing the accepted v0.1 action mathematics.

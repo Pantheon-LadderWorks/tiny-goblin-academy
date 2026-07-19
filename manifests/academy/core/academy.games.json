@@ -64,14 +64,14 @@
       "historicallyPassed": true,
       "sourceAvailable": true,
       "devRunnable": true,
-      "buildAvailable": false,
+      "buildAvailable": true,
       "playableAvailable": true,
       "playableMode": "dev",
       "restorationDeferred": false,
       "coreLesson": "Randomness and turn-based state.",
       "shortDescription": "Roll dice against a goblin patron.",
       "controls": "Mouse click",
-      "notes": "Ready for future asset integration."
+      "notes": "Stage-first Crooked Six tavern, persistent Mesh2D DieRig, production Web Crypto d6, reduced motion, materials, selective UI assets, and Academy typography passed human runtime and visual review. Mechanical and visual curriculum records are closed. Repository/developer-mode Hub launch is supported; no standalone game executable or production-distribution-mode Dice Duel proof exists."
     },
     {
       "id": "tga-04",

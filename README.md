@@ -19,7 +19,8 @@ This repository is a public, free, and open learning artifact serving as an evol
 * **Current Source Availability:** Games 01–10 are accessible under `games/tier-1/`.
 * **Current Level 1 Status:** Button Goblin Clicker is source-available, dev-runnable, and visually integrated with its cavern stage, `GoblinRig`, shared typography, and selective Academy UI surfaces.
 * **Current Level 2 Status:** Potion Sorter is source-available, dev-runnable, and visually integrated with its approved Composition C alchemy `SceneRig`, hybrid material palette, containment/masking system, shared typography, and authored result surface.
-* **Visual Integration Status:** Levels 1 and 2 have passed runtime/evidence/human visual review. Dice Duel Tavern is the next Tier 1.5 game; Top-Down Slime Quest remains last or near-last because its animation, tile behavior, placement, collision, pathfinding, and map rules are more complex.
+* **Current Level 3 Status:** Dice Duel Tavern is source-available, dev-runnable, build-capable, and visually integrated with its Crooked Six stage, persistent six-face `DieRig`, authoritative Web Crypto d6, reduced motion, selective mapped assets, materials, and Academy typography.
+* **Visual Integration Status:** Levels 1–3 have passed runtime/evidence/human visual review and have separate mechanical and visual learning records. The immediate next lane is evidence-size inventory and D-drive warehouse planning before Card Goblin Duel begins; Top-Down Slime Quest remains last or near-last because its animation, tile behavior, placement, collision, pathfinding, and map rules are more complex.
 
 ## What You Can Play / Study
 
@@ -27,7 +28,7 @@ This ladder contains 10 distinct, tightly scoped games. Each focuses on one smal
 
 1. **Button Goblin Clicker** — The simplest reactive loop. *(Source Available / Visual Integration Passed)*
 2. **Potion Sorter** — State validation and visual feedback. *(Source Available / Visual Integration Passed)*
-3. **Dice Duel Tavern** — RNG, probability limits, and turn states. *(Source Available)*
+3. **Dice Duel Tavern** — RNG authority, turn states, persistent motion, and causal presentation. *(Source Available / Visual Integration Passed / Curriculum Closed)*
 4. **Card Goblin Duel** — Hidden state, card resolution, and UI sync. *(Source Available)*
 5. **Dungeon Key Run** — Spatial movement, grid rules, and collision. *(Source Available)*
 6. **Tiny Farm Day** — Progression over time and multi-stage state machines. *(Source Available)*
@@ -70,7 +71,7 @@ See [CONTENT_LICENSE.md](CONTENT_LICENSE.md) for full details on how the license
 
 * **Package Manager:** Use `pnpm`, not `npm`.
 * **Clean Commits:** Do not commit generated dependency folders (`node_modules`), `.vite`, or build outputs.
-* **Architecture Shift:** The Tauri development hub and stage-first game shell are active. Levels 1 and 2 prove the current per-game visual-integration path while later levels remain development artifacts awaiting their own passes.
+* **Architecture Shift:** The Tauri development hub and stage-first game shell are active. Levels 1–3 prove the current per-game visual-integration path while later levels remain development artifacts awaiting their own passes.
 * **Artifact Philosophy:** The Academy preserves playable mechanical history, current visual runtimes, evidence, and lessons as separate authority layers. A source game becomes a reviewed runtime artifact through explicit per-game integration and human review.
 * **Asset Shelf Note:** Current asset docs begin at `docs/assets/README.md`; current manifests begin at `manifests/README.md`.
 
@@ -85,7 +86,7 @@ See [CONTENT_LICENSE.md](CONTENT_LICENSE.md) for full details on how the license
 * [x] Tier 1.5 visual asset pantry pass.
 * [x] Button Goblin Clicker runtime visual integration.
 * [x] Potion Sorter runtime visual integration.
-* [ ] Dice Duel Tavern runtime visual integration.
+* [x] Dice Duel Tavern runtime visual integration and curriculum closure.
 * [ ] Future per-game learning guide pair before itch release.
 
 ### Future Learning Path Guides
