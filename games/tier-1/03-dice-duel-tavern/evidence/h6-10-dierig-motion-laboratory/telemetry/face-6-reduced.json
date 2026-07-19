@@ -1,0 +1,48 @@
+{
+  "actorId": "dierig-h6-10-actor-001",
+  "requestCount": 1,
+  "completionCount": 1,
+  "rejectedOverlapCount": 0,
+  "impactCount": 0,
+  "requestedFace": null,
+  "lastRequestedFace": 6,
+  "settledFace": 6,
+  "mode": "reduced",
+  "seed": 206,
+  "phase": "confirmation",
+  "phaseTrail": [
+    "anticipation",
+    "settle",
+    "confirmation"
+  ],
+  "elapsed": 380,
+  "totalDuration": 380,
+  "phaseTimings": [
+    {
+      "phase": "anticipation",
+      "start": 0,
+      "end": 60
+    },
+    {
+      "phase": "settle",
+      "start": 60,
+      "end": 300
+    },
+    {
+      "phase": "confirmation",
+      "start": 300,
+      "end": 380
+    }
+  ],
+  "finalPosition": {
+    "x": -4.822,
+    "y": 0
+  },
+  "finalOrientation": {
+    "x": 0.952334,
+    "y": 0,
+    "z": -0.305059,
+    "w": 0
+  },
+  "busy": false
+}
