@@ -26797,12 +26797,12 @@
     "trackedReviewImageCeilingBytes": 2097152,
     "additionalLfsWorkAuthorized": false,
     "dualCheckoutImplementationAuthorized": false,
-    "githubBacklogBackupPending": true,
-    "githubBacklogBackupPassed": false,
+    "githubBacklogBackupPending": false,
+    "githubBacklogBackupPassed": true,
     "futureHeavyEvidenceRedirectionImplemented": false,
     "cardGoblinDuelStarted": false
   },
-  "status": "github-lfs-blocked-evidence-policy-pivot-backup-pending",
+  "status": "github-backlog-backup-passed",
   "h6_16aDisposableRewriteValidation": {
     "humanReviewPassed": true,
     "originalHead": "cf706a7c2d5e34c29510d94d55f2ede5634e4c88",
@@ -26835,8 +26835,8 @@
     "canonicalHistoryRewritten": false,
     "realEvidenceObjectsUploaded": 0,
     "additionalLfsWorkAuthorized": false,
-    "githubBacklogBackupPending": true,
-    "githubBacklogBackupPassed": false,
+    "githubBacklogBackupPending": false,
+    "githubBacklogBackupPassed": true,
     "futureHeavyEvidenceRedirectionImplemented": false,
     "cardGoblinDuelStarted": false
   },
@@ -26917,8 +26917,8 @@
     "junctionOrSymlinkUsed": false
   },
   "githubBacklogBackup": {
-    "pending": true,
-    "passed": false,
+    "pending": false,
+    "passed": true,
     "initialHead": "0beb388b99e937641ecef9f43f8a0165a3395827",
     "originMainBefore": "a05f22ba0276ea82a2f924dcda66d78f0a224b9e",
     "unpublishedCommitsBeforePivot": 211,
@@ -26934,8 +26934,24 @@
     "blobsAtLeast50MiB": [],
     "blobsOver100MiB": [],
     "ordinaryGitPushEligible": true,
-    "ordinaryGitPushUsed": false,
+    "ordinaryGitPushUsed": true,
     "lfsUploadUsed": false,
-    "lfsObjectsUploaded": 0
+    "lfsObjectsUploaded": 0,
+    "remoteSafetyBranchCreated": true,
+    "remoteSafetyBranchName": "tga-safety/pre-external-evidence-pivot-20260720T171804Z",
+    "remoteSafetyBranchCommit": "52a1239d35fdae3c71e5696a784a0bd3bbbea557",
+    "remoteSafetyBranchVerifiedAtUtc": "2026-07-20T17:25:25.7250953Z",
+    "remoteMainUpdated": true,
+    "remoteMainBefore": "a05f22ba0276ea82a2f924dcda66d78f0a224b9e",
+    "remoteMainCommit": "52a1239d35fdae3c71e5696a784a0bd3bbbea557",
+    "remoteMainVerifiedAtUtc": "2026-07-20T17:26:05.4883500Z",
+    "unpublishedCommitsBackedUp": 212,
+    "normalPushTransferMiB": 693.52,
+    "normalPushStayedBelow2GiB": true,
+    "initialSafetyPushHttp408": true,
+    "unchangedExactRefspecRetrySucceeded": true,
+    "canonicalHistoryRewritten": false,
+    "futureHeavyEvidenceRedirectionImplemented": false,
+    "cardGoblinDuelStarted": false
   }
 }

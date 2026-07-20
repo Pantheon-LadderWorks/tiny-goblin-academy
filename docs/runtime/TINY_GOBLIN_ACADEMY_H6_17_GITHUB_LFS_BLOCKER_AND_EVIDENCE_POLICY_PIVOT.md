@@ -4,7 +4,7 @@
 **Date:** 2026-07-20
 **Canonical baseline:** `0beb388b99e937641ecef9f43f8a0165a3395827`
 **Published baseline:** `a05f22ba0276ea82a2f924dcda66d78f0a224b9e`
-**Status before remote backup:** Policy pivot validated; ordinary-Git backlog backup pending
+**Final status:** Policy pivot committed; ordinary-Git backlog backup verified
 
 ## GitHub LFS outcome
 
@@ -52,11 +52,32 @@ The provisional tracked-review-image ceiling is 2 MiB. Exceptions require explic
 
 The ordinary-Git object gate passed. Actual remote pack acceptance is recorded only after the safety-branch push succeeds.
 
-## Pending remote preservation
+## Verified remote backup
 
-`githubBacklogBackupPending: true`
-`githubBacklogBackupPassed: false`
+The ordinary-Git preservation lane passed.
+
+- Safety branch created: yes
+- Safety branch: `tga-safety/pre-external-evidence-pivot-20260720T171804Z`
+- Safety branch commit: `52a1239d35fdae3c71e5696a784a0bd3bbbea557`
+- Safety branch verified UTC: `2026-07-20T17:25:25.7250953Z`
+- Remote main updated: yes
+- Remote main commit after pivot push: `52a1239d35fdae3c71e5696a784a0bd3bbbea557`
+- Remote main verified UTC: `2026-07-20T17:26:05.4883500Z`
+- Unpublished commits backed up: 212
+- Ordinary Git used: yes
+- LFS upload used: no
+- LFS objects uploaded: 0
+- Canonical history rewritten: no
+- Normal push transfer: 693.52 MiB
+- Normal push stayed below 2 GiB: yes
+- Future heavy-evidence redirection implemented: no
+- Card Goblin Duel started: no
+
+The first safety-branch client attempt ended with HTTP 408 and created no remote ref. Remote truth was checked before any retry. One unchanged retry of the exact refspec succeeded; no chunk fallback, transport switch, history rewrite, force update, or alternate remote was used.
+
+The frozen pre-push head/tag ledger and the post-push audit differ only as authorized: remote main advanced from `a05f22ba0276ea82a2f924dcda66d78f0a224b9e` to `52a1239d35fdae3c71e5696a784a0bd3bbbea557`, and the named safety branch was added at the same pivot commit. The safety branch remains intact as an emergency recovery point.
+
+`githubBacklogBackupPending: false`
+`githubBacklogBackupPassed: true`
 `futureHeavyEvidenceRedirectionImplemented: false`
 `cardGoblinDuelStarted: false`
-
-The next mutation is narrowly authorized: commit this documentation pivot, push the exact pivot tip to a collision-free safety branch, verify it, then fast-forward remote main. No force, broad refspec, tag push, LFS upload, or history rewrite is permitted.
