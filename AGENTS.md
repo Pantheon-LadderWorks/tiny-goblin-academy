@@ -8,14 +8,27 @@ The approved evidence architecture is not yet implemented. Do not behave as if i
 
 ```yaml
 evidenceArchitectureApproved: true
+disposableLfsRewriteValidated: true
+disposableRewriteHumanReviewPassed: true
+canonicalLfsMigrationExecuted: false
+canonicalHistoryRewritten: false
+publishedHistoryRewritten: false
+rewrittenBranchPromoted: false
+rewrittenGitBundleVerified: true
+lfsPayloadBackupVerified: true
+independentOfflineRestoreVerified: true
+splitPublicationAuthorityApproved: true
+onlyCPushesGitRefs: true
+dMayUploadReviewedLfsObjects: true
+remotePublicationRehearsalComplete: false
 dualCheckoutImplemented: false
-lfsMigrationExecuted: false
-lfsRulesInstalled: false
 evidenceCheckoutCreated: false
 canonicalCCutoverComplete: false
+lfsRulesInstalled: false
 sourceAuthority: current canonical C checkout
 evidenceAuthority: current repository history
 onlyCPushesAfterDualCheckout: true
+pushExecuted: false
 cardGoblinDuelStarted: false
 ```
 
@@ -198,3 +211,11 @@ Stop, report the condition, and preserve state when any of these occurs:
 - an LFS pointer without its required object;
 - ambiguity that could destroy or overwrite work;
 - instructions that conflict with repository safety law.
+
+## Split publication authority
+
+Only the C source checkout may create, advance, delete, or push Git branches and tags. D may never publish Git refs. A future guarded D evidence checkout may upload only the exact reviewed Git LFS object OIDs referenced by the active sealed evidence commit, after verifying each OID and size. Broad discovery, glob-derived upload, unreviewed objects, and `git lfs push --all` are forbidden. Uploading LFS payload objects does not grant Git-ref publication authority.
+
+C remains LFS-cold: it receives complete commits and pointer files by fast-forward-only synchronization, verifies that the sealed commit references only reviewed OIDs and that those OIDs are available remotely, then alone pushes the Git ref. Heavy evidence files do not need to pass through C's working tree.
+
+Synchronization is commit-to-commit, never folder-copy replacement. If H0 contains source v1 and evidence pointers E1, H1 may contain source v2 and unchanged E1; D fast-forwarding H0 to H1 retains E1 because H1 is a complete repository snapshot. D may then create H2 containing source v2 and E2, and C may fast-forward H1 to H2 without materializing E2 payloads. Sparse checkout changes physical materialization, not commit completeness. Missing sparse files are not staged as deletions. Dirty D, locked C, or divergent ancestry must cause refusal while preserving both histories.

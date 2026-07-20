@@ -43,7 +43,7 @@ onlyCPushes: true
 fastForwardOnly: true
 volumeIdentityGuardRequired: true
 recoveryCommandsRequired: true
-lfsMigrationExecuted: false
+canonicalLfsMigrationExecuted: false
 clonesCreated: false
 evidenceMoved: false
 canonicalCutoverComplete: false
@@ -56,8 +56,8 @@ After a normal `git fetch origin`:
 
 ```text
 origin/main: a05f22ba0276ea82a2f924dcda66d78f0a224b9e
-local HEAD:  73c257dd885dbbadaa5f7a95748e976efe8ff625
-ahead:       208 commits
+local HEAD:  cf706a7c2d5e34c29510d94d55f2ede5634e4c88
+ahead:       210 commits
 behind:      0 commits
 range:       origin/main..HEAD
 ```
@@ -91,13 +91,13 @@ Read-only unpublished-history inspection of every approved evidence binary exten
 - 33 JPG blob occurrences, reported at 4.0 MB;
 - no existing LFS objects.
 
-History occurrences include superseded versions across the 208 unpublished commits. The exact current-tree review set is **723 unpublished evidence binaries / 514,640,871 bytes**: 673 PNGs, 33 JPGs, and 17 WebMs. The 72 published evidence binaries / 13,940,640 bytes remain ordinary historical Git. Together with 231 lightweight records / 1,529,618 bytes, the expected remaining current-tree ordinary-Git evidence payload is 303 files / 15,470,258 bytes, excluding future LFS pointer text.
+History occurrences include superseded versions across the 210 unpublished commits. The exact current-tree review set is **723 unpublished evidence binaries / 514,640,871 bytes**: 673 PNGs, 33 JPGs, and 17 WebMs. The 72 published evidence binaries / 13,940,640 bytes remain ordinary historical Git. Together with 231 lightweight records / 1,529,618 bytes, the expected remaining current-tree ordinary-Git evidence payload is 303 files / 15,470,258 bytes, excluding future LFS pointer text.
 
 ## Existing-history strategy: mixed
 
 Preserve ordinary Git blobs already reachable from `origin/main`. Do not rewrite published history.
 
-Convert every reviewed evidence-path binary in `origin/main..HEAD` before the first push of those 208 commits. The rewrite must run in a disposable migration clone, never in canonical C. The execution lane must:
+Convert every reviewed evidence-path binary in `origin/main..HEAD` before the first push of those 210 commits. The rewrite must run in a disposable migration clone, never in canonical C. The execution lane must:
 
 1. refresh `origin/main` and reconfirm the exact range;
 2. create a named backup ref at the pre-migration HEAD;
@@ -367,4 +367,20 @@ Remove or archive the old clone only after explicit approval and verified rollba
 
 ## Current stop boundary
 
-H6.13B is approved architecture only. No LFS rule, migration, clone, directory, sparse checkout, hook, helper, lock, attribute file, push, or evidence movement is authorized yet. This architecture-record commit is the only approved mutation. Card Goblin Duel remains unstarted.
+H6.16A disposable rewrite validation and H6.16B split publication authority are complete. Canonical migration, rewritten-branch promotion, remote publication rehearsal, helper implementation, final C/D checkout creation, capture redirection, cutover, push, and Card Goblin Duel remain unstarted. The next authorized architectural proof is the separately approved disposable remote LFS-object/Git-ref handoff rehearsal.
+
+## H6.16B validated remaining order
+
+A. Disposable LFS rewrite validation — complete.
+B. Split publication-authority documentation — complete.
+C. Remote LFS-object/Git-ref handoff rehearsal — next.
+D. Local helper and role-guard implementation.
+E. Final D evidence checkout creation.
+F. Temporary C partial-clone creation and validation.
+G. Capture redirection.
+H. Local two-checkout workflow rehearsal.
+I. Canonical C cutover.
+J. Post-cutover validation.
+K. Optional old-clone archival or removal by separate approval.
+
+No final checkout may be created before lane C passes. Lane C must prove: a D-like clone seals an evidence commit; D uploads only its reviewed OIDs; an LFS-cold C-like clone fast-forwards to that commit; only C pushes a temporary Git ref; the server accepts the ref without C holding payloads; a third clean clone restores every object; missing-object, dirty-tree, lock, divergence, and wrong-OID refusal all work; no broad upload is used; and no production branch changes. The remote target and cleanup policy require explicit human approval.

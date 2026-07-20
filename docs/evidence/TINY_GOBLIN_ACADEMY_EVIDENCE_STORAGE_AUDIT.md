@@ -233,7 +233,7 @@ The later implementation should introduce `TGA_EVIDENCE_ROOT` and clone-role pat
 Rules:
 
 - C is the sole source-development authority.
-- D is a restricted evidence appliance and cannot push.
+- D is a restricted evidence appliance and cannot push Git refs; a future guarded helper may upload only exact reviewed LFS object OIDs for a sealed evidence commit.
 - Both checkouts share the same repository history and branch.
 - Capture runs source/runtime from C and writes evidence into repository-relative paths in D.
 - Evidence lanes create an external lock that blocks C commits and all pushes until the evidence commit returns to C.
@@ -284,3 +284,17 @@ Rehearsal must cover C changing while locked, independent D changes, D disconnec
 - No `.gitignore`, package, lockfile, runtime, source asset, manifest, Hub/Tauri source, or other-game source was changed.
 - Card Goblin Duel did not begin.
 - Human architecture review passed. LFS migration, clones, evidence movement, canonical cutover, and Card Goblin Duel remain unstarted.
+
+## H6.16A disposable LFS rewrite validation
+
+Human technical review passed on 2026-07-20. A disposable, no-remote rewrite preserved the published boundary at `a05f22ba0276ea82a2f924dcda66d78f0a224b9e` while mapping 210 unpublished commits from original tip `cf706a7c2d5e34c29510d94d55f2ede5634e4c88` to rewritten tip `9e08eff33f96d35f56cea789a3c426364e454e53`.
+
+All eight exact-path batches passed. The rewrite migrated 723 current evidence paths and 759 historical occurrences into 728 unique LFS objects totaling 524,015,975 bytes, with zero extras, missed candidates, source assets, or published paths. Semantic tree equivalence, Git object verification, pointer/payload integrity, path-governed attributes, and offline materialization all passed.
+
+Recovery requires the verified 314,552,999-byte rewritten Git bundle with SHA-256 `e9617224c5649c7032c2ef15c87c084e3b65844d605a3c6397917b4f34fce516` together with the separate verified 728-object LFS backup. An independent clone with no remote reconstructed and hash-verified all 723 current evidence files from only those paired artifacts.
+
+Canonical migration remains unexecuted. Canonical C remains at the original history, has no canonical `.gitattributes`, and remains LFS-cold. The failed H6.16 preservation-ref attempt remains preserved. Nothing was uploaded, pushed, promoted, or cut over.
+
+## Publication handoff gate
+
+C alone publishes Git refs. A future guarded D lane may upload only the exact reviewed LFS OIDs belonging to a sealed evidence commit. Before implementation, a separately approved disposable remote rehearsal must prove exact-OID upload, LFS-cold fast-forward into C, C-only temporary-ref publication, third-clone restoration, and refusal for missing objects, dirty trees, locks, divergence, and wrong OIDs. No broad LFS upload command is permitted.
