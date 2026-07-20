@@ -4,64 +4,57 @@ This file is the repository-wide operational authority for coding agents. Read i
 
 ## Current implementation status
 
-The approved evidence architecture is not yet implemented. Do not behave as if it is live.
+The active evidence policy is ordinary Git for existing evidence and external D storage for future heavy generated evidence. Capture redirection is not implemented yet; do not behave as if it is live.
 
 ```yaml
-evidenceArchitectureApproved: true
+evidenceStoragePolicy: external-heavy-evidence
+existingEvidenceGrandfatheredInOrdinaryGit: true
+futureHeavyEvidenceExternalByDefault: true
+trackedReviewImageCeilingBytes: 2097152
 disposableLfsRewriteValidated: true
-disposableRewriteHumanReviewPassed: true
-canonicalLfsMigrationExecuted: false
-canonicalHistoryRewritten: false
-publishedHistoryRewritten: false
+historicalLfsRecordsPreserved: true
+lfsRemotePublicationAvailable: false
+lfsArchitectureAdopted: false
+dualCheckoutImplementationAuthorized: false
+dualCheckoutArchitectureSuperseded: true
 rewrittenBranchPromoted: false
-rewrittenGitBundleVerified: true
-lfsPayloadBackupVerified: true
-independentOfflineRestoreVerified: true
-splitPublicationAuthorityApproved: true
-onlyCPushesGitRefs: true
-dMayUploadReviewedLfsObjects: true
-remotePublicationRehearsalComplete: false
-dualCheckoutImplemented: false
-evidenceCheckoutCreated: false
-canonicalCCutoverComplete: false
-lfsRulesInstalled: false
-sourceAuthority: current canonical C checkout
-evidenceAuthority: current repository history
-onlyCPushesAfterDualCheckout: true
+canonicalHistoryRewritten: false
+realEvidenceObjectsUploaded: 0
+additionalLfsWorkAuthorized: false
+githubBacklogBackupPending: true
+githubBacklogBackupPassed: false
+futureHeavyEvidenceRedirectionImplemented: false
 pushExecuted: false
 cardGoblinDuelStarted: false
 ```
 
 At this baseline:
 
-- The canonical active checkout is `C:\Users\kryst\Workspace\game-development\ai-game-studio-ladder`.
-- No D evidence checkout, dual-checkout helper, lane lock, evidence hook, or evidence LFS rule exists.
-- No `.gitattributes` LFS policy exists, no evidence file is LFS-backed, and no LFS history migration or canonical C cutover has occurred.
-- Evidence remains tracked through the current ordinary-Git history.
+- The canonical active checkout remains `C:\Users\kryst\Workspace\game-development\ai-game-studio-ladder`.
+- Existing tracked evidence remains grandfathered in ordinary Git at its current paths.
+- GitHub LFS remote publication is unavailable and no additional LFS work is authorized.
+- The validated LFS rewrite, split-publication, and dual-checkout designs remain preserved as historical engineering records but are not adopted.
+- Future heavy generated evidence defaults to durable external D storage; tracked repository authority is lightweight by default.
+- Capture redirection is not implemented yet and requires a later bounded tooling lane.
 - Card Goblin Duel visual integration has not begun.
 
 Only the lane that changes one of these facts may update this block.
 
-## Approved future evidence architecture
+## Active evidence storage policy
 
-The approved target is one canonical GitHub repository with one linear history:
+The active replacement is deliberately simple:
 
-- C is the sole source-development authority and the only checkout allowed to push.
-- D is a restricted evidence-only appliance.
-- Synchronization is fetch plus fast-forward-only; divergence or ambiguity causes a hard refusal.
-- Evidence lanes temporarily lock C commits and all pushes.
-- C remains LFS-cold; D materializes and verifies reviewed evidence objects.
-- Unpublished-history conversion occurs only in a disposable migration clone.
-- The physical D volume must be identified and verified; a drive letter alone is insufficient.
-- Canonical C is never rewritten, and an old clone is never deleted, without separate approval.
+- C remains the normal source repository and ordinary-Git publication authority.
+- Existing evidence stays in its current repository paths and history without rewrite, relocation, deduplication, or compression.
+- Future WebM, MP4, MOV, AVI, MKV, full-resolution capture sequences, raw comparison originals, and other heavy generated review media must be written beneath the durable D evidence taxonomy by default.
+- Git tracks Markdown review reports, JSON telemetry and manifests, SHA-256 hashes, exact byte sizes, original filenames, game/lane identity, source commit, capture configuration, human-review status, external-availability status, capture/validation scripts, and intentionally selected compact review stills or contact sheets.
+- The provisional regular-Git review-image ceiling is 2 MiB. Any exception requires explicit human approval.
+- No second Git repository, dual clone, LFS pointer workflow, junction, symlink, or synchronization dance is part of the replacement architecture.
+- Missing external evidence must be reported as unavailable; it must not be silently recreated and represented as original proof.
 
-The detailed authorities are:
+## Superseded LFS architecture record
 
-- `docs/evidence/TINY_GOBLIN_ACADEMY_EVIDENCE_STORAGE_AUDIT.md`
-- `docs/evidence/TINY_GOBLIN_ACADEMY_EVIDENCE_SIZE_INVENTORY.json`
-- `docs/planning/implementation/2026-07-19-tga-external-evidence-warehouse-plan.md`
-
-Do not hardcode transient ahead/behind counts, a local D path, a drive serial, or a volume identity into portable repository configuration.
+H6.15 through H6.17 remain truthful historical engineering records. H6.16A proved the path-bounded rewrite and paired offline recovery artifacts; H6.17 then proved that GitHub rejected even the first 792-byte synthetic object because LFS access is billing-blocked. Nothing from the rewritten branch was promoted, no real evidence object was uploaded, and no temporary Git ref was created. The dual-checkout/LFS architecture is therefore superseded rather than erased.
 
 ## Repository authority model
 
@@ -119,16 +112,15 @@ Never silently promote one state into another. Human review is the final visual 
 
 ## Evidence safety law
 
-- Tracked evidence is repository authority. Do not casually move, delete, compress, deduplicate, rename, or reclassify it.
+- Tracked existing evidence is grandfathered repository authority. Do not casually move, delete, compress, deduplicate, rename, reclassify, or rewrite it.
 - Keep source assets and evidence as separate categories.
-- Until an approved implementation lane executes, evidence remains ordinary Git in the current repository history.
-- Future evidence binaries are path-governed through LFS. Repository-wide image or video extension rules are forbidden.
-- Preserve game and lane ownership for generated evidence.
+- Future heavy generated evidence defaults to external D storage and must not be committed to the source repository unless explicitly approved.
+- Tracked lightweight authority includes reports, telemetry, hashes, exact sizes, filenames, game/lane identity, source commit, capture configuration, review and availability state, scripts, and selected compact review images.
+- A tracked review image above the provisional 2 MiB ceiling requires explicit human approval.
 - Capture instrumentation must not alter production authority. Development-only capture hooks must stay out of production behavior.
-- Report missing evidence honestly. Never silently recreate evidence and represent it as original proof.
-- Do not substitute junctions, symlinks, hardlinks, submodules, worktrees, or a separate evidence repository for the approved architecture.
-- Never execute evidence migration inside canonical C.
-- Never assume D exists until the current implementation status says it does.
+- Report missing external evidence honestly. Never silently recreate evidence and represent it as original proof.
+- No LFS upload, history migration, dual-checkout implementation, separate evidence Git repository, junction, symlink, hardlink, submodule, or worktree is authorized by the active replacement policy.
+- Future capture redirection is a later bounded tooling lane. Until it exists, do not silently emit new heavy review media into the source repository.
 
 ## Asset-pipeline law
 
@@ -212,10 +204,10 @@ Stop, report the condition, and preserve state when any of these occurs:
 - ambiguity that could destroy or overwrite work;
 - instructions that conflict with repository safety law.
 
-## Split publication authority
+## Ordinary-Git publication authority
 
-Only the C source checkout may create, advance, delete, or push Git branches and tags. D may never publish Git refs. A future guarded D evidence checkout may upload only the exact reviewed Git LFS object OIDs referenced by the active sealed evidence commit, after verifying each OID and size. Broad discovery, glob-derived upload, unreviewed objects, and `git lfs push --all` are forbidden. Uploading LFS payload objects does not grant Git-ref publication authority.
+Canonical C alone publishes Git refs through normal fast-forward Git operations. No force push, history rewrite, broad refspec, automatic merge/rebase, or LFS upload is authorized.
 
-C remains LFS-cold: it receives complete commits and pointer files by fast-forward-only synchronization, verifies that the sealed commit references only reviewed OIDs and that those OIDs are available remotely, then alone pushes the Git ref. Heavy evidence files do not need to pass through C's working tree.
+The former split publication model—D uploading reviewed LFS OIDs while C remained LFS-cold—is superseded. It remains documented for engineering history only and grants no current implementation or publication authority.
 
-Synchronization is commit-to-commit, never folder-copy replacement. If H0 contains source v1 and evidence pointers E1, H1 may contain source v2 and unchanged E1; D fast-forwarding H0 to H1 retains E1 because H1 is a complete repository snapshot. D may then create H2 containing source v2 and E2, and C may fast-forward H1 to H2 without materializing E2 payloads. Sparse checkout changes physical materialization, not commit completeness. Missing sparse files are not staged as deletions. Dirty D, locked C, or divergent ancestry must cause refusal while preserving both histories.
+The immediate preservation law is ordinary Git: push a collision-free safety branch first, verify its exact object ID, then fast-forward remote main. Existing evidence remains grandfathered; future heavy evidence remains external by default; Card Goblin Duel stays untouched until this backup lane is closed.

@@ -4,13 +4,15 @@
 **Audit date:** 2026-07-19
 **Repository baseline:** `73c257dd885dbbadaa5f7a95748e976efe8ff625`
 **Branch:** `main`
-**Human review:** Passed — architecture approved; implementation not started
+**Human review:** Passed — H6.13/H6.16 engineering preserved; LFS/dual-checkout adoption superseded by H6.17B
+
+> **Active-policy notice:** The dual-checkout and Git LFS material below remains a truthful historical audit and validation record. H6.17 proved that GitHub LFS publication is billing-blocked, so the architecture is not being adopted. The active replacement policy is recorded at the end of this document and in `AGENTS.md`.
 
 ## Executive verdict
 
 The repository currently contains **1,026 evidence-related files totaling 530,111,129 bytes (505.55 MiB)**. Every discovered evidence-related file is Git-tracked. No ignored or untracked durable evidence exists in the repository working tree, so the loose-file dry-run move map is intentionally empty.
 
-That does not eliminate the storage migration. It changes it from a loose-file move into a **single-repository, dual-checkout architecture**. C remains the sole source-development authority; D becomes a restricted evidence checkout of the same Git history. Git LFS controls generated evidence binaries introduced in unpublished history, while blobless partial clone, sparse checkout, and role-specific LFS materialization control local storage.
+The audit motivated a single-repository dual-checkout and Git LFS design that was later validated offline in H6.16A. H6.17 then proved the required GitHub LFS publication path is billing-blocked even for a 792-byte synthetic object. That design is preserved as historical engineering but is not being adopted. Existing evidence remains grandfathered in ordinary Git, while future heavy generated evidence defaults to durable external D storage with lightweight tracked authority.
 
 The provisional evidence-checkout path is:
 
@@ -226,7 +228,7 @@ The active sets are:
 
 All 28 currently resolve output through repository-relative or script-specific paths. None implements an external evidence-root boundary. Scripts that write both binaries and JSON must be split logically: heavy binary output follows the external root, while lightweight telemetry and indexes may remain in the repository.
 
-## Corrected future capture architecture
+## Superseded dual-checkout/LFS capture architecture (historical)
 
 The later implementation should introduce `TGA_EVIDENCE_ROOT` and clone-role paths through ignored local configuration, not as committed absolute paths.
 
@@ -253,7 +255,7 @@ The C checkout requires a fresh `--filter=blob:none` clone for real disk reducti
 
 The D sparse model covers evidence authority under `assets`, `games`, `hub`, and `docs/evidence`, plus game-level review reports. Simulated coverage includes 1,015 authority records. D enables scoped evidence LFS materialization and verifies required objects before staging, sealing, or return; a pointer without its object blocks the lane. Eleven source-side capture scripts/templates remain intentionally C-only because capture executes from C.
 
-## Approved Git/external evidence policy
+## Superseded Git LFS evidence policy (historical)
 
 - All generated evidence binaries introduced in unpublished history are reviewed for LFS conversion by evidence path, regardless of size.
 - Default LFS extensions are PNG, JPG, JPEG, WebP, GIF, WebM, MP4, MOV, AVI, and MKV.
@@ -263,7 +265,7 @@ The D sparse model covers evidence authority under `assets`, `games`, `hub`, and
 - Per-shelf lightweight authority uses `README.md` plus a JSON index containing filenames, sizes, hashes, role, regular-Git/LFS status, and availability.
 - Published evidence remains ordinary historical Git. The exact 723-file unpublished review set is eligible for a separately approved mixed-history LFS migration.
 
-## Disposable migration and recovery law
+## Disposable migration and recovery validation record (historical)
 
 The canonical C workspace may not run `git lfs migrate`. A later approved migration must create a named backup ref and verified external bundle, perform migration-info and the exact unpublished rewrite in a disposable clone, validate the rewritten commits, pointers, objects, and full repository, then use the proven rewritten branch to seed replacement C and D clones. Original C and rollback artifacts remain until post-cutover approval.
 
@@ -295,6 +297,32 @@ Recovery requires the verified 314,552,999-byte rewritten Git bundle with SHA-25
 
 Canonical migration remains unexecuted. Canonical C remains at the original history, has no canonical `.gitattributes`, and remains LFS-cold. The failed H6.16 preservation-ref attempt remains preserved. Nothing was uploaded, pushed, promoted, or cut over.
 
-## Publication handoff gate
+## H6.17 remote LFS blocker
 
-C alone publishes Git refs. A future guarded D lane may upload only the exact reviewed LFS OIDs belonging to a sealed evidence commit. Before implementation, a separately approved disposable remote rehearsal must prove exact-OID upload, LFS-cold fast-forward into C, C-only temporary-ref publication, third-clone restoration, and refusal for missing objects, dirty trees, locks, divergence, and wrong OIDs. No broad LFS upload command is permitted.
+The separately approved H6.17 remote handoff rehearsal stopped safely at its first real network mutation. GitHub rejected the exact 792-byte synthetic PNG object `0d3437c2514d5380cdab905036abcbf92f6169fd8499c8e72504f4d392e54b54` with the message that the repository exceeded its LFS budget.
+
+- Synthetic payload accepted: no
+- Real evidence payloads uploaded: 0
+- Temporary Git refs created: none
+- Remote main changed: no
+- Canonical C modified: no
+- Retry or workaround attempted: no
+
+The blockage is operationally indefinite because paid capacity is not available. No additional LFS attempt is authorized. The H6.16A rewrite bundle, paired payload backup, and H6.17 disposable failure record remain preserved on D as historical recovery and engineering evidence; none is promoted.
+
+## Active replacement evidence policy
+
+Existing evidence remains grandfathered in ordinary Git at its current paths. This lane does not rewrite, remove, deduplicate, compress, or relocate it.
+
+Future WebM, MP4, MOV, AVI, MKV, full-resolution capture sequences, raw comparison originals, and other heavy generated review media default to durable external D storage and are not committed to the source repository by default. Git retains portable lightweight authority:
+
+- Markdown review reports and JSON telemetry/manifests;
+- SHA-256 hashes, exact bytes, and original filenames;
+- game, lane, source commit, and capture configuration;
+- human-review and external-availability status;
+- capture and validation scripts;
+- intentionally selected compact review stills or contact sheets under a provisional 2 MiB ceiling.
+
+Any larger tracked review image requires explicit human approval. No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement. Capture redirection remains unimplemented and requires a later bounded tooling lane.
+
+The immediate preservation priority is pushing the complete canonical ordinary-Git backlog to a collision-free remote safety branch and then fast-forwarding remote main. Card Goblin Duel remains unstarted.

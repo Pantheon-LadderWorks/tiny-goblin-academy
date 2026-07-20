@@ -1,11 +1,13 @@
-# Tiny Goblin Academy Dual-Checkout Evidence Architecture Plan
+# Tiny Goblin Academy Dual-Checkout Evidence Architecture Plan — Superseded Historical Record
 
-**Status:** H6.13B human-approved architecture; implementation not started
+**Status:** H6.13B/H6.16 validated historical architecture; superseded after H6.17 GitHub LFS billing blocker
 **Repository baseline:** `73c257dd885dbbadaa5f7a95748e976efe8ff625`
 **Published baseline:** `origin/main` at `a05f22ba0276ea82a2f924dcda66d78f0a224b9e`
-**Implementation boundary:** After approval and before Card Goblin Duel visual integration
+**Implementation boundary:** Not authorized; retained for historical engineering continuity
 
-## Outcome
+> **Supersession notice:** This document preserves the validated dual-checkout/LFS design and its reasoning. H6.17 proved the required GitHub LFS publication path is billing-blocked, so no phase below is active. The replacement policy is recorded at the end and in `AGENTS.md`.
+
+## Historical design outcome
 
 Keep one canonical GitHub repository and one linear branch while physically separating daily source work from heavyweight evidence materialization:
 
@@ -29,7 +31,7 @@ This is not a second evidence repository. It uses two clones of the same reposit
 
 No committed configuration may hardcode Kryssie's D path. Local ignored configuration resolves both checkout roots and the evidence-lane lock.
 
-## Approval state
+## Historical approval state
 
 ```yaml
 humanArchitectureReviewPassed: true
@@ -93,7 +95,7 @@ Read-only unpublished-history inspection of every approved evidence binary exten
 
 History occurrences include superseded versions across the 210 unpublished commits. The exact current-tree review set is **723 unpublished evidence binaries / 514,640,871 bytes**: 673 PNGs, 33 JPGs, and 17 WebMs. The 72 published evidence binaries / 13,940,640 bytes remain ordinary historical Git. Together with 231 lightweight records / 1,529,618 bytes, the expected remaining current-tree ordinary-Git evidence payload is 303 files / 15,470,258 bytes, excluding future LFS pointer text.
 
-## Existing-history strategy: mixed
+## Historical existing-history strategy: mixed
 
 Preserve ordinary Git blobs already reachable from `origin/main`. Do not rewrite published history.
 
@@ -115,7 +117,7 @@ Convert every reviewed evidence-path binary in `origin/main..HEAD` before the fi
 
 Do not infer the final migration command from this document alone. It must be generated from the reviewed path inventory. Broad repository-wide `*.png`, `*.jpg`, or video rules would incorrectly capture source assets.
 
-## Approved LFS selection policy
+## Historical LFS selection policy
 
 Every generated evidence binary introduced in unpublished history is reviewed for LFS conversion by evidence path, regardless of individual size. Default extensions are `.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, `.webm`, `.mp4`, `.mov`, `.avi`, and `.mkv`.
 
@@ -125,7 +127,7 @@ Ordinary Git retains Markdown, JSON, CSV, hashes, reports, indexes, capture/vali
 
 The helper must reject a qualifying binary that is not represented by an LFS pointer. It must also reject non-evidence source assets accidentally selected by an evidence rule.
 
-## C source checkout
+## Historical C source checkout design
 
 C remains the only source-development authority. The canonical-path cutover eventually replaces the current clone with a freshly proven clone created using `--filter=blob:none`.
 
@@ -157,7 +159,7 @@ C also enforces source-role LFS behavior:
 - the helper verifies heavy evidence does not materialize and audits `.git/lfs/objects` for unexpected evidence objects;
 - selected objects may be fetched only through an explicit reviewed diagnostic operation.
 
-## D evidence checkout
+## Historical D evidence checkout design
 
 D is a restricted evidence appliance, never an equal development workspace.
 
@@ -196,7 +198,7 @@ Missing or mismatched identity causes a hard stop with no mutation.
 
 The simulated D sparse coverage includes 1,015 current evidence-authority records. Eleven capture scripts/templates remain C-only because source-side capture runs from C; the JSON inventory names every omitted path.
 
-## Clone synchronization and lane lock
+## Historical clone synchronization and lane lock
 
 Local remotes:
 
@@ -223,7 +225,7 @@ Canonical lane order:
 
 If C or D advances independently, neither side is a fast-forward of the expected lock state. The helper stops and preserves both histories for human review.
 
-## Low-friction helper commands
+## Historical helper command design
 
 Proposed surface:
 
@@ -302,7 +304,7 @@ Required behavior:
 - identify the source commit, evidence commit, and divergence point;
 - propose manual actions and require separate approval for any mutation.
 
-## Guard implementation
+## Historical guard implementation
 
 Use tracked hook scripts with locally configured `core.hooksPath`, plus the helper's own preflight checks.
 
@@ -313,7 +315,7 @@ Use tracked hook scripts with locally configured `core.hooksPath`, plus the help
 
 Hooks can be bypassed with `--no-verify`, so helper validation and branch ancestry checks remain authoritative. No safety claim may rely on hooks alone.
 
-## Implementation phases
+## Historical implementation phases
 
 ### A. LFS/publication boundary decision
 
@@ -351,7 +353,7 @@ Run active game tests/builds, Hub TypeScript/build, Tauri check, LFS integrity, 
 
 Remove or archive the old clone only after explicit approval and verified rollback coverage. Never automate this phase.
 
-## Non-negotiable safety law
+## Historical design safety law
 
 - One repository and one history.
 - C is the sole source authority.
@@ -365,22 +367,37 @@ Remove or archive the old clone only after explicit approval and verified rollba
 - Any history rewrite runs only in a disposable migration clone; canonical C rewrite is forbidden.
 - Old-clone removal is independently approved.
 
-## Current stop boundary
+## H6.17 result and supersession boundary
 
-H6.16A disposable rewrite validation and H6.16B split publication authority are complete. Canonical migration, rewritten-branch promotion, remote publication rehearsal, helper implementation, final C/D checkout creation, capture redirection, cutover, push, and Card Goblin Duel remain unstarted. The next authorized architectural proof is the separately approved disposable remote LFS-object/Git-ref handoff rehearsal.
+H6.16A proved the disposable path-bounded rewrite, semantic tree equivalence, paired Git/LFS recovery artifacts, and independent offline restoration. H6.17 then attempted the first and only synthetic remote object upload. GitHub rejected the 792-byte object because LFS access is billing-blocked. No synthetic object was accepted, no real evidence object was uploaded, no temporary Git ref was created, and canonical C remained unchanged.
 
-## H6.16B validated remaining order
+The dual-checkout/LFS architecture is not being adopted. No additional LFS work, rewritten-branch promotion, helper implementation, final C/D checkout creation, partial-clone cutover, or LFS-backed capture workflow is authorized. H6.15-H6.17 remain preserved as truthful historical engineering records.
 
-A. Disposable LFS rewrite validation — complete.
-B. Split publication-authority documentation — complete.
-C. Remote LFS-object/Git-ref handoff rehearsal — next.
-D. Local helper and role-guard implementation.
-E. Final D evidence checkout creation.
-F. Temporary C partial-clone creation and validation.
-G. Capture redirection.
-H. Local two-checkout workflow rehearsal.
-I. Canonical C cutover.
-J. Post-cutover validation.
-K. Optional old-clone archival or removal by separate approval.
+## Active replacement architecture
 
-No final checkout may be created before lane C passes. Lane C must prove: a D-like clone seals an evidence commit; D uploads only its reviewed OIDs; an LFS-cold C-like clone fast-forwards to that commit; only C pushes a temporary Git ref; the server accepts the ref without C holding payloads; a third clean clone restores every object; missing-object, dirty-tree, lock, divergence, and wrong-OID refusal all work; no broad upload is used; and no production branch changes. The remote target and cleanup policy require explicit human approval.
+Existing evidence:
+
+- remains grandfathered in ordinary Git at its current paths;
+- is not rewritten, removed, deduplicated, compressed, or relocated by this pivot;
+- is preserved through the normal repository history.
+
+Future heavy generated evidence:
+
+- writes directly beneath the durable external D evidence taxonomy by default;
+- includes WebM, MP4, MOV, AVI, MKV, full-resolution capture sequences, raw comparison originals, and other heavy generated review media;
+- is represented in Git by portable lightweight manifests and review records rather than LFS pointers.
+
+Tracked lightweight authority includes Markdown reports, JSON telemetry and manifests, SHA-256 hashes, exact byte sizes, original filenames, game/lane identity, source commit, capture configuration, human-review status, external-availability status, capture/validation scripts, and intentionally selected compact review stills or contact sheets. The provisional tracked-review-image ceiling is 2 MiB; exceptions require explicit human approval.
+
+No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement architecture. Future capture redirection is still unimplemented and requires a later bounded tooling lane.
+
+## Immediate preservation order
+
+1. Commit this policy pivot in canonical ordinary Git.
+2. Push the complete backlog to a collision-free remote safety branch.
+3. Verify the safety ref resolves to the exact pivot commit while remote main remains unchanged.
+4. Fast-forward remote main without force.
+5. Record the successful backup in a small closure commit and push it normally.
+6. Leave the safety branch intact until separately reviewed.
+
+Card Goblin Duel remains unstarted until this preservation lane closes.

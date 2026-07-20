@@ -9,7 +9,7 @@
 
 ## Overview
 
-Tiny Goblin Academy is a playable archive of ten tiny AI-assisted game-development experiments. It is not a course where players learn by playing; rather, players play the output of the curriculum. Developers and builders can study this repository to understand the learning path, project contracts, testing strategies, visual evidence, and the Human Review workflow. 
+Tiny Goblin Academy is a playable archive of ten tiny AI-assisted game-development experiments. It is not a course where players learn by playing; rather, players play the output of the curriculum. Developers and builders can study this repository to understand the learning path, project contracts, testing strategies, visual evidence, and the Human Review workflow.
 
 This repository is a public, free, and open learning artifact serving as an evolving academy foundation, stewarded by Pantheon LadderWorks.
 
@@ -20,7 +20,7 @@ This repository is a public, free, and open learning artifact serving as an evol
 * **Current Level 1 Status:** Button Goblin Clicker is source-available, dev-runnable, and visually integrated with its cavern stage, `GoblinRig`, shared typography, and selective Academy UI surfaces.
 * **Current Level 2 Status:** Potion Sorter is source-available, dev-runnable, and visually integrated with its approved Composition C alchemy `SceneRig`, hybrid material palette, containment/masking system, shared typography, and authored result surface.
 * **Current Level 3 Status:** Dice Duel Tavern is source-available, dev-runnable, build-capable, and visually integrated with its Crooked Six stage, persistent six-face `DieRig`, authoritative Web Crypto d6, reduced motion, selective mapped assets, materials, and Academy typography.
-* **Visual Integration Status:** Levels 1–3 have passed runtime/evidence/human visual review and have separate mechanical and visual learning records. The immediate next lane is evidence-size inventory and D-drive warehouse planning before Card Goblin Duel begins; Top-Down Slime Quest remains last or near-last because its animation, tile behavior, placement, collision, pathfinding, and map rules are more complex.
+* **Visual Integration Status:** Levels 1–3 have passed runtime/evidence/human visual review and have separate mechanical and visual learning records. Existing evidence remains grandfathered in ordinary Git; future heavy generated evidence defaults to external D storage with lightweight tracked manifests and review records. Capture redirection remains a later bounded tooling lane before Card Goblin Duel begins; Top-Down Slime Quest remains last or near-last because its animation, tile behavior, placement, collision, pathfinding, and map rules are more complex.
 
 ## What You Can Play / Study
 
@@ -73,6 +73,7 @@ See [CONTENT_LICENSE.md](CONTENT_LICENSE.md) for full details on how the license
 * **Clean Commits:** Do not commit generated dependency folders (`node_modules`), `.vite`, or build outputs.
 * **Architecture Shift:** The Tauri development hub and stage-first game shell are active. Levels 1–3 prove the current per-game visual-integration path while later levels remain development artifacts awaiting their own passes.
 * **Artifact Philosophy:** The Academy preserves playable mechanical history, current visual runtimes, evidence, and lessons as separate authority layers. A source game becomes a reviewed runtime artifact through explicit per-game integration and human review.
+* **Evidence Storage:** Existing evidence stays grandfathered in ordinary Git. Future heavy recordings, full-resolution sequences, and raw comparison media default to durable external D storage; Git keeps portable manifests, hashes, sizes, provenance, review status, scripts, and deliberately selected compact proof images. Capture redirection is not implemented yet.
 * **Asset Shelf Note:** Current asset docs begin at `docs/assets/README.md`; current manifests begin at `manifests/README.md`.
 
 ## Roadmap
