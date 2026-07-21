@@ -323,6 +323,12 @@ Future WebM, MP4, MOV, AVI, MKV, full-resolution capture sequences, raw comparis
 - capture and validation scripts;
 - intentionally selected compact review stills or contact sheets under a provisional 2 MiB ceiling.
 
-Any larger tracked review image requires explicit human approval. No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement. Capture redirection remains unimplemented and requires a later bounded tooling lane.
+Any larger tracked review image requires explicit human approval. No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement.
 
-The immediate preservation priority is pushing the complete canonical ordinary-Git backlog to a collision-free remote safety branch and then fast-forwarding remote main. Card Goblin Duel remains unstarted.
+## H6.18 external evidence output foundation
+
+H6.18 makes the active replacement policy operational for the audited runtime/playtest capture surface. `tools/evidence/` resolves environment-root override plus ignored local physical identity, has no repository fallback, verifies volume identity/read/write/free space/containment, refuses unsafe identifiers and collisions, records bytes and SHA-256, and separates external recovery manifests from portable tracked manifests.
+
+The authoritative 28-script inventory is classified A9/B0/C3/D16. Only nine generic active capture scripts changed. Three production/source-generation scripts and sixteen historical or unused scripts remain unchanged. The canonical asset-pipeline CLI, registered cleanup methods, provenance contract, run-log helper, and smoke validator remain the sole asset-processing authority and passed independent validation.
+
+A real synthetic external run wrote a 69-byte PNG and 92-byte telemetry file beneath the portable system smoke taxonomy. `pnpm evidence:verify` independently verified both files. A duplicate run ID failed before mutation, existing hashes remained unchanged, and the portable manifest contains no absolute local path. The ordinary-Git backlog backup had already passed before this lane. Card Goblin Duel remains unstarted.

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "2e376c22f5c96e2f59c30b2de58cbb08e41203d7",
+  "createdAt": "2026-07-20T23:32:29.007Z",
+  "gameId": "system",
+  "laneId": "h6-18-external-output-foundation",
+  "runId": "h6-18-smoke-001",
+  "externalRelativePath": "system/smoke-tests/h6-18-external-output-foundation/h6-18-smoke-001",
+  "files": [
+    {
+      "relativePath": "stills/synthetic-proof.png",
+      "mediaType": "image/png",
+      "bytes": 69,
+      "sha256": "167d5cbdd920fa2e5f6beea7fc4f8df1552207322578560e0abcb002f54e4186"
+    },
+    {
+      "relativePath": "telemetry.json",
+      "mediaType": "application/json",
+      "bytes": 92,
+      "sha256": "105d1bedc47d1ffab2fdc9d51ad316cca9e318ae3187707e2cd2a940469b3d75"
+    }
+  ],
+  "captureScript": "tools/evidence/cli.mjs",
+  "captureScriptVersion": "h6.18",
+  "captureConfiguration": null,
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

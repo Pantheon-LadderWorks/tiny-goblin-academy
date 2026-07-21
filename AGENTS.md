@@ -4,7 +4,7 @@ This file is the repository-wide operational authority for coding agents. Read i
 
 ## Current implementation status
 
-The active evidence policy is ordinary Git for existing evidence and external D storage for future heavy generated evidence. Capture redirection is not implemented yet; do not behave as if it is live.
+The active evidence policy is ordinary Git for existing evidence and verified external storage for future heavy generated evidence. H6.18 implements capture redirection for the audited active runtime/playtest capture surface. The canonical asset pipeline remains separate and continues to own asset-generated evidence and provenance.
 
 ```yaml
 evidenceStoragePolicy: external-heavy-evidence
@@ -21,10 +21,20 @@ rewrittenBranchPromoted: false
 canonicalHistoryRewritten: false
 realEvidenceObjectsUploaded: 0
 additionalLfsWorkAuthorized: false
-githubBacklogBackupPending: true
-githubBacklogBackupPassed: false
-futureHeavyEvidenceRedirectionImplemented: false
-pushExecuted: false
+githubBacklogBackupPending: false
+githubBacklogBackupPassed: true
+futureHeavyEvidenceRedirectionImplemented: true
+externalEvidenceFoundationValidated: true
+activeHeavyCaptureScriptsRedirected: 9
+captureScriptInventoryClassified: 28
+assetPipelineCliGuardrailsPreserved: true
+externalSyntheticSmokePassed: true
+humanTechnicalReviewPassed: true
+knownOutOfLaneBaselineFailure: true
+oneRoomPlatformerBaselineSuitePassing: false
+h6_18IntroducedWorkspaceRegression: false
+oneRoomPlatformerCorrectionAuthorized: false
+pushExecuted: true
 cardGoblinDuelStarted: false
 ```
 
@@ -35,7 +45,9 @@ At this baseline:
 - GitHub LFS remote publication is unavailable and no additional LFS work is authorized.
 - The validated LFS rewrite, split-publication, and dual-checkout designs remain preserved as historical engineering records but are not adopted.
 - Future heavy generated evidence defaults to durable external D storage; tracked repository authority is lightweight by default.
-- Capture redirection is not implemented yet and requires a later bounded tooling lane.
+- H6.18 capture redirection is implemented for nine audited generic runtime/playtest capture scripts through `tools/evidence/`; nineteen historical or production/source-generation records remain unchanged.
+- H6.18 human technical review passed in H6.18A.
+- The One Room Platformer legacy simulation suite remains a documented pre-existing out-of-lane baseline failure; H6.18 introduced no gameplay regression and authorizes no correction.
 - Card Goblin Duel visual integration has not begun.
 
 Only the lane that changes one of these facts may update this block.
@@ -120,7 +132,7 @@ Never silently promote one state into another. Human review is the final visual 
 - Capture instrumentation must not alter production authority. Development-only capture hooks must stay out of production behavior.
 - Report missing external evidence honestly. Never silently recreate evidence and represent it as original proof.
 - No LFS upload, history migration, dual-checkout implementation, separate evidence Git repository, junction, symlink, hardlink, submodule, or worktree is authorized by the active replacement policy.
-- Future capture redirection is a later bounded tooling lane. Until it exists, do not silently emit new heavy review media into the source repository.
+- Audited active runtime/playtest capture scripts must resolve and verify `TGA_EVIDENCE_ROOT` before starting a browser or development server. Missing or mismatched external storage is fatal; no repository fallback is allowed.
 
 ## Asset-pipeline law
 
@@ -138,6 +150,8 @@ register → inspect → alpha/background audit → classify → map
 - Use exact mapped identities and record promoted and rejected regions.
 - Prepared assets are not runtime-approved assets.
 - Preserve validators, provenance, manifests, hashes, run logs, and human-review records.
+- `scripts/asset-pipeline/cli.mjs` remains the sole canonical entry point for asset inspection, mapping, evidence generation, cleanup dispatch, and pipeline provenance.
+- `tools/evidence/` is not an alternate asset pipeline and must not expose cleanup methods, pixel operations, mapping, source copying, or source/derived asset generation.
 
 Detailed authority remains in:
 
@@ -210,4 +224,4 @@ Canonical C alone publishes Git refs through normal fast-forward Git operations.
 
 The former split publication model—D uploading reviewed LFS OIDs while C remained LFS-cold—is superseded. It remains documented for engineering history only and grants no current implementation or publication authority.
 
-The immediate preservation law is ordinary Git: push a collision-free safety branch first, verify its exact object ID, then fast-forward remote main. Existing evidence remains grandfathered; future heavy evidence remains external by default; Card Goblin Duel stays untouched until this backup lane is closed.
+The ordinary-Git backlog backup passed before H6.18 and the verified safety branch remains preserved. This lane does not authorize a push, history rewrite, LFS work, evidence relocation, or Card Goblin Duel visual integration.

@@ -8,6 +8,11 @@
     "validate:academy-manifest": "node scripts/validate-academy-manifest.mjs",
     "validate:hub-icons": "node scripts/validate-hub-icons.mjs",
     "hub:tauri:dev": "pnpm --filter tiny-goblin-academy-hub tauri dev",
-    "hub:tauri:build": "pnpm --filter tiny-goblin-academy-hub tauri build"
+    "hub:tauri:build": "pnpm --filter tiny-goblin-academy-hub tauri build",
+    "evidence:init": "node tools/evidence/cli.mjs init",
+    "evidence:doctor": "node tools/evidence/cli.mjs doctor",
+    "evidence:where": "node tools/evidence/cli.mjs where",
+    "evidence:verify": "node tools/evidence/cli.mjs verify",
+    "validate:evidence-storage": "node tools/evidence/cli.mjs validate"
   }
 }

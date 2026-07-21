@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "evidenceRoot": "X:\\Path\\To\\Tiny-Goblin-Academy\\Evidence",
+  "expectedVolumeLabel": "EXPECTED_VOLUME_LABEL",
+  "expectedVolumeSerial": "EXPECTED_VOLUME_SERIAL",
+  "expectedFilesystem": "EXPECTED_FILESYSTEM",
+  "minimumFreeBytes": 5368709120
+}

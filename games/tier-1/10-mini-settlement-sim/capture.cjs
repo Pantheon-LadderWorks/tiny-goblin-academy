@@ -1,15 +1,21 @@
 const { chromium } = require('playwright');
 const { spawn } = require('child_process');
 const path = require('path');
+const { finalizeCaptureRun, prepareCaptureRun } = require('../../../tools/evidence/capture-run.cjs');
 
 async function run() {
+  const captureRun = prepareCaptureRun({
+    scriptDirectory: __dirname,
+    gameId: 'level-10-mini-settlement-sim',
+    laneId: 'mechanical-capture',
+  });
   console.log('Starting Vite server...');
   const viteProcess = spawn(path.join(__dirname, 'node_modules', '.bin', 'vite.cmd'), ['--port', '5173'], {
     cwd: __dirname,
     stdio: 'ignore',
     shell: true
   });
-  
+
   // Wait longer for vite
   await new Promise(r => setTimeout(r, 4000));
 
@@ -22,19 +28,19 @@ async function run() {
   await page.waitForTimeout(500);
 
   // 1. Boot / Day 1
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '01-boot.png') });
+  await page.screenshot({ path: captureRun.file('stills', '01-boot.png') });
   console.log('Captured 01-boot.png');
 
   // 2. Player priority selection
   await page.click('#btn-chop');
   await page.waitForTimeout(100);
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '02-priority-selection.png') });
+  await page.screenshot({ path: captureRun.file('stills', '02-priority-selection.png') });
   console.log('Captured 02-priority-selection.png');
 
   // 3. Visible citizen/resource update after advancing day
   await page.click('#btn-advance'); // Day -> 2
   await page.waitForTimeout(200);
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '03-advance-day.png') });
+  await page.screenshot({ path: captureRun.file('stills', '03-advance-day.png') });
   console.log('Captured 03-advance-day.png');
 
   // Reset for Storm Failure
@@ -54,7 +60,7 @@ async function run() {
   await page.click('#btn-forage');
   await page.click('#btn-advance'); // 5 (Food 2). Storm! Defeat!
   await page.waitForTimeout(200);
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '04-storm-failure.png') });
+  await page.screenshot({ path: captureRun.file('stills', '04-storm-failure.png') });
   console.log('Captured 04-storm-failure.png');
 
   // Reset for Storm Survival & Victory
@@ -82,9 +88,9 @@ async function run() {
   // Day 5: Forage (Food 7) - Storm hits! Shelter is 2, survive.
   await page.click('#btn-forage');
   await page.click('#btn-advance');
-  
+
   await page.waitForTimeout(200);
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '05-storm-survival.png') });
+  await page.screenshot({ path: captureRun.file('stills', '05-storm-survival.png') });
   console.log('Captured 05-storm-survival.png');
 
   // To reach Day 10, just Forage every day
@@ -96,11 +102,20 @@ async function run() {
   await page.click('#btn-advance'); // 10 -> Victory!
 
   await page.waitForTimeout(200);
-  await page.screenshot({ path: path.join(__dirname, 'evidence', 'screenshots', '06-victory.png') });
+  await page.screenshot({ path: captureRun.file('stills', '06-victory.png') });
   console.log('Captured 06-victory.png');
 
   await browser.close();
   viteProcess.kill();
+  finalizeCaptureRun(captureRun, {
+    captureScript: 'games/tier-1/10-mini-settlement-sim/capture.cjs',
+    captureConfiguration: {
+      url: 'http://localhost:5173',
+      browser: 'chromium',
+      viewport: { width: 1400, height: 900 },
+      server: 'vite:5173',
+    },
+  });
   console.log('Capture complete!');
 }
 

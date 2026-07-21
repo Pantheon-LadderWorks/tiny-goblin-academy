@@ -389,9 +389,13 @@ Future heavy generated evidence:
 
 Tracked lightweight authority includes Markdown reports, JSON telemetry and manifests, SHA-256 hashes, exact byte sizes, original filenames, game/lane identity, source commit, capture configuration, human-review status, external-availability status, capture/validation scripts, and intentionally selected compact review stills or contact sheets. The provisional tracked-review-image ceiling is 2 MiB; exceptions require explicit human approval.
 
-No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement architecture. Future capture redirection is still unimplemented and requires a later bounded tooling lane.
+No second Git repository, dual clone, LFS pointer, junction, symlink, or synchronization workflow is part of the replacement architecture. H6.18 implements the bounded capture-redirection foundation for the audited active runtime/playtest capture surface through `tools/evidence/`; the canonical asset pipeline remains separate.
 
-## Immediate preservation order
+## H6.18 implementation result
+
+The ordinary-Git backlog backup completed before H6.18. H6.18 then initialized the verified external taxonomy, added the fail-closed resolver and command surface, classified all 28 inventoried scripts, redirected only nine active heavy runtime/playtest capture scripts, preserved all historical and asset-pipeline scripts, and passed a real synthetic external write/verify/collision rehearsal. No existing evidence was moved or rewritten.
+
+## Completed preservation order (historical)
 
 1. Commit this policy pivot in canonical ordinary Git.
 2. Push the complete backlog to a collision-free remote safety branch.
@@ -400,4 +404,4 @@ No second Git repository, dual clone, LFS pointer, junction, symlink, or synchro
 5. Record the successful backup in a small closure commit and push it normally.
 6. Leave the safety branch intact until separately reviewed.
 
-Card Goblin Duel remains unstarted until this preservation lane closes.
+The preservation lane and H6.18 output foundation are implemented. Card Goblin Duel remains unstarted; this plan does not itself authorize the next runtime lane.

@@ -26799,10 +26799,12 @@
     "dualCheckoutImplementationAuthorized": false,
     "githubBacklogBackupPending": false,
     "githubBacklogBackupPassed": true,
-    "futureHeavyEvidenceRedirectionImplemented": false,
-    "cardGoblinDuelStarted": false
+    "futureHeavyEvidenceRedirectionImplemented": true,
+    "cardGoblinDuelStarted": false,
+    "h6_18HumanTechnicalReviewPassed": true,
+    "oneRoomPlatformerCorrectionAuthorized": false
   },
-  "status": "github-backlog-backup-passed",
+  "status": "external-heavy-evidence-output-foundation-human-technical-review-passed",
   "h6_16aDisposableRewriteValidation": {
     "humanReviewPassed": true,
     "originalHead": "cf706a7c2d5e34c29510d94d55f2ede5634e4c88",
@@ -26837,8 +26839,14 @@
     "additionalLfsWorkAuthorized": false,
     "githubBacklogBackupPending": false,
     "githubBacklogBackupPassed": true,
-    "futureHeavyEvidenceRedirectionImplemented": false,
-    "cardGoblinDuelStarted": false
+    "futureHeavyEvidenceRedirectionImplemented": true,
+    "cardGoblinDuelStarted": false,
+    "humanTechnicalReviewPassed": true,
+    "knownOutOfLaneBaselineFailure": true,
+    "oneRoomPlatformerBaselineSuitePassing": false,
+    "h6_18IntroducedWorkspaceRegression": false,
+    "oneRoomPlatformerCorrectionAuthorized": false,
+    "pushExecuted": true
   },
   "h6_17RemoteLfsHandoff": {
     "runId": "remote-lfs-handoff-0beb388-20260720T163943Z",
@@ -26914,7 +26922,19 @@
     "secondGitRepositoryUsed": false,
     "dualCloneUsed": false,
     "lfsPointersUsed": false,
-    "junctionOrSymlinkUsed": false
+    "junctionOrSymlinkUsed": false,
+    "resolverImplemented": true,
+    "resolverToolRoot": "tools/evidence",
+    "rootKey": "TGA_EVIDENCE_ROOT",
+    "configurationPrecedence": [
+      "TGA_EVIDENCE_ROOT environment override",
+      "ignored local configuration",
+      "no fallback"
+    ],
+    "activeHeavyCaptureScriptsRedirected": 9,
+    "captureScriptInventoryClassified": 28,
+    "assetPipelineCliRemainsCanonical": true,
+    "syntheticSmokePassed": true
   },
   "githubBacklogBackup": {
     "pending": false,
@@ -26951,7 +26971,120 @@
     "initialSafetyPushHttp408": true,
     "unchangedExactRefspecRetrySucceeded": true,
     "canonicalHistoryRewritten": false,
-    "futureHeavyEvidenceRedirectionImplemented": false,
+    "futureHeavyEvidenceRedirectionImplemented": true,
     "cardGoblinDuelStarted": false
+  },
+  "h6_18ExternalEvidenceOutputFoundation": {
+    "implemented": true,
+    "baselineCommit": "2e376c22f5c96e2f59c30b2de58cbb08e41203d7",
+    "implementationReport": "docs/runtime/TINY_GOBLIN_ACADEMY_H6_18_EXTERNAL_EVIDENCE_OUTPUT_FOUNDATION.md",
+    "captureScriptAudit": "docs/evidence/h6-18-external-evidence-output-foundation/capture-script-audit.json",
+    "localConfigPath": "tools/evidence/evidence.local.json",
+    "localConfigIgnored": true,
+    "trackedExamplePath": "tools/evidence/evidence.local.example.json",
+    "physicalIdentityVerified": {
+      "label": "The Void",
+      "serial": "F60EFF6E",
+      "filesystem": "exFAT",
+      "minimumFreeBytes": 5368709120
+    },
+    "rootTaxonomy": [
+      "shared",
+      "level-01-button-goblin-clicker",
+      "level-02-potion-sorter",
+      "level-03-dice-duel-tavern",
+      "level-04-card-goblin-duel",
+      "future",
+      "system/manifests",
+      "system/smoke-tests"
+    ],
+    "captureScriptClassifications": {
+      "A": 9,
+      "B": 0,
+      "C": 3,
+      "D": 16
+    },
+    "activeHeavyCaptureScriptsRedirected": 9,
+    "grandfatheredTrackedBinariesVerified": 795,
+    "assetPipelineCliGuardrailsPreserved": true,
+    "focusedEvidenceTestsPassed": 37,
+    "syntheticSmoke": {
+      "passed": true,
+      "createdAt": "2026-07-20T23:32:29.007Z",
+      "externalRelativePath": "system/smoke-tests/h6-18-external-output-foundation/h6-18-smoke-001",
+      "portableManifestPath": "docs/evidence/h6-18-external-evidence-output-foundation/portable-smoke-manifest-h6-18-smoke-001.json",
+      "files": [
+        {
+          "relativePath": "stills/synthetic-proof.png",
+          "mediaType": "image/png",
+          "bytes": 69,
+          "sha256": "167d5cbdd920fa2e5f6beea7fc4f8df1552207322578560e0abcb002f54e4186"
+        },
+        {
+          "relativePath": "telemetry.json",
+          "mediaType": "application/json",
+          "bytes": 92,
+          "sha256": "105d1bedc47d1ffab2fdc9d51ad316cca9e318ae3187707e2cd2a940469b3d75"
+        }
+      ],
+      "duplicateRunRefused": true,
+      "duplicateAttemptChangedExistingFiles": false,
+      "portableManifestContainsAbsoluteLocalPath": false
+    },
+    "dependenciesChanged": false,
+    "pnpmLockChanged": false,
+    "existingEvidenceMovedOrRewritten": false,
+    "cardGoblinDuelStarted": false,
+    "humanTechnicalReviewPassed": true,
+    "technicalReviewClosureLane": "H6.18A",
+    "externalEvidenceRootConfiguredLocally": true,
+    "physicalVolumeGuardImplemented": true,
+    "evidenceResolverImplemented": true,
+    "externalManifestContractImplemented": true,
+    "grandfatheredEvidenceGuardImplemented": true,
+    "activeHeavyCaptureScriptCount": 9,
+    "lightweightOnlyScriptCount": 0,
+    "productionSourceGenerationScriptCount": 3,
+    "historicalInactiveScriptCount": 16,
+    "captureScriptInventoryCount": 28,
+    "syntheticSmokeRunPassed": true,
+    "duplicateRunRefused": true,
+    "portableManifestContainsAbsoluteRoot": false,
+    "assetPipelineBoundaryProtected": true,
+    "assetPipelineValidationPassed": true,
+    "assetPipelineSmokePassed": true,
+    "legacyTrackedEvidenceMoved": false,
+    "legacyTrackedEvidenceRewritten": false,
+    "lfsArchitectureAdopted": false,
+    "dualCheckoutImplemented": false,
+    "futureHeavyEvidenceRedirectionImplemented": true,
+    "knownOutOfLaneBaselineFailure": true,
+    "oneRoomPlatformerBaselineSuitePassing": false,
+    "h6_18IntroducedWorkspaceRegression": false,
+    "oneRoomPlatformerCorrectionAuthorized": false,
+    "pushExecuted": true,
+    "oneRoomPlatformerBaselineFinding": {
+      "isolatedFailedTests": 13,
+      "simulationPath": "games/tier-1/08-one-room-platformer/src/simulation.ts",
+      "simulationSha256": "e43726e60f49d2a9014144b83ba7691c03d3b3b6cb7850f44f5233d39131ecac",
+      "testPath": "games/tier-1/08-one-room-platformer/tests/simulation.test.ts",
+      "testSha256": "934503a6f7a787703d61f5c79901e93ccd0bc5391188e21ea12a645a7e8e4c7f",
+      "packagePath": "games/tier-1/08-one-room-platformer/package.json",
+      "packageSha256": "34f29536d3d8b5343d0856d574c00c5fd31b615e1ed583ff72707e8c797300a5",
+      "allAuthoritiesByteIdenticalToBaseline": true,
+      "expectedMissingExports": [
+        "tick",
+        "GEOMETRY"
+      ],
+      "olderInitialPositionExpectedByTest": [
+        60,
+        352
+      ],
+      "currentInitialPosition": [
+        0,
+        0
+      ],
+      "correctionAuthorized": false
+    }
   }
 }
