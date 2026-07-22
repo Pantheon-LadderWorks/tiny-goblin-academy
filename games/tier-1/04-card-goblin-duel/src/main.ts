@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import tabletopSceneUrl from '../../../../assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png?url';
+import cardFrameSheetUrl from '../../../../assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png?url';
 import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
@@ -17,6 +19,9 @@ import {
   resolveSparkChoice,
   type GameState,
 } from './simulation';
+
+document.documentElement.style.setProperty('--tabletop-scene-url', `url("${tabletopSceneUrl}")`);
+document.documentElement.style.setProperty('--card-frame-sheet-url', `url("${cardFrameSheetUrl}")`);
 
 let state = createGame();
 let anchorBridge: AnchorBridge | undefined;
@@ -193,7 +198,7 @@ const game = new Phaser.Game({
   scene: {
     create() {
       const scene = this as Phaser.Scene;
-      stageGraphics = scene.add.graphics().setDepth(0);
+      stageGraphics = scene.add.graphics().setDepth(0).setVisible(false);
       debugGraphics = scene.add.graphics().setDepth(999);
       drawStage(scene);
 

@@ -340,3 +340,67 @@ Earlier H6.20/H6.20A external runs remain preserved on `D:` as historical attemp
 Implementation and automated validation are complete. One verified external capture is ready for Human Review.
 
 No visual approval is claimed. Human Visual Review remains pending.
+
+## H6.20D Tabletop and Functional Card Preview (Uncommitted)
+
+H6.20D integrates the H5.103 tabletop as one unsliced scene plate and uses the H5.39 green, teal, and tan front-frame crops as decorative chrome behind runtime DOM icon, title, body, action-state, focus, and button semantics. The old boxed hand footer is replaced by a shallow lower staging dock; full-height cards rise upward from that origin rail. Simulation, phase ownership, ledger behavior, reset behavior, and future H6.21/H6.22 boundaries remain unchanged.
+
+Focused validation now covers **50 passing tests** plus the Card Goblin production build. The build emits the unchanged tabletop and card-frame images through Vite; no source or derived image was edited.
+
+Exactly one bounded H6.20D external run completed:
+
+```text
+D:\Projects\Active\Tiny-Goblin-Academy\Evidence\
+  level-04-card-goblin-duel\
+    h6-20d-tabletop-functional-card-preview\
+      capture-20260722t042915z-p2892\
+```
+
+Selected portable manifest:
+
+```text
+docs/evidence/external-runs/level-04-card-goblin-duel/
+  h6-20d-tabletop-functional-card-preview/
+    capture-20260722t042915z-p2892.json
+```
+
+The run contains eight stills for default hand, keyboard focus, resolution, SparkChoice, victory, defeat, supported minimum, and explicit anchor debug. Both runtime surfaces have exact document containment and zero console errors. All runtime title/body slots fit. At the default `1280x660` runtime surface, cards display at `153.59x212.28` CSS pixels from `123x170` or `124x170` native crops (about `1.24x-1.25x`). At the minimum `1024x580` runtime surface, cards display at `138x190.72` CSS pixels (about `1.11x-1.12x`). `image-rendering: auto` is explicit; the ornament remains visually coherent at these bounded scales and runtime text/focus chrome remain resolution-independent.
+
+Visual review found one blocking composition issue: the rising hand overlaps the lower resolution-copy/player-status strip in ordinary, resolution, SparkChoice, and terminal stills. Terminal outcome/reset controls themselves remain unblocked. Because the lane permits one evidence run and forbids an autonomous visual tuning loop, no post-capture correction or recapture was attempted.
+
+The captures prove the exact browser runtime surfaces corresponding to the established Tauri content areas, but this H6.20D run did not capture a live Tauri outer window or Hub runtime-container measurement. Embedded-Tauri proof therefore remains pending and is not claimed.
+
+H6.20D remains preview-only, unstaged, uncommitted, unpushed, and not visually approved. H6.21 did not begin.
+
+## H6.20E Tabletop Dock Correction
+
+H6.20E corrects the reviewed H6.20D composition without modifying or generating any image asset. The top status rail now consumes its own document-flow row above the tabletop. The tabletop plate and hand dock are stacked siblings with no border, rule, or geometry gap. The dock uses `--tabletop-dock-color: #1a1218`, sampled from the darkest plum in the approved source plate.
+
+The result corridor remains fixed above the hand. Ordinary resolution copy, SparkChoice instructions, victory/defeat treatment, and Reset Duel remain clear of the Academy emblem and every card. The cards retain the approved runtime scale; dock height, rather than card shrinkage, provides the required containment.
+
+Focused validation covers **53 passing tests** plus the Card Goblin production build. The production build emits the same approved tabletop and card-frame images; no source or derived image was edited.
+
+The bounded H6.20E evidence run is:
+
+```text
+D:\Projects\Active\Tiny-Goblin-Academy\Evidence\
+  level-04-card-goblin-duel\
+    h6-20e-tabletop-dock-correction\
+      capture-20260722t172225z-p11424\
+```
+
+Selected portable manifest:
+
+```text
+docs/evidence/external-runs/level-04-card-goblin-duel/
+  h6-20e-tabletop-dock-correction/
+    capture-20260722t172225z-p11424.json
+```
+
+The run records eight stills and nine measured states. Every state has exact document containment and zero console errors. Ledger snapshot sequences remain `1, 2, 3, 4, 5`. Resting card exposure ranges from `21.35%` to `22.27%`; focused exposure peaks at `25.10%`; resting dock containment is at least `77.73%`. Default cards remain about `153.59x212.28` CSS pixels and minimum-layout cards remain `138x190.72` CSS pixels with fitting runtime text.
+
+Agent visual review passed across default, focus, resolution, SparkChoice, victory, defeat, supported minimum, and explicit anchor-debug stills. The rail is separate from the artwork, the result corridor remains legible, the cards do not crowd the center seal, and the dock reads as a seamless continuation beneath the table edge.
+
+Kryssie explicitly authorized closure without another human review round. The evidence therefore records `agentReviewPassed: true` and leaves `humanReviewPassed: false`; no human visual approval is claimed. Live embedded-Tauri outer-window/container measurement remains pending and is not claimed.
+
+H6.21 did not begin.

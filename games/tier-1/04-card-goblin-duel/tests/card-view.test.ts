@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   CARD_DESCRIPTIONS,
+  CARD_FRAME_PRESENTATIONS,
   phasePresentation,
   renderHandCard,
   renderNextCard,
@@ -42,6 +43,30 @@ describe('accessible Card Goblin DOM card views', () => {
 
   it('keeps the deck anchor available when the queue is empty', () => {
     expect(renderNextCard(undefined)).toContain('data-stage-anchor="deck"');
+  });
+
+  it('renders runtime content over mapped functional frame slots', () => {
+    const html = renderHandCard('Strike', 0, 'PlayerAction');
+
+    expect(CARD_FRAME_PRESENTATIONS.Strike).toMatchObject({
+      frame: 'tan-banner',
+      nativeWidth: 124,
+      nativeHeight: 170,
+    });
+    expect(html).toContain('data-card-frame="tan-banner"');
+    expect(html).toContain('class="card-frame-art"');
+    expect(html).toContain('class="card-icon"');
+    expect(html).toContain('aria-hidden="true"');
+    expect(html).toContain('class="card-content"');
+  });
+
+  it('keeps all six simulation cards on approved mapped frame variants', () => {
+    expect(Object.keys(CARD_FRAME_PRESENTATIONS)).toEqual([
+      'Strike', 'Guard', 'Mend', 'Spark', 'Stun', 'Heavy Bonk',
+    ]);
+    expect(new Set(Object.values(CARD_FRAME_PRESENTATIONS).map(({ frame }) => frame))).toEqual(
+      new Set(['tan-banner', 'teal-banner', 'green-banner']),
+    );
   });
 
   it('returns compact phase presentation without gameplay decisions', () => {

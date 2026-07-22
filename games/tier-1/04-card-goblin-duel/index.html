@@ -15,8 +15,6 @@
     </header>
 
     <section id="duel-table" aria-label="Card Goblin duel table">
-      <div id="stage-canvas" aria-hidden="true"></div>
-
       <section class="duel-top-rail" aria-label="Duel status and card wells">
         <section id="phase-banner" class="phase-banner" data-stage-anchor="phase-banner" aria-live="polite">
           <strong id="banner">Your Turn</strong>
@@ -27,6 +25,12 @@
           <span class="status-name">Card Goblin</span>
           <strong id="enemy-hp">12 / 12 HP</strong>
           <span id="enemy-effects">Ready to answer your play.</span>
+        </section>
+
+        <section class="player-status-rail" aria-label="Player status">
+          <span class="status-name">You</span>
+          <strong id="player-hp">10 / 10 HP</strong>
+          <span id="player-effects">No active guard or stun.</span>
         </section>
 
         <div class="table-wells" aria-label="Draw and discard wells">
@@ -41,7 +45,10 @@
         </div>
       </section>
 
-      <section class="resolution-zone" aria-label="Current card exchange">
+      <div class="tabletop-stack">
+        <section class="tabletop-scene">
+          <div id="stage-canvas" aria-hidden="true"></div>
+          <section class="resolution-zone" aria-label="Current card exchange">
         <div class="stage-overlay" aria-hidden="true">
           <span class="anchor-point enemy-center" data-stage-anchor="enemy-center"></span>
           <span class="anchor-point enemy-impact" data-stage-anchor="enemy-impact"></span>
@@ -63,14 +70,10 @@
           <button id="reset-duel" type="button">Reset Duel</button>
         </section>
 
-        <section class="player-status-rail" aria-label="Player status">
-          <span class="status-name">You</span>
-          <strong id="player-hp">10 / 10 HP</strong>
-          <span id="player-effects">No active guard or stun.</span>
-        </section>
       </section>
+        </section>
 
-      <section class="hand-zone" aria-labelledby="hand-heading">
+        <section class="hand-zone" aria-labelledby="hand-heading">
         <div class="hand-heading-row">
           <div>
             <span class="hand-label">Player Hand</span>
@@ -78,8 +81,9 @@
           </div>
           <span id="hand-count">3 cards</span>
         </div>
-        <div id="hand"></div>
-      </section>
+          <div id="hand"></div>
+        </section>
+      </div>
     </section>
 
     <p id="anchor-status" class="anchor-status" aria-hidden="true">Anchor bridge waiting for Phaser.</p>

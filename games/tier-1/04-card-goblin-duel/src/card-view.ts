@@ -10,6 +10,22 @@ export const CARD_DESCRIPTIONS: Readonly<Record<Card, string>> = Object.freeze({
   'Heavy Bonk': 'Deal 4 damage; skip next draw.',
 });
 
+type CardFramePresentation = Readonly<{
+  frame: 'green-banner' | 'teal-banner' | 'tan-banner';
+  nativeWidth: 123 | 124;
+  nativeHeight: 170;
+  icon: string;
+}>;
+
+export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentation>> = Object.freeze({
+  Strike: Object.freeze({ frame: 'tan-banner', nativeWidth: 124, nativeHeight: 170, icon: '*' }),
+  Guard: Object.freeze({ frame: 'teal-banner', nativeWidth: 123, nativeHeight: 170, icon: '#' }),
+  Mend: Object.freeze({ frame: 'green-banner', nativeWidth: 123, nativeHeight: 170, icon: '+' }),
+  Spark: Object.freeze({ frame: 'green-banner', nativeWidth: 123, nativeHeight: 170, icon: '^' }),
+  Stun: Object.freeze({ frame: 'teal-banner', nativeWidth: 123, nativeHeight: 170, icon: '~' }),
+  'Heavy Bonk': Object.freeze({ frame: 'tan-banner', nativeWidth: 124, nativeHeight: 170, icon: '!' }),
+});
+
 const actionLabel = (card: Card, phase: Phase): string => {
   const verb = phase === 'SparkChoice' ? 'Replace' : 'Play';
   return `${verb} ${card}. ${CARD_DESCRIPTIONS[card]}`;
@@ -27,6 +43,7 @@ export const renderHandCard = (
       ? 'card-disabled'
       : 'card-playable';
   const disabledAttribute = disabled ? ' disabled' : '';
+  const presentation = CARD_FRAME_PRESENTATIONS[card];
 
   return `
     <button
@@ -34,11 +51,18 @@ export const renderHandCard = (
       type="button"
       data-i="${index}"
       data-card-name="${card}"
+      data-card-frame="${presentation.frame}"
+      data-native-width="${presentation.nativeWidth}"
+      data-native-height="${presentation.nativeHeight}"
       data-stage-anchor="${handSlotAnchorId(index)}"
       aria-label="${actionLabel(card, phase)}"${disabledAttribute}
     >
-      <span class="card-title">${card}</span>
-      <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
+      <span class="card-frame-art" aria-hidden="true"></span>
+      <span class="card-icon" aria-hidden="true">${presentation.icon}</span>
+      <span class="card-content">
+        <span class="card-title">${card}</span>
+        <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
+      </span>
       <span class="card-state" aria-hidden="true">
         ${phase === 'SparkChoice' ? 'Replace' : disabled ? 'Locked' : 'Play'}
       </span>

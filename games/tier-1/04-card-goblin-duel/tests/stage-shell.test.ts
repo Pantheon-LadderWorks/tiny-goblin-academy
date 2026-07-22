@@ -57,6 +57,59 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(tableMarkup.indexOf('class="hand-zone"')).toBeGreaterThan(tableMarkup.indexOf('class="resolution-zone"'));
   });
 
+  it('integrates the approved H5.103 tabletop as one unsliced scene plate', () => {
+    expect(mainSource).toContain('tga-card-goblin-duel-tabletop-scene-v0.1.png?url');
+    expect(mainSource).toContain("setProperty('--tabletop-scene-url'");
+    expect(styles).toMatch(/\.tabletop-scene\s*\{[^}]*var\(--tabletop-scene-url\)[^}]*background-size:\s*cover/s);
+    expect(styles).not.toContain('tabletop-prop-sprite');
+  });
+
+  it('uses the H5.39 sheet only as functional card-frame chrome', () => {
+    expect(mainSource).toContain('tga-card-goblin-duel-card-frames-cleaned-v0.1.png?url');
+    expect(mainSource).toContain("setProperty('--card-frame-sheet-url'");
+    expect(styles).toMatch(/\.card-frame-art\s*\{[^}]*var\(--card-frame-sheet-url\)/s);
+    expect(styles).toContain('.card-content');
+    expect(styles).toContain('.card-icon');
+  });
+
+  it('lets full-height cards rise from an integrated lower staging dock', () => {
+    expect(styles).toMatch(/\.hand-zone\s*\{[^}]*overflow:\s*visible/s);
+    expect(styles).toMatch(/#hand\s*\{[^}]*align-items:\s*end/s);
+    expect(styles).toMatch(/\.card-btn\s*\{[^}]*aspect-ratio:\s*123\s*\/\s*170/s);
+    expect(styles).toContain('translateY(var(--card-rise))');
+  });
+
+  it('keeps the status rail in document flow above the tabletop artwork', () => {
+    const railStart = markup.indexOf('class="duel-top-rail"');
+    const stackStart = markup.indexOf('class="tabletop-stack"');
+    const railEnd = markup.indexOf('</section>', markup.indexOf('class="player-status-rail"'));
+
+    expect(railStart).toBeGreaterThan(-1);
+    expect(stackStart).toBeGreaterThan(railEnd);
+    expect(markup.slice(railStart, railEnd)).toContain('class="player-status-rail"');
+    expect(styles).toMatch(/#duel-table\s*\{[^}]*grid-template-rows:\s*auto minmax\(0,\s*1fr\)/s);
+    expect(styles).not.toMatch(/#duel-table\s*\{[^}]*var\(--tabletop-scene-url\)/s);
+    expect(styles).not.toMatch(/\.duel-top-rail\s*\{[^}]*position:\s*absolute/s);
+  });
+
+  it('stacks a seamless sampled-plum hand dock below the tabletop plate', () => {
+    expect(styles).toContain('--tabletop-dock-plum: #1a1218;');
+    expect(styles).toMatch(/\.tabletop-stack\s*\{[^}]*grid-template-rows:\s*minmax\(0,\s*1fr\) var\(--hand-dock-height\)[^}]*gap:\s*0/s);
+    expect(styles).toMatch(/\.hand-zone\s*\{[^}]*background:\s*var\(--tabletop-dock-plum\)[^}]*border:\s*0/s);
+    expect(styles).toContain('--hand-dock-height: clamp(150px, 25vh, 166px);');
+  });
+
+  it('measures rendered card exposure and protects the complete result corridor', () => {
+    expect(captureSource).toContain("rect('.tabletop-scene')");
+    expect(captureSource).toContain('tabletopOverlapRatio');
+    expect(captureSource).toContain('dockContainmentRatio');
+    expect(captureSource).toContain('resting card exceeds 30% tabletop exposure');
+    expect(captureSource).toContain('focused card exceeds 35% tabletop exposure');
+    expect(captureSource).toContain('blocks the protected result corridor');
+    expect(styles).toMatch(/\.resolution-copy\s*\{[^}]*bottom:\s*var\(--result-corridor-bottom\)/s);
+    expect(styles).toMatch(/\.terminal-outcome\s*\{[^}]*bottom:\s*var\(--result-corridor-bottom\)/s);
+  });
+
   it('treats the actual Tauri Hub minimum as the supported laptop authority', () => {
     expect(tauriConfig.app.windows[0]).toMatchObject({
       width: 1280,

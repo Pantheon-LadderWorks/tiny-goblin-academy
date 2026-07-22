@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "316a261bcc22144f509381a893d43597bb5c9528",
+  "createdAt": "2026-07-22T04:29:37.903Z",
+  "gameId": "level-04-card-goblin-duel",
+  "laneId": "h6-20d-tabletop-functional-card-preview",
+  "runId": "capture-20260722t042915z-p2892",
+  "externalRelativePath": "level-04-card-goblin-duel/h6-20d-tabletop-functional-card-preview/capture-20260722t042915z-p2892",
+  "files": [
+    {
+      "relativePath": "stills/01-default-complete-hand.png",
+      "mediaType": "image/png",
+      "bytes": 1004098,
+      "sha256": "447df608dd4850524bc80c9326b472609daa9650c89c0c24110d743c2d657872"
+    },
+    {
+      "relativePath": "stills/02-keyboard-focused-card.png",
+      "mediaType": "image/png",
+      "bytes": 1004966,
+      "sha256": "6ff8af7b08cbad996c99f74cadb959f73f065dc1e4f8735b8f720301050fd0c2"
+    },
+    {
+      "relativePath": "stills/03-card-resolution-enemy-response.png",
+      "mediaType": "image/png",
+      "bytes": 994769,
+      "sha256": "70515127723544fa3b7d2e0ea8b1261414a9301933e50ca20073577eb8cae9b3"
+    },
+    {
+      "relativePath": "stills/04-spark-choice.png",
+      "mediaType": "image/png",
+      "bytes": 1013682,
+      "sha256": "b126e262a21b31979772a730b791c73100af23ff88017ee353eafe2301a84942"
+    },
+    {
+      "relativePath": "stills/05-victory-terminal-disabled-hand.png",
+      "mediaType": "image/png",
+      "bytes": 1002673,
+      "sha256": "f18bdb8a511867936bbc5a26459e7d090f37b81455e9c85cb51152bedcbd5e4c"
+    },
+    {
+      "relativePath": "stills/06-defeat-terminal.png",
+      "mediaType": "image/png",
+      "bytes": 1005782,
+      "sha256": "ab164c6047b124310af3f9163255233f3b052d136b8d442ab3333cb0578d6bb5"
+    },
+    {
+      "relativePath": "stills/07-minimum-complete-hand.png",
+      "mediaType": "image/png",
+      "bytes": 719498,
+      "sha256": "4e7f167bca2a7b37c980f7c0345adfbe0029e8934cbccd4d9bb53a173bbed03c"
+    },
+    {
+      "relativePath": "stills/08-anchor-debug-explicit.png",
+      "mediaType": "image/png",
+      "bytes": 1016382,
+      "sha256": "3fa4b59f9f1d4df4ea52a7bd647b1eab4d81925ac8f9ad972b986f90e38fd9ab"
+    },
+    {
+      "relativePath": "technical-review.json",
+      "mediaType": "application/json",
+      "bytes": 32652,
+      "sha256": "544e11455af700949990c7d05456eb3d6f110550268a9d3fd15ea600c9be653a"
+    }
+  ],
+  "captureScript": "games/tier-1/04-card-goblin-duel/capture.cjs",
+  "captureScriptVersion": "h6.20d",
+  "captureConfiguration": {
+    "listenerHost": "127.0.0.1",
+    "listenerPort": 5175,
+    "browser": "chromium",
+    "supportedRuntimeSurfaces": [
+      {
+        "width": 1280,
+        "height": 660
+      },
+      {
+        "width": 1024,
+        "height": 580
+      }
+    ],
+    "debugQuery": "?anchors=1"
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

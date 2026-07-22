@@ -14,7 +14,7 @@ const HUB_MINIMUM_RUNTIME = { width: 1024, height: 580 };
 const captureRun = prepareCaptureRun({
   scriptDirectory: __dirname,
   gameId: 'level-04-card-goblin-duel',
-  laneId: 'h6-20-stage-first-table-shell',
+  laneId: 'h6-20e-tabletop-dock-correction',
 });
 
 const consoleErrors = [];
@@ -28,6 +28,17 @@ const review = {
   },
   consoleErrors,
   debugMarkersExplicitOnly: true,
+  cardFrameScaling: {
+    sourceSheet: 'assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png',
+    selectedNativeCrops: {
+      'green-banner': { width: 123, height: 170 },
+      'teal-banner': { width: 123, height: 170 },
+      'tan-banner': { width: 124, height: 170 },
+    },
+    imageRendering: 'auto',
+    states: [],
+    assessment: 'Bounded CSS upscaling is expected to soften raster ornament slightly; runtime DOM text and focus chrome remain resolution-independent. Human visual review determines whether higher-resolution frame crops are required.',
+  },
   ledgerBridge: null,
 };
 
@@ -67,16 +78,45 @@ async function containmentMetrics(page) {
       app: rect('#app'),
       masthead: rect('.academy-header'),
       table: rect('#duel-table'),
+      topRail: rect('.duel-top-rail'),
+      tabletop: rect('.tabletop-scene'),
       hand: rect('.hand-zone'),
+      resolutionCopy: rect('.resolution-copy'),
+      terminal: rect('#terminal-outcome:not([hidden])'),
       reset: rect('#reset-duel:not([hidden])'),
       cards: [...document.querySelectorAll('.card-btn')].map((element) => {
         const bounds = element.getBoundingClientRect();
+        const tabletopBounds = document.querySelector('.tabletop-scene')?.getBoundingClientRect();
+        const dockBounds = document.querySelector('.hand-zone')?.getBoundingClientRect();
+        const tabletopOverlapPixels = tabletopBounds
+          ? Math.max(0, Math.min(bounds.bottom, tabletopBounds.bottom) - Math.max(bounds.top, tabletopBounds.top))
+          : 0;
+        const dockContainmentPixels = dockBounds
+          ? Math.max(0, Math.min(bounds.bottom, dockBounds.bottom) - Math.max(bounds.top, dockBounds.top))
+          : 0;
         return {
           name: element.getAttribute('data-card-name'),
+          frame: element.getAttribute('data-card-frame'),
           left: bounds.left,
           top: bounds.top,
+          width: bounds.width,
+          height: bounds.height,
           right: bounds.right,
           bottom: bounds.bottom,
+          tabletopOverlapPixels,
+          tabletopOverlapRatio: tabletopOverlapPixels / bounds.height,
+          dockContainmentPixels,
+          dockContainmentRatio: dockContainmentPixels / bounds.height,
+          focused: element === document.activeElement,
+          nativeWidth: Number(element.getAttribute('data-native-width')),
+          nativeHeight: Number(element.getAttribute('data-native-height')),
+          scaleX: bounds.width / Number(element.getAttribute('data-native-width')),
+          scaleY: bounds.height / Number(element.getAttribute('data-native-height')),
+          imageRendering: getComputedStyle(element.querySelector('.card-frame-art')).imageRendering,
+          titleFits: element.querySelector('.card-title').scrollWidth <= element.querySelector('.card-title').clientWidth
+            && element.querySelector('.card-title').scrollHeight <= element.querySelector('.card-title').clientHeight,
+          bodyFits: element.querySelector('.card-desc').scrollWidth <= element.querySelector('.card-desc').clientWidth
+            && element.querySelector('.card-desc').scrollHeight <= element.querySelector('.card-desc').clientHeight,
           disabled: element.disabled,
         };
       }),
@@ -85,11 +125,27 @@ async function containmentMetrics(page) {
 }
 
 function assertContained(metrics, label) {
-  const { document, viewport, table, hand, reset, cards } = metrics;
+  const {
+    document,
+    viewport,
+    table,
+    topRail,
+    tabletop,
+    hand,
+    resolutionCopy,
+    terminal,
+    reset,
+    cards,
+  } = metrics;
   const failures = [];
+  const overlaps = (left, right) => left && right
+    && left.left < right.right && left.right > right.left
+    && left.top < right.bottom && left.bottom > right.top;
 
   if (document.scrollWidth > document.clientWidth) failures.push('horizontal document overflow');
   if (document.scrollHeight > document.clientHeight) failures.push('vertical document overflow');
+  if (topRail && tabletop && topRail.bottom > tabletop.top + 0.5) failures.push('top status rail overlaps the tabletop artwork');
+  if (tabletop && hand && Math.abs(tabletop.bottom - hand.top) > 0.5) failures.push('tabletop and hand dock have a visible geometry seam');
   for (const [name, bounds] of [['table', table], ['hand', hand], ['reset', reset]]) {
     if (!bounds) continue;
     if (bounds.left < 0 || bounds.top < 0 || bounds.right > viewport.width || bounds.bottom > viewport.height) {
@@ -99,6 +155,24 @@ function assertContained(metrics, label) {
   for (const bounds of cards) {
     if (bounds.left < 0 || bounds.top < 0 || bounds.right > viewport.width || bounds.bottom > viewport.height) {
       failures.push(`card ${bounds.name ?? 'unknown'} leaves the runtime surface`);
+    }
+    if (table && (bounds.left < table.left || bounds.top < table.top || bounds.right > table.right || bounds.bottom > table.bottom)) {
+      failures.push(`card ${bounds.name ?? 'unknown'} leaves the tabletop`);
+    }
+    if (!bounds.titleFits || !bounds.bodyFits) failures.push(`card ${bounds.name ?? 'unknown'} runtime text overflows its mapped slot`);
+    if (resolutionCopy && overlaps(bounds, resolutionCopy)) failures.push(`card ${bounds.name ?? 'unknown'} blocks the protected result corridor`);
+    if (terminal && overlaps(bounds, terminal)) failures.push(`card ${bounds.name ?? 'unknown'} blocks the protected result corridor`);
+    if (bounds.focused && bounds.tabletopOverlapRatio > 0.35 + Number.EPSILON) {
+      failures.push(`focused card exceeds 35% tabletop exposure: ${bounds.name ?? 'unknown'}`);
+    }
+    if (!bounds.focused && bounds.tabletopOverlapRatio > 0.30 + Number.EPSILON) {
+      failures.push(`resting card exceeds 30% tabletop exposure: ${bounds.name ?? 'unknown'}`);
+    }
+    if (!bounds.focused && bounds.tabletopOverlapRatio < 0.20 - Number.EPSILON) {
+      failures.push(`resting card misses the 20% tabletop exposure floor: ${bounds.name ?? 'unknown'}`);
+    }
+    if (!bounds.focused && bounds.dockContainmentRatio < 0.70 - Number.EPSILON) {
+      failures.push(`resting card keeps less than 70% inside the dock: ${bounds.name ?? 'unknown'}`);
     }
   }
 
@@ -113,6 +187,20 @@ async function capture(page, name, metadata = {}) {
   const path = captureRun.file('stills', `${name}.png`);
   await page.screenshot({ path, fullPage: false });
   review.states.push({ name, containment, ...metadata });
+  if (name === '01-default-complete-hand' || name === '07-minimum-complete-hand') {
+    review.cardFrameScaling.states.push({
+      name,
+      viewport: containment.viewport,
+      cards: containment.cards.map(({ name: cardName, frame, width, height, nativeWidth, nativeHeight, scaleX, scaleY, imageRendering }) => ({
+        name: cardName,
+        frame,
+        displayedCssPixels: { width, height },
+        nativeCropPixels: { width: nativeWidth, height: nativeHeight },
+        scaleFactor: { x: scaleX, y: scaleY },
+        imageRendering,
+      })),
+    });
+  }
 }
 
 async function openPage(browser, viewport = HUB_DEFAULT_RUNTIME, suffix = '') {
@@ -132,7 +220,7 @@ async function openPage(browser, viewport = HUB_DEFAULT_RUNTIME, suffix = '') {
 
 async function captureInitialAndSpark(browser) {
   const page = await openPage(browser);
-  await capture(page, '01-initial-actionable-table', {
+  await capture(page, '01-default-complete-hand', {
     phase: await page.locator('#banner').textContent(),
     debug: false,
   });
@@ -200,7 +288,7 @@ async function captureDefeat(browser) {
 
 async function captureSupportedMinimumAndDebug(browser) {
   const minimum = await openPage(browser, HUB_MINIMUM_RUNTIME);
-  await capture(minimum, '07-supported-minimum-runtime-surface', {
+  await capture(minimum, '07-minimum-complete-hand', {
     authority: 'Tauri minimum runtime content area',
   });
   await minimum.close();
@@ -211,13 +299,6 @@ async function captureSupportedMinimumAndDebug(browser) {
     bodyClass: await debug.locator('body').getAttribute('class'),
   });
   await debug.close();
-
-  const ordinary = await openPage(browser);
-  await capture(ordinary, '09-ordinary-debug-disabled', {
-    status: await ordinary.locator('#anchor-status').textContent(),
-    bodyClass: await ordinary.locator('body').getAttribute('class'),
-  });
-  await ordinary.close();
 }
 
 async function verifyLedgerBridge(browser) {
@@ -299,7 +380,7 @@ async function verifyLedgerBridge(browser) {
 
     const finalized = finalizeCaptureRun(captureRun, {
       captureScript: 'games/tier-1/04-card-goblin-duel/capture.cjs',
-      captureScriptVersion: 'h6.20c',
+      captureScriptVersion: 'h6.20e',
       captureConfiguration: {
         listenerHost: '127.0.0.1',
         listenerPort: 5175,
