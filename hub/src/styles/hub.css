@@ -6,10 +6,10 @@
   --accent-gold: #feca57;
   --panel-bg: #222230;
   --border-color: #3b3b4f;
-  
+
   --parchment-bg: #f8f4e6;
   --parchment-text: #2d2d2d;
-  
+
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -228,6 +228,25 @@ body {
   background: rgba(254, 202, 87, 0.06);
 }
 
+.runtime-ledger-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding-left: 1.45rem;
+}
+
+.runtime-ledger-list li {
+  padding: 0.55rem 0.65rem;
+  border: 1px solid rgba(254, 202, 87, 0.2);
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.runtime-ledger-list li::marker {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+
 .runtime-dev-list {
   display: grid;
   gap: 0.65rem;
@@ -321,7 +340,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 2rem 4rem 2rem;
-  background: 
+  background:
     linear-gradient(180deg, rgba(10, 10, 15, 0.8) 0%, rgba(10, 10, 15, 0.1) 20%, transparent 60%, rgba(10, 10, 15, 0.8) 100%),
     radial-gradient(circle at center, transparent 40%, rgba(10, 10, 15, 0.5) 100%);
 }

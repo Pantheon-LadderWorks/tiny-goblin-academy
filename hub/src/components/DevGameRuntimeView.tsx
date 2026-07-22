@@ -1,5 +1,11 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { getRuntimeHelpContent } from '../data/runtimeHelp';
+import {
+  applyAcademyLedgerMessage,
+  createAcademyLedgerSnapshotRequest,
+  createEmptyLedgerProjection,
+  parseAcademyLedgerMessage,
+} from '../runtimeLedger';
 
 export interface ActiveDevGameRuntime {
   gameId: string;
@@ -35,13 +41,37 @@ const runtimeShellContract: AcademyRuntimeShellContract = {
 };
 
 export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime, onClose, isStopping }) => {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [activeOverlay, setActiveOverlay] = useState<RuntimeOverlay>(null);
+  const [ledgerProjection, setLedgerProjection] = useState(() => createEmptyLedgerProjection(runtime.gameId));
   const helpContent = useMemo(() => getRuntimeHelpContent(runtime.gameId), [runtime.gameId]);
 
   const closeOverlay = () => setActiveOverlay(null);
   const toggleOverlay = (overlay: Exclude<RuntimeOverlay, null>) => {
     setActiveOverlay((current) => (current === overlay ? null : overlay));
   };
+
+  const requestLedgerSnapshot = () => {
+    iframeRef.current?.contentWindow?.postMessage(
+      createAcademyLedgerSnapshotRequest(runtime.gameId),
+      '*',
+    );
+  };
+
+  useEffect(() => {
+    setLedgerProjection(createEmptyLedgerProjection(runtime.gameId));
+
+    const onMessage = (event: MessageEvent<unknown>) => {
+      if (event.source !== iframeRef.current?.contentWindow) return;
+      const message = parseAcademyLedgerMessage(event.data, runtime.gameId);
+      if (!message) return;
+      setLedgerProjection((current) => applyAcademyLedgerMessage(current, message));
+    };
+
+    window.addEventListener('message', onMessage);
+    requestLedgerSnapshot();
+    return () => window.removeEventListener('message', onMessage);
+  }, [runtime.gameId]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -121,9 +151,12 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
         </div>
       </header>
 
-      <main className="runtime-content">
+      <main className="runtime-content" data-runtime-content>
         <iframe
+          ref={iframeRef}
+          data-runtime-iframe
           src={runtime.url}
+          onLoad={requestLedgerSnapshot}
           title={`Dev Game Runtime: ${runtime.title}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
@@ -150,13 +183,27 @@ export const DevGameRuntimeView: React.FC<DevGameRuntimeViewProps> = ({ runtime,
 
               {activeOverlay === 'ledger' && (
                 <div className="runtime-overlay-body" data-typography-role="body-instruction">
-                  <p>
-                    The shared shell now owns the Ledger surface. This H6.1 contract proves the top-bar button and <kbd>L</kbd>
-                    shortcut without migrating per-game ledgers yet.
-                  </p>
-                  <div className="runtime-contract-card">
-                    <strong>Current boundary:</strong> games may still render their internal ledgers until their H6 migration lane.
-                  </div>
+                  <p>The active game supplies immutable causal receipts; this Hub surface only projects them.</p>
+                  {ledgerProjection.runId && (
+                    <p className="runtime-ledger-run" data-typography-role="debug-information">
+                      Game {ledgerProjection.gameId} · Run {ledgerProjection.runId}
+                    </p>
+                  )}
+                  {ledgerProjection.events.length > 0 ? (
+                    <ol className="runtime-ledger-list">
+                      {ledgerProjection.events.map((entry) => (
+                        <li key={entry.eventId}>
+                          <div className="runtime-ledger-entry-heading">
+                            <strong>{entry.title}</strong>
+                            <span>#{entry.sequence} · {entry.kind}</span>
+                          </div>
+                          <p>{entry.summary}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <div className="runtime-contract-card">No causal events have been published by this game yet.</div>
+                  )}
                 </div>
               )}
 

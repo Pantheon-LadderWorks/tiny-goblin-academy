@@ -2,40 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17111f" />
   <title>Card Goblin Duel</title>
 </head>
 <body>
   <main id="app">
-    <header>
-      <small>TINY GOBLIN ACADEMY • LEVEL 04</small>
+    <header class="academy-header">
+      <small>Tiny Goblin Academy · Level 04</small>
       <h1>Card Goblin Duel</h1>
       <p>Read the hand. Plan the cycle. Bonk the Card Goblin.</p>
     </header>
-    
-    <section id="layout">
-      <aside id="stats">
-        <h2>Player Status</h2>
-        <div id="hud"></div>
-      </aside>
-      
-      <section id="play">
-        <div id="canvas"></div>
-        <div id="banner"></div>
+
+    <section id="duel-table" aria-label="Card Goblin duel table">
+      <div id="stage-canvas" aria-hidden="true"></div>
+
+      <section class="duel-top-rail" aria-label="Duel status and card wells">
+        <section id="phase-banner" class="phase-banner" data-stage-anchor="phase-banner" aria-live="polite">
+          <strong id="banner">Your Turn</strong>
+          <span id="phase-instruction">Choose one card to play.</span>
+        </section>
+
+        <section class="enemy-status" aria-label="Card Goblin status">
+          <span class="status-name">Card Goblin</span>
+          <strong id="enemy-hp">12 / 12 HP</strong>
+          <span id="enemy-effects">Ready to answer your play.</span>
+        </section>
+
+        <div class="table-wells" aria-label="Draw and discard wells">
+          <section class="table-well deck-well" aria-label="Next card">
+            <span class="well-label">Next</span>
+            <div id="next"></div>
+          </section>
+          <section class="table-well discard-well" data-stage-anchor="discard" aria-label="Discard pile">
+            <span class="well-label">Discard</span>
+            <span>Recycle</span>
+          </section>
+        </div>
+      </section>
+
+      <section class="resolution-zone" aria-label="Current card exchange">
+        <div class="stage-overlay" aria-hidden="true">
+          <span class="anchor-point enemy-center" data-stage-anchor="enemy-center"></span>
+          <span class="anchor-point enemy-impact" data-stage-anchor="enemy-impact"></span>
+          <span class="anchor-point player-center" data-stage-anchor="player-center"></span>
+          <span class="anchor-point player-impact" data-stage-anchor="player-impact"></span>
+          <span class="anchor-point resolution-center" data-stage-anchor="resolution-center"></span>
+        </div>
+
+        <div class="academy-seal" aria-hidden="true"></div>
+        <div class="card-landing-slot" data-stage-anchor="played-card" aria-hidden="true"></div>
+
+        <section class="resolution-copy" aria-live="polite">
+          <strong id="resolution-title">The table is waiting.</strong>
+          <span id="resolution-detail">Play a card to resolve the next exchange.</span>
+        </section>
+
+        <section id="terminal-outcome" class="terminal-outcome" data-stage-anchor="terminal-outcome" aria-live="assertive" hidden>
+          <span id="terminal-message"></span>
+          <button id="reset-duel" type="button">Reset Duel</button>
+        </section>
+
+        <section class="player-status-rail" aria-label="Player status">
+          <span class="status-name">You</span>
+          <strong id="player-hp">10 / 10 HP</strong>
+          <span id="player-effects">No active guard or stun.</span>
+        </section>
+      </section>
+
+      <section class="hand-zone" aria-labelledby="hand-heading">
+        <div class="hand-heading-row">
+          <div>
+            <span class="hand-label">Player Hand</span>
+            <h2 id="hand-heading">Choose your card</h2>
+          </div>
+          <span id="hand-count">3 cards</span>
+        </div>
         <div id="hand"></div>
       </section>
-      
-      <aside id="ledger">
-        <h2>Action Ledger</h2>
-        <ol id="log"></ol>
-        
-        <div class="deck-preview">
-          <h2>Next Card</h2>
-          <div id="next"></div>
-        </div>
-      </aside>
     </section>
+
+    <p id="anchor-status" class="anchor-status" aria-hidden="true">Anchor bridge waiting for Phaser.</p>
   </main>
   <script type="module" src="/src/main.ts"></script>
 </body>

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "73911a85f8f955755515008ec18899293cce10b5",
+  "cards": [
+    { "name": "Strike", "effect": "Deal 2 damage." },
+    { "name": "Guard", "effect": "Reduce next enemy damage by 2." },
+    { "name": "Mend", "effect": "Heal 2 HP." },
+    { "name": "Spark", "effect": "Deal 1 damage and replace one card." },
+    { "name": "Stun", "effect": "Prevent the next enemy attack once." },
+    { "name": "Heavy Bonk", "effect": "Deal 4 damage; skip next draw." }
+  ],
+  "initialState": {
+    "phase": "PlayerAction",
+    "hand": ["Strike", "Guard", "Mend"],
+    "queue": ["Spark", "Stun", "Heavy Bonk"],
+    "playerHp": 10,
+    "enemyHp": 12,
+    "guard": 0,
+    "stun": false,
+    "skip": false
+  },
+  "scenarios": {
+    "strike": {
+      "phase": "PlayerAction",
+      "hand": ["Guard", "Mend", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Strike"],
+      "playerHp": 8,
+      "enemyHp": 10,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "guard": {
+      "phase": "PlayerAction",
+      "hand": ["Strike", "Mend", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Guard"],
+      "playerHp": 10,
+      "enemyHp": 12,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "mend": {
+      "phase": "PlayerAction",
+      "hand": ["Strike", "Guard", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Mend"],
+      "playerHp": 6,
+      "enemyHp": 12,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "stun": {
+      "phase": "PlayerAction",
+      "hand": ["Strike", "Mend", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Stun"],
+      "playerHp": 10,
+      "enemyHp": 12,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "heavyBonk": {
+      "phase": "PlayerAction",
+      "hand": ["Strike", "Mend"],
+      "queue": ["Spark", "Stun", "Heavy Bonk", "Heavy Bonk"],
+      "playerHp": 8,
+      "enemyHp": 8,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "sparkChoice": {
+      "phase": "SparkChoice",
+      "hand": ["Strike", "Guard"],
+      "queue": ["Spark", "Stun", "Heavy Bonk", "Spark"],
+      "playerHp": 10,
+      "enemyHp": 11,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "sparkResolved": {
+      "phase": "PlayerAction",
+      "hand": ["Strike", "Spark", "Stun"],
+      "queue": ["Heavy Bonk", "Spark", "Guard"],
+      "playerHp": 8,
+      "enemyHp": 11,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "victory": {
+      "phase": "Terminal",
+      "hand": ["Guard", "Mend", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Strike"],
+      "playerHp": 10,
+      "enemyHp": 0,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    },
+    "defeat": {
+      "phase": "Terminal",
+      "hand": ["Strike", "Strike", "Spark"],
+      "queue": ["Stun", "Heavy Bonk", "Strike"],
+      "playerHp": 0,
+      "enemyHp": 10,
+      "guard": 0,
+      "stun": false,
+      "skip": false
+    }
+  }
+}

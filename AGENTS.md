@@ -35,7 +35,7 @@ oneRoomPlatformerBaselineSuitePassing: false
 h6_18IntroducedWorkspaceRegression: false
 oneRoomPlatformerCorrectionAuthorized: false
 pushExecuted: true
-cardGoblinDuelStarted: false
+cardGoblinDuelStarted: true
 ```
 
 At this baseline:
@@ -48,7 +48,7 @@ At this baseline:
 - H6.18 capture redirection is implemented for nine audited generic runtime/playtest capture scripts through `tools/evidence/`; nineteen historical or production/source-generation records remain unchanged.
 - H6.18 human technical review passed in H6.18A.
 - The One Room Platformer legacy simulation suite remains a documented pre-existing out-of-lane baseline failure; H6.18 introduced no gameplay regression and authorizes no correction.
-- Card Goblin Duel visual integration has not begun.
+- Card Goblin Duel visual integration has begun in H6.20 with the stage-first shell and presentation-anchor contract; human visual review remains pending, and H6.21 through H6.24 remain separately gated.
 
 Only the lane that changes one of these facts may update this block.
 
