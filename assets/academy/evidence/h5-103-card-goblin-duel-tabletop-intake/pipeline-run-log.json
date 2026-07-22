@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "0.1",
+  "contractVersion": "0.1",
+  "tool": "scripts/asset-pipeline/cli.mjs",
+  "toolPath": "scripts/asset-pipeline/cli.mjs",
+  "command": "map-regions",
+  "method": "scene-anchor-background-planning",
+  "methodStatus": "mapping-only",
+  "methodParameters": {
+    "regionCount": 22,
+    "sourceDimensions": {
+      "width": 2172,
+      "height": 724
+    },
+    "sourcePreserved": true,
+    "cleanupPerformed": false,
+    "runtimeIntegrationPerformed": false,
+    "evidenceStorageClass": "external-heavy",
+    "evidenceRootKey": "TGA_EVIDENCE_ROOT",
+    "externalEvidenceRelativePath": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake",
+    "portableEvidenceManifest": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json"
+  },
+  "laneId": "h5-103-card-goblin-duel-tabletop-intake",
+  "agent": "Mega-MCP",
+  "gitBaseline": "73911a8 docs: rebaseline card goblin visual integration",
+  "startedAt": "2026-07-22T02:32:13.884Z",
+  "completedAt": "2026-07-22T02:32:13.892Z",
+  "sourcePath": "assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png",
+  "sourceSha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3",
+  "manifestPath": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.tabletop.regions.json",
+  "inputManifests": [
+    "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.tabletop.regions.json",
+    "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.tabletop-source-intake.json"
+  ],
+  "outputFiles": [
+    {
+      "path": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.tabletop-source-intake.json",
+      "sha256": "c07746633e032037afda2df15583aa6525cad1eb059dfb4fd81bb64d32117da1"
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.tabletop.regions.json",
+      "sha256": "4725e3b73cc43afa9b43c9ad3100eef4ca22759c0e0453ab617d3046f2b74403"
+    },
+    {
+      "path": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-source-inspection.json",
+      "sha256": "d2089f75cb5a12b376e6ddf9b1ba8ce2947dd9cab9b6671bcb564436ac94d00d"
+    },
+    {
+      "path": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json",
+      "sha256": "1163d24dc16003280a7103d1fb8128a916d25dbf8a0dadcfe5220bb5db8ab8be"
+    },
+    {
+      "path": "docs/assets/game-assets/card-goblin-duel/tabletop/TINY_GOBLIN_ACADEMY_H5_103_CARD_GOBLIN_DUEL_TABLETOP_ASSET_INGESTION.md",
+      "sha256": "c7310bca73d29253da094a022b88d0be6cf2b1265840d378c35650a6590eae70"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-bbox-overlay.png",
+      "sha256": "8daea258a4657a41eac94baa2f2a1fff21f4bc0fd482ff455a85ba58f4f7ec0e",
+      "bytes": 720198,
+      "storageClass": "external-heavy"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-numbered-contact-sheet.png",
+      "sha256": "7dec1a16f6f3ea82561658c8e6fac41df6f9b65459ea4f9fdf97fdee6215eca5",
+      "bytes": 847022,
+      "storageClass": "external-heavy"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-region-table-preview.png",
+      "sha256": "062b1d42d1cf6af45ca2b168a9f5dd9f22d92cd6dabf6da73f500ad95b3e7b55",
+      "bytes": 135047,
+      "storageClass": "external-heavy"
+    }
+  ],
+  "outputPaths": [
+    {
+      "path": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.tabletop-source-intake.json",
+      "sha256": "c07746633e032037afda2df15583aa6525cad1eb059dfb4fd81bb64d32117da1"
+    },
+    {
+      "path": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.tabletop.regions.json",
+      "sha256": "4725e3b73cc43afa9b43c9ad3100eef4ca22759c0e0453ab617d3046f2b74403"
+    },
+    {
+      "path": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-source-inspection.json",
+      "sha256": "d2089f75cb5a12b376e6ddf9b1ba8ce2947dd9cab9b6671bcb564436ac94d00d"
+    },
+    {
+      "path": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json",
+      "sha256": "1163d24dc16003280a7103d1fb8128a916d25dbf8a0dadcfe5220bb5db8ab8be"
+    },
+    {
+      "path": "docs/assets/game-assets/card-goblin-duel/tabletop/TINY_GOBLIN_ACADEMY_H5_103_CARD_GOBLIN_DUEL_TABLETOP_ASSET_INGESTION.md",
+      "sha256": "c7310bca73d29253da094a022b88d0be6cf2b1265840d378c35650a6590eae70"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-bbox-overlay.png",
+      "sha256": "8daea258a4657a41eac94baa2f2a1fff21f4bc0fd482ff455a85ba58f4f7ec0e",
+      "bytes": 720198,
+      "storageClass": "external-heavy"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-numbered-contact-sheet.png",
+      "sha256": "7dec1a16f6f3ea82561658c8e6fac41df6f9b65459ea4f9fdf97fdee6215eca5",
+      "bytes": 847022,
+      "storageClass": "external-heavy"
+    },
+    {
+      "path": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-region-table-preview.png",
+      "sha256": "062b1d42d1cf6af45ca2b168a9f5dd9f22d92cd6dabf6da73f500ad95b3e7b55",
+      "bytes": 135047,
+      "storageClass": "external-heavy"
+    }
+  ],
+  "evidenceFiles": [
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-bbox-overlay.png",
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-numbered-contact-sheet.png",
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-region-table-preview.png"
+  ],
+  "generatedEvidenceFiles": [
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-bbox-overlay.png",
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-numbered-contact-sheet.png",
+    "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/card-goblin-duel-tabletop-region-table-preview.png"
+  ],
+  "validationCommands": [
+    "node scripts/asset-pipeline/cli.mjs validate",
+    "node scripts/asset-pipeline/cli.mjs validate-provenance --legacy-ok",
+    "node scripts/asset-pipeline/validate-pipeline-provenance.mjs --legacy-ok"
+  ],
+  "warnings": [
+    "Scene-anchor mapping only; no sprite extraction, cleanup, runtime placement, gameplay wiring, or Phaser integration.",
+    "Mapped source rectangles are review intelligence, not exact runtime coordinates.",
+    "Generated PNG evidence is external-heavy under TGA_EVIDENCE_ROOT; Git stores only lightweight manifests, inspection metadata, and provenance."
+  ],
+  "sourcePngModified": false,
+  "runtimeFilesModified": false,
+  "status": "completed",
+  "createdAtUtc": "2026-07-22T02:32:13.899Z"
+}

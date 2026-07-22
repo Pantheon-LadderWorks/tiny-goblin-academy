@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "73911a85f8f955755515008ec18899293cce10b5",
+  "createdAt": "2026-07-22T02:42:42.465Z",
+  "scope": "academy-asset-pipeline",
+  "assetDomain": "card-goblin-duel-tabletop",
+  "laneId": "h5-103-card-goblin-duel-tabletop-intake",
+  "externalRelativePath": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake",
+  "files": [
+    {
+      "relativePath": "card-goblin-duel-tabletop-bbox-overlay.png",
+      "mediaType": "image/png",
+      "bytes": 720198,
+      "sha256": "8daea258a4657a41eac94baa2f2a1fff21f4bc0fd482ff455a85ba58f4f7ec0e"
+    },
+    {
+      "relativePath": "card-goblin-duel-tabletop-numbered-contact-sheet.png",
+      "mediaType": "image/png",
+      "bytes": 847022,
+      "sha256": "7dec1a16f6f3ea82561658c8e6fac41df6f9b65459ea4f9fdf97fdee6215eca5"
+    },
+    {
+      "relativePath": "card-goblin-duel-tabletop-region-table-preview.png",
+      "mediaType": "image/png",
+      "bytes": 135047,
+      "sha256": "062b1d42d1cf6af45ca2b168a9f5dd9f22d92cd6dabf6da73f500ad95b3e7b55"
+    }
+  ],
+  "generator": "scripts/asset-pipeline/cli.mjs make-evidence",
+  "generatorLane": "H5.103",
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": true,
+  "humanReviewPassed": true
+}

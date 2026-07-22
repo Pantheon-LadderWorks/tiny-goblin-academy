@@ -1,0 +1,528 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "pipelineUse": "accepted-scene-anchor-and-placement-planning",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "approved-for-planning-only",
+  "domain": "card-goblin-duel-tabletop",
+  "operationalType": "scene-anchor-background",
+  "sourceSheet": "assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png",
+  "sourceOrigin": {
+    "intakeSource": "C:/Users/kryst/Downloads/ChatGPT Image Jul 21, 2026, 08_41_19 PM.png",
+    "intakePhase": "H5.103",
+    "sourceSha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3"
+  },
+  "sourceDimensions": {
+    "w": 2172,
+    "h": 724
+  },
+  "sourceMetadata": {
+    "format": "PNG",
+    "mode": "RGB",
+    "hasAlpha": false,
+    "alphaFinding": "no-alpha-opaque-composited-scene",
+    "cleanupRequired": false,
+    "cleanupNote": "Full opaque tabletop composition. This is a scene-anchor mapping lane, not a transparency cleanup or sprite-extraction lane."
+  },
+  "layoutClassification": "single-composited-academy-duel-table-scene-with-inset-card-wells-and-prop-dressing",
+  "assetRole": "future-card-goblin-duel-tabletop-stage-source",
+  "mappingIntent": [
+    "future stage composition",
+    "safe overlay planning",
+    "deck/discard placement planning",
+    "future card landing and travel-anchor planning",
+    "decorative and readability-risk zoning"
+  ],
+  "placementReferenceOnlyRegionIds": [
+    "card-goblin-duel.tabletop.card-well.top-opponent-well",
+    "card-goblin-duel.tabletop.deck-zone.left-green-deck-well",
+    "card-goblin-duel.tabletop.discard-zone.right-locked-well",
+    "card-goblin-duel.tabletop.prop.left-candle",
+    "card-goblin-duel.tabletop.prop.left-academy-banner",
+    "card-goblin-duel.tabletop.prop.right-goblin-figurine",
+    "card-goblin-duel.tabletop.prop.right-purple-bottle",
+    "card-goblin-duel.tabletop.prop.lower-left-book-and-medallion",
+    "card-goblin-duel.tabletop.prop.right-gold-token"
+  ],
+  "placementReferencePolicy": "Regions 7-9 and 14-19 are approved only as placement/reference geometry within the full composited scene. They are not approved extracted sprites or independent runtime assets.",
+  "regions": [
+    {
+      "id": "card-goblin-duel.tabletop.source-scene.full-tabletop-bounds",
+      "label": "Full tabletop scene bounds",
+      "category": "source-scene",
+      "classification": "source-scene",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "w": 2172,
+        "h": 724
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 362
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Complete approved source composition. Preserve as one scene image; do not automatically slice into production sprites."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.decorative.outer-table-frame",
+      "label": "Ornate outer duel-table frame",
+      "category": "decorative",
+      "classification": "decorative",
+      "sourceRect": {
+        "x": 205,
+        "y": 8,
+        "w": 1768,
+        "h": 707
+      },
+      "anchorPoint": {
+        "x": 1089,
+        "y": 362
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Primary wood-and-brass composition frame. Treat as scene dressing and containment language, not an independent sprite."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.play-surface.central-felt",
+      "label": "Central purple felt play surface",
+      "category": "play-surface",
+      "classification": "play-surface",
+      "sourceRect": {
+        "x": 430,
+        "y": 105,
+        "w": 1312,
+        "h": 544
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 377
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Primary negative-space gameplay surface. Suitable for future cards and transient effects after a separate H6 integration review."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.emblem.academy-center-seal",
+      "label": "Tiny Goblin Academy center seal",
+      "category": "emblem",
+      "classification": "emblem",
+      "sourceRect": {
+        "x": 882,
+        "y": 205,
+        "w": 409,
+        "h": 292
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 351
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Central visual focal point and future resolution/landing reference. Do not obscure permanently with static UI."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.anchor.played-card-landing-center",
+      "label": "Played-card landing center",
+      "category": "anchor",
+      "classification": "anchor",
+      "sourceRect": {
+        "x": 990,
+        "y": 248,
+        "w": 192,
+        "h": 226
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 361
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Source-space focal box for future played-card landing and CardEcho planning. It is not exact runtime placement data."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.anchor.vertical-duel-travel-lane",
+      "label": "Vertical duel travel lane",
+      "category": "anchor",
+      "classification": "anchor",
+      "sourceRect": {
+        "x": 946,
+        "y": 130,
+        "w": 280,
+        "h": 510
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 385
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Broad hand-to-center-to-opponent travel corridor. Preserve negative space; future motion remains separately gated."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.card-well.top-opponent-well",
+      "label": "Top opponent card well",
+      "category": "card-well",
+      "classification": "card-well",
+      "sourceRect": {
+        "x": 925,
+        "y": 0,
+        "w": 351,
+        "h": 187
+      },
+      "anchorPoint": {
+        "x": 1101,
+        "y": 94
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Inset top card/response well. Candidate opponent-side destination or deck presentation surface after H6 review."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.deck-zone.left-green-deck-well",
+      "label": "Left green deck well",
+      "category": "deck-zone",
+      "classification": "deck-zone",
+      "sourceRect": {
+        "x": 214,
+        "y": 244,
+        "w": 365,
+        "h": 333
+      },
+      "anchorPoint": {
+        "x": 397,
+        "y": 411
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Authored green deck stack and inset well. Treat as deck identity/anchor, not an independently extracted sprite."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.discard-zone.right-locked-well",
+      "label": "Right locked discard well",
+      "category": "discard-zone",
+      "classification": "discard-zone",
+      "sourceRect": {
+        "x": 1637,
+        "y": 241,
+        "w": 373,
+        "h": 339
+      },
+      "anchorPoint": {
+        "x": 1824,
+        "y": 411
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Authored chained card and inset well. Candidate discard/recycle identity; lock imagery is decorative until gameplay semantics are reviewed."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.staging-band.lower-player-staging-band",
+      "label": "Lower player staging band",
+      "category": "staging-band",
+      "classification": "staging-band",
+      "sourceRect": {
+        "x": 493,
+        "y": 501,
+        "w": 1186,
+        "h": 150
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 576
+      },
+      "usage": "draft-review",
+      "reviewStatus": "human-review-passed",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Broad lower felt staging band for future CardEcho launch origin, player-impact staging, status, or transient overlays. The live semantic DOM hand remains outside the baked source plate; this map does not approve card dimensions, spacing, or runtime coordinates."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.overlay-safe.lower-symbolic-band",
+      "label": "Lower symbolic overlay band",
+      "category": "overlay-safe",
+      "classification": "overlay-safe",
+      "sourceRect": {
+        "x": 722,
+        "y": 626,
+        "w": 728,
+        "h": 47
+      },
+      "anchorPoint": {
+        "x": 1086,
+        "y": 650
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Quiet lower inlay band that may support restrained future status or card-row ornament. No authored icon strip is claimed."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.overlay-safe.upper-left-negative-space",
+      "label": "Upper-left negative-space overlay zone",
+      "category": "overlay-safe",
+      "classification": "overlay-safe",
+      "sourceRect": {
+        "x": 505,
+        "y": 148,
+        "w": 365,
+        "h": 292
+      },
+      "anchorPoint": {
+        "x": 688,
+        "y": 294
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Relatively quiet felt area. Candidate transient opponent/status overlay zone with contrast treatment; avoid covering frame details."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.overlay-safe.upper-right-negative-space",
+      "label": "Upper-right negative-space overlay zone",
+      "category": "overlay-safe",
+      "classification": "overlay-safe",
+      "sourceRect": {
+        "x": 1301,
+        "y": 148,
+        "w": 365,
+        "h": 292
+      },
+      "anchorPoint": {
+        "x": 1484,
+        "y": 294
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Relatively quiet felt area. Candidate transient opponent/status overlay zone with contrast treatment; avoid the right well and prop cluster."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.left-candle",
+      "label": "Left candle prop area",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 0,
+        "y": 29,
+        "w": 221,
+        "h": 300
+      },
+      "anchorPoint": {
+        "x": 111,
+        "y": 179
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Bright decorative candle and glow. Readability-risk area for small text or subtle effects. Not approved for extraction."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.left-academy-banner",
+      "label": "Left hanging Academy banner",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 137,
+        "y": 0,
+        "w": 224,
+        "h": 251
+      },
+      "anchorPoint": {
+        "x": 249,
+        "y": 126
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Decorative hanging cloth and Academy identity mark. Visually busy; avoid small overlays. Not approved for extraction."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.right-goblin-figurine",
+      "label": "Right goblin figurine prop area",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 1768,
+        "y": 6,
+        "w": 201,
+        "h": 215
+      },
+      "anchorPoint": {
+        "x": 1869,
+        "y": 114
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Decorative goblin miniature on books. This is baked scene dressing, not a runtime character asset."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.right-purple-bottle",
+      "label": "Right purple potion bottle area",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 1931,
+        "y": 82,
+        "w": 154,
+        "h": 191
+      },
+      "anchorPoint": {
+        "x": 2008,
+        "y": 178
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Decorative bottle and label. Not approved for extraction or gameplay meaning."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.lower-left-book-and-medallion",
+      "label": "Lower-left book and goblin medallion area",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 0,
+        "y": 470,
+        "w": 245,
+        "h": 254
+      },
+      "anchorPoint": {
+        "x": 123,
+        "y": 597
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Foreground book, strap, and medallion cluster. Strong obstruction/decorative zone; avoid primary controls."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.prop.right-gold-token",
+      "label": "Right gold token area",
+      "category": "prop",
+      "classification": "prop",
+      "sourceRect": {
+        "x": 1981,
+        "y": 229,
+        "w": 154,
+        "h": 126
+      },
+      "anchorPoint": {
+        "x": 2058,
+        "y": 292
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Decorative gold token/coin on outer wood. No gameplay currency or action meaning is approved."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.outer-dressing.left-wood-frame",
+      "label": "Left wood background and dressing zone",
+      "category": "outer-dressing",
+      "classification": "outer-dressing",
+      "sourceRect": {
+        "x": 0,
+        "y": 0,
+        "w": 430,
+        "h": 724
+      },
+      "anchorPoint": {
+        "x": 215,
+        "y": 362
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Busy outer wood, candle, banner, deck well, and book dressing. Avoid critical controls and small text."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.outer-dressing.right-wood-frame",
+      "label": "Right wood background and dressing zone",
+      "category": "outer-dressing",
+      "classification": "outer-dressing",
+      "sourceRect": {
+        "x": 1740,
+        "y": 0,
+        "w": 432,
+        "h": 724
+      },
+      "anchorPoint": {
+        "x": 1956,
+        "y": 362
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "Busy outer wood, figurine, bottle, discard well, and token dressing. Avoid critical controls and small text."
+    },
+    {
+      "id": "card-goblin-duel.tabletop.decorative.lower-right-unillustrated-wood",
+      "label": "Lower-right outer wood reserve",
+      "category": "decorative",
+      "classification": "decorative",
+      "sourceRect": {
+        "x": 1830,
+        "y": 520,
+        "w": 342,
+        "h": 204
+      },
+      "anchorPoint": {
+        "x": 2001,
+        "y": 622
+      },
+      "usage": "draft-review",
+      "reviewStatus": "needs-human-review",
+      "runtimeEligibility": "not-runtime-approved",
+      "notes": "The prompt requested a lower-right chalk/doodle area, but no distinct authored chalk or goblin doodle is visible. This is recorded truthfully as outer wood reserve, not invented content."
+    }
+  ],
+  "evidence": {
+    "storageClass": "external-heavy",
+    "rootKey": "TGA_EVIDENCE_ROOT",
+    "externalRelativeFolder": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/",
+    "externalFiles": [
+      "card-goblin-duel-tabletop-bbox-overlay.png",
+      "card-goblin-duel-tabletop-numbered-contact-sheet.png",
+      "card-goblin-duel-tabletop-region-table-preview.png"
+    ],
+    "portableManifest": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json",
+    "repositoryFiles": [
+      "card-goblin-duel-tabletop-source-inspection.json",
+      "external-evidence-manifest.json",
+      "pipeline-run-log.json"
+    ]
+  },
+  "notes": [
+    "H5.103 ingests and maps one approved Card Goblin Duel tabletop source illustration.",
+    "The source is a full opaque background/scene-anchor image, not a sprite sheet.",
+    "Mapped rectangles are source-image review zones and anchors, not exact runtime coordinates.",
+    "Prop regions remain baked scene dressing and are not approved for extraction.",
+    "No cleanup is required or performed.",
+    "No gameplay code, Hub code, Phaser integration, card behavior, or runtime wiring is included.",
+    "Human review remains required before any later H6 consumer lane."
+  ],
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "scene-anchor-background-planning",
+    "methodStatus": "mapping-only",
+    "runLog": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/pipeline-run-log.json",
+    "sourceSha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3",
+    "generatedAt": "2026-07-22T02:32:13.892Z",
+    "gitBaseline": "73911a8 docs: rebaseline card goblin visual integration",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "lane": "H5.103",
+  "asset": "Card Goblin Duel tabletop scene illustration",
+  "providedSource": "C:/Users/kryst/Downloads/ChatGPT Image Jul 21, 2026, 08_41_19 PM.png",
+  "ingestedSource": "assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png",
+  "facts": {
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 2172,
+    "height": 724,
+    "bytes": 2478027,
+    "sha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3",
+    "hasAlpha": false,
+    "opaqueScene": true
+  },
+  "preservation": {
+    "sourceAndIngestedHashesMatch": true,
+    "sourceModified": false,
+    "pixelEditingPerformed": false,
+    "derivedCleanupCreated": false,
+    "productionSlicesCreated": false
+  },
+  "classification": {
+    "operationalType": "scene-anchor-background",
+    "notSpriteSheet": true,
+    "cleanupRequired": false,
+    "runtimeEligibility": "not-runtime-approved"
+  },
+  "review": {
+    "mappingStatus": "draft",
+    "humanReviewStatus": "pending",
+    "runtimeIntegrationOccurred": false
+  },
+  "evidenceStorage": {
+    "storageClass": "external-heavy",
+    "rootKey": "TGA_EVIDENCE_ROOT",
+    "externalRelativeFolder": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/",
+    "portableManifest": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json",
+    "externalFiles": [
+      "card-goblin-duel-tabletop-bbox-overlay.png",
+      "card-goblin-duel-tabletop-numbered-contact-sheet.png",
+      "card-goblin-duel-tabletop-region-table-preview.png"
+    ]
+  }
+}

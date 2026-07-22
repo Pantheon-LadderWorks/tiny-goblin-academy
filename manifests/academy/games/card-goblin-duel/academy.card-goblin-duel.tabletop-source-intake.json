@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.1",
+  "status": "reviewed",
+  "reviewStatus": "human-review-passed",
+  "domain": "card-goblin-duel-tabletop",
+  "operationalType": "source-intake-record",
+  "assetIdentity": "Card Goblin Duel tabletop scene illustration",
+  "sourceOrigin": {
+    "providedPath": "C:/Users/kryst/Downloads/ChatGPT Image Jul 21, 2026, 08_41_19 PM.png",
+    "intakePhase": "H5.103",
+    "providerContext": "User-approved generated tabletop illustration",
+    "sourceSha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3"
+  },
+  "ingestedAsset": {
+    "path": "assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png",
+    "bytes": 2478027,
+    "sha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3",
+    "byteIdenticalToProvidedSource": true
+  },
+  "sourceFacts": {
+    "format": "PNG",
+    "width": 2172,
+    "height": 724,
+    "mode": "RGB",
+    "hasAlpha": false,
+    "classification": "scene-anchor-background",
+    "layout": "single opaque composited tabletop scene",
+    "cleanupRequired": false
+  },
+  "sourcePreservation": {
+    "originalProvidedFileModified": false,
+    "ingestedCopyPixelModified": false,
+    "cropPerformed": false,
+    "resizePerformed": false,
+    "repaintPerformed": false,
+    "denoisePerformed": false,
+    "colorModificationPerformed": false,
+    "automaticSlicingPerformed": false
+  },
+  "mappingManifest": "manifests/academy/games/card-goblin-duel/lineage/academy.card-goblin-duel.tabletop.regions.json",
+  "evidenceFolder": "TGA_EVIDENCE_ROOT/assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/",
+  "runtimeEligibility": "not-runtime-approved",
+  "placementApproval": "approved-for-planning-only",
+  "cleanupStatus": "not-required",
+  "runtimeIntegrationOccurred": false,
+  "notes": [
+    "The asset is ingested as one approved source illustration plus derived mapping metadata and review evidence.",
+    "Decorative props remain part of the composited source and are not automatically reusable sprites.",
+    "H5.103 Human Mapping Review passed; the map is approved for later planning use only and grants no runtime approval.",
+    "No game, Hub, Phaser, simulation, package, lockfile, or runtime asset wiring is part of H5.103."
+  ],
+  "pipelineRun": {
+    "tool": "scripts/asset-pipeline/cli.mjs",
+    "command": "map-regions",
+    "method": "scene-anchor-background-planning",
+    "methodStatus": "mapping-only",
+    "runLog": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/pipeline-run-log.json",
+    "sourceSha256": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3",
+    "generatedAt": "2026-07-22T02:32:13.892Z",
+    "gitBaseline": "73911a8 docs: rebaseline card goblin visual integration",
+    "sourcePngModified": false,
+    "runtimeFilesModified": false
+  },
+  "portableEvidenceManifest": "assets/academy/evidence/h5-103-card-goblin-duel-tabletop-intake/external-evidence-manifest.json",
+  "evidenceStorageClass": "external-heavy"
+}
