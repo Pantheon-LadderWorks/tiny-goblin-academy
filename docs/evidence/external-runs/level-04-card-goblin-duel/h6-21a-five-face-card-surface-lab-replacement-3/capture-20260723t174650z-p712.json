@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "1c5d9c3e02bbd8e64aeb968d50c7baad6c002313",
+  "createdAt": "2026-07-23T17:47:11.656Z",
+  "gameId": "level-04-card-goblin-duel",
+  "laneId": "h6-21a-five-face-card-surface-lab-replacement-3",
+  "runId": "capture-20260723t174650z-p712",
+  "externalRelativePath": "level-04-card-goblin-duel/h6-21a-five-face-card-surface-lab-replacement-3/capture-20260723t174650z-p712",
+  "files": [
+    {
+      "relativePath": "stills/01-strategy-a-clean-interior.png",
+      "mediaType": "image/png",
+      "bytes": 847371,
+      "sha256": "789c5e4fc846f2849717753a1a7afe8dc975e43ea97f3070da13c520467cea8b"
+    },
+    {
+      "relativePath": "stills/02-strategy-b-mapped-tokens.png",
+      "mediaType": "image/png",
+      "bytes": 865340,
+      "sha256": "0a77719f54826648d6c5714be60335cc9115b88a499d817686bf1370ce0ad405"
+    },
+    {
+      "relativePath": "stills/03-ordinary-hand-default.png",
+      "mediaType": "image/png",
+      "bytes": 815298,
+      "sha256": "e6808a5e7f08c972450bd9ebc210f5a3be8c22ac5a5d3d7b33c236d869a0d421"
+    },
+    {
+      "relativePath": "stills/04-ordinary-hand-minimum.png",
+      "mediaType": "image/png",
+      "bytes": 530893,
+      "sha256": "d49744f32fe873d2f03fa32ec5bac012555dc65987281d588dbb72d816f166c2"
+    },
+    {
+      "relativePath": "stills/05-keyboard-focus-heavy-bonk.png",
+      "mediaType": "image/png",
+      "bytes": 867556,
+      "sha256": "cecfd6c5f1e7180c2a808e47f2ccfbb590a0f32f19de7904f9b211810e9e49e2"
+    },
+    {
+      "relativePath": "stills/06-spark-choice-complete-replace-badges.png",
+      "mediaType": "image/png",
+      "bytes": 797439,
+      "sha256": "e0b3d27f79d58e81c4d94c060d4140310627c61303c8b2079861ce17f68d4bc4"
+    },
+    {
+      "relativePath": "stills/07-terminal-locked-treatment.png",
+      "mediaType": "image/png",
+      "bytes": 755234,
+      "sha256": "048b881b50bdaabcfe3ebb530734e6f61a2dd065360571a5aa5c075e0144ea88"
+    },
+    {
+      "relativePath": "stills/08-slot-debug-overlay.png",
+      "mediaType": "image/png",
+      "bytes": 861084,
+      "sha256": "4fc49c777df5db6d1187535816c359b8695bc5b230361d3f34e93f19504b84f1"
+    },
+    {
+      "relativePath": "technical-review.json",
+      "mediaType": "application/json",
+      "bytes": 160737,
+      "sha256": "40a7d8ac21bf55047adfaea6baaf2e25f24446c4ebd7d6f67427f418860d0ae4"
+    }
+  ],
+  "captureScript": "games/tier-1/04-card-goblin-duel/capture.cjs",
+  "captureScriptVersion": "h6.21a",
+  "captureConfiguration": {
+    "listenerHost": "127.0.0.1",
+    "listenerPort": 5175,
+    "browser": "chromium",
+    "supportedRuntimeSurfaces": [
+      {
+        "width": 1280,
+        "height": 660
+      },
+      {
+        "width": 1024,
+        "height": 580
+      }
+    ],
+    "fixtureQueries": [
+      "?cardLab=clean",
+      "?cardLab=tokens",
+      "?cardLab=tokens&cardSlots=1"
+    ],
+    "fixtureContracts": [
+      {
+        "id": "01",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 6,
+        "stateLabelCount": 6,
+        "stateLabel": "Play",
+        "screenshotName": "01-strategy-a-clean-interior",
+        "measurementRequired": true,
+        "strategy": "clean",
+        "query": "?cardLab=clean",
+        "viewport": "default",
+        "gameplayAnchorCount": 0,
+        "slotDebug": false
+      },
+      {
+        "id": "02",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 6,
+        "stateLabelCount": 6,
+        "stateLabel": "Play",
+        "screenshotName": "02-strategy-b-mapped-tokens",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "?cardLab=tokens",
+        "viewport": "default",
+        "gameplayAnchorCount": 0,
+        "slotDebug": false
+      },
+      {
+        "id": "03",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 3,
+        "stateLabelCount": 3,
+        "stateLabel": "Play",
+        "screenshotName": "03-ordinary-hand-default",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "",
+        "viewport": "default",
+        "gameplayAnchorCount": 3,
+        "slotDebug": false
+      },
+      {
+        "id": "04",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 3,
+        "stateLabelCount": 3,
+        "stateLabel": "Play",
+        "screenshotName": "04-ordinary-hand-minimum",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "",
+        "viewport": "minimum",
+        "gameplayAnchorCount": 3,
+        "slotDebug": false
+      },
+      {
+        "id": "05",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 6,
+        "stateLabelCount": 6,
+        "stateLabel": "Play",
+        "screenshotName": "05-keyboard-focus-heavy-bonk",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "?cardLab=tokens",
+        "viewport": "default",
+        "gameplayAnchorCount": 0,
+        "slotDebug": false
+      },
+      {
+        "id": "06",
+        "phase": "SparkChoice",
+        "phaseClass": "phase-spark",
+        "cardCount": 2,
+        "stateLabelCount": 2,
+        "stateLabel": "Replace",
+        "screenshotName": "06-spark-choice-complete-replace-badges",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "",
+        "viewport": "default",
+        "gameplayAnchorCount": 2,
+        "slotDebug": false
+      },
+      {
+        "id": "07",
+        "phase": "Terminal",
+        "phaseClass": "phase-terminal",
+        "cardCount": 2,
+        "stateLabelCount": 2,
+        "stateLabel": "Locked",
+        "screenshotName": "07-terminal-locked-treatment",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "",
+        "viewport": "default",
+        "gameplayAnchorCount": 2,
+        "slotDebug": false
+      },
+      {
+        "id": "08",
+        "phase": "PlayerAction",
+        "phaseClass": "phase-player",
+        "cardCount": 6,
+        "stateLabelCount": 6,
+        "stateLabel": "Play",
+        "screenshotName": "08-slot-debug-overlay",
+        "measurementRequired": true,
+        "strategy": "tokens",
+        "query": "?cardLab=tokens&cardSlots=1",
+        "viewport": "default",
+        "gameplayAnchorCount": 0,
+        "slotDebug": true
+      }
+    ]
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

@@ -10,31 +10,222 @@ export const CARD_DESCRIPTIONS: Readonly<Record<Card, string>> = Object.freeze({
   'Heavy Bonk': 'Deal 4 damage; skip next draw.',
 });
 
-type CardFramePresentation = Readonly<{
-  frame: 'green-banner' | 'teal-banner' | 'tan-banner';
-  nativeWidth: 123 | 124;
-  nativeHeight: 170;
-  icon: string;
+export type CardFramePresentationId =
+  | 'blank-parchment'
+  | 'green-banner'
+  | 'teal-banner'
+  | 'tan-banner'
+  | 'teal-edged-tan';
+
+export type CardSurfaceStrategy = 'clean' | 'tokens';
+
+type NormalizedRect = Readonly<{
+  x: number;
+  y: number;
+  width: number;
+  height: number;
 }>;
 
-export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentation>> = Object.freeze({
-  Strike: Object.freeze({ frame: 'tan-banner', nativeWidth: 124, nativeHeight: 170, icon: '*' }),
-  Guard: Object.freeze({ frame: 'teal-banner', nativeWidth: 123, nativeHeight: 170, icon: '#' }),
-  Mend: Object.freeze({ frame: 'green-banner', nativeWidth: 123, nativeHeight: 170, icon: '+' }),
-  Spark: Object.freeze({ frame: 'green-banner', nativeWidth: 123, nativeHeight: 170, icon: '^' }),
-  Stun: Object.freeze({ frame: 'teal-banner', nativeWidth: 123, nativeHeight: 170, icon: '~' }),
-  'Heavy Bonk': Object.freeze({ frame: 'tan-banner', nativeWidth: 124, nativeHeight: 170, icon: '!' }),
+type SourceRect = Readonly<{
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}>;
+
+type CardSlots = Readonly<{
+  art: NormalizedRect;
+  title: NormalizedRect;
+  body: NormalizedRect;
+}>;
+
+type CardTokenPresentation = Readonly<{
+  id:
+    | 'sword-icon'
+    | 'shield-icon'
+    | 'heart-plus-icon'
+    | 'projectile-star-effect'
+    | 'star-cluster-effect'
+    | 'club-weapon-icon';
+  sourceRect: SourceRect;
+}>;
+
+export type CardFramePresentation = Readonly<{
+  frame: CardFramePresentationId;
+  frameSourceRect: SourceRect;
+  nativeWidth: 123 | 124;
+  nativeHeight: 170;
+  semanticRole:
+    | 'basic-direct-action'
+    | 'defense-control'
+    | 'recovery-support'
+    | 'hybrid-trick-action'
+    | 'heavy-physical-force';
+  token: CardTokenPresentation;
+  slots: CardSlots;
+  accessibleActionLabel: string;
+}>;
+
+const BANNER_SLOTS: CardSlots = Object.freeze({
+  art: Object.freeze({ x: 0.22, y: 0.14, width: 0.56, height: 0.34 }),
+  title: Object.freeze({ x: 0.15, y: 0.555, width: 0.70, height: 0.105 }),
+  body: Object.freeze({ x: 0.13, y: 0.695, width: 0.74, height: 0.205 }),
 });
+
+const BLANK_PARCHMENT_SLOTS: CardSlots = Object.freeze({
+  art: Object.freeze({ x: 0.18, y: 0.21, width: 0.64, height: 0.32 }),
+  title: Object.freeze({ x: 0.20, y: 0.075, width: 0.60, height: 0.105 }),
+  body: Object.freeze({ x: 0.13, y: 0.60, width: 0.74, height: 0.27 }),
+});
+
+const token = (
+  id: CardTokenPresentation['id'],
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+): CardTokenPresentation => Object.freeze({
+  id,
+  sourceRect: Object.freeze({ x, y, w, h }),
+});
+
+const presentation = (
+  frame: CardFramePresentationId,
+  frameSourceRect: SourceRect,
+  semanticRole: CardFramePresentation['semanticRole'],
+  cardToken: CardTokenPresentation,
+  slots: CardSlots,
+  accessibleActionLabel: string,
+): CardFramePresentation => Object.freeze({
+  frame,
+  frameSourceRect: Object.freeze(frameSourceRect),
+  nativeWidth: frameSourceRect.w as 123 | 124,
+  nativeHeight: 170,
+  semanticRole,
+  token: cardToken,
+  slots,
+  accessibleActionLabel,
+});
+
+export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentation>> = Object.freeze({
+  Strike: presentation(
+    'blank-parchment',
+    { x: 4, y: 27, w: 123, h: 170 },
+    'basic-direct-action',
+    token('sword-icon', 2, 2, 120, 124),
+    BLANK_PARCHMENT_SLOTS,
+    `Strike. ${CARD_DESCRIPTIONS.Strike}`,
+  ),
+  Guard: presentation(
+    'teal-banner',
+    { x: 259, y: 27, w: 123, h: 170 },
+    'defense-control',
+    token('shield-icon', 130, 2, 124, 124),
+    BANNER_SLOTS,
+    `Guard. ${CARD_DESCRIPTIONS.Guard}`,
+  ),
+  Mend: presentation(
+    'green-banner',
+    { x: 132, y: 27, w: 123, h: 170 },
+    'recovery-support',
+    token('heart-plus-icon', 258, 2, 124, 124),
+    BANNER_SLOTS,
+    `Mend. ${CARD_DESCRIPTIONS.Mend}`,
+  ),
+  Spark: presentation(
+    'teal-edged-tan',
+    { x: 514, y: 27, w: 123, h: 170 },
+    'hybrid-trick-action',
+    token('projectile-star-effect', 386, 2, 124, 124),
+    BANNER_SLOTS,
+    `Spark. ${CARD_DESCRIPTIONS.Spark}`,
+  ),
+  Stun: presentation(
+    'teal-banner',
+    { x: 259, y: 27, w: 123, h: 170 },
+    'defense-control',
+    token('star-cluster-effect', 642, 2, 124, 124),
+    BANNER_SLOTS,
+    `Stun. ${CARD_DESCRIPTIONS.Stun}`,
+  ),
+  'Heavy Bonk': presentation(
+    'tan-banner',
+    { x: 386, y: 27, w: 124, h: 170 },
+    'heavy-physical-force',
+    token('club-weapon-icon', 514, 2, 124, 124),
+    BANNER_SLOTS,
+    `Heavy Bonk. ${CARD_DESCRIPTIONS['Heavy Bonk']}`,
+  ),
+});
+
+export const CARD_LAB_CARDS: readonly Card[] = Object.freeze([
+  'Strike',
+  'Guard',
+  'Mend',
+  'Spark',
+  'Stun',
+  'Heavy Bonk',
+]);
 
 const actionLabel = (card: Card, phase: Phase): string => {
   const verb = phase === 'SparkChoice' ? 'Replace' : 'Play';
-  return `${verb} ${card}. ${CARD_DESCRIPTIONS[card]}`;
+  return `${verb} ${CARD_FRAME_PRESENTATIONS[card].accessibleActionLabel}`;
+};
+
+const cssPercent = (value: number): string => `${value * 100}%`;
+
+const slotVariables = (slots: CardSlots): string => [
+  `--art-x: ${cssPercent(slots.art.x)}`,
+  `--art-y: ${cssPercent(slots.art.y)}`,
+  `--art-width: ${cssPercent(slots.art.width)}`,
+  `--art-height: ${cssPercent(slots.art.height)}`,
+  `--title-x: ${cssPercent(slots.title.x)}`,
+  `--title-y: ${cssPercent(slots.title.y)}`,
+  `--title-width: ${cssPercent(slots.title.width)}`,
+  `--title-height: ${cssPercent(slots.title.height)}`,
+  `--body-x: ${cssPercent(slots.body.x)}`,
+  `--body-y: ${cssPercent(slots.body.y)}`,
+  `--body-width: ${cssPercent(slots.body.width)}`,
+  `--body-height: ${cssPercent(slots.body.height)}`,
+].join('; ');
+
+const tokenMarkup = (
+  cardToken: CardTokenPresentation,
+  strategy: CardSurfaceStrategy,
+): string => {
+  if (strategy === 'clean') return '';
+
+  const { x, y, w, h } = cardToken.sourceRect;
+  const backgroundSizeX = (1024 / w) * 100;
+  const backgroundSizeY = (1024 / h) * 100;
+  const backgroundPositionX = (x / (1024 - w)) * 100;
+  const backgroundPositionY = (y / (1024 - h)) * 100;
+  const tokenStyle = [
+    `--token-aspect: ${w} / ${h}`,
+    `--token-bg-size-x: ${backgroundSizeX.toFixed(4)}%`,
+    `--token-bg-size-y: ${backgroundSizeY.toFixed(4)}%`,
+    `--token-bg-position-x: ${backgroundPositionX.toFixed(4)}%`,
+    `--token-bg-position-y: ${backgroundPositionY.toFixed(4)}%`,
+  ].join('; ');
+
+  return `<span
+          class="card-token"
+          data-card-token="${cardToken.id}"
+          data-token-source-x="${x}"
+          data-token-source-y="${y}"
+          data-token-source-width="${w}"
+          data-token-source-height="${h}"
+          style="${tokenStyle}"
+          aria-hidden="true"
+        ></span>`;
 };
 
 export const renderHandCard = (
   card: Card,
   index: number,
   phase: Phase,
+  strategy: CardSurfaceStrategy = 'tokens',
+  registerGameplayAnchor: boolean = true,
 ): string => {
   const disabled = phase === 'Terminal';
   const stateClass = phase === 'SparkChoice'
@@ -43,7 +234,12 @@ export const renderHandCard = (
       ? 'card-disabled'
       : 'card-playable';
   const disabledAttribute = disabled ? ' disabled' : '';
-  const presentation = CARD_FRAME_PRESENTATIONS[card];
+  const cardPresentation = CARD_FRAME_PRESENTATIONS[card];
+  const frameRect = cardPresentation.frameSourceRect;
+  const stateLabel = phase === 'SparkChoice' ? 'Replace' : disabled ? 'Locked' : 'Play';
+  const stageAnchorAttribute = registerGameplayAnchor
+    ? `data-stage-anchor="${handSlotAnchorId(index)}"`
+    : '';
 
   return `
     <button
@@ -51,21 +247,25 @@ export const renderHandCard = (
       type="button"
       data-i="${index}"
       data-card-name="${card}"
-      data-card-frame="${presentation.frame}"
-      data-native-width="${presentation.nativeWidth}"
-      data-native-height="${presentation.nativeHeight}"
-      data-stage-anchor="${handSlotAnchorId(index)}"
+      data-card-frame="${cardPresentation.frame}"
+      data-card-strategy="${strategy}"
+      data-semantic-role="${cardPresentation.semanticRole}"
+      data-frame-source-rect="${frameRect.x},${frameRect.y},${frameRect.w},${frameRect.h}"
+      data-native-width="${cardPresentation.nativeWidth}"
+      data-native-height="${cardPresentation.nativeHeight}"
+      ${stageAnchorAttribute}
+      style="${slotVariables(cardPresentation.slots)}"
       aria-label="${actionLabel(card, phase)}"${disabledAttribute}
     >
       <span class="card-frame-art" aria-hidden="true"></span>
-      <span class="card-icon" aria-hidden="true">${presentation.icon}</span>
+      <span class="card-art-slot" aria-hidden="true">
+        ${tokenMarkup(cardPresentation.token, strategy)}
+      </span>
       <span class="card-content">
         <span class="card-title">${card}</span>
         <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
       </span>
-      <span class="card-state" aria-hidden="true">
-        ${phase === 'SparkChoice' ? 'Replace' : disabled ? 'Locked' : 'Play'}
-      </span>
+      <span class="card-state" aria-hidden="true">${stateLabel}</span>
     </button>
   `;
 };

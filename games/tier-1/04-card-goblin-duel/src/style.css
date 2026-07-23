@@ -560,6 +560,11 @@ button {
   pointer-events: none;
 }
 
+.card-btn[data-card-frame='blank-parchment'] .card-frame-art {
+  background-position: 0.4440% 3.1616%;
+  background-size: 832.5203% 602.3529%;
+}
+
 .card-btn[data-card-frame='green-banner'] .card-frame-art {
   background-position: 14.6504% 3.1616%;
   background-size: 832.5203% 602.3529%;
@@ -575,6 +580,11 @@ button {
   background-size: 825.8065% 602.3529%;
 }
 
+.card-btn[data-card-frame='teal-edged-tan'] .card-frame-art {
+  background-position: 57.0477% 3.1616%;
+  background-size: 832.5203% 602.3529%;
+}
+
 .card-content {
   position: absolute;
   z-index: 2;
@@ -582,70 +592,88 @@ button {
   pointer-events: none;
 }
 
-.card-icon {
+.card-art-slot {
   position: absolute;
   z-index: 2;
-  left: 20%;
-  top: 13%;
-  display: grid;
-  width: 60%;
-  height: 40%;
-  place-items: center;
-  color: #3a2430;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2rem, 3.9vw, 3.15rem);
-  font-weight: 900;
-  line-height: 1;
-  text-shadow: 0 1px 0 rgba(255, 247, 217, 0.8);
+  left: var(--art-x);
+  top: var(--art-y);
+  display: flex;
+  width: var(--art-width);
+  height: var(--art-height);
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
+}
+
+.card-token {
+  display: block;
+  height: 76%;
+  max-width: 76%;
+  aspect-ratio: var(--token-aspect);
+  flex: 0 0 auto;
+  background-image: var(--card-token-sheet-url);
+  background-position: var(--token-bg-position-x) var(--token-bg-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--token-bg-size-x) var(--token-bg-size-y);
+  filter: drop-shadow(0 2px 2px rgba(45, 28, 37, 0.34));
+  image-rendering: auto;
 }
 
 .card-btn .card-title {
   position: absolute;
-  left: 13%;
-  top: 54%;
-  display: grid;
-  width: 74%;
-  height: 15%;
-  place-items: center;
-  overflow: hidden;
+  left: var(--title-x);
+  top: var(--title-y);
+  display: flex;
+  width: var(--title-width);
+  height: var(--title-height);
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
   color: #2d1c25;
   font-size: clamp(0.76rem, 1.22vw, 0.98rem);
   font-weight: 900;
   line-height: 1;
-  text-overflow: ellipsis;
+  text-align: center;
   white-space: nowrap;
 }
 
 .card-btn .card-desc {
   position: absolute;
-  left: 15%;
-  top: 72%;
-  display: grid;
-  width: 70%;
-  height: 17%;
-  place-items: start center;
-  overflow: hidden;
+  left: var(--body-x);
+  top: var(--body-y);
+  display: flex;
+  width: var(--body-width);
+  height: var(--body-height);
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 1.5% 2%;
   color: #3c2a31;
   font-family: Arial, sans-serif;
   font-size: clamp(0.54rem, 0.79vw, 0.66rem);
   font-weight: 700;
   line-height: 1.14;
   text-align: center;
+  text-wrap: balance;
+  white-space: normal;
 }
 
 .card-state {
   position: absolute;
   z-index: 3;
-  left: 5%;
-  top: 4%;
-  display: grid;
-  width: 23%;
-  height: 12%;
-  place-items: center;
-  overflow: hidden;
+  left: 4%;
+  top: 3%;
+  display: flex;
+  width: fit-content;
+  min-width: 24%;
+  max-width: 38%;
+  height: 9%;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding-inline: 4%;
   border-radius: 999px;
-  background: rgba(48, 31, 38, 0.84);
+  background: rgba(48, 31, 38, 0.88);
   color: #fff1c6;
   font-family: Arial, sans-serif;
   font-size: clamp(0.42rem, 0.58vw, 0.5rem);
@@ -653,6 +681,34 @@ button {
   letter-spacing: 0.02em;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card-btn[data-card-frame='blank-parchment'] .card-state {
+  top: -4%;
+}
+
+.card-lab #hand {
+  grid-template-columns: repeat(6, var(--card-width));
+}
+
+.card-lab .hand-heading-row {
+  opacity: 0.72;
+}
+
+.card-slot-debug .card-art-slot {
+  outline: 2px solid rgba(76, 212, 255, 0.95);
+  outline-offset: -1px;
+}
+
+.card-slot-debug .card-title {
+  outline: 2px solid rgba(255, 205, 76, 0.95);
+  outline-offset: -1px;
+}
+
+.card-slot-debug .card-desc {
+  outline: 2px solid rgba(255, 112, 176, 0.95);
+  outline-offset: -1px;
 }
 
 .anchor-status {

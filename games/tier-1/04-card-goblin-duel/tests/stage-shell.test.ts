@@ -10,6 +10,8 @@ const mainSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/main.ts');
 const markup = readRepoFile('games/tier-1/04-card-goblin-duel/index.html');
 const styles = readRepoFile('games/tier-1/04-card-goblin-duel/src/style.css');
 const captureSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture.cjs');
+const captureContractsSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture-contracts.cjs');
+const anchorBridgeSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/anchor-bridge.ts');
 const hubRuntime = readRepoFile('hub/src/components/DevGameRuntimeView.tsx');
 const hubStyles = readRepoFile('hub/src/styles/hub.css');
 const tauriConfig = JSON.parse(readRepoFile('hub/src-tauri/tauri.conf.json')) as {
@@ -69,7 +71,9 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(mainSource).toContain("setProperty('--card-frame-sheet-url'");
     expect(styles).toMatch(/\.card-frame-art\s*\{[^}]*var\(--card-frame-sheet-url\)/s);
     expect(styles).toContain('.card-content');
-    expect(styles).toContain('.card-icon');
+    expect(styles).toContain('.card-art-slot');
+    expect(styles).toContain('.card-token');
+    expect(styles).not.toContain('.card-icon');
   });
 
   it('lets full-height cards rise from an integrated lower staging dock', () => {
@@ -129,6 +133,49 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(captureSource).not.toContain('480');
     expect(captureSource).not.toContain('narrow-viewport');
     expect(styles).not.toContain('@media (max-width: 560px)');
+  });
+
+  it('defines the H6.21A five-face typography and content-sized badge contract', () => {
+    expect(mainSource).toContain('tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png?url');
+    expect(mainSource).toContain("setProperty('--card-token-sheet-url'");
+    expect(styles).toContain(".card-btn[data-card-frame='blank-parchment']");
+    expect(styles).toContain(".card-btn[data-card-frame='teal-edged-tan']");
+    expect(styles).toMatch(/\.card-art-slot\s*\{[^}]*left:\s*var\(--art-x\)[^}]*top:\s*var\(--art-y\)/s);
+    expect(styles).toMatch(/\.card-btn \.card-title\s*\{[^}]*left:\s*var\(--title-x\)[^}]*overflow:\s*visible/s);
+    expect(styles).toMatch(/\.card-btn \.card-desc\s*\{[^}]*display:\s*flex[^}]*align-items:\s*center[^}]*overflow:\s*visible/s);
+    expect(styles).toMatch(/\.card-state\s*\{[^}]*width:\s*fit-content[^}]*min-width:\s*24%[^}]*max-width:\s*38%/s);
+    expect(styles).not.toContain('text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.card-btn .card-desc');
+  });
+
+  it('keeps both card-surface strategies and measured browser evidence development-only', () => {
+    expect(mainSource).toContain("searchParams.get('cardLab')");
+    expect(mainSource).toContain("searchParams.get('cardSlots')");
+    expect(mainSource).toContain("renderHandCard(card, index % 3, 'PlayerAction', cardLabStrategy, false)");
+    expect(anchorBridgeSource).toContain("#hand .card-btn[data-stage-anchor^='hand-slot-']");
+    expect(anchorBridgeSource).not.toContain("querySelectorAll('#hand .card-btn').length");
+    expect(captureSource).toContain("laneId: 'h6-21a-five-face-card-surface-lab-replacement-3'");
+    expect(captureSource).toContain("require('./capture-contracts.cjs')");
+    expect(captureSource).toContain('validateFixtureContracts()');
+    expect(captureSource).toContain('ABORTED_EVIDENCE_PATH');
+    expect(captureSource).toContain('REPLACEMENT_ONE_EVIDENCE_PATH');
+    expect(captureSource).toContain('REPLACEMENT_TWO_EVIDENCE_PATH');
+    expect(captureSource).toContain('aborted capture initialization');
+    expect(captureSource).toContain('countPayloadFiles(ABORTED_EVIDENCE_PATH)');
+    expect(captureSource).not.toContain('fs.readdirSync(ABORTED_EVIDENCE_PATH).length !== 0');
+    expect(captureSource).toContain('payloadFileCount: abortedPayloadFileCount');
+    expect(captureSource).toContain("classification: 'partial evidence'");
+    expect(captureContractsSource).toMatch(/id: '06'[\s\S]*phase: 'SparkChoice'[\s\S]*cardCount: 2[\s\S]*stateLabelCount: 2[\s\S]*stateLabel: 'Replace'/);
+    expect(captureContractsSource).toMatch(/id: '07'[\s\S]*phase: 'Terminal'[\s\S]*cardCount: 2[\s\S]*stateLabelCount: 2[\s\S]*stateLabel: 'Locked'/);
+    expect(captureContractsSource).toMatch(/id: '08'[\s\S]*cardCount: 6[\s\S]*gameplayAnchorCount: 0[\s\S]*slotDebug: true/);
+    expect(captureSource).toContain('changed ${cardMetrics.name} exterior ${key}');
+    expect(captureSource).toContain('altered deterministic simulation state');
+    expect(captureSource).toContain('strategy-a-clean-interior');
+    expect(captureSource).toContain('strategy-b-mapped-tokens');
+    expect(captureSource).toContain('slot-debug-overlay');
+    expect(captureSource).toContain('artRect');
+    expect(captureSource).toContain('tokenScaleFactor');
+    expect(captureSource).toContain('stateBadgeFits');
+    expect(captureSource).toContain('slot rectangles intersect');
   });
 
   it('moves complete causal history into the Hub Ledger surface', () => {

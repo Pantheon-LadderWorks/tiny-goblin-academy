@@ -1,13 +1,16 @@
 import Phaser from 'phaser';
 import tabletopSceneUrl from '../../../../assets/academy/games/card-goblin-duel/backgrounds/tga-card-goblin-duel-tabletop-scene-v0.1.png?url';
 import cardFrameSheetUrl from '../../../../assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-card-frames-cleaned-v0.1.png?url';
+import cardTokenSheetUrl from '../../../../assets/academy/games/card-goblin-duel/derived/tga-card-goblin-duel-ui-tokens-cleaned-v0.1.png?url';
 import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
 import {
+  CARD_LAB_CARDS,
   phasePresentation,
   renderHandCard,
   renderNextCard,
+  type CardSurfaceStrategy,
 } from './card-view';
 import {
   createCardGoblinLedger,
@@ -22,11 +25,18 @@ import {
 
 document.documentElement.style.setProperty('--tabletop-scene-url', `url("${tabletopSceneUrl}")`);
 document.documentElement.style.setProperty('--card-frame-sheet-url', `url("${cardFrameSheetUrl}")`);
+document.documentElement.style.setProperty('--card-token-sheet-url', `url("${cardTokenSheetUrl}")`);
 
 let state = createGame();
 let anchorBridge: AnchorBridge | undefined;
 let anchorSnapshot: AnchorSnapshot = Object.freeze({});
 
+const searchParams = new URLSearchParams(window.location.search);
+const requestedCardLab = searchParams.get('cardLab');
+const cardLabStrategy: CardSurfaceStrategy | undefined = requestedCardLab === 'clean' || requestedCardLab === 'tokens'
+  ? requestedCardLab
+  : undefined;
+const cardSlotDebug = searchParams.get('cardSlots') === '1';
 const debugAnchors = isAnchorDebugEnabled(window.location.search);
 const ledger = createCardGoblinLedger({
   parent: window.parent === window ? null : window.parent,
@@ -281,7 +291,13 @@ const restoreCardFocus = (index: number | undefined): void => {
 
 const render = (focusIndex?: number): void => {
   const phase = phasePresentation(state.phase, state.playerHp);
-  document.body.className = `${phase.bodyClass}${debugAnchors ? ' anchor-debug' : ''}`;
+  const bodyClasses = [
+    phase.bodyClass,
+    debugAnchors ? 'anchor-debug' : '',
+    cardLabStrategy ? `card-lab card-lab-${cardLabStrategy}` : '',
+    cardSlotDebug ? 'card-slot-debug' : '',
+  ].filter(Boolean);
+  document.body.className = bodyClasses.join(' ');
   banner.textContent = phase.banner;
   phaseInstruction.textContent = phase.instruction;
 
@@ -294,8 +310,26 @@ const render = (focusIndex?: number): void => {
   resolutionTitle.textContent = resolution.title;
   resolutionDetail.textContent = resolution.detail;
 
+  if (cardLabStrategy) {
+    banner.textContent = 'Card Surface Lab';
+    phaseInstruction.textContent = cardLabStrategy === 'clean'
+      ? 'Strategy A — clean interiors'
+      : 'Strategy B — mapped tokens';
+    resolutionTitle.textContent = 'Five faces · six actions · two slot templates';
+    resolutionDetail.textContent = 'Development-only presentation fixture. Gameplay authority is unchanged.';
+    hand.innerHTML = CARD_LAB_CARDS
+      .map((card, index) => renderHandCard(card, index % 3, 'PlayerAction', cardLabStrategy, false))
+      .join('');
+    handCount.textContent = '6 surface cards';
+    next.innerHTML = renderNextCard(undefined);
+    terminalOutcome.hidden = true;
+    terminalMessage.textContent = '';
+    anchorBridge?.refresh();
+    return;
+  }
+
   hand.innerHTML = state.hand
-    .map((card, index) => renderHandCard(card, index, state.phase))
+    .map((card, index) => renderHandCard(card, index, state.phase, 'tokens'))
     .join('');
   handCount.textContent = `${state.hand.length} card${state.hand.length === 1 ? '' : 's'}`;
   next.innerHTML = renderNextCard(state.queue[0]);

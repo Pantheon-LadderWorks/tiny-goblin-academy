@@ -1,9 +1,9 @@
 # Card Goblin Duel Visual Integration Plan
 
-**Execution status:** H6.19 rebaseline documented. No Card Goblin visual-integration code or runtime asset promotion has begun. H6.20 is the next bounded implementation lane.
+**Execution status:** H6.20E and H6.21A are complete. H6.21A promoted the approved multi-face card-surface system with finalized external evidence. Optical typography and CardRig motion remain open for the separately authorized H6.21B laboratory.
 
 Date: 2026-07-21
-Status: human-approved sequencing authority; H6.20 is the approved next lane. H6.21–H6.24 remain separately gated and are not blanket implementation authorization.
+Status: human-approved sequencing authority updated through H6.21A. H6.21B is authorized as a bounded laboratory; H6.22–H6.24 remain separately gated and are not blanket implementation authorization.
 
 ## Goal
 
@@ -51,34 +51,34 @@ Evidence gate:
 - keyboard focus order and visible focus;
 - no gameplay, card-asset, particle, or recipe changes.
 
-## H6.21 — Runtime card-surface promotion and CardRig motion laboratory
+## H6.21 — Card surfaces and CardRig laboratory
 
-Do not remap or reclean either concept sheet. Promote only the minimum reviewed card subset after crop, alpha, scaling, code-text, responsive, and dark-stage proof.
+H6.21 is split into two bounded authorities.
 
-Initial comparison set:
+### H6.21A — Completed card-surface authority
 
-- blank parchment card surface `4,27,123,170`;
-- green banner front frame `132,27,123,170` as an alternate, not an automatic second face;
-- goblin pattern card back `132,259,123,164`;
-- green deck stack `779,268,107,146`;
-- glowing and gray disabled fronts only if direct review proves they are safer than code-authored state treatments.
+H6.21A supersedes the initial one-universal-face direction. Direct comparison selected five governed frame faces across the six actions and Strategy B mapped tokens as the production direction:
 
-Select exactly one normal player-card host. Keep title, effect description, status, and focus treatment live. Select one opponent/deck identity and at most one compact deck surface.
+- Strike: blank parchment with sword;
+- Guard: teal banner with shield;
+- Mend: green banner with heart-plus;
+- Spark: teal-edged tan with projectile star;
+- Stun: teal banner with star cluster;
+- Heavy Bonk: tan banner with club.
 
-Build the CardRig as a stable DOM card identity with presentation-controlled classes/transforms, not as a new simulation object. Prove deterministic fixtures for:
+Two internal slot templates are authoritative: one banner template and one blank-parchment template. Runtime title, complete effect text, state badges, accessible names, and focus remain code-owned. The development laboratory does not register production gameplay anchors; ordinary runtime retains the exact three-anchor hand contract.
 
-1. hand deal and settle;
-2. hover/focus and selection emphasis;
-3. card commitment from hand to play point;
-4. effect hold and return-to-queue readability;
-5. normal refill;
-6. Heavy Bonk skip-draw vacancy;
-7. Spark replacement prompt, discard, and refill;
-8. enemy reaction and handoff;
-9. victory/defeat lock;
-10. cancellation-safe reset of visual classes.
+All eight H6.21A evidence fixtures completed under the finalized replacement-3 run. Card text is technically contained without clipping, document overflow, or accessibility failure. Kryssie approved the card-face system, mapped tokens, responsive containment, focus, SparkChoice, and terminal treatments.
 
-Provide full and reduced-motion modes using the same authoritative events. The laboratory uses injected fixture events and does not wire live gameplay yet.
+Optical typography is not complete: banner title baselines and body blocks still require visual centering against the painted artwork. H6.21A did not implement CardRig motion.
+
+### H6.21B — Authorized optical typography and CardRig laboratory
+
+First correct optical title and body alignment without changing the approved faces, tokens, outer card geometry, dock, tabletop, or simulation. Then build CardRig as a stable semantic DOM card identity with one typed, cancellation-safe presentation authority and an injectable animation clock.
+
+Prove deterministic fixtures for deal/settle, restrained hover and keyboard focus, commitment and exit, normal refill, Heavy Bonk vacancy, Spark replacement order, enemy-reaction handoff, terminal lock, reset/resize/fixture cancellation, and full/reduced-motion final-state equivalence.
+
+The H6.21B laboratory consumes injected committed presentation events. It does not wire motion into live gameplay; live structured-event integration remains H6.23.
 
 ## H6.22 — ParticleRecipe laboratory and human review
 
