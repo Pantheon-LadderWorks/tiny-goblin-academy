@@ -66,10 +66,69 @@ export type CardFramePresentation = Readonly<{
   accessibleActionLabel: string;
 }>;
 
-const BANNER_SLOTS: CardSlots = Object.freeze({
-  art: Object.freeze({ x: 0.22, y: 0.14, width: 0.56, height: 0.34 }),
-  title: Object.freeze({ x: 0.15, y: 0.555, width: 0.70, height: 0.105 }),
-  body: Object.freeze({ x: 0.13, y: 0.695, width: 0.74, height: 0.205 }),
+export type CardTypographyTemplate = Readonly<{
+  titleOffsetY: number;
+  bodyOffsetY: number;
+}>;
+
+export const CARD_TYPOGRAPHY_TEMPLATES = Object.freeze({
+  banner: Object.freeze({ titleOffsetY: 0, bodyOffsetY: 0 }),
+  'blank-parchment': Object.freeze({ titleOffsetY: 0.008, bodyOffsetY: -0.004 }),
+}) satisfies Readonly<Record<'banner' | 'blank-parchment', CardTypographyTemplate>>;
+
+type PixelCardSlots = Readonly<{
+  art: SourceRect;
+  title: SourceRect;
+  body: SourceRect;
+}>;
+
+const slotsFromSourcePixels = (
+  nativeWidth: number,
+  nativeHeight: number,
+  slots: PixelCardSlots,
+): CardSlots => Object.freeze({
+  art: Object.freeze({
+    x: slots.art.x / nativeWidth,
+    y: slots.art.y / nativeHeight,
+    width: slots.art.w / nativeWidth,
+    height: slots.art.h / nativeHeight,
+  }),
+  title: Object.freeze({
+    x: slots.title.x / nativeWidth,
+    y: slots.title.y / nativeHeight,
+    width: slots.title.w / nativeWidth,
+    height: slots.title.h / nativeHeight,
+  }),
+  body: Object.freeze({
+    x: slots.body.x / nativeWidth,
+    y: slots.body.y / nativeHeight,
+    width: slots.body.w / nativeWidth,
+    height: slots.body.h / nativeHeight,
+  }),
+});
+
+const GREEN_BANNER_SLOTS = slotsFromSourcePixels(123, 170, {
+  art: { x: 20, y: 14, w: 82, h: 74 },
+  title: { x: 14, y: 87, w: 95, h: 17 },
+  body: { x: 16, y: 104, w: 90, h: 50 },
+});
+
+const TEAL_BANNER_SLOTS = slotsFromSourcePixels(123, 170, {
+  art: { x: 21, y: 14, w: 81, h: 74 },
+  title: { x: 15, y: 87, w: 93, h: 17 },
+  body: { x: 17, y: 104, w: 90, h: 50 },
+});
+
+const TAN_BANNER_SLOTS = slotsFromSourcePixels(124, 170, {
+  art: { x: 21, y: 14, w: 82, h: 74 },
+  title: { x: 16, y: 87, w: 93, h: 17 },
+  body: { x: 17, y: 104, w: 90, h: 50 },
+});
+
+const TEAL_EDGED_TAN_SLOTS = slotsFromSourcePixels(123, 170, {
+  art: { x: 21, y: 14, w: 82, h: 74 },
+  title: { x: 15, y: 87, w: 93, h: 17 },
+  body: { x: 17, y: 104, w: 90, h: 50 },
 });
 
 const BLANK_PARCHMENT_SLOTS: CardSlots = Object.freeze({
@@ -121,7 +180,7 @@ export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentati
     { x: 259, y: 27, w: 123, h: 170 },
     'defense-control',
     token('shield-icon', 130, 2, 124, 124),
-    BANNER_SLOTS,
+    TEAL_BANNER_SLOTS,
     `Guard. ${CARD_DESCRIPTIONS.Guard}`,
   ),
   Mend: presentation(
@@ -129,7 +188,7 @@ export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentati
     { x: 132, y: 27, w: 123, h: 170 },
     'recovery-support',
     token('heart-plus-icon', 258, 2, 124, 124),
-    BANNER_SLOTS,
+    GREEN_BANNER_SLOTS,
     `Mend. ${CARD_DESCRIPTIONS.Mend}`,
   ),
   Spark: presentation(
@@ -137,7 +196,7 @@ export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentati
     { x: 514, y: 27, w: 123, h: 170 },
     'hybrid-trick-action',
     token('projectile-star-effect', 386, 2, 124, 124),
-    BANNER_SLOTS,
+    TEAL_EDGED_TAN_SLOTS,
     `Spark. ${CARD_DESCRIPTIONS.Spark}`,
   ),
   Stun: presentation(
@@ -145,7 +204,7 @@ export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentati
     { x: 259, y: 27, w: 123, h: 170 },
     'defense-control',
     token('star-cluster-effect', 642, 2, 124, 124),
-    BANNER_SLOTS,
+    TEAL_BANNER_SLOTS,
     `Stun. ${CARD_DESCRIPTIONS.Stun}`,
   ),
   'Heavy Bonk': presentation(
@@ -153,7 +212,7 @@ export const CARD_FRAME_PRESENTATIONS: Readonly<Record<Card, CardFramePresentati
     { x: 386, y: 27, w: 124, h: 170 },
     'heavy-physical-force',
     token('club-weapon-icon', 514, 2, 124, 124),
-    BANNER_SLOTS,
+    TAN_BANNER_SLOTS,
     `Heavy Bonk. ${CARD_DESCRIPTIONS['Heavy Bonk']}`,
   ),
 });
@@ -168,13 +227,20 @@ export const CARD_LAB_CARDS: readonly Card[] = Object.freeze([
 ]);
 
 const actionLabel = (card: Card, phase: Phase): string => {
-  const verb = phase === 'SparkChoice' ? 'Replace' : 'Play';
+  const verb = phase === 'SparkChoice'
+    ? 'Replace'
+    : phase === 'Terminal'
+      ? 'Locked'
+      : 'Play';
   return `${verb} ${CARD_FRAME_PRESENTATIONS[card].accessibleActionLabel}`;
 };
 
 const cssPercent = (value: number): string => `${value * 100}%`;
 
-const slotVariables = (slots: CardSlots): string => [
+const slotVariables = (
+  slots: CardSlots,
+  typography: CardTypographyTemplate,
+): string => [
   `--art-x: ${cssPercent(slots.art.x)}`,
   `--art-y: ${cssPercent(slots.art.y)}`,
   `--art-width: ${cssPercent(slots.art.width)}`,
@@ -187,6 +253,8 @@ const slotVariables = (slots: CardSlots): string => [
   `--body-y: ${cssPercent(slots.body.y)}`,
   `--body-width: ${cssPercent(slots.body.width)}`,
   `--body-height: ${cssPercent(slots.body.height)}`,
+  `--title-optical-y: ${cssPercent(typography.titleOffsetY)}`,
+  `--body-optical-y: ${cssPercent(typography.bodyOffsetY)}`,
 ].join('; ');
 
 const tokenMarkup = (
@@ -235,6 +303,9 @@ export const renderHandCard = (
       : 'card-playable';
   const disabledAttribute = disabled ? ' disabled' : '';
   const cardPresentation = CARD_FRAME_PRESENTATIONS[card];
+  const typography = cardPresentation.frame === 'blank-parchment'
+    ? CARD_TYPOGRAPHY_TEMPLATES['blank-parchment']
+    : CARD_TYPOGRAPHY_TEMPLATES.banner;
   const frameRect = cardPresentation.frameSourceRect;
   const stateLabel = phase === 'SparkChoice' ? 'Replace' : disabled ? 'Locked' : 'Play';
   const stageAnchorAttribute = registerGameplayAnchor
@@ -254,7 +325,7 @@ export const renderHandCard = (
       data-native-width="${cardPresentation.nativeWidth}"
       data-native-height="${cardPresentation.nativeHeight}"
       ${stageAnchorAttribute}
-      style="${slotVariables(cardPresentation.slots)}"
+      style="${slotVariables(cardPresentation.slots, typography)}"
       aria-label="${actionLabel(card, phase)}"${disabledAttribute}
     >
       <span class="card-frame-art" aria-hidden="true"></span>
@@ -272,11 +343,11 @@ export const renderHandCard = (
 
 export const renderNextCard = (card: Card | undefined): string => {
   if (!card) {
-    return '<p class="queue-empty" data-stage-anchor="deck">Queue empty</p>';
+    return '<p class="queue-empty">Queue empty</p>';
   }
 
   return `
-    <article class="next-card" data-stage-anchor="deck" aria-label="Next card: ${card}">
+    <article class="next-card" aria-label="Next card: ${card}">
       <span class="card-title">${card}</span>
       <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
     </article>

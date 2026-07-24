@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "a13717fb15509fe9128d7df784c155757234e12f",
+  "createdAt": "2026-07-24T17:49:49.572Z",
+  "gameId": "level-04-card-goblin-duel",
+  "laneId": "h6-21b-optical-typography-card-rig-motion-lab-replacement-1",
+  "runId": "capture-20260724t174914z-p9008",
+  "externalRelativePath": "level-04-card-goblin-duel/h6-21b-optical-typography-card-rig-motion-lab-replacement-1/capture-20260724t174914z-p9008",
+  "files": [
+    {
+      "relativePath": "console-results.json",
+      "mediaType": "application/json",
+      "bytes": 19,
+      "sha256": "339acc3b09add3c3d0e689adf17878a1bd264d3a3f00fccce7db538630e20066"
+    },
+    {
+      "relativePath": "fixture-assertions.json",
+      "mediaType": "application/json",
+      "bytes": 44048,
+      "sha256": "cc4ba7277992f04ad59abd072feb06797fa72de8287d9530e2d814eaf34582cc"
+    },
+    {
+      "relativePath": "measurements.json",
+      "mediaType": "application/json",
+      "bytes": 87880,
+      "sha256": "3a122e058ce4997eda27b006763ae956f55c45310a03bf6b595c70a30a277ec8"
+    },
+    {
+      "relativePath": "recordings/01-initial-deal-full.webm",
+      "mediaType": "video/webm",
+      "bytes": 389945,
+      "sha256": "ffbd1a1eb32f2e8420a35f8155c13fe7583f2d853cf99f5733ca1d4653b08b74"
+    },
+    {
+      "relativePath": "recordings/02-initial-deal-reduced.webm",
+      "mediaType": "video/webm",
+      "bytes": 279950,
+      "sha256": "5b3e4bcb43ba60045056961918fff9b9ad613b49ad3b74aea9d22c196162e104"
+    },
+    {
+      "relativePath": "recordings/03-hover-focus.webm",
+      "mediaType": "video/webm",
+      "bytes": 402861,
+      "sha256": "fe13ead7ecc8fc5b035c6844b911103722f9aa98108d85948295ab0e663f5ece"
+    },
+    {
+      "relativePath": "recordings/04-normal-commitment-refill.webm",
+      "mediaType": "video/webm",
+      "bytes": 379945,
+      "sha256": "4f1baa020b92d34b95ec8051e3e5f2251e8b564ee05615e00de77d1c4d86ef74"
+    },
+    {
+      "relativePath": "recordings/05-heavy-bonk-vacancy.webm",
+      "mediaType": "video/webm",
+      "bytes": 326631,
+      "sha256": "6606c9145721e4aa0e23f6b1d8871c20f1bd9b3acb9a80440f6e7b0048c95630"
+    },
+    {
+      "relativePath": "recordings/06-spark-full-sequence.webm",
+      "mediaType": "video/webm",
+      "bytes": 442281,
+      "sha256": "91ec9f9b5559ecafa3c839a57b9f8ee3688b44d041e9cec8ec041396125f18fb"
+    },
+    {
+      "relativePath": "recordings/07-terminal-lock-reset.webm",
+      "mediaType": "video/webm",
+      "bytes": 280356,
+      "sha256": "2119948a3862962c06d00a2a2116ec226e64128990a986233d197b090943410c"
+    },
+    {
+      "relativePath": "recordings/08-cancellation-reset-during-commitment.webm",
+      "mediaType": "video/webm",
+      "bytes": 680048,
+      "sha256": "41f467edad6ea475da7a7cda6edd5e7c321db5396fdae57b807e2560dedce186"
+    },
+    {
+      "relativePath": "stills/01-optical-default.png",
+      "mediaType": "image/png",
+      "bytes": 863279,
+      "sha256": "7734d460620d6958c5903e360cbb851340e43bef64c74d7b3acf69c379dfbf4c"
+    },
+    {
+      "relativePath": "stills/02-optical-minimum.png",
+      "mediaType": "image/png",
+      "bytes": 575020,
+      "sha256": "022eab985290f81ee84f7ec7d9ef00a1536805ed7b8e04ffde183cd82dbf7506"
+    },
+    {
+      "relativePath": "technical-review.json",
+      "mediaType": "application/json",
+      "bytes": 100030,
+      "sha256": "d46cc820ad9eed67e06a164d4fbd90416b1253f814be06514df419952f611501"
+    }
+  ],
+  "captureScript": "games/tier-1/04-card-goblin-duel/capture-h621b.cjs",
+  "captureScriptVersion": "h6.21b",
+  "captureConfiguration": {
+    "listenerHost": "127.0.0.1",
+    "listenerPort": 5175,
+    "browser": "chromium",
+    "staticContracts": [
+      {
+        "fixture": "optical-default",
+        "viewport": {
+          "width": 1280,
+          "height": 660
+        },
+        "expectedCards": 6,
+        "screenshot": "01-optical-default.png"
+      },
+      {
+        "fixture": "optical-minimum",
+        "viewport": {
+          "width": 1024,
+          "height": 580
+        },
+        "expectedCards": 6,
+        "screenshot": "02-optical-minimum.png"
+      }
+    ],
+    "motionContracts": [
+      {
+        "fixture": "initial-deal",
+        "mode": "full",
+        "recording": "01-initial-deal-full.webm",
+        "expectedCards": 3
+      },
+      {
+        "fixture": "initial-deal",
+        "mode": "reduced",
+        "recording": "02-initial-deal-reduced.webm",
+        "expectedCards": 3
+      },
+      {
+        "fixture": [
+          "pointer-hover",
+          "keyboard-focus"
+        ],
+        "mode": "full",
+        "recording": "03-hover-focus.webm",
+        "expectedCards": 6
+      },
+      {
+        "fixture": "strike-commitment",
+        "mode": "full",
+        "recording": "04-normal-commitment-refill.webm",
+        "expectedCards": 3
+      },
+      {
+        "fixture": "heavy-bonk-vacancy",
+        "mode": "full",
+        "recording": "05-heavy-bonk-vacancy.webm",
+        "expectedCards": 2
+      },
+      {
+        "fixture": "spark-sequence",
+        "mode": "full",
+        "recording": "06-spark-full-sequence.webm",
+        "expectedCards": 3
+      },
+      {
+        "fixture": "terminal-lock",
+        "mode": "full",
+        "recording": "07-terminal-lock-reset.webm",
+        "expectedCards": 2
+      },
+      {
+        "fixture": "reset-during-commitment",
+        "mode": "full",
+        "recording": "08-cancellation-reset-during-commitment.webm",
+        "expectedCards": 3
+      }
+    ],
+    "fixtureAssertions": "fixture-assertions.json",
+    "historicalEvidence": [
+      {
+        "lane": "h6-21a-five-face-card-surface-lab",
+        "classification": "aborted",
+        "payloadFiles": 0
+      },
+      {
+        "lane": "h6-21a-five-face-card-surface-lab-replacement-1",
+        "classification": "partial",
+        "payloadFiles": 5
+      },
+      {
+        "lane": "h6-21a-five-face-card-surface-lab-replacement-2",
+        "classification": "partial",
+        "payloadFiles": 6
+      },
+      {
+        "lane": "h6-21a-five-face-card-surface-lab-replacement-3",
+        "classification": "complete",
+        "authority": "level-04-card-goblin-duel/h6-21a-five-face-card-surface-lab-replacement-3/capture-20260723t174650z-p712"
+      },
+      {
+        "lane": "h6-21b-optical-typography-card-rig-motion-lab",
+        "classification": "partial",
+        "payloadFiles": 5,
+        "authority": "level-04-card-goblin-duel/h6-21b-optical-typography-card-rig-motion-lab/capture-20260723t224006z-p9188"
+      }
+    ],
+    "sourceWorktree": "uncommitted H6.21B presentation lab"
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

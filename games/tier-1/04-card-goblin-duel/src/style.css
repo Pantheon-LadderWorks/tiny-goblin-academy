@@ -532,7 +532,7 @@ button {
 .card-btn:focus-visible {
   outline: 4px solid var(--focus);
   outline-offset: 4px;
-  transform: translateY(-12px);
+  transform: translateY(-8px);
   filter: brightness(1.08);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.48), 0 0 0 3px rgba(255, 255, 255, 0.78);
 }
@@ -585,6 +585,31 @@ button {
   background-size: 832.5203% 602.3529%;
 }
 
+.card-rig-lab .card-btn {
+  will-change: transform, opacity, filter;
+}
+
+.card-rig-card-back .card-frame-art {
+  background-position: 14.6504% 30.1163%;
+  background-size: 832.5203% 624.3902%;
+}
+
+.card-rig-card-back .card-art-slot,
+.card-rig-card-back .card-content,
+.card-rig-card-back .card-state {
+  opacity: 0;
+}
+
+.card-typography-guides .card-title {
+  outline: 1px solid rgba(101, 217, 255, 0.92);
+  background: rgba(101, 217, 255, 0.12);
+}
+
+.card-typography-guides .card-desc {
+  outline: 1px solid rgba(255, 143, 114, 0.92);
+  background: rgba(255, 143, 114, 0.1);
+}
+
 .card-content {
   position: absolute;
   z-index: 2;
@@ -622,7 +647,7 @@ button {
 .card-btn .card-title {
   position: absolute;
   left: var(--title-x);
-  top: var(--title-y);
+  top: calc(var(--title-y) + var(--title-optical-y, 0%));
   display: flex;
   width: var(--title-width);
   height: var(--title-height);
@@ -640,7 +665,7 @@ button {
 .card-btn .card-desc {
   position: absolute;
   left: var(--body-x);
-  top: var(--body-y);
+  top: calc(var(--body-y) + var(--body-optical-y, 0%));
   display: flex;
   width: var(--body-width);
   height: var(--body-height);

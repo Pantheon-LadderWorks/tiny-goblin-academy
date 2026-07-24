@@ -3,6 +3,7 @@ import {
   CARD_DESCRIPTIONS,
   CARD_FRAME_PRESENTATIONS,
   CARD_LAB_CARDS,
+  CARD_TYPOGRAPHY_TEMPLATES,
   phasePresentation,
   renderHandCard,
   renderNextCard,
@@ -64,16 +65,16 @@ describe('accessible Card Goblin DOM card views', () => {
     expect(playCard(state, 0)).toBe(state);
   });
 
-  it('renders the next card as a non-interactive preview', () => {
+  it('renders NEXT as informational preview rather than a motion anchor', () => {
     const html = renderNextCard('Spark');
     expect(html).toContain('<article');
-    expect(html).toContain('data-stage-anchor="deck"');
     expect(html).toContain(CARD_DESCRIPTIONS.Spark);
+    expect(html).not.toContain('data-stage-anchor');
     expect(html).not.toContain('<button');
   });
 
-  it('keeps the deck anchor available when the queue is empty', () => {
-    expect(renderNextCard(undefined)).toContain('data-stage-anchor="deck"');
+  it('keeps an empty NEXT preview free from physical route authority', () => {
+    expect(renderNextCard(undefined)).not.toContain('data-stage-anchor');
   });
 
   it('maps all six actions onto the approved five-face card language', () => {
@@ -90,7 +91,7 @@ describe('accessible Card Goblin DOM card views', () => {
     );
   });
 
-  it('centralizes two measured slot templates and governed token identities', () => {
+  it('maps each painted frame to its source-pixel art, banner, and body regions', () => {
     expect(CARD_FRAME_PRESENTATIONS.Strike).toMatchObject({
       nativeWidth: 123,
       nativeHeight: 170,
@@ -101,14 +102,43 @@ describe('accessible Card Goblin DOM card views', () => {
         body: { x: 0.13, y: 0.60, width: 0.74, height: 0.27 },
       },
     });
+    expect(CARD_FRAME_PRESENTATIONS.Guard.slots).toEqual({
+      art: { x: 21 / 123, y: 14 / 170, width: 81 / 123, height: 74 / 170 },
+      title: { x: 15 / 123, y: 87 / 170, width: 93 / 123, height: 17 / 170 },
+      body: { x: 17 / 123, y: 104 / 170, width: 90 / 123, height: 50 / 170 },
+    });
+    expect(CARD_FRAME_PRESENTATIONS.Mend.slots).toEqual({
+      art: { x: 20 / 123, y: 14 / 170, width: 82 / 123, height: 74 / 170 },
+      title: { x: 14 / 123, y: 87 / 170, width: 95 / 123, height: 17 / 170 },
+      body: { x: 16 / 123, y: 104 / 170, width: 90 / 123, height: 50 / 170 },
+    });
+    expect(CARD_FRAME_PRESENTATIONS.Spark.slots).toEqual({
+      art: { x: 21 / 123, y: 14 / 170, width: 82 / 123, height: 74 / 170 },
+      title: { x: 15 / 123, y: 87 / 170, width: 93 / 123, height: 17 / 170 },
+      body: { x: 17 / 123, y: 104 / 170, width: 90 / 123, height: 50 / 170 },
+    });
     expect(CARD_FRAME_PRESENTATIONS['Heavy Bonk']).toMatchObject({
       token: { id: 'club-weapon-icon', sourceRect: { x: 514, y: 2, w: 124, h: 124 } },
       slots: {
-        art: { x: 0.22, y: 0.14, width: 0.56, height: 0.34 },
-        title: { x: 0.15, y: 0.555, width: 0.70, height: 0.105 },
-        body: { x: 0.13, y: 0.695, width: 0.74, height: 0.205 },
+        art: { x: 21 / 124, y: 14 / 170, width: 82 / 124, height: 74 / 170 },
+        title: { x: 16 / 124, y: 87 / 170, width: 93 / 124, height: 17 / 170 },
+        body: { x: 17 / 124, y: 104 / 170, width: 90 / 124, height: 50 / 170 },
       },
     });
+  });
+
+  it('uses remapped banner regions without compensating typography transforms', () => {
+    expect(CARD_TYPOGRAPHY_TEMPLATES).toEqual({
+      banner: { titleOffsetY: 0, bodyOffsetY: 0 },
+      'blank-parchment': { titleOffsetY: 0.008, bodyOffsetY: -0.004 },
+    });
+
+    const banner = renderHandCard('Guard', 0, 'PlayerAction');
+    const parchment = renderHandCard('Strike', 0, 'PlayerAction');
+    expect(banner).toContain('--title-optical-y: 0%');
+    expect(banner).toContain('--body-optical-y: 0%');
+    expect(parchment).toContain('--title-optical-y: 0.8%');
+    expect(parchment).toContain('--body-optical-y: -0.4%');
   });
 
   it('keeps six-card laboratory fixtures out of the production three-anchor contract', () => {
@@ -148,7 +178,7 @@ describe('accessible Card Goblin DOM card views', () => {
 
     expect(replace).toContain('aria-label="Replace Spark. Deal 1 damage and replace one card."');
     expect(replace).toContain('>Replace<');
-    expect(locked).toContain('aria-label="Play Heavy Bonk. Deal 4 damage; skip next draw."');
+    expect(locked).toContain('aria-label="Locked Heavy Bonk. Deal 4 damage; skip next draw."');
     expect(locked).toContain('>Locked<');
   });
 

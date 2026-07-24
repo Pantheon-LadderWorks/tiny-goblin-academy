@@ -4,16 +4,18 @@ import {
   type AnchorSnapshot,
   type RectLike,
 } from './anchors';
+import { CARD_RIG_ANCHOR_IDS } from './card-rig-routes';
 
 export const BASE_REQUIRED_ANCHORS = Object.freeze([
-  'deck',
-  'played-card',
+  CARD_RIG_ANCHOR_IDS.playerDrawOrigin,
+  CARD_RIG_ANCHOR_IDS.playedCardTarget,
   'resolution-center',
   'enemy-center',
   'enemy-impact',
   'player-center',
   'player-impact',
-  'discard',
+  CARD_RIG_ANCHOR_IDS.playerDiscardTarget,
+  CARD_RIG_ANCHOR_IDS.enemyCardOrigin,
   'phase-banner',
 ] as const);
 

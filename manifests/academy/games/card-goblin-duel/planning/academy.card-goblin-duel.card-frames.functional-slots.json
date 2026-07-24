@@ -268,10 +268,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.16260162601626016,
+            "yPct": 0.08235294117647059,
+            "wPct": 0.6666666666666666,
+            "hPct": 0.43529411764705883
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -288,17 +288,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [20, 14, 82, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.11382113821138211,
+            "yPct": 0.5117647058823529,
+            "wPct": 0.7723577235772358,
+            "hPct": 0.1
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -315,17 +315,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [14, 87, 95, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.13008130081300814,
+            "yPct": 0.611764705882353,
+            "wPct": 0.7317073170731707,
+            "hPct": 0.29411764705882354
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -342,7 +342,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [16, 104, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.green-banner-front-frame.selection",
@@ -452,10 +452,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.17073170731707318,
+            "yPct": 0.08235294117647059,
+            "wPct": 0.6585365853658537,
+            "hPct": 0.43529411764705883
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -472,17 +472,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [21, 14, 81, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.12195121951219512,
+            "yPct": 0.5117647058823529,
+            "wPct": 0.7560975609756098,
+            "hPct": 0.1
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -499,17 +499,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [15, 87, 93, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.13821138211382114,
+            "yPct": 0.611764705882353,
+            "wPct": 0.7317073170731707,
+            "hPct": 0.29411764705882354
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -526,7 +526,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [17, 104, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-banner-front-frame.selection",
@@ -636,10 +636,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.1693548387096774,
+            "yPct": 0.08235294117647059,
+            "wPct": 0.6612903225806451,
+            "hPct": 0.43529411764705883
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -656,17 +656,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [21, 14, 82, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.12903225806451613,
+            "yPct": 0.5117647058823529,
+            "wPct": 0.75,
+            "hPct": 0.1
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -683,17 +683,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [16, 87, 93, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.13709677419354838,
+            "yPct": 0.611764705882353,
+            "wPct": 0.7258064516129032,
+            "hPct": 0.29411764705882354
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -710,7 +710,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [17, 104, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.tan-banner-front-frame.selection",
@@ -820,10 +820,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.17073170731707318,
+            "yPct": 0.08235294117647059,
+            "wPct": 0.6666666666666666,
+            "hPct": 0.43529411764705883
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -840,17 +840,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [21, 14, 82, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.12195121951219512,
+            "yPct": 0.5117647058823529,
+            "wPct": 0.7560975609756098,
+            "hPct": 0.1
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -867,17 +867,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [15, 87, 93, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.13821138211382114,
+            "yPct": 0.611764705882353,
+            "wPct": 0.7317073170731707,
+            "hPct": 0.29411764705882354
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -894,7 +894,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [17, 104, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.card-front-frame.teal-edged-tan-front-frame.selection",
@@ -1004,10 +1004,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.16666666666666666,
+            "yPct": 0.11956521739130435,
+            "wPct": 0.6587301587301587,
+            "hPct": 0.40217391304347827
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -1024,17 +1024,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [21, 22, 83, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.11904761904761904,
+            "yPct": 0.5163043478260869,
+            "wPct": 0.746031746031746,
+            "hPct": 0.09239130434782608
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -1051,17 +1051,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [15, 95, 94, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.1349206349206349,
+            "yPct": 0.6086956521739131,
+            "wPct": 0.7142857142857143,
+            "hPct": 0.2717391304347826
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -1078,7 +1078,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [17, 112, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.highlighted-card-state.glowing-highlight-front-frame.selection",
@@ -1215,10 +1215,10 @@
           "label": "Portrait / large icon area",
           "slotType": "art-or-icon-slot",
           "relativeRect": {
-            "xPct": 0.2,
-            "yPct": 0.13,
-            "wPct": 0.6,
-            "hPct": 0.4
+            "xPct": 0.17073170731707318,
+            "yPct": 0.08235294117647059,
+            "wPct": 0.6585365853658537,
+            "hPct": 0.43529411764705883
           },
           "contentKind": "icon-or-future-art",
           "usage": "draft-review",
@@ -1235,17 +1235,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Upper oval/front-face feature area."
+          "notes": "Pixel-matched to the painted art boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [21, 14, 81, 74]."
         },
         {
           "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.title-banner",
           "label": "Banner title area",
           "slotType": "title-slot",
           "relativeRect": {
-            "xPct": 0.13,
-            "yPct": 0.54,
-            "wPct": 0.74,
-            "hPct": 0.15
+            "xPct": 0.12195121951219512,
+            "yPct": 0.5117647058823529,
+            "wPct": 0.7560975609756098,
+            "hPct": 0.1
           },
           "contentKind": "short-text",
           "usage": "draft-review",
@@ -1262,17 +1262,17 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Lower banner/nameplate area."
+          "notes": "Pixel-matched to the painted title boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [15, 87, 93, 17]."
         },
         {
           "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.body",
           "label": "Short body text area",
           "slotType": "body-text-slot",
           "relativeRect": {
-            "xPct": 0.15,
-            "yPct": 0.72,
-            "wPct": 0.7,
-            "hPct": 0.17
+            "xPct": 0.13821138211382114,
+            "yPct": 0.611764705882353,
+            "wPct": 0.7317073170731707,
+            "hPct": 0.29411764705882354
           },
           "contentKind": "short-body-text",
           "usage": "draft-review",
@@ -1289,7 +1289,7 @@
             "scaleUpAllowed": true,
             "notes": "Scaling the rendered card/surface up is allowed as a planning response when it improves fit, but must respect future playfield/view budget and is not runtime-approved here."
           },
-          "notes": "Small rules/effect text candidate; likely tight at small scale."
+          "notes": "Pixel-matched to the painted body boundary in the cleaned source crop; surface-relative rectangle derived from source pixels [17, 104, 90, 50]."
         },
         {
           "id": "card-goblin-duel.functional-surface.disabled-card-state.gray-disabled-front-frame.selection",

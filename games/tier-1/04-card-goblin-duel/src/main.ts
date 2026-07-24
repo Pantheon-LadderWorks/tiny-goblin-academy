@@ -6,6 +6,19 @@ import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
 import {
+  CARD_RIG_FIXTURES,
+  CardRig,
+  type CardRigFixtureId,
+  type CardRigMode,
+} from './card-rig';
+import { DomCardRigPort, type CardRigRouteTelemetry } from './card-rig-dom';
+import {
+  CARD_RIG_ANCHOR_IDS,
+  CARD_RIG_SOURCE_ANCHORS,
+  CARD_RIG_SOURCE_SIZE,
+  resolveCoverPoint,
+} from './card-rig-routes';
+import {
   CARD_LAB_CARDS,
   phasePresentation,
   renderHandCard,
@@ -20,8 +33,25 @@ import {
   createGame,
   playCard,
   resolveSparkChoice,
+  type Card,
   type GameState,
+  type Phase,
 } from './simulation';
+
+declare global {
+  interface Window {
+    __cardRigLabStatus?: {
+      fixtureId: CardRigFixtureId;
+      mode: CardRigMode;
+      status: 'ready' | 'running' | 'complete' | 'cancelled';
+      cues: string[];
+      events: string[];
+      routes: CardRigRouteTelemetry[];
+      cleanup: string[];
+      reason?: string;
+    };
+  }
+}
 
 document.documentElement.style.setProperty('--tabletop-scene-url', `url("${tabletopSceneUrl}")`);
 document.documentElement.style.setProperty('--card-frame-sheet-url', `url("${cardFrameSheetUrl}")`);
@@ -37,6 +67,16 @@ const cardLabStrategy: CardSurfaceStrategy | undefined = requestedCardLab === 'c
   ? requestedCardLab
   : undefined;
 const cardSlotDebug = searchParams.get('cardSlots') === '1';
+const cardTypographyGuides = searchParams.get('cardGuides') === '1';
+const requestedCardRig = searchParams.get('cardRig');
+const cardRigFixtureId: CardRigFixtureId | undefined = import.meta.env.MODE === 'development'
+  && requestedCardRig
+  && requestedCardRig in CARD_RIG_FIXTURES
+  ? requestedCardRig as CardRigFixtureId
+  : undefined;
+const cardRigMode: CardRigMode = searchParams.get('motion') === 'reduced'
+  ? 'reduced'
+  : 'full';
 const debugAnchors = isAnchorDebugEnabled(window.location.search);
 const ledger = createCardGoblinLedger({
   parent: window.parent === window ? null : window.parent,
@@ -63,7 +103,21 @@ const terminalMessage = document.querySelector<HTMLElement>('#terminal-message')
 const resetDuel = document.querySelector<HTMLButtonElement>('#reset-duel')!;
 const handCount = document.querySelector<HTMLElement>('#hand-count')!;
 const anchorStatus = document.querySelector<HTMLElement>('#anchor-status')!;
+const tabletopScene = document.querySelector<HTMLElement>('.tabletop-scene')!;
+const playerDrawAnchor = document.querySelector<HTMLElement>(
+  `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS.playerDrawOrigin}"]`,
+)!;
+const playedCardAnchor = document.querySelector<HTMLElement>(
+  `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS.playedCardTarget}"]`,
+)!;
+const discardAnchor = document.querySelector<HTMLElement>(
+  `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS.playerDiscardTarget}"]`,
+)!;
+const enemyStatus = document.querySelector<HTMLElement>('.enemy-status')!;
 
+let cardRig: CardRig | undefined;
+let cardRigStarted = false;
+let cardRigGeneration = 0;
 let stageGraphics: Phaser.GameObjects.Graphics;
 let debugGraphics: Phaser.GameObjects.Graphics;
 let debugLabels: Phaser.GameObjects.Text[] = [];
@@ -71,6 +125,26 @@ let debugLabels: Phaser.GameObjects.Text[] = [];
 const clearDebugLabels = (): void => {
   for (const label of debugLabels) label.destroy();
   debugLabels = [];
+};
+
+const layoutTabletopSourceAnchors = (): void => {
+  const viewport = {
+    width: tabletopScene.clientWidth,
+    height: tabletopScene.clientHeight,
+  };
+  for (const key of Object.keys(CARD_RIG_SOURCE_ANCHORS) as Array<keyof typeof CARD_RIG_SOURCE_ANCHORS>) {
+    const anchor = document.querySelector<HTMLElement>(
+      `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS[key]}"]`,
+    );
+    if (!anchor) continue;
+    const resolved = resolveCoverPoint(
+      viewport,
+      CARD_RIG_SOURCE_SIZE,
+      CARD_RIG_SOURCE_ANCHORS[key].point,
+    );
+    anchor.style.left = `${resolved.x}px`;
+    anchor.style.top = `${resolved.y}px`;
+  }
 };
 
 const drawStage = (
@@ -93,10 +167,10 @@ const drawStage = (
   const enemy = snapshot['enemy-center'];
   const enemyImpact = snapshot['enemy-impact'];
   const resolution = snapshot['resolution-center'];
-  const played = snapshot['played-card'];
+  const played = snapshot[CARD_RIG_ANCHOR_IDS.playedCardTarget];
   const player = snapshot['player-center'];
-  const deck = snapshot.deck;
-  const discard = snapshot.discard;
+  const deck = snapshot[CARD_RIG_ANCHOR_IDS.playerDrawOrigin];
+  const discard = snapshot[CARD_RIG_ANCHOR_IDS.playerDiscardTarget];
 
   if (enemy && player) {
     const tableTop = Math.max(24, enemy.y - 56);
@@ -210,9 +284,11 @@ const game = new Phaser.Game({
       const scene = this as Phaser.Scene;
       stageGraphics = scene.add.graphics().setDepth(0).setVisible(false);
       debugGraphics = scene.add.graphics().setDepth(999);
+      layoutTabletopSourceAnchors();
       drawStage(scene);
 
       scene.scale.on('resize', () => {
+        layoutTabletopSourceAnchors();
         drawStage(scene, anchorSnapshot);
         anchorBridge?.refresh();
       });
@@ -256,6 +332,74 @@ const resolutionCopy = (current: GameState): Readonly<{ title: string; detail: s
   return { title: current.log.length === 1 ? 'The table is waiting.' : 'The exchange resolves.', detail: latest };
 };
 
+const renderCardRigHand = (
+  cards: readonly Card[],
+  phase: Phase,
+): void => {
+  hand.innerHTML = cards
+    .map((card, index) => renderHandCard(card, index, phase, 'tokens', false))
+    .join('');
+  handCount.textContent = `${cards.length} rig card${cards.length === 1 ? '' : 's'}`;
+  const terminal = phase === 'Terminal';
+  terminalOutcome.hidden = !terminal;
+  terminalMessage.textContent = terminal
+    ? 'Victory — the Card Goblin is defeated.'
+    : '';
+  anchorBridge?.refresh();
+};
+
+if (cardRigFixtureId) {
+  const port = new DomCardRigPort({
+    hand,
+    anchors: {
+      playerDrawOrigin: playerDrawAnchor,
+      playedCardTarget: playedCardAnchor,
+      playerDiscardTarget: discardAnchor,
+    },
+    enemy: enemyStatus,
+    renderHand: renderCardRigHand,
+    onCue: (cue) => {
+      window.__cardRigLabStatus?.cues.push(cue.type);
+      resolutionDetail.textContent = `CardRig cue · ${cue.type}`;
+    },
+    onRoute: (route) => window.__cardRigLabStatus?.routes.push(route),
+    onCleanup: (reason) => window.__cardRigLabStatus?.cleanup.push(reason),
+  });
+  cardRig = new CardRig(port);
+  window.__cardRigLabStatus = {
+    fixtureId: cardRigFixtureId,
+    mode: cardRigMode,
+    status: 'ready',
+    cues: [],
+    events: ['ready'],
+    routes: [],
+    cleanup: [],
+  };
+}
+
+const startCardRigFixture = async (): Promise<void> => {
+  if (!cardRig || !cardRigFixtureId || cardRigStarted) return;
+  cardRigStarted = true;
+  const generation = ++cardRigGeneration;
+  const status = window.__cardRigLabStatus;
+  if (status) {
+    status.status = 'running';
+    status.cues = [];
+    status.events.push(`run:${generation}`);
+    delete status.reason;
+  }
+  const result = await cardRig.play(cardRigFixtureId, cardRigMode);
+  if (generation !== cardRigGeneration) return;
+  status?.events.push(result.status);
+  if (status) {
+    status.status = result.status === 'completed' ? 'complete' : 'cancelled';
+    status.reason = result.status === 'cancelled' ? result.reason : undefined;
+  }
+  resolutionDetail.textContent = result.status === 'completed'
+    ? `${CARD_RIG_FIXTURES[cardRigFixtureId].label} · complete`
+    : `CardRig cancelled · ${result.reason}`;
+};
+
 const bindCardActions = (): void => {
   document.querySelectorAll<HTMLButtonElement>('#hand .card-btn').forEach((button) => {
     button.addEventListener('click', () => {
@@ -294,8 +438,11 @@ const render = (focusIndex?: number): void => {
   const bodyClasses = [
     phase.bodyClass,
     debugAnchors ? 'anchor-debug' : '',
-    cardLabStrategy ? `card-lab card-lab-${cardLabStrategy}` : '',
+    cardRigFixtureId
+      ? 'card-lab card-lab-tokens card-rig-lab'
+      : cardLabStrategy ? `card-lab card-lab-${cardLabStrategy}` : '',
     cardSlotDebug ? 'card-slot-debug' : '',
+    cardTypographyGuides ? 'card-typography-guides' : '',
   ].filter(Boolean);
   document.body.className = bodyClasses.join(' ');
   banner.textContent = phase.banner;
@@ -309,6 +456,24 @@ const render = (focusIndex?: number): void => {
   const resolution = resolutionCopy(state);
   resolutionTitle.textContent = resolution.title;
   resolutionDetail.textContent = resolution.detail;
+
+  if (cardRigFixtureId) {
+    const fixture = CARD_RIG_FIXTURES[cardRigFixtureId];
+    banner.textContent = 'CardRig Motion Lab';
+    phaseInstruction.textContent = `${fixture.label} · ${cardRigMode} motion`;
+    resolutionTitle.textContent = 'Fixture-driven presentation sequence';
+    resolutionDetail.textContent = 'Simulation and ordinary gameplay remain untouched.';
+    playerHp.textContent = '10 / 10 HP';
+    enemyHp.textContent = '12 / 12 HP';
+    playerEffects.textContent = 'Deterministic fixture state.';
+    enemyEffects.textContent = 'Presentation adapter only.';
+    next.innerHTML = renderNextCard('Spark');
+    renderCardRigHand(fixture.initialHand, 'PlayerAction');
+    layoutTabletopSourceAnchors();
+    anchorBridge?.refresh();
+    queueMicrotask(() => void startCardRigFixture());
+    return;
+  }
 
   if (cardLabStrategy) {
     banner.textContent = 'Card Surface Lab';
@@ -348,14 +513,38 @@ const render = (focusIndex?: number): void => {
 };
 
 resetDuel.addEventListener('click', () => {
+  if (cardRigFixtureId) {
+    cardRigGeneration += 1;
+    window.__cardRigLabStatus?.events.push('cancel:reset');
+    cardRig?.cancel('reset');
+    cardRigStarted = false;
+    if (window.__cardRigLabStatus) {
+      window.__cardRigLabStatus.status = 'ready';
+      window.__cardRigLabStatus.cues = [];
+    }
+    render();
+    return;
+  }
   state = createGame();
   ledger.reset();
   render(0);
 });
 
+const onViewportResize = (): void => {
+  if (window.__cardRigLabStatus?.status === 'running') {
+    window.__cardRigLabStatus.events.push('cancel:resize');
+    cardRig?.cancel('resize');
+  }
+  layoutTabletopSourceAnchors();
+  anchorBridge?.refresh();
+};
+window.addEventListener('resize', onViewportResize);
+
 render();
 
 window.addEventListener('beforeunload', () => {
+  cardRig?.cancel('reset');
+  window.removeEventListener('resize', onViewportResize);
   window.removeEventListener('message', onHubLedgerMessage);
   anchorBridge?.destroy();
   game.destroy(true);

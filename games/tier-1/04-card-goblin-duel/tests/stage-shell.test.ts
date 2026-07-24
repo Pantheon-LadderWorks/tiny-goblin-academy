@@ -10,8 +10,23 @@ const mainSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/main.ts');
 const markup = readRepoFile('games/tier-1/04-card-goblin-duel/index.html');
 const styles = readRepoFile('games/tier-1/04-card-goblin-duel/src/style.css');
 const captureSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture.cjs');
+const captureH621BSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture-h621b.cjs');
+const h621bEvidenceContractsSource = readRepoFile('games/tier-1/04-card-goblin-duel/h621b-evidence-contracts.cjs');
+const functionalSlotManifest = JSON.parse(readRepoFile(
+  'manifests/academy/games/card-goblin-duel/planning/academy.card-goblin-duel.card-frames.functional-slots.json',
+)) as {
+  surfaces: Array<{
+    label: string;
+    slots: Array<{
+      slotType: string;
+      relativeRect: { xPct: number; yPct: number; wPct: number; hPct: number };
+    }>;
+  }>;
+};
 const captureContractsSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture-contracts.cjs');
 const anchorBridgeSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/anchor-bridge.ts');
+const cardRigSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/card-rig.ts');
+const cardRigDomSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/card-rig-dom.ts');
 const hubRuntime = readRepoFile('hub/src/components/DevGameRuntimeView.tsx');
 const hubStyles = readRepoFile('hub/src/styles/hub.css');
 const tauriConfig = JSON.parse(readRepoFile('hub/src-tauri/tauri.conf.json')) as {
@@ -41,7 +56,11 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(mainSource).not.toContain('👺');
     expect(mainSource).not.toContain('playerAvatar');
     expect(mainSource).not.toContain('enemyAvatar');
-    expect(mainSource).not.toContain('CardRig');
+    const ordinaryHandler = mainSource.slice(
+      mainSource.indexOf('const bindCardActions'),
+      mainSource.indexOf('const restoreCardFocus'),
+    );
+    expect(ordinaryHandler).not.toMatch(/CardRig|cardRig/);
     expect(mainSource).not.toContain('CardEcho');
     expect(mainSource).not.toMatch(/particle|projectile|shader|trail|orbital|debris/i);
   });
@@ -147,6 +166,67 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(styles).not.toContain('text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.card-btn .card-desc');
   });
 
+  it('maps every painted front frame to source-pixel art, banner, and body regions', () => {
+    const expected = {
+      'Green banner card front frame': {
+        native: [123, 170],
+        art: [20, 14, 82, 74],
+        title: [14, 87, 95, 17],
+        body: [16, 104, 90, 50],
+      },
+      'Teal banner card front frame': {
+        native: [123, 170],
+        art: [21, 14, 81, 74],
+        title: [15, 87, 93, 17],
+        body: [17, 104, 90, 50],
+      },
+      'Tan banner card front frame': {
+        native: [124, 170],
+        art: [21, 14, 82, 74],
+        title: [16, 87, 93, 17],
+        body: [17, 104, 90, 50],
+      },
+      'Teal-edged tan card front frame': {
+        native: [123, 170],
+        art: [21, 14, 82, 74],
+        title: [15, 87, 93, 17],
+        body: [17, 104, 90, 50],
+      },
+      'Glowing highlighted card front frame': {
+        native: [126, 184],
+        art: [21, 22, 83, 74],
+        title: [15, 95, 94, 17],
+        body: [17, 112, 90, 50],
+      },
+      'Gray disabled card front frame': {
+        native: [123, 170],
+        art: [21, 14, 81, 74],
+        title: [15, 87, 93, 17],
+        body: [17, 104, 90, 50],
+      },
+    } as const;
+
+    for (const [label, regions] of Object.entries(expected)) {
+      const surface = functionalSlotManifest.surfaces.find((candidate) => candidate.label === label);
+      expect(surface, label).toBeDefined();
+      const [nativeWidth, nativeHeight] = regions.native;
+      for (const [region, slotType] of [
+        ['art', 'art-or-icon-slot'],
+        ['title', 'title-slot'],
+        ['body', 'body-text-slot'],
+      ] as const) {
+        const [x, y, width, height] = regions[region];
+        expect(surface?.slots.find((slot) => slot.slotType === slotType)?.relativeRect, `${label} ${region}`)
+          .toEqual({
+            xPct: x / nativeWidth,
+            yPct: y / nativeHeight,
+            wPct: width / nativeWidth,
+            hPct: height / nativeHeight,
+          });
+      }
+    }
+  });
+
   it('keeps both card-surface strategies and measured browser evidence development-only', () => {
     expect(mainSource).toContain("searchParams.get('cardLab')");
     expect(mainSource).toContain("searchParams.get('cardSlots')");
@@ -176,6 +256,55 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(captureSource).toContain('tokenScaleFactor');
     expect(captureSource).toContain('stateBadgeFits');
     expect(captureSource).toContain('slot rectangles intersect');
+  });
+
+  it('keeps H6.21B CardRig fixture-driven and outside ordinary gameplay', () => {
+    expect(mainSource).toContain("searchParams.get('cardRig')");
+    expect(mainSource).toContain("import.meta.env.MODE === 'development'");
+    expect(mainSource).toContain('new DomCardRigPort');
+    expect(mainSource).toContain("renderHandCard(card, index, phase, 'tokens', false)");
+    expect(mainSource).toContain('__cardRigLabStatus');
+    expect(mainSource).not.toContain("cardRigFixtureId === 'terminal-lock' ? 'Terminal'");
+    expect(cardRigSource).toContain('CARD_RIG_FIXTURES');
+    expect(cardRigSource).toContain('FULL_MOTION_TIMING');
+    expect(cardRigSource).toContain('REDUCED_MOTION_TIMING');
+    expect(cardRigSource).toContain("this.cancel('superseded')");
+    expect(cardRigSource).not.toMatch(/createGame|playCard|resolveSparkChoice/);
+    expect(cardRigDomSource).toContain('dataset.cardRigId');
+    expect(cardRigDomSource).toContain('element.animate');
+    expect(cardRigDomSource).toContain('card-rig-card-back');
+    expect(cardRigDomSource).toContain('private async terminalLock');
+    expect(cardRigDomSource).toContain('await this.terminalLock(context)');
+    expect(cardRigDomSource).not.toContain('cloneNode');
+  });
+
+  it('governs optical offsets, restrained focus, guides, and the deal card back', () => {
+    expect(styles).toContain('var(--title-optical-y, 0%)');
+    expect(styles).toContain('var(--body-optical-y, 0%)');
+    expect(styles).toMatch(/\.card-btn:focus-visible\s*\{[^}]*translateY\(-8px\)/s);
+    expect(styles).toContain('.card-typography-guides .card-title');
+    expect(styles).toContain('.card-typography-guides .card-desc');
+    expect(styles).toMatch(/\.card-rig-card-back \.card-frame-art\s*\{[^}]*14\.6504% 30\.1163%/s);
+  });
+
+  it('preflights the bounded H6.21B evidence contract before its replacement run', () => {
+    expect(captureH621BSource).toContain("require('./h621b-evidence-contracts.cjs')");
+    expect(captureH621BSource).toContain('measureOpticalAlignment');
+    expect(captureH621BSource).toContain('waitForRigComplete');
+    expect(captureH621BSource).toContain('finalizeCaptureRun');
+    expect(captureH621BSource).toContain('fixtureAssertions');
+    expect(captureH621BSource).toContain('historicalEvidence');
+    expect(captureH621BSource).toContain('verifyEvidenceContracts();');
+    expect(captureH621BSource).toContain("--verify-contracts");
+
+    expect(h621bEvidenceContractsSource).toContain("'pointer-hover': 3");
+    expect(h621bEvidenceContractsSource).toContain("'keyboard-focus': 6");
+    expect(h621bEvidenceContractsSource).toMatch(
+      /recording: '03-hover-focus\.webm'[\s\S]*expectedCards: 6/,
+    );
+    expect(h621bEvidenceContractsSource).toContain("01-optical-default.png");
+    expect(h621bEvidenceContractsSource).toContain("02-optical-minimum.png");
+    expect(h621bEvidenceContractsSource).toContain("08-cancellation-reset-during-commitment.webm");
   });
 
   it('moves complete causal history into the Hub Ledger surface', () => {

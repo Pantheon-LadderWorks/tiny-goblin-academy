@@ -39,13 +39,17 @@ cardGoblinDuelStarted: true
 cardGoblinH6_20EImplemented: true
 cardGoblinAgentVisualReviewPassed: true
 cardGoblinAdditionalHumanReviewRoundWaived: true
-cardGoblinHumanVisualReviewPassed: false
+cardGoblinHumanVisualReviewPassed: true
 cardGoblinH6_21Started: true
 cardGoblinH6_21AImplemented: true
 cardGoblinH6_21ATechnicalValidationPassed: true
 cardGoblinH6_21ACardSurfaceHumanReviewPassed: true
 cardGoblinH6_21AOpticalTypographyPassed: false
-cardGoblinCardRigImplemented: false
+cardGoblinH6_21BImplemented: true
+cardGoblinH6_21BTechnicalValidationPassed: true
+cardGoblinH6_21BHumanVisualReviewPassed: true
+cardGoblinCardRigImplemented: true
+cardGoblinH6_22Started: false
 ```
 
 At this baseline:
@@ -59,8 +63,8 @@ At this baseline:
 - H6.18 human technical review passed in H6.18A.
 - The One Room Platformer legacy simulation suite remains a documented pre-existing out-of-lane baseline failure; H6.18 introduced no gameplay regression and authorizes no correction.
 - Card Goblin Duel H6.20E integrates the approved tabletop, protected result corridor, and seamless dock correction.
-- H6.21A promotes five governed card faces across six actions, selects Strategy B mapped tokens, and establishes banner and blank-parchment slot templates with complete Play, Replace, Locked, focus, terminal, and debug treatments. All eight evidence fixtures completed. Kryssie approved the card-surface system; this does not claim final optical typography approval.
-- Optical title/body alignment and CardRig motion remain explicitly open for H6.21B. CardRig did not begin in H6.21A. H6.22 through H6.24 remain separately gated.
+- H6.21A promotes five governed card faces across six actions, selects Strategy B mapped tokens, and establishes banner and blank-parchment slot templates with complete Play, Replace, Locked, focus, terminal, and debug treatments. All eight evidence fixtures completed. Kryssie approved the card-surface system; H6.21A itself did not claim final optical typography approval.
+- H6.21B corrects optical title/body alignment and implements the preview-only CardRig with governed draw, played-card, discard, and hand anchors. Replacement-1 was technically complete but geographically rejected; replacement-2 corrected card provenance and destination, including the opening-card anchor race. Full and reduced motion, terminal accessibility labels, cancellation, and final semantic geography passed Human Visual Review. H6.22 had not begun during H6.21B.
 
 Only the lane that changes one of these facts may update this block.
 
