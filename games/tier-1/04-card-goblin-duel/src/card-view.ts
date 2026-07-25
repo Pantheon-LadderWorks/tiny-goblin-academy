@@ -351,7 +351,7 @@ export const renderHandCard = (
   const stageAnchorAttribute = registerGameplayAnchor
     ? `data-stage-anchor="${handSlotAnchorId(index)}"`
     : '';
-  const composition = createCardRigComposition(card, index, rigOptions.outerFrame ?? 'none');
+  const composition = createCardRigComposition(card, index, rigOptions.outerFrame);
   const rigId = rigOptions.rigId ?? composition.rigId;
   const outerFrame = CARD_RIG_OUTER_FRAMES[composition.outerFrame];
   const outerFrameStyle = spriteVariables(outerFrame.sourceRect);
@@ -363,6 +363,9 @@ export const renderHandCard = (
       data-i="${index}"
       data-card-name="${card}"
       data-card-rig-id="${rigId}"
+      data-card-rig-motion-root="${composition.movementOwnerRigId}"
+      data-card-rig-cleanup-owner="${composition.cleanupOwnerRigId}"
+      data-card-rig-frame-class="${composition.frameClass}"
       data-card-frame="${cardPresentation.frame}"
       data-card-strategy="${strategy}"
       data-semantic-role="${cardPresentation.semanticRole}"
@@ -399,6 +402,13 @@ export const renderHandCard = (
         data-card-rig-layer="card-local-fx"
         data-card-rig-attachment="card-local"
         data-card-rig-attachment-id="card-rig:${rigId}"
+        aria-hidden="true"
+      ></span>
+      <span
+        class="card-activation-source"
+        data-card-rig-layer="activation-source"
+        data-card-rig-attachment="travel"
+        data-card-rig-attachment-id="card-rig-travel:${composition.activationSourceOwnerRigId}"
         aria-hidden="true"
       ></span>
     </button>

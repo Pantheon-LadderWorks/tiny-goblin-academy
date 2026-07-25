@@ -2,11 +2,19 @@ import type { Card } from './simulation';
 
 export type CardEffectMode = 'full' | 'reduced';
 export type CardEffectBlendMode = 'normal' | 'add' | 'screen';
-export type CardEffectTarget = 'card-local' | 'enemy-target' | 'player-target' | 'tabletop-local';
+export type CardEffectTarget =
+  | 'card-local'
+  | 'draw-pile-local'
+  | 'discard-pile-local'
+  | 'enemy-target'
+  | 'player-target'
+  | 'travel'
+  | 'tabletop-local';
 
 export type CardEffectLayerKind =
   | 'surface-prep'
   | 'rim-glow'
+  | 'rim-trace'
   | 'shine-sweep'
   | 'projectile'
   | 'trail-emitter'
@@ -20,10 +28,14 @@ export type CardEffectLayerKind =
   | 'dust-burst'
   | 'target-pulse'
   | 'stage-response'
-  | 'render-texture-stamp';
+  | 'render-texture-stamp'
+  | 'pile-response'
+  | 'victory-accent'
+  | 'defeat-accent';
 
 export const REQUIRED_EFFECT_PRIMITIVES = Object.freeze([
   'rim-glow',
+  'rim-trace',
   'shine-sweep',
   'projectile',
   'trail-emitter',
@@ -35,7 +47,32 @@ export const REQUIRED_EFFECT_PRIMITIVES = Object.freeze([
   'healing-rise',
   'downward-impact',
   'dust-burst',
+  'pile-response',
+  'victory-accent',
+  'defeat-accent',
 ] as const satisfies readonly CardEffectLayerKind[]);
+
+export const CARD_EFFECT_COMPOSITION_GRAMMAR = Object.freeze([
+  'preparation',
+  'action',
+  'impact-or-state',
+  'hold',
+  'decay',
+  'cleanup',
+] as const);
+
+export type CardEffectMaterial =
+  | 'capability-neutral'
+  | 'physical-slash'
+  | 'protection'
+  | 'healing'
+  | 'electricity'
+  | 'control'
+  | 'weight-impact'
+  | 'enemy-impact'
+  | 'victory'
+  | 'defeat'
+  | 'lifecycle';
 
 export type CardEffectLayer = Readonly<{
   id: string;
@@ -72,6 +109,8 @@ export type CardEffectRecipe = Readonly<{
   full: CardEffectPlan;
   reduced: CardEffectPlan;
   customShaderSeam: 'future-optional';
+  material: CardEffectMaterial;
+  grammar: typeof CARD_EFFECT_COMPOSITION_GRAMMAR;
 }>;
 
 export type LayerSpec = Omit<CardEffectLayer, 'owner'>;
@@ -130,6 +169,8 @@ const recipe = (
   full: plan(id, full),
   reduced: plan(id, reduced),
   customShaderSeam: 'future-optional',
+  material: CARD_EFFECT_MATERIAL_BY_RECIPE[id],
+  grammar: CARD_EFFECT_COMPOSITION_GRAMMAR,
 });
 
 export type CardEffectRecipeId =
@@ -142,7 +183,26 @@ export type CardEffectRecipeId =
   | 'heavy-bonk'
   | 'enemy-attack'
   | 'victory'
-  | 'defeat';
+  | 'defeat'
+  | 'draw-pile-prepare'
+  | 'discard-pile-receive'
+  | 'hand-settle';
+
+const CARD_EFFECT_MATERIAL_BY_RECIPE: Readonly<Record<CardEffectRecipeId, CardEffectMaterial>> = Object.freeze({
+  'primitive-sampler': 'capability-neutral',
+  strike: 'physical-slash',
+  guard: 'protection',
+  mend: 'healing',
+  spark: 'electricity',
+  stun: 'control',
+  'heavy-bonk': 'weight-impact',
+  'enemy-attack': 'enemy-impact',
+  victory: 'victory',
+  defeat: 'defeat',
+  'draw-pile-prepare': 'lifecycle',
+  'discard-pile-receive': 'lifecycle',
+  'hand-settle': 'lifecycle',
+});
 
 const compactPulse = (
   owner: string,
@@ -161,6 +221,7 @@ export const CARD_EFFECT_RECIPES = {
     [
       layer('primitive-g0-surface', 0, 0, 'surface-prep', 'card-local', 180, 'normal', 'surface-preparation'),
       layer('primitive-g0-rim', 0, 1, 'rim-glow', 'card-local', 360, 'screen', 'rim-emphasis'),
+      layer('primitive-g0-trace', 0, 2, 'rim-trace', 'card-local', 420, 'screen', 'perimeter-trace'),
       layer('primitive-g1-shine', 1, 0, 'shine-sweep', 'card-local', 420, 'add', 'shine-sweep'),
       layer('primitive-g2-projectile', 2, 0, 'projectile', 'enemy-target', 520, 'add', 'travel'),
       layer('primitive-g2-trail', 2, 1, 'trail-emitter', 'enemy-target', 520, 'add', 'travel-trail'),
@@ -173,6 +234,9 @@ export const CARD_EFFECT_RECIPES = {
       layer('primitive-g6-down', 6, 0, 'downward-impact', 'enemy-target', 520, 'normal', 'weighty-impact'),
       layer('primitive-g6-dust', 6, 1, 'dust-burst', 'enemy-target', 420, 'screen', 'dust-response'),
       layer('primitive-g7-rt', 7, 0, 'render-texture-stamp', 'tabletop-local', 320, 'screen', 'render-texture-feasibility'),
+      layer('primitive-g8-pile', 8, 0, 'pile-response', 'discard-pile-local', 240, 'screen', 'pile-response'),
+      layer('primitive-g9-victory', 9, 0, 'victory-accent', 'tabletop-local', 260, 'screen', 'victory-accent'),
+      layer('primitive-g10-defeat', 10, 0, 'defeat-accent', 'player-target', 260, 'normal', 'defeat-accent'),
     ],
     [
       layer('primitive-reduced-rim', 0, 0, 'rim-glow', 'card-local', 130, 'screen', 'rim-emphasis'),
@@ -187,7 +251,7 @@ export const CARD_EFFECT_RECIPES = {
     0xf0a55a,
     [
       layer('strike-g0-rim', 0, 0, 'rim-glow', 'card-local', 220, 'screen', 'warm-rim'),
-      layer('strike-g0-shine', 0, 1, 'shine-sweep', 'card-local', 260, 'add', 'fast-shine'),
+      layer('strike-g0-trace', 0, 1, 'rim-trace', 'card-local', 260, 'screen', 'fast-perimeter-trace'),
       layer('strike-g1-projectile', 1, 0, 'projectile', 'enemy-target', 360, 'add', 'slash-travel', { shape: 'slash' }),
       layer('strike-g1-trail', 1, 1, 'trail-emitter', 'enemy-target', 360, 'add', 'narrow-trail', { spread: 5 }),
       layer('strike-g2-impact', 2, 0, 'impact-burst', 'enemy-target', 220, 'add', 'sharp-impact', { count: 10 }),
@@ -202,10 +266,11 @@ export const CARD_EFFECT_RECIPES = {
     0x5ed5d1,
     [
       layer('guard-g0-surface', 0, 0, 'surface-prep', 'card-local', 220, 'normal', 'guarded-surface'),
-      layer('guard-g0-shield', 0, 1, 'shield-pulse', 'player-target', 360, 'screen', 'shield-forms'),
-      layer('guard-g1-ring', 1, 0, 'shockwave-ring', 'player-target', 440, 'screen', 'protective-ring', { maxScale: 1.7 }),
-      layer('guard-g1-motes', 1, 1, 'orbiting-motes', 'player-target', 620, 'add', 'restrained-perimeter', { count: 6 }),
-      layer('guard-g2-pulse', 2, 0, 'target-pulse', 'player-target', 300, 'screen', 'guard-state-emphasis', { scale: 1.04 }),
+      layer('guard-g0-trace', 0, 1, 'rim-trace', 'card-local', 320, 'screen', 'teal-perimeter-forms'),
+      layer('guard-g1-shield', 1, 0, 'shield-pulse', 'player-target', 360, 'screen', 'shield-forms'),
+      layer('guard-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 440, 'screen', 'protective-ring', { maxScale: 1.55 }),
+      layer('guard-g2-motes', 2, 1, 'orbiting-motes', 'player-target', 520, 'add', 'restrained-perimeter', { count: 5 }),
+      layer('guard-g3-pulse', 3, 0, 'target-pulse', 'player-target', 240, 'screen', 'guard-state-emphasis', { scale: 1.04 }),
     ],
     [
       layer('guard-reduced-rim', 0, 0, 'rim-glow', 'card-local', 140, 'screen', 'guard-card-emphasis'),
@@ -219,7 +284,7 @@ export const CARD_EFFECT_RECIPES = {
     0x77d27a,
     [
       layer('mend-g0-rim', 0, 0, 'rim-glow', 'card-local', 260, 'screen', 'healing-card-emphasis'),
-      layer('mend-g0-shine', 0, 1, 'shine-sweep', 'card-local', 340, 'screen', 'soft-card-shine'),
+      layer('mend-g0-trace', 0, 1, 'rim-trace', 'card-local', 320, 'screen', 'gentle-life-trace'),
       layer('mend-g1-rise', 1, 0, 'healing-rise', 'player-target', 620, 'add', 'upward-healing-motes', { count: 8 }),
       layer('mend-g1-mask', 1, 1, 'masked-card-particles', 'card-local', 520, 'screen', 'card-local-heart-motes', { count: 6 }),
       layer('mend-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 420, 'screen', 'soft-restorative-glow', { maxScale: 1.45 }),
@@ -235,8 +300,8 @@ export const CARD_EFFECT_RECIPES = {
     'Spark — gold star ignition',
     0xffd45a,
     [
-      layer('spark-g0-shine', 0, 0, 'shine-sweep', 'card-local', 300, 'add', 'card-shine'),
-      layer('spark-g0-rim', 0, 1, 'rim-glow', 'card-local', 240, 'screen', 'gold-rim'),
+      layer('spark-g0-trace', 0, 0, 'rim-trace', 'card-local', 300, 'screen', 'gold-perimeter-charge'),
+      layer('spark-g0-shine', 0, 1, 'shine-sweep', 'card-local', 260, 'add', 'card-shine'),
       layer('spark-g1-projectile', 1, 0, 'projectile', 'enemy-target', 460, 'add', 'star-travel', { shape: 'star' }),
       layer('spark-g1-trail', 1, 1, 'trail-emitter', 'enemy-target', 460, 'add', 'additive-star-trail', { spread: 12 }),
       layer('spark-g2-impact', 2, 0, 'impact-burst', 'enemy-target', 280, 'add', 'compact-starburst', { count: 14 }),
@@ -250,7 +315,7 @@ export const CARD_EFFECT_RECIPES = {
     'Stun — suspended star control',
     0x77dce0,
     [
-      layer('stun-g0-shine', 0, 0, 'shine-sweep', 'card-local', 280, 'screen', 'control-card-shine'),
+      layer('stun-g0-trace', 0, 0, 'rim-trace', 'card-local', 300, 'screen', 'control-perimeter-lock'),
       layer('stun-g1-orbit', 1, 0, 'orbiting-motes', 'enemy-target', 760, 'add', 'star-cluster-orbit', { count: 7, turns: 1.25 }),
       layer('stun-g1-pulse', 1, 1, 'target-pulse', 'enemy-target', 520, 'screen', 'suspended-target-pulse', { scale: 1.05 }),
       layer('stun-g2-ring', 2, 0, 'shockwave-ring', 'enemy-target', 360, 'screen', 'control-lock-ring', { maxScale: 1.25 }),
@@ -267,10 +332,11 @@ export const CARD_EFFECT_RECIPES = {
     0xd49555,
     [
       layer('heavy-g0-rim', 0, 0, 'rim-glow', 'card-local', 300, 'screen', 'heavy-card-charge'),
+      layer('heavy-g0-trace', 0, 1, 'rim-trace', 'card-local', 360, 'normal', 'weighty-perimeter-crawl'),
       layer('heavy-g1-down', 1, 0, 'downward-impact', 'enemy-target', 680, 'normal', 'deliberate-downward-hit', { drop: 90 }),
       layer('heavy-g2-dust', 2, 0, 'dust-burst', 'enemy-target', 520, 'screen', 'broad-dust-response', { count: 18 }),
       layer('heavy-g2-ring', 2, 1, 'shockwave-ring', 'enemy-target', 460, 'screen', 'low-impact-ring', { maxScale: 1.8 }),
-      layer('heavy-g2-stage', 2, 2, 'stage-response', 'tabletop-local', 220, 'normal', 'restrained-stage-shake', { intensity: 0.004 }),
+      layer('heavy-g2-stage', 2, 2, 'stage-response', 'tabletop-local', 120, 'normal', 'restrained-stage-shake', { intensity: 0.0015 }),
     ],
     [
       layer('heavy-reduced-rim', 0, 0, 'rim-glow', 'card-local', 160, 'screen', 'heavy-card-emphasis'),
@@ -283,12 +349,12 @@ export const CARD_EFFECT_RECIPES = {
     'Enemy attack impact sample',
     0xff7a65,
     [
-      layer('enemy-g0-projectile', 0, 0, 'projectile', 'player-target', 440, 'add', 'enemy-travel', { reverse: true, shape: 'claw' }),
-      layer('enemy-g0-trail', 0, 1, 'trail-emitter', 'player-target', 440, 'add', 'enemy-trail', { reverse: true }),
+      layer('enemy-g0-projectile', 0, 0, 'projectile', 'player-target', 440, 'add', 'enemy-travel', { source: 'enemy-target', shape: 'claw' }),
+      layer('enemy-g0-trail', 0, 1, 'trail-emitter', 'player-target', 440, 'add', 'enemy-trail', { source: 'enemy-target' }),
       layer('enemy-g1-impact', 1, 0, 'impact-burst', 'player-target', 300, 'add', 'player-impact'),
       layer('enemy-g1-pulse', 1, 1, 'target-pulse', 'player-target', 240, 'screen', 'player-hit-pulse'),
     ],
-    compactPulse('enemy-target', 0xff7a65, 'player-target'),
+    [layer('enemy-reduced-impact', 0, 0, 'target-pulse', 'player-target', 180, 'screen', 'compact-enemy-impact', { scale: 1.08 })],
   ),
   victory: recipe(
     'victory',
@@ -297,12 +363,10 @@ export const CARD_EFFECT_RECIPES = {
     [
       layer('victory-g0-ring', 0, 0, 'shockwave-ring', 'tabletop-local', 620, 'screen', 'victory-ring', { maxScale: 2.1 }),
       layer('victory-g0-motes', 0, 1, 'orbiting-motes', 'tabletop-local', 900, 'add', 'victory-motes', { count: 12, turns: 1.4 }),
-      layer('victory-g1-shine', 1, 0, 'shine-sweep', 'card-local', 420, 'add', 'victory-card-shine'),
-      layer('victory-g1-stage', 1, 1, 'stage-response', 'tabletop-local', 420, 'screen', 'victory-stage-accent', { flash: true }),
+      layer('victory-g1-accent', 1, 0, 'victory-accent', 'tabletop-local', 420, 'screen', 'victory-stage-accent'),
     ],
     [
-      layer('victory-reduced-rim', 0, 0, 'rim-glow', 'card-local', 160, 'screen', 'victory-card-emphasis'),
-      layer('victory-reduced-pulse', 1, 0, 'target-pulse', 'tabletop-local', 200, 'screen', 'compact-victory-accent', { scale: 1.08 }),
+      layer('victory-reduced-pulse', 0, 0, 'target-pulse', 'tabletop-local', 200, 'screen', 'compact-victory-accent', { scale: 1.08 }),
     ],
   ),
   defeat: recipe(
@@ -312,14 +376,59 @@ export const CARD_EFFECT_RECIPES = {
     [
       layer('defeat-g0-pulse', 0, 0, 'target-pulse', 'player-target', 460, 'screen', 'defeat-pulse', { scale: 0.94 }),
       layer('defeat-g0-dust', 0, 1, 'dust-burst', 'player-target', 520, 'normal', 'falling-dust', { count: 10 }),
-      layer('defeat-g1-stage', 1, 0, 'stage-response', 'tabletop-local', 520, 'normal', 'defeat-stage-dim', { dim: true }),
+      layer('defeat-g1-accent', 1, 0, 'defeat-accent', 'player-target', 420, 'normal', 'defeat-stage-dim'),
     ],
     [
-      layer('defeat-reduced-rim', 0, 0, 'rim-glow', 'card-local', 150, 'normal', 'defeat-card-emphasis'),
-      layer('defeat-reduced-pulse', 1, 0, 'target-pulse', 'player-target', 190, 'normal', 'compact-defeat-accent', { scale: 0.97 }),
+      layer('defeat-reduced-pulse', 0, 0, 'target-pulse', 'player-target', 190, 'normal', 'compact-defeat-accent', { scale: 0.97 }),
+    ],
+  ),
+  'draw-pile-prepare': recipe(
+    'draw-pile-prepare',
+    'Shared draw-pile preparation',
+    0x8fd59b,
+    [
+      layer('draw-pile-pulse', 0, 0, 'pile-response', 'draw-pile-local', 220, 'screen', 'draw-pile-prepare'),
+    ],
+    [
+      layer('draw-pile-reduced', 0, 0, 'pile-response', 'draw-pile-local', 120, 'screen', 'draw-pile-prepare', { scale: 1.04 }),
+    ],
+  ),
+  'discard-pile-receive': recipe(
+    'discard-pile-receive',
+    'Shared discard-pile reception',
+    0xc78665,
+    [
+      layer('discard-pile-pulse', 0, 0, 'pile-response', 'discard-pile-local', 220, 'screen', 'discard-pile-receive'),
+      layer('discard-pile-dust', 0, 1, 'dust-burst', 'discard-pile-local', 260, 'normal', 'discard-pile-dust', { count: 6 }),
+    ],
+    [
+      layer('discard-pile-reduced', 0, 0, 'pile-response', 'discard-pile-local', 120, 'screen', 'discard-pile-receive', { scale: 1.04 }),
+    ],
+  ),
+  'hand-settle': recipe(
+    'hand-settle',
+    'Shared hand-settle accent',
+    0xe7bd6b,
+    [
+      layer('hand-settle-rim', 0, 0, 'rim-glow', 'card-local', 150, 'screen', 'hand-settle'),
+    ],
+    [
+      layer('hand-settle-reduced', 0, 0, 'rim-glow', 'card-local', 90, 'screen', 'hand-settle'),
     ],
   ),
 } satisfies Record<CardEffectRecipeId, CardEffectRecipe>;
+
+export const CARD_LIFECYCLE_EFFECT_RECIPES = Object.freeze({
+  drawPilePrepare: 'draw-pile-prepare',
+  cardDraw: 'draw-pile-prepare',
+  handSettle: 'hand-settle',
+  playPrepare: 'hand-settle',
+  discardPileReceive: 'discard-pile-receive',
+  replacementDiscard: 'discard-pile-receive',
+  replacementDraw: 'draw-pile-prepare',
+  victory: 'victory',
+  defeat: 'defeat',
+} as const satisfies Record<string, CardEffectRecipeId>);
 
 export const CARD_EFFECT_RECIPE_BY_CARD = Object.freeze({
   Strike: 'strike',

@@ -5,12 +5,14 @@ import {
   CARD_RIG_COMPOSITION_FIXTURES,
   CARD_RIG_ENVIRONMENTAL_SLOTS,
   CARD_RIG_LAYER_ORDER,
+  CARD_RIG_OUTER_FRAME_POLICY,
   CARD_RIG_OUTER_FRAMES,
   attachmentAnchorId,
   createCardRigComposition,
   planCardRigAttachment,
+  resolveCardRigOuterFrame,
 } from '../src/card-rig-composition';
-import { renderCardSlot, renderHandCard } from '../src/card-view';
+import { CARD_LAB_CARDS, renderCardSlot, renderHandCard } from '../src/card-view';
 import { CARD_EFFECT_RECIPES } from '../src/card-effect-recipes';
 
 describe('H6.22R1 CardRig visual composition authority', () => {
@@ -22,6 +24,7 @@ describe('H6.22R1 CardRig visual composition authority', () => {
       'outer-frame',
       'state',
       'card-local-fx',
+      'activation-source',
     ]);
 
     const composition = createCardRigComposition('Spark', 1, 'gold-ornate');
@@ -30,6 +33,29 @@ describe('H6.22R1 CardRig visual composition authority', () => {
     expect(new Set(composition.layers.map(({ ownerRigId }) => ownerRigId))).toEqual(
       new Set(['spark-1']),
     );
+    expect(composition).toMatchObject({
+      movementOwnerRigId: 'spark-1',
+      activationSourceOwnerRigId: 'spark-1',
+      cleanupOwnerRigId: 'spark-1',
+    });
+  });
+
+  it('uses one face-agnostic standard frame while reserving premium and null policies', () => {
+    expect(CARD_RIG_OUTER_FRAME_POLICY).toEqual({
+      standard: 'wood',
+      special: 'gold-ornate',
+      unframed: 'none',
+      specialRequiresExplicitMetadata: true,
+    });
+    expect(resolveCardRigOuterFrame()).toBe('wood');
+    expect(resolveCardRigOuterFrame('special')).toBe('gold-ornate');
+    expect(resolveCardRigOuterFrame('unframed')).toBe('none');
+
+    for (const card of CARD_LAB_CARDS) {
+      const html = renderHandCard(card, 0, 'PlayerAction');
+      expect(html, card).toContain('data-outer-frame="wood"');
+      expect(html, card).toContain('data-card-rig-frame-class="standard"');
+    }
   });
 
   it('keeps true outer frames separate from environmental slot surfaces', () => {
@@ -70,10 +96,14 @@ describe('H6.22R1 CardRig visual composition authority', () => {
 
     expect(html.match(/<button/g)).toHaveLength(1);
     expect(html).toContain('data-card-rig-id="spark-1"');
+    expect(html).toContain('data-card-rig-motion-root="spark-1"');
+    expect(html).toContain('data-card-rig-cleanup-owner="spark-1"');
     for (const layer of CARD_RIG_LAYER_ORDER) {
       expect(html).toContain(`data-card-rig-layer="${layer}"`);
     }
     expect(html).toContain('data-outer-frame="gold-ornate"');
+    expect(html).toContain('data-card-rig-attachment="travel"');
+    expect(html).toContain('data-card-rig-attachment-id="card-rig-travel:spark-1"');
     expect(html).not.toContain('data-card-slot-surface');
   });
 
@@ -125,6 +155,8 @@ describe('H6.22R1 CardRig visual composition authority', () => {
     ]);
     expect(new Set(targets)).toEqual(new Set([
       'card-local',
+      'draw-pile-local',
+      'discard-pile-local',
       'player-target',
       'enemy-target',
       'tabletop-local',

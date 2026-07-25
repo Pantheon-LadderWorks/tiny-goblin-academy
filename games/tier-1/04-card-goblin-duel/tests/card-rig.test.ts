@@ -211,6 +211,30 @@ describe('CardRig fixture contracts', () => {
 });
 
 describe('CardRig motion policy', () => {
+  it('plays a simulation-authored production plan through the same rig runner', async () => {
+    const port = new RecordingPort();
+    const rig = new CardRig(port);
+    const result = await rig.playPlan({
+      id: 'live-strike-1',
+      label: 'Live Strike transition',
+      initialHand: ['Strike', 'Guard', 'Mend'],
+      cues: [
+        { type: 'commit', card: 'Strike', slot: 0 },
+        { type: 'effect-hold', card: 'Strike' },
+        { type: 'discard', card: 'Strike' },
+        { type: 'refill', card: 'Spark', slot: 2 },
+        { type: 'settle' },
+      ],
+      finalState: { phase: 'PlayerAction', hand: ['Guard', 'Mend', 'Spark'] },
+      measurementRequired: false,
+    }, 'full');
+
+    expect(result).toMatchObject({ status: 'completed', fixtureId: 'live-strike-1' });
+    expect(port.cues.map(({ type }) => type)).toEqual([
+      'commit', 'effect-hold', 'discard', 'refill', 'settle',
+    ]);
+  });
+
   it('uses the same semantic cue order in full and reduced motion', async () => {
     const fullPort = new RecordingPort();
     const reducedPort = new RecordingPort();

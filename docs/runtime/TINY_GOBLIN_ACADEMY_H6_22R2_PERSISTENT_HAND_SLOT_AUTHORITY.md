@@ -17,7 +17,7 @@ outerFrameDoctrineChanged: false
 h6_22R2ImplementationComplete: true
 h6_22R2TechnicalBrowserReviewPassed: true
 h6_22R2CheckpointReady: true
-productionVfxStarted: false
+productionVfxStarted: true
 ```
 
 ## Authority

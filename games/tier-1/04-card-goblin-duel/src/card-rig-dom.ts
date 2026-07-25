@@ -30,7 +30,8 @@ export type DomCardRigOptions = {
   }>;
   enemy: HTMLElement;
   renderHand(cards: readonly Card[], phase: Phase): void;
-  onCue?(cue: CardRigCue): void;
+  onCue?(cue: CardRigCue, context: CardRigRunContext): void | Promise<void>;
+  onCueComplete?(cue: CardRigCue, context: CardRigRunContext): void | Promise<void>;
   onRoute?(route: CardRigRouteTelemetry): void;
   onCleanup?(reason: string): void;
 };
@@ -370,7 +371,7 @@ export class DomCardRigPort implements CardRigPort {
     cue: CardRigCue,
     context: CardRigRunContext,
   ): Promise<void> {
-    this.options.onCue?.(cue);
+    await this.options.onCue?.(cue, context);
 
     switch (cue.type) {
       case 'deal':
@@ -415,6 +416,7 @@ export class DomCardRigPort implements CardRigPort {
         }
         break;
     }
+    await this.options.onCueComplete?.(cue, context);
   }
 
   finish(context: CardRigRunContext): void {

@@ -17,6 +17,7 @@ const STAR_TEXTURE = 'tga-card-effect-star';
 export type PhaserCardEffectPortOptions = Readonly<{
   scene: Phaser.Scene;
   snapshot: () => AnchorSnapshot;
+  cardElement?: () => HTMLElement | undefined;
   onLayer?: (layer: CardEffectLayer) => void;
   onCleanup?: (reason: string, counts: EffectResourceCounts) => void;
 }>;
@@ -59,6 +60,7 @@ const abortError = (): Error => {
 export class PhaserCardEffectPort implements CardEffectPort {
   private readonly scene: Phaser.Scene;
   private readonly snapshotProvider: () => AnchorSnapshot;
+  private readonly cardElementProvider?: PhaserCardEffectPortOptions['cardElement'];
   private readonly onLayer?: PhaserCardEffectPortOptions['onLayer'];
   private readonly onCleanup?: PhaserCardEffectPortOptions['onCleanup'];
   private readonly objects = new Set<Phaser.GameObjects.GameObject>();
@@ -66,10 +68,12 @@ export class PhaserCardEffectPort implements CardEffectPort {
   private readonly masks = new Set<Phaser.Display.Masks.GeometryMask>();
   private readonly filters = new Set<FilterEntry>();
   private listenerCount = 0;
+  private readonly domEffects = new Set<HTMLElement>();
 
   constructor(options: PhaserCardEffectPortOptions) {
     this.scene = options.scene;
     this.snapshotProvider = options.snapshot;
+    this.cardElementProvider = options.cardElement;
     this.onLayer = options.onLayer;
     this.onCleanup = options.onCleanup;
     this.ensureTextures();
@@ -112,11 +116,31 @@ export class PhaserCardEffectPort implements CardEffectPort {
   }
 
   private point(target: CardEffectTarget): CanvasLocalRect {
+    if (target === 'card-local' || target === 'travel') {
+      const element = this.cardElementProvider?.();
+      if (element) {
+        const card = element.getBoundingClientRect();
+        const canvas = this.scene.game.canvas.getBoundingClientRect();
+        const scaleX = this.scene.scale.width / Math.max(1, canvas.width);
+        const scaleY = this.scene.scale.height / Math.max(1, canvas.height);
+        return {
+          x: (card.x - canvas.x) * scaleX,
+          y: (card.y - canvas.y) * scaleY,
+          width: card.width * scaleX,
+          height: card.height * scaleY,
+          centerX: (card.x - canvas.x + card.width / 2) * scaleX,
+          centerY: (card.y - canvas.y + card.height / 2) * scaleY,
+        };
+      }
+    }
     const snapshot = this.snapshotProvider();
     const candidates: Record<CardEffectTarget, readonly string[]> = {
       'card-local': [CARD_RIG_ANCHOR_IDS.playedCardTarget],
+      'draw-pile-local': [CARD_RIG_ANCHOR_IDS.playerDrawOrigin],
+      'discard-pile-local': [CARD_RIG_ANCHOR_IDS.playerDiscardTarget],
       'enemy-target': ['enemy-impact', 'enemy-center'],
       'player-target': ['player-impact', 'player-center'],
+      travel: [CARD_RIG_ANCHOR_IDS.playedCardTarget],
       'tabletop-local': [CARD_RIG_ANCHOR_IDS.playedCardTarget],
     };
     for (const id of candidates[target]) {
@@ -264,7 +288,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
     const mask = maskShape.createGeometryMask();
     this.masks.add(mask);
     const flare = this.track(
-      this.scene.add.rectangle(card.centerX - width, card.centerY, 18, height * 1.6, 0xffffff, 0.8)
+      this.scene.add.rectangle(card.centerX - width, card.centerY, 11, height * 1.35, context.recipe.color, 0.34)
         .setRotation(-0.35)
         .setBlendMode(blendMode(layer.blendMode))
         .setMask(mask)
@@ -284,11 +308,17 @@ export class PhaserCardEffectPort implements CardEffectPort {
     trailing: boolean,
   ): Promise<void> {
     const reverse = boolParam(layer, 'reverse');
-    const source = this.point(reverse ? layer.target : 'card-local');
+    const declaredSource = layer.parameters?.source;
+    const sourceTarget = typeof declaredSource === 'string'
+      ? declaredSource as CardEffectTarget
+      : reverse ? layer.target : 'card-local';
+    const source = this.point(sourceTarget);
     const destination = this.point(reverse ? 'card-local' : layer.target);
-    const shape = layer.parameters?.shape === 'star'
-      ? this.track(this.scene.add.image(source.centerX, source.centerY, STAR_TEXTURE))
-      : this.track(this.scene.add.rectangle(source.centerX, source.centerY, 32, 9, context.recipe.color, 1).setRotation(-0.35));
+    const shape = trailing
+      ? this.track(this.scene.add.rectangle(source.centerX, source.centerY, 1, 1, context.recipe.color, 0))
+      : layer.parameters?.shape === 'star'
+        ? this.track(this.scene.add.image(source.centerX, source.centerY, STAR_TEXTURE))
+        : this.track(this.scene.add.rectangle(source.centerX, source.centerY, 32, 7, context.recipe.color, 0.92).setRotation(-0.35));
     if (shape instanceof Phaser.GameObjects.Image) shape.setTint(context.recipe.color);
     shape.setBlendMode(blendMode(layer.blendMode)).setDepth(730);
 
@@ -519,6 +549,62 @@ export class PhaserCardEffectPort implements CardEffectPort {
     this.destroyObject(renderTexture);
   }
 
+  private async rimTrace(
+    layer: CardEffectLayer,
+    context: CardEffectRunContext,
+  ): Promise<void> {
+    const mount = this.cardElementProvider?.()?.querySelector<HTMLElement>('.card-local-fx');
+    if (!mount) {
+      await this.cardPulse(layer, context, true);
+      return;
+    }
+    mount.style.setProperty('--card-rig-fx-color', `#${context.recipe.color.toString(16).padStart(6, '0')}`);
+    mount.style.setProperty('--card-rig-fx-duration', `${layer.durationMs}ms`);
+    mount.classList.add('card-rig-fx-rim-trace');
+    this.domEffects.add(mount);
+    await context.clock.wait(layer.durationMs, context.signal);
+    mount.classList.remove('card-rig-fx-rim-trace');
+    mount.style.removeProperty('--card-rig-fx-color');
+    mount.style.removeProperty('--card-rig-fx-duration');
+    this.domEffects.delete(mount);
+  }
+
+  private async pileResponse(
+    layer: CardEffectLayer,
+    context: CardEffectRunContext,
+  ): Promise<void> {
+    const target = this.point(layer.target);
+    const shape = this.track(
+      this.scene.add.rectangle(
+        target.centerX,
+        target.centerY,
+        Math.max(52, target.width * 0.72),
+        Math.max(66, target.height * 0.72),
+        context.recipe.color,
+        0.06,
+      ).setStrokeStyle(3, context.recipe.color, 0.78)
+        .setBlendMode(blendMode(layer.blendMode))
+        .setDepth(716),
+    );
+    await this.tween(shape, {
+      scale: { from: 0.94, to: numberParam(layer, 'scale', 1.1) },
+      alpha: { from: 0.76, to: 0 },
+    }, layer.durationMs, context.signal);
+    this.destroyObject(shape);
+  }
+
+  private async terminalAccent(
+    layer: CardEffectLayer,
+    context: CardEffectRunContext,
+    victory: boolean,
+  ): Promise<void> {
+    if (victory) {
+      await this.ring({ ...layer, kind: 'shockwave-ring', parameters: { maxScale: 1.75 } }, context);
+      return;
+    }
+    await this.targetPulse({ ...layer, kind: 'target-pulse', parameters: { scale: 0.96 } }, context);
+  }
+
   private async stageResponse(
     layer: CardEffectLayer,
     context: CardEffectRunContext,
@@ -550,6 +636,9 @@ export class PhaserCardEffectPort implements CardEffectPort {
         return;
       case 'rim-glow':
         await this.cardPulse(layer, context, true);
+        return;
+      case 'rim-trace':
+        await this.rimTrace(layer, context);
         return;
       case 'shine-sweep':
         await this.shineSweep(layer, context);
@@ -593,6 +682,15 @@ export class PhaserCardEffectPort implements CardEffectPort {
       case 'render-texture-stamp':
         await this.renderTextureStamp(layer, context);
         return;
+      case 'pile-response':
+        await this.pileResponse(layer, context);
+        return;
+      case 'victory-accent':
+        await this.terminalAccent(layer, context, true);
+        return;
+      case 'defeat-accent':
+        await this.terminalAccent(layer, context, false);
+        return;
     }
   }
 
@@ -612,6 +710,12 @@ export class PhaserCardEffectPort implements CardEffectPort {
       this.masks.delete(mask);
     }
     for (const object of [...this.objects]) this.destroyObject(object);
+    for (const mount of [...this.domEffects]) {
+      mount.classList.remove('card-rig-fx-rim-trace');
+      mount.style.removeProperty('--card-rig-fx-color');
+      mount.style.removeProperty('--card-rig-fx-duration');
+      this.domEffects.delete(mount);
+    }
     this.listenerCount = 0;
     this.onCleanup?.(reason, this.counts());
   }

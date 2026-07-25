@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   CARD_EFFECT_FIXTURES,
+  CARD_EFFECT_COMPOSITION_GRAMMAR,
+  CARD_LIFECYCLE_EFFECT_RECIPES,
   CARD_EFFECT_RECIPE_BY_CARD,
   CARD_EFFECT_RECIPES,
   REQUIRED_EFFECT_PRIMITIVES,
@@ -91,6 +93,31 @@ describe('CardEffectRecipe registry', () => {
       .toEqual(expect.arrayContaining(['orbiting-motes', 'target-pulse']));
     expect(CARD_EFFECT_RECIPES['heavy-bonk'].full.layers.map((layer) => layer.kind))
       .toEqual(expect.arrayContaining(['downward-impact', 'dust-burst', 'stage-response']));
+  });
+
+  it('governs composition grammar, material identity, lifecycle effects, and motion safety', () => {
+    const materials = cardNames.map((card) => CARD_EFFECT_RECIPES[CARD_EFFECT_RECIPE_BY_CARD[card]].material);
+    expect(new Set(materials).size).toBe(6);
+    for (const card of cardNames) {
+      expect(CARD_EFFECT_RECIPES[CARD_EFFECT_RECIPE_BY_CARD[card]].grammar)
+        .toEqual(CARD_EFFECT_COMPOSITION_GRAMMAR);
+    }
+
+    expect(CARD_LIFECYCLE_EFFECT_RECIPES).toMatchObject({
+      drawPilePrepare: 'draw-pile-prepare',
+      discardPileReceive: 'discard-pile-receive',
+      replacementDiscard: 'discard-pile-receive',
+      replacementDraw: 'draw-pile-prepare',
+    });
+    expect(CARD_EFFECT_RECIPES['draw-pile-prepare'].full.layers[0].target).toBe('draw-pile-local');
+    expect(CARD_EFFECT_RECIPES['discard-pile-receive'].full.layers[0].target).toBe('discard-pile-local');
+
+    const fullViewportFlashes = Object.values(CARD_EFFECT_RECIPES).flatMap((recipe) => recipe.full.layers)
+      .filter((layer) => layer.kind === 'stage-response' && layer.parameters?.flash === true);
+    expect(fullViewportFlashes).toEqual([]);
+    expect(CARD_EFFECT_RECIPES['heavy-bonk'].full.layers.find((layer) => layer.kind === 'stage-response'))
+      .toMatchObject({ durationMs: 120, parameters: { intensity: 0.0015 } });
+    expect(CARD_EFFECT_RECIPES.spark.full.layers.map((layer) => layer.kind)).toContain('rim-trace');
   });
 
   it('keeps control fixtures presentation-only', () => {

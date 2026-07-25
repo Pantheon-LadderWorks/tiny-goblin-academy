@@ -6,7 +6,7 @@ const mainSource = readFileSync(
   'utf8',
 );
 
-describe('H6.22A preview-only CardEffectRecipe integration', () => {
+describe('CardEffectRecipe lab and production integration', () => {
   it('loads fixtures only through the development-only cardFx query seam', () => {
     expect(mainSource).toContain("searchParams.get('cardFx')");
     expect(mainSource).toContain("import.meta.env.MODE === 'development'");
@@ -38,11 +38,29 @@ describe('H6.22A preview-only CardEffectRecipe integration', () => {
 
   it('keeps the effect fixture outside simulation actions and Ledger publication', () => {
     const fixtureStart = mainSource.indexOf('const startCardEffectFixture');
-    const fixtureEnd = mainSource.indexOf('const bindCardActions');
+    const fixtureEnd = mainSource.indexOf('const performProductionAction');
     const fixtureSource = mainSource.slice(fixtureStart, fixtureEnd);
     expect(fixtureStart).toBeGreaterThan(-1);
     expect(fixtureSource).not.toContain('playCard(');
     expect(fixtureSource).not.toContain('resolveSparkChoice(');
     expect(fixtureSource).not.toContain('publishCardGoblinTransition(');
+  });
+
+  it('coordinates production simulation through CardRig plans and one effect runner', () => {
+    expect(mainSource).toContain('buildOpeningDealPlan');
+    expect(mainSource).toContain('buildProductionTransitionPlan');
+    expect(mainSource).toContain('productionCardRig.playPlan');
+    expect(mainSource).toContain('CARD_EFFECT_RECIPE_BY_CARD[cue.card]');
+    expect(mainSource).toContain('CARD_LIFECYCLE_EFFECT_RECIPES.drawPilePrepare');
+    expect(mainSource).toContain('CARD_LIFECYCLE_EFFECT_RECIPES.discardPileReceive');
+    expect(mainSource).toContain("playProductionEffect('enemy-attack')");
+  });
+
+  it('locks input and cancels both moving cards and effects on reset or resize', () => {
+    expect(mainSource).toContain('presentation-locked');
+    expect(mainSource).toContain("productionCardRig?.cancel('reset')");
+    expect(mainSource).toContain("productionCardRig?.cancel('resize')");
+    expect(mainSource).toContain("cardEffectRunner?.cancel('reset')");
+    expect(mainSource).toContain('__cardGoblinPresentationStatus');
   });
 });

@@ -93,8 +93,8 @@ const distance = (left, right) => Math.hypot(left.x - right.x, left.y - right.y)
       throw new Error(`${fixture.id}: duplicate anchors ${result.duplicateAnchors.join(', ')}`);
     }
     for (const rig of result.rigLayers) {
-      if (new Set(rig.layers).size !== 6) {
-        throw new Error(`${fixture.id}: ${rig.id} does not own six distinct layers`);
+      if (new Set(rig.layers).size !== 7 || !rig.layers.includes('activation-source')) {
+        throw new Error(`${fixture.id}: ${rig.id} does not own seven distinct production layers`);
       }
     }
     if (Object.values(result.status.finalCounts).some((value) => value !== 0)) {
@@ -127,5 +127,5 @@ const distance = (left, right) => Math.hypot(left.x - right.x, left.y - right.y)
   console.log(`H6.22R1 browser contracts passed: ${passed}/${FIXTURES.length}`);
 })().catch((error) => {
   console.error(error);
-  process.exitCode = 1;
+  process.exit(1);
 });

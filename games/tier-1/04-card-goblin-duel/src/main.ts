@@ -7,12 +7,14 @@ import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
 import { PhaserCardEffectPort } from './card-effect-phaser';
 import {
+  CARD_LIFECYCLE_EFFECT_RECIPES,
   CARD_EFFECT_FIXTURES,
   CARD_EFFECT_RECIPE_BY_CARD,
   CARD_EFFECT_RECIPES,
   REQUIRED_EFFECT_PRIMITIVES,
   type CardEffectFixtureId,
   type CardEffectMode,
+  type CardEffectRecipeId,
 } from './card-effect-recipes';
 import {
   CardEffectRunner,
@@ -26,6 +28,7 @@ import {
   type CardRigMode,
 } from './card-rig';
 import { DomCardRigPort, type CardRigRouteTelemetry } from './card-rig-dom';
+import { buildOpeningDealPlan, buildProductionTransitionPlan } from './card-production';
 import {
   DomCardRigAttachmentController,
   type CardRigAttachmentSample,
@@ -111,6 +114,17 @@ declare global {
       cleanup: string[];
       error?: string;
     };
+    __cardGoblinPresentationStatus?: {
+      status: 'booting' | 'ready' | 'running' | 'cancelled' | 'error';
+      mode: CardRigMode;
+      planId?: string;
+      card?: Card;
+      cues: string[];
+      effects: string[];
+      inputLocked: boolean;
+      cleanupCounts: EffectResourceCounts;
+      error?: string;
+    };
   }
 }
 
@@ -183,6 +197,9 @@ const cardRigMode: CardRigMode = requestedMotion === 'reduced'
   ? 'reduced'
   : 'full';
 const cardEffectMode: CardEffectMode = requestedMotion === 'reduced' ? 'reduced' : 'full';
+const productionPresentationEnabled = !cardRigFixtureId
+  && !cardEffectFixtureId
+  && !cardLabStrategy;
 const debugAnchors = isAnchorDebugEnabled(window.location.search);
 const ledger = createCardGoblinLedger({
   parent: window.parent === window ? null : window.parent,
@@ -237,6 +254,11 @@ let cardEffectPort: PhaserCardEffectPort | undefined;
 let cardEffectRunner: CardEffectRunner | undefined;
 let cardEffectStarted = false;
 let cardEffectGeneration = 0;
+let productionCardRig: CardRig | undefined;
+let productionPresentationGeneration = 0;
+let productionInputLocked = false;
+let productionOpeningStarted = false;
+let activeEffectCard: Card | undefined;
 let stageGraphics: Phaser.GameObjects.Graphics;
 let debugGraphics: Phaser.GameObjects.Graphics;
 let debugLabels: Phaser.GameObjects.Text[] = [];
@@ -411,6 +433,12 @@ const receiveAnchorSnapshot = (scene: Phaser.Scene, snapshot: AnchorSnapshot): v
   if (cardEffectFixtureId && !cardRigFixtureId && cardEffectRunner && !cardEffectStarted) {
     queueMicrotask(() => void startCardEffectFixture());
   }
+  if (productionPresentationEnabled
+    && productionCardRig
+    && cardEffectRunner
+    && !productionOpeningStarted) {
+    queueMicrotask(() => void startProductionOpening());
+  }
 };
 
 const game = new Phaser.Game({
@@ -446,14 +474,21 @@ const game = new Phaser.Game({
         },
       });
 
-      if (cardEffectFixtureId && !cardRigFixtureId) {
+      if (!cardRigFixtureId && (cardEffectFixtureId || productionPresentationEnabled)) {
         cardEffectPort = new PhaserCardEffectPort({
           scene,
           snapshot: () => anchorSnapshot,
+          cardElement: () => visibleCardElement(activeEffectCard),
           onLayer: (layer) => window.__cardEffectLabStatus?.layers.push(layer.id),
           onCleanup: (reason, counts) => window.__cardEffectLabStatus?.cleanup.push({ reason, counts }),
         });
         cardEffectRunner = new CardEffectRunner(cardEffectPort);
+        if (productionPresentationEnabled) {
+          queueMicrotask(() => {
+            initializeProductionCardRig();
+            anchorBridge?.refresh();
+          });
+        }
         anchorBridge.refresh();
       }
     },
@@ -627,6 +662,116 @@ if (cardRigFixtureId) {
   };
 }
 
+const productionMode = (): CardRigMode => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ? 'reduced'
+  : 'full';
+
+const setProductionInputLocked = (locked: boolean): void => {
+  productionInputLocked = locked;
+  duelTable.classList.toggle('presentation-locked', locked);
+  duelTable.setAttribute('aria-busy', String(locked));
+  if (window.__cardGoblinPresentationStatus) {
+    window.__cardGoblinPresentationStatus.inputLocked = locked;
+  }
+};
+
+const visibleCardElement = (card?: Card): HTMLElement | undefined => {
+  const buttons = Array.from(hand.querySelectorAll<HTMLElement>('.card-btn'));
+  return (card ? buttons.find((button) => button.dataset.cardName === card) : undefined)
+    ?? buttons.find((button) => button.classList.contains('card-rig-committed'))
+    ?? buttons[0];
+};
+
+const playProductionEffect = async (
+  recipeId: CardEffectRecipeId,
+  card?: Card,
+): Promise<void> => {
+  if (!cardEffectRunner) return;
+  activeEffectCard = card;
+  window.__cardGoblinPresentationStatus?.effects.push(recipeId);
+  const result = await cardEffectRunner.play(recipeId, productionMode());
+  if (result.status === 'cancelled') return;
+  if (Object.values(result.counts).some((count) => count !== 0)) {
+    throw new Error(`${recipeId} left presentation residue`);
+  }
+};
+
+const initializeProductionCardRig = (): void => {
+  if (!productionPresentationEnabled || productionCardRig) return;
+  const port = new DomCardRigPort({
+    hand,
+    anchors: {
+      playerDrawOrigin: playerDrawAnchor,
+      playedCardTarget: playedCardAnchor,
+      playerDiscardTarget: discardAnchor,
+    },
+    enemy: enemyStatus,
+    renderHand: (cards, phase) => {
+      hand.innerHTML = renderHandDock(cards, phase);
+      handCount.textContent = `${cards.length} of 3 cards`;
+      anchorBridge?.refresh();
+    },
+    onCue: async (cue) => {
+      window.__cardGoblinPresentationStatus?.cues.push(cue.type);
+      if (cue.type === 'deal' || cue.type === 'refill') {
+        await playProductionEffect(CARD_LIFECYCLE_EFFECT_RECIPES.drawPilePrepare, cue.card);
+      } else if (cue.type === 'effect-hold' && cue.card) {
+        await playProductionEffect(CARD_EFFECT_RECIPE_BY_CARD[cue.card], cue.card);
+      }
+    },
+    onCueComplete: async (cue) => {
+      if (cue.type === 'discard' || cue.type === 'replace-discard') {
+        await playProductionEffect(CARD_LIFECYCLE_EFFECT_RECIPES.discardPileReceive, cue.card);
+      } else if (cue.type === 'settle') {
+        const settled = hand.querySelector<HTMLElement>('.card-btn')?.dataset.cardName as Card | undefined;
+        await playProductionEffect(CARD_LIFECYCLE_EFFECT_RECIPES.handSettle, settled);
+      }
+    },
+    onCleanup: () => {
+      activeEffectCard = undefined;
+    },
+  });
+  productionCardRig = new CardRig(port);
+  window.__cardGoblinPresentationStatus = {
+    status: 'booting',
+    mode: productionMode(),
+    cues: [],
+    effects: [],
+    inputLocked: false,
+    cleanupCounts: EMPTY_EFFECT_COUNTS,
+  };
+};
+
+const startProductionOpening = async (): Promise<void> => {
+  if (!productionPresentationEnabled || !productionCardRig || productionOpeningStarted) return;
+  productionOpeningStarted = true;
+  const generation = ++productionPresentationGeneration;
+  const status = window.__cardGoblinPresentationStatus;
+  if (status) {
+    status.status = 'running';
+    status.planId = 'live-opening-deal';
+    status.cues = [];
+    status.effects = [];
+  }
+  setProductionInputLocked(true);
+  try {
+    const result = await productionCardRig.playPlan(
+      buildOpeningDealPlan(state, 'live-opening-deal'),
+      productionMode(),
+    );
+    if (generation !== productionPresentationGeneration) return;
+    if (status) status.status = result.status === 'completed' ? 'ready' : 'cancelled';
+    render(0);
+  } catch (error) {
+    if (status) {
+      status.status = 'error';
+      status.error = error instanceof Error ? error.message : String(error);
+    }
+  } finally {
+    if (generation === productionPresentationGeneration) setProductionInputLocked(false);
+  }
+};
+
 const startCardRigFixture = async (): Promise<void> => {
   if (!cardRig || !cardRigFixtureId || cardRigStarted) return;
   cardRigStarted = true;
@@ -743,27 +888,87 @@ const startCardEffectFixture = async (): Promise<void> => {
   }
 };
 
+const performProductionAction = async (index: number): Promise<void> => {
+  if (productionInputLocked || !productionCardRig) return;
+
+  const before = state;
+  const selectedCard = before.hand[index];
+  if (!selectedCard) return;
+  const after = before.phase === 'SparkChoice'
+    ? resolveSparkChoice(before, index)
+    : playCard(before, index);
+  if (after === before) return;
+
+  state = after;
+  publishCardGoblinTransition(ledger, {
+    before,
+    after,
+    action: before.phase === 'SparkChoice'
+      ? { type: 'spark-replacement', card: selectedCard, handIndex: index }
+      : { type: 'play-card', card: selectedCard, handIndex: index },
+  });
+
+  const generation = ++productionPresentationGeneration;
+  const status = window.__cardGoblinPresentationStatus;
+  const planId = `live-${before.phase === 'SparkChoice' ? 'replacement' : 'play'}-${generation}`;
+  if (status) {
+    status.status = 'running';
+    status.mode = productionMode();
+    status.planId = planId;
+    status.card = selectedCard;
+    status.cues = [];
+    status.effects = [];
+    delete status.error;
+  }
+  setProductionInputLocked(true);
+
+  try {
+    const result = await productionCardRig.playPlan(
+      buildProductionTransitionPlan(before, after, selectedCard, index, planId),
+      productionMode(),
+    );
+    if (generation !== productionPresentationGeneration) return;
+    if (result.status === 'cancelled') {
+      if (status) status.status = 'cancelled';
+      return;
+    }
+
+    const newLog = after.log.slice(before.log.length);
+    if (newLog.some((entry) => entry.startsWith('Card Goblin attacks'))) {
+      await playProductionEffect('enemy-attack');
+    }
+    if (after.phase === 'Terminal') {
+      await playProductionEffect(after.enemyHp <= 0 ? 'victory' : 'defeat');
+    }
+    if (generation !== productionPresentationGeneration) return;
+
+    render(Math.min(index, Math.max(0, after.hand.length - 1)));
+    const counts = cardEffectPort?.counts() ?? EMPTY_EFFECT_COUNTS;
+    if (status) {
+      status.cleanupCounts = counts;
+      status.status = Object.values(counts).some((count) => count !== 0) ? 'error' : 'ready';
+      if (status.status === 'error') status.error = 'Production presentation left effect residue.';
+    }
+  } catch (error) {
+    if (generation !== productionPresentationGeneration) return;
+    render(Math.min(index, Math.max(0, state.hand.length - 1)));
+    if (status) {
+      status.status = 'error';
+      status.error = error instanceof Error ? error.message : String(error);
+      status.cleanupCounts = cardEffectPort?.counts() ?? EMPTY_EFFECT_COUNTS;
+    }
+  } finally {
+    activeEffectCard = undefined;
+    if (generation === productionPresentationGeneration) setProductionInputLocked(false);
+  }
+};
+
 const bindCardActions = (): void => {
   document.querySelectorAll<HTMLButtonElement>('#hand .card-btn').forEach((button) => {
     button.addEventListener('click', () => {
       const index = Number(button.dataset.i);
       if (!Number.isInteger(index)) return;
-
-      const before = state;
-      const selectedCard = before.hand[index];
-      if (!selectedCard) return;
-
-      state = before.phase === 'SparkChoice'
-        ? resolveSparkChoice(before, index)
-        : playCard(before, index);
-      publishCardGoblinTransition(ledger, {
-        before,
-        after: state,
-        action: before.phase === 'SparkChoice'
-          ? { type: 'spark-replacement', card: selectedCard, handIndex: index }
-          : { type: 'play-card', card: selectedCard, handIndex: index },
-      });
-      render(Math.min(index, Math.max(0, state.hand.length - 1)));
+      void performProductionAction(index);
     });
   });
 };
@@ -916,9 +1121,16 @@ resetDuel.addEventListener('click', () => {
     render();
     return;
   }
+  productionPresentationGeneration += 1;
+  productionCardRig?.cancel('reset');
+  cardEffectRunner?.cancel('reset');
+  activeEffectCard = undefined;
+  setProductionInputLocked(false);
   state = createGame();
   ledger.reset();
+  productionOpeningStarted = false;
   render(0);
+  anchorBridge?.refresh();
 });
 
 const onViewportResize = (): void => {
@@ -930,6 +1142,18 @@ const onViewportResize = (): void => {
   if (window.__cardEffectLabStatus?.status === 'running') {
     cardEffectRunner?.cancel('resize');
   }
+  if (productionPresentationEnabled && productionInputLocked) {
+    productionPresentationGeneration += 1;
+    productionCardRig?.cancel('resize');
+    cardEffectRunner?.cancel('resize');
+    activeEffectCard = undefined;
+    setProductionInputLocked(false);
+    render();
+    if (window.__cardGoblinPresentationStatus) {
+      window.__cardGoblinPresentationStatus.status = 'cancelled';
+      window.__cardGoblinPresentationStatus.cleanupCounts = cardEffectPort?.counts() ?? EMPTY_EFFECT_COUNTS;
+    }
+  }
   layoutTabletopSourceAnchors();
   anchorBridge?.refresh();
 };
@@ -939,6 +1163,7 @@ render();
 
 window.addEventListener('beforeunload', () => {
   cardRig?.cancel('reset');
+  productionCardRig?.cancel('reset');
   cardRigAttachmentController?.cleanup();
   cardEffectRunner?.cancel('reset');
   window.removeEventListener('resize', onViewportResize);

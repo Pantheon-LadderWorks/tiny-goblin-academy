@@ -10,11 +10,13 @@ export const CARD_RIG_LAYER_ORDER = Object.freeze([
   'outer-frame',
   'state',
   'card-local-fx',
+  'activation-source',
 ] as const);
 
 export type CardRigLayerKind = (typeof CARD_RIG_LAYER_ORDER)[number];
 
 export type CardRigOuterFrameId = 'none' | 'gold-ornate' | 'wood' | 'corner-ornate';
+export type CardRigFrameClass = 'standard' | 'special' | 'unframed';
 export type CardRigEnvironmentalSlotId =
   | 'none'
   | 'green-slot'
@@ -64,6 +66,23 @@ export const CARD_RIG_OUTER_FRAMES = Object.freeze({
   }),
 } satisfies Record<CardRigOuterFrameId, OuterFrameDefinition>);
 
+export const CARD_RIG_OUTER_FRAME_POLICY = Object.freeze({
+  standard: 'wood',
+  special: 'gold-ornate',
+  unframed: 'none',
+  specialRequiresExplicitMetadata: true,
+} as const);
+
+export const resolveCardRigOuterFrame = (
+  frameClass: CardRigFrameClass = 'standard',
+): CardRigOuterFrameId => CARD_RIG_OUTER_FRAME_POLICY[frameClass];
+
+export const cardRigFrameClass = (outerFrame: CardRigOuterFrameId): CardRigFrameClass => {
+  if (outerFrame === 'none') return 'unframed';
+  if (outerFrame === CARD_RIG_OUTER_FRAME_POLICY.standard) return 'standard';
+  return 'special';
+};
+
 export const CARD_RIG_ENVIRONMENTAL_SLOTS = Object.freeze({
   none: Object.freeze({
     label: 'No environmental slot',
@@ -112,6 +131,10 @@ export type CardRigComposition = Readonly<{
   rigId: string;
   card: Card;
   outerFrame: CardRigOuterFrameId;
+  frameClass: CardRigFrameClass;
+  movementOwnerRigId: string;
+  activationSourceOwnerRigId: string;
+  cleanupOwnerRigId: string;
   layers: readonly CardRigLayer[];
 }>;
 
@@ -120,13 +143,17 @@ const slug = (card: Card): string => card.toLowerCase().replaceAll(' ', '-');
 export const createCardRigComposition = (
   card: Card,
   slot: number,
-  outerFrame: CardRigOuterFrameId = 'none',
+  outerFrame: CardRigOuterFrameId = resolveCardRigOuterFrame(),
 ): CardRigComposition => {
   const rigId = `${slug(card)}-${slot}`;
   return Object.freeze({
     rigId,
     card,
     outerFrame,
+    frameClass: cardRigFrameClass(outerFrame),
+    movementOwnerRigId: rigId,
+    activationSourceOwnerRigId: rigId,
+    cleanupOwnerRigId: rigId,
     layers: Object.freeze(CARD_RIG_LAYER_ORDER.map((kind) => Object.freeze({
       kind,
       ownerRigId: rigId,

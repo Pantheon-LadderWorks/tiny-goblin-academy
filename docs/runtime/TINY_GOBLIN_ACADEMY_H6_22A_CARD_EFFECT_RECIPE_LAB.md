@@ -12,15 +12,15 @@
 h6_22AImplementationComplete: true
 h6_22ATechnicalValidationPassed: true
 h6_22AHumanVisualReviewPassed: false
-h6_22ALiveGameplayIntegrated: false
-h6_23Started: false
+h6_22ALiveGameplayIntegrated: true
+h6_23Started: true
 ```
 
 ## Boundary
 
 H6.22A is a development-only presentation laboratory. Fixtures inject visual events through `?cardFx=<fixture>&motion=full|reduced`; they do not call simulation actions, publish Hub Ledger transitions, alter HP, change card queues, invoke SparkChoice, or modify CardRig route semantics.
 
-The lane does not change card faces, icons, typography, dimensions, tabletop artwork, packages, lockfiles, audio, or image assets. Runtime textures are generated in memory from Phaser geometry.
+The original lane did not change card faces, icons, typography, dimensions, tabletop artwork, packages, lockfiles, audio, or image assets. Runtime textures are generated in memory from Phaser geometry. Its retained architecture is now consumed by the production integration recorded in `TINY_GOBLIN_ACADEMY_H6_22R3_PRODUCTION_CARDRIG_VFX.md`.
 
 ## R1 reconciliation
 

@@ -328,14 +328,14 @@ export interface CardRigPort {
 export type CardRigRunResult =
   | {
       status: 'completed';
-      fixtureId: CardRigFixtureId;
+      fixtureId: string;
       mode: CardRigMode;
       cues: CardRigCueType[];
       finalState: CardRigFinalState;
     }
   | {
       status: 'cancelled';
-      fixtureId: CardRigFixtureId;
+      fixtureId: string;
       mode: CardRigMode;
       reason: CardRigCancelReason;
       cues: CardRigCueType[];
@@ -373,9 +373,15 @@ export class CardRig {
     fixtureId: CardRigFixtureId,
     mode: CardRigMode,
   ): Promise<CardRigRunResult> {
+    return this.playPlan(CARD_RIG_FIXTURES[fixtureId], mode);
+  }
+
+  async playPlan(
+    fixture: CardRigFixture,
+    mode: CardRigMode,
+  ): Promise<CardRigRunResult> {
     this.cancel('superseded');
 
-    const fixture = CARD_RIG_FIXTURES[fixtureId];
     const run: ActiveRun = { controller: new AbortController() };
     this.active = run;
     const context: CardRigRunContext = {
@@ -405,7 +411,7 @@ export class CardRig {
       }
       return {
         status: 'completed',
-        fixtureId,
+        fixtureId: fixture.id,
         mode,
         cues,
         finalState: fixture.finalState,
@@ -416,7 +422,7 @@ export class CardRig {
       }
       return {
         status: 'cancelled',
-        fixtureId,
+        fixtureId: fixture.id,
         mode,
         reason: run.reason ?? 'superseded',
         cues,
