@@ -500,11 +500,40 @@ button {
   align-items: end;
 }
 
+.card-slot-shell {
+  position: relative;
+  display: block;
+  width: var(--card-width);
+  aspect-ratio: 123 / 170;
+  align-self: end;
+}
+
+.card-slot-art {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: -2%;
+  display: block;
+  height: 96%;
+  aspect-ratio: var(--sprite-aspect, 123 / 170);
+  transform: translateX(-50%);
+  background-image: var(--card-frame-sheet-url);
+  background-position: var(--sprite-bg-position-x) var(--sprite-bg-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--sprite-bg-size-x) var(--sprite-bg-size-y);
+  pointer-events: none;
+}
+
+.card-slot-shell[data-card-slot-surface='none'] > .card-slot-art {
+  display: none;
+}
+
 .card-btn {
   --card-rise: 0px;
   position: relative;
   display: block;
-  width: var(--card-width);
+  z-index: 1;
+  width: 100%;
   min-width: 0;
   aspect-ratio: 123 / 170;
   transform: translateY(var(--card-rise));
@@ -521,6 +550,17 @@ button {
     transform 120ms ease,
     filter 120ms ease,
     box-shadow 120ms ease;
+}
+
+.card-shadow {
+  position: absolute;
+  z-index: 0;
+  inset: 3% 4% 1%;
+  border-radius: inherit;
+  background: rgba(10, 5, 13, 0.34);
+  filter: blur(7px);
+  transform: translateY(5px);
+  pointer-events: none;
 }
 
 .card-btn:hover:not(:disabled) {
@@ -550,7 +590,7 @@ button {
 
 .card-frame-art {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   inset: 0;
   border-radius: inherit;
   background-color: #d9c69e;
@@ -558,6 +598,96 @@ button {
   background-repeat: no-repeat;
   image-rendering: auto;
   pointer-events: none;
+}
+
+.card-content-layer {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card-outer-frame {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: block;
+  overflow: visible;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.card-outer-frame-asset {
+  position: absolute;
+  left: 50%;
+  top: -2%;
+  display: block;
+  height: 104%;
+  aspect-ratio: var(--sprite-aspect, 123 / 170);
+  transform: translateX(-50%);
+  background-image: var(--card-frame-sheet-url);
+  background-position: var(--sprite-bg-position-x) var(--sprite-bg-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--sprite-bg-size-x) var(--sprite-bg-size-y);
+  opacity: 0.78;
+}
+
+.card-outer-frame[data-outer-frame='none'] {
+  display: none;
+}
+
+.card-local-fx {
+  position: absolute;
+  z-index: 5;
+  inset: -3%;
+  display: block;
+  border-radius: 14% / 10%;
+  pointer-events: none;
+}
+
+.card-local-fx.card-rig-diagnostic-active {
+  border: 2px solid rgba(255, 215, 96, 0.92);
+  box-shadow: 0 0 8px rgba(255, 215, 96, 0.88), inset 0 0 8px rgba(255, 215, 96, 0.42);
+  animation: card-rig-diagnostic-pulse 700ms ease-in-out infinite alternate;
+}
+
+.card-rig-attachment-diagnostic {
+  position: absolute;
+  z-index: 40;
+  display: block;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 215, 96, 0.94);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 215, 96, 0.86), inset 0 0 8px rgba(255, 215, 96, 0.4);
+  pointer-events: none;
+  animation: card-rig-diagnostic-pulse 520ms ease-in-out infinite alternate;
+}
+
+.card-rig-attachment-diagnostic[data-card-rig-diagnostic='draw-pile-local'] {
+  border-color: #8ee7a3;
+  box-shadow: 0 0 12px rgba(142, 231, 163, 0.9);
+}
+
+.card-rig-attachment-diagnostic[data-card-rig-diagnostic='discard-pile-local'] {
+  border-color: #ef8a78;
+  box-shadow: 0 0 12px rgba(239, 138, 120, 0.9);
+}
+
+.card-rig-attachment-diagnostic[data-card-rig-diagnostic='player-target'] {
+  border-color: #65d9ff;
+  box-shadow: 0 0 12px rgba(101, 217, 255, 0.9);
+}
+
+.card-rig-attachment-diagnostic[data-card-rig-diagnostic='enemy-target'] {
+  border-color: #ffbb66;
+  box-shadow: 0 0 12px rgba(255, 187, 102, 0.9);
+}
+
+@keyframes card-rig-diagnostic-pulse {
+  from { opacity: 0.45; }
+  to { opacity: 1; }
 }
 
 .card-btn[data-card-frame='blank-parchment'] .card-frame-art {
@@ -685,7 +815,7 @@ button {
 
 .card-state {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   left: 4%;
   top: 3%;
   display: flex;

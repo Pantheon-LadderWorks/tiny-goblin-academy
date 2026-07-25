@@ -75,6 +75,15 @@ const fixtureIds = [
   'reset-during-deal',
   'reset-during-commitment',
   'resize-active',
+  'r1-frame-gold',
+  'r1-frame-wood',
+  'r1-frame-corner',
+] as const;
+
+const frameLifecycleFixtureIds = [
+  'r1-frame-gold',
+  'r1-frame-wood',
+  'r1-frame-corner',
 ] as const;
 
 function cueTypes(fixtureId: (typeof fixtureIds)[number]): string[] {
@@ -96,6 +105,19 @@ describe('CardRig fixture contracts', () => {
       { type: 'focus', card: 'Strike' },
     ]);
     expect(fixture.finalState.hand).toEqual(['Strike', 'Guard', 'Mend']);
+  });
+
+  it.each(frameLifecycleFixtureIds)('%s proves draw, focus, play, and discard', (fixtureId) => {
+    expect(cueTypes(fixtureId)).toEqual([
+      'deal',
+      'deal',
+      'deal',
+      'settle',
+      'focus',
+      'commit',
+      'effect-hold',
+      'discard',
+    ]);
   });
 
   it.each(['strike-commitment', 'guard-commitment', 'mend-commitment'] as const)(

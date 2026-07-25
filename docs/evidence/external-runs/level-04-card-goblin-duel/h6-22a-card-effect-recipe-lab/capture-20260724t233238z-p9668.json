@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "12428d232713807773774b7cc75d6885f3170035",
+  "createdAt": "2026-07-24T23:34:33.044Z",
+  "gameId": "level-04-card-goblin-duel",
+  "laneId": "h6-22a-card-effect-recipe-lab",
+  "runId": "capture-20260724t233238z-p9668",
+  "externalRelativePath": "level-04-card-goblin-duel/h6-22a-card-effect-recipe-lab/capture-20260724t233238z-p9668",
+  "files": [
+    {
+      "relativePath": "console-results.json",
+      "mediaType": "application/json",
+      "bytes": 19,
+      "sha256": "339acc3b09add3c3d0e689adf17878a1bd264d3a3f00fccce7db538630e20066"
+    },
+    {
+      "relativePath": "containment-results.json",
+      "mediaType": "application/json",
+      "bytes": 28745,
+      "sha256": "d3231bbb2f72cde410bc6feb5f8374155d5f83485a856d93842a294d809f8d5d"
+    },
+    {
+      "relativePath": "fixture-assertions.json",
+      "mediaType": "application/json",
+      "bytes": 63539,
+      "sha256": "f0718b778a385a64024049520064d84159bec87f62a0197ecff0796a4d82a7f1"
+    },
+    {
+      "relativePath": "recipe-registry.json",
+      "mediaType": "application/json",
+      "bytes": 37354,
+      "sha256": "98569dee8824c2ebb54ab7c96f991a3d8f5bdc83e9c72782441081aba3db5e0f"
+    },
+    {
+      "relativePath": "recordings/01-primitive-sampler.webm",
+      "mediaType": "video/webm",
+      "bytes": 589413,
+      "sha256": "7d92d57c5c1f37049732d7b2becc0be1da09bf9ada26fbef5492190b9313ba12"
+    },
+    {
+      "relativePath": "recordings/02-strike.webm",
+      "mediaType": "video/webm",
+      "bytes": 261769,
+      "sha256": "e4e6bf02265a9571e47d81479d5329a5e9b1c86b51d14bda4497bdc9c83dc949"
+    },
+    {
+      "relativePath": "recordings/03-guard.webm",
+      "mediaType": "video/webm",
+      "bytes": 277170,
+      "sha256": "1d74fd6ba15c7d356e9b1625860464d2b9a8a5674bc2e829a4261d24f968ea5d"
+    },
+    {
+      "relativePath": "recordings/04-mend.webm",
+      "mediaType": "video/webm",
+      "bytes": 282282,
+      "sha256": "f36ba9766fa8bdfa84330bdfebbe766e2325adc73836aad7ecf334545ea95882"
+    },
+    {
+      "relativePath": "recordings/05-spark.webm",
+      "mediaType": "video/webm",
+      "bytes": 283209,
+      "sha256": "f01b26cd3ca3df551232a59654682d2d556b5c4c104212b8bf55b061651c12aa"
+    },
+    {
+      "relativePath": "recordings/06-stun.webm",
+      "mediaType": "video/webm",
+      "bytes": 288894,
+      "sha256": "accfca9f5e5db612bd0377b6e49ff25638e7466262a34372ff1ca746bd92fcf4"
+    },
+    {
+      "relativePath": "recordings/07-heavy-bonk.webm",
+      "mediaType": "video/webm",
+      "bytes": 299322,
+      "sha256": "c0a8d9aa74ba258ba8d9a6313e58df2a600b766b754eac081db8f1d38c65a6e8"
+    },
+    {
+      "relativePath": "recordings/08-reduced-comparison.webm",
+      "mediaType": "video/webm",
+      "bytes": 309459,
+      "sha256": "448a59160dcf737e452d1adafca3b1a48e247d7afa64ea25d802ea0cc17e443c"
+    },
+    {
+      "relativePath": "recordings/09-cancellation-cleanup.webm",
+      "mediaType": "video/webm",
+      "bytes": 345777,
+      "sha256": "d10a72a5a7f91f9e38d18966993aa45af6fdcd4e767608632dbcb42a348eb144"
+    },
+    {
+      "relativePath": "stills/card-recipe-contact-sheet.png",
+      "mediaType": "image/png",
+      "bytes": 384010,
+      "sha256": "d2dd4ef956651246a2775e158973d3451c8dbd197b48d3b3dbd4eb0d149c0108"
+    },
+    {
+      "relativePath": "stills/guard-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 767835,
+      "sha256": "17b7eea053b2269821d4243f9b5ee2b533f1debf6b5d027f3db9510208686989"
+    },
+    {
+      "relativePath": "stills/heavy-bonk-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 770412,
+      "sha256": "1c8dc9addcfcf3af7ee1ef5ea05a18af9f7ff0b5071baeb2dda9d0e4bf2c9717"
+    },
+    {
+      "relativePath": "stills/mend-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 765324,
+      "sha256": "6d09ce897e7cbb9d911b83b8293139f8d9700555dc2b810dd582fa27f1459713"
+    },
+    {
+      "relativePath": "stills/spark-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 769576,
+      "sha256": "13f543c040e02996dcb8c341e49a9c30711e0638747638ce0674d51e9ba3caaa"
+    },
+    {
+      "relativePath": "stills/strike-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 761761,
+      "sha256": "09f023e7e23bf97f12441394497a0124ef92ed8e0d9a95fa9094781fba9ce30e"
+    },
+    {
+      "relativePath": "stills/stun-keyframe.png",
+      "mediaType": "image/png",
+      "bytes": 767943,
+      "sha256": "53126ae337cd575c729ee47113b5ff08f0e6f7b1721c21bc57dd65fc347660ef"
+    },
+    {
+      "relativePath": "technical-review.json",
+      "mediaType": "application/json",
+      "bytes": 138626,
+      "sha256": "ab6d0c719dd2cdb8fbdabde582cc97fbcf0043a67e8ece8e79498c436d13ab6d"
+    }
+  ],
+  "captureScript": "games/tier-1/04-card-goblin-duel/capture-h622a.cjs",
+  "captureScriptVersion": "h6.22a-card-effect-recipe-lab",
+  "captureConfiguration": {
+    "listenerHost": "127.0.0.1",
+    "listenerPort": 5175,
+    "browser": "chromium",
+    "defaultViewport": {
+      "width": 1280,
+      "height": 660
+    },
+    "minimumViewport": {
+      "width": 1024,
+      "height": 580
+    },
+    "fixtures": [
+      "primitive-sampler",
+      "strike",
+      "guard",
+      "mend",
+      "spark",
+      "stun",
+      "heavy-bonk",
+      "enemy-attack",
+      "victory",
+      "defeat",
+      "reduced-comparison",
+      "cancellation-layered",
+      "resize-active",
+      "repeat-no-residue"
+    ],
+    "motionContracts": [
+      {
+        "fixture": "primitive-sampler",
+        "mode": "full",
+        "recording": "01-primitive-sampler.webm"
+      },
+      {
+        "fixture": "strike",
+        "mode": "full",
+        "recording": "02-strike.webm"
+      },
+      {
+        "fixture": "guard",
+        "mode": "full",
+        "recording": "03-guard.webm"
+      },
+      {
+        "fixture": "mend",
+        "mode": "full",
+        "recording": "04-mend.webm"
+      },
+      {
+        "fixture": "spark",
+        "mode": "full",
+        "recording": "05-spark.webm"
+      },
+      {
+        "fixture": "stun",
+        "mode": "full",
+        "recording": "06-stun.webm"
+      },
+      {
+        "fixture": "heavy-bonk",
+        "mode": "full",
+        "recording": "07-heavy-bonk.webm"
+      },
+      {
+        "fixture": "reduced-comparison",
+        "mode": "full",
+        "recording": "08-reduced-comparison.webm"
+      },
+      {
+        "fixture": "resize-active",
+        "mode": "full",
+        "recording": "09-cancellation-cleanup.webm",
+        "resize": true
+      }
+    ],
+    "contactSheet": "stills/card-recipe-contact-sheet.png",
+    "sourceWorktree": "uncommitted H6.22A preview-only lab on committed H6.21B authority"
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

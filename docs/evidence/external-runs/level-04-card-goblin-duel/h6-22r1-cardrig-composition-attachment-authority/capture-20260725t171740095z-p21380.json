@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "lane": "h6-22r1-cardrig-composition-attachment-authority",
+  "captureId": "capture-20260725t171740095z-p21380",
+  "authority": "external-evidence",
+  "status": "technical-complete-human-review-pending",
+  "externalRootHint": "Tiny-Goblin-Academy/Evidence/level-04-card-goblin-duel/h6-22r1-cardrig-composition-attachment-authority/capture-20260725t171740095z-p21380",
+  "verification": {
+    "viewports": ["1280x660", "1024x580"],
+    "trueFrameChoicesIncludingNone": 4,
+    "environmentalSlotChoicesIncludingNone": 6,
+    "attachmentAuthorities": 7,
+    "fixtureFiles": 15,
+    "documentContained": true,
+    "resizeCancellation": true,
+    "resetCancellation": true,
+    "finalTemporaryNodes": 0,
+    "finalOwnerClasses": 0,
+    "finalAnimationFrames": 0,
+    "consoleErrors": 0
+  },
+  "reviewFiles": [
+    {"path": "stills/01-complete-layer-stack.png", "sha256": "d205d8941f7e49c54d9633da9fecaffae1cbaac0452b63ee8b9547a8ac496e92", "bytes": 873685},
+    {"path": "stills/02-environmental-slot-vs-true-frame.png", "sha256": "3081648e520e3ddb814043ddbf4444d815ebdfcd54b9cabd4cb03d6e6003f2f3", "bytes": 835948, "note": "Occupied cards cover most environmental slot pixels; use as classification proof, not final slot art approval."},
+    {"path": "motion/03-gold-ornate-frame-lifecycle.webm", "sha256": "a54e5577dc7eefb13d53dc9ca8a750f94ff59a97c4b32212f4d222212bcf4751", "bytes": 679053},
+    {"path": "motion/04-wood-frame-lifecycle.webm", "sha256": "f53c48e85052e7b555b93f33b0110ef59bad62e33e4566fdb777a5d8117e5709", "bytes": 680105},
+    {"path": "motion/05-corner-ornate-frame-lifecycle.webm", "sha256": "443e93bb0b47ee5e66a87992d51d509ac21006e0374dc7d76b5460f6d0075f2d", "bytes": 725621},
+    {"path": "motion/06-card-local-follow.webm", "sha256": "23d1bc9ba3f1c91bfeeb77957a25e2d8a632b815f29f20b203c7cd4735fd6379", "bytes": 689977},
+    {"path": "motion/07-draw-pile-local.webm", "sha256": "5c7737c079b90b36bc109aab6bebb0501c53ff654f3ae7195206aaa66d304d6f", "bytes": 447071},
+    {"path": "motion/08-discard-pile-local.webm", "sha256": "2493a9a98f4640ac889d10022500d534ad739e4b3e86f1df55df35f544da956b", "bytes": 490266},
+    {"path": "motion/09-player-target.webm", "sha256": "9e746033858f6d33adb35911f6c50065d9da046f4c015f28c2ee3f847a56fd8b", "bytes": 652786},
+    {"path": "motion/10-enemy-target.webm", "sha256": "9c188eb507169214ec0e162caf7ecf7f3d5b99eb4574ab6f5457c61db0a1c193", "bytes": 634155},
+    {"path": "motion/11-travel-authority.webm", "sha256": "f558fb7a812783a1e7e94911796ce33972d2e6824c2eb0506e8610b99ef5d6f4", "bytes": 669620},
+    {"path": "motion/12-tabletop-local.webm", "sha256": "3d4ea09c022fef07a24ed4f88e8935fd7c67034ed1f9fb1f456f51909571ce28", "bytes": 448235},
+    {"path": "motion/13-resize-active.webm", "sha256": "7657a5e42d9b623fdadbab6e156796ff4f04d0fc4841fc6aa7401bc93159e785", "bytes": 309743},
+    {"path": "motion/14-cancel-cleanup.webm", "sha256": "ba128a525814036de9c57b268a35655744033f8d9a7b06dcc13968add919640e", "bytes": 274488},
+    {"path": "motion/15-reduced-motion.webm", "sha256": "472ca285946b7c2defe4dc4ef4b47666c6a6419c07174c24c8199304f1195f6c", "bytes": 319640}
+  ],
+  "protectedHashes": {
+    "cardFrames": "4164decf68fd86bf1cdd3680a5318aeb912edb66a25ca463dde9bd8e26a4d486",
+    "uiTokens": "db06cb5f7403fe8eb412d205d112a6f74dabcfa0157d2d336ea96de9a7b1ba88",
+    "tabletop": "e30d5ff2e6366056dbb8ebf944fd3f1b5b2d10af7dde0388d258d768ce8f67e3"
+  }
+}

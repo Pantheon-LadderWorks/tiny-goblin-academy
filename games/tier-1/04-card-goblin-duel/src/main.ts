@@ -5,6 +5,20 @@ import cardTokenSheetUrl from '../../../../assets/academy/games/card-goblin-duel
 import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
+import { PhaserCardEffectPort } from './card-effect-phaser';
+import {
+  CARD_EFFECT_FIXTURES,
+  CARD_EFFECT_RECIPE_BY_CARD,
+  CARD_EFFECT_RECIPES,
+  REQUIRED_EFFECT_PRIMITIVES,
+  type CardEffectFixtureId,
+  type CardEffectMode,
+} from './card-effect-recipes';
+import {
+  CardEffectRunner,
+  type CardEffectRunResult,
+  type EffectResourceCounts,
+} from './card-effect-runner';
 import {
   CARD_RIG_FIXTURES,
   CardRig,
@@ -12,6 +26,17 @@ import {
   type CardRigMode,
 } from './card-rig';
 import { DomCardRigPort, type CardRigRouteTelemetry } from './card-rig-dom';
+import {
+  DomCardRigAttachmentController,
+  type CardRigAttachmentSample,
+} from './card-rig-attachment-dom';
+import {
+  CARD_RIG_COMPOSITION_FIXTURES,
+  type CardRigAttachmentAuthority,
+  type CardRigCompositionFixtureId,
+  type CardRigEnvironmentalSlotId,
+  type CardRigOuterFrameId,
+} from './card-rig-composition';
 import {
   CARD_RIG_ANCHOR_IDS,
   CARD_RIG_SOURCE_ANCHORS,
@@ -21,6 +46,7 @@ import {
 import {
   CARD_LAB_CARDS,
   phasePresentation,
+  renderCardSlot,
   renderHandCard,
   renderNextCard,
   type CardSurfaceStrategy,
@@ -50,6 +76,40 @@ declare global {
       cleanup: string[];
       reason?: string;
     };
+    __cardEffectLabStatus?: {
+      fixtureId: CardEffectFixtureId;
+      recipeId: CardEffectRunResult['recipeId'];
+      mode: CardEffectMode;
+      status: 'ready' | 'running' | 'completed' | 'cancelled' | 'error';
+      beforeCounts: EffectResourceCounts;
+      afterCounts: EffectResourceCounts;
+      layers: string[];
+      cleanup: Array<{ reason: string; counts: EffectResourceCounts }>;
+      runs: Array<{
+        mode: CardEffectMode;
+        status: CardEffectRunResult['status'];
+        counts: EffectResourceCounts;
+        reason?: string;
+      }>;
+      error?: string;
+    };
+    __cardEffectRecipeRegistry?: {
+      requiredPrimitives: typeof REQUIRED_EFFECT_PRIMITIVES;
+      cardMappings: typeof CARD_EFFECT_RECIPE_BY_CARD;
+      fixtures: typeof CARD_EFFECT_FIXTURES;
+      recipes: typeof CARD_EFFECT_RECIPES;
+    };
+    __cardRigCompositionStatus?: {
+      fixtureId: CardRigCompositionFixtureId;
+      frameStyle: CardRigOuterFrameId;
+      status: 'ready' | 'running' | 'complete' | 'cancelled' | 'error';
+      attachment?: CardRigAttachmentAuthority['kind'];
+      samples: CardRigAttachmentSample[];
+      activeCounts: { temporaryNodes: number; ownerClasses: number; animationFrames: number };
+      finalCounts: { temporaryNodes: number; ownerClasses: number; animationFrames: number };
+      cleanup: string[];
+      error?: string;
+    };
   }
 }
 
@@ -69,14 +129,59 @@ const cardLabStrategy: CardSurfaceStrategy | undefined = requestedCardLab === 'c
 const cardSlotDebug = searchParams.get('cardSlots') === '1';
 const cardTypographyGuides = searchParams.get('cardGuides') === '1';
 const requestedCardRig = searchParams.get('cardRig');
+const requestedCardComposition = searchParams.get('cardComp');
+const cardRigCompositionFixtureId: CardRigCompositionFixtureId | undefined = import.meta.env.MODE === 'development'
+  && requestedCardComposition
+  && requestedCardComposition in CARD_RIG_COMPOSITION_FIXTURES
+  ? requestedCardComposition as CardRigCompositionFixtureId
+  : undefined;
+const requestedFrameStyle = searchParams.get('frameStyle');
+const compositionFrameStyle: CardRigOuterFrameId = requestedFrameStyle === 'gold-ornate'
+  || requestedFrameStyle === 'wood'
+  || requestedFrameStyle === 'corner-ornate'
+  ? requestedFrameStyle
+  : 'none';
+const compositionRigFixtureId = (): CardRigFixtureId | undefined => {
+  if (!cardRigCompositionFixtureId) return undefined;
+  if (cardRigCompositionFixtureId === 'frame-matrix') {
+    if (compositionFrameStyle === 'gold-ornate') return 'r1-frame-gold';
+    if (compositionFrameStyle === 'wood') return 'r1-frame-wood';
+    if (compositionFrameStyle === 'corner-ornate') return 'r1-frame-corner';
+    return 'r1-frame-gold';
+  }
+  const fixtures: Partial<Record<CardRigCompositionFixtureId, CardRigFixtureId>> = {
+    'layer-stack': 'optical-default',
+    'slot-vs-frame': 'optical-default',
+    'card-local-follow': 'guard-commitment',
+    'draw-pile-local': 'initial-deal',
+    'discard-pile-local': 'strike-commitment',
+    'player-target': 'guard-commitment',
+    'enemy-target': 'strike-commitment',
+    travel: 'spark-sequence',
+    'tabletop-local': 'guard-commitment',
+    'resize-active': 'resize-active',
+    'cancel-cleanup': 'reset-during-commitment',
+    'reduced-motion': 'initial-deal',
+  };
+  return fixtures[cardRigCompositionFixtureId];
+};
 const cardRigFixtureId: CardRigFixtureId | undefined = import.meta.env.MODE === 'development'
   && requestedCardRig
   && requestedCardRig in CARD_RIG_FIXTURES
   ? requestedCardRig as CardRigFixtureId
+  : compositionRigFixtureId();
+const requestedCardEffect = searchParams.get('cardFx');
+const cardEffectFixtureId: CardEffectFixtureId | undefined = import.meta.env.MODE === 'development'
+  && requestedCardEffect
+  && requestedCardEffect in CARD_EFFECT_FIXTURES
+  ? requestedCardEffect as CardEffectFixtureId
   : undefined;
-const cardRigMode: CardRigMode = searchParams.get('motion') === 'reduced'
+const requestedMotion = searchParams.get('motion');
+const cardRigMode: CardRigMode = requestedMotion === 'reduced'
+  || cardRigCompositionFixtureId === 'reduced-motion'
   ? 'reduced'
   : 'full';
+const cardEffectMode: CardEffectMode = requestedMotion === 'reduced' ? 'reduced' : 'full';
 const debugAnchors = isAnchorDebugEnabled(window.location.search);
 const ledger = createCardGoblinLedger({
   parent: window.parent === window ? null : window.parent,
@@ -115,12 +220,46 @@ const discardAnchor = document.querySelector<HTMLElement>(
 )!;
 const enemyStatus = document.querySelector<HTMLElement>('.enemy-status')!;
 
+const EMPTY_EFFECT_COUNTS: EffectResourceCounts = Object.freeze({
+  emitters: 0,
+  temporaryObjects: 0,
+  masks: 0,
+  fx: 0,
+  listeners: 0,
+});
+
 let cardRig: CardRig | undefined;
 let cardRigStarted = false;
 let cardRigGeneration = 0;
+let cardRigAttachmentController: DomCardRigAttachmentController | undefined;
+let cardEffectPort: PhaserCardEffectPort | undefined;
+let cardEffectRunner: CardEffectRunner | undefined;
+let cardEffectStarted = false;
+let cardEffectGeneration = 0;
 let stageGraphics: Phaser.GameObjects.Graphics;
 let debugGraphics: Phaser.GameObjects.Graphics;
 let debugLabels: Phaser.GameObjects.Text[] = [];
+
+if (cardEffectFixtureId && !cardRigFixtureId) {
+  const fixture = CARD_EFFECT_FIXTURES[cardEffectFixtureId];
+  window.__cardEffectLabStatus = {
+    fixtureId: cardEffectFixtureId,
+    recipeId: fixture.recipeId,
+    mode: cardEffectMode,
+    status: 'ready',
+    beforeCounts: EMPTY_EFFECT_COUNTS,
+    afterCounts: EMPTY_EFFECT_COUNTS,
+    layers: [],
+    cleanup: [],
+    runs: [],
+  };
+  window.__cardEffectRecipeRegistry = {
+    requiredPrimitives: REQUIRED_EFFECT_PRIMITIVES,
+    cardMappings: CARD_EFFECT_RECIPE_BY_CARD,
+    fixtures: CARD_EFFECT_FIXTURES,
+    recipes: CARD_EFFECT_RECIPES,
+  };
+}
 
 const clearDebugLabels = (): void => {
   for (const label of debugLabels) label.destroy();
@@ -268,6 +407,9 @@ const receiveAnchorSnapshot = (scene: Phaser.Scene, snapshot: AnchorSnapshot): v
   drawStage(scene, snapshot);
   drawAnchorDebug(scene, snapshot);
   anchorStatus.textContent = `${Object.keys(snapshot).length} presentation anchors resolved${debugAnchors ? ' · markers visible' : ''}.`;
+  if (cardEffectFixtureId && !cardRigFixtureId && cardEffectRunner && !cardEffectStarted) {
+    queueMicrotask(() => void startCardEffectFixture());
+  }
 };
 
 const game = new Phaser.Game({
@@ -302,6 +444,17 @@ const game = new Phaser.Game({
           anchorStatus.classList.add('anchor-error');
         },
       });
+
+      if (cardEffectFixtureId && !cardRigFixtureId) {
+        cardEffectPort = new PhaserCardEffectPort({
+          scene,
+          snapshot: () => anchorSnapshot,
+          onLayer: (layer) => window.__cardEffectLabStatus?.layers.push(layer.id),
+          onCleanup: (reason, counts) => window.__cardEffectLabStatus?.cleanup.push({ reason, counts }),
+        });
+        cardEffectRunner = new CardEffectRunner(cardEffectPort);
+        anchorBridge.refresh();
+      }
     },
   },
 });
@@ -336,8 +489,30 @@ const renderCardRigHand = (
   cards: readonly Card[],
   phase: Phase,
 ): void => {
+  const frameCard: Partial<Record<CardRigOuterFrameId, Card>> = {
+    'gold-ornate': 'Strike',
+    wood: 'Guard',
+    'corner-ornate': 'Mend',
+  };
+  const slotStyles: readonly CardRigEnvironmentalSlotId[] = [
+    'green-slot',
+    'teal-slot',
+    'gold-glow',
+  ];
   hand.innerHTML = cards
-    .map((card, index) => renderHandCard(card, index, phase, 'tokens', false))
+    .map((card, index) => renderCardSlot(card, index, phase, {
+      strategy: 'tokens',
+      registerGameplayAnchor: cards.length <= 3,
+      outerFrame: cardRigCompositionFixtureId === 'frame-matrix'
+        && frameCard[compositionFrameStyle] === card
+        ? compositionFrameStyle
+        : cardRigCompositionFixtureId === 'layer-stack' && card === 'Spark'
+          ? 'gold-ornate'
+          : 'none',
+      environmentalSlot: cardRigCompositionFixtureId === 'slot-vs-frame'
+        ? slotStyles[index % slotStyles.length]
+        : 'none',
+    }))
     .join('');
   handCount.textContent = `${cards.length} rig card${cards.length === 1 ? '' : 's'}`;
   const terminal = phase === 'Terminal';
@@ -348,7 +523,76 @@ const renderCardRigHand = (
   anchorBridge?.refresh();
 };
 
+const compositionAuthorityForCue = (
+  cue: Readonly<{ type: string; card?: Card }>,
+): CardRigAttachmentAuthority | undefined => {
+  if (!cardRigCompositionFixtureId) return undefined;
+  const rigId = cue.card
+    ? hand.querySelector<HTMLElement>(`[data-card-name="${cue.card}"]`)?.dataset.cardRigId
+    : undefined;
+
+  switch (cardRigCompositionFixtureId) {
+    case 'card-local-follow':
+    case 'resize-active':
+    case 'cancel-cleanup':
+      return cue.type === 'commit' && rigId ? { kind: 'card-local', rigId } : undefined;
+    case 'draw-pile-local':
+      return cue.type === 'deal' ? { kind: 'draw-pile-local' } : undefined;
+    case 'discard-pile-local':
+      return cue.type === 'discard' ? { kind: 'discard-pile-local' } : undefined;
+    case 'player-target':
+      return cue.type === 'effect-hold' ? { kind: 'player-target' } : undefined;
+    case 'enemy-target':
+      return cue.type === 'effect-hold' ? { kind: 'enemy-target' } : undefined;
+    case 'travel':
+      return cue.type === 'commit' && rigId ? { kind: 'travel', rigId } : undefined;
+    case 'tabletop-local':
+      return cue.type === 'effect-hold'
+        ? { kind: 'tabletop-local', anchorId: CARD_RIG_ANCHOR_IDS.playedCardTarget }
+        : undefined;
+    default:
+      return undefined;
+  }
+};
+
+const activateCompositionDiagnostic = (
+  cue: Readonly<{ type: string; card?: Card }>,
+): void => {
+  const authority = compositionAuthorityForCue(cue);
+  if (!authority || !cardRigAttachmentController) return;
+  try {
+    cardRigAttachmentController.activate(authority);
+    if (window.__cardRigCompositionStatus) {
+      window.__cardRigCompositionStatus.attachment = authority.kind;
+      window.__cardRigCompositionStatus.activeCounts = cardRigAttachmentController.counts();
+    }
+  } catch (error) {
+    if (window.__cardRigCompositionStatus) {
+      window.__cardRigCompositionStatus.status = 'error';
+      window.__cardRigCompositionStatus.error = error instanceof Error ? error.message : String(error);
+    }
+  }
+};
+
 if (cardRigFixtureId) {
+  if (cardRigCompositionFixtureId) {
+    cardRigAttachmentController = new DomCardRigAttachmentController({
+      root: duelTable,
+      resolveAnchor: (anchorId) => duelTable.querySelector<HTMLElement>(
+        `[data-stage-anchor="${anchorId}"]`,
+      ) ?? undefined,
+      onSample: (sample) => window.__cardRigCompositionStatus?.samples.push(sample),
+    });
+    window.__cardRigCompositionStatus = {
+      fixtureId: cardRigCompositionFixtureId,
+      frameStyle: compositionFrameStyle,
+      status: 'ready',
+      samples: [],
+      activeCounts: { temporaryNodes: 0, ownerClasses: 0, animationFrames: 0 },
+      finalCounts: { temporaryNodes: 0, ownerClasses: 0, animationFrames: 0 },
+      cleanup: [],
+    };
+  }
   const port = new DomCardRigPort({
     hand,
     anchors: {
@@ -361,9 +605,14 @@ if (cardRigFixtureId) {
     onCue: (cue) => {
       window.__cardRigLabStatus?.cues.push(cue.type);
       resolutionDetail.textContent = `CardRig cue · ${cue.type}`;
+      activateCompositionDiagnostic(cue);
     },
     onRoute: (route) => window.__cardRigLabStatus?.routes.push(route),
-    onCleanup: (reason) => window.__cardRigLabStatus?.cleanup.push(reason),
+    onCleanup: (reason) => {
+      window.__cardRigLabStatus?.cleanup.push(reason);
+      cardRigAttachmentController?.cleanup();
+      window.__cardRigCompositionStatus?.cleanup.push(reason);
+    },
   });
   cardRig = new CardRig(port);
   window.__cardRigLabStatus = {
@@ -388,16 +637,109 @@ const startCardRigFixture = async (): Promise<void> => {
     status.events.push(`run:${generation}`);
     delete status.reason;
   }
+  const compositionStatus = window.__cardRigCompositionStatus;
+  if (compositionStatus) {
+    compositionStatus.status = 'running';
+    compositionStatus.samples = [];
+    compositionStatus.cleanup = [];
+    delete compositionStatus.error;
+  }
+  let compositionCancelTimer: number | undefined;
+  if (cardRigCompositionFixtureId === 'cancel-cleanup') {
+    compositionCancelTimer = window.setTimeout(() => cardRig?.cancel('reset'), 180);
+  }
   const result = await cardRig.play(cardRigFixtureId, cardRigMode);
+  if (compositionCancelTimer !== undefined) window.clearTimeout(compositionCancelTimer);
   if (generation !== cardRigGeneration) return;
   status?.events.push(result.status);
   if (status) {
     status.status = result.status === 'completed' ? 'complete' : 'cancelled';
     status.reason = result.status === 'cancelled' ? result.reason : undefined;
   }
+  if (compositionStatus) {
+    compositionStatus.status = result.status === 'completed' ? 'complete' : 'cancelled';
+    compositionStatus.activeCounts = cardRigAttachmentController?.counts()
+      ?? { temporaryNodes: 0, ownerClasses: 0, animationFrames: 0 };
+    cardRigAttachmentController?.cleanup();
+    compositionStatus.finalCounts = cardRigAttachmentController?.counts()
+      ?? { temporaryNodes: 0, ownerClasses: 0, animationFrames: 0 };
+    compositionStatus.cleanup.push(result.status === 'completed' ? 'fixture-complete' : result.reason);
+  }
   resolutionDetail.textContent = result.status === 'completed'
     ? `${CARD_RIG_FIXTURES[cardRigFixtureId].label} · complete`
     : `CardRig cancelled · ${result.reason}`;
+};
+
+const startCardEffectFixture = async (): Promise<void> => {
+  if (!cardEffectRunner || !cardEffectPort || !cardEffectFixtureId || cardEffectStarted) return;
+  cardEffectStarted = true;
+  const generation = ++cardEffectGeneration;
+  const fixture = CARD_EFFECT_FIXTURES[cardEffectFixtureId];
+  const status = window.__cardEffectLabStatus;
+  if (!status) return;
+
+  status.status = 'running';
+  status.beforeCounts = cardEffectPort.counts();
+  status.afterCounts = EMPTY_EFFECT_COUNTS;
+  status.layers = [];
+  status.cleanup = [];
+  status.runs = [];
+  delete status.error;
+
+  const runMode = async (mode: CardEffectMode): Promise<CardEffectRunResult> => {
+    let cancelTimer: number | undefined;
+    const pending = cardEffectRunner!.play(fixture.recipeId, mode);
+    if (fixture.control === 'cancel') {
+      cancelTimer = window.setTimeout(
+        () => cardEffectRunner?.cancel('fixture-cancel'),
+        180,
+      );
+    }
+    try {
+      return await pending;
+    } finally {
+      if (cancelTimer !== undefined) window.clearTimeout(cancelTimer);
+    }
+  };
+
+  try {
+    const modes = fixture.comparison ?? [cardEffectMode];
+    const repeatCount = fixture.repeatCount ?? 1;
+    let finalResult: CardEffectRunResult | undefined;
+    for (let repeat = 0; repeat < repeatCount; repeat += 1) {
+      for (const mode of modes) {
+        const result = await runMode(mode);
+        if (generation !== cardEffectGeneration) return;
+        finalResult = result;
+        status.runs.push({
+          mode,
+          status: result.status,
+          counts: result.counts,
+          reason: result.reason,
+        });
+      }
+    }
+
+    status.afterCounts = cardEffectPort.counts();
+    const residue = Object.values(status.afterCounts).some((count) => count !== 0);
+    if (residue) {
+      status.status = 'error';
+      status.error = 'Presentation resources remained after cleanup.';
+      resolutionDetail.textContent = status.error;
+      return;
+    }
+
+    status.status = finalResult?.status === 'cancelled' ? 'cancelled' : 'completed';
+    resolutionDetail.textContent = finalResult?.status === 'cancelled'
+      ? `${fixture.label} · cancelled (${finalResult.reason})`
+      : `${fixture.label} · complete with zero residue`;
+  } catch (error) {
+    if (generation !== cardEffectGeneration) return;
+    status.afterCounts = cardEffectPort.counts();
+    status.status = 'error';
+    status.error = error instanceof Error ? error.message : String(error);
+    resolutionDetail.textContent = `Card effect fixture error · ${status.error}`;
+  }
 };
 
 const bindCardActions = (): void => {
@@ -439,8 +781,10 @@ const render = (focusIndex?: number): void => {
     phase.bodyClass,
     debugAnchors ? 'anchor-debug' : '',
     cardRigFixtureId
-      ? 'card-lab card-lab-tokens card-rig-lab'
-      : cardLabStrategy ? `card-lab card-lab-${cardLabStrategy}` : '',
+      ? `card-lab card-lab-tokens card-rig-lab${cardRigCompositionFixtureId ? ' card-rig-composition-lab' : ''}`
+      : cardEffectFixtureId
+        ? 'card-lab card-lab-tokens card-effect-lab'
+        : cardLabStrategy ? `card-lab card-lab-${cardLabStrategy}` : '',
     cardSlotDebug ? 'card-slot-debug' : '',
     cardTypographyGuides ? 'card-typography-guides' : '',
   ].filter(Boolean);
@@ -459,9 +803,13 @@ const render = (focusIndex?: number): void => {
 
   if (cardRigFixtureId) {
     const fixture = CARD_RIG_FIXTURES[cardRigFixtureId];
-    banner.textContent = 'CardRig Motion Lab';
-    phaseInstruction.textContent = `${fixture.label} · ${cardRigMode} motion`;
-    resolutionTitle.textContent = 'Fixture-driven presentation sequence';
+    banner.textContent = cardRigCompositionFixtureId ? 'CardRig Composition Lab' : 'CardRig Motion Lab';
+    phaseInstruction.textContent = cardRigCompositionFixtureId
+      ? `${CARD_RIG_COMPOSITION_FIXTURES[cardRigCompositionFixtureId].label} · ${cardRigMode} motion`
+      : `${fixture.label} · ${cardRigMode} motion`;
+    resolutionTitle.textContent = cardRigCompositionFixtureId
+      ? 'Face · content · true frame · state · local FX'
+      : 'Fixture-driven presentation sequence';
     resolutionDetail.textContent = 'Simulation and ordinary gameplay remain untouched.';
     playerHp.textContent = '10 / 10 HP';
     enemyHp.textContent = '12 / 12 HP';
@@ -472,6 +820,27 @@ const render = (focusIndex?: number): void => {
     layoutTabletopSourceAnchors();
     anchorBridge?.refresh();
     queueMicrotask(() => void startCardRigFixture());
+    return;
+  }
+
+  if (cardEffectFixtureId && !cardRigFixtureId) {
+    const fixture = CARD_EFFECT_FIXTURES[cardEffectFixtureId];
+    const recipe = CARD_EFFECT_RECIPES[fixture.recipeId];
+    const previewCard = recipe.card ?? 'Spark';
+    banner.textContent = 'CardEffectRecipe Lab';
+    phaseInstruction.textContent = `${fixture.label} · ${cardEffectMode} motion`;
+    resolutionTitle.textContent = recipe.label;
+    resolutionDetail.textContent = `${recipe[cardEffectMode].layers.length} governed layers · presentation only`;
+    playerHp.textContent = '10 / 10 HP';
+    enemyHp.textContent = '12 / 12 HP';
+    playerEffects.textContent = 'Disposable visual state.';
+    enemyEffects.textContent = 'Simulation and Ledger untouched.';
+    hand.innerHTML = renderHandCard(previewCard, 0, 'PlayerAction', 'tokens', false);
+    handCount.textContent = `1 ${previewCard} preview card`;
+    next.innerHTML = renderNextCard(undefined);
+    terminalOutcome.hidden = true;
+    terminalMessage.textContent = '';
+    anchorBridge?.refresh();
     return;
   }
 
@@ -494,7 +863,9 @@ const render = (focusIndex?: number): void => {
   }
 
   hand.innerHTML = state.hand
-    .map((card, index) => renderHandCard(card, index, state.phase, 'tokens'))
+    .map((card, index) => renderCardSlot(card, index, state.phase, {
+      strategy: 'tokens',
+    }))
     .join('');
   handCount.textContent = `${state.hand.length} card${state.hand.length === 1 ? '' : 's'}`;
   next.innerHTML = renderNextCard(state.queue[0]);
@@ -517,10 +888,33 @@ resetDuel.addEventListener('click', () => {
     cardRigGeneration += 1;
     window.__cardRigLabStatus?.events.push('cancel:reset');
     cardRig?.cancel('reset');
+    cardRigAttachmentController?.cleanup();
     cardRigStarted = false;
     if (window.__cardRigLabStatus) {
       window.__cardRigLabStatus.status = 'ready';
       window.__cardRigLabStatus.cues = [];
+    }
+    if (window.__cardRigCompositionStatus) {
+      window.__cardRigCompositionStatus.status = 'ready';
+      window.__cardRigCompositionStatus.samples = [];
+      window.__cardRigCompositionStatus.finalCounts = cardRigAttachmentController?.counts()
+        ?? { temporaryNodes: 0, ownerClasses: 0, animationFrames: 0 };
+    }
+    render();
+    return;
+  }
+  if (cardEffectFixtureId && !cardRigFixtureId) {
+    cardEffectGeneration += 1;
+    cardEffectRunner?.cancel('reset');
+    cardEffectStarted = false;
+    if (window.__cardEffectLabStatus) {
+      window.__cardEffectLabStatus.status = 'ready';
+      window.__cardEffectLabStatus.beforeCounts = EMPTY_EFFECT_COUNTS;
+      window.__cardEffectLabStatus.afterCounts = EMPTY_EFFECT_COUNTS;
+      window.__cardEffectLabStatus.layers = [];
+      window.__cardEffectLabStatus.cleanup = [];
+      window.__cardEffectLabStatus.runs = [];
+      delete window.__cardEffectLabStatus.error;
     }
     render();
     return;
@@ -534,6 +928,10 @@ const onViewportResize = (): void => {
   if (window.__cardRigLabStatus?.status === 'running') {
     window.__cardRigLabStatus.events.push('cancel:resize');
     cardRig?.cancel('resize');
+    cardRigAttachmentController?.cleanup();
+  }
+  if (window.__cardEffectLabStatus?.status === 'running') {
+    cardEffectRunner?.cancel('resize');
   }
   layoutTabletopSourceAnchors();
   anchorBridge?.refresh();
@@ -544,6 +942,8 @@ render();
 
 window.addEventListener('beforeunload', () => {
   cardRig?.cancel('reset');
+  cardRigAttachmentController?.cleanup();
+  cardEffectRunner?.cancel('reset');
   window.removeEventListener('resize', onViewportResize);
   window.removeEventListener('message', onHubLedgerMessage);
   anchorBridge?.destroy();

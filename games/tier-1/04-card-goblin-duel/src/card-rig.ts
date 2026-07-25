@@ -130,6 +130,30 @@ const standardCommitment = (
   );
 };
 
+const frameLifecycle = (
+  id: string,
+  card: Card,
+): CardRigFixture => {
+  const slot = OPENING_HAND.indexOf(card);
+  return fixture(
+    id,
+    `${card} true-frame lifecycle`,
+    [
+      cue('deal', 'Strike', 0),
+      cue('deal', 'Guard', 1),
+      cue('deal', 'Mend', 2),
+      cue('settle'),
+      cue('focus', card, slot),
+      cue('commit', card, slot),
+      cue('effect-hold', card),
+      cue('discard', card),
+    ],
+    finalState(OPENING_HAND.filter((candidate) => candidate !== card)),
+    false,
+    OPENING_HAND,
+  );
+};
+
 export const CARD_RIG_FIXTURES = {
   'optical-default': fixture(
     'optical-default',
@@ -277,6 +301,9 @@ export const CARD_RIG_FIXTURES = {
     ],
     finalState(OPENING_HAND),
   ),
+  'r1-frame-gold': frameLifecycle('r1-frame-gold', 'Strike'),
+  'r1-frame-wood': frameLifecycle('r1-frame-wood', 'Guard'),
+  'r1-frame-corner': frameLifecycle('r1-frame-corner', 'Mend'),
 } satisfies Record<string, CardRigFixture>;
 
 export type CardRigFixtureId = keyof typeof CARD_RIG_FIXTURES;

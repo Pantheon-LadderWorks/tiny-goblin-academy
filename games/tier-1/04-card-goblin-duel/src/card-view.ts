@@ -1,4 +1,12 @@
 import { handSlotAnchorId } from './anchors';
+import {
+  CARD_RIG_ENVIRONMENTAL_SLOTS,
+  CARD_RIG_OUTER_FRAMES,
+  createCardRigComposition,
+  spriteVariables,
+  type CardRigEnvironmentalSlotId,
+  type CardRigOuterFrameId,
+} from './card-rig-composition';
 import type { Card, Phase } from './simulation';
 
 export const CARD_DESCRIPTIONS: Readonly<Record<Card, string>> = Object.freeze({
@@ -18,6 +26,17 @@ export type CardFramePresentationId =
   | 'teal-edged-tan';
 
 export type CardSurfaceStrategy = 'clean' | 'tokens';
+
+export type CardRigPresentationOptions = Readonly<{
+  rigId?: string;
+  outerFrame?: CardRigOuterFrameId;
+}>;
+
+export type CardSlotPresentationOptions = CardRigPresentationOptions & Readonly<{
+  environmentalSlot?: CardRigEnvironmentalSlotId;
+  strategy?: CardSurfaceStrategy;
+  registerGameplayAnchor?: boolean;
+}>;
 
 type NormalizedRect = Readonly<{
   x: number;
@@ -294,6 +313,7 @@ export const renderHandCard = (
   phase: Phase,
   strategy: CardSurfaceStrategy = 'tokens',
   registerGameplayAnchor: boolean = true,
+  rigOptions: CardRigPresentationOptions = {},
 ): string => {
   const disabled = phase === 'Terminal';
   const stateClass = phase === 'SparkChoice'
@@ -311,6 +331,10 @@ export const renderHandCard = (
   const stageAnchorAttribute = registerGameplayAnchor
     ? `data-stage-anchor="${handSlotAnchorId(index)}"`
     : '';
+  const composition = createCardRigComposition(card, index, rigOptions.outerFrame ?? 'none');
+  const rigId = rigOptions.rigId ?? composition.rigId;
+  const outerFrame = CARD_RIG_OUTER_FRAMES[composition.outerFrame];
+  const outerFrameStyle = spriteVariables(outerFrame.sourceRect);
 
   return `
     <button
@@ -318,6 +342,7 @@ export const renderHandCard = (
       type="button"
       data-i="${index}"
       data-card-name="${card}"
+      data-card-rig-id="${rigId}"
       data-card-frame="${cardPresentation.frame}"
       data-card-strategy="${strategy}"
       data-semantic-role="${cardPresentation.semanticRole}"
@@ -328,16 +353,69 @@ export const renderHandCard = (
       style="${slotVariables(cardPresentation.slots, typography)}"
       aria-label="${actionLabel(card, phase)}"${disabledAttribute}
     >
-      <span class="card-frame-art" aria-hidden="true"></span>
-      <span class="card-art-slot" aria-hidden="true">
-        ${tokenMarkup(cardPresentation.token, strategy)}
+      <span class="card-shadow" data-card-rig-layer="shadow" aria-hidden="true"></span>
+      <span class="card-frame-art" data-card-rig-layer="base-face" aria-hidden="true"></span>
+      <span class="card-content-layer" data-card-rig-layer="content">
+        <span class="card-art-slot" aria-hidden="true">
+          ${tokenMarkup(cardPresentation.token, strategy)}
+        </span>
+        <span class="card-content">
+          <span class="card-title">${card}</span>
+          <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
+        </span>
       </span>
-      <span class="card-content">
-        <span class="card-title">${card}</span>
-        <span class="card-desc">${CARD_DESCRIPTIONS[card]}</span>
+      <span
+        class="card-outer-frame"
+        data-card-rig-layer="outer-frame"
+        data-outer-frame="${composition.outerFrame}"
+        data-outer-frame-manifest-id="${outerFrame.manifestId ?? ''}"
+        aria-hidden="true"
+      >
+        <span class="card-outer-frame-asset" style="${outerFrameStyle}"></span>
       </span>
-      <span class="card-state" aria-hidden="true">${stateLabel}</span>
+      <span class="card-state" data-card-rig-layer="state" aria-hidden="true">${stateLabel}</span>
+      <span
+        class="card-local-fx"
+        data-card-rig-layer="card-local-fx"
+        data-card-rig-attachment="card-local"
+        data-card-rig-attachment-id="card-rig:${rigId}"
+        aria-hidden="true"
+      ></span>
     </button>
+  `;
+};
+
+export const renderCardSlot = (
+  card: Card,
+  index: number,
+  phase: Phase,
+  options: CardSlotPresentationOptions = {},
+): string => {
+  const environmentalSlot = options.environmentalSlot ?? 'none';
+  const slot = CARD_RIG_ENVIRONMENTAL_SLOTS[environmentalSlot];
+  const slotStyle = spriteVariables(slot.sourceRect);
+  const registerGameplayAnchor = options.registerGameplayAnchor ?? true;
+  const stageAnchorAttribute = registerGameplayAnchor
+    ? `data-stage-anchor="${handSlotAnchorId(index)}"`
+    : '';
+
+  return `
+    <span
+      class="card-slot-shell"
+      data-card-slot-surface="${environmentalSlot}"
+      data-card-slot-manifest-id="${slot.manifestId ?? ''}"
+      ${stageAnchorAttribute}
+    >
+      <span class="card-slot-art" style="${slotStyle}" aria-hidden="true"></span>
+      ${renderHandCard(
+        card,
+        index,
+        phase,
+        options.strategy ?? 'tokens',
+        false,
+        { rigId: options.rigId, outerFrame: options.outerFrame },
+      )}
+    </span>
   `;
 };
 

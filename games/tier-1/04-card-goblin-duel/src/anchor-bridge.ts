@@ -40,7 +40,7 @@ const rectLike = (rect: DOMRect): RectLike => ({
 });
 
 const requiredAnchorIds = (root: HTMLElement): string[] => {
-  const handCount = root.querySelectorAll("#hand .card-btn[data-stage-anchor^='hand-slot-']").length;
+  const handCount = root.querySelectorAll("#hand .card-slot-shell[data-stage-anchor^='hand-slot-']").length;
   return [
     ...BASE_REQUIRED_ANCHORS,
     ...Array.from({ length: handCount }, (_, index) => handSlotAnchorId(index)),

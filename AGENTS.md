@@ -49,7 +49,15 @@ cardGoblinH6_21BImplemented: true
 cardGoblinH6_21BTechnicalValidationPassed: true
 cardGoblinH6_21BHumanVisualReviewPassed: true
 cardGoblinCardRigImplemented: true
-cardGoblinH6_22Started: false
+cardGoblinH6_22Started: true
+cardGoblinH6_22AImplemented: true
+cardGoblinH6_22ATechnicalValidationPassed: true
+cardGoblinH6_22AHumanVisualReviewPassed: false
+cardGoblinH6_22R1Implemented: true
+cardGoblinH6_22R1TechnicalValidationPassed: true
+cardGoblinH6_22R1HumanStructuralReviewAccepted: true
+cardGoblinH6_22R1StandaloneVisualReviewRequired: false
+cardGoblinH6_23Started: false
 ```
 
 At this baseline:
@@ -65,6 +73,8 @@ At this baseline:
 - Card Goblin Duel H6.20E integrates the approved tabletop, protected result corridor, and seamless dock correction.
 - H6.21A promotes five governed card faces across six actions, selects Strategy B mapped tokens, and establishes banner and blank-parchment slot templates with complete Play, Replace, Locked, focus, terminal, and debug treatments. All eight evidence fixtures completed. Kryssie approved the card-surface system; H6.21A itself did not claim final optical typography approval.
 - H6.21B corrects optical title/body alignment and implements the preview-only CardRig with governed draw, played-card, discard, and hand anchors. Replacement-1 was technically complete but geographically rejected; replacement-2 corrected card provenance and destination, including the opening-card anchor race. Full and reduced motion, terminal accessibility labels, cancellation, and final semantic geography passed Human Visual Review. H6.22 had not begun during H6.21B.
+- H6.22A implements a preview-only typed CardEffectRecipe authority, deterministic effect runner, and disposable Phaser presentation port. It proves twelve required effect primitives, six card recipes, three additional state samples, full/reduced motion, cancellation, resize safety, repeated zero-residue execution, and both governed viewport sizes. The final bounded external run is `capture-20260724t233238z-p9668`; Human Visual Review remains pending. H6.23 live integration has not begun.
+- H6.22R1 composes one semantic CardRig root, keeps environmental slots outside the moving card, separates true frames from location sockets, and establishes seven explicit attachment authorities with resize/cancellation cleanup. Kryssie accepted R1 as structural plumbing and waived another standalone R1 visual-review lane; the completion goal now consumes that structure directly.
 
 Only the lane that changes one of these facts may update this block.
 

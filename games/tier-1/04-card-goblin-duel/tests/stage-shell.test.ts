@@ -231,7 +231,7 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(mainSource).toContain("searchParams.get('cardLab')");
     expect(mainSource).toContain("searchParams.get('cardSlots')");
     expect(mainSource).toContain("renderHandCard(card, index % 3, 'PlayerAction', cardLabStrategy, false)");
-    expect(anchorBridgeSource).toContain("#hand .card-btn[data-stage-anchor^='hand-slot-']");
+    expect(anchorBridgeSource).toContain("#hand .card-slot-shell[data-stage-anchor^='hand-slot-']");
     expect(anchorBridgeSource).not.toContain("querySelectorAll('#hand .card-btn').length");
     expect(captureSource).toContain("laneId: 'h6-21a-five-face-card-surface-lab-replacement-3'");
     expect(captureSource).toContain("require('./capture-contracts.cjs')");
@@ -262,7 +262,7 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(mainSource).toContain("searchParams.get('cardRig')");
     expect(mainSource).toContain("import.meta.env.MODE === 'development'");
     expect(mainSource).toContain('new DomCardRigPort');
-    expect(mainSource).toContain("renderHandCard(card, index, phase, 'tokens', false)");
+    expect(mainSource).toContain('renderCardSlot(card, index, phase');
     expect(mainSource).toContain('__cardRigLabStatus');
     expect(mainSource).not.toContain("cardRigFixtureId === 'terminal-lock' ? 'Terminal'");
     expect(cardRigSource).toContain('CARD_RIG_FIXTURES');
