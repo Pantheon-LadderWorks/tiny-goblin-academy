@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "lane": "h6-22r0-vfx-mastery-forge-stabilization-replacement-2",
+  "captureId": "capture-20260725t151217z-p17676",
+  "authority": "external-evidence",
+  "status": "technical-complete-human-review-pending",
+  "externalRootHint": "Tiny-Goblin-Academy/Evidence/level-04-card-goblin-duel/h6-22r0-vfx-mastery-forge-stabilization-replacement-2/capture-20260725t151217z-p17676",
+  "history": [
+    {
+      "lane": "h6-22r0-vfx-mastery-forge-stabilization",
+      "status": "failed-initialization",
+      "note": "A mismatched parameter-output binding stopped rendering before the animation loop. The directory is preserved and is not review authority."
+    },
+    {
+      "lane": "h6-22r0-vfx-mastery-forge-stabilization-replacement-1",
+      "status": "superseded-visual-review",
+      "note": "Rendering and interaction passed, but visual inspection found overlapping contact-sheet labels. The directory is preserved and is not final authority."
+    }
+  ],
+  "verification": {
+    "viewports": ["1280x660", "1024x580"],
+    "cards": 6,
+    "trueFrameChoicesIncludingNone": 4,
+    "environmentalSlotChoicesIncludingNone": 6,
+    "attachmentAuthorities": 7,
+    "traceSamples": 201,
+    "traceCountRange": [2, 2],
+    "traceHeadSeparation": 0.5,
+    "recipeRoundTrip": true,
+    "externalNetworkRequests": 0,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "minimumViewportHorizontalOverflow": false
+  },
+  "reviewFiles": [
+    {"path": "originals/00-discovery-all-face-candidate-contact-sheet.png", "sha256": "93b97b96ac4c43b3a276d0e3f8d16931ad97085e329b9268f8d22b349f147be6", "bytes": 2392398, "status": "discovery-only", "note": "Preserves the original all-candidate comparison; green, teal, gold-glow, red-corner, and gray-gold entries are now classified as environmental slot surfaces rather than CardRig outer frames."},
+    {"path": "stills/01-forge-overview-1280x660.png", "sha256": "5f8d91dc9453b4d69521263c53525e4f820f3091546a633954f6045e6183840b", "bytes": 641755},
+    {"path": "stills/02-true-frame-contact-sheet.png", "sha256": "587fdb4b2d3b1006ffc7eade9f1edc8ebeb3f0fe86eb1919f054ecc370bb20b0", "bytes": 394828},
+    {"path": "stills/03-slot-state-contact-sheet.png", "sha256": "5d72af270f45bc1bccc3b31419d2031ca249d0ae340ea7726df999819800f211", "bytes": 433402},
+    {"path": "stills/04-trace-seam-1.png", "sha256": "7f5f0a7a68d69fb7939f806efe00549a84f17142739709368392dbfaa99da06e", "bytes": 568568},
+    {"path": "stills/04-trace-seam-2.png", "sha256": "2ca0b2067116b9bceccaaac29b9073bd3b2fc4aa88e0a4c2c3fffe754a716cc8", "bytes": 568780},
+    {"path": "stills/04-trace-seam-3.png", "sha256": "8389be579b05067eb91b20660794cf0d53f23fe10bc6ab380605609b7f320ec2", "bytes": 568790},
+    {"path": "stills/04-trace-seam-4.png", "sha256": "0da6d74509ffb03e13f2baf21a0103e3d0efed6c5834a2a4a60a3e165067bcb6", "bytes": 568481},
+    {"path": "stills/04-trace-seam-5.png", "sha256": "10d0f3e682bf7a3b86db8ea96c412afb7cc70e6b7438c011d3f3b8a270eed266", "bytes": 568383},
+    {"path": "stills/04-trace-seam-6.png", "sha256": "8fe6bca34834d4a5566efcef054b3635241624bc830c8e7ed3c8d2ad76847af9", "bytes": 568545},
+    {"path": "stills/05-reduced-motion-static-rim.png", "sha256": "23bcc8b4dc035e01a80446d10284fecb0ca813426f3b76e9ff31823e2de2df1e", "bytes": 567253},
+    {"path": "stills/06-draw-pile-attachment.png", "sha256": "e31c72fe183eb5febf74f8d1ec588ed3439adb2846d39d951721d6db6f7f66de", "bytes": 568488},
+    {"path": "stills/07-discard-pile-attachment.png", "sha256": "38443ccca6707fd98d3ab773f2d5bf2ed593cebd5e975177311a30ae33ba1916", "bytes": 567986},
+    {"path": "stills/08-enemy-target-activation.png", "sha256": "fafaebd51692f4eecee6950298141c322e014ab1d0a5fcf67277d6293152c589", "bytes": 563157},
+    {"path": "stills/09-lifecycle-playhead.png", "sha256": "41f429ebcfb5d2e26bf058db9f269dc7f006c33e710ad77747d0318c9d58e3fd", "bytes": 644857},
+    {"path": "stills/10-recipe-json-round-trip.png", "sha256": "fcbd7128fbccd1ba726f5924f8dfa770281f1331209f3ec5503483ce3ec138ce", "bytes": 648647},
+    {"path": "stills/11-forge-minimum-1024x580.png", "sha256": "40b4f76f830694afdf2243844508f6f1c8299dfea628cce56b732306ee597be9", "bytes": 382655},
+    {"path": "recordings/perimeter-two-trace-clockwise-laps.webm", "sha256": "a78cff6c8a464929eedde0ff223c372009eec61da134859c5b0dd4fdf26f32f0", "bytes": 734141},
+    {"path": "originals/heavy-bonk-card-vfx-candidate.json", "sha256": "8e7f14d44988db24c17a88c9e2e4afc975b629b84dc057a7af58a5ca5d62ebc3", "bytes": 939}
+  ]
+}
