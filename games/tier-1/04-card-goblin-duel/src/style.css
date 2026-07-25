@@ -506,15 +506,64 @@ button {
   width: var(--card-width);
   aspect-ratio: 123 / 170;
   align-self: end;
+  overflow: visible;
+}
+
+.card-slot-shell::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 7% 8% 4%;
+  border: 1px solid rgba(255, 226, 145, 0.12);
+  border-radius: 12% / 9%;
+  box-shadow: inset 0 0 18px rgba(6, 3, 10, 0.32);
+  pointer-events: none;
+}
+
+.card-slot-shell:has(.card-btn:hover),
+.card-slot-shell:has(.card-btn:focus-visible) {
+  filter: drop-shadow(0 0 9px rgba(255, 219, 105, 0.48));
+}
+
+.card-slot-shell[data-card-slot-state='replacement'] {
+  filter: drop-shadow(0 0 8px rgba(255, 114, 97, 0.42));
+}
+
+.card-slot-shell[data-card-slot-state='locked'] {
+  filter: saturate(0.72) brightness(0.78);
+}
+
+.card-slot-shell[data-card-slot-state='vacant']::before {
+  content: 'VACANT';
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 28%;
+  transform: translateX(-50%);
+  color: rgba(255, 241, 198, 0.38);
+  font-family: Arial, sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  pointer-events: none;
+}
+
+.card-slot-vacancy {
+  position: absolute;
+  z-index: 1;
+  inset: 10% 12% 8%;
+  border-radius: 12% / 9%;
+  background: radial-gradient(circle at 50% 35%, rgba(97, 156, 118, 0.08), transparent 64%);
+  pointer-events: none;
 }
 
 .card-slot-art {
   position: absolute;
   z-index: 0;
   left: 50%;
-  bottom: -2%;
   display: block;
-  height: 96%;
+  height: 103%;
+  bottom: -3%;
   aspect-ratio: var(--sprite-aspect, 123 / 170);
   transform: translateX(-50%);
   background-image: var(--card-frame-sheet-url);

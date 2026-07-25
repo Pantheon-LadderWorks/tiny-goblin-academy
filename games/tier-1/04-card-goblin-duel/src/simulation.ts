@@ -1,6 +1,8 @@
 export type Card = 'Strike' | 'Guard' | 'Mend' | 'Spark' | 'Stun' | 'Heavy Bonk';
 export type Phase = 'PlayerAction' | 'SparkChoice' | 'Terminal';
 
+export const HAND_CAPACITY = 3;
+
 export type GameState = {
     phase: Phase;
     hand: Card[];
@@ -17,7 +19,7 @@ const allCards: Card[] = ['Strike', 'Guard', 'Mend', 'Spark', 'Stun', 'Heavy Bon
 
 export const createGame = (): GameState => ({
     phase: 'PlayerAction',
-    hand: allCards.slice(0, 3),
+    hand: allCards.slice(0, HAND_CAPACITY),
     queue: allCards.slice(3),
     playerHp: 10,
     enemyHp: 12,
@@ -28,7 +30,7 @@ export const createGame = (): GameState => ({
 });
 
 const drawToHand = (s: GameState) => {
-    while (s.hand.length < 3 && s.queue.length > 0) {
+    while (s.hand.length < HAND_CAPACITY && s.queue.length > 0) {
         s.hand.push(s.queue.shift()!);
     }
 };

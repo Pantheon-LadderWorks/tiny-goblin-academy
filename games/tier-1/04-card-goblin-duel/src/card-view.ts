@@ -7,7 +7,7 @@ import {
   type CardRigEnvironmentalSlotId,
   type CardRigOuterFrameId,
 } from './card-rig-composition';
-import type { Card, Phase } from './simulation';
+import { HAND_CAPACITY, type Card, type Phase } from './simulation';
 
 export const CARD_DESCRIPTIONS: Readonly<Record<Card, string>> = Object.freeze({
   Strike: 'Deal 2 damage.',
@@ -34,9 +34,29 @@ export type CardRigPresentationOptions = Readonly<{
 
 export type CardSlotPresentationOptions = CardRigPresentationOptions & Readonly<{
   environmentalSlot?: CardRigEnvironmentalSlotId;
+  slotState?: CardSlotVisualState;
   strategy?: CardSurfaceStrategy;
   registerGameplayAnchor?: boolean;
 }>;
+
+export type CardSlotVisualState =
+  | 'occupied'
+  | 'focused'
+  | 'selected'
+  | 'replacement'
+  | 'locked'
+  | 'vacant'
+  | 'incoming';
+
+export const CARD_SLOT_SURFACE_BY_STATE = Object.freeze({
+  occupied: 'green-slot',
+  focused: 'green-slot',
+  selected: 'gold-glow',
+  replacement: 'red-corners',
+  locked: 'gray-gold',
+  vacant: 'green-slot',
+  incoming: 'gold-glow',
+} satisfies Readonly<Record<CardSlotVisualState, CardRigEnvironmentalSlotId>>);
 
 type NormalizedRect = Readonly<{
   x: number;
@@ -386,37 +406,71 @@ export const renderHandCard = (
 };
 
 export const renderCardSlot = (
-  card: Card,
+  card: Card | undefined,
   index: number,
   phase: Phase,
   options: CardSlotPresentationOptions = {},
 ): string => {
-  const environmentalSlot = options.environmentalSlot ?? 'none';
+  const slotState = options.slotState
+    ?? (card === undefined
+      ? 'vacant'
+      : phase === 'SparkChoice'
+        ? 'replacement'
+        : phase === 'Terminal'
+          ? 'locked'
+          : 'occupied');
+  const environmentalSlot = options.environmentalSlot ?? CARD_SLOT_SURFACE_BY_STATE[slotState];
   const slot = CARD_RIG_ENVIRONMENTAL_SLOTS[environmentalSlot];
   const slotStyle = spriteVariables(slot.sourceRect);
   const registerGameplayAnchor = options.registerGameplayAnchor ?? true;
   const stageAnchorAttribute = registerGameplayAnchor
     ? `data-stage-anchor="${handSlotAnchorId(index)}"`
     : '';
+  const content = card === undefined
+    ? '<span class="card-slot-vacancy" aria-hidden="true"></span>'
+    : renderHandCard(
+      card,
+      index,
+      phase,
+      options.strategy ?? 'tokens',
+      false,
+      { rigId: options.rigId, outerFrame: options.outerFrame },
+    );
+  const accessibleLabel = card === undefined
+    ? `Empty hand slot ${index + 1} of ${HAND_CAPACITY}`
+    : `Hand slot ${index + 1} of ${HAND_CAPACITY}`;
 
   return `
     <span
       class="card-slot-shell"
+      role="group"
+      aria-label="${accessibleLabel}"
+      data-hand-slot-index="${index}"
+      data-card-slot-state="${slotState}"
       data-card-slot-surface="${environmentalSlot}"
       data-card-slot-manifest-id="${slot.manifestId ?? ''}"
       ${stageAnchorAttribute}
     >
       <span class="card-slot-art" style="${slotStyle}" aria-hidden="true"></span>
-      ${renderHandCard(
-        card,
-        index,
-        phase,
-        options.strategy ?? 'tokens',
-        false,
-        { rigId: options.rigId, outerFrame: options.outerFrame },
-      )}
+      ${content}
     </span>
   `;
+};
+
+export const renderHandDock = (
+  cards: readonly Card[],
+  phase: Phase,
+): string => {
+  if (cards.length > HAND_CAPACITY) {
+    throw new Error(`Hand contains ${cards.length} cards but capacity is ${HAND_CAPACITY}`);
+  }
+
+  return Array.from({ length: HAND_CAPACITY }, (_, index) => renderCardSlot(
+    cards[index],
+    index,
+    phase,
+    { strategy: 'tokens' },
+  )).join('');
 };
 
 export const renderNextCard = (card: Card | undefined): string => {

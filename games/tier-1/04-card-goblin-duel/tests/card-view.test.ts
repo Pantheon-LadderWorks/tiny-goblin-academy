@@ -8,9 +8,63 @@ import {
   renderHandCard,
   renderNextCard,
 } from '../src/card-view';
+import * as cardView from '../src/card-view';
 import { createGame, playCard, resolveSparkChoice } from '../src/simulation';
 
 describe('accessible Card Goblin DOM card views', () => {
+  it('renders the authoritative hand capacity as persistent environmental slots', () => {
+    const renderHandDock = (cardView as typeof cardView & {
+      renderHandDock?: (cards: readonly ['Strike', 'Guard', 'Mend'], phase: 'PlayerAction') => string;
+    }).renderHandDock;
+
+    expect(renderHandDock).toBeTypeOf('function');
+    if (!renderHandDock) return;
+
+    const html = renderHandDock(['Strike', 'Guard', 'Mend'], 'PlayerAction');
+    expect(html.match(/class="card-slot-shell/g)).toHaveLength(3);
+    expect(html.match(/data-hand-slot-index="[0-2]"/g)).toHaveLength(3);
+    expect(html.match(/data-stage-anchor="hand-slot-[0-2]"/g)).toHaveLength(3);
+    expect(html.match(/data-card-slot-state="occupied"/g)).toHaveLength(3);
+    expect(html.match(/data-card-slot-surface="green-slot"/g)).toHaveLength(3);
+    expect(html.match(/class="card-btn/g)).toHaveLength(3);
+  });
+
+  it('keeps the Heavy Bonk vacancy visible instead of shrinking the hand dock', () => {
+    const renderHandDock = (cardView as typeof cardView & {
+      renderHandDock?: (cards: readonly ['Strike', 'Mend'], phase: 'PlayerAction') => string;
+    }).renderHandDock;
+
+    expect(renderHandDock).toBeTypeOf('function');
+    if (!renderHandDock) return;
+
+    const html = renderHandDock(['Strike', 'Mend'], 'PlayerAction');
+    expect(html.match(/class="card-slot-shell/g)).toHaveLength(3);
+    expect(html.match(/class="card-btn/g)).toHaveLength(2);
+    expect(html.match(/data-card-slot-state="vacant"/g)).toHaveLength(1);
+    expect(html).toContain('data-hand-slot-index="2"');
+    expect(html).toContain('aria-label="Empty hand slot 3 of 3"');
+  });
+
+  it('uses slot assets for replacement and terminal state without turning them into card frames', () => {
+    const renderHandDock = (cardView as typeof cardView & {
+      renderHandDock?: (cards: readonly ['Strike', 'Mend'], phase: 'SparkChoice' | 'Terminal') => string;
+    }).renderHandDock;
+
+    expect(renderHandDock).toBeTypeOf('function');
+    if (!renderHandDock) return;
+
+    const replacement = renderHandDock(['Strike', 'Mend'], 'SparkChoice');
+    expect(replacement.match(/data-card-slot-state="replacement"/g)).toHaveLength(2);
+    expect(replacement.match(/data-card-slot-surface="red-corners"/g)).toHaveLength(2);
+    expect(replacement).not.toContain('data-outer-frame="red-corners"');
+
+    const terminal = renderHandDock(['Strike', 'Mend'], 'Terminal');
+    expect(terminal.match(/data-card-slot-state="locked"/g)).toHaveLength(2);
+    expect(terminal.match(/data-card-slot-surface="gray-gold"/g)).toHaveLength(2);
+    expect(terminal.match(/data-card-slot-state="vacant"/g)).toHaveLength(1);
+    expect(terminal).not.toContain('data-outer-frame="gray-gold"');
+  });
+
   it('renders a playable semantic button with a stable hand anchor', () => {
     const html = renderHandCard('Strike', 0, 'PlayerAction');
 

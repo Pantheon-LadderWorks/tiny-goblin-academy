@@ -15,7 +15,7 @@ h6_22R1TechnicalValidationPassed: true
 h6_22R1HumanVisualReviewPassed: false
 h6_22R1HumanStructuralReviewAccepted: true
 h6_22R1StandaloneVisualReviewRequired: false
-h6_22R2Started: false
+h6_22R2Started: true
 h6_23Started: false
 ```
 

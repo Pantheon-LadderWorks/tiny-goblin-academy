@@ -47,6 +47,7 @@ import {
   CARD_LAB_CARDS,
   phasePresentation,
   renderCardSlot,
+  renderHandDock,
   renderHandCard,
   renderNextCard,
   type CardSurfaceStrategy,
@@ -862,12 +863,8 @@ const render = (focusIndex?: number): void => {
     return;
   }
 
-  hand.innerHTML = state.hand
-    .map((card, index) => renderCardSlot(card, index, state.phase, {
-      strategy: 'tokens',
-    }))
-    .join('');
-  handCount.textContent = `${state.hand.length} card${state.hand.length === 1 ? '' : 's'}`;
+  hand.innerHTML = renderHandDock(state.hand, state.phase);
+  handCount.textContent = `${state.hand.length} of 3 cards`;
   next.innerHTML = renderNextCard(state.queue[0]);
 
   const terminal = state.phase === 'Terminal';

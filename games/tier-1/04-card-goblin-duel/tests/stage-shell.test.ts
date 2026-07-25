@@ -122,6 +122,11 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(styles).toContain('--hand-dock-height: clamp(150px, 25vh, 166px);');
   });
 
+  it('keeps environmental hand-slot rims visible beneath occupied cards', () => {
+    expect(styles).toMatch(/\.card-slot-art\s*\{[^}]*height:\s*103%[^}]*bottom:\s*-3%/s);
+    expect(styles).toMatch(/\.card-slot-shell\s*\{[^}]*overflow:\s*visible/s);
+  });
+
   it('measures rendered card exposure and protects the complete result corridor', () => {
     expect(captureSource).toContain("rect('.tabletop-scene')");
     expect(captureSource).toContain('tabletopOverlapRatio');
