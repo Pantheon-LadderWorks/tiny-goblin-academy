@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "de072aefd8f836b07124e37256ed7eafbfec21a6",
+  "createdAt": "2026-07-25T20:10:00.000Z",
+  "gameId": "level-04-card-goblin-duel",
+  "laneId": "h6-closure-production-review",
+  "runId": "capture-20260725t161000z",
+  "externalRelativePath": "level-04-card-goblin-duel/h6-closure-production-review/capture-20260725t161000z",
+  "files": [
+    {
+      "relativePath": "01-opening-1280x660.png",
+      "mediaType": "image/png",
+      "bytes": 841560,
+      "sha256": "97ebe1909604aa7b3a85c6945d0df87296b1c35d5350c3c0486915798e8bc1ca"
+    },
+    {
+      "relativePath": "02-heavy-bonk-vacancy.png",
+      "mediaType": "image/png",
+      "bytes": 839520,
+      "sha256": "da51377b6cbb3a74844ba078c89acfb47e49bdebdcf13602b5965f53c7268571"
+    },
+    {
+      "relativePath": "03-terminal-1280x660.png",
+      "mediaType": "image/png",
+      "bytes": 795812,
+      "sha256": "6a5cd47f3c15de021ace3091370c171cc515e7737b1dbfc617c69e629d2e2dae"
+    },
+    {
+      "relativePath": "04-complete-production-lifecycle.webm",
+      "mediaType": "video/webm",
+      "bytes": 15799718,
+      "sha256": "9ff17aa0520cb877e910c0c729845c08554fff233b281debc2c9c1fce09eaccb"
+    },
+    {
+      "relativePath": "05-minimum-1024x580-segment.webm",
+      "mediaType": "video/webm",
+      "bytes": 2006972,
+      "sha256": "80f93fba7be7fe03d42de7407027f3239d44c1b32d38a3fa76b3dce1c5acbaff"
+    },
+    {
+      "relativePath": "06-reduced-motion-segment.webm",
+      "mediaType": "video/webm",
+      "bytes": 2294310,
+      "sha256": "9fdaaabf10613e664a62303bd490a9a19a0b2c7d7cf5a9ad26fb2f43afc8d3e0"
+    },
+    {
+      "relativePath": "07-focused-spark-sequence.webm",
+      "mediaType": "video/webm",
+      "bytes": 4199261,
+      "sha256": "9d4e4b75972bb66a7b6ec08be490aed97dbe276f265ef1b0c544f7ea1e482305"
+    },
+    {
+      "relativePath": "08-focused-heavy-bonk-sequence.webm",
+      "mediaType": "video/webm",
+      "bytes": 6703995,
+      "sha256": "1b6d8d9df9938fbf110dee464552dec8b2a3027b314fbd99bcb87d9d5acf0018"
+    },
+    {
+      "relativePath": "09-victory-1280x660.png",
+      "mediaType": "image/png",
+      "bytes": 805972,
+      "sha256": "45a10c9927edd7b1c77b74ecaeb8788d35b514e47b1429c8019f32e73e176eda"
+    },
+    {
+      "relativePath": "10-final-1024x580.png",
+      "mediaType": "image/png",
+      "bytes": 556958,
+      "sha256": "3dddd656abf7ea891193011215469858173db7411dab452769068c72fa91ae87"
+    },
+    {
+      "relativePath": "11-slot-dock-state-contact-sheet.png",
+      "mediaType": "image/png",
+      "bytes": 352887,
+      "sha256": "9e576aad7e318a3ff5fa978bf7495c95f55fbbf7258417c0e66ea9f7396418cc"
+    },
+    {
+      "relativePath": "12-six-card-vfx-keyframes.png",
+      "mediaType": "image/png",
+      "bytes": 470840,
+      "sha256": "6ee97e0dcb912528ab52541c39910707237c77255835c9c6be61006f933fef43"
+    },
+    {
+      "relativePath": "supplemental-review.json",
+      "mediaType": "application/json",
+      "bytes": 854,
+      "sha256": "690edd496da8ba3998840a896a171fdd726e77cf0ef3058511531863ee3863ea"
+    },
+    {
+      "relativePath": "technical-review.json",
+      "mediaType": "application/json",
+      "bytes": 1051,
+      "sha256": "391a958097be5741238d26544f0238ee997e560e1aa1320818da09761811318e"
+    }
+  ],
+  "captureConfiguration": {
+    "listenerHost": "127.0.0.1",
+    "listenerPort": 5175,
+    "browser": "chromium",
+    "viewports": [
+      { "width": 1280, "height": 660 },
+      { "width": 1024, "height": 580 }
+    ],
+    "motion": ["full", "reduced"],
+    "reviewSubjects": [
+      "opening deal and persistent slots",
+      "all six card materials during one live duel",
+      "Spark replacement",
+      "Heavy Bonk vacancy",
+      "enemy response",
+      "victory and defeat terminal locks and outcome accents",
+      "persistent slot and dock state matrix",
+      "focused Spark and Heavy Bonk sequences",
+      "six-card VFX material keyframes",
+      "governed typography"
+    ]
+  },
+  "technicalResult": {
+    "documentContained": true,
+    "inputUnlockedAtEnd": true,
+    "effectResidue": 0,
+    "consoleErrors": 0,
+    "completeAccessibleLockedLabels": true,
+    "deterministicVictory": true,
+    "bothSupportedViewports": true,
+    "fullAndReducedMotion": true,
+    "supplementalConsoleErrors": 0,
+    "recordingsBeginStyled": true,
+    "bootstrapPageNoise": false
+  },
+  "humanReview": {
+    "status": "passed",
+    "note": "Kryssie approved the repaired production VFX and completed a full styled duel through the Tauri Hub on 2026-07-27. Remaining visual polish belongs to future VFX-mastery work."
+  }
+}

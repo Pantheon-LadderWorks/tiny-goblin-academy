@@ -20,6 +20,7 @@ async function snapshot(page) {
     cards: Array.from(document.querySelectorAll('#hand .card-btn')).map((card) => card.dataset.cardName),
     phase: document.body.className,
     terminal: !document.querySelector('#terminal-outcome')?.hidden,
+    terminalMessage: document.querySelector('#terminal-message')?.textContent,
     locked: Array.from(document.querySelectorAll('#hand .card-btn')).every((card) => card.disabled),
   }));
 }
@@ -98,6 +99,20 @@ async function reset(page) {
   console.log('PASS terminal lifecycle');
 
   await reset(page);
+  await clickCard(page, 'Guard');
+  await clickCard(page, 'Spark');
+  await clickCard(page, 'Mend');
+  for (const card of ['Stun', 'Heavy Bonk', 'Guard', 'Mend', 'Stun', 'Heavy Bonk', 'Strike', 'Guard', 'Mend', 'Stun', 'Heavy Bonk']) {
+    await clickCard(page, card);
+  }
+  current = await snapshot(page);
+  if (!current.terminal || !current.locked || !current.status.effects.includes('victory')) {
+    throw new Error(`Deterministic victory presentation failed: ${JSON.stringify(current)}`);
+  }
+  if (!current.terminalMessage?.startsWith('Victory')) throw new Error('Victory copy was not presented.');
+  console.log('PASS victory lifecycle');
+
+  await reset(page);
   const moving = page.locator('#hand .card-btn').first();
   await moving.click();
   await page.waitForFunction(() => window.__cardGoblinPresentationStatus?.status === 'running');
@@ -116,6 +131,7 @@ async function reset(page) {
     spark: 'card -> target -> discard -> replacement -> refill',
     heavyBonk: 'vacancy preserved',
     terminal: 'locked with outcome accent',
+    victory: 'deterministic victory locked with victory accent',
     cancellation: 'resize clean',
     consoleErrors: errors.length,
   }, null, 2));

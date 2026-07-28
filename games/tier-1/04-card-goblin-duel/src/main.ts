@@ -5,7 +5,9 @@ import cardTokenSheetUrl from '../../../../assets/academy/games/card-goblin-duel
 import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
-import { PhaserCardEffectPort } from './card-effect-phaser';
+import { CARD_EFFECT_TOKEN_SHEET_TEXTURE, PhaserCardEffectPort } from './card-effect-phaser';
+import { buildCombatFeedbackPlan, type CombatFeedbackPlan } from './combat-feedback';
+import { DomCombatFeedbackController } from './combat-feedback-dom';
 import {
   CARD_LIFECYCLE_EFFECT_RECIPES,
   CARD_EFFECT_FIXTURES,
@@ -237,6 +239,13 @@ const discardAnchor = document.querySelector<HTMLElement>(
   `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS.playerDiscardTarget}"]`,
 )!;
 const enemyStatus = document.querySelector<HTMLElement>('.enemy-status')!;
+const playerStatus = document.querySelector<HTMLElement>('.player-status-rail')!;
+const combatFeedback = new DomCombatFeedbackController({
+  playerPanel: playerStatus,
+  enemyPanel: enemyStatus,
+  playerHp,
+  enemyHp,
+});
 
 const EMPTY_EFFECT_COUNTS: EffectResourceCounts = Object.freeze({
   emitters: 0,
@@ -259,6 +268,10 @@ let productionPresentationGeneration = 0;
 let productionInputLocked = false;
 let productionOpeningStarted = false;
 let activeEffectCard: Card | undefined;
+let activeEffectRecipe: CardEffectRecipeId | undefined;
+let activeCombatPlan: CombatFeedbackPlan | undefined;
+let activationFeedbackShown = false;
+let retaliationFeedbackShown = false;
 let stageGraphics: Phaser.GameObjects.Graphics;
 let debugGraphics: Phaser.GameObjects.Graphics;
 let debugLabels: Phaser.GameObjects.Text[] = [];
@@ -451,6 +464,9 @@ const game = new Phaser.Game({
     mode: Phaser.Scale.RESIZE,
   },
   scene: {
+    preload() {
+      (this as Phaser.Scene).load.image(CARD_EFFECT_TOKEN_SHEET_TEXTURE, cardTokenSheetUrl);
+    },
     create() {
       const scene = this as Phaser.Scene;
       stageGraphics = scene.add.graphics().setDepth(0).setVisible(false);
@@ -479,7 +495,10 @@ const game = new Phaser.Game({
           scene,
           snapshot: () => anchorSnapshot,
           cardElement: () => visibleCardElement(activeEffectCard),
-          onLayer: (layer) => window.__cardEffectLabStatus?.layers.push(layer.id),
+          onLayer: (layer) => {
+            window.__cardEffectLabStatus?.layers.push(layer.id);
+            presentProductionCombatFeedback(layer.kind);
+          },
           onCleanup: (reason, counts) => window.__cardEffectLabStatus?.cleanup.push({ reason, counts }),
         });
         cardEffectRunner = new CardEffectRunner(cardEffectPort);
@@ -682,12 +701,31 @@ const visibleCardElement = (card?: Card): HTMLElement | undefined => {
     ?? buttons[0];
 };
 
+const presentProductionCombatFeedback = (kind: string): void => {
+  if (!activeCombatPlan || !activeEffectRecipe) return;
+  const activationTrigger = (
+    (activeEffectRecipe === 'strike' || activeEffectRecipe === 'spark') && kind === 'impact-burst'
+  ) || (activeEffectRecipe === 'guard' && kind === 'shield-pulse')
+    || (activeEffectRecipe === 'mend' && kind === 'healing-rise')
+    || (activeEffectRecipe === 'stun' && kind === 'orbiting-motes')
+    || (activeEffectRecipe === 'heavy-bonk' && kind === 'dust-burst');
+  if (activationTrigger && !activationFeedbackShown) {
+    activationFeedbackShown = true;
+    for (const event of activeCombatPlan.activation) combatFeedback.show(event);
+  }
+  if (activeEffectRecipe === 'enemy-attack' && kind === 'impact-burst' && !retaliationFeedbackShown) {
+    retaliationFeedbackShown = true;
+    for (const event of activeCombatPlan.retaliation) combatFeedback.show(event);
+  }
+};
+
 const playProductionEffect = async (
   recipeId: CardEffectRecipeId,
   card?: Card,
 ): Promise<void> => {
   if (!cardEffectRunner) return;
   activeEffectCard = card;
+  activeEffectRecipe = recipeId;
   window.__cardGoblinPresentationStatus?.effects.push(recipeId);
   const result = await cardEffectRunner.play(recipeId, productionMode());
   if (result.status === 'cancelled') return;
@@ -899,6 +937,12 @@ const performProductionAction = async (index: number): Promise<void> => {
     : playCard(before, index);
   if (after === before) return;
 
+  activeCombatPlan = before.phase === 'SparkChoice'
+    ? undefined
+    : buildCombatFeedbackPlan(before, after, selectedCard);
+  activationFeedbackShown = false;
+  retaliationFeedbackShown = false;
+
   state = after;
   publishCardGoblinTransition(ledger, {
     before,
@@ -959,6 +1003,8 @@ const performProductionAction = async (index: number): Promise<void> => {
     }
   } finally {
     activeEffectCard = undefined;
+    activeEffectRecipe = undefined;
+    activeCombatPlan = undefined;
     if (generation === productionPresentationGeneration) setProductionInputLocked(false);
   }
 };
@@ -1124,6 +1170,7 @@ resetDuel.addEventListener('click', () => {
   productionPresentationGeneration += 1;
   productionCardRig?.cancel('reset');
   cardEffectRunner?.cancel('reset');
+  combatFeedback.cleanup();
   activeEffectCard = undefined;
   setProductionInputLocked(false);
   state = createGame();
@@ -1141,6 +1188,7 @@ const onViewportResize = (): void => {
   }
   if (window.__cardEffectLabStatus?.status === 'running') {
     cardEffectRunner?.cancel('resize');
+    combatFeedback.cleanup();
   }
   if (productionPresentationEnabled && productionInputLocked) {
     productionPresentationGeneration += 1;
@@ -1166,6 +1214,7 @@ window.addEventListener('beforeunload', () => {
   productionCardRig?.cancel('reset');
   cardRigAttachmentController?.cleanup();
   cardEffectRunner?.cancel('reset');
+  combatFeedback.cleanup();
   window.removeEventListener('resize', onViewportResize);
   window.removeEventListener('message', onHubLedgerMessage);
   anchorBridge?.destroy();

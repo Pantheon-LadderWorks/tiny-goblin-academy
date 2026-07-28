@@ -30,6 +30,7 @@ export type CardEffectLayerKind =
   | 'stage-response'
   | 'render-texture-stamp'
   | 'pile-response'
+  | 'draw-skip-cue'
   | 'victory-accent'
   | 'defeat-accent';
 
@@ -48,6 +49,7 @@ export const REQUIRED_EFFECT_PRIMITIVES = Object.freeze([
   'downward-impact',
   'dust-burst',
   'pile-response',
+  'draw-skip-cue',
   'victory-accent',
   'defeat-accent',
 ] as const satisfies readonly CardEffectLayerKind[]);
@@ -237,6 +239,7 @@ export const CARD_EFFECT_RECIPES = {
       layer('primitive-g8-pile', 8, 0, 'pile-response', 'discard-pile-local', 240, 'screen', 'pile-response'),
       layer('primitive-g9-victory', 9, 0, 'victory-accent', 'tabletop-local', 260, 'screen', 'victory-accent'),
       layer('primitive-g10-defeat', 10, 0, 'defeat-accent', 'player-target', 260, 'normal', 'defeat-accent'),
+      layer('primitive-g11-skip', 11, 0, 'draw-skip-cue', 'draw-pile-local', 360, 'normal', 'draw-skip-cue'),
     ],
     [
       layer('primitive-reduced-rim', 0, 0, 'rim-glow', 'card-local', 130, 'screen', 'rim-emphasis'),
@@ -265,12 +268,12 @@ export const CARD_EFFECT_RECIPES = {
     'Guard — protective teal ward',
     0x5ed5d1,
     [
-      layer('guard-g0-surface', 0, 0, 'surface-prep', 'card-local', 220, 'normal', 'guarded-surface'),
-      layer('guard-g0-trace', 0, 1, 'rim-trace', 'card-local', 320, 'screen', 'teal-perimeter-forms'),
-      layer('guard-g1-shield', 1, 0, 'shield-pulse', 'player-target', 360, 'screen', 'shield-forms'),
-      layer('guard-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 440, 'screen', 'protective-ring', { maxScale: 1.55 }),
-      layer('guard-g2-motes', 2, 1, 'orbiting-motes', 'player-target', 520, 'add', 'restrained-perimeter', { count: 5 }),
-      layer('guard-g3-pulse', 3, 0, 'target-pulse', 'player-target', 240, 'screen', 'guard-state-emphasis', { scale: 1.04 }),
+      layer('guard-g0-surface', 0, 0, 'surface-prep', 'card-local', 260, 'normal', 'guarded-surface'),
+      layer('guard-g0-trace', 0, 1, 'rim-trace', 'card-local', 360, 'screen', 'teal-perimeter-forms'),
+      layer('guard-g1-shield', 1, 0, 'shield-pulse', 'player-target', 460, 'screen', 'shield-rises-and-braces'),
+      layer('guard-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 420, 'screen', 'protective-ring', { maxScale: 1.45 }),
+      layer('guard-g2-motes', 2, 1, 'orbiting-motes', 'player-target', 420, 'add', 'restrained-shield-motes', { count: 3, turns: 0.45 }),
+      layer('guard-g3-pulse', 3, 0, 'target-pulse', 'player-target', 260, 'screen', 'guard-state-emphasis', { scale: 1.04 }),
     ],
     [
       layer('guard-reduced-rim', 0, 0, 'rim-glow', 'card-local', 140, 'screen', 'guard-card-emphasis'),
@@ -283,11 +286,11 @@ export const CARD_EFFECT_RECIPES = {
     'Mend — restorative rise',
     0x77d27a,
     [
-      layer('mend-g0-rim', 0, 0, 'rim-glow', 'card-local', 260, 'screen', 'healing-card-emphasis'),
-      layer('mend-g0-trace', 0, 1, 'rim-trace', 'card-local', 320, 'screen', 'gentle-life-trace'),
-      layer('mend-g1-rise', 1, 0, 'healing-rise', 'player-target', 620, 'add', 'upward-healing-motes', { count: 8 }),
-      layer('mend-g1-mask', 1, 1, 'masked-card-particles', 'card-local', 520, 'screen', 'card-local-heart-motes', { count: 6 }),
-      layer('mend-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 420, 'screen', 'soft-restorative-glow', { maxScale: 1.45 }),
+      layer('mend-g0-rim', 0, 0, 'rim-glow', 'card-local', 300, 'screen', 'healing-card-emphasis'),
+      layer('mend-g0-trace', 0, 1, 'rim-trace', 'card-local', 360, 'screen', 'gentle-life-trace'),
+      layer('mend-g1-rise', 1, 0, 'healing-rise', 'player-target', 720, 'add', 'upward-green-plus-motes', { count: 10, displacement: 84 }),
+      layer('mend-g1-mask', 1, 1, 'masked-card-particles', 'card-local', 560, 'screen', 'card-local-life-motes', { count: 7 }),
+      layer('mend-g2-ring', 2, 0, 'shockwave-ring', 'player-target', 460, 'screen', 'soft-restorative-glow', { maxScale: 1.45 }),
     ],
     [
       layer('mend-reduced-rim', 0, 0, 'rim-glow', 'card-local', 150, 'screen', 'healing-card-emphasis'),
@@ -300,12 +303,13 @@ export const CARD_EFFECT_RECIPES = {
     'Spark — gold star ignition',
     0xffd45a,
     [
-      layer('spark-g0-trace', 0, 0, 'rim-trace', 'card-local', 300, 'screen', 'gold-perimeter-charge'),
-      layer('spark-g0-shine', 0, 1, 'shine-sweep', 'card-local', 260, 'add', 'card-shine'),
-      layer('spark-g1-projectile', 1, 0, 'projectile', 'enemy-target', 460, 'add', 'star-travel', { shape: 'star' }),
-      layer('spark-g1-trail', 1, 1, 'trail-emitter', 'enemy-target', 460, 'add', 'additive-star-trail', { spread: 12 }),
-      layer('spark-g2-impact', 2, 0, 'impact-burst', 'enemy-target', 280, 'add', 'compact-starburst', { count: 14 }),
-      layer('spark-g2-ring', 2, 1, 'shockwave-ring', 'enemy-target', 340, 'screen', 'spark-impact-ring', { maxScale: 1.35 }),
+      layer('spark-g0-rim', 0, 0, 'rim-glow', 'card-local', 300, 'screen', 'gold-card-charge'),
+      layer('spark-g0-trace', 0, 1, 'rim-trace', 'card-local', 380, 'screen', 'gold-perimeter-charge'),
+      layer('spark-g0-shine', 0, 2, 'shine-sweep', 'card-local', 340, 'add', 'card-bound-shine'),
+      layer('spark-g1-projectile', 1, 0, 'projectile', 'enemy-target', 520, 'add', 'visible-star-travel', { shape: 'star' }),
+      layer('spark-g1-trail', 1, 1, 'trail-emitter', 'enemy-target', 520, 'add', 'short-additive-star-trail', { spread: 9 }),
+      layer('spark-g2-impact', 2, 0, 'impact-burst', 'enemy-target', 320, 'add', 'compact-starburst', { count: 16 }),
+      layer('spark-g2-ring', 2, 1, 'shockwave-ring', 'enemy-target', 380, 'screen', 'spark-impact-ring', { maxScale: 1.4 }),
     ],
     compactPulse('spark', 0xffd45a, 'enemy-target'),
     'Spark',
@@ -333,14 +337,16 @@ export const CARD_EFFECT_RECIPES = {
     [
       layer('heavy-g0-rim', 0, 0, 'rim-glow', 'card-local', 300, 'screen', 'heavy-card-charge'),
       layer('heavy-g0-trace', 0, 1, 'rim-trace', 'card-local', 360, 'normal', 'weighty-perimeter-crawl'),
-      layer('heavy-g1-down', 1, 0, 'downward-impact', 'enemy-target', 680, 'normal', 'deliberate-downward-hit', { drop: 90 }),
-      layer('heavy-g2-dust', 2, 0, 'dust-burst', 'enemy-target', 520, 'screen', 'broad-dust-response', { count: 18 }),
-      layer('heavy-g2-ring', 2, 1, 'shockwave-ring', 'enemy-target', 460, 'screen', 'low-impact-ring', { maxScale: 1.8 }),
+      layer('heavy-g1-down', 1, 0, 'downward-impact', 'enemy-target', 680, 'normal', 'deliberate-downward-hit', { drop: 62 }),
+      layer('heavy-g2-dust', 2, 0, 'dust-burst', 'enemy-target', 520, 'screen', 'broad-dust-response', { count: 26, particleScale: 1.15, minSpeed: 34, maxSpeed: 96 }),
+      layer('heavy-g2-ring', 2, 1, 'shockwave-ring', 'enemy-target', 460, 'screen', 'low-impact-ring', { maxScale: 2 }),
       layer('heavy-g2-stage', 2, 2, 'stage-response', 'tabletop-local', 120, 'normal', 'restrained-stage-shake', { intensity: 0.0015 }),
+      layer('heavy-g3-skip', 3, 0, 'draw-skip-cue', 'draw-pile-local', 720, 'normal', 'skip-next-draw'),
     ],
     [
       layer('heavy-reduced-rim', 0, 0, 'rim-glow', 'card-local', 160, 'screen', 'heavy-card-emphasis'),
       layer('heavy-reduced-impact', 1, 0, 'target-pulse', 'enemy-target', 200, 'screen', 'compact-heavy-impact', { scale: 1.1 }),
+      layer('heavy-reduced-skip', 2, 0, 'draw-skip-cue', 'draw-pile-local', 360, 'normal', 'skip-next-draw'),
     ],
     'Heavy Bonk',
   ),

@@ -40,6 +40,24 @@ describe('H6.20C Hub-native contained duel table', () => {
     expect(markup).toContain('Read the hand. Plan the cycle. Bonk the Card Goblin.');
   });
 
+  it('uses the governed Card Goblin fantasy typography roles', () => {
+    expect(styles).toContain("font-family: 'TGA Cinzel Decorative'");
+    expect(styles).toContain("cinzeldecorative/CinzelDecorative-Bold.ttf");
+    expect(styles).toContain("font-family: 'TGA Almendra SC'");
+    expect(styles).toContain('almendrasc/AlmendraSC-Regular.ttf');
+    expect(styles).toContain("font-family: 'TGA Caudex'");
+    expect(styles).toContain('caudex/Caudex-Regular.ttf');
+    expect(styles).toContain('caudex/Caudex-Bold.ttf');
+    expect(styles).toMatch(/\.card-btn \.card-title\s*\{[^}]*TGA Almendra SC/s);
+    expect(styles).toMatch(/\.card-btn \.card-desc\s*\{[^}]*TGA Caudex/s);
+  });
+
+  it('gives Heavy Bonk one restrained resting identity signal with a calm substitute', () => {
+    expect(styles).toContain(".card-btn[data-card-name='Heavy Bonk'] .card-local-fx::after");
+    expect(styles).toContain('@keyframes heavy-bonk-resting-identity');
+    expect(styles).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*data-card-name='Heavy Bonk'[\s\S]*animation:\s*none/);
+  });
+
   it('removes duplicate Hub utilities and player-facing implementation labels', () => {
     expect(markup).not.toContain('Academy Help');
     expect(markup).not.toContain('Academy Dev');

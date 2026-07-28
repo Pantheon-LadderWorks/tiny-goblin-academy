@@ -8,6 +8,15 @@ The goal of Phase 1.5 was to establish a functional, structurally sound, read-on
 * Phase 1.5 achieved its foundational goals. The dependency/storage architecture (pnpm workspace) was resolved.
 * Level 1 rebuild is complete and has passed Human Review.
 
+## Current Visual-Integration Checkpoint
+
+Levels 1–3 remain closed. Level 4, Card Goblin Duel, has reached technical
+closure through three pushed production checkpoints: complete CardRig visual
+composition, persistent three-slot hand authority, and live recipe-driven VFX
+integration. Its final typography/UI patch and compact closure packet passed
+Human Visual/Runtime Review through the Tauri Hub. This does not authorize Level
+5 or claim that the wider Phase 1.5 program is complete.
+
 ## Completed Milestones
 
 ### 1. Asset Pantry Creation
@@ -44,7 +53,7 @@ With the read-only foundation locked in and the asset pantry stocked and structu
 3. ~~**Workspace / Install Architecture Plan**~~ (Completed)
 4. ~~**Level 1 Rebuild**~~ (Completed - Restored v0.1)
 5. **Launcher / Runtime Control-Surface Reconciliation**: (Active - H3.0) Reconciling docs to establish the Tauri shell as the next foundation spike.
-6. **Levels 2-10 Asset Upgrades**: Systematically update the surviving games to consume their respective assets from the pantry. (Asset integration has not started).
+6. **Levels 2-10 Asset Upgrades**: Continue the visual-integration curriculum. Levels 2–3 are closed; Level 4 has passed technical and Human Review closure.
 7. **Packaging / Playable Builds**: Package the upgraded games into final playable builds and manage release structures.
 8. **Tier 2 Planning**: Begin planning the next educational tier based on what Tier 1 has taught us and what the hub supports.
 

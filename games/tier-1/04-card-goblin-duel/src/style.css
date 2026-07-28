@@ -1,7 +1,39 @@
+@font-face {
+  font-family: 'TGA Cinzel Decorative';
+  src: url('../../../../assets/academy/fonts/source/google-fonts/cinzeldecorative/CinzelDecorative-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'TGA Almendra SC';
+  src: url('../../../../assets/academy/fonts/source/google-fonts/almendrasc/AlmendraSC-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TGA Caudex';
+  src: url('../../../../assets/academy/fonts/source/google-fonts/caudex/Caudex-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TGA Caudex';
+  src: url('../../../../assets/academy/fonts/source/google-fonts/caudex/Caudex-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
 :root {
   color: #fff1c6;
   background: #120d18;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'TGA Caudex', Georgia, 'Times New Roman', serif;
   font-synthesis: none;
   --ink: #fff1c6;
   --muted: #d1b4c4;
@@ -60,7 +92,7 @@ button {
 .well-label,
 .hand-label {
   color: var(--gold);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(0.58rem, 1.15vw, 0.72rem);
   font-weight: 800;
   letter-spacing: 0.13em;
@@ -70,9 +102,13 @@ button {
 .academy-header h1 {
   margin: 2px 0 0;
   color: var(--ink);
+  font-family: 'TGA Cinzel Decorative', Georgia, serif;
   font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 700;
   line-height: 0.94;
-  text-shadow: 3px 4px 0 #6e4057;
+  text-shadow:
+    0 2px 0 #6e4057,
+    0 5px 16px rgba(0, 0, 0, 0.42);
 }
 
 .academy-header p {
@@ -136,6 +172,42 @@ button {
   height: 100% !important;
 }
 
+.heavy-impact-mark {
+  position: absolute;
+  z-index: 2;
+  width: 112px;
+  height: 34px;
+  border: 3px solid #e8ad70;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--heavy-impact-color) 38%, transparent), transparent 68%);
+  box-shadow: 0 0 13px color-mix(in srgb, var(--heavy-impact-color) 72%, transparent), inset 0 0 9px rgba(126, 69, 41, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.45, 0.62);
+  animation: heavy-impact-mark var(--heavy-impact-duration, 520ms) cubic-bezier(0.12, 0.72, 0.2, 1) forwards;
+}
+
+.heavy-impact-mark::before,
+.heavy-impact-mark::after {
+  position: absolute;
+  left: -3%;
+  top: 50%;
+  width: 48%;
+  height: 3px;
+  border-radius: 999px;
+  background: #d99a62;
+  box-shadow: 0 0 5px var(--heavy-impact-color);
+  content: '';
+}
+
+.heavy-impact-mark::before { transform: translate(0, -50%) rotate(-12deg); }
+.heavy-impact-mark::after { left: 55%; transform: translate(0, -50%) rotate(12deg); }
+
+@keyframes heavy-impact-mark {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.45, 0.62); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(0.82, 0.86); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.45, 1.08); }
+}
+
 .tabletop-scene > :not(#stage-canvas) {
   position: relative;
   z-index: 2;
@@ -168,12 +240,98 @@ button {
 .phase-banner,
 .enemy-status,
 .player-status-rail {
+  position: relative;
   display: flex;
   min-width: 0;
   flex-direction: column;
   justify-content: center;
   gap: 2px;
   padding: 7px 13px;
+}
+
+.combat-float {
+  position: absolute;
+  z-index: 30;
+  left: 50%;
+  top: calc(100% + 5px);
+  min-width: 3rem;
+  transform: translateX(-50%);
+  font-family: 'TGA Cinzel Decorative', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: combat-float-rise 1100ms cubic-bezier(0.18, 0.72, 0.2, 1) forwards;
+}
+
+.enemy-status > .combat-float,
+.player-status-rail > .combat-float {
+  overflow-wrap: normal;
+  font-family: 'TGA Cinzel Decorative', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.player-status-rail > .combat-float {
+  left: 76%;
+}
+
+.combat-float.combat-feedback-guard,
+.combat-float.combat-feedback-stun,
+.combat-float.combat-feedback-blocked {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.combat-feedback-damage {
+  color: #ff7466;
+  text-shadow: 0 0 6px #4a1014, 0 0 14px rgba(255, 72, 62, 0.82);
+}
+
+.combat-feedback-heal {
+  color: #8cff9a;
+  text-shadow: 0 0 6px #123b21, 0 0 14px rgba(90, 255, 121, 0.72);
+}
+
+.combat-feedback-guard {
+  color: #76f5ee;
+  text-shadow: 0 0 6px #123b45, 0 0 14px rgba(82, 229, 238, 0.72);
+}
+
+.combat-feedback-stun,
+.combat-feedback-blocked {
+  color: #ffe272;
+  text-shadow: 0 0 6px #4a3510, 0 0 14px rgba(255, 217, 82, 0.76);
+}
+
+.enemy-status.combat-feedback-damage,
+.player-status-rail.combat-feedback-damage {
+  animation: hp-panel-damage 520ms ease-out;
+}
+
+.player-status-rail.combat-feedback-heal,
+.player-status-rail.combat-feedback-guard,
+.player-status-rail.combat-feedback-blocked,
+.enemy-status.combat-feedback-stun {
+  animation: hp-panel-positive 620ms ease-out;
+}
+
+@keyframes combat-float-rise {
+  0% { opacity: 0; transform: translate(-50%, 8px) scale(0.74); }
+  22% { opacity: 1; transform: translate(-50%, 0) scale(1.12); }
+  72% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 46px) scale(0.94); }
+}
+
+@keyframes hp-panel-damage {
+  0%, 100% { border-color: rgba(231, 189, 107, 0.34); filter: brightness(1); }
+  32% { border-color: #ff7466; filter: brightness(1.42); box-shadow: 0 0 20px rgba(255, 72, 62, 0.48); }
+}
+
+@keyframes hp-panel-positive {
+  0%, 100% { border-color: rgba(231, 189, 107, 0.34); filter: brightness(1); }
+  32% { border-color: #76f5ee; filter: brightness(1.34); box-shadow: 0 0 20px rgba(82, 229, 238, 0.42); }
 }
 
 .phase-banner {
@@ -184,15 +342,17 @@ button {
 
 .phase-banner strong {
   color: var(--gold);
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 400;
 }
 
 .phase-banner span,
-.enemy-status > span:last-child,
-.player-status-rail > span:last-child {
+.enemy-status > span:last-child:not(.combat-float),
+.player-status-rail > span:last-child:not(.combat-float) {
   overflow-wrap: anywhere;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: clamp(0.68rem, 1.15vw, 0.8rem);
   line-height: 1.25;
 }
@@ -215,7 +375,9 @@ button {
 .enemy-status strong,
 .player-status-rail strong {
   color: var(--ink);
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -245,7 +407,7 @@ button {
 .discard-well {
   align-items: center;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: 0.66rem;
   text-align: center;
 }
@@ -272,7 +434,7 @@ button {
 .queue-empty {
   margin: 0;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: 0.7rem;
 }
 
@@ -306,11 +468,11 @@ button {
   opacity: 0;
 }
 
-.enemy-center { left: 50%; top: 8%; }
-.enemy-impact { left: 50%; top: 25%; }
+.enemy-center { left: 36%; top: 10%; }
+.enemy-impact { left: 36%; top: 32%; }
 .resolution-center { left: 50%; top: 43%; }
-.player-impact { left: 50%; top: 65%; }
-.player-center { left: 50%; top: 82%; }
+.player-impact { left: 64%; top: 25%; }
+.player-center { left: 64%; top: 38%; }
 
 .academy-seal {
   position: absolute;
@@ -380,14 +542,16 @@ button {
 
 .resolution-copy strong {
   color: var(--ink);
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(0.86rem, 1.55vw, 1.1rem);
+  font-weight: 400;
   line-height: 1.15;
 }
 
 .resolution-copy span {
   overflow: hidden;
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: clamp(0.65rem, 1.05vw, 0.76rem);
   line-height: 1.2;
   text-overflow: ellipsis;
@@ -434,9 +598,10 @@ button {
   border-radius: 999px;
   background: var(--gold);
   color: var(--deep);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: 0.7rem;
   font-weight: 900;
+  word-spacing: 0.08em;
   cursor: pointer;
 }
 
@@ -476,13 +641,15 @@ button {
 .hand-heading-row h2 {
   margin: 0;
   color: var(--ink);
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(0.95rem, 1.7vw, 1.18rem);
+  font-weight: 400;
   line-height: 1;
 }
 
 #hand-count {
   color: var(--muted);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: 0.72rem;
 }
 
@@ -541,7 +708,7 @@ button {
   bottom: 28%;
   transform: translateX(-50%);
   color: rgba(255, 241, 198, 0.38);
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -694,6 +861,23 @@ button {
   pointer-events: none;
 }
 
+.card-btn[data-card-name='Heavy Bonk'] .card-local-fx::after {
+  content: '';
+  position: absolute;
+  inset: 2%;
+  border: 1px solid rgba(212, 149, 85, 0.52);
+  border-radius: inherit;
+  box-shadow:
+    0 0 7px rgba(212, 149, 85, 0.3),
+    inset 0 0 6px rgba(212, 149, 85, 0.18);
+  animation: heavy-bonk-resting-identity 3.8s ease-in-out infinite;
+}
+
+@keyframes heavy-bonk-resting-identity {
+  0%, 100% { opacity: 0.38; }
+  50% { opacity: 0.72; }
+}
+
 .card-local-fx.card-rig-fx-rim-trace::before {
   content: '';
   position: absolute;
@@ -712,6 +896,53 @@ button {
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
   animation: card-rig-rim-trace var(--card-rig-fx-duration, 320ms) linear 1;
+}
+
+.card-local-fx.card-rig-fx-charge,
+.card-local-fx.card-rig-fx-surface-prep {
+  animation: card-rig-charge var(--card-rig-fx-duration, 300ms) ease-in-out 1;
+  border: 2px solid color-mix(in srgb, var(--card-rig-fx-color) 82%, white 18%);
+  box-shadow:
+    0 0 10px var(--card-rig-fx-color),
+    0 0 22px color-mix(in srgb, var(--card-rig-fx-color) 58%, transparent),
+    inset 0 0 12px color-mix(in srgb, var(--card-rig-fx-color) 42%, transparent);
+}
+
+.card-local-fx.card-rig-fx-surface-prep {
+  background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--card-rig-fx-color) 20%, transparent), transparent 68%);
+}
+
+@keyframes card-rig-charge {
+  0%, 100% { opacity: 0.18; transform: scale(0.98); }
+  55% { opacity: 0.94; transform: scale(1.025); }
+}
+
+.card-local-fx.card-rig-fx-shine {
+  overflow: hidden;
+}
+
+.card-local-fx.card-rig-fx-shine::after {
+  position: absolute;
+  inset: -24% -42%;
+  transform: translateX(-68%) rotate(-16deg);
+  background: linear-gradient(
+    90deg,
+    transparent 38%,
+    color-mix(in srgb, var(--card-rig-fx-color) 52%, white 48%) 50%,
+    transparent 62%
+  );
+  content: '';
+  opacity: 0.48;
+  animation: card-rig-shine var(--card-rig-fx-duration, 340ms) ease-out 1;
+}
+
+@keyframes card-rig-shine {
+  to { transform: translateX(68%) rotate(-16deg); }
+}
+
+#duel-table.presentation-locked .resolution-copy {
+  left: 22%;
+  width: min(34%, 410px);
 }
 
 @keyframes card-rig-rim-trace {
@@ -868,11 +1099,14 @@ button {
   justify-content: center;
   overflow: visible;
   color: #2d1c25;
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(0.76rem, 1.22vw, 0.98rem);
-  font-weight: 900;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
+  word-spacing: 0.08em;
 }
 
 .card-btn .card-desc {
@@ -887,7 +1121,7 @@ button {
   overflow: visible;
   padding: 1.5% 2%;
   color: #3c2a31;
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Caudex', Georgia, serif;
   font-size: clamp(0.54rem, 0.79vw, 0.66rem);
   font-weight: 700;
   line-height: 1.14;
@@ -913,7 +1147,7 @@ button {
   border-radius: 999px;
   background: rgba(48, 31, 38, 0.88);
   color: #fff1c6;
-  font-family: Arial, sans-serif;
+  font-family: 'TGA Almendra SC', Georgia, serif;
   font-size: clamp(0.42rem, 0.58vw, 0.5rem);
   font-weight: 900;
   letter-spacing: 0.02em;
@@ -1034,6 +1268,27 @@ button {
   .card-local-fx.card-rig-fx-rim-trace::before {
     animation: none;
     opacity: 0.72;
+  }
+
+  .card-btn[data-card-name='Heavy Bonk'] .card-local-fx::after {
+    animation: none;
+    opacity: 0.52;
+  }
+
+  .combat-float,
+  .enemy-status.combat-feedback-damage,
+  .player-status-rail.combat-feedback-damage,
+  .player-status-rail.combat-feedback-heal,
+  .player-status-rail.combat-feedback-guard,
+  .player-status-rail.combat-feedback-blocked,
+  .enemy-status.combat-feedback-stun,
+  .card-local-fx.card-rig-fx-charge,
+  .card-local-fx.card-rig-fx-surface-prep {
+    animation-duration: 1ms;
+  }
+
+  .card-local-fx.card-rig-fx-shine::after {
+    animation-duration: 1ms;
   }
 }
 #duel-table.presentation-locked #hand .card-btn {

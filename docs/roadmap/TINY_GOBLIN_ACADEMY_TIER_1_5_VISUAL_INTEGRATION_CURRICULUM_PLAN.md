@@ -177,6 +177,17 @@ Teach authored moment-to-moment VFX: particle recipes, blend modes, effect timin
 
 Card Goblin owns particle construction because its deterministic card events provide clear triggers and expected outcomes. VFX must explain or celebrate state; it must never obscure the causal ledger or become gameplay truth.
 
+### Closure state
+
+Technical closure and Human Visual/Runtime Review complete. The production result uses a
+single semantic CardRig root for face, live content, true outer frame, state,
+card-local VFX, motion, and activation-source ownership. Three persistent hand
+slots remain visible through occupied, focused, selected, replacement, locked,
+vacant, and incoming states. Six typed full/reduced material recipes synchronize
+to live simulation events without becoming gameplay authority. The final
+typography/UI patch and compact external evidence packet were approved after a
+complete Tauri Hub playthrough.
+
 ## Level 5 — Dungeon Key Run
 
 ### Primary new discipline

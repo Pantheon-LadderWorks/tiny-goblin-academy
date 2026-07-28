@@ -7,6 +7,7 @@ import {
   type CardEffectRunContext,
   type EffectResourceCounts,
 } from '../src/card-effect-runner';
+import type { CardEffectRecipeId } from '../src/card-effect-recipes';
 
 const ZERO_COUNTS: EffectResourceCounts = Object.freeze({
   emitters: 0,
@@ -147,17 +148,31 @@ describe('CardEffectRunner', () => {
     expect(port.events.at(-1)).toBe('finish-recipe:guard');
   });
 
-  it('repeats execution without accumulating objects or emitters', async () => {
+  it('repeats every card recipe in full and reduced motion without accumulating resources', async () => {
     const port = new RecordingEffectPort();
     const runner = new CardEffectRunner(port, immediateClock);
+    const recipes: readonly CardEffectRecipeId[] = [
+      'strike',
+      'guard',
+      'mend',
+      'spark',
+      'stun',
+      'heavy-bonk',
+    ];
 
-    for (let index = 0; index < 4; index += 1) {
-      const result = await runner.play('heavy-bonk', 'full');
-      expect(result.status).toBe('completed');
-      expect(result.counts).toEqual(ZERO_COUNTS);
+    for (let repeat = 0; repeat < 3; repeat += 1) {
+      for (const recipe of recipes) {
+        for (const mode of ['full', 'reduced'] as const) {
+          const result = await runner.play(recipe, mode);
+          expect(result.status).toBe('completed');
+          expect(result.counts).toEqual(ZERO_COUNTS);
+          expect(port.counts()).toEqual(ZERO_COUNTS);
+        }
+      }
     }
 
-    expect(port.cleanups).toEqual(['complete', 'complete', 'complete', 'complete']);
+    expect(port.cleanups).toHaveLength(36);
+    expect(port.cleanups.every((reason) => reason === 'complete')).toBe(true);
     expect(port.counts()).toEqual(ZERO_COUNTS);
   });
 });

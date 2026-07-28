@@ -13,6 +13,10 @@ import type {
 
 const DOT_TEXTURE = 'tga-card-effect-dot';
 const STAR_TEXTURE = 'tga-card-effect-star';
+const PLUS_TEXTURE = 'tga-card-effect-plus';
+const SLASH_TEXTURE = 'tga-card-effect-slash';
+const BONK_TEXTURE = 'tga-card-effect-bonk';
+export const CARD_EFFECT_TOKEN_SHEET_TEXTURE = 'tga-card-effect-token-sheet';
 
 export type PhaserCardEffectPortOptions = Readonly<{
   scene: Phaser.Scene;
@@ -93,6 +97,31 @@ export class PhaserCardEffectPort implements CardEffectPort {
       star.fillPoints(this.starPoints(16, 16, 5, 5, 14), true);
       star.generateTexture(STAR_TEXTURE, 32, 32);
       star.destroy();
+    }
+    if (!this.scene.textures.exists(PLUS_TEXTURE)) {
+      const plus = this.scene.add.graphics();
+      plus.fillStyle(0xffffff, 1);
+      plus.fillRoundedRect(10, 1, 10, 28, 4);
+      plus.fillRoundedRect(1, 10, 28, 10, 4);
+      plus.generateTexture(PLUS_TEXTURE, 30, 30);
+      plus.destroy();
+    }
+    if (!this.scene.textures.exists(SLASH_TEXTURE)) {
+      const slash = this.scene.add.graphics();
+      slash.fillStyle(0xffffff, 1);
+      slash.fillTriangle(2, 15, 62, 2, 54, 13);
+      slash.fillStyle(0xffffff, 0.46);
+      slash.fillTriangle(5, 19, 52, 13, 38, 20);
+      slash.generateTexture(SLASH_TEXTURE, 64, 22);
+      slash.destroy();
+    }
+    if (!this.scene.textures.exists(BONK_TEXTURE)) {
+      const sheet = this.scene.textures.get(CARD_EFFECT_TOKEN_SHEET_TEXTURE).getSourceImage() as HTMLImageElement;
+      const bonk = this.scene.textures.createCanvas(BONK_TEXTURE, 124, 124);
+      if (!bonk) throw new Error('Unable to create Heavy Bonk effect texture');
+      bonk.context.clearRect(0, 0, 124, 124);
+      bonk.context.drawImage(sheet, 514, 2, 124, 124, 0, 0, 124, 124);
+      bonk.refresh();
     }
   }
 
@@ -214,11 +243,15 @@ export class PhaserCardEffectPort implements CardEffectPort {
     layer: CardEffectLayer,
     texture = DOT_TEXTURE,
   ): Phaser.GameObjects.Particles.ParticleEmitter {
+    const particleScale = numberParam(layer, 'particleScale', 0.8);
     const emitter = this.scene.add.particles(x, y, texture, {
       emitting: false,
       lifespan: { min: Math.max(160, layer.durationMs * 0.45), max: layer.durationMs },
-      speed: { min: 18, max: 72 },
-      scale: { start: 0.8, end: 0 },
+      speed: {
+        min: numberParam(layer, 'minSpeed', 18),
+        max: numberParam(layer, 'maxSpeed', 72),
+      },
+      scale: { start: particleScale, end: 0 },
       alpha: { start: 0.9, end: 0 },
       tint: layer.owner === 'guard' || layer.owner === 'stun'
         ? [0x7be9e0, 0xffd46b]
@@ -256,6 +289,19 @@ export class PhaserCardEffectPort implements CardEffectPort {
     context: CardEffectRunContext,
     includeGlow: boolean,
   ): Promise<void> {
+    const mount = this.cardElementProvider?.()?.querySelector<HTMLElement>('.card-local-fx');
+    if (mount) {
+      mount.style.setProperty('--card-rig-fx-color', `#${context.recipe.color.toString(16).padStart(6, '0')}`);
+      mount.style.setProperty('--card-rig-fx-duration', `${layer.durationMs}ms`);
+      mount.classList.add(includeGlow ? 'card-rig-fx-charge' : 'card-rig-fx-surface-prep');
+      this.domEffects.add(mount);
+      await context.clock.wait(layer.durationMs, context.signal);
+      mount.classList.remove('card-rig-fx-charge', 'card-rig-fx-surface-prep');
+      mount.style.removeProperty('--card-rig-fx-color');
+      mount.style.removeProperty('--card-rig-fx-duration');
+      this.domEffects.delete(mount);
+      return;
+    }
     const shape = this.cardRect(context.recipe.color, layer.kind === 'surface-prep' ? 0.16 : 0.04)
       .setBlendMode(blendMode(layer.blendMode))
       .setAlpha(0.18)
@@ -277,6 +323,19 @@ export class PhaserCardEffectPort implements CardEffectPort {
     layer: CardEffectLayer,
     context: CardEffectRunContext,
   ): Promise<void> {
+    const mount = this.cardElementProvider?.()?.querySelector<HTMLElement>('.card-local-fx');
+    if (mount) {
+      mount.style.setProperty('--card-rig-fx-color', `#${context.recipe.color.toString(16).padStart(6, '0')}`);
+      mount.style.setProperty('--card-rig-fx-duration', `${layer.durationMs}ms`);
+      mount.classList.add('card-rig-fx-shine');
+      this.domEffects.add(mount);
+      await context.clock.wait(layer.durationMs, context.signal);
+      mount.classList.remove('card-rig-fx-shine');
+      mount.style.removeProperty('--card-rig-fx-color');
+      mount.style.removeProperty('--card-rig-fx-duration');
+      this.domEffects.delete(mount);
+      return;
+    }
     const card = this.point('card-local');
     const width = Math.max(82, card.width * 0.9);
     const height = Math.max(116, card.height * 0.9);
@@ -318,13 +377,24 @@ export class PhaserCardEffectPort implements CardEffectPort {
       ? this.track(this.scene.add.rectangle(source.centerX, source.centerY, 1, 1, context.recipe.color, 0))
       : layer.parameters?.shape === 'star'
         ? this.track(this.scene.add.image(source.centerX, source.centerY, STAR_TEXTURE))
-        : this.track(this.scene.add.rectangle(source.centerX, source.centerY, 32, 7, context.recipe.color, 0.92).setRotation(-0.35));
+        : this.track(this.scene.add.image(source.centerX, source.centerY, SLASH_TEXTURE));
     if (shape instanceof Phaser.GameObjects.Image) shape.setTint(context.recipe.color);
+    const travelAngle = Phaser.Math.Angle.Between(
+      source.centerX,
+      source.centerY,
+      destination.centerX,
+      destination.centerY,
+    );
+    if (shape instanceof Phaser.GameObjects.Image && layer.parameters?.shape !== 'star') {
+      shape.setRotation(travelAngle).setScale(0.78);
+    }
     shape.setBlendMode(blendMode(layer.blendMode)).setDepth(730);
 
     let emitter: Phaser.GameObjects.Particles.ParticleEmitter | undefined;
     if (trailing) {
-      emitter = this.createEmitter(source.centerX, source.centerY, layer);
+      // A following emitter inherits the followed object's world position. Keep
+      // the emitter local or the source coordinate is applied twice.
+      emitter = this.createEmitter(0, 0, layer);
       emitter.startFollow(shape);
       emitter.start();
     }
@@ -352,9 +422,28 @@ export class PhaserCardEffectPort implements CardEffectPort {
   ): Promise<void> {
     const target = this.point(layer.target);
     const emitter = this.createEmitter(target.centerX, target.centerY, layer, texture);
-    emitter.explode(Math.round(numberParam(layer, 'count', 12)), target.centerX, target.centerY);
+    const count = Math.round(numberParam(layer, 'count', 12));
+    emitter.explode(count, 0, 0);
+    let impact: HTMLElement | undefined;
+    if (layer.owner === 'heavy-bonk' && layer.kind === 'dust-burst') {
+      const host = this.scene.game.canvas.parentElement;
+      if (host) {
+        impact = document.createElement('span');
+        impact.className = 'card-effect-transient heavy-impact-mark';
+        impact.style.left = `${(target.centerX / this.scene.scale.width) * 100}%`;
+        impact.style.top = `${((target.centerY + 12) / this.scene.scale.height) * 100}%`;
+        impact.style.setProperty('--heavy-impact-color', `#${context.recipe.color.toString(16).padStart(6, '0')}`);
+        impact.style.setProperty('--heavy-impact-duration', `${layer.durationMs}ms`);
+        host.append(impact);
+        this.domEffects.add(impact);
+      }
+    }
     await context.clock.wait(layer.durationMs, context.signal);
     this.destroyEmitter(emitter);
+    if (impact) {
+      impact.remove();
+      this.domEffects.delete(impact);
+    }
   }
 
   private async ring(
@@ -406,16 +495,20 @@ export class PhaserCardEffectPort implements CardEffectPort {
     context: CardEffectRunContext,
   ): Promise<void> {
     const target = this.point(layer.target);
-    const shield = this.track(this.scene.add.graphics().setDepth(725));
+    const shield = this.track(
+      this.scene.add.graphics()
+        .setPosition(target.centerX, target.centerY + 24)
+        .setDepth(725),
+    );
     shield.fillStyle(context.recipe.color, 0.18);
     shield.lineStyle(4, context.recipe.color, 0.92);
     shield.beginPath();
-    shield.moveTo(target.centerX, target.centerY - 44);
-    shield.lineTo(target.centerX + 38, target.centerY - 24);
-    shield.lineTo(target.centerX + 28, target.centerY + 30);
-    shield.lineTo(target.centerX, target.centerY + 52);
-    shield.lineTo(target.centerX - 28, target.centerY + 30);
-    shield.lineTo(target.centerX - 38, target.centerY - 24);
+    shield.moveTo(0, -44);
+    shield.lineTo(38, -24);
+    shield.lineTo(28, 30);
+    shield.lineTo(0, 52);
+    shield.lineTo(-28, 30);
+    shield.lineTo(-38, -24);
     shield.closePath();
     shield.fillPath();
     shield.strokePath();
@@ -423,6 +516,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
     await this.tween(shield, {
       scale: { from: 0.7, to: 1.04 },
       alpha: { from: 0.25, to: 0.96 },
+      y: { from: target.centerY + 24, to: target.centerY },
       yoyo: true,
     }, layer.durationMs / 2, context.signal);
     this.destroyObject(shield);
@@ -462,21 +556,33 @@ export class PhaserCardEffectPort implements CardEffectPort {
     const target = this.point(layer.target);
     const displacement = numberParam(layer, 'displacement', 72);
     const count = Math.round(numberParam(layer, 'count', 8));
-    const emitter = this.scene.add.particles(target.centerX, target.centerY + 24, STAR_TEXTURE, {
-      emitting: false,
-      lifespan: layer.durationMs,
-      speedX: { min: -12, max: 12 },
-      speedY: { min: -displacement * 1.4, max: -displacement * 0.7 },
-      scale: { start: 0.42, end: 0.08 },
-      alpha: { start: 0.9, end: 0 },
-      tint: [context.recipe.color, 0xffffff],
-      blendMode: blendMode(layer.blendMode),
-    }).setDepth(726);
-    this.emitters.add(emitter);
-    emitter.once(Phaser.GameObjects.Events.DESTROY, () => this.emitters.delete(emitter));
-    emitter.explode(count, target.centerX, target.centerY + 24);
-    await context.clock.wait(layer.durationMs, context.signal);
-    this.destroyEmitter(emitter);
+    const pluses = Array.from({ length: count }, (_, index) => {
+      const lane = index - (count - 1) / 2;
+      return this.track(
+        this.scene.add.image(
+          target.centerX + lane * 9,
+          target.centerY + 30 + (index % 2) * 7,
+          PLUS_TEXTURE,
+        )
+          .setTint(index % 3 === 0 ? 0xffffff : context.recipe.color)
+          .setBlendMode(blendMode(layer.blendMode))
+          .setDepth(726)
+          .setAlpha(0.16)
+          .setScale(0.58 + (index % 3) * 0.08),
+      );
+    });
+    await Promise.all(pluses.map(async (plus, index) => {
+      const delay = Math.round((layer.durationMs * 0.32 * index) / Math.max(1, count - 1));
+      if (delay > 0) await context.clock.wait(delay, context.signal);
+      await this.tween(plus, {
+        x: plus.x + ((index % 3) - 1) * 16,
+        y: plus.y - displacement * (0.78 + (index % 4) * 0.08),
+        alpha: { from: 0.16, to: 0.98 },
+        scale: { from: plus.scaleX, to: plus.scaleX * 1.26 },
+        yoyo: true,
+      }, Math.max(140, layer.durationMs - delay), context.signal);
+    }));
+    for (const plus of pluses) this.destroyObject(plus);
   }
 
   private async maskedParticles(
@@ -493,7 +599,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
     this.masks.add(mask);
     const emitter = this.createEmitter(card.centerX, card.centerY, layer, STAR_TEXTURE);
     emitter.setMask(mask);
-    emitter.explode(Math.round(numberParam(layer, 'count', 7)), card.centerX, card.centerY);
+    emitter.explode(Math.round(numberParam(layer, 'count', 7)), 0, 0);
     await context.clock.wait(layer.durationMs, context.signal);
     emitter.clearMask();
     this.destroyEmitter(emitter);
@@ -509,22 +615,17 @@ export class PhaserCardEffectPort implements CardEffectPort {
     const target = this.point(layer.target);
     const drop = numberParam(layer, 'drop', 88);
     const bonk = this.track(
-      this.scene.add.rectangle(
-        target.centerX,
-        target.centerY - drop,
-        44,
-        58,
-        context.recipe.color,
-        0.96,
-      ).setStrokeStyle(4, 0xffe0a0, 0.9)
+      this.scene.add.image(target.centerX, target.centerY - drop, BONK_TEXTURE)
         .setBlendMode(blendMode(layer.blendMode))
         .setDepth(735)
-        .setRotation(-0.08),
+        .setRotation(-0.16)
+        .setScale(0.72),
     );
     await this.tween(bonk, {
       y: target.centerY,
-      scaleX: { from: 0.82, to: 1.16 },
-      scaleY: { from: 0.82, to: 0.9 },
+      rotation: { from: -0.16, to: 0.08 },
+      scaleX: { from: 0.72, to: 0.94 },
+      scaleY: { from: 0.72, to: 0.62 },
     }, layer.durationMs, context.signal);
     this.destroyObject(bonk);
   }
@@ -574,23 +675,52 @@ export class PhaserCardEffectPort implements CardEffectPort {
     context: CardEffectRunContext,
   ): Promise<void> {
     const target = this.point(layer.target);
+    const width = Math.max(48, target.width * 0.68);
+    const height = Math.max(58, target.height * 0.68);
     const shape = this.track(
-      this.scene.add.rectangle(
-        target.centerX,
-        target.centerY,
-        Math.max(52, target.width * 0.72),
-        Math.max(66, target.height * 0.72),
-        context.recipe.color,
-        0.06,
-      ).setStrokeStyle(3, context.recipe.color, 0.78)
+      this.scene.add.graphics()
+        .setPosition(target.centerX, target.centerY + 4)
         .setBlendMode(blendMode(layer.blendMode))
         .setDepth(716),
     );
+    shape.fillStyle(context.recipe.color, 0.08);
+    shape.fillCircle(0, 0, Math.max(width, height) * 0.58);
+    shape.lineStyle(3, context.recipe.color, 0.82);
+    shape.strokeRoundedRect(-width / 2, -height / 2, width, height, 9);
+    shape.lineStyle(2, context.recipe.color, 0.5);
+    shape.strokeRoundedRect(-width / 2 + 5, -height / 2 - 5, width, height, 9);
     await this.tween(shape, {
       scale: { from: 0.94, to: numberParam(layer, 'scale', 1.1) },
       alpha: { from: 0.76, to: 0 },
+      y: { from: target.centerY + 4, to: target.centerY - 5 },
     }, layer.durationMs, context.signal);
     this.destroyObject(shape);
+  }
+
+  private async drawSkipCue(
+    layer: CardEffectLayer,
+    context: CardEffectRunContext,
+  ): Promise<void> {
+    const target = this.point('draw-pile-local');
+    const cue = this.track(
+      this.scene.add.text(target.centerX, target.centerY, '✕', {
+        fontFamily: 'Georgia, serif',
+        fontSize: '58px',
+        fontStyle: 'bold',
+        color: '#ff6f61',
+        stroke: '#35131a',
+        strokeThickness: 8,
+      }).setOrigin(0.5)
+        .setDepth(744)
+        .setAlpha(0.1)
+        .setScale(0.62),
+    );
+    await this.tween(cue, {
+      alpha: { from: 0.1, to: 1 },
+      scale: { from: 0.62, to: 1.08 },
+      yoyo: true,
+    }, layer.durationMs / 2, context.signal);
+    this.destroyObject(cue);
   }
 
   private async terminalAccent(
@@ -685,6 +815,9 @@ export class PhaserCardEffectPort implements CardEffectPort {
       case 'pile-response':
         await this.pileResponse(layer, context);
         return;
+      case 'draw-skip-cue':
+        await this.drawSkipCue(layer, context);
+        return;
       case 'victory-accent':
         await this.terminalAccent(layer, context, true);
         return;
@@ -711,7 +844,8 @@ export class PhaserCardEffectPort implements CardEffectPort {
     }
     for (const object of [...this.objects]) this.destroyObject(object);
     for (const mount of [...this.domEffects]) {
-      mount.classList.remove('card-rig-fx-rim-trace');
+      if (mount.classList.contains('card-effect-transient')) mount.remove();
+      mount.classList.remove('card-rig-fx-rim-trace', 'card-rig-fx-charge', 'card-rig-fx-surface-prep', 'card-rig-fx-shine');
       mount.style.removeProperty('--card-rig-fx-color');
       mount.style.removeProperty('--card-rig-fx-duration');
       this.domEffects.delete(mount);

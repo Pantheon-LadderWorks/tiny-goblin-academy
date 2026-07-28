@@ -57,6 +57,7 @@ cardGoblinH6_22R1Implemented: true
 cardGoblinH6_22R1TechnicalValidationPassed: true
 cardGoblinH6_22R1HumanStructuralReviewAccepted: true
 cardGoblinH6_22R1StandaloneVisualReviewRequired: false
+cardGoblinClosureHumanVisualRuntimeReviewPassed: true
 cardGoblinH6_23Started: false
 ```
 
@@ -75,6 +76,7 @@ At this baseline:
 - H6.21B corrects optical title/body alignment and implements the preview-only CardRig with governed draw, played-card, discard, and hand anchors. Replacement-1 was technically complete but geographically rejected; replacement-2 corrected card provenance and destination, including the opening-card anchor race. Full and reduced motion, terminal accessibility labels, cancellation, and final semantic geography passed Human Visual Review. H6.22 had not begun during H6.21B.
 - H6.22A implements a preview-only typed CardEffectRecipe authority, deterministic effect runner, and disposable Phaser presentation port. It proves twelve required effect primitives, six card recipes, three additional state samples, full/reduced motion, cancellation, resize safety, repeated zero-residue execution, and both governed viewport sizes. The final bounded external run is `capture-20260724t233238z-p9668`; Human Visual Review remains pending. H6.23 live integration has not begun.
 - H6.22R1 composes one semantic CardRig root, keeps environmental slots outside the moving card, separates true frames from location sockets, and establishes seven explicit attachment authorities with resize/cancellation cleanup. Kryssie accepted R1 as structural plumbing and waived another standalone R1 visual-review lane; the completion goal now consumes that structure directly.
+- Card Goblin Duel's production VFX repair and closure packet passed Human Visual/Runtime Review. Kryssie completed a full styled duel through the Tauri Hub; remaining visual roughness belongs to future VFX-mastery work and does not block this Tier 1 closure.
 
 Only the lane that changes one of these facts may update this block.
 

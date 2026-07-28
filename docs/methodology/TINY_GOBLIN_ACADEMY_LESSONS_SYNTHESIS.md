@@ -51,9 +51,9 @@ The completion of the ten-level ladder proved several critical theories of agent
 
 ### 4. Card Goblin Duel
 * **Original mechanical lesson:** State-machine phases.
-* **Actual verified lesson:** Deterministic balance creates a "heart of the cards" feel without relying on true randomness.
-* **Notable correction/drift:** A failed spike initially rendered a debug-page UI, collapsing the fantasy into raw buttons.
-* **Reusable doctrine:** Visual coherence is part of First Playable. Human Review failure is an executable correction task, not a blocker.
+* **Actual verified lesson:** Deterministic balance creates a "heart of the cards" feel without relying on true randomness; visual integration additionally requires one persistent CardRig to own face, frame, state, motion, card-local VFX, and activation causality.
+* **Notable correction/drift:** A failed spike initially rendered a debug-page UI. Later VFX work proved technically clean but visually false when effects were detached from the acting card or routed through generic center-stage authority. Environmental hand slots were also briefly misclassified as card borders.
+* **Reusable doctrine:** VFX happen to, around, from, and because of the semantic actor. Persistent location sockets belong beneath that actor, not inside its identity. Typed lifecycle recipes may consume simulation events but must never become a second gameplay authority.
 
 ### 5. 10x10 Dungeon Key Run
 * **Original mechanical lesson:** Spatial navigation and hazards.
@@ -113,6 +113,7 @@ The ladder did not succeed by avoiding mistakes; it succeeded by catching and re
 * **Hazard irrelevance:** Level 5 proved the system can detect when a feature works mechanically but fails functionally.
 * **Overly broad planning:** Level 10 initially drifted away from the original brief; Human Review corrected the trajectory before implementation.
 * **Capture-script fragility:** Issues with ports, timeouts, and hidden overlays were resolved iteratively.
+* **Attachment-authority drift:** Card Goblin proved that a technically correct effect becomes visually misleading when its source, destination, or owner is generic. Explicit card, pile, target, travel, and tabletop authorities corrected the grammar.
 * **Math/collision ambiguity:** Level 8 forced exact coordinate specification to resolve collision edge cases.
 * **Level 10 "zombie economics" risk:** Detected in planning and explicitly locked in the contract to short-circuit logic upon defeat.
 
@@ -143,6 +144,7 @@ Tiny games are arguably the strongest benchmark for coding agents because they l
 * **Capture scripts prove the loop but must not become the source of truth.**
 * **v0.1 means small, not ugly.**
 * **Correction Required is not a blocker; it is an executable implementation state.**
+* **Effects must preserve semantic ownership: location sockets sit below actors, while state and VFX travel with them.**
 
 ## Open Follow-Up Recommendations
 To crystallize the success of the Academy ladder, the following non-code follow-ups are suggested:
