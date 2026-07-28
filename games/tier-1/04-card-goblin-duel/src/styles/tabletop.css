@@ -1,0 +1,479 @@
+
+.tabletop-stack {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr) var(--hand-dock-height);
+  gap: 0;
+  overflow: hidden;
+  border-radius: 17px;
+  background: var(--tabletop-dock-plum);
+}
+
+.tabletop-scene {
+  position: relative;
+  isolation: isolate;
+  min-height: 0;
+  overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(16, 10, 22, 0.04), rgba(16, 10, 22, 0.12)),
+    var(--tabletop-scene-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#stage-canvas {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+#stage-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.heavy-impact-mark {
+  position: absolute;
+  z-index: 2;
+  width: 112px;
+  height: 34px;
+  border: 3px solid #e8ad70;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--heavy-impact-color) 38%, transparent), transparent 68%);
+  box-shadow: 0 0 13px color-mix(in srgb, var(--heavy-impact-color) 72%, transparent), inset 0 0 9px rgba(126, 69, 41, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.45, 0.62);
+  animation: heavy-impact-mark var(--heavy-impact-duration, 520ms) cubic-bezier(0.12, 0.72, 0.2, 1) forwards;
+}
+
+.heavy-impact-mark::before,
+.heavy-impact-mark::after {
+  position: absolute;
+  left: -3%;
+  top: 50%;
+  width: 48%;
+  height: 3px;
+  border-radius: 999px;
+  background: #d99a62;
+  box-shadow: 0 0 5px var(--heavy-impact-color);
+  content: '';
+}
+
+.heavy-impact-mark::before { transform: translate(0, -50%) rotate(-12deg); }
+.heavy-impact-mark::after { left: 55%; transform: translate(0, -50%) rotate(12deg); }
+
+@keyframes heavy-impact-mark {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.45, 0.62); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(0.82, 0.86); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.45, 1.08); }
+}
+
+.tabletop-scene > :not(#stage-canvas) {
+  position: relative;
+  z-index: 2;
+}
+
+.duel-top-rail {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(185px, 0.9fr) minmax(185px, 0.9fr) minmax(185px, 0.9fr) minmax(220px, 1.15fr);
+  gap: clamp(6px, 0.8vw, 10px);
+  align-items: stretch;
+  background: var(--deep);
+}
+
+.phase-banner,
+.enemy-status,
+.player-status-rail,
+.table-wells {
+  min-width: 0;
+  min-height: clamp(58px, 9vh, 74px);
+  border: 1px solid rgba(231, 189, 107, 0.34);
+  border-radius: 13px;
+  background: rgba(25, 16, 31, 0.7);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(3px);
+}
+
+.phase-banner,
+.enemy-status,
+.player-status-rail {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 7px 13px;
+}
+
+.combat-float {
+  position: absolute;
+  z-index: 30;
+  left: 50%;
+  top: calc(100% + 5px);
+  min-width: 3rem;
+  transform: translateX(-50%);
+  font-family: 'TGA Cinzel Decorative', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: combat-float-rise 1100ms cubic-bezier(0.18, 0.72, 0.2, 1) forwards;
+}
+
+.enemy-status > .combat-float,
+.player-status-rail > .combat-float {
+  overflow-wrap: normal;
+  font-family: 'TGA Cinzel Decorative', Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.player-status-rail > .combat-float {
+  left: 76%;
+}
+
+.combat-float.combat-feedback-guard,
+.combat-float.combat-feedback-stun,
+.combat-float.combat-feedback-blocked {
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.combat-feedback-damage {
+  color: #ff7466;
+  text-shadow: 0 0 6px #4a1014, 0 0 14px rgba(255, 72, 62, 0.82);
+}
+
+.combat-feedback-heal {
+  color: #8cff9a;
+  text-shadow: 0 0 6px #123b21, 0 0 14px rgba(90, 255, 121, 0.72);
+}
+
+.combat-feedback-guard {
+  color: #76f5ee;
+  text-shadow: 0 0 6px #123b45, 0 0 14px rgba(82, 229, 238, 0.72);
+}
+
+.combat-feedback-stun,
+.combat-feedback-blocked {
+  color: #ffe272;
+  text-shadow: 0 0 6px #4a3510, 0 0 14px rgba(255, 217, 82, 0.76);
+}
+
+.enemy-status.combat-feedback-damage,
+.player-status-rail.combat-feedback-damage {
+  animation: hp-panel-damage 520ms ease-out;
+}
+
+.player-status-rail.combat-feedback-heal,
+.player-status-rail.combat-feedback-guard,
+.player-status-rail.combat-feedback-blocked,
+.enemy-status.combat-feedback-stun {
+  animation: hp-panel-positive 620ms ease-out;
+}
+
+@keyframes combat-float-rise {
+  0% { opacity: 0; transform: translate(-50%, 8px) scale(0.74); }
+  22% { opacity: 1; transform: translate(-50%, 0) scale(1.12); }
+  72% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 46px) scale(0.94); }
+}
+
+@keyframes hp-panel-damage {
+  0%, 100% { border-color: rgba(231, 189, 107, 0.34); filter: brightness(1); }
+  32% { border-color: #ff7466; filter: brightness(1.42); box-shadow: 0 0 20px rgba(255, 72, 62, 0.48); }
+}
+
+@keyframes hp-panel-positive {
+  0%, 100% { border-color: rgba(231, 189, 107, 0.34); filter: brightness(1); }
+  32% { border-color: #76f5ee; filter: brightness(1.34); box-shadow: 0 0 20px rgba(82, 229, 238, 0.42); }
+}
+
+.phase-banner {
+  align-items: center;
+  border-color: rgba(120, 220, 255, 0.34);
+  text-align: center;
+}
+
+.phase-banner strong {
+  color: var(--gold);
+  font-family: 'TGA Almendra SC', Georgia, serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 400;
+}
+
+.phase-banner span,
+.enemy-status > span:last-child:not(.combat-float),
+.player-status-rail > span:last-child:not(.combat-float) {
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-family: 'TGA Caudex', Georgia, serif;
+  font-size: clamp(0.68rem, 1.15vw, 0.8rem);
+  line-height: 1.25;
+}
+
+.phase-spark .phase-banner {
+  border-color: rgba(255, 130, 106, 0.78);
+  box-shadow: 0 0 20px rgba(216, 75, 75, 0.18);
+}
+
+.enemy-status {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.player-status-rail {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.enemy-status strong,
+.player-status-rail strong {
+  color: var(--ink);
+  font-family: 'TGA Almendra SC', Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.table-wells {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  padding: 6px;
+}
+
+.table-well {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 5px 8px;
+  border: 1px solid rgba(183, 131, 78, 0.42);
+  border-radius: 9px;
+  background:
+    linear-gradient(150deg, rgba(117, 68, 75, 0.18), transparent 60%),
+    rgba(18, 13, 24, 0.66);
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.28);
+}
+
+.discard-well {
+  align-items: center;
+  color: var(--muted);
+  font-family: 'TGA Caudex', Georgia, serif;
+  font-size: 0.66rem;
+  text-align: center;
+}
+
+.next-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.next-card .card-title {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: clamp(0.8rem, 1.3vw, 0.98rem);
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.next-card .card-desc {
+  display: none;
+}
+
+.queue-empty {
+  margin: 0;
+  color: var(--muted);
+  font-family: 'TGA Caudex', Georgia, serif;
+  font-size: 0.7rem;
+}
+
+.resolution-zone {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  grid-template-columns: minmax(160px, 0.75fr) minmax(330px, 1.6fr) minmax(160px, 0.75fr);
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
+  overflow: visible;
+  border: 0;
+  background: radial-gradient(circle at 50% 44%, rgba(20, 12, 24, 0.08), transparent 16rem);
+}
+
+.stage-overlay {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.anchor-point {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 58px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.enemy-center { left: 36%; top: 10%; }
+.enemy-impact { left: 36%; top: 32%; }
+.resolution-center { left: 50%; top: 43%; }
+.player-impact { left: 64%; top: 25%; }
+.player-center { left: 64%; top: 38%; }
+
+.academy-seal {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  left: 50%;
+  top: 42%;
+  width: clamp(118px, 15vh, 160px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 2px solid rgba(231, 189, 107, 0.24);
+  border-radius: 24%;
+  box-shadow:
+    0 0 0 18px rgba(183, 131, 78, 0.08),
+    0 0 0 19px rgba(231, 189, 107, 0.17);
+}
+
+.academy-seal::before,
+.academy-seal::after {
+  position: absolute;
+  inset: 22%;
+  border: 1px solid rgba(231, 189, 107, 0.25);
+  border-radius: 50%;
+  content: '';
+}
+
+.academy-seal::after {
+  inset: 42%;
+  border-radius: 0;
+  background: rgba(231, 189, 107, 0.12);
+}
+
+.card-landing-slot {
+  position: relative;
+  z-index: 3;
+  grid-column: 2;
+  grid-row: 1;
+  width: clamp(66px, 8vh, 82px);
+  aspect-ratio: 0.7;
+  align-self: center;
+  margin-top: -10px;
+  border: 2px solid rgba(231, 189, 107, 0.46);
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(255, 241, 198, 0.045), transparent 54%),
+    rgba(18, 13, 24, 0.42);
+  box-shadow:
+    inset 0 0 0 5px rgba(117, 68, 75, 0.13),
+    0 0 22px rgba(231, 189, 107, 0.08);
+}
+
+.resolution-copy {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: var(--result-corridor-bottom);
+  display: flex;
+  width: min(64%, 620px);
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 1px;
+  padding: 5px 12px;
+  border-block: 1px solid rgba(231, 189, 107, 0.25);
+  background: linear-gradient(90deg, transparent, rgba(20, 14, 27, 0.7) 12%, rgba(20, 14, 27, 0.7) 88%, transparent);
+  text-align: center;
+}
+
+.resolution-copy strong {
+  color: var(--ink);
+  font-family: 'TGA Almendra SC', Georgia, serif;
+  font-size: clamp(0.86rem, 1.55vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.resolution-copy span {
+  overflow: hidden;
+  color: var(--muted);
+  font-family: 'TGA Caudex', Georgia, serif;
+  font-size: clamp(0.65rem, 1.05vw, 0.76rem);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-status-rail > span:last-child {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.terminal-outcome {
+  position: absolute;
+  z-index: 8;
+  left: 50%;
+  bottom: var(--result-corridor-bottom);
+  display: flex;
+  width: min(82%, 520px);
+  transform: translateX(-50%);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  background: rgba(21, 14, 28, 0.96);
+  color: var(--ink);
+  font-size: clamp(0.86rem, 1.5vw, 1.05rem);
+  font-weight: 800;
+  text-align: center;
+}
+
+.terminal-outcome[hidden] {
+  display: none;
+}
+
+#reset-duel {
+  flex: 0 0 auto;
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 241, 198, 0.5);
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--deep);
+  font-family: 'TGA Almendra SC', Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 900;
+  word-spacing: 0.08em;
+  cursor: pointer;
+}
+
+#reset-duel:hover {
+  background: #fff1c6;
+}
+
+#reset-duel:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}

@@ -8,7 +8,13 @@ const readRepoFile = (relativePath: string): string => readFileSync(
 
 const mainSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/main.ts');
 const markup = readRepoFile('games/tier-1/04-card-goblin-duel/index.html');
-const styles = readRepoFile('games/tier-1/04-card-goblin-duel/src/style.css');
+const styles = [
+  'base.css',
+  'tabletop.css',
+  'cards.css',
+  'diagnostics-responsive.css',
+].map((name) => readRepoFile(`games/tier-1/04-card-goblin-duel/src/styles/${name}`)).join('\n');
+const runtimeConfigSource = readRepoFile('games/tier-1/04-card-goblin-duel/src/app/runtime-config.ts');
 const captureSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture.cjs');
 const captureH621BSource = readRepoFile('games/tier-1/04-card-goblin-duel/capture-h621b.cjs');
 const h621bEvidenceContractsSource = readRepoFile('games/tier-1/04-card-goblin-duel/h621b-evidence-contracts.cjs');
@@ -251,8 +257,8 @@ describe('H6.20C Hub-native contained duel table', () => {
   });
 
   it('keeps both card-surface strategies and measured browser evidence development-only', () => {
-    expect(mainSource).toContain("searchParams.get('cardLab')");
-    expect(mainSource).toContain("searchParams.get('cardSlots')");
+    expect(runtimeConfigSource).toContain("params.get('cardLab')");
+    expect(runtimeConfigSource).toContain("params.get('cardSlots')");
     expect(mainSource).toContain("renderHandCard(card, index % 3, 'PlayerAction', cardLabStrategy, false)");
     expect(anchorBridgeSource).toContain("#hand .card-slot-shell[data-stage-anchor^='hand-slot-']");
     expect(anchorBridgeSource).not.toContain("querySelectorAll('#hand .card-btn').length");
@@ -282,8 +288,8 @@ describe('H6.20C Hub-native contained duel table', () => {
   });
 
   it('keeps H6.21B CardRig fixture-driven and outside ordinary gameplay', () => {
-    expect(mainSource).toContain("searchParams.get('cardRig')");
-    expect(mainSource).toContain("import.meta.env.MODE === 'development'");
+    expect(runtimeConfigSource).toContain("params.get('cardRig')");
+    expect(mainSource).toContain("resolveRuntimeConfig(window.location.search, import.meta.env.MODE === 'development')");
     expect(mainSource).toContain('new DomCardRigPort');
     expect(mainSource).toContain('renderCardSlot(card, index, phase');
     expect(mainSource).toContain('__cardRigLabStatus');

@@ -1,0 +1,112 @@
+
+.anchor-status {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.anchor-error {
+  color: #ff8f72;
+}
+
+@media (max-width: 1100px) {
+  #app {
+    padding-inline: 8px;
+  }
+
+  .duel-top-rail {
+    grid-template-columns: minmax(160px, 0.85fr) minmax(165px, 0.9fr) minmax(165px, 0.9fr) minmax(210px, 1.1fr);
+    gap: 5px;
+  }
+
+  .phase-banner,
+  .enemy-status,
+  .player-status-rail {
+    padding-inline: 8px;
+  }
+
+  .resolution-zone {
+    grid-template-columns: minmax(90px, 0.45fr) minmax(330px, 2fr) minmax(90px, 0.45fr);
+  }
+}
+
+@media (max-height: 660px) {
+  #app {
+    gap: 4px;
+    padding-block: 5px;
+  }
+
+  .academy-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.55rem);
+  }
+
+  .academy-header p {
+    margin-top: 2px;
+    font-size: 0.78rem;
+  }
+
+  #duel-table {
+    gap: 5px;
+    padding: 7px;
+  }
+
+  .phase-banner,
+  .enemy-status,
+  .table-wells {
+    min-height: 55px;
+  }
+
+  :root {
+    --result-corridor-bottom: 56px;
+  }
+
+  .player-status-rail {
+    padding-block: 3px;
+  }
+
+  .hand-zone {
+    padding-block: 0;
+  }
+
+  .card-btn {
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-btn {
+    transition: none;
+  }
+
+  .card-local-fx.card-rig-fx-rim-trace::before {
+    animation: none;
+    opacity: 0.72;
+  }
+
+  .card-btn[data-card-name='Heavy Bonk'] .card-local-fx::after {
+    animation: none;
+    opacity: 0.52;
+  }
+
+  .combat-float,
+  .enemy-status.combat-feedback-damage,
+  .player-status-rail.combat-feedback-damage,
+  .player-status-rail.combat-feedback-heal,
+  .player-status-rail.combat-feedback-guard,
+  .player-status-rail.combat-feedback-blocked,
+  .enemy-status.combat-feedback-stun,
+  .card-local-fx.card-rig-fx-charge,
+  .card-local-fx.card-rig-fx-surface-prep {
+    animation-duration: 1ms;
+  }
+
+  .card-local-fx.card-rig-fx-shine::after {
+    animation-duration: 1ms;
+  }
+}
+#duel-table.presentation-locked #hand .card-btn {
+  pointer-events: none;
+}

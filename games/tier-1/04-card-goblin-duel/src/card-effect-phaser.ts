@@ -10,13 +10,18 @@ import type {
   CardEffectRunContext,
   EffectResourceCounts,
 } from './card-effect-runner';
+import {
+  CARD_EFFECT_TEXTURES,
+  ensureCardEffectTextures,
+} from './effects/phaser-effect-textures';
 
-const DOT_TEXTURE = 'tga-card-effect-dot';
-const STAR_TEXTURE = 'tga-card-effect-star';
-const PLUS_TEXTURE = 'tga-card-effect-plus';
-const SLASH_TEXTURE = 'tga-card-effect-slash';
-const BONK_TEXTURE = 'tga-card-effect-bonk';
-export const CARD_EFFECT_TOKEN_SHEET_TEXTURE = 'tga-card-effect-token-sheet';
+const {
+  dot: DOT_TEXTURE,
+  star: STAR_TEXTURE,
+  plus: PLUS_TEXTURE,
+  slash: SLASH_TEXTURE,
+  bonk: BONK_TEXTURE,
+} = CARD_EFFECT_TEXTURES;
 
 export type PhaserCardEffectPortOptions = Readonly<{
   scene: Phaser.Scene;
@@ -80,68 +85,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
     this.cardElementProvider = options.cardElement;
     this.onLayer = options.onLayer;
     this.onCleanup = options.onCleanup;
-    this.ensureTextures();
-  }
-
-  private ensureTextures(): void {
-    if (!this.scene.textures.exists(DOT_TEXTURE)) {
-      const dot = this.scene.add.graphics();
-      dot.fillStyle(0xffffff, 1);
-      dot.fillCircle(8, 8, 7);
-      dot.generateTexture(DOT_TEXTURE, 16, 16);
-      dot.destroy();
-    }
-    if (!this.scene.textures.exists(STAR_TEXTURE)) {
-      const star = this.scene.add.graphics();
-      star.fillStyle(0xffffff, 1);
-      star.fillPoints(this.starPoints(16, 16, 5, 5, 14), true);
-      star.generateTexture(STAR_TEXTURE, 32, 32);
-      star.destroy();
-    }
-    if (!this.scene.textures.exists(PLUS_TEXTURE)) {
-      const plus = this.scene.add.graphics();
-      plus.fillStyle(0xffffff, 1);
-      plus.fillRoundedRect(10, 1, 10, 28, 4);
-      plus.fillRoundedRect(1, 10, 28, 10, 4);
-      plus.generateTexture(PLUS_TEXTURE, 30, 30);
-      plus.destroy();
-    }
-    if (!this.scene.textures.exists(SLASH_TEXTURE)) {
-      const slash = this.scene.add.graphics();
-      slash.fillStyle(0xffffff, 1);
-      slash.fillTriangle(2, 15, 62, 2, 54, 13);
-      slash.fillStyle(0xffffff, 0.46);
-      slash.fillTriangle(5, 19, 52, 13, 38, 20);
-      slash.generateTexture(SLASH_TEXTURE, 64, 22);
-      slash.destroy();
-    }
-    if (!this.scene.textures.exists(BONK_TEXTURE)) {
-      const sheet = this.scene.textures.get(CARD_EFFECT_TOKEN_SHEET_TEXTURE).getSourceImage() as HTMLImageElement;
-      const bonk = this.scene.textures.createCanvas(BONK_TEXTURE, 124, 124);
-      if (!bonk) throw new Error('Unable to create Heavy Bonk effect texture');
-      bonk.context.clearRect(0, 0, 124, 124);
-      bonk.context.drawImage(sheet, 514, 2, 124, 124, 0, 0, 124, 124);
-      bonk.refresh();
-    }
-  }
-
-  private starPoints(
-    centerX: number,
-    centerY: number,
-    points: number,
-    innerRadius: number,
-    outerRadius: number,
-  ): Phaser.Math.Vector2[] {
-    const result: Phaser.Math.Vector2[] = [];
-    for (let index = 0; index < points * 2; index += 1) {
-      const radius = index % 2 === 0 ? outerRadius : innerRadius;
-      const angle = -Math.PI / 2 + (Math.PI * index) / points;
-      result.push(new Phaser.Math.Vector2(
-        centerX + Math.cos(angle) * radius,
-        centerY + Math.sin(angle) * radius,
-      ));
-    }
-    return result;
+    ensureCardEffectTextures(this.scene);
   }
 
   private point(target: CardEffectTarget): CanvasLocalRect {
@@ -241,7 +185,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
     x: number,
     y: number,
     layer: CardEffectLayer,
-    texture = DOT_TEXTURE,
+    texture: string = DOT_TEXTURE,
   ): Phaser.GameObjects.Particles.ParticleEmitter {
     const particleScale = numberParam(layer, 'particleScale', 0.8);
     const emitter = this.scene.add.particles(x, y, texture, {
@@ -418,7 +362,7 @@ export class PhaserCardEffectPort implements CardEffectPort {
   private async burst(
     layer: CardEffectLayer,
     context: CardEffectRunContext,
-    texture = DOT_TEXTURE,
+    texture: string = DOT_TEXTURE,
   ): Promise<void> {
     const target = this.point(layer.target);
     const emitter = this.createEmitter(target.centerX, target.centerY, layer, texture);

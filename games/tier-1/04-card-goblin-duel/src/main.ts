@@ -5,7 +5,9 @@ import cardTokenSheetUrl from '../../../../assets/academy/games/card-goblin-duel
 import './style.css';
 import { createAnchorBridge, type AnchorBridge } from './anchor-bridge';
 import { isAnchorDebugEnabled, type AnchorSnapshot } from './anchors';
-import { CARD_EFFECT_TOKEN_SHEET_TEXTURE, PhaserCardEffectPort } from './card-effect-phaser';
+import { effectSummary, enemySummary, resolutionCopy } from './app/game-copy';
+import { resolveRuntimeConfig } from './app/runtime-config';
+import { PhaserCardEffectPort } from './card-effect-phaser';
 import { buildCombatFeedbackPlan, type CombatFeedbackPlan } from './combat-feedback';
 import { DomCombatFeedbackController } from './combat-feedback-dom';
 import {
@@ -44,9 +46,6 @@ import {
 } from './card-rig-composition';
 import {
   CARD_RIG_ANCHOR_IDS,
-  CARD_RIG_SOURCE_ANCHORS,
-  CARD_RIG_SOURCE_SIZE,
-  resolveCoverPoint,
 } from './card-rig-routes';
 import {
   CARD_LAB_CARDS,
@@ -55,8 +54,8 @@ import {
   renderHandDock,
   renderHandCard,
   renderNextCard,
-  type CardSurfaceStrategy,
 } from './card-view';
+import { CARD_EFFECT_TOKEN_SHEET_TEXTURE } from './effects/phaser-effect-textures';
 import {
   createCardGoblinLedger,
   publishCardGoblinTransition,
@@ -66,9 +65,9 @@ import {
   playCard,
   resolveSparkChoice,
   type Card,
-  type GameState,
   type Phase,
 } from './simulation';
+import { PhaserStageRenderer } from './stage/phaser-stage-renderer';
 
 declare global {
   interface Window {
@@ -138,70 +137,18 @@ let state = createGame();
 let anchorBridge: AnchorBridge | undefined;
 let anchorSnapshot: AnchorSnapshot = Object.freeze({});
 
-const searchParams = new URLSearchParams(window.location.search);
-const requestedCardLab = searchParams.get('cardLab');
-const cardLabStrategy: CardSurfaceStrategy | undefined = requestedCardLab === 'clean' || requestedCardLab === 'tokens'
-  ? requestedCardLab
-  : undefined;
-const cardSlotDebug = searchParams.get('cardSlots') === '1';
-const cardTypographyGuides = searchParams.get('cardGuides') === '1';
-const requestedCardRig = searchParams.get('cardRig');
-const requestedCardComposition = searchParams.get('cardComp');
-const cardRigCompositionFixtureId: CardRigCompositionFixtureId | undefined = import.meta.env.MODE === 'development'
-  && requestedCardComposition
-  && requestedCardComposition in CARD_RIG_COMPOSITION_FIXTURES
-  ? requestedCardComposition as CardRigCompositionFixtureId
-  : undefined;
-const requestedFrameStyle = searchParams.get('frameStyle');
-const compositionFrameStyle: CardRigOuterFrameId = requestedFrameStyle === 'gold-ornate'
-  || requestedFrameStyle === 'wood'
-  || requestedFrameStyle === 'corner-ornate'
-  ? requestedFrameStyle
-  : 'none';
-const compositionRigFixtureId = (): CardRigFixtureId | undefined => {
-  if (!cardRigCompositionFixtureId) return undefined;
-  if (cardRigCompositionFixtureId === 'frame-matrix') {
-    if (compositionFrameStyle === 'gold-ornate') return 'r1-frame-gold';
-    if (compositionFrameStyle === 'wood') return 'r1-frame-wood';
-    if (compositionFrameStyle === 'corner-ornate') return 'r1-frame-corner';
-    return 'r1-frame-gold';
-  }
-  const fixtures: Partial<Record<CardRigCompositionFixtureId, CardRigFixtureId>> = {
-    'layer-stack': 'optical-default',
-    'slot-vs-frame': 'optical-default',
-    'card-local-follow': 'guard-commitment',
-    'draw-pile-local': 'initial-deal',
-    'discard-pile-local': 'strike-commitment',
-    'player-target': 'guard-commitment',
-    'enemy-target': 'strike-commitment',
-    travel: 'spark-sequence',
-    'tabletop-local': 'guard-commitment',
-    'resize-active': 'resize-active',
-    'cancel-cleanup': 'reset-during-commitment',
-    'reduced-motion': 'initial-deal',
-  };
-  return fixtures[cardRigCompositionFixtureId];
-};
-const cardRigFixtureId: CardRigFixtureId | undefined = import.meta.env.MODE === 'development'
-  && requestedCardRig
-  && requestedCardRig in CARD_RIG_FIXTURES
-  ? requestedCardRig as CardRigFixtureId
-  : compositionRigFixtureId();
-const requestedCardEffect = searchParams.get('cardFx');
-const cardEffectFixtureId: CardEffectFixtureId | undefined = import.meta.env.MODE === 'development'
-  && requestedCardEffect
-  && requestedCardEffect in CARD_EFFECT_FIXTURES
-  ? requestedCardEffect as CardEffectFixtureId
-  : undefined;
-const requestedMotion = searchParams.get('motion');
-const cardRigMode: CardRigMode = requestedMotion === 'reduced'
-  || cardRigCompositionFixtureId === 'reduced-motion'
-  ? 'reduced'
-  : 'full';
-const cardEffectMode: CardEffectMode = requestedMotion === 'reduced' ? 'reduced' : 'full';
-const productionPresentationEnabled = !cardRigFixtureId
-  && !cardEffectFixtureId
-  && !cardLabStrategy;
+const {
+  cardLabStrategy,
+  cardSlotDebug,
+  cardTypographyGuides,
+  cardRigCompositionFixtureId,
+  compositionFrameStyle,
+  cardRigFixtureId,
+  cardEffectFixtureId,
+  cardRigMode,
+  cardEffectMode,
+  productionPresentationEnabled,
+} = resolveRuntimeConfig(window.location.search, import.meta.env.MODE === 'development');
 const debugAnchors = isAnchorDebugEnabled(window.location.search);
 const ledger = createCardGoblinLedger({
   parent: window.parent === window ? null : window.parent,
@@ -272,9 +219,7 @@ let activeEffectRecipe: CardEffectRecipeId | undefined;
 let activeCombatPlan: CombatFeedbackPlan | undefined;
 let activationFeedbackShown = false;
 let retaliationFeedbackShown = false;
-let stageGraphics: Phaser.GameObjects.Graphics;
-let debugGraphics: Phaser.GameObjects.Graphics;
-let debugLabels: Phaser.GameObjects.Text[] = [];
+const stageRenderer = new PhaserStageRenderer({ tabletopScene, debugAnchors });
 
 if (cardEffectFixtureId && !cardRigFixtureId) {
   const fixture = CARD_EFFECT_FIXTURES[cardEffectFixtureId];
@@ -297,151 +242,10 @@ if (cardEffectFixtureId && !cardRigFixtureId) {
   };
 }
 
-const clearDebugLabels = (): void => {
-  for (const label of debugLabels) label.destroy();
-  debugLabels = [];
-};
-
-const layoutTabletopSourceAnchors = (): void => {
-  const viewport = {
-    width: tabletopScene.clientWidth,
-    height: tabletopScene.clientHeight,
-  };
-  for (const key of Object.keys(CARD_RIG_SOURCE_ANCHORS) as Array<keyof typeof CARD_RIG_SOURCE_ANCHORS>) {
-    const anchor = document.querySelector<HTMLElement>(
-      `[data-stage-anchor="${CARD_RIG_ANCHOR_IDS[key]}"]`,
-    );
-    if (!anchor) continue;
-    const resolved = resolveCoverPoint(
-      viewport,
-      CARD_RIG_SOURCE_SIZE,
-      CARD_RIG_SOURCE_ANCHORS[key].point,
-    );
-    anchor.style.left = `${resolved.x}px`;
-    anchor.style.top = `${resolved.y}px`;
-  }
-};
-
-const drawStage = (
-  scene: Phaser.Scene,
-  snapshot: AnchorSnapshot = anchorSnapshot,
-): void => {
-  const width = scene.scale.width;
-  const height = scene.scale.height;
-  const safeWidth = Math.max(0, width - 8);
-  const safeHeight = Math.max(0, height - 8);
-
-  stageGraphics.clear();
-  stageGraphics.fillStyle(0x17101f, 1);
-  stageGraphics.fillRoundedRect(4, 4, safeWidth, safeHeight, 28);
-  stageGraphics.lineStyle(2, 0xb7834e, 0.82);
-  stageGraphics.strokeRoundedRect(5, 5, Math.max(0, width - 10), Math.max(0, height - 10), 28);
-  stageGraphics.lineStyle(1, 0xe7bd6b, 0.22);
-  stageGraphics.strokeRoundedRect(11, 11, Math.max(0, width - 22), Math.max(0, height - 22), 22);
-
-  const enemy = snapshot['enemy-center'];
-  const enemyImpact = snapshot['enemy-impact'];
-  const resolution = snapshot['resolution-center'];
-  const played = snapshot[CARD_RIG_ANCHOR_IDS.playedCardTarget];
-  const player = snapshot['player-center'];
-  const deck = snapshot[CARD_RIG_ANCHOR_IDS.playerDrawOrigin];
-  const discard = snapshot[CARD_RIG_ANCHOR_IDS.playerDiscardTarget];
-
-  if (enemy && player) {
-    const tableTop = Math.max(24, enemy.y - 56);
-    const tableBottom = Math.min(height - 24, player.y + player.height + 58);
-    stageGraphics.fillStyle(0x21152c, 0.94);
-    stageGraphics.fillRoundedRect(24, tableTop, Math.max(0, width - 48), Math.max(0, tableBottom - tableTop), 22);
-    stageGraphics.lineStyle(2, 0x75444b, 0.72);
-    stageGraphics.strokeRoundedRect(24, tableTop, Math.max(0, width - 48), Math.max(0, tableBottom - tableTop), 22);
-
-    stageGraphics.lineStyle(1, 0xe7bd6b, 0.18);
-    stageGraphics.lineBetween(42, enemy.centerY + 42, width - 42, enemy.centerY + 42);
-    stageGraphics.lineBetween(42, player.centerY - 42, width - 42, player.centerY - 42);
-  }
-
-  if (resolution) {
-    const radius = Math.max(62, Math.min(112, Math.min(width, height) * 0.105));
-    stageGraphics.lineStyle(2, 0xe7bd6b, 0.38);
-    stageGraphics.strokeCircle(resolution.centerX, resolution.centerY, radius);
-    stageGraphics.lineStyle(1, 0xb7834e, 0.48);
-    stageGraphics.strokeCircle(resolution.centerX, resolution.centerY, radius * 0.72);
-    stageGraphics.beginPath();
-    stageGraphics.moveTo(resolution.centerX, resolution.centerY - radius * 0.88);
-    stageGraphics.lineTo(resolution.centerX + radius * 0.88, resolution.centerY);
-    stageGraphics.lineTo(resolution.centerX, resolution.centerY + radius * 0.88);
-    stageGraphics.lineTo(resolution.centerX - radius * 0.88, resolution.centerY);
-    stageGraphics.closePath();
-    stageGraphics.strokePath();
-
-    for (let index = 0; index < 8; index += 1) {
-      const angle = (Math.PI * 2 * index) / 8;
-      const inner = radius * 0.82;
-      const outer = radius * 0.96;
-      stageGraphics.lineBetween(
-        resolution.centerX + Math.cos(angle) * inner,
-        resolution.centerY + Math.sin(angle) * inner,
-        resolution.centerX + Math.cos(angle) * outer,
-        resolution.centerY + Math.sin(angle) * outer,
-      );
-    }
-  }
-
-  stageGraphics.lineStyle(2, 0xe7bd6b, 0.16);
-  if (played) {
-    for (let index = 0; index < 3; index += 1) {
-      const slot = snapshot[`hand-slot-${index}`];
-      if (!slot) continue;
-      const shoulderY = played.centerY + Math.max(42, played.height * 0.42);
-      stageGraphics.beginPath();
-      stageGraphics.moveTo(slot.centerX, slot.y);
-      stageGraphics.lineTo(slot.centerX, shoulderY);
-      stageGraphics.lineTo(played.centerX, played.centerY);
-      stageGraphics.strokePath();
-    }
-  }
-
-  if (played && enemyImpact) {
-    const midpointY = (played.centerY + enemyImpact.centerY) / 2;
-    stageGraphics.beginPath();
-    stageGraphics.moveTo(played.centerX, played.centerY);
-    stageGraphics.lineTo(played.centerX, midpointY);
-    stageGraphics.lineTo(enemyImpact.centerX, enemyImpact.centerY);
-    stageGraphics.strokePath();
-  }
-
-  for (const well of [deck, discard]) {
-    if (!well) continue;
-    stageGraphics.lineStyle(1, 0xe7bd6b, 0.26);
-    stageGraphics.strokeRoundedRect(well.x - 6, well.y - 6, well.width + 12, well.height + 12, 12);
-  }
-};
-
-const drawAnchorDebug = (scene: Phaser.Scene, snapshot: AnchorSnapshot): void => {
-  debugGraphics.clear();
-  clearDebugLabels();
-  if (!debugAnchors) return;
-
-  debugGraphics.lineStyle(2, 0x65d9ff, 0.9);
-  debugGraphics.fillStyle(0x10131a, 0.82);
-  for (const [id, anchor] of Object.entries(snapshot)) {
-    debugGraphics.fillCircle(anchor.centerX, anchor.centerY, 5);
-    debugGraphics.strokeRect(anchor.x, anchor.y, anchor.width, anchor.height);
-    const label = scene.add.text(anchor.centerX + 8, anchor.centerY - 8, id, {
-      fontFamily: 'monospace',
-      fontSize: '11px',
-      color: '#65d9ff',
-      backgroundColor: '#10131acc',
-      padding: { x: 3, y: 2 },
-    }).setDepth(1000);
-    debugLabels.push(label);
-  }
-};
-
 const receiveAnchorSnapshot = (scene: Phaser.Scene, snapshot: AnchorSnapshot): void => {
   anchorSnapshot = snapshot;
-  drawStage(scene, snapshot);
-  drawAnchorDebug(scene, snapshot);
+  stageRenderer.draw(scene, snapshot);
+  stageRenderer.drawAnchorDebug(scene, snapshot);
   anchorStatus.textContent = `${Object.keys(snapshot).length} presentation anchors resolved${debugAnchors ? ' · markers visible' : ''}.`;
   if (cardEffectFixtureId && !cardRigFixtureId && cardEffectRunner && !cardEffectStarted) {
     queueMicrotask(() => void startCardEffectFixture());
@@ -469,14 +273,13 @@ const game = new Phaser.Game({
     },
     create() {
       const scene = this as Phaser.Scene;
-      stageGraphics = scene.add.graphics().setDepth(0).setVisible(false);
-      debugGraphics = scene.add.graphics().setDepth(999);
-      layoutTabletopSourceAnchors();
-      drawStage(scene);
+      stageRenderer.initialize(scene);
+      stageRenderer.layoutSourceAnchors();
+      stageRenderer.draw(scene);
 
       scene.scale.on('resize', () => {
-        layoutTabletopSourceAnchors();
-        drawStage(scene, anchorSnapshot);
+        stageRenderer.layoutSourceAnchors();
+        stageRenderer.draw(scene, anchorSnapshot);
         anchorBridge?.refresh();
       });
 
@@ -513,32 +316,6 @@ const game = new Phaser.Game({
     },
   },
 });
-
-const effectSummary = (current: GameState): string => {
-  const effects: string[] = [];
-  if (current.guard > 0) effects.push(`Guard ${current.guard}`);
-  if (current.stun) effects.push('Stun armed');
-  return effects.length > 0 ? effects.join(' · ') : 'No active guard or stun.';
-};
-
-const enemySummary = (current: GameState): string => {
-  if (current.phase === 'Terminal') {
-    return current.enemyHp <= 0 ? 'Defeated.' : 'Duel complete.';
-  }
-  if (current.phase === 'SparkChoice') return 'Waiting for your replacement choice.';
-  return 'Ready to answer your play.';
-};
-
-const resolutionCopy = (current: GameState): Readonly<{ title: string; detail: string }> => {
-  const latest = current.log.at(-1) ?? 'The table is waiting.';
-  if (current.phase === 'SparkChoice') {
-    return { title: 'Spark is suspended over the table.', detail: latest };
-  }
-  if (current.phase === 'Terminal') {
-    return { title: current.enemyHp <= 0 ? 'The Card Goblin falls.' : 'Your hand goes still.', detail: latest };
-  }
-  return { title: current.log.length === 1 ? 'The table is waiting.' : 'The exchange resolves.', detail: latest };
-};
 
 const renderCardRigHand = (
   cards: readonly Card[],
@@ -1069,7 +846,7 @@ const render = (focusIndex?: number): void => {
     enemyEffects.textContent = 'Presentation adapter only.';
     next.innerHTML = renderNextCard('Spark');
     renderCardRigHand(fixture.initialHand, 'PlayerAction');
-    layoutTabletopSourceAnchors();
+    stageRenderer.layoutSourceAnchors();
     anchorBridge?.refresh();
     queueMicrotask(() => void startCardRigFixture());
     return;
@@ -1202,7 +979,7 @@ const onViewportResize = (): void => {
       window.__cardGoblinPresentationStatus.cleanupCounts = cardEffectPort?.counts() ?? EMPTY_EFFECT_COUNTS;
     }
   }
-  layoutTabletopSourceAnchors();
+  stageRenderer.layoutSourceAnchors();
   anchorBridge?.refresh();
 };
 window.addEventListener('resize', onViewportResize);

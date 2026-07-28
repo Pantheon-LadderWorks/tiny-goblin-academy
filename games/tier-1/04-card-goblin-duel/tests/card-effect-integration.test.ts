@@ -5,12 +5,16 @@ const mainSource = readFileSync(
   new URL('../src/main.ts', import.meta.url),
   'utf8',
 );
+const runtimeConfigSource = readFileSync(
+  new URL('../src/app/runtime-config.ts', import.meta.url),
+  'utf8',
+);
 
 describe('CardEffectRecipe lab and production integration', () => {
   it('loads fixtures only through the development-only cardFx query seam', () => {
-    expect(mainSource).toContain("searchParams.get('cardFx')");
-    expect(mainSource).toContain("import.meta.env.MODE === 'development'");
-    expect(mainSource).toContain('requestedCardEffect in CARD_EFFECT_FIXTURES');
+    expect(runtimeConfigSource).toContain("params.get('cardFx')");
+    expect(mainSource).toContain("resolveRuntimeConfig(window.location.search, import.meta.env.MODE === 'development')");
+    expect(runtimeConfigSource).toContain('requestedEffect in CARD_EFFECT_FIXTURES');
     expect(mainSource).toContain('cardEffectFixtureId');
   });
 

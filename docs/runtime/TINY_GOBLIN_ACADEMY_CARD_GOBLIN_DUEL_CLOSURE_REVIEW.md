@@ -77,3 +77,28 @@ Human Review accepted:
 
 The remaining visual roughness belongs to future VFX-mastery work and does not
 block this Tier 1 closure.
+
+## Post-closure presentation extraction
+
+After the approved VFX repair was published, a bounded behavior-preserving
+extraction separated the largest presentation responsibilities without changing
+gameplay or visual output:
+
+- query and fixture-mode resolution moved to `src/app/runtime-config.ts`;
+- pure game copy moved to `src/app/game-copy.ts`;
+- generated Phaser texture ownership moved to
+  `src/effects/phaser-effect-textures.ts`;
+- tabletop rendering and debug-anchor drawing moved to
+  `src/stage/phaser-stage-renderer.ts`;
+- the monolithic stylesheet became ordered base, tabletop, card, and
+  diagnostics/responsive modules under `src/styles/`.
+
+The reconstructed stylesheet is byte-equivalent to the approved source after
+normalizing only the extra relative path depth for local font URLs, and the
+production build retained the same compiled CSS asset hash. Fresh browser proof
+at 1280×660 and 1024×580 matched the approved composition, while the complete
+production lifecycle smoke path remained green with zero console errors.
+
+This extraction creates explicit seams for future presentation work. It does
+not introduce structured combat events, change CardRig or simulation authority,
+or begin a new VFX-mastery lane.
