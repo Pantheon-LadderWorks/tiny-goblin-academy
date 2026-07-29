@@ -41,6 +41,6 @@ Local CC0 legalcode and source records live under `assets/academy/materials/sour
 
 ## Deliberately excluded from this confirmed draft
 
-- Generated TGA visuals, pending item-level provider/output provenance repair.
+- First-party AI-generated and AI-assisted TGA visuals; they belong in the project-level AI disclosure, not a third-party license notice.
 - Service/brand glyphs in `hub/public/icons.svg`, pending source-license and trademark review.
 - General AI collaborators named in `CREDITS.md`; collaboration credit is not an asset license notice.

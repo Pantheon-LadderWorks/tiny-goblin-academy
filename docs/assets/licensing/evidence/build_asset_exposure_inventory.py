@@ -113,19 +113,41 @@ def generated_record(record_id: str, title: str, category: str) -> dict:
     record.update(
         {
             "creator": "Kryssie-directed generation and curation",
+            "originType": "first-party-ai-generated-or-assisted",
             "generation": {
                 "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-                "perAssetProviderModelPromptTerms": "not consistently captured",
+                "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+                "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+                "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
             },
             "license": {
-                "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+                "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
                 "version": None,
                 "evidencePaths": ["CONTENT_LICENSE.md", "CREDITS.md"],
             },
-            "provenanceCoverage": "partial-general-statement-only",
-            "unresolvedEvidence": [
-                "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-                "Confirm whether any third-party reference image was supplied.",
+            "permissions": {
+                key: "no-third-party-asset-license-restriction-identified"
+                for key in record["permissions"]
+            },
+            "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
+            "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
+            "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
+            "recommendedClassification": "generated-first-party",
+            "confidence": "medium-high",
+            "thirdPartyInputConcern": "none-known",
+            "aiDisclosure": {
+                "required": True,
+                "scope": "project-and-storefront-level",
+                "perAssetModelCreditRequired": False,
+            },
+            "copyrightStrength": "not-assessed",
+            "exactGenerationProvenance": "optional-incomplete",
+            "unresolvedEvidence": [],
+            "reviewTriggers": [
+                "credible evidence of a third-party reference or copied source",
+                "protected character, logo, likeness, or brand content",
+                "provider-specific restriction applicable to the output",
+                "uncertainty whether the asset was generated or externally downloaded",
             ],
         }
     )
@@ -341,10 +363,10 @@ def main() -> None:
             continue
         record = generated_record(record_id, title, "generated-or-curated-visual")
         if record_id == "hub-social-symbols":
+            record = base_record(record_id, title, "mixed-third-party-brand-symbols")
             record.update(
                 {
                     "creator": "Multiple external brand owners; local vector provenance not recorded",
-                    "generation": None,
                     "license": {"name": "unresolved mixed brand-icon licensing", "version": None, "evidencePaths": []},
                     "unresolvedEvidence": ["Identify the source and license for every embedded service/brand glyph and review trademark-use boundaries."],
                 }
@@ -367,15 +389,15 @@ def main() -> None:
             "authorityPath": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json",
         },
         "topdown-terrain": {
-            "itemLevelFinding": "Six future floor sheets retain ChatGPT-named Downloads origins and hashes; provider terms, prompts, and job records are not captured.",
+            "itemLevelFinding": "Six future floor sheets retain ChatGPT-named Downloads origins and hashes; exact model, prompt, and job genealogy remain optional historical metadata.",
             "authorityPath": "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json",
         },
         "topdown-walls": {
-            "itemLevelFinding": "Regenerated source is identified and hashed, but provider/model/prompt/terms are not captured.",
+            "itemLevelFinding": "Regenerated source is identified and hashed; exact provider/model/prompt genealogy is not required for first-party classification.",
             "authorityPath": "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json",
         },
         "topdown-objects": {
-            "itemLevelFinding": "Regenerated source is identified and hashed, but provider/model/prompt/terms are not captured.",
+            "itemLevelFinding": "Regenerated source is identified and hashed; exact provider/model/prompt genealogy is not required for first-party classification.",
             "authorityPath": "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json",
         },
     }

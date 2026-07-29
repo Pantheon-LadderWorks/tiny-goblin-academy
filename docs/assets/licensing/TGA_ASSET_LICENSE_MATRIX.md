@@ -10,20 +10,21 @@ Status: **draft for Human Review**
 | Kenney Retro Textures Fantasy | 1 | 13 | CC0 1.0 with local package/license evidence | None required | `third-party-public-safe` | None found |
 | OpenGameArt: DeadKir tileables | 1 | 3 | CC0 1.0 with creator URL, direct URLs, local legalcode, and hashes | None required | `third-party-public-safe` | Preserve source record even though attribution is optional |
 | OpenGameArt: Luke.RUSTLTD parchment | 1 | 1 | CC0 1.0 with creator URL, direct URL, local legalcode, and hash | None required | `third-party-public-safe` | Preserve source record even though attribution is optional |
-| Generated/curated Academy visuals | 23 | 98 | General Gemini statement plus uneven item-level ChatGPT/generated records | N/A pending provenance | `license-unclear` | Per-item provider, model, prompt/job, inputs, terms, and original-output lineage |
+| First-party AI-generated/assisted Academy visuals | 23 | 98 | Kryssie-directed generation, selection, cleanup, mapping, and integration; no third-party stock-asset license identified | Project-level AI disclosure; storefront-specific disclosure when applicable | `generated-first-party` | Escalate only if a third-party reference/input, protected identity, provider restriction, or downloaded origin is later identified |
 | Hub service/brand SVG symbols | 1 | 1 | Not recorded | Unresolved | `license-unclear` | Source licenses and trademark-use boundaries |
 | Removed starter media | 1 historical group | 0 current | Vite/React starter origin inferred from filenames/history | None proposed | `license-unclear` | No current-tree or release exposure; no history action justified |
 
 ## Production-runtime priority slice
 
 - 29 payloads have references from actual game, Hub, or Tauri production source/configuration.
-- 18 of those payloads belong to nine generated/curated `license-unclear` families.
+- 18 of those payloads belong to nine `generated-first-party` families; they require ordinary AI-disclosure handling, not per-asset provenance excavation.
 - Tests, fixtures, evidence, capture scripts, audit JSON, and documentation are reported separately and do not elevate an asset into the production-runtime priority set.
 
 ## Classification notes
 
 - `third-party-public-safe` means current evidence supports public-repository redistribution under the named item license. It does not transfer ownership to TGA.
+- `generated-first-party` means the asset is recorded as Kryssie-directed AI-generated or AI-assisted work and no third-party asset-license restriction is known. It is an operational classification, not a copyrightability opinion.
 - OFL notice preservation is not the same as optional attribution.
-- `license-unclear` is a request for provenance repair, not a claim that an asset is forbidden.
+- `license-unclear` is reserved for genuinely uncertain external origin, third-party licensing, or trademark concerns; it is not triggered merely by a missing model name, prompt, date, or chat record.
 - No `studio-only`, `release-only`, `public-derivative-only`, or `public-with-attribution` asset group was confirmed in the current tree.
 - Technical readiness, runtime approval, and Human approval remain independent of this matrix.

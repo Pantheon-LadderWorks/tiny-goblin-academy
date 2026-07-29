@@ -4249,10 +4249,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4272,29 +4274,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "academy-hub-visuals",
@@ -4424,10 +4438,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4447,29 +4463,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "academy-shared-core",
@@ -4526,10 +4554,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4549,29 +4579,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "academy-shared-fx",
@@ -4609,10 +4651,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4632,29 +4676,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "academy-ui-hud",
@@ -4744,10 +4800,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4767,29 +4825,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "creature-goblin",
@@ -4896,10 +4966,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -4919,29 +4991,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "creature-slime",
@@ -5101,10 +5185,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -5124,29 +5210,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "creature-soldier",
@@ -5205,10 +5303,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -5228,29 +5328,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "creature-training-dummy",
@@ -5311,10 +5423,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -5334,29 +5448,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "font-google-alegreya",
@@ -7100,12 +7226,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
         "itemLevelFinding": "Scene-anchor manifest records a ChatGPT-named Downloads intake source.",
         "authorityPath": "manifests/academy/games/button-goblin-clicker/academy.button-goblin-clicker.background.scene-anchors.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7125,29 +7253,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-card-goblin-duel",
@@ -7291,12 +7431,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
         "itemLevelFinding": "Tabletop intake records a ChatGPT-named original and user-approved generated illustration; other family sheets remain covered only by general generated-visual documentation.",
         "authorityPath": "manifests/academy/games/card-goblin-duel/academy.card-goblin-duel.tabletop-source-intake.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7316,29 +7458,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-dice-duel-tavern",
@@ -7403,10 +7557,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7426,29 +7582,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-dungeon-platformer",
@@ -7485,10 +7653,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7508,29 +7678,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-farm-settlement",
@@ -7590,10 +7772,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7613,29 +7797,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-one-room-platformer",
@@ -7741,10 +7937,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7764,29 +7962,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-pet-campfire",
@@ -7897,10 +8107,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -7920,29 +8132,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-potion-sorter",
@@ -8042,12 +8266,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
         "itemLevelFinding": "Regenerated source lineage records a ChatGPT-named Downloads original; the older concept remains covered only by general generated-visual documentation.",
         "authorityPath": "manifests/academy/games/potion-sorter/academy.potion-sorter.cleanup-candidate.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -8067,29 +8293,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "game-top-down-slime-quest",
@@ -8123,10 +8361,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -8146,29 +8386,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "glyphforge-boot",
@@ -8210,10 +8462,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -8233,29 +8487,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "historical-removed-media",
@@ -8582,10 +8848,12 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured"
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -8605,34 +8873,46 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "hub-social-symbols",
       "title": "Hub social and service SVG symbols",
-      "category": "generated-or-curated-visual",
+      "category": "mixed-third-party-brand-symbols",
       "files": [
         {
           "path": "hub/public/icons.svg",
@@ -8674,7 +8954,7 @@
       "attributionText": null,
       "aiRestrictions": "not-recorded",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "incomplete",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
@@ -10522,12 +10802,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
-        "itemLevelFinding": "Regenerated source is identified and hashed, but provider/model/prompt/terms are not captured.",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
+        "itemLevelFinding": "Regenerated source is identified and hashed; exact provider/model/prompt genealogy is not required for first-party classification.",
         "authorityPath": "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -10547,29 +10829,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "topdown-terrain",
@@ -10738,12 +11032,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
-        "itemLevelFinding": "Six future floor sheets retain ChatGPT-named Downloads origins and hashes; provider terms, prompts, and job records are not captured.",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
+        "itemLevelFinding": "Six future floor sheets retain ChatGPT-named Downloads origins and hashes; exact model, prompt, and job genealogy remain optional historical metadata.",
         "authorityPath": "assets/academy/topdown/terrain/future-floor-tilesheets/intake/tga-topdown-floor-tilesheets-future-intake-v0.1.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -10763,29 +11059,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     },
     {
       "id": "topdown-walls",
@@ -10887,12 +11195,14 @@
       "acquisitionDate": null,
       "generation": {
         "generalProviderStatement": "CREDITS.md states that TGA visual assets were generated using Gemini image generation.",
-        "perAssetProviderModelPromptTerms": "not consistently captured",
-        "itemLevelFinding": "Regenerated source is identified and hashed, but provider/model/prompt/terms are not captured.",
+        "providerFamily": "Google or OpenAI where already recorded; exact historical model is optional",
+        "thirdPartyReferenceUsed": "unknown-for-legacy-assets",
+        "humanEditing": "selected-cleaned-mapped-and-integrated-under-human-direction",
+        "itemLevelFinding": "Regenerated source is identified and hashed; exact provider/model/prompt genealogy is not required for first-party classification.",
         "authorityPath": "manifests/academy/topdown/source/planning/academy.topdown.regenerated-source-intake.json"
       },
       "license": {
-        "name": "Repository claims All Rights Reserved for TGA art, but provider/output authority is not recorded per asset",
+        "name": "First-party AI-generated or AI-assisted content; no third-party stock-asset license identified",
         "version": null,
         "evidencePaths": [
           "CONTENT_LICENSE.md",
@@ -10912,29 +11222,41 @@
         ]
       },
       "permissions": {
-        "commercialUse": "unresolved",
-        "modification": "unresolved",
-        "rawSourceRedistribution": "unresolved",
-        "derivativeRedistribution": "unresolved",
-        "finishedGameDistribution": "unresolved",
-        "publicRepository": "unresolved"
+        "commercialUse": "no-third-party-asset-license-restriction-identified",
+        "modification": "no-third-party-asset-license-restriction-identified",
+        "rawSourceRedistribution": "no-third-party-asset-license-restriction-identified",
+        "derivativeRedistribution": "no-third-party-asset-license-restriction-identified",
+        "finishedGameDistribution": "no-third-party-asset-license-restriction-identified",
+        "publicRepository": "no-third-party-asset-license-restriction-identified"
       },
-      "noticeRequired": "unresolved",
+      "noticeRequired": "project-level-ai-disclosure-and-storefront-specific-disclosure",
       "attributionText": null,
-      "aiRestrictions": "not-recorded",
+      "aiRestrictions": "check current provider and storefront terms at release; no per-asset public model credit required by this audit",
       "manifestCoverage": "partial-or-missing",
-      "provenanceCoverage": "partial-general-statement-only",
+      "provenanceCoverage": "sufficient-origin-classification; exact-generation-lineage-optional",
       "runtimeApproval": "independent-from-license",
       "humanApproval": "independent-from-license",
       "currentPublicExposure": true,
       "historicalPublicExposure": false,
-      "recommendedClassification": "license-unclear",
-      "confidence": "low",
-      "unresolvedEvidence": [
-        "Recover provider/product/model, prompt or job record, source inputs, and terms applicable on the generation date.",
-        "Confirm whether any third-party reference image was supplied."
-      ],
-      "evidenceReferences": []
+      "recommendedClassification": "generated-first-party",
+      "confidence": "medium-high",
+      "unresolvedEvidence": [],
+      "evidenceReferences": [],
+      "originType": "first-party-ai-generated-or-assisted",
+      "thirdPartyInputConcern": "none-known",
+      "aiDisclosure": {
+        "required": true,
+        "scope": "project-and-storefront-level",
+        "perAssetModelCreditRequired": false
+      },
+      "copyrightStrength": "not-assessed",
+      "exactGenerationProvenance": "optional-incomplete",
+      "reviewTriggers": [
+        "credible evidence of a third-party reference or copied source",
+        "protected character, logo, likeness, or brand content",
+        "provider-specific restriction applicable to the output",
+        "uncertainty whether the asset was generated or externally downloaded"
+      ]
     }
   ]
 }

@@ -56,21 +56,31 @@ The canonical font inventory represents 20 of 30 tracked binaries. Ten styles ac
 
 OFL copyright and license notices must travel with redistributed font software. That is a notice obligation, not a requirement to invent marketing attribution.
 
-### Generated and curated TGA visuals
+### First-party AI-generated and AI-assisted TGA visuals
 
-Twenty-four current records containing 99 payloads are classified `license-unclear` pending provenance completion. This does **not** mean they are known infringing, nor does it mean they must be removed. It means the repository currently has only a general statement that TGA visuals were generated with Gemini, while several item-level records point to ChatGPT-named downloads and some records say only “generated” or “regenerated.”
+Twenty-three current records containing 98 payloads are classified `generated-first-party`. They are recorded as Kryssie-directed AI generation or assistance followed by human selection, cleanup, mapping, composition, and integration. No third-party stock-asset license or externally owned source artwork is identified for these families.
 
-Missing fields commonly include:
+Exact provider, model revision, prompt, generation date, chat/job identifier, and original-output genealogy are optional historical metadata. Their absence does not by itself create a third-party license defect. The audit therefore does not require family-by-family excavation merely to distinguish Gemini from ChatGPT or one model revision from another.
 
-- exact provider/product/model;
-- generation or edit date;
-- prompt or job record;
-- source inputs and whether third-party references were supplied;
-- provider terms applicable on the generation date;
-- original output hash before cleanup;
-- explicit lineage from original output to accepted derivative.
+The operational record instead keeps separate questions:
 
-The repository-level All Rights Reserved statement cannot substitute for that chain.
+- origin type: first-party AI-generated or AI-assisted;
+- third-party reference/input concern: none known, yes, or unknown;
+- human selection/editing/integration status;
+- project and storefront disclosure requirements;
+- provider-specific restrictions discovered later;
+- copyright strength, which this audit does not assess.
+
+`license-unclear` is now reserved for a credible external-origin, third-party-input, protected-character/brand, provider-restriction, or downloaded-versus-generated uncertainty. Missing model nicknames and prompts are not enough.
+
+Current OpenAI terms assign OpenAI's rights in output to the user while keeping responsibility for lawful inputs and use with the user. Google's terms say Google does not claim ownership over original content generated in covered services and likewise require respect for others' rights. These provider rules can change, so release review should check current terms rather than preserve a public birth certificate for every sprite. The U.S. Copyright Office separately treats human authorship as the copyrightability question; inclusion of AI-generated material does not by itself bar copyright in a larger human-authored work. Steam currently asks developers to disclose pre-generated AI content that ships with and is consumed by players. These are separate ownership, input-risk, copyright-strength, and storefront-disclosure questions—not one provenance field.
+
+Primary policy references reviewed 2026-07-29:
+
+- OpenAI Terms of Use: <https://openai.com/policies/row-terms-of-use/>
+- Google Terms of Service: <https://policies.google.com/terms?hl=en-US>
+- U.S. Copyright Office, Copyright and Artificial Intelligence Part 2: <https://www.copyright.gov/ai/>
+- Steamworks Content Survey: <https://partner.steamgames.com/doc/gettingstarted/contentsurvey>
 
 ### Mixed brand-icon surface
 
@@ -78,7 +88,7 @@ The repository-level All Rights Reserved statement cannot substitute for that ch
 
 ### Evidence and derivatives
 
-H5/H6 evidence is useful proof, but it should not inflate the asset census. Evidence reproducing CC0 or OFL material inherits a public-safe source boundary. Evidence reproducing generated TGA art inherits the generated asset's unresolved provenance until that source record is repaired.
+H5/H6 evidence is useful proof, but it should not inflate the asset census. Evidence reproducing CC0 or OFL material inherits a public-safe source boundary. Evidence reproducing first-party AI-generated TGA art remains supporting evidence for that `generated-first-party` family; it does not create another asset or another license question.
 
 No independent restricted evidence pack was identified in the narrowed asset audit. This lane did not perform a storage-retention audit of the evidence corpus.
 
@@ -86,7 +96,7 @@ No independent restricted evidence pack was identified in the narrowed asset aud
 
 The corrected reference classifier observes 29 payloads used by production game, Hub, or Tauri runtime source/configuration. It separately reports 12 payloads referenced by tests/fixtures, 113 by evidence/capture surfaces, and 169 by documentation/control-plane text; these sets may overlap.
 
-Eighteen of the 29 production payloads belong to nine generated/curated families whose item-level provenance is incomplete: Academy Hub visuals, the runtime goblin, Button Goblin background, Card Goblin assets, Dice Duel art, One Room Platformer art, Potion Sorter art, the GlyphForge boot splash, and Hub/Tauri icon derivatives. Those nine families—not the former contaminated count of 34 references—form the first provenance-repair slice.
+Eighteen of the 29 production payloads belong to nine `generated-first-party` families: Academy Hub visuals, the runtime goblin, Button Goblin background, Card Goblin assets, Dice Duel art, One Room Platformer art, Potion Sorter art, the GlyphForge boot splash, and Hub/Tauri icon derivatives. They require the same project/storefront AI-disclosure policy as the other first-party generated visuals, not a special per-asset provenance-repair slice.
 
 Runtime approval and license permission remain separate fields. An H5 `not-runtime-approved` marker was a phase gate, not a license verdict; later H6 use does not repair missing provenance, and missing H6 use does not make a licensed asset unlawful.
 
@@ -107,17 +117,17 @@ No tags or GitHub releases exist. The only non-evidence media paths found in his
 
 ## Risk order
 
-1. **High:** generated-image provenance is too general for item-level defense.
-2. **High:** the All Rights Reserved boundary can be read as covering third-party fonts and CC0 sources.
-3. **Medium:** mixed brand glyph provenance and trademark-use authority are unrecorded.
-4. **Medium:** ten OFL font binaries are missing from the canonical font inventory.
+1. **High:** the All Rights Reserved boundary can be read as covering third-party fonts and CC0 sources.
+2. **Medium:** mixed brand glyph provenance and trademark-use authority are unrecorded.
+3. **Medium:** ten OFL font binaries are missing from the canonical font inventory.
+4. **Low:** project/storefront AI disclosure should be made explicit before a release that requires it.
 5. **Low:** public raw CC0 archives increase repository weight, but not license risk.
 6. **Low:** three removed starter-template images remain in history; no tags or releases amplify exposure.
 
 ## Human decisions required before remediation
 
 - Approve the proposed third-party carve-out and notices architecture.
-- Decide whether generated visual records should be repaired from retained chats/jobs first or temporarily quarantined by family where recovery fails.
+- Approve a proportional project-level AI disclosure and release/storefront checklist without requiring per-asset model/prompt genealogy.
 - Decide whether the mixed brand-icon sheet is retained with documented sources, replaced with self-authored links/text, or reviewed separately.
 - Approve adding the ten missing font styles to the canonical inventory.
 

@@ -62,6 +62,31 @@ class AssetExposureInventoryTests(unittest.TestCase):
                     asset["path"],
                 )
 
+    def test_first_party_generated_assets_are_not_classified_as_license_unclear(self) -> None:
+        """Keeps optional generation genealogy separate from third-party license risk."""
+        generated = [
+            record
+            for record in self.inventory["records"]
+            if record["category"] == "generated-or-curated-visual"
+            and record["id"] != "hub-social-symbols"
+        ]
+        self.assertEqual(23, len(generated))
+        self.assertEqual(98, sum(len(record["files"]) for record in generated))
+        for record in generated:
+            self.assertEqual("generated-first-party", record["recommendedClassification"])
+            self.assertEqual("first-party-ai-generated-or-assisted", record["originType"])
+            self.assertEqual("none-known", record["thirdPartyInputConcern"])
+            self.assertEqual("project-and-storefront-level", record["aiDisclosure"]["scope"])
+            self.assertEqual("not-assessed", record["copyrightStrength"])
+            self.assertEqual("optional-incomplete", record["exactGenerationProvenance"])
+
+    def test_license_unclear_is_reserved_for_actual_unknown_or_third_party_risk(self) -> None:
+        unclear = {
+            record["id"] for record in self.inventory["records"]
+            if record["recommendedClassification"] == "license-unclear"
+        }
+        self.assertEqual({"hub-social-symbols", "historical-removed-media"}, unclear)
+
     def test_global_media_census_accounts_for_every_tracked_candidate(self) -> None:
         """Catches a media file outside canonical roots escaping both inventory and exclusions."""
         tracked = subprocess.check_output(

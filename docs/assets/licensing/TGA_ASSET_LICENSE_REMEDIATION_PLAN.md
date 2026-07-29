@@ -14,32 +14,23 @@ Prepare a narrowly reviewed change to `README.md`, `CONTENT_LICENSE.md`, `CREDIT
 
 Do not apply this text until Human Review.
 
-## Priority 2 — Repair generated-asset provenance
+## Priority 2 — Adopt a proportional AI-disclosure boundary
 
-Work family by family, beginning with the corrected production-runtime set: 18 generated/curated payloads across nine families. The other 11 production payloads are already backed by OFL or CC0 authority.
+Treat the 23 first-party AI-generated/assisted families (98 payloads) as `generated-first-party`, not `license-unclear`. Their exact model, prompt, generation date, chat, and original-output genealogy are optional historical metadata and are not required for public use merely because they are incomplete.
 
-The initial generated-family slice is:
+Prepare one reviewed project-level disclosure equivalent to:
 
-- Academy Hub visuals;
-- platformer goblin runtime derivative;
-- Button Goblin background;
-- Card Goblin tabletop, card frames, and UI tokens;
-- Dice Duel runtime art;
-- One Room Platformer background and construction sheet;
-- Potion Sorter runtime sheet;
-- GlyphForge boot splash;
-- Hub/Tauri icon derivatives.
+> This project contains AI-generated and AI-assisted visual content. Assets were generated, selected, edited, cleaned, mapped, and integrated under human direction. Third-party fonts, textures, and other sourced materials remain governed by their respective licenses.
 
-For each family:
+Maintain only the operational fields useful for future review:
 
-1. locate retained generation chat/job/output evidence;
-2. record provider, product/model where available, date, prompt/job reference, source inputs, and applicable historical terms;
-3. hash the original output and link every cleanup/derived sheet;
-4. record Human selection/review;
-5. classify the family as `generated-public-safe`, `studio-only`, or `license-unclear` based on recovered evidence;
-6. do not invent missing facts.
+- origin type: first-party AI-generated or AI-assisted;
+- provider family when already known, otherwise optional/unknown;
+- whether a third-party reference/input concern is known;
+- human selection/editing/integration status;
+- release/storefront disclosure requirement.
 
-If recovery fails, bring that family to Human Review. Do not silently delete or relicense it.
+Escalate a family only if evidence later suggests an externally downloaded asset, third-party reference/input, protected character/logo/likeness, or provider-specific restriction. Copyright strength is a separate question and is not assessed by this audit.
 
 ## Priority 3 — Complete the font inventory
 
@@ -58,7 +49,7 @@ Promote a reviewed notices document and add per-pack directory pointers without 
 | Candidate | Proposed action | Destructive now? |
 |---|---|---|
 | Overbroad All Rights Reserved language | Add explicit third-party exclusion and item index | No action in audit |
-| Generated families with missing terms | Recover provenance; Human-review unrecoverable families | No action in audit |
+| First-party AI-generated families | Add one project-level disclosure and a release/storefront checklist | No action in audit |
 | Ten unindexed font binaries | Extend canonical manifest | No action in audit |
 | Mixed service/brand SVG | Source/trademark audit; then retain or replace | No action in audit |
 | Large CC0 archives | Defer to storage policy; license allows current public presence | No action in audit |
