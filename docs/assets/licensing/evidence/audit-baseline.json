@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1",
+  "auditDate": "2026-07-29",
+  "repositoryRoot": ".",
+  "repository": "Pantheon-LadderWorks/tiny-goblin-academy",
+  "visibility": "PUBLIC",
+  "branch": "main",
+  "head": "ad91fe30aa017d660404a6695c3df490a431054d",
+  "originMain": "ad91fe30aa017d660404a6695c3df490a431054d",
+  "tags": [],
+  "releases": [],
+  "licenseFileHashes": {
+    "README.md": "e4ceaf48250e3f4675c888332d079e20a1915bbec4d1f9d7aaf7ee17c567c41f",
+    "LICENSE": "e71271372cd6d793adce892063e69b3dd88d49bf8899ae0ad6f366b4ef5478e7",
+    "CONTENT_LICENSE.md": "6ab722872be91ef622fa5b8464b4060911a2dec873338072cad35617805b577f",
+    "CREDITS.md": "d55523c020ff39aa780c67f4bb30212999d9ad938c2c078946e3a75335e3330f",
+    "CONTRIBUTING.md": "c41253ee5190be9f634ae3306eaef05466e35fb05fbea442163809e2aaffac9d"
+  },
+  "scope": {
+    "trackedMediaCandidates": 979,
+    "assetPayloads": 173,
+    "explicitlyExcludedEvidenceOrArchiveMedia": 806,
+    "unexpectedTrackedMedia": 0,
+    "packOrFamilyRecords": 56,
+    "evidenceTreatment": "Supporting lineage only; H5/H6 captures are not counted as independent asset payloads."
+  }
+}

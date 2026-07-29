@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "0.1",
+  "validatedAt": "2026-07-29",
+  "baselineCommit": "ad91fe30aa017d660404a6695c3df490a431054d",
+  "inventory": {
+    "inventorySha256": "cd57016b7d07a76929cbc699d3b0f130d3abc8cead0d8d53d9d3e058480f8dca",
+    "deterministicRegeneration": true,
+    "records": 56,
+    "assetPayloads": 173,
+    "uniqueAssetPayloads": 173,
+    "fontBinaries": 30,
+    "productionRuntimePayloads": 29,
+    "generatedProductionRuntimePayloads": 18,
+    "generatedProductionRuntimeFamilies": 9,
+    "testFixtureReferencedPayloads": 12,
+    "evidenceAndCaptureReferencedPayloads": 113,
+    "documentationReferencedPayloads": 169,
+    "totalTrackedMediaCandidates": 979,
+    "explicitlyExcludedEvidencePayloads": 795,
+    "explicitlyExcludedArchivedDebugPayloads": 11,
+    "unexpectedTrackedMedia": 0,
+    "hashedLicenseEvidenceFiles": 93,
+    "missingPaths": 0,
+    "hashMismatches": 0,
+    "duplicateAssignments": 0,
+    "unassignedPayloads": 0
+  },
+  "repository": {
+    "rootLicenseHashesUnchanged": true,
+    "assetFilesChanged": 0,
+    "manifestFilesChanged": 0,
+    "rootLicenseFilesChanged": 0,
+    "gitHistoryChanged": false,
+    "tagsChanged": false,
+    "releasesChanged": false,
+    "packageOrLockfileChanged": false
+  },
+  "validators": {
+    "assetPipelineValidate": "passed",
+    "provenanceLegacyOk": "passed with 79 documented legacy pre-H5.67 warnings",
+    "evidenceStorage": "passed; 795 grandfathered files; 11 added candidates checked",
+    "jsonParseAndHashCoverage": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "glyphforgeStudiosLibrary": {
+    "head": "dd8674d9f91798f2d2778010ce667a5184465901",
+    "originMain": "dd8674d9f91798f2d2778010ce667a5184465901",
+    "workingTreeClean": true,
+    "assetIntakeEnabled": false,
+    "restrictedPayloadCommitsEnabled": false,
+    "publicExportsEnabled": false,
+    "gitLfsEnabled": false,
+    "storageArchitectureApproved": false
+  }
+}
