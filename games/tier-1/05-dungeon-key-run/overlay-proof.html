@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dungeon Key private actor overlay proof</title>
+    <style>
+      :root { color: #fff0c9; background: #130d1c; font: 16px/1.5 system-ui, sans-serif; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+      main { width: min(48rem, calc(100vw - 2rem)); }
+      #proof-canvas { min-height: 20rem; border: 1px solid #85586f; background: #21172c; }
+      #overlay-status { padding: .75rem 0; color: #e7ca91; }
+      code { color: #83dfbf; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Dungeon Key actor overlay proof</h1>
+      <p>This development fixture loads only the named Female Goblin + Thug pilot. Missing or invalid private assets activate code-native fallback markers.</p>
+      <div id="proof-canvas"></div>
+      <p id="overlay-status" role="status">Checking local overlay…</p>
+    </main>
+    <script type="module" src="/src/overlay-proof.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "pilotId": "glyphforge-craftpix-dungeon-key-runtime-overlay-v0.1",
+  "gameId": "tga-05-dungeon-key-run",
+  "actorProfileAuthority": "detailed-expressive-top-down-vector-family-v0.1@725ea4426a2b9b2c39aa326c1b7167d412fe55a1",
+  "actors": [
+    {
+      "actorId": "female-goblin",
+      "sourceArchiveSha256": "8c6f07c0bada27315c95998c2e5e94031f37fd4835a8fc4164f9e04428bf5704"
+    },
+    {
+      "actorId": "thug",
+      "sourceArchiveSha256": "b1643995718d2cfd2dbff4ae55faac9036a77355a7385fa07e179d78aa8872cd"
+    }
+  ],
+  "projectionUrl": "__private_runtime__/dungeon-key-actors/manifest.json",
+  "fallback": "existing-code-native-emoji-actors",
+  "networkAcquisition": false,
+  "publicRedistributionApproved": false
+}

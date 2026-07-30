@@ -12,3 +12,8 @@ hub/src-tauri/.dev-runtime-logs/
 
 # Local external-evidence configuration
 tools/evidence/evidence.local.json
+
+# Restricted actor overlays are reproducible local projections from the private
+# GlyphForge library. No projected payload may enter public TGA Git.
+games/tier-1/05-dungeon-key-run/public/__private_runtime__/
+games/tier-1/05-dungeon-key-run/.env.private-overlay.local
