@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "c1e7048131bb290b2e65651c074c475df292c452",
+  "createdAt": "2026-07-31T21:41:41.859Z",
+  "gameId": "tga-05",
+  "laneId": "hub-ledger-rung2-terminal-paths",
+  "route": "parent-iframe-live-dev-runtime",
+  "assertions": {
+    "victorySimulationReached": true,
+    "keyReceiptPublished": true,
+    "exitUnlockedReceiptPublished": true,
+    "victoryReceiptPublished": true,
+    "victoryReceiptIsTerminal": true,
+    "resetCreatedSecondRun": true,
+    "defeatSimulationReached": true,
+    "patrolReceiptPrecedesDefeat": true,
+    "defeatReceiptPublished": true,
+    "terminalSnapshotAnswered": true,
+    "snapshotSequencesOrdered": true,
+    "noBrowserErrors": true
+  },
+  "allAssertionsPassed": true,
+  "errors": [],
+  "victoryRun": {
+    "runId": "dungeon-key-jwkda26mvdh",
+    "status": "victory",
+    "eventCount": 76,
+    "notableKinds": [
+      "key.collected",
+      "exit.unlocked",
+      "run.victory"
+    ]
+  },
+  "defeatRun": {
+    "runId": "dungeon-key-pvuk2pvo18f",
+    "status": "defeat",
+    "eventCount": 17,
+    "notableKinds": [
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "enemy.patrolled",
+      "run.defeat"
+    ],
+    "snapshotEventCount": 18
+  }
+}

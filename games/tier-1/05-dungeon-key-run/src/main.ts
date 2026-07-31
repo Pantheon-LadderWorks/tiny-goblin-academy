@@ -1,6 +1,7 @@
 import './style.css';
 import {createDungeonGame} from './dungeonScene';
 import {resolvePrivateActorOverlay, type OverlayStatus} from './privateActorOverlay';
+import {createDungeonKeyLedger, publishDungeonKeyTransition} from './ledger-bridge';
 import {assertRuinHallMatchesSimulation, buildDungeonPresentation} from './sceneAuthority';
 import {createInitialState, movePlayer, type Direction, type GameState} from './simulation';
 
@@ -34,6 +35,15 @@ const moveButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('#co
 let state = createInitialState();
 assertRuinHallMatchesSimulation(state);
 let inputLocked = true;
+
+const academyLedger = createDungeonKeyLedger({
+  parent: window.parent === window ? null : window.parent,
+});
+const onHubLedgerMessage = (event: MessageEvent<unknown>): void => {
+  if (event.source !== window.parent) return;
+  academyLedger.handleHubMessage(event.data);
+};
+window.addEventListener('message', onHubLedgerMessage);
 
 const overlay = await resolvePrivateActorOverlay();
 document.body.dataset.actorOverlay = overlay.status;
@@ -83,6 +93,7 @@ const performMove = async (direction: Direction): Promise<void> => {
   const before = state;
   const after = movePlayer(before, direction);
   state = after;
+  publishDungeonKeyTransition(academyLedger, {before, after, direction});
   setInputLocked(true);
   try {
     await dungeon.playTransition(before, after, direction);
@@ -106,6 +117,7 @@ resetButton.addEventListener('click', () => {
   if (inputLocked) return;
   state = createInitialState();
   assertRuinHallMatchesSimulation(state);
+  academyLedger.reset();
   dungeon.syncState(state);
   render();
 });
@@ -159,4 +171,7 @@ inputLocked = false;
 if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.ready = true;
 render();
 
-window.addEventListener('beforeunload', () => dungeon.destroy());
+window.addEventListener('beforeunload', () => {
+  window.removeEventListener('message', onHubLedgerMessage);
+  dungeon.destroy();
+});

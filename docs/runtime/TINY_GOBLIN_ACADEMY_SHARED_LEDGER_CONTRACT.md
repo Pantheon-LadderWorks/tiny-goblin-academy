@@ -1,6 +1,6 @@
 # Tiny Goblin Academy Shared Ledger Contract
 
-**Status:** Shared Hub contract implemented; Card Goblin Duel is the first live publisher; Dice Duel Tavern backfill is separately gated.
+**Status:** Shared Hub contract implemented; Card Goblin Duel and Dungeon Key Run are live publishers; Dice Duel Tavern backfill remains separately gated.
 
 **Introduced in:** H6.20C
 
@@ -120,6 +120,32 @@ A live iframe handshake proved one Guard transition as:
 
 All five receipts shared one run identity, and a later Hub snapshot request restored the same ordered history.
 
+## Dungeon Key Run Publisher
+
+Dungeon Key Run uses game identity `tga-05` and publishes authored receipts for:
+
+- a new Ruin Hall run;
+- committed or blocked movement;
+- Thug patrol consequences;
+- gold-key collection;
+- locked-exit attempts;
+- the exit opening;
+- victory or defeat;
+- reset into a replacement run;
+- snapshot recovery after Hub request or reconnection.
+
+The frozen Level 5 simulation remains authoritative. Its existing local movement trace is not replaced or rewritten; the adapter reads each completed simulation transition and authors immutable Hub receipts from those facts. Rendering and animation never publish receipts.
+
+A live parent/iframe handshake proved:
+
+- the initial `run.started` snapshot;
+- a requested replacement snapshot for the same run;
+- ordered `movement.committed` and `enemy.patrolled` incremental events;
+- `key.collected`, `exit.unlocked`, and terminal `run.victory` events;
+- reset into a new `runId`;
+- terminal `run.defeat` followed by a complete requested snapshot;
+- zero browser or page errors across the handshake.
+
 ## Dice Duel Tavern Backfill
 
 Dice Duel Tavern already has compact local `Last Exchange` feedback and previously had a fuller combat history. It requires a separate bounded retrofit after Card Goblin Duel completes Human Review.
@@ -159,5 +185,6 @@ Games without authored history may declare `"ledger": "none"`, allowing the Hub 
 | Potion Sorter | Game-local status only | None |
 | Dice Duel Tavern | `Last Exchange` | Pending separate backfill |
 | Card Goblin Duel | Current resolution/result | Implemented in H6.20C |
+| Dungeon Key Run | Simulation-owned movement trace | Implemented for Ruin Hall |
 
 No other game is implicitly opted into the ledger contract.

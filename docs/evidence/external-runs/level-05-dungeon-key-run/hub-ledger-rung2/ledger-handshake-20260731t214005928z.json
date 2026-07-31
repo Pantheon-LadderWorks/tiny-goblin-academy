@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "c1e7048131bb290b2e65651c074c475df292c452",
+  "createdAt": "2026-07-31T21:40:05.928Z",
+  "gameId": "tga-05",
+  "laneId": "hub-ledger-rung2",
+  "route": "parent-iframe-live-dev-runtime",
+  "assertions": {
+    "initialSnapshotPublished": true,
+    "initialRunStartedOnly": true,
+    "snapshotRequestAnswered": true,
+    "committedMovementPublished": true,
+    "patrolConsequencePublished": true,
+    "incrementSequenceOrdered": true,
+    "simulationMovedOnce": true,
+    "resetCreatedNewRun": true,
+    "resetSnapshotReplacedHistory": true,
+    "noBrowserErrors": true
+  },
+  "allAssertionsPassed": true,
+  "errors": [],
+  "initialRun": {
+    "runId": "dungeon-key-ngvj1h4nt0q",
+    "snapshotCount": 2,
+    "incrementalEvents": [
+      {
+        "sequence": 2,
+        "kind": "movement.committed",
+        "title": "Moved Down"
+      },
+      {
+        "sequence": 3,
+        "kind": "enemy.patrolled",
+        "title": "Thug Patrolled"
+      }
+    ]
+  },
+  "resetRun": {
+    "runId": "dungeon-key-7gvgo1ute2o",
+    "events": [
+      {
+        "sequence": 1,
+        "kind": "run.started",
+        "title": "Ruin Hall Entered"
+      }
+    ]
+  }
+}
