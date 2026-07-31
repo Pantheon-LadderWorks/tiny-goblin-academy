@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "68f2fc8217c9f8bf0cc0d4a0bd0938a755e63203",
+  "createdAt": "2026-07-31T20:18:07.831Z",
+  "gameId": "level-05-dungeon-key-run",
+  "laneId": "ruin-hall-rung1-fallback",
+  "runId": "capture-20260731t201500z-p8964",
+  "externalRelativePath": "future/level-05-dungeon-key-run/ruin-hall-rung1-fallback/capture-20260731t201500z-p8964",
+  "files": [
+    {
+      "relativePath": "rung1-fallback-runtime-report.json",
+      "mediaType": "application/json",
+      "bytes": 183179,
+      "sha256": "e52aca1e393f7855996a431718f69d9f5560e2272dae10a836345f2c2cd09d05"
+    },
+    {
+      "relativePath": "stills/1024x640-01-initial.png",
+      "mediaType": "image/png",
+      "bytes": 384613,
+      "sha256": "aefffed5abfc59c91f396f7048a0d71596e9613564f7ca8350281c4532a58261"
+    },
+    {
+      "relativePath": "stills/1024x640-02-valid-move.png",
+      "mediaType": "image/png",
+      "bytes": 384936,
+      "sha256": "41981a22603d0935afbc1cb94de974b0afab379a4873f33dfc2eb3775ddc49ef"
+    },
+    {
+      "relativePath": "stills/1024x640-03-blocked-wall.png",
+      "mediaType": "image/png",
+      "bytes": 384923,
+      "sha256": "e36edc0f5f411ebaf6d07d26744ddabe4fcaf84a7f1dc7b0ad17d983270b3682"
+    },
+    {
+      "relativePath": "stills/1024x640-04-locked-exit.png",
+      "mediaType": "image/png",
+      "bytes": 385333,
+      "sha256": "a48532d06f4f12dd6f993df5b7fdf357cb2a0b8432b875eb458df3ba9c05fe46"
+    },
+    {
+      "relativePath": "stills/1024x640-05-key-collected.png",
+      "mediaType": "image/png",
+      "bytes": 386688,
+      "sha256": "1e3290dafb32635cc20f2afcbc629f6222b23b9108cc71c754246a10c70c912a"
+    },
+    {
+      "relativePath": "stills/1024x640-06-victory.png",
+      "mediaType": "image/png",
+      "bytes": 393276,
+      "sha256": "348ade008e0b94ec423e3bf41d71085ba1413563735b50158e65dc9a1f51c4e0"
+    },
+    {
+      "relativePath": "stills/1024x640-07-reset-after-victory.png",
+      "mediaType": "image/png",
+      "bytes": 384739,
+      "sha256": "252651c83822a74993fdc9ccea25414c5aa8f1ecd352b000b94ac71671b82a07"
+    },
+    {
+      "relativePath": "stills/1024x640-08-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 392347,
+      "sha256": "bcf9b1d5c7f0ab58605ca106b78010d2cf55fce0de50fe55ee7434f3c9c67fa7"
+    },
+    {
+      "relativePath": "stills/1024x640-09-reset-after-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 384739,
+      "sha256": "252651c83822a74993fdc9ccea25414c5aa8f1ecd352b000b94ac71671b82a07"
+    },
+    {
+      "relativePath": "stills/1920x1080-01-initial.png",
+      "mediaType": "image/png",
+      "bytes": 653153,
+      "sha256": "6d099af6cf1a15abfd43d1869fbf6ea187a8ce69629be558169a15536e05ed5f"
+    },
+    {
+      "relativePath": "stills/1920x1080-02-valid-move.png",
+      "mediaType": "image/png",
+      "bytes": 653415,
+      "sha256": "7e3917b6c2bb95a06a75169d9a8c0088bacc408d861f9cce3ecbb673a9105a43"
+    },
+    {
+      "relativePath": "stills/1920x1080-03-blocked-wall.png",
+      "mediaType": "image/png",
+      "bytes": 653578,
+      "sha256": "eb5914e3f3e2959faa49cd45b142b3aca502e235d34ca876c7e08d8265c807df"
+    },
+    {
+      "relativePath": "stills/1920x1080-04-locked-exit.png",
+      "mediaType": "image/png",
+      "bytes": 647931,
+      "sha256": "9b54d76b06fa8e8b40034375ececb627771f8b6b245111fef8a70f98d403b9d2"
+    },
+    {
+      "relativePath": "stills/1920x1080-05-key-collected.png",
+      "mediaType": "image/png",
+      "bytes": 649294,
+      "sha256": "a2a914812723222924f1b5f73fb68e7b9aa7e36877493313b9776c57dbeedeeb"
+    },
+    {
+      "relativePath": "stills/1920x1080-06-victory.png",
+      "mediaType": "image/png",
+      "bytes": 652106,
+      "sha256": "4f993ffa6aca4892894be09ca392272d0d7389f56abcf7d4c1127b82770517fe"
+    },
+    {
+      "relativePath": "stills/1920x1080-07-reset-after-victory.png",
+      "mediaType": "image/png",
+      "bytes": 653360,
+      "sha256": "cf255cf69105b1ae3983a6a4c14ca0557868836e7fbcc07a614d7c1587e06788"
+    },
+    {
+      "relativePath": "stills/1920x1080-08-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 654617,
+      "sha256": "722013a5228344a08501e736822630dae169bd974fcf567db0ce305be63dde0a"
+    },
+    {
+      "relativePath": "stills/1920x1080-09-reset-after-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 653360,
+      "sha256": "cf255cf69105b1ae3983a6a4c14ca0557868836e7fbcc07a614d7c1587e06788"
+    }
+  ],
+  "captureScript": "temporary-rung1-browser-verifier",
+  "captureScriptVersion": "rung1-v1",
+  "captureConfiguration": {
+    "route": "local-dev-root",
+    "viewports": [
+      "1920x1080",
+      "1024x640"
+    ],
+    "assetMode": "fallback"
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}

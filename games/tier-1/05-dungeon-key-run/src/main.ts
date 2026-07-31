@@ -1,174 +1,162 @@
-import Phaser from 'phaser';
-import { createInitialState, movePlayer, GameState, Direction } from './simulation';
 import './style.css';
+import {createDungeonGame} from './dungeonScene';
+import {resolvePrivateActorOverlay, type OverlayStatus} from './privateActorOverlay';
+import {assertRuinHallMatchesSimulation, buildDungeonPresentation} from './sceneAuthority';
+import {createInitialState, movePlayer, type Direction, type GameState} from './simulation';
 
-// DOM elements
-const btnUp = document.getElementById('btn-up') as HTMLButtonElement;
-const btnDown = document.getElementById('btn-down') as HTMLButtonElement;
-const btnLeft = document.getElementById('btn-left') as HTMLButtonElement;
-const btnRight = document.getElementById('btn-right') as HTMLButtonElement;
-const btnReset = document.getElementById('btn-reset') as HTMLButtonElement;
-const banner = document.getElementById('banner') as HTMLDivElement;
-const log = document.getElementById('log') as HTMLOListElement;
-const keyStatus = document.getElementById('key-status') as HTMLDivElement;
-
-let state: GameState = createInitialState();
-
-// UI Update
-function updateDOM() {
-  // Update Ledger
-  log.innerHTML = '';
-  state.ledger.slice().reverse().forEach((entry, index) => {
-    const li = document.createElement('li');
-    li.value = state.ledger.length - index;
-    li.textContent = entry;
-    log.appendChild(li);
-  });
-
-  // Update Status panel
-  keyStatus.textContent = state.hasKey ? '🔑 (Found)' : '🔑 (Not Found)';
-
-  // Update Controls
-  const isTerminal = state.status !== 'playing';
-  btnUp.disabled = isTerminal;
-  btnDown.disabled = isTerminal;
-  btnLeft.disabled = isTerminal;
-  btnRight.disabled = isTerminal;
-
-  // Update Banner
-  if (state.status === 'victory') {
-    banner.textContent = 'VICTORY!';
-    banner.style.color = '#73d88b';
-  } else if (state.status === 'defeat') {
-    banner.textContent = 'DEFEAT!';
-    banner.style.color = '#d84b4b';
-  } else {
-    banner.textContent = '';
+declare global {
+  interface Window {
+    __dungeonKeyRunStatus?: {
+      ready: boolean;
+      overlay: OverlayStatus;
+      overlayReason?: string;
+      inputLocked: boolean;
+      state: GameState;
+    };
   }
 }
 
-// Actions
-function doAction(dir: Direction) {
-  state = movePlayer(state, dir);
-  updateDOM();
-}
-
-btnUp.addEventListener('click', () => doAction('up'));
-btnDown.addEventListener('click', () => doAction('down'));
-btnLeft.addEventListener('click', () => doAction('left'));
-btnRight.addEventListener('click', () => doAction('right'));
-
-btnReset.addEventListener('click', () => {
-  state = createInitialState();
-  updateDOM();
-});
-
-// Phaser setup
-const TILE_SIZE = 32; // To make it fit perfectly in a 320x320 area
-
-class DungeonScene extends Phaser.Scene {
-  private playerGraphic!: Phaser.GameObjects.Text;
-  private enemyGraphic!: Phaser.GameObjects.Text;
-  private keyGraphic!: Phaser.GameObjects.Text;
-  private exitGraphic!: Phaser.GameObjects.Text;
-  private wallsGroup!: Phaser.GameObjects.Group;
-
-  constructor() {
-    super('DungeonScene');
-  }
-
-  create() {
-    // Draw background grid lines (optional, looks nice)
-    const graphics = this.add.graphics();
-    graphics.lineStyle(1, 0x4a3b5c, 0.5);
-    for (let i = 0; i <= 10; i++) {
-      graphics.moveTo(i * TILE_SIZE, 0);
-      graphics.lineTo(i * TILE_SIZE, 10 * TILE_SIZE);
-      graphics.moveTo(0, i * TILE_SIZE);
-      graphics.lineTo(10 * TILE_SIZE, i * TILE_SIZE);
-    }
-    graphics.strokePath();
-
-    this.wallsGroup = this.add.group();
-    
-    // Create initial entities
-    this.keyGraphic = this.add.text(0, 0, '🔑', { fontSize: '20px' }).setOrigin(0.5);
-    this.exitGraphic = this.add.text(0, 0, '🚪', { fontSize: '20px' }).setOrigin(0.5);
-    this.playerGraphic = this.add.text(0, 0, '🧙', { fontSize: '20px' }).setOrigin(0.5);
-    this.enemyGraphic = this.add.text(0, 0, '👺', { fontSize: '20px' }).setOrigin(0.5);
-
-    // Initial draw
-    this.syncWithState();
-  }
-
-  update() {
-    this.syncWithState();
-  }
-
-  syncWithState() {
-    // Draw Walls once
-    if (this.wallsGroup.getChildren().length === 0) {
-      state.walls.forEach(w => {
-        const wall = this.add.rectangle(
-          w.x * TILE_SIZE + TILE_SIZE/2, 
-          w.y * TILE_SIZE + TILE_SIZE/2, 
-          TILE_SIZE - 2, 
-          TILE_SIZE - 2, 
-          0x75444b
-        );
-        this.wallsGroup.add(wall);
-      });
-    }
-
-    // Sync Positions
-    this.playerGraphic.setPosition(
-      state.player.x * TILE_SIZE + TILE_SIZE/2,
-      state.player.y * TILE_SIZE + TILE_SIZE/2
-    );
-    this.enemyGraphic.setPosition(
-      state.enemy.x * TILE_SIZE + TILE_SIZE/2,
-      state.enemy.y * TILE_SIZE + TILE_SIZE/2
-    );
-
-    this.keyGraphic.setPosition(
-      state.keyPos.x * TILE_SIZE + TILE_SIZE/2,
-      state.keyPos.y * TILE_SIZE + TILE_SIZE/2
-    );
-    this.keyGraphic.setVisible(!state.hasKey);
-
-    this.exitGraphic.setPosition(
-      state.exitPos.x * TILE_SIZE + TILE_SIZE/2,
-      state.exitPos.y * TILE_SIZE + TILE_SIZE/2
-    );
-  }
-}
-
-const config: Phaser.Types.Core.GameConfig = {
-  type: Phaser.AUTO,
-  width: 320,
-  height: 320,
-  parent: 'canvas',
-  backgroundColor: '#24192f',
-  scene: DungeonScene
+const required = <T extends Element>(selector: string): T => {
+  const element = document.querySelector<T>(selector);
+  if (!element) throw new Error(`Missing Dungeon Key Run element: ${selector}`);
+  return element;
 };
 
-new Phaser.Game(config);
+const objectiveCopy = required<HTMLElement>('#objective-copy');
+const keyStatus = required<HTMLElement>('#key-status');
+const exitStatus = required<HTMLElement>('#exit-status');
+const feedback = required<HTMLElement>('#feedback');
+const banner = required<HTMLElement>('#banner');
+const log = required<HTMLOListElement>('#log');
+const resetButton = required<HTMLButtonElement>('#btn-reset');
+const moveButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('#controls button'));
 
-// Initial UI
-updateDOM();
+let state = createInitialState();
+assertRuinHallMatchesSimulation(state);
+let inputLocked = true;
 
-// Keyboard support
-window.addEventListener('keydown', (e) => {
-  // Prevent scrolling for arrow keys
-  if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-    e.preventDefault();
+const overlay = await resolvePrivateActorOverlay();
+document.body.dataset.actorOverlay = overlay.status;
+if (overlay.reason) document.body.dataset.actorOverlayReason = overlay.reason;
+const dungeon = createDungeonGame('canvas', state, overlay);
+
+window.__dungeonKeyRunStatus = {
+  ready: false,
+  overlay: overlay.status,
+  overlayReason: overlay.reason,
+  inputLocked,
+  state,
+};
+
+const setInputLocked = (locked: boolean): void => {
+  inputLocked = locked;
+  const terminal = state.status !== 'playing';
+  for (const button of moveButtons) button.disabled = locked || terminal;
+  resetButton.disabled = locked;
+  if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.inputLocked = locked;
+};
+
+const renderLedger = (): void => {
+  log.replaceChildren(...state.ledger.map((entry) => {
+    const item = document.createElement('li');
+    item.textContent = entry;
+    return item;
+  }));
+};
+
+const render = (): void => {
+  const presentation = buildDungeonPresentation(state);
+  objectiveCopy.textContent = `${presentation.objective}.`;
+  keyStatus.innerHTML = `<strong>Key</strong> ${state.hasKey ? 'Collected' : 'Missing'}`;
+  exitStatus.innerHTML = `<strong>Exit</strong> ${presentation.exitState === 'open' ? 'Open' : 'Locked'}`;
+  feedback.textContent = state.ledger.at(-1) ?? 'Dungeon entered.';
+  banner.hidden = presentation.outcome === 'playing';
+  banner.textContent = presentation.banner;
+  banner.dataset.outcome = presentation.outcome;
+  renderLedger();
+  setInputLocked(inputLocked);
+  if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.state = state;
+};
+
+const performMove = async (direction: Direction): Promise<void> => {
+  if (inputLocked || state.status !== 'playing') return;
+  const before = state;
+  const after = movePlayer(before, direction);
+  state = after;
+  setInputLocked(true);
+  try {
+    await dungeon.playTransition(before, after, direction);
+  } finally {
+    setInputLocked(false);
+    render();
   }
-  
-  if (state.status !== 'playing') return;
-  switch(e.key) {
-    case 'ArrowUp': doAction('up'); break;
-    case 'ArrowDown': doAction('down'); break;
-    case 'ArrowLeft': doAction('left'); break;
-    case 'ArrowRight': doAction('right'); break;
-  }
+};
+
+const directionButtons: ReadonlyArray<readonly [string, Direction]> = [
+  ['#btn-up', 'up'],
+  ['#btn-down', 'down'],
+  ['#btn-left', 'left'],
+  ['#btn-right', 'right'],
+];
+for (const [selector, direction] of directionButtons) {
+  required<HTMLButtonElement>(selector).addEventListener('click', () => void performMove(direction));
+}
+
+resetButton.addEventListener('click', () => {
+  if (inputLocked) return;
+  state = createInitialState();
+  assertRuinHallMatchesSimulation(state);
+  dungeon.syncState(state);
+  render();
 });
+
+const drawerButtons = {
+  'ledger-drawer': required<HTMLButtonElement>('#btn-ledger'),
+  'help-drawer': required<HTMLButtonElement>('#btn-help'),
+} as const;
+
+const closeDrawer = (drawerId: keyof typeof drawerButtons): void => {
+  required<HTMLElement>(`#${drawerId}`).hidden = true;
+  drawerButtons[drawerId].setAttribute('aria-expanded', 'false');
+};
+
+const toggleDrawer = (drawerId: keyof typeof drawerButtons): void => {
+  const drawer = required<HTMLElement>(`#${drawerId}`);
+  const open = drawer.hidden;
+  for (const id of Object.keys(drawerButtons) as Array<keyof typeof drawerButtons>) closeDrawer(id);
+  drawer.hidden = !open;
+  drawerButtons[drawerId].setAttribute('aria-expanded', String(open));
+};
+
+drawerButtons['ledger-drawer'].addEventListener('click', () => toggleDrawer('ledger-drawer'));
+drawerButtons['help-drawer'].addEventListener('click', () => toggleDrawer('help-drawer'));
+for (const button of document.querySelectorAll<HTMLButtonElement>('[data-close-drawer]')) {
+  button.addEventListener('click', () => {
+    const drawerId = button.dataset.closeDrawer as keyof typeof drawerButtons | undefined;
+    if (drawerId && drawerId in drawerButtons) closeDrawer(drawerId);
+  });
+}
+
+const keyDirections: Partial<Record<string, Direction>> = {
+  ArrowUp: 'up',
+  ArrowDown: 'down',
+  ArrowLeft: 'left',
+  ArrowRight: 'right',
+};
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    for (const id of Object.keys(drawerButtons) as Array<keyof typeof drawerButtons>) closeDrawer(id);
+    return;
+  }
+  const direction = keyDirections[event.key];
+  if (!direction) return;
+  event.preventDefault();
+  void performMove(direction);
+});
+
+await dungeon.ready;
+inputLocked = false;
+if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.ready = true;
+render();
+
+window.addEventListener('beforeunload', () => dungeon.destroy());

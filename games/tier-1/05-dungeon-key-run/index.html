@@ -1,59 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17101d" />
   <title>Dungeon Key Run</title>
 </head>
 <body>
-  <main id="app">
-    <header>
-      <small>TINY GOBLIN ACADEMY • LEVEL 05</small>
-      <h1>Dungeon Key Run</h1>
-      <p>Move tile-by-tile. Grab the key. Avoid the goblin.</p>
+  <main id="app" class="academy-shell">
+    <header class="academy-header">
+      <div class="academy-brand">Tiny Goblin Academy · Level 05</div>
+      <div class="academy-title">
+        <strong>Dungeon Key Run</strong>
+        <span>Ruin Hall</span>
+      </div>
+      <div class="academy-actions">
+        <button id="btn-ledger" type="button" aria-controls="ledger-drawer" aria-expanded="false">Ledger</button>
+        <button id="btn-help" type="button" aria-controls="help-drawer" aria-expanded="false">Help</button>
+      </div>
     </header>
-    
-    <section id="layout">
-      <aside id="stats">
-        <h2>Legend</h2>
-        <div id="hud">
-          <div class="hud-entry">
-            <div class="hud-label">Player</div>
-            <div class="hud-value">🧙</div>
-          </div>
-          <div class="hud-entry">
-            <div class="hud-label">Enemy</div>
-            <div class="hud-value">👺</div>
-          </div>
-          <div class="hud-entry">
-            <div class="hud-label">Key</div>
-            <div class="hud-value" id="key-status">🔑 (Not Found)</div>
-          </div>
-          <div class="hud-entry">
-            <div class="hud-label">Exit</div>
-            <div class="hud-value">🚪</div>
-          </div>
+
+    <section id="ruin-hall-stage" class="ruin-hall-stage" aria-label="Ruin Hall dungeon stage">
+      <div class="scene-shell">
+        <div class="scene-frame">
+          <div id="canvas" aria-label="Dungeon Key Run game board"></div>
         </div>
-      </aside>
-      
-      <section id="play">
-        <div id="canvas"></div>
-        <div id="banner"></div>
-        <div id="controls">
-          <button id="btn-up" class="action-btn">Up</button>
-          <div class="control-row">
-            <button id="btn-left" class="action-btn">Left</button>
-            <button id="btn-down" class="action-btn">Down</button>
-            <button id="btn-right" class="action-btn">Right</button>
-          </div>
-          <button id="btn-reset" class="action-btn reset-btn">Reset</button>
+      </div>
+
+      <section class="objective-hud" aria-labelledby="objective-heading">
+        <span class="panel-kicker">Current Objective</span>
+        <h1 id="objective-heading">Escape Ruin Hall</h1>
+        <p id="objective-copy">Find the gold key.</p>
+        <div class="status-row">
+          <span id="key-status" class="status-chip"><strong>Key</strong> Missing</span>
+          <span id="exit-status" class="status-chip"><strong>Exit</strong> Locked</span>
         </div>
       </section>
-      
-      <aside id="ledger">
-        <h2>Action Ledger</h2>
+
+      <div id="feedback" class="feedback" role="status" aria-live="polite">Dungeon entered. Find the key.</div>
+      <div id="banner" class="outcome-banner" role="status" aria-live="assertive" hidden></div>
+
+      <div id="controls" class="movement-controls" aria-label="Movement controls">
+        <button id="btn-up" class="move-up" type="button" aria-label="Move up">↑</button>
+        <button id="btn-left" class="move-left" type="button" aria-label="Move left">←</button>
+        <button id="btn-down" class="move-down" type="button" aria-label="Move down">↓</button>
+        <button id="btn-right" class="move-right" type="button" aria-label="Move right">→</button>
+      </div>
+      <button id="btn-reset" class="reset-button" type="button">Reset Run</button>
+
+      <aside id="ledger-drawer" class="drawer" aria-labelledby="ledger-heading" hidden>
+        <button class="drawer-close" type="button" data-close-drawer="ledger-drawer" aria-label="Close Ledger">×</button>
+        <span class="panel-kicker">Local Run Record</span>
+        <h2 id="ledger-heading">Action Ledger</h2>
         <ol id="log"></ol>
+      </aside>
+
+      <aside id="help-drawer" class="drawer" aria-labelledby="help-heading" hidden>
+        <button class="drawer-close" type="button" data-close-drawer="help-drawer" aria-label="Close Help">×</button>
+        <span class="panel-kicker">Level 05</span>
+        <h2 id="help-heading">Escape the Hall</h2>
+        <p>Move one tile at a time. Every valid move advances the Thug patrol.</p>
+        <ol>
+          <li>Reach the gold key in the lower chamber.</li>
+          <li>Avoid sharing a tile with the patrol.</li>
+          <li>Return to the stone archway after collecting the key.</li>
+        </ol>
+        <p>Use the arrow keys or the on-screen controls.</p>
       </aside>
     </section>
   </main>

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "storageClass": "external-heavy",
+  "rootKey": "TGA_EVIDENCE_ROOT",
+  "repository": "tiny-goblin-academy",
+  "sourceCommit": "68f2fc8217c9f8bf0cc0d4a0bd0938a755e63203",
+  "createdAt": "2026-07-31T20:18:07.784Z",
+  "gameId": "level-05-dungeon-key-run",
+  "laneId": "ruin-hall-rung1",
+  "runId": "capture-20260731t201102z-p19216",
+  "externalRelativePath": "future/level-05-dungeon-key-run/ruin-hall-rung1/capture-20260731t201102z-p19216",
+  "files": [
+    {
+      "relativePath": "rung1-runtime-report.json",
+      "mediaType": "application/json",
+      "bytes": 92708,
+      "sha256": "e39643a5eb3e4c1e453de1cc39d9cab35a2e3ae3ccd5fb3687687ae34dc4bb8f"
+    },
+    {
+      "relativePath": "stills/1920x1080-01-initial.png",
+      "mediaType": "image/png",
+      "bytes": 656894,
+      "sha256": "2fb40079124ef911dba440a885ede89aae9a63c1772797db5a18c643e47833d0"
+    },
+    {
+      "relativePath": "stills/1920x1080-02-valid-move.png",
+      "mediaType": "image/png",
+      "bytes": 657595,
+      "sha256": "766582d1d8ea11a1cbed27cce6f9a0f72d78da12eb403872cc3c10da6339a1e5"
+    },
+    {
+      "relativePath": "stills/1920x1080-03-blocked-wall.png",
+      "mediaType": "image/png",
+      "bytes": 655636,
+      "sha256": "905e8f2642099e2cc6f9b821cd38ce29931542a4d22957bea857fe485eb7319f"
+    },
+    {
+      "relativePath": "stills/1920x1080-04-locked-exit.png",
+      "mediaType": "image/png",
+      "bytes": 650801,
+      "sha256": "91077f5754e4619d44de0b9c709d9ad931200420490e579336d4987309a0363c"
+    },
+    {
+      "relativePath": "stills/1920x1080-05-key-collected.png",
+      "mediaType": "image/png",
+      "bytes": 651638,
+      "sha256": "177cf9a57195ef398fa0248e3859265745d36541094bdd2beb90d22b4e619960"
+    },
+    {
+      "relativePath": "stills/1920x1080-06-victory.png",
+      "mediaType": "image/png",
+      "bytes": 654611,
+      "sha256": "183e99f6b7814fea3af59d68a2353e14aafd0f0f3836159d0cba5b3f0440bd37"
+    },
+    {
+      "relativePath": "stills/1920x1080-07-reset-after-victory.png",
+      "mediaType": "image/png",
+      "bytes": 654864,
+      "sha256": "2ca4f1436708a35ca834b1f00f88c4c314856e9958e937e0cf1315fdef84d575"
+    },
+    {
+      "relativePath": "stills/1920x1080-08-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 657906,
+      "sha256": "b98b6b00405310abe8b26b99cf7d88fbee2f4c278e554053ba69e6a37bb8540b"
+    },
+    {
+      "relativePath": "stills/1920x1080-09-reset-after-defeat.png",
+      "mediaType": "image/png",
+      "bytes": 656549,
+      "sha256": "4768674247f796b1721e93a63195f5986f6961d1276ea7f48b54984b02431af6"
+    }
+  ],
+  "captureScript": "temporary-rung1-browser-verifier",
+  "captureScriptVersion": "rung1-v1",
+  "captureConfiguration": {
+    "route": "local-dev-root",
+    "viewports": [
+      "1920x1080"
+    ],
+    "assetMode": "private"
+  },
+  "externalAvailability": "local-confirmed",
+  "agentReviewPassed": false,
+  "humanReviewPassed": false
+}
