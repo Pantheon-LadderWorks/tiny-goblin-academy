@@ -1,6 +1,6 @@
 # Dungeon Key Run private actor overlay v0.1
 
-Status: named local-development pilot. Ruin Hall implementation has not begun.
+Status: implemented local-development pilot. Ruin Hall, Hub Ledger publication, and the Patrol Tension readability treatment are active.
 
 ## Selected architecture
 

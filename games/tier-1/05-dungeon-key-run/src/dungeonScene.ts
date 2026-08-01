@@ -5,6 +5,8 @@ import verticalWallUrl from '../../../../assets/academy/topdown/walls/derived/tg
 import objectSheetUrl from '../../../../assets/academy/topdown/objects/derived/tga-topdown-nonfx-objects-cleaned-v0.1.png?url';
 import keySheetUrl from '../../../../assets/academy/derived-cleaned/shared-core/tga-shared-core-sheet-cleaned-preview-v0.1.png?url';
 import type {OverlayResolution, RuntimeActor} from './privateActorOverlay';
+import {PatrolTensionRenderer} from './readabilityRenderer';
+import type {TreatmentRuntimeOptions} from './readabilityTreatment';
 import {RUIN_HALL_SCENE, buildMovementTransition} from './sceneAuthority';
 import type {Direction, GameState, Position} from './simulation';
 
@@ -38,6 +40,8 @@ class RuinHallScene extends Phaser.Scene {
   private resolveReady!: () => void;
   private state: GameState;
   private readonly overlay: OverlayResolution;
+  private readonly treatmentOptions: TreatmentRuntimeOptions;
+  private treatment!: PatrolTensionRenderer;
   private player!: ActorView;
   private enemy!: ActorView;
   private keyObject!: Phaser.GameObjects.Image;
@@ -45,10 +49,15 @@ class RuinHallScene extends Phaser.Scene {
   private openExit!: Phaser.GameObjects.Image;
   private lockedExit!: Phaser.GameObjects.Image;
 
-  constructor(state: GameState, overlay: OverlayResolution) {
+  constructor(
+    state: GameState,
+    overlay: OverlayResolution,
+    treatmentOptions: TreatmentRuntimeOptions,
+  ) {
     super({key: 'RuinHallScene'});
     this.state = state;
     this.overlay = overlay;
+    this.treatmentOptions = treatmentOptions;
     this.ready = new Promise((resolve) => {
       this.resolveReady = resolve;
     });
@@ -79,6 +88,7 @@ class RuinHallScene extends Phaser.Scene {
     this.buildRoom();
     this.buildObjectives();
     this.buildActors();
+    this.treatment = new PatrolTensionRenderer(this, this.state, this.treatmentOptions);
     this.syncState(this.state);
     this.resolveReady();
   }
@@ -186,14 +196,7 @@ class RuinHallScene extends Phaser.Scene {
       }
     }
     this.add.rectangle(160, 160, 320, 320).setStrokeStyle(2, 0x7c5a58, 1).setDepth(10);
-    this.buildPatrolRead();
     this.buildDecor();
-  }
-
-  private buildPatrolRead(): void {
-    const graphics = this.add.graphics().setDepth(7);
-    graphics.lineStyle(2, 0xd55d6d, .42);
-    graphics.strokeRoundedRect(7 * TILE + 4, 4 * TILE + 4, 2 * TILE - 8, 2 * TILE - 8, 10);
   }
 
   private buildDecor(): void {
@@ -281,6 +284,7 @@ class RuinHallScene extends Phaser.Scene {
     this.openExit.setVisible(state.hasKey);
     this.enemy.object.setVisible(state.status !== 'defeat');
     this.enemy.shadow.setVisible(state.status !== 'defeat');
+    this.treatment.syncState(state);
   }
 
   async playTransition(before: GameState, after: GameState, direction: Direction): Promise<void> {
@@ -296,6 +300,7 @@ class RuinHallScene extends Phaser.Scene {
     await Promise.all([
       this.tweenActor(this.player, transition.playerTo, direction, duration),
       this.tweenActor(this.enemy, transition.enemyTo, enemyDirection, duration),
+      this.treatment.playTransition(after, duration),
     ]);
     this.syncState(after);
   }
@@ -367,8 +372,9 @@ export function createDungeonGame(
   parent: string,
   state: GameState,
   overlay: OverlayResolution,
+  treatmentOptions: TreatmentRuntimeOptions,
 ): DungeonGameController {
-  const scene = new RuinHallScene(state, overlay);
+  const scene = new RuinHallScene(state, overlay, treatmentOptions);
   const game = new Phaser.Game({
     type: Phaser.AUTO,
     parent,

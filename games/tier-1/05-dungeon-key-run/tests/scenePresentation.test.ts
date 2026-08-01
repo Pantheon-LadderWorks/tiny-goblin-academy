@@ -61,7 +61,8 @@ describe('Ruin Hall production authority', () => {
     });
   });
 
-  it('moves actors on the approved 660 ms cadence and leaves blocked moves stationary', () => {
+  it('moves actors on the approved 660 ms cadence and preserves 1320 ms idle', () => {
+    expect(RUIN_HALL_SCENE.actorProfile.idleDurationMs).toBe(1320);
     const before = createInitialState();
     const after = movePlayer(before, 'down');
     expect(buildMovementTransition(before, after, 'down')).toEqual({

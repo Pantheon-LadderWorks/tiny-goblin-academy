@@ -2,6 +2,7 @@ import './style.css';
 import {createDungeonGame} from './dungeonScene';
 import {resolvePrivateActorOverlay, type OverlayStatus} from './privateActorOverlay';
 import {createDungeonKeyLedger, publishDungeonKeyTransition} from './ledger-bridge';
+import {PATROL_TENSION_TREATMENT, resolveTreatmentRuntimeOptions} from './readabilityTreatment';
 import {assertRuinHallMatchesSimulation, buildDungeonPresentation} from './sceneAuthority';
 import {createInitialState, movePlayer, type Direction, type GameState} from './simulation';
 
@@ -12,6 +13,11 @@ declare global {
       overlay: OverlayStatus;
       overlayReason?: string;
       inputLocked: boolean;
+      treatment: {
+        id: string;
+        enabled: boolean;
+        debug: string[];
+      };
       state: GameState;
     };
   }
@@ -45,16 +51,27 @@ const onHubLedgerMessage = (event: MessageEvent<unknown>): void => {
 };
 window.addEventListener('message', onHubLedgerMessage);
 
+const treatmentOptions = resolveTreatmentRuntimeOptions(window.location.search);
+document.body.dataset.readabilityTreatment = treatmentOptions.enabled
+  ? PATROL_TENSION_TREATMENT.id
+  : 'disabled';
+document.body.dataset.readabilityDebug = treatmentOptions.debug.join(',');
+
 const overlay = await resolvePrivateActorOverlay();
 document.body.dataset.actorOverlay = overlay.status;
 if (overlay.reason) document.body.dataset.actorOverlayReason = overlay.reason;
-const dungeon = createDungeonGame('canvas', state, overlay);
+const dungeon = createDungeonGame('canvas', state, overlay, treatmentOptions);
 
 window.__dungeonKeyRunStatus = {
   ready: false,
   overlay: overlay.status,
   overlayReason: overlay.reason,
   inputLocked,
+  treatment: {
+    id: PATROL_TENSION_TREATMENT.id,
+    enabled: treatmentOptions.enabled,
+    debug: treatmentOptions.debug,
+  },
   state,
 };
 
