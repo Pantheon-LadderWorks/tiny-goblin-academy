@@ -1,10 +1,17 @@
+import '../../../../assets/academy/fonts/runtime/academy-typography.css';
 import './style.css';
+import {waitForAcademyFonts} from '../../../../assets/academy/fonts/runtime/academy-typography';
 import {createDungeonGame} from './dungeonScene';
 import {resolvePrivateActorOverlay, type OverlayStatus} from './privateActorOverlay';
 import {createDungeonKeyLedger, publishDungeonKeyTransition} from './ledger-bridge';
 import {PATROL_TENSION_TREATMENT, resolveTreatmentRuntimeOptions} from './readabilityTreatment';
 import {assertRuinHallMatchesSimulation, buildDungeonPresentation} from './sceneAuthority';
 import {createInitialState, movePlayer, type Direction, type GameState} from './simulation';
+import {
+  DUNGEON_KEY_TYPOGRAPHY_ROLES,
+  DUNGEON_KEY_UI_AUTHORITY,
+  type DungeonKeyDrawerId,
+} from './uiAuthority';
 
 declare global {
   interface Window {
@@ -18,6 +25,12 @@ declare global {
         enabled: boolean;
         debug: string[];
       };
+      typography: {
+        authorityId: string;
+        loaded: boolean;
+        missing: string[];
+      };
+      activeDrawer: DungeonKeyDrawerId | null;
       state: GameState;
     };
   }
@@ -38,9 +51,19 @@ const log = required<HTMLOListElement>('#log');
 const resetButton = required<HTMLButtonElement>('#btn-reset');
 const moveButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('#controls button'));
 
+const fontResults = await waitForAcademyFonts(document.fonts);
+const missingFonts = fontResults
+  .filter((font) => !font.loaded)
+  .map((font) => `${font.family} ${font.weight}`);
+const typographyLoaded = missingFonts.length === 0;
+document.body.dataset.typographyAuthority = DUNGEON_KEY_UI_AUTHORITY.id;
+document.body.dataset.typographyReady = String(typographyLoaded);
+
 let state = createInitialState();
 assertRuinHallMatchesSimulation(state);
 let inputLocked = true;
+let activeDrawer: DungeonKeyDrawerId | null = null;
+let restoreFocus: HTMLElement | null = null;
 
 const academyLedger = createDungeonKeyLedger({
   parent: window.parent === window ? null : window.parent,
@@ -72,20 +95,31 @@ window.__dungeonKeyRunStatus = {
     enabled: treatmentOptions.enabled,
     debug: treatmentOptions.debug,
   },
+  typography: {
+    authorityId: DUNGEON_KEY_UI_AUTHORITY.id,
+    loaded: typographyLoaded,
+    missing: missingFonts,
+  },
+  activeDrawer,
   state,
 };
 
 const setInputLocked = (locked: boolean): void => {
   inputLocked = locked;
   const terminal = state.status !== 'playing';
-  for (const button of moveButtons) button.disabled = locked || terminal;
+  for (const button of moveButtons) {
+    button.disabled = locked || terminal;
+    button.dataset.uiState = button.disabled ? 'disabled' : 'rest';
+  }
   resetButton.disabled = locked;
+  resetButton.dataset.uiState = resetButton.disabled ? 'disabled' : 'rest';
   if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.inputLocked = locked;
 };
 
 const renderLedger = (): void => {
   log.replaceChildren(...state.ledger.map((entry) => {
     const item = document.createElement('li');
+    item.setAttribute('data-typography-role', DUNGEON_KEY_TYPOGRAPHY_ROLES.ledgerEntry);
     item.textContent = entry;
     return item;
   }));
@@ -106,6 +140,7 @@ const render = (): void => {
 };
 
 const performMove = async (direction: Direction): Promise<void> => {
+  if (activeDrawer) return;
   if (inputLocked || state.status !== 'playing') return;
   const before = state;
   const after = movePlayer(before, direction);
@@ -139,42 +174,89 @@ resetButton.addEventListener('click', () => {
   render();
 });
 
-const drawerButtons = {
+const drawerButtons: Record<DungeonKeyDrawerId, HTMLButtonElement> = {
   'ledger-drawer': required<HTMLButtonElement>('#btn-ledger'),
   'help-drawer': required<HTMLButtonElement>('#btn-help'),
-} as const;
-
-const closeDrawer = (drawerId: keyof typeof drawerButtons): void => {
-  required<HTMLElement>(`#${drawerId}`).hidden = true;
-  drawerButtons[drawerId].setAttribute('aria-expanded', 'false');
+};
+const drawers: Record<DungeonKeyDrawerId, HTMLElement> = {
+  'ledger-drawer': required<HTMLElement>('#ledger-drawer'),
+  'help-drawer': required<HTMLElement>('#help-drawer'),
 };
 
-const toggleDrawer = (drawerId: keyof typeof drawerButtons): void => {
-  const drawer = required<HTMLElement>(`#${drawerId}`);
-  const open = drawer.hidden;
-  for (const id of Object.keys(drawerButtons) as Array<keyof typeof drawerButtons>) closeDrawer(id);
-  drawer.hidden = !open;
-  drawerButtons[drawerId].setAttribute('aria-expanded', String(open));
+const focusableElements = (drawer: HTMLElement): HTMLElement[] => Array.from(
+  drawer.querySelectorAll<HTMLElement>('button:not(:disabled), [href], [tabindex]:not([tabindex="-1"])'),
+);
+
+const updateDrawerStatus = (): void => {
+  document.body.dataset.drawerOpen = String(activeDrawer !== null);
+  if (window.__dungeonKeyRunStatus) window.__dungeonKeyRunStatus.activeDrawer = activeDrawer;
+};
+
+const closeDrawer = (drawerId: DungeonKeyDrawerId, shouldRestore = true): void => {
+  drawers[drawerId].hidden = true;
+  drawerButtons[drawerId].setAttribute('aria-expanded', 'false');
+  drawerButtons[drawerId].dataset.uiState = 'rest';
+  if (activeDrawer === drawerId) activeDrawer = null;
+  updateDrawerStatus();
+  if (shouldRestore && restoreFocus) {
+    const target = restoreFocus;
+    restoreFocus = null;
+    target.focus();
+  }
+};
+
+const focusDrawer = (drawerId: DungeonKeyDrawerId): void => {
+  if (activeDrawer && activeDrawer !== drawerId) closeDrawer(activeDrawer, false);
+  restoreFocus = drawerButtons[drawerId];
+  activeDrawer = drawerId;
+  drawers[drawerId].hidden = false;
+  drawerButtons[drawerId].setAttribute('aria-expanded', 'true');
+  drawerButtons[drawerId].dataset.uiState = 'open';
+  updateDrawerStatus();
+  requestAnimationFrame(() => focusableElements(drawers[drawerId])[0]?.focus());
+};
+
+const toggleDrawer = (drawerId: DungeonKeyDrawerId): void => {
+  if (activeDrawer === drawerId) closeDrawer(drawerId);
+  else focusDrawer(drawerId);
 };
 
 drawerButtons['ledger-drawer'].addEventListener('click', () => toggleDrawer('ledger-drawer'));
 drawerButtons['help-drawer'].addEventListener('click', () => toggleDrawer('help-drawer'));
 for (const button of document.querySelectorAll<HTMLButtonElement>('[data-close-drawer]')) {
   button.addEventListener('click', () => {
-    const drawerId = button.dataset.closeDrawer as keyof typeof drawerButtons | undefined;
-    if (drawerId && drawerId in drawerButtons) closeDrawer(drawerId);
+    const drawerId = button.dataset.closeDrawer as DungeonKeyDrawerId | undefined;
+    if (drawerId && drawerId in drawers) closeDrawer(drawerId);
   });
 }
 
 const keyDirections: Partial<Record<string, Direction>> = {
-  ArrowUp: 'up',
-  ArrowDown: 'down',
-  ArrowLeft: 'left',
-  ArrowRight: 'right',
+  ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right',
 };
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    for (const id of Object.keys(drawerButtons) as Array<keyof typeof drawerButtons>) closeDrawer(id);
+  if (event.key.toLowerCase() === 'l') {
+    event.preventDefault();
+    toggleDrawer('ledger-drawer');
+    return;
+  }
+  if (activeDrawer) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeDrawer(activeDrawer);
+      return;
+    }
+    if (event.key === 'Tab') {
+      const focusables = focusableElements(drawers[activeDrawer]);
+      const first = focusables[0];
+      const last = focusables.at(-1);
+      if (first && last && event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (first && last && !event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+      return;
+    }
+    if (keyDirections[event.key]) event.preventDefault();
     return;
   }
   const direction = keyDirections[event.key];

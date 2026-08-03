@@ -9,14 +9,14 @@
 <body>
   <main id="app" class="academy-shell">
     <header class="academy-header">
-      <div class="academy-brand">Tiny Goblin Academy · Level 05</div>
+      <div class="academy-brand" data-typography-role="compact-label">Tiny Goblin Academy · Level 05</div>
       <div class="academy-title">
-        <strong>Dungeon Key Run</strong>
-        <span>Ruin Hall</span>
+        <strong data-typography-role="game-title">Dungeon Key Run</strong>
+        <span data-typography-role="compact-label">Ruin Hall</span>
       </div>
       <div class="academy-actions">
-        <button id="btn-ledger" type="button" aria-controls="ledger-drawer" aria-expanded="false">Ledger</button>
-        <button id="btn-help" type="button" aria-controls="help-drawer" aria-expanded="false">Help</button>
+        <button id="btn-ledger" type="button" data-typography-role="compact-label" data-ui-state="rest" aria-controls="ledger-drawer" aria-expanded="false">Ledger</button>
+        <button id="btn-help" type="button" data-typography-role="compact-label" data-ui-state="rest" aria-controls="help-drawer" aria-expanded="false">Help</button>
       </div>
     </header>
 
@@ -28,44 +28,46 @@
       </div>
 
       <section class="objective-hud" aria-labelledby="objective-heading">
-        <span class="panel-kicker">Current Objective</span>
-        <h1 id="objective-heading">Escape Ruin Hall</h1>
-        <p id="objective-copy">Find the gold key.</p>
+        <span class="panel-kicker" data-typography-role="compact-label">Current Objective</span>
+        <h1 id="objective-heading" data-typography-role="panel-heading">Escape Ruin Hall</h1>
+        <p id="objective-copy" data-typography-role="body-instruction">Find the gold key.</p>
         <div class="status-row">
-          <span id="key-status" class="status-chip"><strong>Key</strong> Missing</span>
-          <span id="exit-status" class="status-chip"><strong>Exit</strong> Locked</span>
+          <span id="key-status" class="status-chip" data-typography-role="data-value"><strong>Key</strong> Missing</span>
+          <span id="exit-status" class="status-chip" data-typography-role="data-value"><strong>Exit</strong> Locked</span>
         </div>
       </section>
 
-      <div id="feedback" class="feedback" role="status" aria-live="polite">Dungeon entered. Find the key.</div>
-      <div id="banner" class="outcome-banner" role="status" aria-live="assertive" hidden></div>
+      <div id="feedback" class="feedback" data-typography-role="dialogue-speech" role="status" aria-live="polite">Dungeon entered. Find the key.</div>
+      <div id="banner" class="outcome-banner" data-typography-role="result-state" role="status" aria-live="assertive" hidden></div>
 
       <div id="controls" class="movement-controls" aria-label="Movement controls">
-        <button id="btn-up" class="move-up" type="button" aria-label="Move up">↑</button>
-        <button id="btn-left" class="move-left" type="button" aria-label="Move left">←</button>
-        <button id="btn-down" class="move-down" type="button" aria-label="Move down">↓</button>
-        <button id="btn-right" class="move-right" type="button" aria-label="Move right">→</button>
+        <button id="btn-up" class="move-up" type="button" data-typography-role="compact-label" data-ui-state="disabled" aria-label="Move up">↑</button>
+        <button id="btn-left" class="move-left" type="button" data-typography-role="compact-label" data-ui-state="disabled" aria-label="Move left">←</button>
+        <button id="btn-down" class="move-down" type="button" data-typography-role="compact-label" data-ui-state="disabled" aria-label="Move down">↓</button>
+        <button id="btn-right" class="move-right" type="button" data-typography-role="compact-label" data-ui-state="disabled" aria-label="Move right">→</button>
       </div>
-      <button id="btn-reset" class="reset-button" type="button">Reset Run</button>
+      <button id="btn-reset" class="reset-button" type="button" data-typography-role="compact-label" data-ui-state="disabled">Reset Run</button>
 
-      <aside id="ledger-drawer" class="drawer" aria-labelledby="ledger-heading" hidden>
-        <button class="drawer-close" type="button" data-close-drawer="ledger-drawer" aria-label="Close Ledger">×</button>
-        <span class="panel-kicker">Local Run Record</span>
-        <h2 id="ledger-heading">Action Ledger</h2>
-        <ol id="log"></ol>
+      <aside id="ledger-drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="ledger-heading" hidden>
+        <button class="drawer-close" type="button" data-typography-role="compact-label" data-ui-state="rest" data-close-drawer="ledger-drawer" aria-label="Close Ledger">×</button>
+        <span class="panel-kicker" data-typography-role="compact-label">Local Run Record</span>
+        <h2 id="ledger-heading" data-typography-role="dialogue-title">Action Ledger</h2>
+        <ol id="log" data-typography-role="dialogue-speech"></ol>
       </aside>
 
-      <aside id="help-drawer" class="drawer" aria-labelledby="help-heading" hidden>
-        <button class="drawer-close" type="button" data-close-drawer="help-drawer" aria-label="Close Help">×</button>
-        <span class="panel-kicker">Level 05</span>
-        <h2 id="help-heading">Escape the Hall</h2>
-        <p>Move one tile at a time. Every valid move advances the Thug patrol.</p>
-        <ol>
-          <li>Reach the gold key in the lower chamber.</li>
-          <li>Avoid sharing a tile with the patrol.</li>
-          <li>Return to the stone archway after collecting the key.</li>
-        </ol>
-        <p>Use the arrow keys or the on-screen controls.</p>
+      <aside id="help-drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="help-heading" hidden>
+        <button class="drawer-close" type="button" data-typography-role="compact-label" data-ui-state="rest" data-close-drawer="help-drawer" aria-label="Close Help">×</button>
+        <span class="panel-kicker" data-typography-role="compact-label">Level 05</span>
+        <h2 id="help-heading" data-typography-role="dialogue-title">Escape the Hall</h2>
+        <div data-typography-role="dialogue-speech">
+          <p>Move one tile at a time. Every valid move advances the Thug patrol.</p>
+          <ol>
+            <li>Reach the gold key in the lower chamber.</li>
+            <li>Avoid sharing a tile with the patrol.</li>
+            <li>Return to the stone archway after collecting the key.</li>
+          </ol>
+          <p>Use the arrow keys or the on-screen controls.</p>
+        </div>
       </aside>
     </section>
   </main>
